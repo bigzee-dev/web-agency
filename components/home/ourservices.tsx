@@ -10,7 +10,7 @@ import { homePageheadings } from "@/app/ui/customTailwindClasses";
 
 const iconProps = {
   size: "1.8em",
-  className: "text-purple-600",
+  className: "text-purple-500",
   // style: { stroke: "url(#blue-gradient)" },
   strokeWidth: 1.5,
 };
@@ -30,23 +30,15 @@ const services = [
   },
   {
     icon: <TbMailCheck {...iconProps} />,
-    title: "Email Solutions",
-    description: "Native and cross-platform apps for iOS and Android devices.",
+    title: "Email Hosting",
+    description:
+      "Our email hosting solutions provide secure, professional, and personalised email addresses for your business. We manage setup, security, and maintenance, ensuring reliable, uninterrupted communication that keeps your team connected and operating efficiently.",
   },
   {
     icon: <TbShoppingCart {...iconProps} />,
-    title: "E-commerce Solutions:",
-    description: "Scalable online stores with seamless payment integration.",
-  },
-  {
-    icon: <CiMobile4 {...iconProps} strokeWidth={0.5} />,
-    title: "Search Engine Optimisations",
-    description: "Native and cross-platform apps for iOS and Android devices.",
-  },
-  {
-    icon: <Globe {...iconProps} />,
-    title: "E-commerce Solutions:",
-    description: "Scalable online stores with seamless payment integration.",
+    title: "Online Growth & Visibility:",
+    description:
+      "We offer comprehensive services to enhance your online presence and connect with your target audience. From search engine optimisation to social media integration, we provide customised solutions that drive traffic, boost engagement, and expand your brand’s reach ",
   },
 ];
 
@@ -61,22 +53,10 @@ export default function OurServices() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex items-start space-x-4 border-b border-gray-300 py-12 transition-all duration-300"
+              className="flex items-start space-x-4 border-b border-gray-300 py-12"
             >
-              <div className="flex items-center justify-center p-1 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-lg">
-                <div className="bg-neutral-200 p-1 rounded-lg">
-                  <svg width="0" height="0">
-                    <linearGradient
-                      id="blue-gradient"
-                      x1="100%"
-                      y1="100%"
-                      x2="0%"
-                      y2="0%"
-                    >
-                      <stop stopColor="#7a6ded" offset="0%" />
-                      <stop stopColor="#591885" offset="100%" />
-                    </linearGradient>
-                  </svg>
+              <div className="flex items-center justify-center p-1 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-full">
+                <div className="bg-gray-800 p-2 rounded-full">
                   {service.icon}
                 </div>
               </div>
