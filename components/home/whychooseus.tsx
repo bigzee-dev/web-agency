@@ -85,11 +85,11 @@ export default function Component() {
   }
 
   return (
-    <div className="container mx-auto pt-20 flex flex-col">
+    <div className="container mx-auto pt-24 flex flex-col">
       <div className="mx-auto max-w-2xl lg:mx-0 px-4">
         <h2 className={homePageheadings}>Why Choose Us</h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          Building your brand's online presence.
+          Your Dependable Partner in Digital Innovation
         </p>
       </div>
 

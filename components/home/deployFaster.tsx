@@ -1,4 +1,5 @@
 import { montserrat } from "@/app/ui/fonts";
+import Image from "next/image";
 import { Check } from "lucide-react";
 const features = [
   "25 products",
@@ -9,10 +10,10 @@ const features = [
 
 export default function DeployFaster() {
   return (
-    <div className="py-16">
+    <div className="py-11">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-center text-base/7 font-semibold text-blue-600">
-          Deploy faster
+          Increase Your Visibility
         </h2>
         <p
           className={` ${montserrat.className} mx-auto mt-2 max-w-lg text-pretty text-center text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl `}
@@ -25,7 +26,7 @@ export default function DeployFaster() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
               <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Mobile friendly
+                  Modern Design Principles
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
@@ -42,7 +43,7 @@ export default function DeployFaster() {
                 </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-gray-800/15 lg:rounded-l-[2rem]"></div>
           </div>
           <div className="relative max-lg:row-start-1">
             <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
@@ -64,7 +65,7 @@ export default function DeployFaster() {
                 />
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-gray-800/15 max-lg:rounded-t-[2rem]"></div>
           </div>
           <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
             <div className="absolute inset-px rounded-lg bg-white"></div>
@@ -86,14 +87,14 @@ export default function DeployFaster() {
                 />
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-gray-800/15"></div>
           </div>
           <div className="relative lg:row-span-2">
             <div className="absolute inset-px rounded-lg bg-white lg:rounded-r-[2rem]"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-r-[calc(2rem+1px)]">
               <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Powerful APIs
+                  Powerful Servers
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Sit quis amet rutrum tellus ullamcorper ultricies libero dolor
@@ -101,35 +102,27 @@ export default function DeployFaster() {
                 </p>
               </div>
               <div className="relative min-h-[30rem] w-full grow">
-                <div className="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
-                  <div className="flex bg-gray-800/40 ring-1 ring-white/5">
+                <div className="absolute flex items-center justify-center bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
+                  <div className="flex items-center bg-gray-800/40 ring-1 ring-gray-800/15">
                     <div className="-mb-px flex text-sm font-medium leading-6 text-gray-400">
-                      <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
+                      {/* <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
                         NotificationSetting.jsx
                       </div>
                       <div className="border-r border-gray-600/10 px-4 py-2">
                         App.jsx
-                      </div>
+                      </div> */}
                     </div>
                   </div>
-                  <div className="px-6 pb-14 pt-6">
-                    {features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="text-sm flex gap-x-3 text-gray-300"
-                      >
-                        <Check
-                          aria-hidden="true"
-                          className="text-indigo-600 h-6 w-5 flex-none"
-                        />
-                        {feature}
-                      </li>
-                    ))}
-                  </div>
+                  <Image
+                    src="/svg/cloud-servers.svg"
+                    height={300}
+                    width={300}
+                    alt="svg"
+                  />
                 </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-r-[2rem]"></div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-gray-800/15 lg:rounded-r-[2rem]"></div>
           </div>
         </div>
       </div>
