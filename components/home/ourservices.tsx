@@ -89,7 +89,7 @@ export default function OurServices() {
           className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
         />
       </div>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <h2 className={`${homePageheadings} text-center mb-6 `}>
           Our Services
         </h2>
@@ -98,9 +98,9 @@ export default function OurServices() {
           landscape. Let us transform your vision into an engaging online
           experience.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-x-24 mt-6">
           {services.map((service, index) => (
-            <div key={index} className="flex flex-col gap-3 py-8 w-[85%]">
+            <div key={index} className="flex flex-col gap-3 py-8 w-full ">
               <div className="flex items-center gap-3  pb-4 border-b border-gray-300">
                 <div className="flex items-center justify-center p-1 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-400 rounded-full">
                   <div className="bg-gray-700 p-2 rounded-full">

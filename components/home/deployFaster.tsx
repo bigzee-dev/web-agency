@@ -37,7 +37,7 @@ export default function DeployFaster() {
                 <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
                   <img
                     className="size-full object-cover object-top"
-                    src="/img/mmbw-mobile.jpg"
+                    src="https://tailwindui.com/plus/img/component-images/bento-03-mobile-friendly.png"
                     alt=""
                   />
                 </div>
@@ -102,8 +102,8 @@ export default function DeployFaster() {
                 </p>
               </div>
               <div className="relative min-h-[30rem] w-full grow">
-                <div className="absolute flex items-center justify-center bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
-                  <div className="flex items-center bg-gray-800/40 ring-1 ring-gray-800/15">
+                <div className="absolute flex items-center justify-center inset-0 top-10 overflow-hidden bg-gray-900 shadow-2xl">
+                  <div className="flex items-center">
                     <div className="-mb-px flex text-sm font-medium leading-6 text-gray-400">
                       {/* <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
                         NotificationSetting.jsx
@@ -114,11 +114,14 @@ export default function DeployFaster() {
                     </div>
                   </div>
                   <Image
-                    src="/svg/cloud-servers.svg"
-                    height={300}
-                    width={300}
-                    alt="svg"
+                    src="/img/tech-lady.jpg"
+                    height={1000}
+                    width={667}
+                    alt="img"
+                    className="object-cover object-top"
                   />
+                  {/* Greenish overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/80"></div>
                 </div>
               </div>
             </div>
