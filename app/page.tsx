@@ -4,6 +4,7 @@ import WhyChooseUs from "@/components/home/whychooseus";
 import OurServices from "@/components/home/ourservices";
 import DeployFaster from "@/components/home/deployFaster";
 import WebsiteText from "@/components/home/websitetext";
+import Testimonial from "@/components/home/testimonial";
 import ContactUs from "@/components/home/contactus/contactUs";
 import Pricing from "@/components/home/pricing";
 import PricingAlt from "@/components/home/pricingAlt";
@@ -17,7 +18,7 @@ export default function Home() {
       <OurServices />
       <DeployFaster />
       <WhyChooseUs />
-      <ContactUs />
+      <Testimonial />
       <PricingAlt />
       <Footer />
     </>

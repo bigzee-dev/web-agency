@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Form from "./form";
+import { montserrat } from "@/app/ui/fonts";
 
 const labelStyles = "block text-sm leading-6 text-gray-700 font-medium";
 const inputStyles = "mt-1 text-gray-900";
@@ -15,17 +16,14 @@ export default function ContactUsForm({
 }) {
   return (
     <div className="relative w-full max-w-[1800px] mx-auto">
-      <div className="flex flex-col items-center w-full py-10">
-        <h2 className="text-neutral-100 text-4xl font-bold mb-6 bg-blue-600 max-w-fit transform -rotate-2">
+      <div className="flex flex-col items-center w-full pt-14 pb-10">
+        <h2 className="text-center text-base/7 font-semibold text-blue-600">
           Contact Us
         </h2>
-        <h2 className="text-base font-semibold leading-7 text-gray-900">
-          Personal Information
-        </h2>
-
-        <p className="mt-1 text-sm leading-6 text-gray-600">
-          Get in touch with our team and find out what solution best fits for
-          you.
+        <p
+          className={` ${montserrat.className} mx-auto mt-2 max-w-lg text-pretty text-center text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl `}
+        >
+          Get in touch with us and lets discuss your project
         </p>
       </div>
 

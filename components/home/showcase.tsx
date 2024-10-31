@@ -5,7 +5,7 @@ const list = "text-gray-200 font-semibold";
 
 export default function Showcase() {
   return (
-    <div className="px-6 lg:py-10 lg:px-8 bg-gradient-to-br from-blue-600 from-40% via-indigo-500 via-80% to-indigo-800 to-95%">
+    <div className="px-6 lg:py-10 lg:px-8 bg-gradient-to-br from-blue-600 from-40% via-indigo-500 via-80% to-indigo-600 to-95%">
       <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-8 mx-auto max-w-5xl pt-10 pb-12 lg:pt-18 lg:pb-12">
         {/* <div className="mb-8 flex justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-300 ring-1 ring-neutral-300/50 hover:ring-neutral-200/70">

@@ -10,8 +10,15 @@ const features = [
 
 export default function DeployFaster() {
   return (
-    <div className="py-11">
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <div className="relative  bg-gradient-to-b from-white via-neutral-400 to-white -z-20">
+      <Image
+        src="/svg/star-pattern.svg"
+        height={500}
+        width={750}
+        alt="svg"
+        className="absolute top-0 left-0 w-full h-full -z-10 opacity-10"
+      />
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 py-16 z-10">
         <h2 className="text-center text-base/7 font-semibold text-blue-600">
           Increase Your Visibility
         </h2>
@@ -22,7 +29,7 @@ export default function DeployFaster() {
         </p>
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
           <div className="relative lg:row-span-2">
-            <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+            <div className="absolute inset-px rounded-lg bg-gray-100 lg:rounded-l-[2rem]"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
               <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
@@ -43,10 +50,10 @@ export default function DeployFaster() {
                 </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-gray-800/15 lg:rounded-l-[2rem]"></div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-2 ring-blue-800/50 lg:rounded-l-[2rem]"></div>
           </div>
           <div className="relative max-lg:row-start-1">
-            <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
+            <div className="absolute inset-px rounded-lg bg-gray-100 max-lg:rounded-t-[2rem]"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
@@ -65,10 +72,10 @@ export default function DeployFaster() {
                 />
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-gray-800/15 max-lg:rounded-t-[2rem]"></div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-2 ring-blue-800/50 max-lg:rounded-t-[2rem]"></div>
           </div>
           <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-            <div className="absolute inset-px rounded-lg bg-white"></div>
+            <div className="absolute inset-px rounded-lg bg-gray-100"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
@@ -87,10 +94,10 @@ export default function DeployFaster() {
                 />
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-gray-800/15"></div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-2 ring-blue-800/50"></div>
           </div>
           <div className="relative lg:row-span-2">
-            <div className="absolute inset-px rounded-lg bg-white lg:rounded-r-[2rem]"></div>
+            <div className="absolute inset-px rounded-lg bg-gray-100 lg:rounded-r-[2rem]"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-r-[calc(2rem+1px)]">
               <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
@@ -102,19 +109,9 @@ export default function DeployFaster() {
                 </p>
               </div>
               <div className="relative min-h-[30rem] w-full grow">
-                <div className="absolute flex items-center justify-center inset-0 top-10 overflow-hidden bg-gray-900 shadow-2xl">
-                  <div className="flex items-center">
-                    <div className="-mb-px flex text-sm font-medium leading-6 text-gray-400">
-                      {/* <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                        NotificationSetting.jsx
-                      </div>
-                      <div className="border-r border-gray-600/10 px-4 py-2">
-                        App.jsx
-                      </div> */}
-                    </div>
-                  </div>
+                <div className="absolute flex items-center justify-center inset-0 top-10 overflow-hidden shadow-2xl">
                   <Image
-                    src="/img/tech-lady.jpg"
+                    src="/img/servers.jpg"
                     height={1000}
                     width={667}
                     alt="img"
@@ -125,7 +122,7 @@ export default function DeployFaster() {
                 </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-gray-800/15 lg:rounded-r-[2rem]"></div>
+            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-2 ring-blue-800/50 lg:rounded-r-[2rem]"></div>
           </div>
         </div>
       </div>

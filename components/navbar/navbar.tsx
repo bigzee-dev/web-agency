@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { expletus } from "@/app/ui/fonts";
+import { montserrat } from "@/app/ui/fonts";
 
 const navigation = [
   { name: "About Us", href: "#" },
@@ -46,7 +47,7 @@ export default function ResponsiveNavbar() {
             />
           </div>
           <h6
-            className={` ${expletus.className} tracking-wider font-extrabold`}
+            className={` ${expletus.className} tracking-wider font-extrabold `}
           >
             bigZee
           </h6>

@@ -20,7 +20,7 @@ const config: Config = {
     },
     extend: {
       fontSize: {
-        md: "0.90rem", // Define your custom size
+        md: "0.92rem", // Define your custom size
       },
       colors: {
         background: "hsl(var(--background))",

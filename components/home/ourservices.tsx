@@ -7,9 +7,10 @@ import { TbMailCheck } from "react-icons/tb";
 import { TbShoppingCart } from "react-icons/tb";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { homePageheadings } from "@/app/ui/customTailwindClasses";
+import Link from "next/link";
 
 const iconProps = {
-  size: "1.8em",
+  size: "2em",
   className: "text-purple-400",
   // style: { stroke: "url(#blue-gradient)" },
   strokeWidth: 1.5,
@@ -76,7 +77,7 @@ const services = [
 
 export default function OurServices() {
   return (
-    <section className="relative isolate py-24 bg-background border-t border-gray-300">
+    <section className="relative isolate pt-24 pb-20 bg-background border-t border-gray-300">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
@@ -110,12 +111,20 @@ export default function OurServices() {
                 <h4 className="font-semibold text-gray-900">{service.title}</h4>
               </div>
               <div className="flex-grow">
-                <p className="pl-1 mt-1 text-gray-600 text-md leading-relaxed">
+                <p className="pl-1 mt-1 text-gray-600 text-base leading-relaxed">
                   {service.description}
                 </p>
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-end w-full">
+          <Link
+            href="/"
+            className="text-blue-600 mt-5 pr-4 hover:text-blue-500"
+          >
+            Learn more about our services <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </div>
     </section>
