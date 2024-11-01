@@ -37,8 +37,8 @@ export default function Testimonial({
           // style={{ opacity: overlayOpacity }}
         >
           {/* Content */}
-          <div className="w-full h-full flex items-center justify-center py-14 min-h-[300px]">
-            <div className="grid grid-cols-1 justify-items-center w-full space-y-6 max-w-3xl mx-auto">
+          <div className="w-full h-full flex items-center justify-center py-16 min-h-[300px]">
+            <div className="grid grid-cols-1 justify-items-center w-full space-y-7 max-w-3xl mx-auto">
               <div className="flex gap-3">
                 {starArray.map((star, index) => (
                   <div>

@@ -86,7 +86,7 @@ export default function Component() {
   }
 
   return (
-    <div className="container mx-auto pt-24 flex flex-col">
+    <div className="container mx-auto pt-24 pb-8 flex flex-col">
       <div className="mx-auto max-w-2xl lg:mx-0 px-4">
         <h2 className={homePageheadings}>Why Choose Us</h2>
         <div className="mt-8  px-4 py-2 bg-gray-800 w-max">

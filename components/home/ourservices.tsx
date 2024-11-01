@@ -90,7 +90,7 @@ export default function OurServices() {
           className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
         />
       </div>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <h2 className={`${homePageheadings} text-center mb-6 `}>
           Our Services
         </h2>
@@ -99,19 +99,22 @@ export default function OurServices() {
           landscape. Let us transform your vision into an engaging online
           experience.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-x-24 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-8 mt-8">
           {services.map((service, index) => (
-            <div key={index} className="flex flex-col gap-3 py-8 w-full ">
+            <div
+              key={index}
+              className="flex flex-col gap-3 px-6 py-8 w-full bg-indigo-700/10 rounded-xl"
+            >
               <div className="flex items-center gap-3  pb-4 border-b border-gray-300">
-                <div className="flex items-center justify-center p-1 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-400 rounded-full">
-                  <div className="bg-gray-700 p-2 rounded-full">
+                <div className="flex items-center justify-center p-1 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-full">
+                  <div className="bg-gray-800 p-2 rounded-full">
                     {service.icon}
                   </div>
                 </div>
                 <h4 className="font-semibold text-gray-900">{service.title}</h4>
               </div>
               <div className="flex-grow">
-                <p className="pl-1 mt-1 text-gray-600 text-base leading-relaxed">
+                <p className="pl-1 mt-1 text-gray-600 text-md leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -121,7 +124,7 @@ export default function OurServices() {
         <div className="flex justify-end w-full">
           <Link
             href="/"
-            className="text-blue-600 mt-5 pr-4 hover:text-blue-500"
+            className="text-blue-600 font-medium mt-7 pr-5 hover:text-blue-500"
           >
             Learn more about our services <span aria-hidden="true">→</span>
           </Link>

@@ -1,69 +1,179 @@
-import { Check } from 'lucide-react';
+import { FaCheck } from "react-icons/fa6";
+import { CiServer } from "react-icons/ci";
 
+const tiers = [
+  {
+    name: "Starter",
+    id: "tier-hobby",
+    href: "#",
+    priceMonthly: "P29",
+    description:
+      "The perfect plan if you're just getting started with our product.",
+    features: [
+      "25 products",
+      "Up to 10,000 subscribers",
+      "Advanced analytics",
+      "24-hour support response time",
+    ],
+    featured: false,
+  },
+  {
+    name: "Business",
+    id: "tier-enterprise",
+    href: "#",
+    priceMonthly: "P99",
+    description: "Dedicated support and infrastructure for your company.",
+    features: [
+      "Unlimited products",
+      "Unlimited subscribers",
+      "Advanced analytics",
+      "Dedicated support representative",
+      "Marketing automations",
+      "Custom integrations",
+    ],
+    featured: true,
+  },
+  {
+    name: "Enterprise",
+    id: "tier-enterprise",
+    href: "#",
+    priceMonthly: "P99",
+    description: "Dedicated support and infrastructure for your company.",
+    features: [
+      "Unlimited products",
+      "Unlimited subscribers",
+      "Advanced analytics",
+      "Dedicated support representative",
+      "Marketing automations",
+      "Custom integrations",
+    ],
+    featured: false,
+  },
+];
 
-const includedFeatures = [
-  'Private forum access',
-  'Member resources',
-  'Entry to annual conference',
-  'Official member t-shirt',
-]
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export default function Pricing() {
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple no-tricks pricing</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas
-            in. Explicabo id ut laborum.
-          </p>
+    <div className="w-full bg-gray-900 py-14">
+      <div className="max-w-lg lg:max-w-6xl mx-auto">
+        <div className="mb-4">
+          <h4 className="text-neutral-300 text-2xl font-semibold underline">
+            Website Development Prices
+          </h4>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
-          <div className="p-8 sm:p-10 lg:flex-auto">
-            <h3 className="text-2xl font-bold tracking-tight text-gray-900">Lifetime membership</h3>
-            <p className="mt-6 text-base leading-7 text-gray-600">
-              Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis
-              repellendus etur quidem assumenda.
-            </p>
-            <div className="mt-10 flex items-center gap-x-4">
-              <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">What’s included</h4>
-              <div className="h-px flex-auto bg-gray-100" />
-            </div>
-            <ul
-              role="list"
-              className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
+        <div className="grid grid-cols-1 items-center gap-y-6 gap-x-6 sm:mt-20 sm:gap-y-0 lg:grid-cols-3">
+          {tiers.map((tier, tierIdx) => (
+            <div
+              key={tier.id}
+              className={classNames(
+                tier.featured
+                  ? "relative bg-neutral-100/5 shadow-2xl ring-2 ring-inset ring-indigo-600"
+                  : "bg-transparent sm:mx-8 lg:mx-0 border border-gray-700",
+                tier.featured
+                  ? ""
+                  : tierIdx === 0 || tierIdx === 2
+                  ? "rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl"
+                  : "sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl",
+                "rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10"
+              )}
             >
-              {includedFeatures.map((feature) => (
-                <li key={feature} className="flex gap-x-3">
-                  <Check aria-hidden="true" className="h-6 w-5 flex-none text-indigo-600" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-            <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-              <div className="mx-auto max-w-xs px-8">
-                <p className="text-base font-semibold text-gray-600">Pay once, own it forever</p>
-                <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                  <span className="text-5xl font-bold tracking-tight text-gray-900">$349</span>
-                  <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
-                </p>
-                <a
-                  href="#"
-                  className="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              <h3
+                id={tier.id}
+                className={classNames(
+                  tier.featured ? "text-neutral-300" : "text-neutral-300",
+                  "flex items-center justify-between text-base font-semibold leading-7"
+                )}
+              >
+                {tier.name}
+                {tier.featured === true ? (
+                  <div className="flex items-center justify-center py-1.5 px-2 bg-blue-600 text-xs text-neutral-200 rounded-2xl">
+                    <span>Most Popular</span>
+                  </div>
+                ) : null}
+              </h3>
+              <p className="mt-4 flex items-baseline gap-x-2">
+                <span
+                  className={classNames(
+                    tier.featured ? "text-white" : "text-white",
+                    "text-5xl font-bold tracking-tight"
+                  )}
                 >
-                  Get access
-                </a>
-                <p className="mt-6 text-xs leading-5 text-gray-600">
-                  Invoices and receipts available for easy company reimbursement
-                </p>
-              </div>
+                  {tier.priceMonthly}
+                </span>
+                <span
+                  className={classNames(
+                    tier.featured ? "text-gray-400" : "text-gray-500",
+                    "text-base"
+                  )}
+                >
+                  /month
+                </span>
+              </p>
+              <p
+                className={classNames(
+                  tier.featured ? "text-gray-300" : "text-gray-300",
+                  "mt-6 text-base leading-7"
+                )}
+              >
+                {tier.description}
+              </p>
+              <ul
+                role="list"
+                className={classNames(
+                  tier.featured ? "text-gray-300" : "text-gray-300",
+                  "mt-8 space-y-3 text-sm leading-6 sm:mt-10"
+                )}
+              >
+                {tier.features.map((feature) => (
+                  <li key={feature} className="flex gap-x-3">
+                    <FaCheck
+                      aria-hidden="true"
+                      className={classNames(
+                        tier.featured ? "text-indigo-400" : "text-indigo-600",
+                        "h-5 w-4 flex-none"
+                      )}
+                    />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={tier.href}
+                aria-describedby={tier.id}
+                className={classNames(
+                  tier.featured
+                    ? "bg-blue-600 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
+                    : "text-neutral-300 bg-gray-800 ring-1 ring-inset ring-gray-600 hover:ring-indigo-300 focus-visible:outline-indigo-600",
+                  "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
+                )}
+              >
+                Get started today
+              </a>
             </div>
+          ))}
+        </div>
+        <div className="w-max-3xl bg-cyan-600/15 flex items-center justify-center mt-12 px-2 py-4">
+          <div className="bg-cyan-600/20 rounded-lg p-3 max-w-lg">
+            <div className="rounded-full bg-neutral-200/10 p-3 w-max">
+              <CiServer className="text-blue-600" size="1.6em" />
+            </div>
+
+            <h5 className="text-blue-600 font-semibold text-md">
+              Hosting Prices
+            </h5>
+            <p className="text-blue-500/90 text-md font-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              pariatur, ipsum similique veniam quo totam eius aperiam dolorum.
+            </p>
+            <p className="text-blue-600 text-md font-semibold">
+              View Hosting Prices
+            </p>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
