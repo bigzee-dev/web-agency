@@ -1,5 +1,7 @@
 import { FaCheck } from "react-icons/fa6";
 import { CiServer } from "react-icons/ci";
+import { MdNavigateNext } from "react-icons/md";
+import Link from "next/link";
 
 const tiers = [
   {
@@ -57,120 +59,123 @@ function classNames(...classes: string[]) {
 
 export default function Pricing() {
   return (
-    <div className="w-full bg-gray-900 py-14">
-      <div className="max-w-lg lg:max-w-6xl mx-auto">
-        <div className="mb-4">
-          <h4 className="text-neutral-300 text-2xl font-semibold underline">
-            Website Development Prices
-          </h4>
-        </div>
-        <div className="grid grid-cols-1 items-center gap-y-6 gap-x-6 sm:mt-20 sm:gap-y-0 lg:grid-cols-3">
-          {tiers.map((tier, tierIdx) => (
-            <div
-              key={tier.id}
-              className={classNames(
-                tier.featured
-                  ? "relative bg-neutral-100/5 shadow-2xl ring-2 ring-inset ring-indigo-600"
-                  : "bg-transparent sm:mx-8 lg:mx-0 border border-gray-700",
-                tier.featured
-                  ? ""
-                  : tierIdx === 0 || tierIdx === 2
-                  ? "rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl"
-                  : "sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl",
-                "rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10"
-              )}
-            >
-              <h3
-                id={tier.id}
-                className={classNames(
-                  tier.featured ? "text-neutral-300" : "text-neutral-300",
-                  "flex items-center justify-between text-base font-semibold leading-7"
-                )}
-              >
-                {tier.name}
-                {tier.featured === true ? (
-                  <div className="flex items-center justify-center py-1.5 px-2 bg-blue-600 text-xs text-neutral-200 rounded-2xl">
-                    <span>Most Popular</span>
-                  </div>
-                ) : null}
-              </h3>
-              <p className="mt-4 flex items-baseline gap-x-2">
-                <span
-                  className={classNames(
-                    tier.featured ? "text-white" : "text-white",
-                    "text-5xl font-bold tracking-tight"
-                  )}
-                >
-                  {tier.priceMonthly}
-                </span>
-                <span
-                  className={classNames(
-                    tier.featured ? "text-gray-400" : "text-gray-500",
-                    "text-base"
-                  )}
-                >
-                  /month
-                </span>
-              </p>
-              <p
-                className={classNames(
-                  tier.featured ? "text-gray-300" : "text-gray-300",
-                  "mt-6 text-base leading-7"
-                )}
-              >
-                {tier.description}
-              </p>
-              <ul
-                role="list"
-                className={classNames(
-                  tier.featured ? "text-gray-300" : "text-gray-300",
-                  "mt-8 space-y-3 text-sm leading-6 sm:mt-10"
-                )}
-              >
-                {tier.features.map((feature) => (
-                  <li key={feature} className="flex gap-x-3">
-                    <FaCheck
-                      aria-hidden="true"
-                      className={classNames(
-                        tier.featured ? "text-indigo-400" : "text-indigo-600",
-                        "h-5 w-4 flex-none"
-                      )}
-                    />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={tier.href}
-                aria-describedby={tier.id}
+    <div className="w-full p-2">
+      <div className="w-full bg-gray-900 py-20 rounded-2xl">
+        <div className="max-w-lg lg:max-w-6xl mx-auto">
+          <div className="mb-4">
+            <h4 className="text-neutral-300 text-5xl font-extrabold  bg-gradient-to-r from-red-600 via-purple-700 to-indigo-600 text-transparent bg-clip-text leading-normal">
+              Website Development <br />
+              <span className="underline">Prices</span>
+            </h4>
+          </div>
+          <div className="grid grid-cols-1 items-center gap-y-6 gap-x-6 sm:mt-20 sm:gap-y-0 lg:grid-cols-3">
+            {tiers.map((tier, tierIdx) => (
+              <div
+                key={tier.id}
                 className={classNames(
                   tier.featured
-                    ? "bg-blue-600 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
-                    : "text-neutral-300 bg-gray-800 ring-1 ring-inset ring-gray-600 hover:ring-indigo-300 focus-visible:outline-indigo-600",
-                  "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
+                    ? "relative bg-neutral-100/5 shadow-2xl ring-2 ring-inset ring-indigo-600"
+                    : "bg-transparent sm:mx-8 lg:mx-0 border border-gray-700",
+                  tier.featured
+                    ? ""
+                    : tierIdx === 0 || tierIdx === 2
+                    ? "rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl"
+                    : "sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl",
+                  "rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10"
                 )}
               >
-                Get started today
-              </a>
-            </div>
-          ))}
-        </div>
-        <div className="w-max-3xl bg-cyan-600/15 flex items-center justify-center mt-12 px-2 py-4">
-          <div className="bg-cyan-600/20 rounded-lg p-3 max-w-lg">
-            <div className="rounded-full bg-neutral-200/10 p-3 w-max">
-              <CiServer className="text-blue-600" size="1.6em" />
-            </div>
-
-            <h5 className="text-blue-600 font-semibold text-md">
-              Hosting Prices
-            </h5>
-            <p className="text-blue-500/90 text-md font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              pariatur, ipsum similique veniam quo totam eius aperiam dolorum.
-            </p>
-            <p className="text-blue-600 text-md font-semibold">
-              View Hosting Prices
-            </p>
+                <h3
+                  id={tier.id}
+                  className={classNames(
+                    tier.featured ? "text-neutral-300" : "text-neutral-300",
+                    "flex items-center justify-between text-base font-semibold leading-7"
+                  )}
+                >
+                  {tier.name}
+                  {tier.featured === true ? (
+                    <div className="flex items-center justify-center py-1.5 px-2 bg-blue-600 text-xs text-neutral-200 rounded-2xl">
+                      <span>Most Popular</span>
+                    </div>
+                  ) : null}
+                </h3>
+                <p className="mt-4 flex items-baseline gap-x-2">
+                  <span
+                    className={classNames(
+                      tier.featured ? "text-white" : "text-white",
+                      "text-5xl font-bold tracking-tight"
+                    )}
+                  >
+                    {tier.priceMonthly}
+                  </span>
+                  <span
+                    className={classNames(
+                      tier.featured ? "text-gray-400" : "text-gray-500",
+                      "text-base"
+                    )}
+                  >
+                    /month
+                  </span>
+                </p>
+                <p
+                  className={classNames(
+                    tier.featured ? "text-gray-300" : "text-gray-300",
+                    "mt-6 text-base leading-7"
+                  )}
+                >
+                  {tier.description}
+                </p>
+                <ul
+                  role="list"
+                  className={classNames(
+                    tier.featured ? "text-gray-300" : "text-gray-300",
+                    "mt-8 space-y-3 text-sm leading-6 sm:mt-10"
+                  )}
+                >
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="flex gap-x-3">
+                      <FaCheck
+                        aria-hidden="true"
+                        className={classNames(
+                          tier.featured ? "text-indigo-400" : "text-indigo-600",
+                          "h-5 w-4 flex-none"
+                        )}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={tier.href}
+                  aria-describedby={tier.id}
+                  className={classNames(
+                    tier.featured
+                      ? "bg-blue-600 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
+                      : "text-neutral-300 bg-gray-800 ring-1 ring-inset ring-gray-600 hover:ring-indigo-300 focus-visible:outline-indigo-600",
+                    "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
+                  )}
+                >
+                  Get started today
+                </a>
+              </div>
+            ))}
+          </div>
+          <p className="mt-16 max-w-2xl mx-auto leading-loose text-neutral-200 text-md text-center">
+            All Woww websites adhere to very strict design and functional
+            standards which include: Fast loading times, mobile friendliness,
+            basic SEO and a beautiful design. Our websites all start with a base
+            fee and then once the project scope is calculated, the total time is
+            multiplied by an hourly rate and fixed costs are included
+          </p>
+          <div className="w-max-3xl flex gap-4 items-center justify-center mt-12">
+            <Link
+              href="/"
+              className="min-w-56 flex items-center bg-gradient-to-r from-red-600 to-purple-700 hover:bg-gray-800 py-2 px-6 rounded-lg"
+            >
+              <h5 className="text-center text-neutral-200 text-md font-medium tracking-wide">
+                Checkout All Prices
+              </h5>
+              <MdNavigateNext className="text-neutral-200" size="1.6em" />
+            </Link>
           </div>
         </div>
       </div>

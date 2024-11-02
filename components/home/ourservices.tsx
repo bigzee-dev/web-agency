@@ -19,7 +19,7 @@ const iconProps = {
 const services = [
   {
     icon: <TbWorldWww {...iconProps} />,
-    title: "Web Development:",
+    title: "Web Development",
     description: (
       <>
         Our custom built websites deliver a consistent user experience on both{" "}
@@ -33,7 +33,7 @@ const services = [
   },
   {
     icon: <CiServer {...iconProps} strokeWidth={0.5} />,
-    title: "Web Hosting:",
+    title: "Web Hosting",
     description: (
       <>
         Our web hosting services ensure your website is <strong>fast</strong>,{" "}
@@ -61,7 +61,7 @@ const services = [
   },
   {
     icon: <TbShoppingCart {...iconProps} />,
-    title: "Online Growth & Visibility:",
+    title: "Online Growth & Visibility",
     description: (
       <>
         We offer comprehensive services to enhance your online presence and
@@ -111,7 +111,9 @@ export default function OurServices() {
                     {service.icon}
                   </div>
                 </div>
-                <h4 className="font-semibold text-gray-900">{service.title}</h4>
+                <h4 className="font-semibold text-indigo-900 text-xl">
+                  {service.title}
+                </h4>
               </div>
               <div className="flex-grow">
                 <p className="pl-1 mt-1 text-gray-600 text-md leading-relaxed">
@@ -121,10 +123,10 @@ export default function OurServices() {
             </div>
           ))}
         </div>
-        <div className="flex justify-end w-full">
+        <div className="flex justify-center w-full">
           <Link
             href="/"
-            className="text-blue-600 font-medium mt-7 pr-5 hover:text-blue-500"
+            className="bg-blue-600 text-neutral-200 text-md font-medium mt-14 px-4 py-2 hover:text-neutral-300 rounded-sm"
           >
             Learn more about our services <span aria-hidden="true">→</span>
           </Link>

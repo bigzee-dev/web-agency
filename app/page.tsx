@@ -5,9 +5,9 @@ import OurServices from "@/components/home/ourservices";
 import DeployFaster from "@/components/home/deployFaster";
 import WebsiteText from "@/components/home/websitetext";
 import Testimonial from "@/components/home/testimonial";
-import ContactUs from "@/components/home/contactus";
+import OurProcess from "@/components/home/ourprocess";
 import Pricing from "@/components/home/pricing";
-import PricingAlt from "@/components/home/pricingAlt";
+import ContactUs from "@/components/home/contactus";
 import Footer from "@/components/footer/footer";
 
 export default function Home() {
@@ -19,8 +19,9 @@ export default function Home() {
       <DeployFaster />
       <WhyChooseUs />
       <Testimonial />
-      <ContactUs />
+      <OurProcess />
       <Pricing />
+      <ContactUs />
       <Footer />
     </>
   );

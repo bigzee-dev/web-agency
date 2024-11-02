@@ -10,7 +10,7 @@ const features = [
 
 export default function DeployFaster() {
   return (
-    <div className="relative  bg-gradient-to-b from-white via-neutral-400 to-white -z-20">
+    <div className="relative bg-gradient-to-b from-white via-neutral-400 to-neutral-200 -z-20">
       <Image
         src="/svg/star-pattern.svg"
         height={500}
@@ -18,7 +18,8 @@ export default function DeployFaster() {
         alt="svg"
         className="absolute top-0 left-0 w-full h-full -z-10 opacity-10"
       />
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 py-16 z-10">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-neutral-50 -z-5" />
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 pt-20 pb-24 z-10">
         <h2 className="text-center text-base/7 font-semibold text-blue-600">
           Increase Your Visibility
         </h2>

@@ -36,7 +36,7 @@ export default function ResponsiveNavbar() {
 
   return (
     <nav className="w-full sticky top-0 z-50 bg-blue-600  text-neutral-200">
-      <div className="max-w-[1350px] mx-auto px-6 md:px-8 lg:px-12 py-3.5 flex justify-between items-center">
+      <div className="max-w-[1350px] mx-auto px-6 md:px-8 lg:px-12 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 text-xl">
           <div className="flex items-center justify-center p-1 bg-neutral-200 bg-opacity-20 rounded-xl overflow-hidden">
             <Image
