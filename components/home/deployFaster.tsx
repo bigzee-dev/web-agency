@@ -36,7 +36,7 @@ export default function DeployFaster() {
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
                   Modern Design Principles
                 </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                <p className="font-sans mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
                   qui lorem cupidatat commodo.
                 </p>
@@ -60,7 +60,7 @@ export default function DeployFaster() {
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
                   Performance
                 </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                <p className="font-sans mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit
                   maiores impedit.
                 </p>
@@ -82,7 +82,7 @@ export default function DeployFaster() {
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
                   Security
                 </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                <p className="font-sans mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Morbi viverra dui mi arcu sed. Tellus semper adipiscing
                   suspendisse semper morbi.
                 </p>
@@ -104,7 +104,7 @@ export default function DeployFaster() {
                 <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
                   Powerful Servers
                 </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                <p className="font-sans t-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Sit quis amet rutrum tellus ullamcorper ultricies libero dolor
                   eget sem sodales gravida.
                 </p>

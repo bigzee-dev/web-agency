@@ -8,10 +8,11 @@ import { TbShoppingCart } from "react-icons/tb";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { homePageheadings } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
+import clsx from "clsx";
 
 const iconProps = {
-  size: "2em",
-  className: "text-purple-400",
+  size: "3em",
+  className: "text-primary",
   // style: { stroke: "url(#blue-gradient)" },
   strokeWidth: 1.5,
 };
@@ -30,6 +31,7 @@ const services = [
         your audience.
       </>
     ),
+    link: "Lets build your Website",
   },
   {
     icon: <CiServer {...iconProps} strokeWidth={0.5} />,
@@ -44,6 +46,7 @@ const services = [
         <strong>consistent performance</strong> for your business needs.
       </>
     ),
+    link: "Get your website Online",
   },
   {
     icon: <TbMailCheck {...iconProps} />,
@@ -58,6 +61,7 @@ const services = [
         operating efficiently.
       </>
     ),
+    link: "Professional Email Addresses",
   },
   {
     icon: <TbShoppingCart {...iconProps} />,
@@ -72,6 +76,22 @@ const services = [
         reach.
       </>
     ),
+    link: "Grow your Brand",
+  },
+  {
+    icon: <TbShoppingCart {...iconProps} />,
+    title: "Online Growth & Visibility",
+    description: (
+      <>
+        We offer comprehensive services to enhance your online presence and
+        connect with your target audience. From{" "}
+        <strong>search engine optimisation</strong> to{" "}
+        <strong>social media integration</strong>, we provide customised
+        solutions that drive traffic, boost engagement, and expand your brand’s
+        reach.
+      </>
+    ),
+    link: "Grow your Brand",
   },
 ];
 
@@ -87,10 +107,10 @@ export default function OurServices() {
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
-          className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          className="mx-auto aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
         />
       </div>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className={`${homePageheadings} text-center mb-6 `}>
           Our Services
         </h2>
@@ -99,37 +119,36 @@ export default function OurServices() {
           landscape. Let us transform your vision into an engaging online
           experience.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-6 mt-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex flex-col gap-3 px-6 py-8 w-full bg-indigo-700/10 rounded-xl"
+              className={clsx(
+                "flex flex-col gap-3 px-6 py-8 w-full bg-primary/20",
+                index === 4 ? "col-span-2" : "col-span-1"
+              )}
             >
-              <div className="flex items-center gap-3  pb-4 border-b border-gray-300">
-                <div className="flex items-center justify-center p-1 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-full">
-                  <div className="bg-gray-800 p-2 rounded-full">
-                    {service.icon}
-                  </div>
+              <div className="flex items-center gap-3  pb-4 border-b border-gray-500">
+                <div className="flex items-center justify-center">
+                  <div className="text-primary">{service.icon}</div>
                 </div>
-                <h4 className="font-semibold text-indigo-900 text-xl">
+                <h4 className="font-bold text-primary text-xl">
                   {service.title}
                 </h4>
               </div>
               <div className="flex-grow">
-                <p className="pl-1 mt-1 text-gray-600 text-md leading-relaxed">
+                <p className="font-sans pl-1 mt-1 text-gray-600 text-md leading-relaxed">
                   {service.description}
                 </p>
               </div>
+              <Link
+                className="font-sans text-center py-2.5 px-3 bg-gray-800 text-md font-medium mt-3 text-neutral-100 rounded-lg ml-auto w-max"
+                href="http://209.97.177.68/cart.php?a=add&domain=register"
+              >
+                {service.link} <span aria-hidden="true">→</span>
+              </Link>
             </div>
           ))}
-        </div>
-        <div className="flex justify-center w-full">
-          <Link
-            href="/"
-            className="bg-blue-600 text-neutral-200 text-md font-medium mt-14 px-4 py-2 hover:text-neutral-300 rounded-sm"
-          >
-            Learn more about our services <span aria-hidden="true">→</span>
-          </Link>
         </div>
       </div>
     </section>

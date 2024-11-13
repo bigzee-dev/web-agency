@@ -5,8 +5,8 @@ const list = "text-gray-200 font-semibold";
 
 export default function Showcase() {
   return (
-    <div className="px-6 lg:py-10 lg:px-8 bg-gradient-to-br from-blue-600 from-20% via-purple-500 via-70% to-indigo-600 to-85%">
-      <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-8 mx-auto max-w-5xl pt-10 pb-12 lg:pt-18 lg:pb-12">
+    <div className="px-6 lg:py-10 lg:px-8 bg-gradient-to-br from-primary from-20% via-purple-500 via-70% to-indigo-600 to-85%">
+      <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-12 mx-auto max-w-6xl pt-10 pb-12 lg:pt-18 lg:pb-12">
         {/* <div className="mb-8 flex justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-300 ring-1 ring-neutral-300/50 hover:ring-neutral-200/70">
             Announcing our next round of funding.{" "}
@@ -27,7 +27,7 @@ export default function Showcase() {
         <div className="w-[50%] space-y-14 lg:pr-2">
           <div className=" space-y-9">
             <h1
-              className={` ${montserrat.className} text-5xl lg:text-6xl font-semibold text-gray-200 `}
+              className={` ${montserrat.className} text-5xl lg:text-6xl font-semibold text-gray-200 leading-loose`}
             >
               Building Modern and Reliable Web Solutions
             </h1>

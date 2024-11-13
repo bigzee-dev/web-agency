@@ -30,22 +30,21 @@ const cardData = [
   {
     backgroundStyle: {
       background: `
-        radial-gradient(at 0% 0%, #D2691E 0%, transparent 50%),
-        radial-gradient(at 100% 0%, #8B0000 0%, transparent 50%),
-        radial-gradient(at 100% 100%, #D2691E 0%, transparent 50%),
-        radial-gradient(at 0% 100%, #8B0000 0%, transparent 50%)
-        `,
+        radial-gradient(at 20.16452673169042% 81.84416905428343%, #653957 0px, transparent 50%), radial-gradient(at 88.48314715099974% 77.73409069566222%, #66479e 0px, transparent 50%), radial-gradient(at 71.52889333181726% 23.40957673823391%, #8c4d9d 0px, transparent 50%), radial-gradient(at 15.248796334412654% 19.835595556824153%, #a45192 0px, transparent 50%), radial-gradient(at 49.658909115357% 49.32094030345465%, #7f8290 0px, transparent 50%) #000000;
+      `,
+      mixBlendMode: "normal",
+      // filter: "blur(1px)",
       backgroundSize: "100% 100%",
       backgroundRepeat: "no-repeat",
     },
-    svg: "/svg/success.svg",
+    svg: "/svg/money-cash.svg",
     title: "Affordable Pricing",
     content:
       "We provide high-quality services that fit your budget, offering competitive rates without compromising on excellence. Get the solutions you need at a price that works for you.",
   },
   {
     backgroundStyle: {
-      background: "#5f1f73",
+      background: "rgb(8 145 178)",
     },
     svg: "/svg/customer-support.svg",
     title: "Dedicated Support",
@@ -90,7 +89,7 @@ export default function Component() {
   const starArray = Array.from({ length: 5 }, (_, index) => index + 1);
 
   return (
-    <div className="bg-gradient-to-r from-red-600/50 via-purple-700/50 to-blue-600/50 p-2">
+    <div className="bg-gradient-to-r from-cyan-500/60 via-cyan-700/60 to-primary/80 p-2">
       <div className="w-full pt-24 pb-20 flex flex-col bg-neutral-100/80 rounded-xl">
         <div className="mx-auto max-w-7xl">
           <div className="lg:mx-0 px-4">
@@ -128,7 +127,7 @@ export default function Component() {
                       <p className="w-full text-center text-gray-800 font-medium">
                         {card.title}
                       </p>
-                      <p className="text-md text-gray-600 text-center leading-relaxed">
+                      <p className="font-sans text-md text-gray-600 font-normal text-center leading-relaxed">
                         {card.content}
                       </p>
                     </CardContent>
@@ -140,40 +139,6 @@ export default function Component() {
               ))}
             </div>
           </motion.div>
-          <div className="w-full h-full mt-4 flex items-center justify-center min-h-[300px]">
-            <div className="grid grid-cols-1 justify-items-center w-full space-y-7 max-w-3xl mx-auto">
-              <div className="flex gap-2">
-                {starArray.map((star, index) => (
-                  <div>
-                    <FaRegStar className="text-gray-900" size="1.4em" />
-                  </div>
-                ))}
-              </div>
-              <h3
-                className={` ${expletus.className} text-gray-900 text-3xl font-medium text-center`}
-              >
-                “I didn’t know a thing about icon design until I read this book.
-                Now I can create any icon I need in no time. Great resource!”
-              </h3>
-              <div className="h-32 mt-8 w-max-xl flex gap-4 items-center">
-                <Image
-                  src="/img/tech-lady.png"
-                  alt="image"
-                  width={627}
-                  height={627}
-                  className="h-full w-auto object-contain"
-                />
-                <div>
-                  <p className="text-lg text-gray-800 font-medium">
-                    Mrs Mosalagae
-                  </p>
-                  <p className="text-md text-gray-600 font-normal">
-                    Business Lady
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

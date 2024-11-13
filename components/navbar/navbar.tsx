@@ -35,19 +35,19 @@ export default function ResponsiveNavbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="w-full sticky top-0 z-50 bg-blue-600  text-neutral-200">
+    <nav className="w-full sticky top-0 z-50 bg-neutral-50 text-primary">
       <div className="max-w-[1350px] mx-auto px-6 md:px-8 lg:px-12 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 text-xl">
-          <div className="flex items-center justify-center p-1 bg-neutral-200 bg-opacity-20 rounded-xl overflow-hidden">
+          <div className="flex items-center justify-center">
             <Image
               src="/svg/bigZee-logo.svg"
-              height={35}
-              width={35}
+              height={45}
+              width={45}
               alt="svg"
             />
           </div>
           <h6
-            className={` ${expletus.className} tracking-wider font-extrabold `}
+            className={` ${expletus.className} tracking-wider font-extrabold text-gray-900`}
           >
             bigZee
           </h6>
@@ -57,7 +57,7 @@ export default function ResponsiveNavbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6"
+              className="text-md font-semibold leading-6"
             >
               {item.name}
             </a>
