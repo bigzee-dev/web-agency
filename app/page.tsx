@@ -3,7 +3,6 @@ import Showcase from "@/components/home/showcase";
 import WhyChooseUs from "@/components/home/whychooseus";
 import OurServices from "@/components/home/ourservices";
 import DeployFaster from "@/components/home/deployFaster";
-import WebsiteText from "@/components/home/websitetext";
 import Testimonial from "@/components/home/testimonial";
 import OurProcess from "@/components/home/ourprocess";
 import Pricing from "@/components/home/pricing";

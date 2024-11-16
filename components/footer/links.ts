@@ -17,15 +17,19 @@ export const footerLinks = [
   {
     heading: "Solutions",
     firstLink: {
-      title: "Marketing",
+      title: "Websites",
       href: "/",
     },
     secondLink: {
-      title: "Analytics",
+      title: "Emails",
       href: "/",
     },
     thirdLink: {
-      title: "Commerce",
+      title: "Hosting",
+      href: "/",
+    },
+    fourthLink: {
+      title: "Domains",
       href: "/",
     },
   },

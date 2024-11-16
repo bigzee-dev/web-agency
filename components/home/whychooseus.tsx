@@ -113,7 +113,7 @@ export default function Component() {
             animate={hasAnimated ? "visible" : "hidden"}
             className="px-4 py-8"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 pt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pt-10">
               {cardData.map((card, index) => (
                 <motion.div key={index} variants={cardVariants}>
                   <Card className="h-full flex flex-col">

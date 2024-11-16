@@ -74,7 +74,7 @@ export default function Pricing() {
                 key={tier.id}
                 className={classNames(
                   tier.featured
-                    ? "relative bg-neutral-100/5 shadow-2xl ring-2 ring-inset ring-blue-600"
+                    ? "relative bg-neutral-100/5 shadow-2xl ring-2 ring-inset ring-blue-500"
                     : "bg-transparent sm:mx-8 lg:mx-0 border border-gray-700",
                   tier.featured
                     ? ""
@@ -132,12 +132,12 @@ export default function Pricing() {
                   )}
                 >
                   {tier.features.map((feature) => (
-                    <li key={feature} className="flex gap-x-3">
+                    <li key={feature} className="flex items-center gap-x-3">
                       <FaCheck
                         aria-hidden="true"
                         className={classNames(
                           tier.featured ? "text-indigo-400" : "text-indigo-600",
-                          "h-5 w-4 flex-none"
+                          "h-4 w-3 flex-none"
                         )}
                       />
                       {feature}
@@ -169,7 +169,7 @@ export default function Pricing() {
           <div className="w-max-3xl flex gap-4 items-center justify-center mt-12">
             <Link
               href="/"
-              className="min-w-56 flex justify-center items-center bg-gradient-to-r from-red-600 to-purple-700 hover:bg-gray-800 py-2 px-6 rounded-lg"
+              className="min-w-52 flex justify-center items-center bg-gradient-to-r from-red-600 to-purple-700 hover:bg-gray-800 py-2 px-6 rounded-lg"
             >
               <h5 className="text-center text-neutral-200 text-md font-medium tracking-wide">
                 Hosting Prices
@@ -178,10 +178,19 @@ export default function Pricing() {
             </Link>
             <Link
               href="/"
-              className="min-w-56 flex justify-center items-center bg-gradient-to-r from-red-600 to-purple-700 hover:bg-gray-800 py-2 px-6 rounded-lg"
+              className="min-w-52 flex justify-center items-center bg-gradient-to-r from-red-600 to-purple-700 hover:bg-gray-800 py-2 px-6 rounded-lg"
             >
               <h5 className="text-center text-neutral-200 text-md font-medium tracking-wide">
                 Email Prices
+              </h5>
+              <MdNavigateNext className="text-neutral-200" size="1.6em" />
+            </Link>
+            <Link
+              href="/"
+              className="min-w-52 flex justify-center items-center bg-gradient-to-r from-red-600 to-purple-700 hover:bg-gray-800 py-2 px-6 rounded-lg"
+            >
+              <h5 className="text-center text-neutral-200 text-md font-medium tracking-wide">
+                Domain Prices
               </h5>
               <MdNavigateNext className="text-neutral-200" size="1.6em" />
             </Link>
