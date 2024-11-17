@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactTypingEffect from "react-typing-effect";
+import { montserrat } from "@/app/ui/fonts";
 
 const TypingText = () => {
   const domains = [
@@ -37,10 +38,10 @@ const TypingText = () => {
         }}
         speed={200}
         eraseSpeed={130}
-        eraseDelay={2000}
-        typingDelay={1300}
+        eraseDelay={2200}
+        typingDelay={1000}
         cursor="|"
-        className="text-3xl font-semibold"
+        className={` ${montserrat.className} text-3xl font-bold tracking-wide`}
       />
     </div>
   );

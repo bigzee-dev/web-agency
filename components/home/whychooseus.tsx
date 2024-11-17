@@ -90,7 +90,7 @@ export default function Component() {
 
   return (
     <div className="bg-gradient-to-r from-cyan-500/60 via-cyan-700/60 to-primary/80 p-2">
-      <div className="w-full pt-24 pb-20 flex flex-col bg-neutral-100/80 rounded-xl">
+      <div className="w-full pt-20 pb-20 flex flex-col bg-neutral-100/80 rounded-xl">
         <div className="mx-auto max-w-7xl">
           <div className="lg:mx-0 px-4">
             <h2 className={homePageheadings}>Why Choose Us</h2>
@@ -111,7 +111,7 @@ export default function Component() {
             variants={containerVariants}
             initial="hidden"
             animate={hasAnimated ? "visible" : "hidden"}
-            className="px-4 py-8"
+            className="px-4 pt-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pt-10">
               {cardData.map((card, index) => (

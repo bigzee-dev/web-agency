@@ -12,7 +12,7 @@ const iconProps = {
 export default function CompanyInfo() {
   return (
     <div>
-      <div className="flex flex-col items-center h-full -mt-3 mr-2">
+      <div className="flex flex-col items-center h-full -mt-2.5 mr-2">
         <div>
           <Link href="/" className="flex items-center gap-3 text-xl">
             <Image

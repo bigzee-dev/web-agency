@@ -14,7 +14,7 @@ const tlds = [
   { name: ".io", price: 39.99, color: "text-green-400" },
   { name: ".app", price: 12.99, color: "text-purple-400" },
   { name: ".online", price: 3.99, color: "text-yellow-500" },
-  //   { name: ".net", price: 11.99, color: "text-red-500" },
+  { name: ".co.bw", price: 11.99, color: "text-green-500" },
   //   { name: ".org", price: 12.99, color: "text-indigo-400" },
   //   { name: ".tech", price: 39.99, color: "text-pink-400" },
 ];
@@ -27,7 +27,7 @@ export default function Domains() {
         Securing the ideal domain is a crucial first step in establishing your
         presence online. We offer a wide variety for you to select from.
       </p>
-      <div className="mt-auto w-full grid grid-cols-4 sm:grid-cols-7 gap-1 text-center">
+      <div className="mt-auto w-full grid grid-cols-5 sm:grid-cols-5 gap-1 text-center">
         {tlds.map((tld) => (
           <div key={tld.name} className="p-0.5">
             <div className={`${tld.color} text-lg font-semibold`}>

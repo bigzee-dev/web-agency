@@ -6,7 +6,7 @@ export const footerLinks = [
       href: "/",
     },
     secondLink: {
-      title: "Carreers",
+      title: "Our Process",
       href: "/",
     },
     thirdLink: {
@@ -36,15 +36,15 @@ export const footerLinks = [
   {
     heading: "Support",
     firstLink: {
-      title: "Pricing",
+      title: "Contact us",
       href: "/",
     },
     secondLink: {
-      title: "Documentation",
+      title: "Support Ticket",
       href: "/",
     },
     thirdLink: {
-      title: "Analytics",
+      title: "Privacy Policy",
       href: "/",
     },
   },

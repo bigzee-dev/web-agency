@@ -76,9 +76,7 @@ export default function Pricing() {
                   tier.featured
                     ? "relative bg-neutral-100/5 shadow-2xl ring-2 ring-inset ring-blue-500"
                     : "bg-transparent sm:mx-8 lg:mx-0 border border-gray-700",
-                  tier.featured
-                    ? ""
-                    : tierIdx === 0 || tierIdx === 2
+                  tierIdx === 0 || tierIdx === 2
                     ? "rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl"
                     : "sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl",
                   "rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10"

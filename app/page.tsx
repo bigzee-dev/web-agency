@@ -3,7 +3,7 @@ import Showcase from "@/components/home/showcase";
 import WhyChooseUs from "@/components/home/whychooseus";
 import OurServices from "@/components/home/ourservices";
 import DeployFaster from "@/components/home/deployFaster";
-import Testimonial from "@/components/home/testimonial";
+import Benefits from "@/components/home/benefits";
 import OurProcess from "@/components/home/ourprocess";
 import Pricing from "@/components/home/pricing";
 import ContactUs from "@/components/home/contactus";
@@ -17,7 +17,7 @@ export default function Home() {
       <OurServices />
       <DeployFaster />
       <WhyChooseUs />
-      <Testimonial />
+      <Benefits />
       <OurProcess />
       <Pricing />
       <ContactUs />
