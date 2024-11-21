@@ -1,9 +1,9 @@
 import ResponsiveNavbar from "@/components/navbar/navbar";
 import Showcase from "@/components/home/showcase";
-import WhyChooseUs from "@/components/home/whychooseus";
 import OurServices from "@/components/home/ourservices";
 import DeployFaster from "@/components/home/deployFaster";
 import Benefits from "@/components/home/benefits";
+import WhyChooseUs from "@/components/home/whychooseus";
 import OurProcess from "@/components/home/ourprocess";
 import Pricing from "@/components/home/pricing";
 import ContactUs from "@/components/home/contactus";
@@ -16,8 +16,8 @@ export default function Home() {
       <Showcase />
       <OurServices />
       <DeployFaster />
-      <WhyChooseUs />
       <Benefits />
+      <WhyChooseUs />
       <OurProcess />
       <Pricing />
       <ContactUs />

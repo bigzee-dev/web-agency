@@ -2,14 +2,7 @@
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 // import { Button } from "@/components/ui/button";
 import { homePageheadings } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
