@@ -82,7 +82,7 @@ export default function Pricing() {
             </h4>
           </div>
           <div className="grid grid-cols-1 items-center gap-y-6 gap-x-6 sm:mt-20 sm:gap-y-0 lg:grid-cols-3">
-            {tiers.map((tier, tierIdx) => (
+            {tiers.map((tier) => (
               <div
                 key={tier.id}
                 className={classNames(
