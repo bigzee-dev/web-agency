@@ -35,7 +35,7 @@ const cardData = [
   },
   {
     backgroundStyle: {
-      background: "rgb(8 145 178)",
+      background: "#ad3d1d",
     },
     svg: "/svg/customer-support.svg",
     title: "Dedicated Support",
@@ -78,57 +78,55 @@ export default function Component() {
   }
 
   return (
-    <div className="bg-gradient-to-r from-cyan-500/60 via-cyan-700/60 to-primary/80 p-2">
-      <div className="w-full pt-20 pb-20 flex flex-col bg-neutral-100/80 rounded-xl">
-        <div className="mx-auto max-w-7xl">
-          <div className="lg:mx-0 px-4">
-            <h2 className={homePageheadings}>Why Choose Us</h2>
-            <div className="mt-8  px-4 py-2 bg-gray-800 w-max">
-              <p className="text-3xl font-light text-gray-300">
-                We are Here to Help you{" "}
-                <span
-                  className={` ${montserrat.className} font-extrabold text-blue-600 tracking-wide `}
-                >
-                  Grow your Brand and Revenue
-                </span>
-              </p>
-            </div>
+    <div className="w-full pt-20 pb-20 flex flex-col">
+      <div className="mx-auto max-w-7xl">
+        <div className="lg:mx-0 px-4">
+          <h2 className={homePageheadings}>Why Choose Us</h2>
+          <div className="mt-8 py-2 w-max">
+            <p className="italic font-sans text-3xl font-normal text-gray-600">
+              We are Here to Help you{" "}
+              <span
+                className={` ${montserrat.className} font-extrabold text-gray-700 tracking-wide underline`}
+              >
+                Grow your Brand and Revenue
+              </span>
+            </p>
           </div>
+        </div>
 
-          <motion.div
-            ref={ref}
-            variants={containerVariants}
-            initial="hidden"
-            animate={hasAnimated ? "visible" : "hidden"}
-            className="px-4 pt-8"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pt-10">
-              {cardData.map((card, index) => (
-                <motion.div key={index} variants={cardVariants}>
-                  <Card className="h-full flex flex-col">
-                    <CardHeader
-                      className="flex justify-center items-center w-full max-w-[340px] mx-auto min-h-[160px] rounded-2xl"
-                      style={card.backgroundStyle}
-                    >
-                      <Image src={card.svg} height={75} width={75} alt="svg" />
-                    </CardHeader>
-                    <CardContent className="flex-grow mt-7 space-y-3">
-                      <p className="w-full text-center text-gray-800 font-medium">
-                        {card.title}
-                      </p>
-                      <p className="font-sans text-md text-gray-600 font-normal text-center leading-relaxed">
-                        {card.content}
-                      </p>
-                    </CardContent>
-                    {/* <CardFooter>
+        <motion.div
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={hasAnimated ? "visible" : "hidden"}
+          className="px-4 pt-8"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pt-10">
+            {cardData.map((card, index) => (
+              <motion.div key={index} variants={cardVariants}>
+                <Card className="h-full flex flex-col">
+                  <CardHeader
+                    className="flex justify-center items-center w-full max-w-[340px] mx-auto min-h-[160px] rounded-2xl"
+                    style={card.backgroundStyle}
+                  >
+                    <Image src={card.svg} height={75} width={75} alt="svg" />
+                  </CardHeader>
+                  <CardContent className="flex-grow mt-7 space-y-3">
+                    <p className="w-full text-center text-gray-800 font-medium">
+                      {card.title}
+                    </p>
+                    <p className="font-sans text-md text-gray-600 font-normal text-center leading-relaxed">
+                      {card.content}
+                    </p>
+                  </CardContent>
+                  {/* <CardFooter>
                   <Button>Learn More</Button>
                 </CardFooter> */}
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );

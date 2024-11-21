@@ -5,7 +5,7 @@ const list = "text-gray-200 font-semibold";
 
 export default function Showcase() {
   return (
-    <div className="px-6 lg:py-10 lg:px-8 bg-gradient-to-br from-primary from-20% via-purple-500 via-70% to-indigo-600 to-85%">
+    <div className="px-6 lg:py-10 lg:px-8 bg-gradient-to-br from-primary from-20% via-primary/50 via-70% to-indigo-600 to-85%">
       <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-12 mx-auto max-w-6xl pt-10 pb-12 lg:pt-18 lg:pb-12">
         {/* <div className="mb-8 flex justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-300 ring-1 ring-neutral-300/50 hover:ring-neutral-200/70">
@@ -50,13 +50,13 @@ export default function Showcase() {
         <div className="flex items-center justify-center gap-x-6">
           <a
             href="#"
-            className="rounded-md bg-neutral-200 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+            className="rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-neutral-100 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
           >
             Start Your Project
           </a>
           <a
             href="#"
-            className="text-sm font-semibold leading-6 text-neutral-300"
+            className="text-sm font-semibold leading-6 text-neutral-50"
           >
             Learn more <span aria-hidden="true">→</span>
           </a>

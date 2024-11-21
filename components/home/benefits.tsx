@@ -1,17 +1,11 @@
 import { montserrat } from "@/app/ui/fonts";
-import { expletus } from "@/app/ui/fonts";
-import { FaRegStar } from "react-icons/fa6";
 import Image from "next/image";
 
 export default function Benefits({
   backgroundImage = "/img/fullwidth.jpg?height=1400&width=6997",
-  overlayOpacity = 0.7,
 }: {
   backgroundImage?: string;
-  overlayOpacity?: number;
 }) {
-  const starArray = Array.from({ length: 5 }, (_, index) => index + 1);
-
   return (
     <div className="relative w-full max-w-[1800px] mx-auto">
       <div className="grid grid-cols-1">
@@ -21,12 +15,9 @@ export default function Benefits({
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
         {/* Overlay */}
-        <div
-          className="col-start-1 row-start-1 w-full h-full bg-gray-900 bg-opacity-90"
-          // style={{ opacity: overlayOpacity }}
-        >
+        <div className="col-start-1 row-start-1 w-full h-full bg-gray-900 bg-opacity-90">
           {/* Content */}
-          <div className="w-full h-full flex items-center justify-center py-16 min-h-[300px]">
+          <div className="w-full h-full flex items-center justify-center py-20 min-h-[300px]">
             <div className="grid grid-cols-12 w-full max-w-7xl mx-auto">
               <div className="flex items-center justify-center col-span-5">
                 <Image
@@ -41,13 +32,13 @@ export default function Benefits({
                 <h3
                   className={`${montserrat.className} text-4xl font-bold text-neutral-200 tracking-wide`}
                 >
-                  Why is website design & development{" "}
-                  <span className="text-blue-600">important?</span>
+                  How can you <span className="text-cyan-500">benefit</span>{" "}
+                  from our services
                 </h3>
                 <div className="mt-8">
                   <p className="font-sans text-md text-neutral-300">
                     Your website needs to rank on page one of Google - this is
-                    called Search Engine Optimisation (SEO) and it's when Google
+                    called Search Engine Optimisation (SEO) and its when Google
                     sends you all your customer enquiries and leads for free!
                   </p>
                   <p className="font-sans text-md text-neutral-300">

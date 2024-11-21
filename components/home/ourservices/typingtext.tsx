@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+"use client";
+
 import ReactTypingEffect from "react-typing-effect";
 import { montserrat } from "@/app/ui/fonts";
 

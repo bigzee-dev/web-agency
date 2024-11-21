@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "@/app/ui/global.css";
 import { inter } from "@/app/ui/fonts";
 
@@ -15,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-neutral-50`}>
+      <body className={`${inter.className} antialiased bg-neutral-100`}>
         {children}
       </body>
     </html>

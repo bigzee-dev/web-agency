@@ -1,5 +1,4 @@
 import { FaCheck } from "react-icons/fa6";
-import { CiServer } from "react-icons/ci";
 import { MdNavigateNext } from "react-icons/md";
 import Link from "next/link";
 
@@ -53,13 +52,27 @@ const tiers = [
   },
 ];
 
+const pricingLinks = [
+  {
+    title: "Hosting Prices",
+    url: "/",
+  },
+  {
+    title: "Email Prices",
+    url: "/",
+  },
+  {
+    title: "Domain Prices",
+    url: "/",
+  },
+];
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Pricing() {
   return (
-    <div className="w-full p-2">
+    <div className="w-full p-4">
       <div className="w-full bg-gray-900 py-20 rounded-2xl">
         <div className="max-w-lg lg:max-w-6xl mx-auto">
           <div className="mb-4">
@@ -75,7 +88,7 @@ export default function Pricing() {
                 className={classNames(
                   "shadow-2xl p-8 rounded-2xl",
                   tier.featured
-                    ? "relative bg-neutral-100/5  ring-2 ring-inset ring-blue-600"
+                    ? "relative bg-neutral-100/5  ring-2 ring-inset ring-primary"
                     : "bg-transparent border border-gray-700"
                 )}
               >
@@ -162,16 +175,20 @@ export default function Pricing() {
             multiplied by an hourly rate and fixed costs are included
           </p>
           <div className="w-max-3xl flex gap-4 items-center justify-center mt-12">
-            <Link
-              href="/"
-              className="min-w-52 flex justify-center items-center bg-gradient-to-r from-red-600 to-purple-700 hover:bg-gray-800 py-2 px-6 rounded-lg"
-            >
-              <h5 className="text-center text-neutral-200 text-md font-medium tracking-wide">
-                Hosting Prices
-              </h5>
-              <MdNavigateNext className="text-neutral-200" size="1.6em" />
-            </Link>
-            <Link
+            {pricingLinks.map((link, index) => (
+              <Link
+                key={index}
+                href={link.url}
+                className="min-w-52 flex justify-center items-center bg-gradient-to-r from-red-600 to-purple-700 text-transparent bg-clip-text hover:bg-neutral-200 py-2.5 px-6 rounded-lg"
+              >
+                <h5 className=" text-base font-bold tracking-wide">
+                  {link.title}
+                </h5>
+                <MdNavigateNext className="text-purple-700" size="1.6em" />
+              </Link>
+            ))}
+
+            {/* <Link
               href="/"
               className="min-w-52 flex justify-center items-center bg-gradient-to-r from-red-600 to-purple-700 hover:bg-gray-800 py-2 px-6 rounded-lg"
             >
@@ -188,7 +205,7 @@ export default function Pricing() {
                 Domain Prices
               </h5>
               <MdNavigateNext className="text-neutral-200" size="1.6em" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

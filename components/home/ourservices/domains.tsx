@@ -1,13 +1,4 @@
-"use client";
-
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
-import { FaCheck } from "react-icons/fa6";
 import TypingText from "./typingtext";
-
-import Link from "next/link";
 
 const tlds = [
   { name: ".com", price: 9.99, color: "text-red-400" },

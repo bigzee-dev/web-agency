@@ -63,11 +63,25 @@ export async function POST(req: NextRequest) {
         { status: 500 }
       );
     }
-  } catch (error: any) {
-    // Catch and return errors
-    return NextResponse.json(
-      { message: `An error occurred: ${error.message}` },
-      { status: 500 }
-    );
+  } catch (error: unknown) {
+    if (axios.isAxiosError(error)) {
+      // Axios-specific error handling
+      return NextResponse.json(
+        { message: `An Axios error occurred: ${error.message}` },
+        { status: 500 }
+      );
+    } else if (error instanceof Error) {
+      // Generic error handling
+      return NextResponse.json(
+        { message: `An error occurred: ${error.message}` },
+        { status: 500 }
+      );
+    } else {
+      // Fallback for non-standard errors
+      return NextResponse.json(
+        { message: "An unexpected error occurred" },
+        { status: 500 }
+      );
+    }
   }
 }

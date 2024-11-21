@@ -1,12 +1,5 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
-import { Check } from "lucide-react";
-const features = [
-  "25 products",
-  "Up to 10,000 subscribers",
-  "Advanced analytics",
-  "24-hour support response time",
-];
 
 export default function DeployFaster() {
   return (

@@ -1,7 +1,6 @@
 import { TbWorldWww } from "react-icons/tb";
 import { CiServer } from "react-icons/ci";
 import { TbMailCheck } from "react-icons/tb";
-import { TbShoppingCart } from "react-icons/tb";
 import { PiNetworkDuotone } from "react-icons/pi";
 import { IoIosTrendingUp } from "react-icons/io";
 

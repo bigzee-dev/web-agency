@@ -1,41 +1,42 @@
-import { homePageheadings } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 
 export default function OurProcess() {
   return (
-    <div className="font-sans py-16 px-4">
-      <div className="md:max-w-5xl max-w-lg mx-auto">
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="max-w-sm">
-            <h2 className="text-gray-600 text-3xl font-semibold mb-4 leading-10">
-              Innovative Solutions for Modern Challenges, <br /> Your Success,
-              Our Commitment
-            </h2>
+    <div className="bg-gradient-to-r from-cyan-500/60 via-cyan-700/60 to-primary/80 p-4">
+      <div className="font-sans py-20 px-4 bg-neutral-100/85 rounded-xl">
+        <div className="md:max-w-5xl max-w-lg mx-auto">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="max-w-sm">
+              <h2 className="text-gray-600 text-3xl font-semibold mb-4 leading-10">
+                Innovative Solutions for Modern Challenges, <br /> Your Success,
+                Our Commitment
+              </h2>
+            </div>
+            <div className="text-left">
+              <p className="mb-4 text-md text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                aliquam, ipsum vel iaculis bibendum, justo turpis ullamcorper
+                mauris, non aliquam nisi purus vel nisl. Integer efficitur
+                turpis in bibendum tincidunt.
+              </p>
+              <p className="text-md text-gray-600">
+                Nulla facilisi. Vestibulum fringilla leo et purus consectetur,
+                vel tincidunt dolor rhoncus. In hac habitasse platea dictumst.
+                Fusce vel sodales elit. Suspendisse potenti. Sed eget consequat
+                nisi.
+              </p>
+              <button
+                type="button"
+                className="min-w-52 mt-6 px-5 py-2.5 rounded-md text-white text-sm tracking-wider font-medium bg-primary hover:bg-blue-800 active:bg-blue-700"
+              >
+                <Link href="our-process">Our Process</Link>
+              </button>
+            </div>
           </div>
-          <div className="text-left">
-            <p className="mb-4 text-md text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              aliquam, ipsum vel iaculis bibendum, justo turpis ullamcorper
-              mauris, non aliquam nisi purus vel nisl. Integer efficitur turpis
-              in bibendum tincidunt.
-            </p>
-            <p className="text-md text-gray-600">
-              Nulla facilisi. Vestibulum fringilla leo et purus consectetur, vel
-              tincidunt dolor rhoncus. In hac habitasse platea dictumst. Fusce
-              vel sodales elit. Suspendisse potenti. Sed eget consequat nisi.
-            </p>
-            <button
-              type="button"
-              className="min-w-52 mt-6 px-5 py-2.5 rounded-md text-white text-sm tracking-wider font-medium border border-current outline-none bg-primary hover:bg-blue-800 active:bg-blue-700"
-            >
-              Our Process
-            </button>
-          </div>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
-          <div>
-            {/* <svg
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
+            <div>
+              {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-8 h-8"
               viewBox="0 0 512 512"
@@ -58,20 +59,20 @@ export default function OurProcess() {
                 />
               </g>
             </svg> */}
-            <div className="font-light text-lg text-gray-500">/ 01</div>
-            <div className="mt-4">
-              <h3 className="text-lg font-bold text-primary mb-2">
-                Fresh Insights
-              </h3>
-              <p className="text-gray-600 text-md">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum reprehenderit in voluptate velit esse cillum dolore...
-              </p>
+              <div className="font-light text-lg text-gray-500">/ 01</div>
+              <div className="mt-4">
+                <h3 className="text-lg font-bold text-primary mb-2">
+                  Fresh Insights
+                </h3>
+                <p className="text-gray-600 text-md">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum reprehenderit in voluptate velit esse cillum dolore...
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div>
-            {/* <svg
+            <div>
+              {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-8 h-8"
               viewBox="0 0 24 24"
@@ -103,20 +104,20 @@ export default function OurProcess() {
                 </g>
               </g>
             </svg> */}
-            <div className="font-light text-lg text-gray-500">/ 02</div>
-            <div className="mt-4">
-              <h3 className="text-lg font-bold text-primary mb-2">
-                Trending Now
-              </h3>
-              <p className="text-gray-600 text-md">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum reprehenderit in voluptate velit esse cillum dolore...
-              </p>
+              <div className="font-light text-lg text-gray-500">/ 02</div>
+              <div className="mt-4">
+                <h3 className="text-lg font-bold text-primary mb-2">
+                  Trending Now
+                </h3>
+                <p className="text-gray-600 text-md">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum reprehenderit in voluptate velit esse cillum dolore...
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div>
-            {/* <svg
+            <div>
+              {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-8 h-8"
               viewBox="0 0 512 512"
@@ -147,15 +148,16 @@ export default function OurProcess() {
                 data-original="#2196f3"
               />
             </svg> */}
-            <div className="font-light text-lg text-gray-500">/ 03</div>
-            <div className="mt-4">
-              <h3 className="text-lg font-bold text-primary mb-2">
-                Daily Highlights
-              </h3>
-              <p className="text-gray-600 text-md">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum reprehenderit in voluptate velit esse cillum dolore...
-              </p>
+              <div className="font-light text-lg text-gray-500">/ 03</div>
+              <div className="mt-4">
+                <h3 className="text-lg font-bold text-primary mb-2">
+                  Daily Highlights
+                </h3>
+                <p className="text-gray-600 text-md">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum reprehenderit in voluptate velit esse cillum dolore...
+                </p>
+              </div>
             </div>
           </div>
         </div>

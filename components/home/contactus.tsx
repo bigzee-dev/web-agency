@@ -23,11 +23,9 @@ export default function ContactUs() {
           <TiMessages size="1.6em" />
           <span className="text-sm font-semibold">Contact us</span>
         </Link>
-        <div className="flex items-center justify-center gap-2 bg-neutral-100 border-2 border-blue-600 p-2 min-w-52 text-blue-600 rounded-lg cursor-pointer">
+        <div className="flex items-center justify-center gap-2 bg-neutral-50 border-2 border-primary p-2 min-w-52 text-primary rounded-lg cursor-pointer">
           <FaWhatsapp size="1.5em" />
-          <span className="text-sm font-semibold  bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text">
-            Chat on Whatsapp
-          </span>
+          <span className="text-sm font-semibold">Chat on Whatsapp</span>
         </div>
       </div>
     </div>
