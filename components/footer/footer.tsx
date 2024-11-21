@@ -12,7 +12,7 @@ export default function Footer() {
         <CompanyInfo />
         <div className="col-span-2 grid grid-cols-3">
           {footerLinks.map((link, i) => (
-            <div>
+            <div key={i}>
               <h3 className={linkHeading}>{link.heading}</h3>
               <ul className="mt-4 space-y-3">
                 <li>

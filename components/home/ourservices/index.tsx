@@ -68,10 +68,10 @@ export default function OurServices() {
 
               <Link
                 className={clsx(
-                  "font-sans text-center py-2.5 px-3 text-md font-medium mt-3 rounded-lg ml-auto w-max",
+                  "font-sans text-neutral-50 text-center py-2.5 px-3 text-md font-medium mt-3 rounded-lg ml-auto w-max min-w-52",
                   index === 4
-                    ? "bg-neutral-100 text-primary mx-auto"
-                    : "bg-blue-600 text-neutral-100"
+                    ? "bg-gradient-to-r from-primary to-cyan-500 ring ring-2 ring-neutral-200"
+                    : "bg-gradient-to-r from-primary to-cyan-500"
                 )}
                 href="http://209.97.177.68/cart.php?a=add&domain=register"
               >

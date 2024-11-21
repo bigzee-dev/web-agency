@@ -55,7 +55,7 @@ export default function Benefits({
                   </p>
                 </div>
                 <div className="mt-6">
-                  <h4 className="font-sans text-xl font-medium text-neutral-400">
+                  <h4 className="font-sans text-2xl font-semibold text-neutral-400">
                     This is a test header. Checking if it works.
                   </h4>
                   <ul className="text-md list-disc pl-6 text-neutral-300 mt-4 space-y-4">
@@ -75,7 +75,7 @@ export default function Benefits({
                       aliqua.
                     </li>
                   </ul>
-                  <button className=" mt-8 bg-blue-600 font-sans text-center py-2.5 px-3 text-md text-neutral-300 font-medium min-w-52 rounded-lg">
+                  <button className=" mt-8 bg-primary font-sans text-center py-2.5 px-3 text-md text-neutral-300 font-medium min-w-52 rounded-lg">
                     Work with Us
                   </button>
                 </div>

@@ -26,7 +26,7 @@ export default function OurProcess() {
             </p>
             <button
               type="button"
-              className="mt-6 px-5 py-2.5 rounded-md text-white text-sm tracking-wider font-medium border border-current outline-none bg-blue-600 hover:bg-blue-800 active:bg-blue-700"
+              className="min-w-52 mt-6 px-5 py-2.5 rounded-md text-white text-sm tracking-wider font-medium border border-current outline-none bg-primary hover:bg-blue-800 active:bg-blue-700"
             >
               Our Process
             </button>

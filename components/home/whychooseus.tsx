@@ -30,7 +30,7 @@ const cardData = [
   {
     backgroundStyle: {
       background: `
-        radial-gradient(at 20.16452673169042% 81.84416905428343%, #653957 0px, transparent 50%), radial-gradient(at 88.48314715099974% 77.73409069566222%, #66479e 0px, transparent 50%), radial-gradient(at 71.52889333181726% 23.40957673823391%, #8c4d9d 0px, transparent 50%), radial-gradient(at 15.248796334412654% 19.835595556824153%, #a45192 0px, transparent 50%), radial-gradient(at 49.658909115357% 49.32094030345465%, #7f8290 0px, transparent 50%) #000000;
+        radial-gradient(at 20.16452673169042% 81.84416905428343%, #653957 0px, transparent 50%), radial-gradient(at 88.48314715099974% 77.73409069566222%, #66479e 0px, transparent 50%), radial-gradient(at 71.52889333181726% 23.40957673823391%, #8c4d9d 0px, transparent 50%), radial-gradient(at 15.248796334412654% 19.835595556824153%, #a45192 0px, transparent 50%), radial-gradient(at 49.658909115357% 49.32094030345465%, #7f8290 0px, transparent 50%) #000000
       `,
       mixBlendMode: "normal",
       // filter: "blur(1px)",

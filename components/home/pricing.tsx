@@ -73,13 +73,10 @@ export default function Pricing() {
               <div
                 key={tier.id}
                 className={classNames(
+                  "shadow-2xl p-8 rounded-2xl",
                   tier.featured
-                    ? "relative bg-neutral-100/5 shadow-2xl ring-2 ring-inset ring-blue-500"
-                    : "bg-transparent sm:mx-8 lg:mx-0 border border-gray-700",
-                  tierIdx === 0 || tierIdx === 2
-                    ? "rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl"
-                    : "sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl",
-                  "rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10"
+                    ? "relative bg-neutral-100/5  ring-2 ring-inset ring-blue-600"
+                    : "bg-transparent border border-gray-700"
                 )}
               >
                 <h3
@@ -147,7 +144,7 @@ export default function Pricing() {
                   aria-describedby={tier.id}
                   className={classNames(
                     tier.featured
-                      ? "bg-blue-600 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
+                      ? "bg-primary text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
                       : "text-neutral-300 bg-gray-800 ring-1 ring-inset ring-gray-600 hover:ring-indigo-300 focus-visible:outline-indigo-600",
                     "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
                   )}

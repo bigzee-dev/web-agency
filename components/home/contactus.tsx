@@ -17,7 +17,7 @@ export default function ContactUs() {
       </p>
       <div className="flex justify-center gap-3 max-w-lg mx-auto text-neutral-200 mt-12">
         <Link
-          className="flex items-center justify-center gap-2 bg-blue-600 p-2 min-w-52 rounded-lg"
+          className="flex items-center justify-center gap-2 bg-primary p-2 min-w-52 rounded-lg"
           href="/"
         >
           <TiMessages size="1.6em" />
