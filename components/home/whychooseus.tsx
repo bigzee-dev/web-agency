@@ -6,8 +6,6 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 // import { Button } from "@/components/ui/button";
 import { homePageheadings } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
-import { FaRegStar } from "react-icons/fa6";
-import { expletus } from "@/app/ui/fonts";
 
 const cardData = [
   {
@@ -78,8 +76,6 @@ export default function Component() {
   if (isInView && !hasAnimated) {
     setHasAnimated(true);
   }
-
-  const starArray = Array.from({ length: 5 }, (_, index) => index + 1);
 
   return (
     <div className="bg-gradient-to-r from-cyan-500/60 via-cyan-700/60 to-primary/80 p-2">

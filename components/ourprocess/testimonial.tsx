@@ -1,11 +1,9 @@
-import { montserrat } from "@/app/ui/fonts";
 import { expletus } from "@/app/ui/fonts";
 import { FaRegStar } from "react-icons/fa6";
 import Image from "next/image";
 
 export default function Testimonial({
   backgroundImage = "/img/fullwidth.jpg?height=1400&width=6997",
-  overlayOpacity = 0.7,
 }: {
   backgroundImage?: string;
   overlayOpacity?: number;
@@ -40,8 +38,8 @@ export default function Testimonial({
           <div className="w-full h-full flex items-center justify-center py-16 min-h-[300px]">
             <div className="grid grid-cols-1 justify-items-center w-full space-y-7 max-w-3xl mx-auto">
               <div className="flex gap-3">
-                {starArray.map((star, index) => (
-                  <div>
+                {starArray.map((_, index) => (
+                  <div key={index}>
                     <FaRegStar className="text-neutral-400" size="1.6em" />
                   </div>
                 ))}
