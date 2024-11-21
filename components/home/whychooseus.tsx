@@ -107,7 +107,7 @@ export default function Component() {
                 <Card className="h-full flex flex-col">
                   <CardHeader
                     className="flex justify-center items-center w-full max-w-[340px] mx-auto min-h-[160px] rounded-2xl"
-                    style={card.backgroundStyle}
+                    style={card.backgroundStyle as React.CSSProperties}
                   >
                     <Image src={card.svg} height={75} width={75} alt="svg" />
                   </CardHeader>
