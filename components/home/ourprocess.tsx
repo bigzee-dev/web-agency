@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 export default function OurProcess() {
@@ -36,29 +37,6 @@ export default function OurProcess() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
             <div>
-              {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-8 h-8"
-              viewBox="0 0 512 512"
-            >
-              <g fill-rule="evenodd" clip-rule="evenodd">
-                <path
-                  fill="#ff405c"
-                  d="M255.997.007c-141.156 0-256 114.844-256 256 0 141.16 114.844 256 256 256 141.16 0 256.004-114.84 256.004-256C512 114.851 397.157.007 255.997.007z"
-                  data-original="#ff405c"
-                />
-                <path
-                  fill="#d01273"
-                  d="M269.845 511.629c110.122-5.9 201.974-81.716 231.869-183.747l-99.461-99.461a12.002 12.002 0 0 0-1.223-1.135l-137.504-110.9a11.994 11.994 0 0 0-15.061 0l-137.5 110.9a12.01 12.01 0 0 0-3.788 13.337 12.008 12.008 0 0 0 3.109 4.757l39.179 39.186v101.722a11.97 11.97 0 0 0 3.796 8.758z"
-                  data-original="#d01273"
-                />
-                <path
-                  fill="#fff"
-                  d="M350.528 224.627c-6.632 0-11.999 5.372-11.999 11.999V374.29h-35.472v-93.423c0-6.627-5.367-11.999-11.999-11.999H220.94c-6.631 0-11.999 5.372-11.999 11.999v93.423h-35.472V236.626c0-6.627-5.372-11.999-11.999-11.999h-8.983l103.509-83.484 103.514 83.484zm50.503 2.659-137.504-110.9a11.992 11.992 0 0 0-15.06 0l-137.5 110.9a12.01 12.01 0 0 0-3.788 13.337 12.008 12.008 0 0 0 11.318 8.006h30.97v137.66c0 6.627 5.372 12.003 12.003 12.003h59.469c6.619 0 11.999-5.376 11.999-12.003v-93.423h46.12v93.423c0 6.627 5.38 12.003 11.999 12.003h59.47c6.631 0 12.003-5.376 12.003-12.003v-137.66h30.97c5.088 0 9.619-3.209 11.318-8.006a12.009 12.009 0 0 0-3.787-13.337z"
-                  data-original="#ffffff"
-                />
-              </g>
-            </svg> */}
               <div className="font-light text-lg text-gray-500">/ 01</div>
               <div className="mt-4">
                 <h3 className="text-lg font-bold text-primary mb-2">
@@ -72,38 +50,33 @@ export default function OurProcess() {
             </div>
 
             <div>
-              {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-8 h-8"
-              viewBox="0 0 24 24"
-            >
-              <g data-name="Layer 2">
-                <path
-                  fill="#54d6c0"
-                  d="M23 5.675h-3.3a.825.825 0 0 0-.825.825v14.85a2.475 2.475 0 0 0 4.95 0V6.5A.825.825 0 0 0 23 5.675z"
-                  data-original="#54d6c0"
-                />
-                <path
-                  fill="#1f95f8"
-                  d="M21.735 23.726a.744.744 0 0 1-.385.099H4.3A4.126 4.126 0 0 1 .175 19.7V2.1A1.934 1.934 0 0 1 2.1.175h16.5A1.934 1.934 0 0 1 20.525 2.1v19.943a1.771 1.771 0 0 0 1.21 1.683z"
-                  data-original="#1f95f8"
-                />
-                <g fill="#fff" transform="matrix(1.1 0 0 1.1 -1.2 -1.2)">
-                  <rect
-                    width="5.5"
-                    height="5.5"
-                    x="4.25"
-                    y="4.75"
-                    data-original="#ffffff"
-                    rx=".75"
-                  />
-                  <path
-                    d="M16 6.75h-4a.75.75 0 0 1 0-1.5h4a.75.75 0 0 1 0 1.5zm0 3h-4a.75.75 0 0 1 0-1.5h4a.75.75 0 0 1 0 1.5zm0 4H5a.75.75 0 0 1 0-1.5h11a.75.75 0 0 1 0 1.5zm0 3H5a.75.75 0 0 1 0-1.5h11a.75.75 0 0 1 0 1.5zm0 3H5a.75.75 0 0 1 0-1.5h11a.75.75 0 0 1 0 1.5z"
-                    data-original="#ffffff"
-                  />
-                </g>
-              </g>
-            </svg> */}
+              <div className="image-container">
+                <style jsx>{`
+                  .image-container {
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+                    background-image: url("/tech-man.jpg");
+                    background-size: cover;
+                    background-position: center;
+                  }
+                  .mask {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80%;
+                    height: 80%;
+                    background-image: inherit;
+                    background-size: cover;
+                    background-position: center;
+                    clip-path: path(
+                      "M0.5 0.238C0.5 0.107 0.607 0 0.738 0H100.262C100.393 0 100.5 0.107 100.5 0.238V57.818C100.5 57.885 100.47 57.946 100.42 57.982L86.58 67.518C86.53 67.554 86.5 67.615 86.5 67.682V99.762C86.5 99.893 86.393 100 86.262 100H0.738C0.607 100 0.5 99.893 0.5 99.762V0.238Z"
+                    );
+                  }
+                `}</style>
+                <div className="mask"></div>
+              </div>
               <div className="font-light text-lg text-gray-500">/ 02</div>
               <div className="mt-4">
                 <h3 className="text-lg font-bold text-primary mb-2">

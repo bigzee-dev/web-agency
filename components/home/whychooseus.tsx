@@ -20,15 +20,22 @@ const cardData = [
   },
   {
     backgroundStyle: {
-      background: `
-        radial-gradient(at 20.16452673169042% 81.84416905428343%, #653957 0px, transparent 50%), radial-gradient(at 88.48314715099974% 77.73409069566222%, #66479e 0px, transparent 50%), radial-gradient(at 71.52889333181726% 23.40957673823391%, #8c4d9d 0px, transparent 50%), radial-gradient(at 15.248796334412654% 19.835595556824153%, #a45192 0px, transparent 50%), radial-gradient(at 49.658909115357% 49.32094030345465%, #7f8290 0px, transparent 50%) #000000
+      backgroundColor: "hsla(258,100%,50%,1)",
+      backgroundImage: `
+        radial-gradient(at 40% 20%, hsla(151,100%,74%,1) 0px, transparent 50%),
+radial-gradient(at 80% 0%, hsla(74,13%,84%,1) 0px, transparent 50%),
+radial-gradient(at 0% 50%, hsla(118,100%,93%,1) 0px, transparent 50%),
+radial-gradient(at 80% 50%, hsla(103,18%,82%,1) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(145,100%,77%,1) 0px, transparent 50%),
+radial-gradient(at 80% 100%, hsla(5,21%,85%,1) 0px, transparent 50%),
+radial-gradient(at 0% 0%, hsla(106,24%,86%,1) 0px, transparent 50%)
       `,
       mixBlendMode: "normal",
       // filter: "blur(1px)",
       backgroundSize: "100% 100%",
       backgroundRepeat: "no-repeat",
     },
-    svg: "/svg/money-cash.svg",
+    svg: "/svg/banking.svg",
     title: "Affordable Pricing",
     content:
       "We provide high-quality services that fit your budget, offering competitive rates without compromising on excellence. Get the solutions you need at a price that works for you.",
