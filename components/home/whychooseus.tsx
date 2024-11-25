@@ -17,28 +17,15 @@ const cardData = [
     title: "Custom Solutions",
     content:
       "We offer services tailored to everyone—from individuals to businesses and organisations. Our team creates personalised solutions to meet your unique needs.",
+    className: "",
   },
   {
-    backgroundStyle: {
-      backgroundColor: "hsla(258,100%,50%,1)",
-      backgroundImage: `
-        radial-gradient(at 40% 20%, hsla(151,100%,74%,1) 0px, transparent 50%),
-radial-gradient(at 80% 0%, hsla(74,13%,84%,1) 0px, transparent 50%),
-radial-gradient(at 0% 50%, hsla(118,100%,93%,1) 0px, transparent 50%),
-radial-gradient(at 80% 50%, hsla(103,18%,82%,1) 0px, transparent 50%),
-radial-gradient(at 0% 100%, hsla(145,100%,77%,1) 0px, transparent 50%),
-radial-gradient(at 80% 100%, hsla(5,21%,85%,1) 0px, transparent 50%),
-radial-gradient(at 0% 0%, hsla(106,24%,86%,1) 0px, transparent 50%)
-      `,
-      mixBlendMode: "normal",
-      // filter: "blur(1px)",
-      backgroundSize: "100% 100%",
-      backgroundRepeat: "no-repeat",
-    },
+    backgroundStyle: {},
     svg: "/svg/banking.svg",
     title: "Affordable Pricing",
     content:
       "We provide high-quality services that fit your budget, offering competitive rates without compromising on excellence. Get the solutions you need at a price that works for you.",
+    className: "bg-gradient-to-r from-primary to-gray-800",
   },
   {
     backgroundStyle: {
@@ -48,6 +35,7 @@ radial-gradient(at 0% 0%, hsla(106,24%,86%,1) 0px, transparent 50%)
     title: "Dedicated Support",
     content:
       "Our team is here to assist you every step of the way, ensuring everything runs smoothly. Count on us for dependable support whenever you need it.",
+    className: "",
   },
 ];
 
@@ -85,7 +73,7 @@ export default function Component() {
   }
 
   return (
-    <div className="w-full pt-20 pb-20 flex flex-col">
+    <div className="w-full pt-16 pb-20 flex flex-col bg-gradient-to-b from-neutral-300/50 to-neutral-100">
       <div className="mx-auto max-w-7xl">
         <div className="lg:mx-0 px-4">
           <h2 className={homePageheadings}>Why Choose Us</h2>
@@ -113,7 +101,7 @@ export default function Component() {
               <motion.div key={index} variants={cardVariants}>
                 <Card className="h-full flex flex-col">
                   <CardHeader
-                    className="flex justify-center items-center w-full max-w-[340px] mx-auto min-h-[160px] rounded-2xl"
+                    className={`flex justify-center items-center w-full max-w-[340px] mx-auto min-h-[160px] rounded-xl ${card.className}`}
                     style={card.backgroundStyle as React.CSSProperties}
                   >
                     <Image src={card.svg} height={75} width={75} alt="svg" />

@@ -25,7 +25,7 @@ export default function Benefits({
                   alt="image"
                   width={500}
                   height={500}
-                  className="h-[90%] w-[90%] object-contain"
+                  className="h-[80%] w-[80%] object-contain"
                 />
               </div>
               <div className="col-span-7 px-10">

@@ -1,9 +1,9 @@
 import TypingText from "./typingtext";
 
 const tlds = [
-  { name: ".com", price: 9.99, color: "text-red-400" },
-  { name: ".io", price: 39.99, color: "text-green-400" },
-  { name: ".app", price: 12.99, color: "text-purple-400" },
+  { name: ".com", price: 9.99, color: "text-red-500" },
+  { name: ".io", price: 39.99, color: "text-green-500" },
+  { name: ".app", price: 12.99, color: "text-purple-500" },
   { name: ".online", price: 3.99, color: "text-yellow-500" },
   { name: ".co.bw", price: 11.99, color: "text-green-500" },
   //   { name: ".org", price: 12.99, color: "text-indigo-400" },
@@ -14,7 +14,7 @@ export default function Domains() {
   return (
     <div className="h-full flex flex-col items-center w-full pt-2">
       <TypingText />
-      <p className="font-sans pt-3 text-md text-neutral-300 text-center max-w-xl mx-auto">
+      <p className="font-sans pt-3 text-md text-gray-700 text-center max-w-xl mx-auto">
         Securing the ideal domain is a crucial first step in establishing your
         presence online. We offer a wide variety for you to select from.
       </p>
@@ -24,7 +24,7 @@ export default function Domains() {
             <div className={`${tld.color} text-lg font-semibold`}>
               {tld.name}
             </div>
-            <div className="text-xs text-gray-300/80 mt-1">
+            <div className="text-xs text-gray-600 font-medium mt-1">
               ${tld.price.toFixed(2)}/yr
             </div>
           </div>

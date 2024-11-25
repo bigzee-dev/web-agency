@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import clsx from "clsx";
 import { cn } from "@/lib/utils";
+import { Smartphone } from "lucide-react";
+import { Monitor } from "lucide-react";
+import { LaptopMinimal } from "lucide-react";
 
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -81,8 +84,14 @@ export default function EverythingCarousel() {
                         {card.text}
                       </p>
                     </div>
-                    {(index === 1 || index === 3 || index === 0) &&
-                    card.imgUrl ? (
+                    {index === 0 ? (
+                      <div className="flex gap-6 max-w-[75%] mx-auto text-neutral-200 pb-11">
+                        <Monitor size="3.2em" />
+                        <Smartphone size="3.2em" />
+                        <LaptopMinimal size="3.2em" />
+                      </div>
+                    ) : null}
+                    {(index === 1 || index === 3) && card.imgUrl ? (
                       <Image
                         src={card.imgUrl}
                         height={card.height}

@@ -72,8 +72,8 @@ function classNames(...classes: string[]) {
 
 export default function Pricing() {
   return (
-    <div className="w-full p-4">
-      <div className="w-full bg-gray-900 py-20 rounded-2xl">
+    <div className="w-full pt-10">
+      <div className="max-w-7xl mx-auto bg-gray-900 py-20 rounded-2xl">
         <div className="max-w-lg lg:max-w-6xl mx-auto">
           <div className="mb-4">
             <h4 className="text-neutral-300 text-5xl font-extrabold  bg-gradient-to-r from-red-600 via-purple-700 to-indigo-600 text-transparent bg-clip-text leading-normal">

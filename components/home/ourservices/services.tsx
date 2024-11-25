@@ -5,7 +5,7 @@ import { PiNetworkDuotone } from "react-icons/pi";
 import { IoIosTrendingUp } from "react-icons/io";
 
 const iconProps = {
-  size: "3em",
+  size: "2.6em",
   strokeWidth: 1.2,
 };
 
@@ -71,7 +71,7 @@ export const services = [
     link: "Grow your Brand",
   },
   {
-    icon: <PiNetworkDuotone size="3em" strokeWidth={0.8} />,
+    icon: <PiNetworkDuotone {...iconProps} />,
     title: "Register Domain",
     description: (
       <>

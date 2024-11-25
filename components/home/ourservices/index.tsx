@@ -33,26 +33,15 @@ export default function OurServices() {
             <div
               key={index}
               className={clsx(
-                "flex flex-col gap-3 px-6 py-8 w-full",
+                "flex flex-col gap-3 px-6 py-8 w-full bg-gray-800/5 border border-gray-300 rounded-xl",
                 index === 4
-                  ? "text-neutral-100 col-span-1 md:col-span-2 bg-gray-800"
-                  : "col-span-1  bg-primary/20"
+                  ? "text-neutral-100 col-span-1 md:col-span-2 "
+                  : "col-span-1 "
               )}
             >
-              <div
-                className={clsx(
-                  "flex items-center gap-3  pb-4 border-b border-gray-500",
-                  index === 4 ? "text-neutral-300" : "text-primary"
-                )}
-              >
+              <div className="flex items-center gap-3 text-gray-700 pb-4 border-b border-gray-500">
                 <div className="flex items-center justify-center">
-                  <div
-                    className={
-                      index === 4 ? "text-neutral-300/8" : "text-primary"
-                    }
-                  >
-                    {service.icon}
-                  </div>
+                  <div className="text-neutral-700">{service.icon}</div>
                 </div>
                 <h4 className="font-bold text-xl">{service.title}</h4>
               </div>
@@ -67,12 +56,7 @@ export default function OurServices() {
               </div>
 
               <Link
-                className={clsx(
-                  "font-sans text-neutral-50 text-center py-2.5 px-3 text-md font-medium mt-3 rounded-lg ml-auto w-max min-w-52",
-                  index === 4
-                    ? "bg-gradient-to-r from-primary to-cyan-500 ring ring-2 ring-neutral-200"
-                    : "bg-gradient-to-r from-primary to-cyan-500"
-                )}
+                className="font-sans text-neutral-50 text-center py-2.5 px-3 text-md font-medium mt-3 rounded-lg mx-auto w-max min-w-52 bg-primary"
                 href="http://209.97.177.68/cart.php?a=add&domain=register"
               >
                 {service.link} <span aria-hidden="true">→</span>
