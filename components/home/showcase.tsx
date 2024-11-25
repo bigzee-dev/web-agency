@@ -5,7 +5,7 @@ const list = "text-gray-200 font-semibold";
 
 export default function Showcase() {
   return (
-    <div className="px-6 lg:py-10 lg:px-8 bg-gradient-to-br from-primary from-20% via-primary/50 via-70% to-indigo-600 to-85%">
+    <div className="px-6 lg:py-10 lg:px-8 bg-gradient-to-br from-primary from-20% via-gray-950/80 via-70% to-gray-700 to-85%">
       <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-12 mx-auto max-w-6xl pt-10 pb-12 lg:pt-18 lg:pb-12">
         {/* <div className="mb-8 flex justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-300 ring-1 ring-neutral-300/50 hover:ring-neutral-200/70">
@@ -16,7 +16,7 @@ export default function Showcase() {
             </a>
           </div>
         </div> */}
-        <div className="w-[50%] flex justify-center items-center bg-indigo-700 bg-opacity-30 p-8 rounded-xl">
+        <div className="w-[50%] flex justify-center items-center bg-cyan-500/10 bg-opacity-30 p-8 rounded-xl">
           <Image
             src="/img/hero-img-nice.png"
             alt="image"

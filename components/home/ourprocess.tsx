@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function OurProcess() {
   return (
-    <div className="bg-gradient-to-r from-cyan-500/60 via-cyan-700/60 to-primary/80 p-4">
-      <div className="font-sans py-20 px-4 bg-neutral-100/85 rounded-xl">
+    <div className="bg-gradient-to-r from-cyan-500/20 via-cyan-700/20 to-primary/20 p-8">
+      <div className="max-w-7xl mx-auto font-sans py-20 px-4 bg-neutral-100/85 rounded-2xl">
         <div className="md:max-w-5xl max-w-lg mx-auto">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="max-w-sm">
@@ -50,33 +50,6 @@ export default function OurProcess() {
             </div>
 
             <div>
-              <div className="image-container">
-                <style jsx>{`
-                  .image-container {
-                    position: relative;
-                    width: 100%;
-                    height: 100vh;
-                    background-image: url("/tech-man.jpg");
-                    background-size: cover;
-                    background-position: center;
-                  }
-                  .mask {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 80%;
-                    height: 80%;
-                    background-image: inherit;
-                    background-size: cover;
-                    background-position: center;
-                    clip-path: path(
-                      "M0.5 0.238C0.5 0.107 0.607 0 0.738 0H100.262C100.393 0 100.5 0.107 100.5 0.238V57.818C100.5 57.885 100.47 57.946 100.42 57.982L86.58 67.518C86.53 67.554 86.5 67.615 86.5 67.682V99.762C86.5 99.893 86.393 100 86.262 100H0.738C0.607 100 0.5 99.893 0.5 99.762V0.238Z"
-                    );
-                  }
-                `}</style>
-                <div className="mask"></div>
-              </div>
               <div className="font-light text-lg text-gray-500">/ 02</div>
               <div className="mt-4">
                 <h3 className="text-lg font-bold text-primary mb-2">

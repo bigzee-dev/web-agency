@@ -56,7 +56,7 @@ export default function ResponsiveNavbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-md font-semibold leading-6"
+              className="text-primary text-md font-semibold leading-6"
             >
               {item.name}
             </a>

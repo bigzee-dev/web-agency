@@ -35,7 +35,7 @@ export default function OurServices() {
               className={clsx(
                 "flex flex-col gap-3 px-6 py-8 w-full",
                 index === 4
-                  ? "text-neutral-100 col-span-1 md:col-span-2 bg-primary"
+                  ? "text-neutral-100 col-span-1 md:col-span-2 bg-gray-800"
                   : "col-span-1  bg-primary/20"
               )}
             >
