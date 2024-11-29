@@ -1,5 +1,6 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
+import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 export default function Benefits({
   backgroundImage = "/img/fullwidth.jpg?height=1400&width=6997",
@@ -66,7 +67,9 @@ export default function Benefits({
                       aliqua.
                     </li>
                   </ul>
-                  <button className=" mt-8 bg-primary font-sans text-center py-2.5 px-3 text-md text-neutral-300 font-medium min-w-52 rounded-lg">
+                  <button
+                    className={`${btnDimensions} mt-8 bg-neutral-200 text-secondary`}
+                  >
                     Work with Us
                   </button>
                 </div>

@@ -2,14 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { homePageheadings } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
+import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 export default function OurProcess() {
   return (
     <div className="bg-gradient-to-r from-cyan-500/20 via-cyan-700/20 to-primary/20 p-4">
       <div className="w-full h-full font-sans py-20 px-4 bg-neutral-100/70 rounded-xl">
         <div className="md:max-w-5xl max-w-lg mx-auto">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="">
+          <div className="grid md:grid-cols-12 gap-6">
+            <div className="col-span-5">
               <h2 className={homePageheadings}>Our Process</h2>
               <h2
                 className={`${montserrat.className} text-gray-700 text-3xl font-semibold mt-12 leading-10`}
@@ -18,7 +19,7 @@ export default function OurProcess() {
                 Commitment
               </h2>
             </div>
-            <div className="">
+            <div className="col-span-7">
               <Image
                 src="/img/our-process.png"
                 alt="img"
@@ -66,7 +67,7 @@ export default function OurProcess() {
           </div>
           <button
             type="button"
-            className="min-w-52 mt-16 px-5 py-2.5 rounded-md text-white text-sm tracking-wider font-medium bg-primary hover:bg-blue-800 active:bg-blue-700"
+            className={` ${btnDimensions} mt-16 text-white bg-secondary `}
           >
             <Link href="our-process">Our Process</Link>
           </button>

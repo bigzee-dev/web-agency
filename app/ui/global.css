@@ -78,6 +78,7 @@ body {
 }
 
 .fade-out {
+  /* used in 'everything you need' component in the home page */
   mask-image: linear-gradient(to bottom, black, transparent);
   -webkit-mask-image: linear-gradient(to bottom, black, transparent);
   mask-size: 100% 100%;
@@ -86,4 +87,9 @@ body {
   -webkit-mask-repeat: no-repeat;
   mask-position: top;
   -webkit-mask-position: top;
+}
+
+.radial-gradient {
+  /* used in our services */
+  background: radial-gradient(circle, #0e5077, #111827);
 }

@@ -85,7 +85,7 @@ export default function EverythingCarousel() {
                       </p>
                     </div>
                     {index === 0 ? (
-                      <div className="flex gap-6 max-w-[75%] mx-auto text-neutral-200 pb-11">
+                      <div className="flex gap-6 max-w-[75%] mx-auto text-neutral-100 pb-11">
                         <Monitor size="3.2em" />
                         <Smartphone size="3.2em" />
                         <LaptopMinimal size="3.2em" />

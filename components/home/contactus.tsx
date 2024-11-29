@@ -10,7 +10,7 @@ export default function ContactUs() {
         Talk to us
       </h2>
       <p
-        className={` ${montserrat.className} mx-auto mt-2 max-w-2xl text-pretty text-center text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl `}
+        className={` ${montserrat.className} mx-auto mt-2 max-w-2xl text-pretty text-center text-3xl font-medium tracking-tight text-gray-700 sm:text-5xl `}
       >
         Are you looking for a company that specialises in Web Development,
         Hosting, Cloud services and other web related technology

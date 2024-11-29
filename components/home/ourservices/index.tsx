@@ -2,7 +2,8 @@ import { services } from "./services";
 import { homePageheadings } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 import clsx from "clsx";
-import Domains from "./domains";
+import DomainSearch from "./searchdomain";
+import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 export default function OurServices() {
   return (
@@ -33,34 +34,37 @@ export default function OurServices() {
             <div
               key={index}
               className={clsx(
-                "flex flex-col gap-3 px-6 py-8 w-full bg-gray-800/5 border border-gray-300 rounded-xl",
+                "flex flex-col gap-3 px-6 py-6 w-full bg-gray-800/15 border border-gray-400/70 rounded-xl",
                 index === 4
                   ? "text-neutral-100 col-span-1 md:col-span-2 "
                   : "col-span-1 "
               )}
             >
-              <div className="flex items-center gap-3 text-gray-700 pb-4 border-b border-gray-500">
-                <div className="flex items-center justify-center">
-                  <div className="text-neutral-700">{service.icon}</div>
+              <div className="flex items-center gap-3  pb-4 border-b border-gray-500">
+                <div className="flex items-center justify-center p-2 radial-gradient rounded-full">
+                  <div className="text-neutral-300">{service.icon}</div>
                 </div>
-                <h4 className="font-bold text-xl">{service.title}</h4>
+                <h4 className="font-bold text-xl text-gray-800">
+                  {service.title}
+                </h4>
               </div>
               <div className="flex-grow">
                 {index === 4 ? (
-                  <Domains />
+                  <DomainSearch />
                 ) : (
                   <p className="font-sans pl-1 mt-1 text-gray-600 text-md leading-relaxed">
                     {service.description}
                   </p>
                 )}
               </div>
-
-              <Link
-                className="font-sans text-neutral-50 text-center py-2.5 px-3 text-md font-medium mt-3 rounded-lg mx-auto w-max min-w-52 bg-primary"
-                href="http://209.97.177.68/cart.php?a=add&domain=register"
-              >
-                {service.link} <span aria-hidden="true">→</span>
-              </Link>
+              {index !== 4 ? (
+                <Link
+                  href="http://209.97.177.68/cart.php?a=add&domain=register"
+                  className={` ${btnDimensions} text-neutral-50 mt-3 mx-auto bg-secondary`}
+                >
+                  {service.link} <span aria-hidden="true">→</span>
+                </Link>
+              ) : null}
             </div>
           ))}
         </div>
