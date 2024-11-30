@@ -88,7 +88,7 @@ export default function Pricing() {
                 className={classNames(
                   "shadow-2xl p-8 rounded-2xl",
                   tier.featured
-                    ? "relative bg-neutral-100/5  ring-2 ring-inset ring-primary"
+                    ? "relative bg-gradient-to-b from-gray-900 via-gray800 to-primary ring-2 ring-inset ring-primary"
                     : "bg-transparent border border-gray-700"
                 )}
               >
@@ -157,9 +157,9 @@ export default function Pricing() {
                   aria-describedby={tier.id}
                   className={classNames(
                     tier.featured
-                      ? "bg-primary text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
+                      ? "bg-secondary text-neutral-200 ring-1 ring-inset ring-neutral-300 shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
                       : "text-neutral-300 bg-gray-800 ring-1 ring-inset ring-gray-600 hover:ring-indigo-300 focus-visible:outline-indigo-600",
-                    "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
+                    "font-sans mt-8 block rounded-md px-3 py-2 text-center text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
                   )}
                 >
                   Get started today
@@ -167,7 +167,7 @@ export default function Pricing() {
               </div>
             ))}
           </div>
-          <p className="mt-16 max-w-2xl mx-auto leading-loose text-neutral-200 text-md text-center">
+          <p className="font-sans mt-16 max-w-2xl mx-auto leading-loose text-neutral-200 text-md text-center">
             All Woww websites adhere to very strict design and functional
             standards which include: Fast loading times, mobile friendliness,
             basic SEO and a beautiful design. Our websites all start with a base

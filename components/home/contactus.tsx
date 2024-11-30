@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ContactUs() {
   return (
     <div className="max-w-4xl mx-auto py-16 bg-transparent">
-      <h2 className="text-center text-base/7 font-semibold text-blue-600">
+      <h2 className="text-center text-base/7 font-semibold text-primary">
         Talk to us
       </h2>
       <p
@@ -17,13 +17,13 @@ export default function ContactUs() {
       </p>
       <div className="flex justify-center gap-3 max-w-lg mx-auto text-neutral-200 mt-12">
         <Link
-          className="flex items-center justify-center gap-2 bg-primary p-2 min-w-52 rounded-lg"
+          className="flex items-center justify-center gap-2 bg-secondary p-2 min-w-52 rounded-lg"
           href="/"
         >
           <TiMessages size="1.6em" />
           <span className="text-sm font-semibold">Contact us</span>
         </Link>
-        <div className="flex items-center justify-center gap-2 bg-neutral-50 border-2 border-primary p-2 min-w-52 text-primary rounded-lg cursor-pointer">
+        <div className="flex items-center justify-center gap-2 bg-neutral-50 border-2 border-secondary p-2 min-w-52 text-secondary rounded-lg cursor-pointer">
           <FaWhatsapp size="1.5em" />
           <span className="text-sm font-semibold">Chat on Whatsapp</span>
         </div>

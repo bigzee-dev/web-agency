@@ -67,11 +67,13 @@ export default function Benefits({
                       aliqua.
                     </li>
                   </ul>
-                  <button
-                    className={`${btnDimensions} mt-8 bg-neutral-200 text-secondary`}
-                  >
-                    Work with Us
-                  </button>
+                  <div className="w-full flex justify-center">
+                    <button
+                      className={`${btnDimensions} mt-8 bg-neutral-200 text-secondary mx-auto`}
+                    >
+                      Work with Us
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -6,8 +6,8 @@ const list = "text-gray-200 font-semibold";
 
 export default function Showcase() {
   return (
-    <div className="px-6 lg:py-10 lg:px-8 bg-gradient-to-br from-gray-900 to-primary">
-      <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-12 mx-auto max-w-6xl pt-10 pb-12 lg:pt-18 lg:pb-12">
+    <div className="px-6 lg:py-16 lg:px-8 bg-gradient-to-br from-gray-900 to-primary">
+      <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-12 mx-auto max-w-6xl  pb-12 lg:pt-18 lg:pb-12">
         {/* <div className="mb-8 flex justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-300 ring-1 ring-neutral-300/50 hover:ring-neutral-200/70">
             Announcing our next round of funding.{" "}
@@ -42,7 +42,7 @@ export default function Showcase() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center mt-4 max-w-3xl mx-auto">
+      <div className="flex flex-col items-center mt-8 max-w-3xl mx-auto">
         <div className="flex items-center justify-center gap-x-6">
           <a
             href="#"

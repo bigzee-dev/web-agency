@@ -6,7 +6,7 @@ import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 export default function OurProcess() {
   return (
-    <div className="bg-gradient-to-r from-cyan-500/20 via-cyan-700/20 to-primary/20 p-4">
+    <div className="bg-gradient-to-r from-indigo-500/20 via-indigo-700/20 to-purple-600/20 p-4">
       <div className="w-full h-full font-sans py-20 px-4 bg-neutral-100/70 rounded-xl">
         <div className="md:max-w-5xl max-w-lg mx-auto">
           <div className="grid md:grid-cols-12 gap-6">
@@ -65,12 +65,14 @@ export default function OurProcess() {
               </div>
             </div>
           </div>
-          <button
-            type="button"
-            className={` ${btnDimensions} mt-16 text-white bg-secondary `}
-          >
-            <Link href="our-process">Our Process</Link>
-          </button>
+          <div className="w-full">
+            <button
+              type="button"
+              className={` ${btnDimensions} mt-16 text-white bg-secondary mx-auto`}
+            >
+              <Link href="our-process">Our Process</Link>
+            </button>
+          </div>
         </div>
       </div>
     </div>

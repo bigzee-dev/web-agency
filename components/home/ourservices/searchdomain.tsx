@@ -57,7 +57,7 @@ export default function DomainSearch() {
         </Button>
       </form>
 
-      <p className="text-center font-sans pt-2 text-md text-neutral-700">
+      <p className="border-l-4 border-gray-700 font-sans pl-4 mt-2 text-md text-neutral-700">
         Securing the ideal domain name is a crucial first step in establishing
         your presence online. We offer a wide variety for you to select from.
       </p>
