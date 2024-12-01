@@ -37,27 +37,27 @@ export default function DomainSearch() {
   return (
     <div className="h-full flex flex-col items-center max-w-2xl mx-auto">
       <TypingText />
-      <form onSubmit={handleRedirect} className="flex gap-2 w-full mt-3 mb-4">
+      <form onSubmit={handleRedirect} className="flex gap-2 w-full mt-4 mb-4">
         <Input
           type="text"
           value={domain}
           onChange={(e) => setDomain(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="e.g mywebsite.com"
-          className="flex-grow bg-gray-100 text-gray-900 border-gray-600 placeholder:text-gray-500 placeholder:text-sm "
+          className="flex-grow bg-gray-200 text-gray-900 border-gray-600 placeholder:text-gray-500 placeholder:text-sm focus:ring focus:ring-2 focus:ring-neutral-300"
           style={{ fontSize: "1rem" }}
         />
         <Button
           type="button"
           onClick={handleRedirect}
-          className="min-w-40 bg-neutral-100 text-primary hover:bg-neutral-200 hover:text-blue-600 border border-secondary"
+          className="min-w-40 bg-neutral-100 text-md font-medium text-primary hover:bg-neutral-200 hover:text-blue-600 border border-secondary"
         >
           <Search />
           Search Domain
         </Button>
       </form>
 
-      <p className="border-l-4 border-gray-700 font-sans pl-4 mt-2 text-md text-neutral-700">
+      <p className="border-l-4 border-neutral-400 font-sans pl-4 mt-2 text-md text-neutral-300">
         Securing the ideal domain name is a crucial first step in establishing
         your presence online. We offer a wide variety for you to select from.
       </p>
@@ -68,7 +68,7 @@ export default function DomainSearch() {
             <div className={`${tld.color} text-lg font-semibold`}>
               {tld.name}
             </div>
-            <div className="text-xs text-gray-600 mt-1">
+            <div className="text-xs text-neutral-400 mt-1">
               ${tld.price.toFixed(2)}/yr
             </div>
           </div>

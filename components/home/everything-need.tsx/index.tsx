@@ -1,128 +1,51 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import clsx from "clsx";
-import { cn } from "@/lib/utils";
-import { Smartphone } from "lucide-react";
-import { Monitor } from "lucide-react";
-import { LaptopMinimal } from "lucide-react";
-
-import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
-} from "@/components/ui/carousel";
-
-import { cards } from "./card-content";
+// import { Smartphone } from "lucide-react";
+// import { Monitor } from "lucide-react";
+// import { LaptopMinimal } from "lucide-react";
+import Slide from "./slide";
+import CarouselSize from "./shad";
 
 export default function EverythingCarousel() {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap());
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
-
   return (
-    <div>
-      <Carousel
-        setApi={setApi}
-        // ref={emblaRef} // Use ref to store the Embla instance
-        className="w-full max-w-5xl mx-auto mt-12"
-        opts={{
-          align: "start",
-          loop: false,
-        }}
-        plugins={[
-          Autoplay({
-            delay: 7000,
-          }),
-        ]}
-      >
-        <CarouselContent className="">
-          {cards.map((card, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-              <div className="p-1">
-                <Card>
-                  <CardContent
-                    className={`relative flex flex-col items-center justify-center px-2 pt-4 pb-0 min-h-72 rounded-xl ${card.className}`}
-                  >
-                    {index === 0 || index === 2 ? (
-                      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-900 via-gray-900/70 to-transparent rounded-xl z-0" />
-                    ) : null}
-                    <div className="mb-auto px-2 relative z-10">
-                      <h4
-                        className={clsx("text-xl font-semibold", {
-                          "text-neutral-100": index === 0 || index === 2,
-                          "text-primary": index !== 0 && index !== 2,
-                        })}
-                      >
-                        {card.title}
-                      </h4>
-                      <p
-                        className={clsx("font-sans text-md mt-1", {
-                          "text-neutral-200": index === 0 || index === 2,
-                          "text-gray-800": index !== 0 && index !== 2,
-                        })}
-                      >
-                        {card.text}
-                      </p>
-                    </div>
-                    {index === 0 ? (
-                      <div className="flex gap-6 max-w-[75%] mx-auto text-neutral-100 pb-11">
-                        <Monitor size="3.2em" />
-                        <Smartphone size="3.2em" />
-                        <LaptopMinimal size="3.2em" />
-                      </div>
-                    ) : null}
-                    {(index === 1 || index === 3) && card.imgUrl ? (
-                      <Image
-                        src={card.imgUrl}
-                        height={card.height}
-                        width={card.width}
-                        alt="img"
-                        className={card.imgClass}
-                      />
-                    ) : null}
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-      <div className="m-8">
-        <div className="flex items-center justify-center gap-2 py-2">
-          {Array.from({ length: count }).map((_, index) => (
-            <button
-              key={index}
-              className={cn(
-                "h-2 w-2 rounded-full transition-all duration-500 ease-in-out",
-                current === index ? "bg-gray-700 w-2" : "bg-primary/50"
-              )}
-              onClick={() => api?.scrollTo(index)}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
+    // <div className="flex flex-row gap-4 w-[600px] mx-auto overflow-x-auto scrollbar-thin p-2 cursor-grab active:cursor-grabbing touch-pan-x ">
+    //   {cards.map((card, index) => (
+    //     <Card className="min-h-[500px] min-w-[350px] inline-block">
+    //       <CardContent
+    //         className={`relative flex flex-col items-center justify-center px-2 py-6 min-h-[500px] rounded-xl ${card.className}`}
+    //       >
+    //         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900 to-90% rounded-xl z-0" />
+
+    //         <div className="mt-auto px-2 relative z-10">
+    //           <h4 className="text-xl font-semibold text-neutral-200 pb-1 border-b border-gray-400">
+    //             {card.title}
+    //           </h4>
+    //           <p className="font-sans text-md mt-4 text-gray-300">
+    //             {card.text}
+    //           </p>
+    //         </div>
+    //         {/* {index === 0 ? (
+    //                   <div className="flex gap-6 max-w-[75%] mx-auto text-indigo-600 pb-11 z-10">
+    //                     <Monitor size="3.2em" strokeWidth={1.5} />
+    //                     <Smartphone size="3.2em" strokeWidth={1.5} />
+    //                     <LaptopMinimal size="3.2em" strokeWidth={1.5} />
+    //                   </div>
+    //                 ) : null} */}
+    //         {/* {(index === 1 || index === 3) && card.imgUrl ? (
+    //             <Image
+    //               src={card.imgUrl}
+    //               height={card.height}
+    //               width={card.width}
+    //               alt="img"
+    //               className={card.imgClass}
+    //             />
+    //           ) : null} */}
+    //       </CardContent>
+    //     </Card>
+    //   ))}
+    // </div>
+    <>
+      <CarouselSize />
+    </>
   );
 }

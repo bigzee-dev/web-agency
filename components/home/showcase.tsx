@@ -2,7 +2,7 @@ import Image from "next/image";
 import { montserrat } from "@/app/ui/fonts";
 import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
-const list = "text-gray-200 font-semibold";
+const list = "font-sans text-gray-200 font-medium";
 
 export default function Showcase() {
   return (
@@ -20,20 +20,20 @@ export default function Showcase() {
         <div className="w-[50%] flex justify-center items-center bg-cyan-500 bg-opacity-30 p-4 ">
           <Image src="/img/digital.png" alt="image" width={800} height={500} />
         </div>
-        <div className="w-[50%] space-y-14 lg:pr-2">
+        <div className="w-[50%] lg:pr-2">
           <div className=" space-y-9">
             <h1
-              className={` ${montserrat.className} text-5xl lg:text-6xl font-semibold text-gray-200 leading-loose`}
+              className={` ${montserrat.className} text-5xl lg:text-6xl font-semibold text-gray-200 leading-relaxed`}
             >
               Building Modern and Reliable Web Solutions
             </h1>
-            <div className="text-base leading-6 text-gray-300">
+            <div className="font-sans text-base leading-6 text-gray-300">
               At{" "}
               <span className="text-lg font-semibold text-gray-200">
                 bigZee
               </span>
               , we specialise in:
-              <ul className="list-disc pl-5 space-y-2 my-2">
+              <ul className="list-disc pl-6 space-y-2 my-2">
                 <li className={list}>Developing user-friendly Websites</li>
                 <li className={list}>Providing secure hosting</li>
                 <li className={list}>Delivering Professional Email services</li>

@@ -16,8 +16,8 @@ export default function Home() {
       <Showcase />
       <OurServices />
       <DeployFaster />
-      <WhyChooseUs />
       <Benefits />
+      <WhyChooseUs />
       <OurProcess />
       <Pricing />
       <ContactUs />

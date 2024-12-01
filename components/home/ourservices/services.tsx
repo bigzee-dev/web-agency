@@ -2,9 +2,9 @@ import { TbWorldWww } from "react-icons/tb";
 
 import { HiOutlineServerStack } from "react-icons/hi2";
 import { TbMailCheck } from "react-icons/tb";
-import { PiNetwork } from "react-icons/pi";
-import { FaNetworkWired } from "react-icons/fa6";
-import { IoIosTrendingUp } from "react-icons/io";
+
+import { TbAt } from "react-icons/tb";
+import { TbTrendingUp } from "react-icons/tb";
 
 const iconProps = {
   size: "2.4em",
@@ -16,12 +16,19 @@ export const services = [
     icon: <TbWorldWww {...iconProps} />,
     title: "Web Development",
     description: (
-      <>
-        Our custom built websites deliver a consistent user experience on both{" "}
-        web and mobile platforms. From design to development, we offer expert
-        support, building interactive, secure, and scalable solutions that
-        reflect your brand and engage your audience.
-      </>
+      <ul className="list-disc pl-5">
+        <li>
+          Delivering a consistent user experience across web and mobile
+          platforms
+        </li>
+        <li>
+          Offering expert support from design to development for interactive,
+          secure, and scalable solutions
+        </li>
+        <li>
+          Building solutions that reflect your brand and engage your audience
+        </li>
+      </ul>
     ),
     link: "Lets build your Website",
   },
@@ -52,7 +59,7 @@ export const services = [
     link: "Professional Email Addresses",
   },
   {
-    icon: <IoIosTrendingUp {...iconProps} />,
+    icon: <TbTrendingUp {...iconProps} />,
     title: "Online Growth & Visibility",
     description: (
       <>
@@ -65,7 +72,7 @@ export const services = [
     link: "Grow your Brand",
   },
   {
-    icon: <PiNetwork {...iconProps} />,
+    icon: <TbAt {...iconProps} />,
     title: "Register Domain",
     description: (
       <>

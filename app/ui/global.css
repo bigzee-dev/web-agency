@@ -91,5 +91,10 @@ body {
 
 .radial-gradient {
   /* used in our services */
-  background: radial-gradient(circle, #0e5077, #111827);
+  background: radial-gradient(circle, #4a5963, #12264f);
+}
+
+.gbl-showcase-heading {
+  /* used in showcase */
+  line-height: 2rem;
 }

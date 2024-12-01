@@ -29,22 +29,22 @@ export default function OurServices() {
           landscape. Let us transform your vision into an engaging online
           experience.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6 mt-12">
           {services.map((service, index) => (
             <div
               key={index}
               className={clsx(
-                "flex flex-col gap-3 px-6 py-6 w-full bg-gray-800/15 border border-gray-400/70 rounded-xl",
+                "flex flex-col gap-3 px-6 py-7 w-full bg-gradient-to-b from-gray-800 to-primary border border-gray-400/70 rounded-2xl",
                 index === 4
                   ? "text-neutral-100 col-span-1 md:col-span-2 "
                   : "col-span-1 "
               )}
             >
               <div className="flex items-center gap-3  pb-4 border-b border-gray-500">
-                <div className="flex items-center justify-center p-2 radial-gradient rounded-full">
+                <div className="flex items-center justify-center p-2 bg-cyan-500/30 radial-gradient rounded-full">
                   <div className="text-neutral-300">{service.icon}</div>
                 </div>
-                <h4 className="font-bold text-xl text-gray-800">
+                <h4 className="font-bold text-xl text-neutral-300">
                   {service.title}
                 </h4>
               </div>
@@ -52,7 +52,7 @@ export default function OurServices() {
                 {index === 4 ? (
                   <DomainSearch />
                 ) : (
-                  <p className="font-sans pl-1 mt-1 text-gray-600 text-md leading-relaxed">
+                  <p className="font-sans pl-1 mt-1 text-gray-300 text-md leading-relaxed">
                     {service.description}
                   </p>
                 )}
@@ -60,7 +60,7 @@ export default function OurServices() {
               {index !== 4 ? (
                 <Link
                   href="http://209.97.177.68/cart.php?a=add&domain=register"
-                  className={` ${btnDimensions} text-neutral-50 mt-3 mx-auto bg-secondary`}
+                  className={` ${btnDimensions} text-neutral-50 mt-3 mx-auto bg-secondary ring-1 ring-inset ring-neutral-300`}
                 >
                   {service.link} <span aria-hidden="true">→</span>
                 </Link>

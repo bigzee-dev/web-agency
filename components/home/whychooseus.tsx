@@ -25,17 +25,15 @@ const cardData = [
     title: "Affordable Pricing",
     content:
       "We provide high-quality services that fit your budget, offering competitive rates without compromising on excellence. Get the solutions you need at a price that works for you.",
-    className: "bg-gradient-to-r from-primary to-gray-800",
+    className: "bg-gradient-to-r from-cyan-600 to-gray-800",
   },
   {
-    backgroundStyle: {
-      background: "#ad3d1d",
-    },
+    backgroundStyle: {},
     svg: "/svg/customer-support.svg",
     title: "Dedicated Support",
     content:
       "Our team is here to assist you every step of the way, ensuring everything runs smoothly. Count on us for dependable support whenever you need it.",
-    className: "",
+    className: "bg-purple-700",
   },
 ];
 
@@ -73,7 +71,7 @@ export default function Component() {
   }
 
   return (
-    <div className="w-full pt-16 pb-20 flex flex-col bg-gradient-to-b from-neutral-300/50 to-neutral-100">
+    <div className="w-full pt-20 pb-20 flex flex-col bg-gradient-to-b from-neutral-300/50 to-neutral-100">
       <div className="mx-auto max-w-7xl">
         <div className="lg:mx-0 px-4">
           <h2 className={homePageheadings}>Why Choose Us</h2>
@@ -96,7 +94,7 @@ export default function Component() {
           animate={hasAnimated ? "visible" : "hidden"}
           className="px-4 pt-8"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pt-10">
             {cardData.map((card, index) => (
               <motion.div key={index} variants={cardVariants}>
                 <Card className="h-full flex flex-col">
