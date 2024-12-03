@@ -15,7 +15,7 @@ export default function ContactUs() {
         Are you looking for a company that specialises in Web Development,
         Hosting, Cloud services and other web related technology
       </p>
-      <div className="flex justify-center gap-3 max-w-lg mx-auto text-neutral-200 mt-12">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-3 max-w-lg mx-auto text-neutral-200 mt-12">
         <Link
           className="flex items-center justify-center gap-2 bg-secondary p-2 min-w-52 rounded-lg"
           href="/"

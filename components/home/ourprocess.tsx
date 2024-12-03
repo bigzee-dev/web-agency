@@ -6,11 +6,11 @@ import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 export default function OurProcess() {
   return (
-    <div className="bg-gradient-to-r from-indigo-500/30 via-indigo-700/30 to-primary/30 p-4">
+    <div className="bg-gradient-to-r from-indigo-500/30 via-indigo-700/30 to-primary/30 px-2 py-4 lg:p-4 ">
       <div className="w-full h-full font-sans py-20 px-4 bg-neutral-100/90 rounded-xl">
         <div className="md:max-w-6xl max-w-lg mx-auto">
           <div className="grid md:grid-cols-12 gap-20">
-            <div className="col-span-5">
+            <div className="md:col-span-5">
               <h2 className={homePageheadings}>Our Process</h2>
               <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-12 mt-10">
                 <div>
@@ -56,7 +56,7 @@ export default function OurProcess() {
                 </div>
               </div>
             </div>
-            <div className="flex col-span-7">
+            <div className="flex md:col-span-7">
               <Image
                 src="/img/cool-frame.png"
                 alt="img"

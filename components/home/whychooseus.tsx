@@ -33,7 +33,7 @@ const cardData = [
     title: "Dedicated Support",
     content:
       "Our team is here to assist you every step of the way, ensuring everything runs smoothly. Count on us for dependable support whenever you need it.",
-    className: "bg-purple-700",
+    className: "bg-purple-800",
   },
 ];
 
@@ -75,7 +75,7 @@ export default function Component() {
       <div className="mx-auto max-w-7xl">
         <div className="lg:mx-0 px-4">
           <h2 className={homePageheadings}>Why Choose Us</h2>
-          <div className="mt-8 py-2 w-max">
+          <div className="mt-8 py-2">
             <p className="italic font-sans text-3xl font-normal text-gray-600">
               We are Here to Help you{" "}
               <span
@@ -92,7 +92,7 @@ export default function Component() {
           variants={containerVariants}
           initial="hidden"
           animate={hasAnimated ? "visible" : "hidden"}
-          className="px-4 pt-8"
+          className="px-1 lg:px-4 pt-8"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pt-10">
             {cardData.map((card, index) => (

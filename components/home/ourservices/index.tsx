@@ -7,7 +7,7 @@ import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 export default function OurServices() {
   return (
-    <section className="relative isolate pt-24 pb-20 bg-background border-t border-gray-300">
+    <section className="relative isolate pt-24 pb-20 px-1 bg-background border-t border-gray-300">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"

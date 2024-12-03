@@ -12,7 +12,7 @@ const iconProps = {
 export default function CompanyInfo() {
   return (
     <div>
-      <div className="flex flex-col items-center h-full -mt-2.5 mr-2">
+      <div className="flex flex-col h-full -mt-2.5 mr-2">
         <div>
           <Link href="/" className="flex items-center gap-3 text-xl">
             <Image
@@ -20,19 +20,20 @@ export default function CompanyInfo() {
               height={45}
               width={45}
               alt="svg"
+              className="grayscale"
             />
 
             <h6
-              className={` ${expletus.className} text-primary tracking-wider font-extrabold`}
+              className={` ${expletus.className} text-gray-700 tracking-wider font-extrabold`}
             >
               bigZee
             </h6>
           </Link>
         </div>
-        <span className="text-xs text-primary font-semibold">
+        <span className="font-sans text-sm text-gray-600 font-normal mt-1">
           Web Technology Specialists
         </span>
-        <div className="flex space-x-8 mt-8 w-max mx-auto">
+        <div className="flex space-x-6 mt-6">
           <div className="text-gray-500 hover:text-gray-600">
             <FaWhatsapp {...iconProps} size="1.6em" />
           </div>
