@@ -1,8 +1,8 @@
-import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
-import EverythingCarousel from "./everything-need/index.jsx";
+import CarouselLrg from "./carousel";
+import { montserrat } from "@/app/ui/fonts";
 
-export default function DeployFaster() {
+export default function EverythingYouNeed() {
   return (
     <div className="relative w-full bg-gradient-to-b from-white via-neutral-300 to-neutral-200 pt-20 pb-24">
       <Image
@@ -23,7 +23,7 @@ export default function DeployFaster() {
           Everything you need to elevate your online presence.
         </p>
       </div>
-      <EverythingCarousel />
+      <CarouselLrg />
     </div>
   );
 }

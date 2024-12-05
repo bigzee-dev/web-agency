@@ -17,7 +17,7 @@ export default function OurServices() {
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
-          className="mx-auto aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          className="mx-auto aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-35"
         />
       </div>
       <div className="max-w-6xl mx-auto">
@@ -34,33 +34,54 @@ export default function OurServices() {
             <div
               key={index}
               className={clsx(
-                "flex flex-col gap-3 px-6 py-7 w-full bg-gradient-to-b from-gray-800 to-primary border border-gray-400/70 rounded-2xl",
+                "flex flex-col gap-3 px-6 py-7 w-full bg-neutral-50 border border-gray-400/70 rounded-2xl",
                 index === 4
-                  ? "text-neutral-100 col-span-1 md:col-span-2 "
+                  ? "text-neutral-100 col-span-1 md:col-span-2  bg-gradient-to-br from-gray-900 to-primary"
                   : "col-span-1 "
               )}
             >
-              <div className="flex items-center gap-3  pb-4 border-b border-gray-500">
-                <div className="flex items-center justify-center p-2 bg-cyan-500/30 radial-gradient rounded-full">
-                  <div className="text-neutral-300">{service.icon}</div>
+              <div
+                className={clsx(
+                  "flex items-center gap-3  pb-4",
+                  index === 4
+                    ? "border-b border-gray-500"
+                    : " border-b border-gray-400"
+                )}
+              >
+                <div className="flex items-center justify-center p-1  rounded-lg border border-gray-500">
+                  <div
+                    className={clsx(
+                      "",
+                      index === 4 ? "text-neutral-400" : "text-gray-500"
+                    )}
+                  >
+                    {service.icon}
+                  </div>
                 </div>
-                <h4 className="font-bold text-xl text-neutral-300">
+                <h4
+                  className={clsx(
+                    "text-xl font-semibold",
+                    index === 4 ? "text-neutral-400" : "text-gray-800"
+                  )}
+                >
                   {service.title}
                 </h4>
               </div>
-              <div className="flex-grow">
+              <div>
                 {index === 4 ? (
                   <DomainSearch />
                 ) : (
-                  <p className="font-sans pl-1 mt-1 text-gray-300 text-md leading-relaxed">
-                    {service.description}
-                  </p>
+                  <div className="font-sans pl-1 mt-auto text-gray-700 text-md leading-relaxed">
+                    <div>{service.subTitle}</div>
+                    <p className="text-gray-800 font-medium mt-1">Features</p>
+                    <div className="mt-0.5">{service.description}</div>
+                  </div>
                 )}
               </div>
               {index !== 4 ? (
                 <Link
                   href="http://209.97.177.68/cart.php?a=add&domain=register"
-                  className={` ${btnDimensions} text-neutral-50 mt-3 mx-auto bg-secondary ring-1 ring-inset ring-neutral-300`}
+                  className={`text-base font-semibold text-gray-800 pl-1 mt-auto`}
                 >
                   {service.link} <span aria-hidden="true">→</span>
                 </Link>

@@ -58,10 +58,10 @@ export default function OurProcess() {
             </div>
             <div className="flex md:col-span-7">
               <Image
-                src="/img/cool-frame.png"
+                src="/img/our-process.png"
                 alt="img"
-                width="675"
-                height="506"
+                width="563"
+                height="563"
                 className="ml-auto"
               />
             </div>

@@ -5,12 +5,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import TypingText from "./typingtext";
+import Link from "next/link";
 
 const tlds = [
-  { name: ".com", price: 9.99, color: "text-blue-500" },
+  { name: ".com", price: 9.99, color: "text-red-500" },
   { name: ".io", price: 39.99, color: "text-green-500" },
   { name: ".app", price: 12.99, color: "text-purple-500" },
   { name: ".online", price: 3.99, color: "text-yellow-500" },
+  { name: ".co.bw", price: 11.99, color: "text-green-500" },
+  //   { name: ".org", price: 12.99, color: "text-indigo-400" },
+  //   { name: ".tech", price: 39.99, color: "text-pink-400" },
 ];
 
 export default function DomainSearch() {
@@ -44,16 +48,16 @@ export default function DomainSearch() {
           onChange={(e) => setDomain(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="e.g mywebsite.com"
-          className="flex-grow bg-gray-200 text-gray-900 border-gray-600 placeholder:text-gray-500 placeholder:text-sm focus:ring focus:ring-2 focus:ring-neutral-300"
+          className="flex-grow bg-neutral-200 text-gray-800 border-primary placeholder:text-gray-500 placeholder:text-sm focus:ring focus:ring-2 focus:ring-neutral-300"
           style={{ fontSize: "1rem" }}
         />
         <Button
           type="button"
           onClick={handleRedirect}
-          className="min-w-40 bg-neutral-100 text-md font-medium text-primary hover:bg-neutral-200 hover:text-blue-600 border border-secondary"
+          className="min-w-40 bg-neutral-200 text-md font-sans font-medium text-secondary hover:bg-neutral-100 hover:text-blue-600 border border-secondary transition duration-300 ease-in-out"
         >
           <Search />
-          Search Domain
+          Search
         </Button>
       </form>
 
@@ -62,16 +66,20 @@ export default function DomainSearch() {
         your presence online. We offer a wide variety for you to select from.
       </p>
 
-      <div className="w-full mt-auto grid grid-cols-4 sm:grid-cols-7 gap-1 text-center">
+      <div className="w-full mt-7 grid grid-cols-5 sm:grid-cols-3 gap-1 text-center">
         {tlds.map((tld) => (
-          <div key={tld.name} className="p-0.5">
+          <Link
+            href="/"
+            key={tld.name}
+            className="flex flex-col items-center justify-center p-0.5 border border-gray-400 hover:bg-primary/50"
+          >
             <div className={`${tld.color} text-lg font-semibold`}>
               {tld.name}
             </div>
-            <div className="text-xs text-neutral-400 mt-1">
+            <div className="text-xs text-neutral-400 font-medium">
               ${tld.price.toFixed(2)}/yr
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

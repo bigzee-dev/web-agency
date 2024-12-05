@@ -8,7 +8,7 @@ export default function Benefits({
   backgroundImage?: string;
 }) {
   return (
-    <div className="relative w-full max-w-[1800px] mx-auto px-2 bg-gray-950">
+    <div className="relative w-full max-w-[1800px] mx-auto px-2 bg-gradient-to-br from-gray-950 to-primary">
       <div className="w-full h-full flex items-center justify-center py-12 lg:py-20 min-h-[300px]">
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 ">
           <div className="flex items-center justify-center lg:col-span-5">
@@ -24,7 +24,7 @@ export default function Benefits({
             <h3
               className={`${montserrat.className} text-4xl font-bold text-neutral-200 tracking-wide`}
             >
-              How can you <span className="text-cyan-500">benefit</span> from
+              How can you <span className="text-blue-600">benefit</span> from
               our services
             </h3>
             <div className="mt-8">
@@ -57,7 +57,7 @@ export default function Benefits({
               </ul>
               <div className="w-full flex justify-center">
                 <button
-                  className={`${btnDimensions} mt-8 bg-neutral-200 text-secondary mx-auto`}
+                  className={`${btnDimensions} mt-12 bg-neutral-200 text-secondary mx-auto`}
                 >
                   Work with Us
                 </button>

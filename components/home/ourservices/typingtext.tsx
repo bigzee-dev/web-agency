@@ -12,7 +12,13 @@ const TypingText = () => {
   ];
 
   return (
-    <div className="w-max">
+    <div
+      className="w-max"
+      style={{
+        textShadow:
+          "0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.1)",
+      }}
+    >
       <ReactTypingEffect
         text={domains}
         displayTextRenderer={(displayText: string, textIndex: number) => {

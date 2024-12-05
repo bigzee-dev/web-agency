@@ -1,7 +1,7 @@
 import ResponsiveNavbar from "@/components/navbar/navbar";
 import Showcase from "@/components/home/showcase";
 import OurServices from "@/components/home/ourservices";
-import DeployFaster from "@/components/home/deployFaster";
+import EverythingYouNeed from "@/components/home/everything-need";
 import Benefits from "@/components/home/benefits";
 import WhyChooseUs from "@/components/home/whychooseus";
 import OurProcess from "@/components/home/ourprocess";
@@ -15,7 +15,7 @@ export default function Home() {
       <ResponsiveNavbar />
       <Showcase />
       <OurServices />
-      <DeployFaster />
+      <EverythingYouNeed />
       <Benefits />
       <WhyChooseUs />
       <OurProcess />
