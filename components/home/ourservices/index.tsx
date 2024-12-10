@@ -48,11 +48,11 @@ export default function OurServices() {
                     : " border-b border-gray-400"
                 )}
               >
-                <div className="flex items-center justify-center p-1  rounded-lg border border-gray-500">
+                <div className="flex items-center justify-center p-1  bg-gradient-to-b from-gray-900 to-primary rounded-lg border border-gray-500">
                   <div
                     className={clsx(
                       "",
-                      index === 4 ? "text-neutral-400" : "text-gray-500"
+                      index === 4 ? "text-gray-400" : "text-gray-400"
                     )}
                   >
                     {service.icon}

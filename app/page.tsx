@@ -16,8 +16,8 @@ export default function Home() {
       <Showcase />
       <OurServices />
       <EverythingYouNeed />
-      <Benefits />
       <WhyChooseUs />
+      <Benefits />
       <OurProcess />
       <Pricing />
       <ContactUs />

@@ -56,13 +56,13 @@ export default function OurProcess() {
                 </div>
               </div>
             </div>
-            <div className="flex md:col-span-7">
+            <div className="flex justify-center items-center bg-gray-900 md:col-span-7">
               <Image
                 src="/img/our-process.png"
                 alt="img"
                 width="563"
                 height="563"
-                className="ml-auto"
+                className="w-[90%] h-[90%] object-contain"
               />
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function OurProcess() {
               </div>
             </div>
           </div> */}
-          <div className="flex justify-center w-full">
+          <div className="flex w-full">
             <button
               type="button"
               className={` ${btnDimensions} mt-16 text-white bg-secondary mx-auto`}
