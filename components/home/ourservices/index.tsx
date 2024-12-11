@@ -17,7 +17,7 @@ export default function OurServices() {
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
-          className="mx-auto aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-35"
+          className="mx-auto aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
         />
       </div>
       <div className="max-w-6xl mx-auto">
@@ -34,7 +34,7 @@ export default function OurServices() {
             <div
               key={index}
               className={clsx(
-                "flex flex-col gap-3 px-6 py-7 w-full bg-neutral-50 border border-gray-400/70 rounded-2xl",
+                "flex flex-col gap-3 px-6 py-7 w-full bg-neutral-50 border-2 border-secondary/25 rounded-2xl shadow-2xl",
                 index === 4
                   ? "text-neutral-100 col-span-1 md:col-span-2  bg-gradient-to-br from-gray-900 to-primary"
                   : "col-span-1 "
@@ -48,15 +48,8 @@ export default function OurServices() {
                     : " border-b border-gray-400"
                 )}
               >
-                <div className="flex items-center justify-center p-1  bg-gradient-to-b from-gray-900 to-primary rounded-lg border border-gray-500">
-                  <div
-                    className={clsx(
-                      "",
-                      index === 4 ? "text-gray-400" : "text-gray-400"
-                    )}
-                  >
-                    {service.icon}
-                  </div>
+                <div className="flex items-center justify-center p-2  bg-secondary rounded-full">
+                  <div className="text-neutral-300">{service.icon}</div>
                 </div>
                 <h4
                   className={clsx(

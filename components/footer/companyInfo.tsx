@@ -17,8 +17,8 @@ export default function CompanyInfo() {
           <Link href="/" className="flex items-center gap-3 text-xl">
             <Image
               src="/svg/bigZee-logo.svg"
-              height={45}
-              width={45}
+              height={50}
+              width={50}
               alt="svg"
               className="grayscale"
             />

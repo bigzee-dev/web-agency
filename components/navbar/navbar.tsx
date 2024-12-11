@@ -40,8 +40,8 @@ export default function ResponsiveNavbar() {
           <div className="flex items-center justify-center">
             <Image
               src="/svg/bigZee-logo.svg"
-              height={45}
-              width={45}
+              height={50}
+              width={50}
               alt="svg"
             />
           </div>
@@ -56,7 +56,7 @@ export default function ResponsiveNavbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-primary text-md font-semibold leading-6"
+              className="font-sans text-primary text-md font-semibold"
             >
               {item.name}
             </a>

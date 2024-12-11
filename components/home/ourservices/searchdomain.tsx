@@ -8,11 +8,11 @@ import TypingText from "./typingtext";
 import Link from "next/link";
 
 const tlds = [
-  { name: ".com", price: 9.99, color: "text-red-500" },
-  { name: ".io", price: 39.99, color: "text-green-500" },
-  { name: ".app", price: 12.99, color: "text-purple-500" },
-  { name: ".online", price: 3.99, color: "text-yellow-500" },
-  { name: ".co.bw", price: 11.99, color: "text-green-500" },
+  { name: ".com", price: 9.99, color: "text-red-400" },
+  { name: ".io", price: 39.99, color: "text-green-400" },
+  { name: ".app", price: 12.99, color: "text-purple-400" },
+  { name: ".online", price: 3.99, color: "text-yellow-400" },
+  { name: ".co.bw", price: 11.99, color: "text-green-400" },
   //   { name: ".org", price: 12.99, color: "text-indigo-400" },
   //   { name: ".tech", price: 39.99, color: "text-pink-400" },
 ];
@@ -61,22 +61,24 @@ export default function DomainSearch() {
         </Button>
       </form>
 
-      <p className="border-l-4 border-neutral-400 font-sans pl-4 mt-2 text-md text-neutral-300">
-        Securing the ideal domain name is a crucial first step in establishing
-        your presence online. We offer a wide variety for you to select from.
-      </p>
+      <ul className="list-disc pl-5 font-sans mt-2 text-md text-neutral-300">
+        <li>
+          Securing the ideal domain name is a crucial first step in establishing
+          your presence online. We offer a wide variety for you to select from.
+        </li>
+      </ul>
 
-      <div className="w-full mt-7 grid grid-cols-5 sm:grid-cols-3 gap-1 text-center">
+      <div className="w-full mt-7 grid grid-cols-5 sm:grid-cols-3 gap-1.5 text-center">
         {tlds.map((tld) => (
           <Link
             href="/"
             key={tld.name}
-            className="flex flex-col items-center justify-center p-0.5 border border-gray-400 hover:bg-primary/50"
+            className="flex flex-col items-center justify-center pt-0.5 pb-1 bg-neutral-300/10 rounded-lg"
           >
-            <div className={`${tld.color} text-lg font-semibold`}>
+            <span className={`${tld.color} text-lg font-semibold`}>
               {tld.name}
-            </div>
-            <div className="text-xs text-neutral-400 font-medium">
+            </span>
+            <div className="text-xs text-neutral-300 font-medium">
               ${tld.price.toFixed(2)}/yr
             </div>
           </Link>

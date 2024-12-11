@@ -73,7 +73,7 @@ function classNames(...classes: string[]) {
 export default function Pricing() {
   return (
     <div className="w-full pt-10 px-20">
-      <div className="w-full bg-gray-950 py-20 rounded-2xl">
+      <div className="w-full bg-gray-900 py-20 rounded-2xl">
         <div className="max-w-lg lg:max-w-6xl mx-auto">
           <div className="mb-4">
             <h4 className="text-neutral-300 text-5xl font-extrabold  bg-gradient-to-r from-red-600 via-purple-700 to-indigo-600 text-transparent bg-clip-text leading-normal">
@@ -89,7 +89,7 @@ export default function Pricing() {
                   "shadow-2xl p-8 rounded-2xl",
                   tier.featured
                     ? "relative bg-gradient-to-b from-gray-900 to-primary ring-2 ring-inset ring-primary"
-                    : "bg-gray-900 border border-gray-700"
+                    : "bg-gray-800 border border-gray-600"
                 )}
               >
                 <h3

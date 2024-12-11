@@ -62,47 +62,11 @@ export default function OurProcess() {
                 alt="img"
                 width="563"
                 height="563"
-                className="w-[90%] h-[90%] object-contain"
+                className="w-[92%] h-[92%] object-contain"
               />
             </div>
           </div>
-          {/* 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 mt-12">
-            <div>
-              <div className="font-light text-lg text-gray-500">/ 01</div>
-              <div className="mt-4">
-                <h3 className="text-lg font-bold text-primary mb-2">
-                  Discover
-                </h3>
-                <p className="text-gray-600 text-md">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum reprehenderit in voluptate velit esse cillum dolore...
-                </p>
-              </div>
-            </div>
 
-            <div>
-              <div className="font-light text-lg text-gray-500">/ 02</div>
-              <div className="mt-4">
-                <h3 className="text-lg font-bold text-primary mb-2">Build</h3>
-                <p className="text-gray-600 text-md">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum reprehenderit in voluptate velit esse cillum dolore...
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <div className="font-light text-lg text-gray-500">/ 03</div>
-              <div className="mt-4">
-                <h3 className="text-lg font-bold text-primary mb-2">Deliver</h3>
-                <p className="text-gray-600 text-md">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum reprehenderit in voluptate velit esse cillum dolore...
-                </p>
-              </div>
-            </div>
-          </div> */}
           <div className="flex w-full">
             <button
               type="button"

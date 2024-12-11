@@ -9,20 +9,20 @@ export default function Benefits({
 }) {
   return (
     <div className="relative bg-neutral-100 w-full max-w-[1800px] mx-auto px-2">
-      <div className="w-full h-full flex items-center justify-center py-12 lg:py-20 min-h-[300px]">
+      <div className="w-full h-full flex items-center justify-center lg:py-20 min-h-[300px]">
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 ">
-          <div className="flex items-center justify-center  bg-gradient-to-b from-gray-900 to-primary lg:col-span-5">
+          <div className="flex items-center justify-center  bg-gradient-to-b from-gray-900 to-primary lg:col-span-6">
             <Image
               src="/img/two-ladies.png"
               alt="image"
               width={500}
               height={500}
-              className="md:h-[80%] md:w-[80%] object-contain"
+              className="md:h-[60%] md:w-[60%] object-contain"
             />
           </div>
-          <div className="lg:col-span-7 px-2 md:px-10">
+          <div className="lg:col-span-6  py-12 px-2 md:px-10">
             <h3
-              className={`${montserrat.className} text-4xl font-bold text-gray-800 tracking-wide`}
+              className={`${montserrat.className} text-4xl font-bold text-gray-700 tracking-wide`}
             >
               How can you <span className="text-blue-600">benefit</span> from
               our services
