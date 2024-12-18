@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ContactUs() {
   return (
     <div className="max-w-4xl mx-auto py-16 bg-transparent">
-      <h2 className="text-center text-base/7 font-semibold text-primary">
+      <h2 className="text-center text-base/7 font-semibold text-blue-600">
         Talk to us
       </h2>
       <p

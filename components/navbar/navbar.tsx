@@ -6,6 +6,15 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { expletus } from "@/app/ui/fonts";
+import { FaFacebook } from "react-icons/fa";
+import { RiWhatsappFill } from "react-icons/ri";
+import { DropdownMenu } from "./dropdown-menu";
+import { Separator } from "@/components/ui/separator";
+
+const iconProps = {
+  size: "1.4em",
+  strokeWidth: 1,
+};
 
 const navigation = [
   { name: "About Us", href: "#" },
@@ -34,9 +43,9 @@ export default function ResponsiveNavbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="w-full sticky top-0 z-50 bg-neutral-50 text-primary">
+    <nav className="w-full sticky top-0 z-50 bg-background text-primary border border-b border-grey-500">
       <div className="max-w-[1350px] mx-auto px-6 md:px-8 lg:px-12 py-2.5 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-3 text-xl">
+        <Link href="/" className="flex items-center gap-3 text-2xl">
           <div className="flex items-center justify-center">
             <Image
               src="/svg/bigZee-logo.svg"
@@ -51,17 +60,31 @@ export default function ResponsiveNavbar() {
             bigZee
           </h6>
         </Link>
-        <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="font-sans text-primary text-md font-semibold"
-            >
-              {item.name}
-            </a>
-          ))}
+        <div className="hidden lg:flex items-center gap-8">
+          <div className="flex justify-around lg:gap-x-14 pr-8">
+            {/* {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="font-sans text-secondary text-md font-semibold"
+              >
+                {item.name}
+              </a>
+            ))} */}
+            <DropdownMenu />
+          </div>
+          <Separator orientation="vertical" className="text-neutral-500" />
+          <div className="flex space-x-6">
+            <div className="text-green-600 hover:text-gray-600 cursor-pointer">
+              <RiWhatsappFill {...iconProps} size="1.56em" />
+            </div>
+            <Link href="#" className="text-blue-700 hover:text-gray-600">
+              <FaFacebook {...iconProps} />
+              <span className="sr-only">Facebook</span>
+            </Link>
+          </div>
         </div>
+
         <button
           className="lg:hidden"
           onClick={toggleMenu}

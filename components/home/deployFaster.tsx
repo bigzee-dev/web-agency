@@ -14,7 +14,7 @@ export default function DeployFaster() {
       />
 
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 z-10">
-        <h2 className="text-center text-base/7 font-semibold text-primary">
+        <h2 className="text-center text-base/7 font-semibold text-blue-600">
           Increase Your Visibility
         </h2>
         <p

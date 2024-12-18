@@ -39,7 +39,7 @@ export default function CarouselLrg() {
         opts={{
           align: "start",
         }}
-        className="w-full max-w-6xl mx-auto mt-12"
+        className="w-full max-w-7xl mx-auto mt-12"
       >
         <CarouselContent className="">
           {cards.map((card, index) => (
@@ -48,7 +48,7 @@ export default function CarouselLrg() {
               className="flex justify-center basis-1/2 md:basis-1/3 lg:basis-1/3"
             >
               <Card>
-                <CardContent className="flex items-center justify-center p-0.5 max-w-[370px]">
+                <CardContent className="flex items-center justify-center p-0.5 max-w-[490x]">
                   <div className="relative">
                     <Image
                       src={card.imgUrl}

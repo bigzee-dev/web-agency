@@ -10,11 +10,11 @@ export default function EverythingYouNeed() {
         height={500}
         width={750}
         alt="svg"
-        className="absolute top-0 left-0 w-full h-full object-cover object-top opacity-10 fade-out transform scale-x-[-1]"
+        className="absolute top-0 left-0 w-full h-full object-cover object-top opacity-5 fade-out transform scale-x-[-1]"
       />
 
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 z-10">
-        <h2 className="text-center text-base/7 font-semibold text-primary">
+        <h2 className="text-center text-base/7 font-semibold text-blue-600">
           Increase Your Visibility
         </h2>
         <p

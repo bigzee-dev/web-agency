@@ -86,7 +86,7 @@ export default function Pricing() {
               <div
                 key={tier.id}
                 className={classNames(
-                  "shadow-2xl p-8 rounded-2xl",
+                  "shadow-2xl p-6 px-4  rounded-2xl",
                   tier.featured
                     ? "relative bg-gradient-to-b from-gray-900 to-primary ring-2 ring-inset ring-primary"
                     : "bg-gray-800 border border-gray-600"

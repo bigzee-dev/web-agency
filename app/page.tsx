@@ -1,4 +1,3 @@
-import ResponsiveNavbar from "@/components/navbar/navbar";
 import Showcase from "@/components/home/showcase";
 import OurServices from "@/components/home/ourservices";
 import EverythingYouNeed from "@/components/home/everything-need";
@@ -7,21 +6,22 @@ import WhyChooseUs from "@/components/home/whychooseus";
 import OurProcess from "@/components/home/ourprocess";
 import Pricing from "@/components/home/pricing";
 import ContactUs from "@/components/home/contactus";
-import Footer from "@/components/footer/footer";
+
+import PricingNew from "@/components/home/pricing-new";
+import Navnew from "@/navnew";
 
 export default function Home() {
   return (
     <>
-      <ResponsiveNavbar />
       <Showcase />
+      {/* <Navnew /> */}
       <OurServices />
       <EverythingYouNeed />
       <WhyChooseUs />
       <Benefits />
       <OurProcess />
-      <Pricing />
+      <PricingNew />
       <ContactUs />
-      <Footer />
     </>
   );
 }

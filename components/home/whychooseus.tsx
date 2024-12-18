@@ -47,7 +47,7 @@ export default function Component() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.25,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -71,7 +71,7 @@ export default function Component() {
   }
 
   return (
-    <div className="w-full pt-20 pb-20 flex flex-col bg-gradient-to-b from-neutral-300/50 to-neutral-100">
+    <div className="w-full pt-12 pb-12 flex flex-col bg-gradient-to-b from-neutral-300/50 to-neutral-100">
       <div className="mx-auto max-w-7xl">
         <div className="lg:mx-0 px-4">
           <h2 className={homePageheadings}>Why Choose Us</h2>
@@ -104,11 +104,11 @@ export default function Component() {
                   >
                     <Image src={card.svg} height={75} width={75} alt="svg" />
                   </CardHeader>
-                  <CardContent className="flex-grow mt-7 space-y-3">
+                  <CardContent className="flex-grow space-y-3 mt-7">
                     <p className="w-full text-center text-gray-800 font-medium">
                       {card.title}
                     </p>
-                    <p className="font-sans text-md text-gray-600 font-normal text-center leading-relaxed">
+                    <p className="font-sans text-md text-gray-600 font-normal text-center pb-0 leading-relaxed">
                       {card.content}
                     </p>
                   </CardContent>
