@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { expletus } from "@/app/ui/fonts";
 import { FaFacebook } from "react-icons/fa";
-import { RiWhatsappFill } from "react-icons/ri";
+import { FaWhatsapp } from "react-icons/fa";
 import { DropdownMenu } from "./dropdown-menu";
 import { Separator } from "@/components/ui/separator";
 
@@ -61,7 +61,7 @@ export default function ResponsiveNavbar() {
           </h6>
         </Link>
         <div className="hidden lg:flex items-center gap-8">
-          <div className="flex justify-around lg:gap-x-14 pr-8">
+          <div className="flex justify-around lg:gap-x-14 pr-8 border-r-2 border-secondary">
             {/* {navigation.map((item) => (
               <a
                 key={item.name}
@@ -75,10 +75,10 @@ export default function ResponsiveNavbar() {
           </div>
           <Separator orientation="vertical" className="text-neutral-500" />
           <div className="flex space-x-6">
-            <div className="text-green-600 hover:text-gray-600 cursor-pointer">
-              <RiWhatsappFill {...iconProps} size="1.56em" />
+            <div className="text-gray-500 hover:text-gray-600 cursor-pointer">
+              <FaWhatsapp {...iconProps} size="1.56em" />
             </div>
-            <Link href="#" className="text-blue-700 hover:text-gray-600">
+            <Link href="#" className="text-gray-500 hover:text-gray-600">
               <FaFacebook {...iconProps} />
               <span className="sr-only">Facebook</span>
             </Link>

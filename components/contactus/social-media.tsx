@@ -1,41 +1,71 @@
-import { ChevronDown, Facebook, Hand } from "lucide-react";
+import { FaFacebook } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
+
+const iconProps = {
+  className: "text-gray-400",
+  size: "1.4em",
+};
+
+const links = [
+  {
+    name: "facebook",
+    icon: <FaFacebook {...iconProps} />,
+  },
+  {
+    name: "whatsapp",
+    icon: <IoLogoWhatsapp {...iconProps} />,
+  },
+];
 
 export default function SocialMediaContacts() {
   return (
-    <div className="relative isolate overflow-hidden max-w-4xl mx-auto py-6 lg:py-12 mt-8 border-t-4 border-cyan-700">
-      <div className="px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl  flex flex-col gap-x-8 gap-y-8 lg:max-w-none">
-          <dl className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:pt-2">
-            <div className="flex flex-col items-start">
-              <div className="p-1.5  text-gray-900 rounded-lg  border-4 border-gray-900">
-                <Facebook size="1.8em" strokeWidth={3} />
-              </div>{" "}
-              <h2 className="text-xl font-bold tracking-normal text-gray-900 mt-2">
-                Check us out on Facebook
-              </h2>
-              {/* <div className="rounded-md bg-gray-800 p-2 ring-1 ring-white/10">
-                <Facebook
-                  aria-hidden="true"
-                  className="size-6 text-neutral-300"
-                />
-              </div> */}
-              <button className="flex justify-center bg-blue-600 py-2.5 px-3 rounded-lg mt-4 min-w-56">
-                <span className=" text-neutral-100 font-medium">facebook</span>
-              </button>
-            </div>
-            <div className="flex flex-col items-start">
-              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                <Hand aria-hidden="true" className="size-6 text-white" />
-              </div>
-              <dt className="mt-4 text-base font-semibold text-white">
-                No spam
-              </dt>
-              <dd className="mt-2 text-base/7 text-gray-400">
-                Officia excepteur ullamco ut sint duis proident non adipisicing.
-                Voluptate incididunt anim.
-              </dd>
-            </div>
-          </dl>
+    <div className="isolate bg-gray-900 mt-6 p-2 overflow-hidden">
+      <div className="relative font-sans ">
+        <div
+          aria-hidden="true"
+          className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
+        >
+          <div
+            style={{
+              clipPath:
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+            }}
+            className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#9089fc] opacity-25"
+          />
+        </div>
+        {/* <img
+          src="https://readymadeui.com/cardImg.webp"
+          alt="Banner Image"
+          className="absolute inset-0 w-full h-full object-cover"
+        /> */}
+
+        <div className="min-h-[350px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center">
+          <div className="max-w-xl flex flex-col gap-y-6">
+            <h6 className="text-neutral-300 text-3xl font-bold">Socials</h6>
+            <dl className="grid grid-cols-1 gap-x-4 md:grid-cols-2">
+              {links.map((link) => (
+                <button className="flex justify-center items-center gap-2  bg-neutral-300/10 py-2.5 px-3  outline outline-1 outline-offset-1 outline-white/25 rounded-lg min-w-52">
+                  {link.icon}
+                  <span className=" text-gray-300 font-medium">
+                    {link.name}
+                  </span>
+                </button>
+              ))}
+            </dl>
+          </div>
+          {/* <h2 className="sm:text-4xl text-2xl font-bold mb-6">
+            Explore the World
+          </h2>
+          <p className="sm:text-lg text-base text-center text-gray-200">
+            Embark on unforgettable journeys. Book your dream vacation today!
+          </p>
+
+          <button
+            type="button"
+            className="mt-12 bg-transparent text-white text-base py-3 px-6 border border-white rounded-lg hover:bg-white hover:text-black transition duration-300"
+          >
+            Book Now
+          </button> */}
         </div>
       </div>
     </div>

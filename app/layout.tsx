@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/ui/global.css";
 import { inter } from "@/app/ui/fonts";
-import Script from "next/script";
 import ResponsiveNavbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 
@@ -20,10 +19,6 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased bg-neutral-100`}>
         <ResponsiveNavbar />
         {children}
-        <Script
-          src="https://web3forms.com/client/script.js"
-          strategy="lazyOnload"
-        />
         <Footer />
       </body>
     </html>

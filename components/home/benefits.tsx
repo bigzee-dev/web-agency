@@ -8,10 +8,22 @@ export default function Benefits({
   backgroundImage?: string;
 }) {
   return (
-    <div className="relative bg-gray-800 w-full max-w-[1800px] mx-auto px-2  ">
-      <div className="w-full h-full flex items-center justify-center lg:py-20 min-h-[300px]">
-        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 ">
-          <div className="flex items-center justify-center  lg:col-span-6 bg-gradient-to-b from-gray-800 to-primary ring-2 ring-inset ring-primary">
+    <div className=" bg-gray-800 w-full max-w-[1800px] mx-auto px-2  ">
+      <div className="w-full h-full flex items-center justify-center lg:py-10 min-h-[300px]">
+        <div className="relative isolate overflow-hidden w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 pr-10 py-10 outline outline-1 outline-gray-600">
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
+          >
+            <div
+              style={{
+                clipPath:
+                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+              }}
+              className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#9089fc] opacity-25"
+            />
+          </div>
+          <div className="flex items-center justify-center  lg:col-span-6 border-r border-gray-600 ">
             <Image
               src="/img/two-ladies.png"
               alt="image"

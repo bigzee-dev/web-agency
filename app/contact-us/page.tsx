@@ -7,8 +7,8 @@ import { montserrat } from "../ui/fonts";
 
 export default function ContactUs() {
   return (
-    <div className="isolate max-w-7xl mx-auto py-20">
-      {/* <div
+    <div className="py-20">
+      <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       >
@@ -19,7 +19,7 @@ export default function ContactUs() {
           }}
           className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
         />
-      </div> */}
+      </div>
       <div className="max-w-4xl mx-auto space-y-3">
         <p className="text-md font-medium text-gray-500">
           Lets Discuss your Project
@@ -37,7 +37,7 @@ export default function ContactUs() {
         <div className="flex flex-col gap-2 items-center justify-center pb-3 border-b-4 border-blue-700 h-20">
           <div className="flex justify-center items-center gap-x-1.5 ">
             <div className="p-1.5 bg-gray-800 text-neutral-300 rounded-lg">
-              <Mails size="1.8em" strokeWidth={3} />
+              <Mails size="1.6em" strokeWidth={3} />
             </div>{" "}
             <span
               className={` ${montserrat.className} text-gray-900 text-2xl font-bold `}
@@ -45,12 +45,12 @@ export default function ContactUs() {
               Email
             </span>
           </div>
-          <p className="text-md text-gray-600">admin@bigzee.app</p>
+          <p className="font-sans text-md text-gray-700 ">admin@bigzee.app</p>
         </div>
         <div className="flex flex-col gap-2 items-center justify-center pb-3 border-b-4 border-pink-700 h-20">
           <div className="flex justify-center items-center gap-x-1.5 ">
             <div className="p-1.5 bg-gray-900 text-neutral-300 rounded-lg">
-              <Phone size="1.8em" strokeWidth={3} />{" "}
+              <Phone size="1.6em" strokeWidth={3} />{" "}
             </div>
             <span
               className={` ${montserrat.className}text-gray-900 text-2xl font-bold `}
@@ -58,9 +58,10 @@ export default function ContactUs() {
               Phone
             </span>
           </div>
-          <p className="text-md text-gray-600 italic">(267) 77810825</p>
+          <p className="text-md text-gray-700 italic">(267) 77810825</p>
         </div>
       </div>
+
       <ContactUsForm />
       <SocialMediaContacts />
     </div>
