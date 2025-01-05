@@ -30,7 +30,7 @@ export default function CompanyInfo() {
             </h6>
           </Link>
         </div>
-        <span className="font-sans text-sm text-gray-600 font-normal mt-1">
+        <span className="font-sans text-sm text-secondary font-medium mt-1">
           Web Technology Specialists
         </span>
         <div className="flex space-x-6 mt-6">

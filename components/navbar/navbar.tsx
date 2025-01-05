@@ -20,7 +20,7 @@ const navigation = [
   { name: "About Us", href: "#" },
   { name: "Services", href: "#" },
   { name: "Our Process", href: "#" },
-  { name: "Contact Us", href: "#" },
+  { name: "Contact Us", href: "/contact-us" },
 ];
 
 export default function ResponsiveNavbar() {
@@ -43,7 +43,7 @@ export default function ResponsiveNavbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="w-full sticky top-0 z-50 bg-background text-primary border border-b border-grey-500">
+    <nav className="isolate w-full sticky top-0 z-50 bg-background  text-primary">
       <div className="max-w-[1350px] mx-auto px-6 md:px-8 lg:px-12 py-2.5 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 text-2xl">
           <div className="flex items-center justify-center">
@@ -75,10 +75,10 @@ export default function ResponsiveNavbar() {
           </div>
           <Separator orientation="vertical" className="text-neutral-500" />
           <div className="flex space-x-6">
-            <div className="text-gray-500 hover:text-gray-600 cursor-pointer">
+            <div className="text-secondary hover:text-gray-600 cursor-pointer">
               <FaWhatsapp {...iconProps} size="1.56em" />
             </div>
-            <Link href="#" className="text-gray-500 hover:text-gray-600">
+            <Link href="#" className="text-secondary hover:text-gray-600">
               <FaFacebook {...iconProps} />
               <span className="sr-only">Facebook</span>
             </Link>

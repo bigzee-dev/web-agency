@@ -18,8 +18,8 @@ import { expletus } from "@/app/ui/fonts";
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Websites",
+    href: "/websites",
     description:
       "A modal dialog that interrupts the user with important content and.",
   },
@@ -105,7 +105,7 @@ export function DropdownMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/contact-us" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Contact Us
             </NavigationMenuLink>

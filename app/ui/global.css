@@ -93,3 +93,31 @@ body {
   /* used in showcase */
   line-height: 4rem;
 }
+
+.radial-background {
+  background: radial-gradient(
+    circle,
+    rgba(80, 80, 80, 0.9) 0%,
+    rgba(64, 64, 64, 1) 10%,
+    rgba(24, 24, 24, 1) 70%
+  );
+}
+
+.radial-services {
+  background: radial-gradient(
+    circle,
+    rgba(80, 80, 80, 0.9) 0%,
+    rgba(64, 64, 64, 1) 10%,
+    rgba(31, 41, 55, 1) 70%
+  );
+}
+
+.radial-secondary {
+  background: radial-gradient(
+    circle,
+    rgba(41, 63, 155, 0.97) 0%,
+    rgb(37, 99, 235, 1) 10%,
+
+    rgb(8, 36, 120, 1) 70%
+  );
+}

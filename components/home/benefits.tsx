@@ -10,7 +10,7 @@ export default function Benefits({
   return (
     <div className=" bg-gray-800 w-full max-w-[1800px] mx-auto px-2  ">
       <div className="w-full h-full flex items-center justify-center lg:py-10 min-h-[300px]">
-        <div className="relative isolate overflow-hidden w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 pr-10 py-10 outline outline-1 outline-gray-600">
+        <div className="relative isolate overflow-hidden bg-gray-700/20 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12  px-10 py-8 outline outline-1 outline-gray-600 rounded-xl">
           <div
             aria-hidden="true"
             className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -23,16 +23,7 @@ export default function Benefits({
               className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#9089fc] opacity-25"
             />
           </div>
-          <div className="flex items-center justify-center  lg:col-span-6 border-r border-gray-600 ">
-            <Image
-              src="/img/two-ladies.png"
-              alt="image"
-              width={500}
-              height={500}
-              className="md:h-[67%] md:w-[67%] object-contain"
-            />
-          </div>
-          <div className="lg:col-span-6 py-2 px-2">
+          <div className="lg:col-span-6 py-3 px-8  ">
             <h3
               className={`${montserrat.className} text-4xl font-bold text-neutral-300 tracking-wide`}
             >
@@ -75,6 +66,15 @@ export default function Benefits({
                 </button>
               </div>
             </div>
+          </div>
+          <div className="flex items-center justify-center  lg:col-span-6 ">
+            <Image
+              src="/img/two-ladies.png"
+              alt="image"
+              width={500}
+              height={500}
+              className="md:h-[67%] md:w-[67%] object-contain"
+            />
           </div>
         </div>
       </div>

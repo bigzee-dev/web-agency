@@ -1,7 +1,6 @@
 import { FaCheck } from "react-icons/fa6";
 import { MdNavigateNext } from "react-icons/md";
 import Link from "next/link";
-import btnDimensions from "@/app/ui/customTailwindClasses";
 import { Separator } from "@/components/ui/separator";
 
 const tiers = [

@@ -4,7 +4,7 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function EverythingYouNeed() {
   return (
-    <div className="relative w-full bg-gradient-to-b from-white via-neutral-300 to-neutral-200 pt-20 pb-24">
+    <div className="relative w-full bg-gradient-to-b from-white via-neutral-200 to-neutral-200 pt-16 pb-24">
       <Image
         src="/svg/star-pattern.svg"
         height={500}
@@ -18,7 +18,7 @@ export default function EverythingYouNeed() {
           Increase Your Visibility
         </h2>
         <p
-          className={` ${montserrat.className} mx-auto mt-2 max-w-lg text-center text-gray-600 text-4xl font-semibold leading-10  sm:text-5xl `}
+          className={` ${montserrat.className} mx-auto mt-2 max-w-lg text-center text-gray-700 text-4xl font-bold leading-10  sm:text-5xl `}
         >
           Everything you need to elevate your online presence.
         </p>

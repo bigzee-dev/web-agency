@@ -59,7 +59,7 @@ export default function CarouselLrg() {
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-950 to-90% rounded-2xl z-0" />
                     <div className="absolute bottom-0 left-0 h-[40%] w-full px-4">
-                      <h4 className="w-max text-2xl font-semibold pb-2 border-b border-neutral-500 bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent">
+                      <h4 className="font-sans w-max text-2xl text-neutral-200 font-bold pb-2 border-b border-neutral-500 ">
                         {card.title}
                       </h4>
                       <p className="text-md text-neutral-200/75 font-sans mt-4">

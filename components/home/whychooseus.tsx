@@ -25,7 +25,7 @@ const cardData = [
     title: "Affordable Pricing",
     content:
       "We provide high-quality services that fit your budget, offering competitive rates without compromising on excellence. Get the solutions you need at a price that works for you.",
-    className: "bg-gradient-to-r from-cyan-600 to-gray-800",
+    className: "bg-gradient-to-b from-gray-900 to-primary",
   },
   {
     backgroundStyle: {},
@@ -33,7 +33,7 @@ const cardData = [
     title: "Dedicated Support",
     content:
       "Our team is here to assist you every step of the way, ensuring everything runs smoothly. Count on us for dependable support whenever you need it.",
-    className: "bg-purple-800",
+    className: "bg-indigo-800",
   },
 ];
 

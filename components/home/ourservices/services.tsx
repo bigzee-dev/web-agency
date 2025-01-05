@@ -7,99 +7,67 @@ import { TbAt } from "react-icons/tb";
 import { TbTrendingUp } from "react-icons/tb";
 
 const iconProps = {
-  size: "2.2em",
+  size: "2em",
   strokeWidth: 1.2,
 };
+
+const listStyles = "list-disc pl-4 space-y-1.5 w-[90%]";
 
 export const services = [
   {
     icon: <TbWorldWww {...iconProps} />,
+    iconBackground: "bg-blue-700 bg-opacity-20",
+    color: "text-blue-500",
+    bottomIcon: <TbWorldWww size="10em" />,
     title: "Web Development",
-    subTitle: (
-      <p>
-        Building modern, user-friendly websites designed to elevate your online
-        presence.
-      </p>
-    ),
+
     description: (
-      <ul className="list-disc pl-5">
-        <li>Responsive and suitable for web and mobile platforms</li>
-        <li>Interactive, secure, and highly scalable</li>
-        <li>Built to target your brand and engage your audience</li>
-      </ul>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
     link: "Lets build your Website",
   },
   {
     icon: <HiOutlineServerStack {...iconProps} />,
+    iconBackground: "bg-purple-700 bg-opacity-20",
+    bottomIcon: <HiOutlineServerStack size="10em" />,
+    color: "text-purple-400",
     title: "Web Hosting",
-    subTitle: (
-      <p>
-        Reliable and secure hosting solutions tailored to keep your website
-        online effortlessly.
-      </p>
-    ),
+
     description: (
-      <ul className="list-disc pl-5">
-        <li>
-          Our hosting services ensure your website is fast, reliable, and
-          accessible
-        </li>
-        <li>From setup to maintenance, we keep your site running smoothly</li>
-        <li>
-          Our secure servers handle traffic growth and deliver consistent
-          performance
-        </li>
-      </ul>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
     link: "Get your Website Online",
   },
   {
     icon: <TbMailCheck {...iconProps} />,
     title: "Email Hosting",
-    subTitle: (
-      <p>
-        Professional email services to enhance communication with reliability
-        and style.
-      </p>
-    ),
+    iconBackground: "bg-pink-600 bg-opacity-20",
+    bottomIcon: <TbMailCheck size="10em" />,
+    color: "text-pink-400",
     description: (
-      <ul className="list-disc pl-5">
-        <li>We provide personalised email addresses</li>
-        <li>We manage setup, security, and maintenance</li>
-        <li>keeps your team connected and operating efficiently</li>
-      </ul>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
     link: "Professional Email Addresses",
   },
   {
     icon: <TbTrendingUp {...iconProps} />,
     title: "Online Growth & Visibility",
-    subTitle: (
-      <p>
-        Boost your online presence with strategies tailored to drive growth and
-        engagement.
-      </p>
-    ),
+    iconBackground: "bg-indigo-600 bg-opacity-20",
+    bottomIcon: <TbTrendingUp size="10em" />,
+    color: "text-indigo-400",
     description: (
-      <ul className="list-disc pl-5">
-        <li>Search Engine Optimisation</li>
-        <li>Social media integration and Whatsapp Chatbots</li>
-        <li>Customised solutions that drive traffic, boost engagement</li>
-      </ul>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
     link: "Grow your Brand",
   },
   {
     icon: <TbAt {...iconProps} />,
     title: "Register Domain",
+    iconBackground: "bg-cyan-600 bg-opacity-20",
+    bottomIcon: <TbAt size="10em" />,
+    color: "text-cyan-400",
     description: (
-      <>
-        We offer comprehensive services to enhance your online presence and
-        connect with your target audience. From search engine optimisation to{" "}
-        social media integration, we provide customised solutions that drive
-        traffic, boost engagement, and expand your brand’s reach.
-      </>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
     link: "Buy a Domain",
   },
