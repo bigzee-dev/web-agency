@@ -8,7 +8,7 @@ const singleLink = "font-sans text-sm text-gray-600";
 export default function Footer() {
   return (
     <footer className="mx-auto px-2">
-      <div className="max-w-5xl mx-auto py-20 grid grid-cols-1 gap-8 md:grid-cols-4">
+      <div className="max-w-5xl mx-auto py-24 grid grid-cols-1 gap-8 md:grid-cols-4">
         <CompanyInfo />
 
         {footerLinks.map((link, i) => (

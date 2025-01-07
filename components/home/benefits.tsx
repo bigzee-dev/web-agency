@@ -9,7 +9,7 @@ export default function Benefits({
 }) {
   return (
     <div className=" bg-gray-800 w-full max-w-[1800px] mx-auto px-2  ">
-      <div className="w-full h-full flex items-center justify-center lg:py-10 min-h-[300px]">
+      <div className="w-full h-full flex items-center justify-center lg:py-16 min-h-[300px]">
         <div className="relative isolate overflow-hidden bg-gray-700/20 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12  px-10 py-8 outline outline-1 outline-gray-600 rounded-xl">
           <div
             aria-hidden="true"

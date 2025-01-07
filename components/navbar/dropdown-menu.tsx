@@ -35,8 +35,8 @@ const components: { title: string; href: string; description: string }[] = [
     description: "Displays an indicator showing the completion progress of a.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
+    title: "Domains",
+    href: "https://domains.bigzee.app/cart.php?a=add&domain=register",
     description: "Visually or semantically separates content.",
   },
   {

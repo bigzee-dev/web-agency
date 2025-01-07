@@ -16,8 +16,8 @@ const listStyles = "list-disc pl-4 space-y-1.5 w-[90%]";
 export const services = [
   {
     icon: <TbWorldWww {...iconProps} />,
-    iconBackground: "bg-blue-700 bg-opacity-20",
-    color: "text-blue-500",
+    iconBackground: "bg-blue-700",
+    color: "text-blue-400",
     bottomIcon: <TbWorldWww size="10em" />,
     title: "Web Development",
 
@@ -28,7 +28,7 @@ export const services = [
   },
   {
     icon: <HiOutlineServerStack {...iconProps} />,
-    iconBackground: "bg-purple-700 bg-opacity-20",
+    iconBackground: "bg-purple-700 ",
     bottomIcon: <HiOutlineServerStack size="10em" />,
     color: "text-purple-400",
     title: "Web Hosting",
@@ -41,7 +41,7 @@ export const services = [
   {
     icon: <TbMailCheck {...iconProps} />,
     title: "Email Hosting",
-    iconBackground: "bg-pink-600 bg-opacity-20",
+    iconBackground: "bg-pink-600",
     bottomIcon: <TbMailCheck size="10em" />,
     color: "text-pink-400",
     description: (
@@ -52,7 +52,7 @@ export const services = [
   {
     icon: <TbTrendingUp {...iconProps} />,
     title: "Online Growth & Visibility",
-    iconBackground: "bg-indigo-600 bg-opacity-20",
+    iconBackground: "bg-indigo-600",
     bottomIcon: <TbTrendingUp size="10em" />,
     color: "text-indigo-400",
     description: (

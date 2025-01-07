@@ -1,7 +1,7 @@
 export const cards = [
   {
     title: "Security",
-    text: "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+    text: "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. ",
     imgUrl: "/img/cyber-security.jpg",
     imgWidth: 667,
     imgHeight: 1000,
@@ -9,7 +9,7 @@ export const cards = [
   },
   {
     title: "Modern Design Principles",
-    text: "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. ",
+    text: "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. ",
     imgUrl: "/img/design-lady.jpg",
     imgWidth: 563,
     imgHeight: 1000,

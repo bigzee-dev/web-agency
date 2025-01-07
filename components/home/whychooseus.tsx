@@ -71,9 +71,9 @@ export default function Component() {
   }
 
   return (
-    <div className="w-full pt-12 pb-12 flex flex-col bg-gradient-to-b from-neutral-300/50 to-neutral-100">
-      <div className="mx-auto max-w-7xl">
-        <div className="lg:mx-0 px-4">
+    <div className="w-full pt-24 pb-16  bg-gradient-to-b from-neutral-300/50 to-neutral-100">
+      <div className="mx-auto max-w-7xl grid grid-cols-12 gap-x-16">
+        <div className="lg:mx-0 px-4 col-span-5 ">
           <h2 className={homePageheadings}>Why Choose Us</h2>
           <div className="mt-8 py-2">
             <p className="italic font-sans text-3xl font-normal text-gray-600">
@@ -92,23 +92,23 @@ export default function Component() {
           variants={containerVariants}
           initial="hidden"
           animate={hasAnimated ? "visible" : "hidden"}
-          className="px-1 lg:px-4 pt-8"
+          className="col-span-7 pt-2"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pt-10">
+          <div className="flex flex-col gap-10">
             {cardData.map((card, index) => (
               <motion.div key={index} variants={cardVariants}>
-                <Card className="h-full flex flex-col">
+                <Card className="h-full flex gap-4">
                   <CardHeader
-                    className={`flex justify-center items-center w-full max-w-[340px] mx-auto min-h-[160px] rounded-xl ${card.className}`}
+                    className={`flex justify-center items-center w-full min-w-[300px] h-[150px] rounded-xl ${card.className}`}
                     style={card.backgroundStyle as React.CSSProperties}
                   >
                     <Image src={card.svg} height={75} width={75} alt="svg" />
                   </CardHeader>
-                  <CardContent className="flex-grow space-y-3 mt-7">
-                    <p className="w-full text-center text-gray-800 font-medium">
+                  <CardContent className="space-y-2 pt-2">
+                    <p className="w-full  text-gray-700 font-semibold">
                       {card.title}
                     </p>
-                    <p className="font-sans text-md text-gray-600 font-normal text-center pb-0 leading-relaxed">
+                    <p className="font-sans text-md text-gray-600 font-normal  pb-0 leading-relaxed">
                       {card.content}
                     </p>
                   </CardContent>

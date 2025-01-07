@@ -52,7 +52,7 @@ export default function Showcase() {
             </div>
             <div className="space-y-6">
               <p
-                className={` ${montserrat.className}  font-bold text-gray-700`}
+                className={` ${montserrat.className}  font-bold text-gray-800`}
                 style={{ fontSize: "4rem", lineHeight: "1.1" }}
               >
                 Building Modern and Reliable Web Solutions

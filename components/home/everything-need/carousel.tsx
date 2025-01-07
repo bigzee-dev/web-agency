@@ -58,7 +58,7 @@ export default function CarouselLrg() {
                       className="h-[500px] w-[360px] object-center object-cover rounded-2xl"
                     />
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-950 to-90% rounded-2xl z-0" />
-                    <div className="absolute bottom-0 left-0 h-[40%] w-full px-4">
+                    <div className="absolute bottom-0 left-0 h-[30%] w-full px-4">
                       <h4 className="font-sans w-max text-2xl text-neutral-200 font-bold pb-2 border-b border-neutral-500 ">
                         {card.title}
                       </h4>

@@ -17,8 +17,9 @@ export default function Home() {
       {/* <Navnew /> */}
       <OurServices />
       <EverythingYouNeed />
-      <WhyChooseUs />
       <Benefits />
+      <WhyChooseUs />
+
       <OurProcess />
       <PricingNew />
       <ContactUs />

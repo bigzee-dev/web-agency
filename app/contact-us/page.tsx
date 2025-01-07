@@ -137,7 +137,7 @@ export default function ContactUs() {
                 Email
               </span>
             </div>
-            <BiCopy size="1.6em" className="text-gray-700" />
+            <BiCopy size="1.4em" className="text-gray-700" />
           </div>
           <p className="font-sans text-md  text-gray-600 ml-6 underline">
             admin@bigzee.app
@@ -168,6 +168,7 @@ export default function ContactUs() {
               {links.map((link) => (
                 <button className="flex justify-center items-center gap-2  bg-neutral-400/30 py-2 px-3  outline outline-1 outline-offset-1 outline-white/50 rounded-lg min-w-52">
                   {link.icon}
+
                   <span className="font-sans text-md text-neutral-100 font-medium">
                     {link.name}
                   </span>
