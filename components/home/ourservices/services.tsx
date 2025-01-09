@@ -1,8 +1,6 @@
 import { TbWorldWww } from "react-icons/tb";
-
 import { HiOutlineServerStack } from "react-icons/hi2";
 import { TbMailCheck } from "react-icons/tb";
-
 import { TbAt } from "react-icons/tb";
 import { TbTrendingUp } from "react-icons/tb";
 
@@ -15,60 +13,53 @@ const listStyles = "list-disc pl-4 space-y-1.5 w-[90%]";
 
 export const services = [
   {
-    icon: <TbWorldWww {...iconProps} />,
-    iconBackground: "bg-blue-700",
-    color: "text-blue-400",
-    bottomIcon: <TbWorldWww size="10em" />,
     title: "Web Development",
-
+    icon: <TbWorldWww {...iconProps} />,
+    color: "text-blue-400",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
     link: "Lets build your Website",
+    url: "/websites",
   },
   {
-    icon: <HiOutlineServerStack {...iconProps} />,
-    iconBackground: "bg-purple-700 ",
-    bottomIcon: <HiOutlineServerStack size="10em" />,
-    color: "text-purple-400",
     title: "Web Hosting",
-
+    icon: <HiOutlineServerStack {...iconProps} />,
+    color: "text-red-400",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
     link: "Get your Website Online",
+    url: "/hosting",
   },
   {
-    icon: <TbMailCheck {...iconProps} />,
     title: "Email Hosting",
-    iconBackground: "bg-pink-600",
-    bottomIcon: <TbMailCheck size="10em" />,
-    color: "text-pink-400",
+    icon: <TbMailCheck {...iconProps} />,
+    color: "text-yellow-400",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
     link: "Professional Email Addresses",
+    url: "/emails",
   },
   {
-    icon: <TbTrendingUp {...iconProps} />,
     title: "Online Growth & Visibility",
-    iconBackground: "bg-indigo-600",
-    bottomIcon: <TbTrendingUp size="10em" />,
-    color: "text-indigo-400",
+    icon: <TbTrendingUp {...iconProps} />,
+    color: "text-indigo-300",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
     link: "Grow your Brand",
+    url: "#",
   },
   {
-    icon: <TbAt {...iconProps} />,
     title: "Register Domain",
-    iconBackground: "bg-cyan-600 bg-opacity-20",
-    bottomIcon: <TbAt size="10em" />,
+    icon: <TbAt {...iconProps} />,
     color: "text-cyan-400",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
     link: "Buy a Domain",
+    url: "https://domains.bigzee.app/cart.php?a=add&domain=register",
   },
 ];

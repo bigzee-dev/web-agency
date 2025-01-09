@@ -7,7 +7,7 @@ import {
 
 export default function FaqsWebsites() {
   return (
-    <div className="max-w-7xl mx-auto grid grid-cols-12 gap-x-20 py-10">
+    <div className="max-w-7xl mx-auto grid grid-cols-12 gap-x-20 pt-20 pb-4">
       <div className="col-span-6">
         <h3 className="text-4xl text-gray-800 font-bold">
           Frequently asked questions

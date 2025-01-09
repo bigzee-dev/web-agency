@@ -33,7 +33,7 @@ const cardData = [
     title: "Dedicated Support",
     content:
       "Our team is here to assist you every step of the way, ensuring everything runs smoothly. Count on us for dependable support whenever you need it.",
-    className: "bg-indigo-800",
+    className: "bg-gradient-to-b from-primary to-cyan-500",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function Component() {
                   >
                     <Image src={card.svg} height={75} width={75} alt="svg" />
                   </CardHeader>
-                  <CardContent className="space-y-2 pt-2">
+                  <CardContent className="space-y-2 pt-4">
                     <p className="w-full  text-gray-700 font-semibold">
                       {card.title}
                     </p>

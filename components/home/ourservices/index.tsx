@@ -23,7 +23,7 @@ export default function OurServices() {
             className="mx-auto aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#4754a2] to-[#9089fc] opacity-15"
           />
         </div>
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className={`${homePageheadings} text-center text-gray-800 mb-5 `}>
             Our Services
           </h2>
@@ -49,7 +49,7 @@ export default function OurServices() {
                 </div> */}
                 <div className={clsx(" ")}>
                   <div
-                    className={`w-12 h-12 flex items-center justify-center p-2  bg-gray-800 rounded-full`}
+                    className={`w-12 h-12 flex items-center justify-center p-2  bg-secondary rounded-full`}
                   >
                     <div className={` ${service.color} `}>{service.icon}</div>
                   </div>
@@ -67,7 +67,7 @@ export default function OurServices() {
                 </div>
 
                 <Link
-                  href="http://209.97.177.68/cart.php?a=add&domain=register"
+                  href={service.url}
                   className={`flex items-center py-2.5 text-primary text-md font-semibold  hover:text-blue-600 min-w-52 mt-3`}
                 >
                   <FaLink className="mr-3" />{" "}

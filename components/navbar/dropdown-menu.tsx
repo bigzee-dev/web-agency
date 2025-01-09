@@ -14,36 +14,51 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+
+import { TbWorldWww } from "react-icons/tb";
+import { HiOutlineServerStack } from "react-icons/hi2";
+import { TbMailCheck } from "react-icons/tb";
+import { TbAt } from "react-icons/tb";
+import { TbTrendingUp } from "react-icons/tb";
 import { expletus } from "@/app/ui/fonts";
 
-const components: { title: string; href: string; description: string }[] = [
+const components: {
+  title: string;
+  icon: React.ReactNode;
+  href: string;
+  description: string;
+}[] = [
   {
     title: "Websites",
+    icon: <TbWorldWww size="1.8em" className="text-blue-600" />,
     href: "/websites",
     description:
       "A modal dialog that interrupts the user with important content and.",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "Hosting",
+    icon: <HiOutlineServerStack size="1.8em" className="text-red-600" />,
+    href: "/hosting",
     description:
       "For sighted users to preview content available behind a link.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Emails",
+    icon: <TbMailCheck size="1.8em" className="text-yellow-600" />,
+    href: "/emails",
     description: "Displays an indicator showing the completion progress of a.",
   },
   {
     title: "Domains",
+    icon: <TbAt size="1.8em" className="text-cyan-700" />,
     href: "https://domains.bigzee.app/cart.php?a=add&domain=register",
     description: "Visually or semantically separates content.",
   },
   {
-    title: "Tabs",
+    title: "SEO & Marketing",
+    icon: <TbTrendingUp size="1.8em" className="text-indigo-700" />,
     href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed",
+    description: "A set of layered sections of content—known as tab panels—",
   },
 ];
 
@@ -91,11 +106,12 @@ export function DropdownMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-8 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
+                  icon={component.icon}
                   href={component.href}
                 >
                   {component.description}
@@ -116,30 +132,36 @@ export function DropdownMenu() {
   );
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-gray-800 text-sm font-medium leading-none">
-            {title}
-          </div>
-          <p className="font-sans text-gray-700 text-md leading-relaxed">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
+interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
+  title: string;
+  icon: React.ReactNode;
+}
+
+const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
+  ({ className, title, icon, children, ...props }, ref) => {
+    return (
+      <li>
+        <NavigationMenuLink asChild>
+          <Link
+            ref={ref}
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            href={props.href || "#"}
+            {...props}
+          >
+            <div className="flex items-center  text-gray-800 text-md font-medium leading-none">
+              {icon && <span className="mr-2">{icon}</span>}
+              {title}
+            </div>
+            <p className="font-sans text-gray-700 text-md leading-relaxed">
+              {children}
+            </p>
+          </Link>
+        </NavigationMenuLink>
+      </li>
+    );
+  }
+);
 ListItem.displayName = "ListItem";

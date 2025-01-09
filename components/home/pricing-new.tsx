@@ -8,7 +8,7 @@ const tiers = [
     name: "Websites",
     id: "tier-hobby",
     href: "#",
-    priceMonthly: "P2500",
+    priceMonthly: "P5000",
     description:
       "The perfect plan if you're just getting started with our product.",
     features: [
@@ -132,11 +132,11 @@ export default function PricingNew() {
                       </div>
                     ) : null}
                   </h3>
-                  <p className="mt-4 flex items-baseline gap-x-2">
+                  <p className="mt-4 flex flex-col items-baseline gap-y-1">
                     <span
                       className={classNames(
                         tier.featured ? "text-gray-500" : "text-gray-500",
-                        "text-base"
+                        "text-sm"
                       )}
                     >
                       Starting at
@@ -149,7 +149,7 @@ export default function PricingNew() {
                     >
                       {tier.priceMonthly}
                     </span>
-                    {index !== 0 && (
+                    {/* index !== 0 && (
                       <span
                         className={classNames(
                           tier.featured ? "text-gray-400" : "text-gray-400",
@@ -157,8 +157,8 @@ export default function PricingNew() {
                         )}
                       >
                         /month
-                      </span>
-                    )}
+                      </span> 
+                    )}*/}
                   </p>
                   <p
                     className={classNames(
