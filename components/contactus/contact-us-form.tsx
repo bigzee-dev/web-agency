@@ -55,7 +55,7 @@ export default function ContactUsForm() {
 
   const labelStyles = "font-sans block text-sm/6 font-semibold text-secondary";
   const inputStyles =
-    "font-sans block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-gray-300 outline outline-1 -outline-offset-1 outline-gray-400 placeholder:text-gray-400 placeholder:text-md placeholder:font-light focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600";
+    "font-sans block w-full rounded-md bg-background px-3.5 py-2 text-base text-gray-700 outline outline-1 -outline-offset-1 outline-gray-400 placeholder:text-gray-500 placeholder:text-md placeholder:font-light focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600";
 
   return (
     <div className="max-w-4xl mx-auto  mt-8 ">
@@ -64,7 +64,7 @@ export default function ContactUsForm() {
           Send us a Message
         </h2>
       </div>
-      <div className="bg-gray-200/50 mt-3 md:py-12 px-8 rounded-xl outline outline-1 -outline-offset-1 outline-gray-400">
+      <div className="bg-gray-100 mt-3 md:py-12 px-8 rounded-xl outline outline-1 -outline-offset-1 outline-gray-400">
         <form onSubmit={handleSubmit(onSubmit)} className="">
           <div className="grid grid-cols-12 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div className="col-span-6">

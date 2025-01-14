@@ -7,37 +7,40 @@ const singleLink = "font-sans text-sm text-gray-600";
 
 export default function Footer() {
   return (
-    <footer className="mx-auto px-2">
-      <div className="max-w-5xl mx-auto py-24 grid grid-cols-1 gap-x-8 md:grid-cols-4">
-        <CompanyInfo />
-
-        {footerLinks.map((link, i) => (
-          <div key={i}>
-            <h3 className={linkHeading}>{link.heading}</h3>
-            <ul className="mt-4 space-y-3">
-              <li>
-                <Link href="#" className={singleLink}>
-                  {link.firstLink.title}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={singleLink}>
-                  {link.secondLink.title}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={singleLink}>
-                  {link.thirdLink.title}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className={singleLink}>
-                  {link.fourthLink?.title || null}
-                </Link>
-              </li>
-            </ul>
-          </div>
-        ))}
+    <footer className="px-2">
+      <div className="max-w-4xl mx-auto py-20 grid gap-x-8 md:grid-cols-12 ">
+        <div className="col-span-5">
+          <CompanyInfo />
+        </div>
+        <div className="col-span-7 flex justify-between">
+          {footerLinks.map((link, i) => (
+            <div key={i}>
+              <h3 className={linkHeading}>{link.heading}</h3>
+              <ul className="mt-4 space-y-3">
+                <li>
+                  <Link href="#" className={singleLink}>
+                    {link.firstLink.title}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className={singleLink}>
+                    {link.secondLink.title}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className={singleLink}>
+                    {link.thirdLink.title}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className={singleLink}>
+                    {link.fourthLink?.title || null}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="text-sm text-gray-600 font-medium text-center pt-5 pb-16 border-t border-gray-400">
         <p>&copy; Zimaman Enterprises. 2024</p>

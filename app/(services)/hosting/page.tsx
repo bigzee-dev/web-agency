@@ -1,6 +1,7 @@
 import Header from "@/components/services/hosting/header";
-import PricingWebsites from "@/components/services/hosting/pricing";
-import PlansInfo from "@/components/services/hosting/plans-info";
+import HostingPlans from "@/components/services/hosting/pricing";
+import HostingFeatures from "@/components/services/hosting/features";
+import Consultation from "@/components/services/hosting/consultation";
 import FaqsWebsites from "@/components/services/hosting/faqs";
 import CTA from "@/components/services/hosting/cta";
 
@@ -9,8 +10,9 @@ export default function Websites() {
     <div className="pb-20">
       <Header />
       {/* <PricingWebsites /> */}
-      <PlansInfo />
-      <CTA />
+      <HostingPlans />
+      <HostingFeatures />
+      <Consultation />
       <FaqsWebsites />
     </div>
   );

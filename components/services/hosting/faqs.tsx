@@ -27,14 +27,27 @@ export default function FaqsWebsites() {
           <AccordionItem value="item-1">
             <AccordionTrigger>Is it accessible?</AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+              A domain name is the online address for your website. The IP
+              address is a unique string of numbers and other characters that is
+              used across the Internet to access websites from any device or
+              location. Think of a domain like a contact number in your phone.
+              Instead of typing a series of complicated numbers (IP address)
+              into a browser, you type in a domain name. A domain name can be
+              followed by many unique TLDs, giving you a chance to stand out
+              online.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger>Is it styled?</AccordionTrigger>
             <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
+              A domain name is the online address for your website. The IP
+              address is a unique string of numbers and other characters that is
+              used across the Internet to access websites from any device or
+              location. Think of a domain like a contact number in your phone.
+              Instead of typing a series of complicated numbers (IP address)
+              into a browser, you type in a domain name. A domain name can be
+              followed by many unique TLDs, giving you a chance to stand out
+              online.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">

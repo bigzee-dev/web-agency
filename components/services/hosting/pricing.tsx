@@ -1,86 +1,44 @@
-import { FaCheck } from "react-icons/fa6";
-import { MdNavigateNext } from "react-icons/md";
-import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
+"use client";
+
+import { useState } from "react";
+import { FaCheck } from "react-icons/fa";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { Montserrat } from "next/font/google";
+import { montserrat } from "@/app/ui/fonts";
 
 const tiers = [
   {
-    name: "1-Pager",
-    id: "tier-hobby",
-    href: "#",
-    priceMonthly: "P2500",
-    description:
-      "The perfect plan if you're just getting started with our product.",
+    id: "basic",
+    name: "Basic Plan",
+    priceMonthly: "P9.99",
+    priceYearly: "P99.99",
+    description: "Perfect for small projects and personal websites.",
     features: [
-      "25 products",
-      "Up to 10,000 subscribers",
-      "Advanced analytics",
-      "24-hour support response time",
+      "1 GB Storage",
+      "10 GB Bandwidth",
+      "Free SSL Certificate",
+      "Daily Backups",
+      "24/7/365 Support",
     ],
+    href: "#",
     featured: false,
   },
   {
-    name: "Basic",
-    id: "tier-enterprise",
-    href: "#",
-    priceMonthly: "P120",
-    description: "Dedicated support and infrastructure for your company.",
+    id: "pro",
+    name: "Pro Plan",
+    priceMonthly: "P19.99",
+    priceYearly: "P199.99",
+    description: "Ideal for growing businesses and professional websites.",
     features: [
-      "Unlimited products",
-      "Unlimited subscribers",
-      "Advanced analytics",
-      "Dedicated support representative",
-      //   "Marketing automations",
-      //   "Custom integrations",
+      "5 GB Storage",
+      "Unlimited Bandwidth",
+      "Free SSL Certificate",
+      "Daily Backups",
+      "24/7/365 Support",
     ],
+    href: "#",
     featured: true,
-  },
-  {
-    name: "Business",
-    id: "tier-enterprise",
-    href: "#",
-    priceMonthly: "P50",
-    description: "Dedicated support and infrastructure for your company.",
-    features: [
-      "Unlimited products",
-      "Unlimited subscribers",
-      "Advanced analytics",
-      "Dedicated support representative",
-      //   "Marketing automations",
-      //   "Custom integrations",
-    ],
-    featured: false,
-  },
-  {
-    name: "Enterprise",
-    id: "tier-enterprise",
-    href: "#",
-    priceMonthly: "P50",
-    description: "Dedicated support and infrastructure for your company.",
-    features: [
-      "Unlimited products",
-      "Unlimited subscribers",
-      "Advanced analytics",
-      "Dedicated support representative",
-      //   "Marketing automations",
-      //   "Custom integrations",
-    ],
-    featured: false,
-  },
-];
-
-const pricingLinks = [
-  {
-    title: "Hosting Prices",
-    url: "/",
-  },
-  {
-    title: "Email Prices",
-    url: "/",
-  },
-  {
-    title: "Domain Prices",
-    url: "/",
   },
 ];
 
@@ -88,96 +46,137 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function PricingWebsites() {
+export default function HostingPlans() {
+  const [isYearly, setIsYearly] = useState(false);
+
   return (
-    <div className="w-full">
-      <div className="max-w-lg lg:max-w-7xl mx-auto py-12">
-        <div className="mb-4 flex justify-between items-center">
-          <h4 className="text-5xl font-extrabold  text-gray-800 leading-normal">
-            Pricing
-          </h4>
+    <div className="relative isolate mx-auto max-w-7xl px-6 lg:px-8 py-16">
+      <div
+        aria-hidden="true"
+        className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
+      >
+        <div
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[rgb(37,192,235)] to-[#89b9fc] opacity-20"
+        />
+      </div>
+      <div className="mx-auto max-w-4xl text-center">
+        <h2 className="text-base font-semibold leading-7 text-indigo-600">
+          Pricing
+        </h2>
+        <p
+          className={` ${montserrat.className} mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl `}
+        >
+          Choose the right plan for you
+        </p>
+      </div>
+
+      <div className="mt-12 flex justify-center items-center gap-3">
+        <div className="relative flex items-center justify-center space-x-4">
+          <Label
+            htmlFor="billing-toggle"
+            className="text-sm font-medium text-gray-700"
+          >
+            Monthly
+          </Label>
+          <Switch
+            id="billing-toggle"
+            checked={isYearly}
+            onCheckedChange={setIsYearly}
+          />
+          <Label
+            htmlFor="billing-toggle"
+            className="text-sm font-medium text-gray-700"
+          >
+            Yearly
+          </Label>
+          <div className="absolute -top-0.5 -right-5 transform translate-x-full">
+            <p className="text-primary text-base font-semibold">Save 20%</p>
+          </div>
+          <span className="absolute -top-6 right-5 transform translate-x-full">
+            <img
+              src="/svg/hosting/offer-vector.svg"
+              height={20}
+              width={85}
+              alt=""
+            />
+          </span>
         </div>
-        <div className="grid grid-cols-1 items-center gap-x-6 sm:mt-20 lg:grid-cols-4">
-          {tiers.map((tier, index) => (
-            <div
-              key={tier.id}
+      </div>
+
+      <div className="max-w-3xl mx-auto grid grid-cols-1 items-center gap-x-10 lg:grid-cols-2 mt-10 px-2">
+        {tiers.map((tier, index) => (
+          <div
+            key={tier.id}
+            className={classNames(
+              "bg-background shadow-2xl p-8 px-6 rounded-xl",
+              tier.featured
+                ? "outline outline-2 outline-offset-1 outline-primary"
+                : "outline outline-1 outline-offset-1 outline-gray-400"
+            )}
+          >
+            <h3
+              id={tier.id}
               className={classNames(
-                "shadow-2xl p-8 px-6 outline outline-1 outline-gray-400/50 rounded-xl"
+                "flex items-center justify-between text-lg text-gray-800 font-semibold leading-7"
               )}
             >
-              <h3
-                id={tier.id}
+              {tier.name}
+              {tier.featured === true ? (
+                <div className="flex items-center justify-center py-1.5 px-2 bg-primary text-xs text-neutral-200 rounded-2xl">
+                  <span>Most Popular</span>
+                </div>
+              ) : null}
+            </h3>
+            <p className="mt-4 flex items-baseline gap-x-2">
+              <span
                 className={classNames(
-                  "flex items-center justify-between text-base text-gray-700 font-semibold leading-7"
+                  "text-gray-800 text-5xl font-bold tracking-tight"
                 )}
               >
-                {tier.name}
-                {tier.featured === true ? (
-                  <div className="flex items-center justify-center py-1.5 px-2 bg-blue-600 text-xs text-neutral-200 rounded-2xl">
-                    <span>Most Popular</span>
-                  </div>
-                ) : null}
-              </h3>
-              <p className="mt-4 flex items-baseline gap-x-2">
-                <span
-                  className={classNames(
-                    "text-gray-800 text-5xl font-bold tracking-tight"
-                  )}
+                {isYearly ? tier.priceYearly : tier.priceMonthly}
+              </span>
+              <span className="text-base text-gray-500">
+                /{isYearly ? "year" : "month"}
+              </span>
+            </p>
+            <p className={classNames("text-gray-600 mt-6 text-base leading-7")}>
+              {tier.description}
+            </p>
+            <ul
+              role="list"
+              className={classNames(
+                "text-gray-600 mt-8 space-y-3 text-sm leading-6 sm:mt-10"
+              )}
+            >
+              {tier.features.map((feature) => (
+                <li
+                  key={feature}
+                  className="font-sans flex items-center gap-x-3"
                 >
-                  {tier.priceMonthly}
-                </span>
-                {index !== 0 && (
-                  <span
-                    className={classNames(
-                      tier.featured ? "text-gray-500" : "text-gray-400",
-                      "text-base"
-                    )}
-                  >
-                    /month
-                  </span>
-                )}
-              </p>
-              <p
-                className={classNames("text-gray-600 mt-6 text-base leading-7")}
-              >
-                {tier.description}
-              </p>
-              <ul
-                role="list"
-                className={classNames(
-                  "text-gray-600 mt-8 space-y-3 text-sm leading-6 sm:mt-10"
-                )}
-              >
-                {tier.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="font-sans flex items-center gap-x-3"
-                  >
-                    <FaCheck
-                      aria-hidden="true"
-                      className={classNames(
-                        "text-indigo-600 h-4 w-3 flex-none"
-                      )}
-                    />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={tier.href}
-                aria-describedby={tier.id}
-                className={classNames(
-                  tier.featured
-                    ? " bg-gray-800 text-neutral-200 ring-1 ring-inset ring-gray-600 shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
-                    : "text-neutral-300 bg-gray-800 ring-1 ring-inset ring-gray-600 hover:ring-indigo-300 focus-visible:outline-indigo-600",
-                  "font-sans mt-8 block rounded-md px-3 py-2 text-center text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
-                )}
-              >
-                Learn More
-              </a>
-            </div>
-          ))}
-        </div>
+                  <FaCheck
+                    aria-hidden="true"
+                    className={classNames("text-indigo-600 h-4 w-3 flex-none")}
+                  />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <a
+              href={tier.href}
+              aria-describedby={tier.id}
+              className={classNames(
+                "font-sans mt-8 block rounded-md px-3 py-2 text-neutral-200 text-center text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ",
+                tier.featured ? "bg-secondary" : "bg-gray-800"
+              )}
+            >
+              Contact us
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ function classNames(...classes: string[]) {
 
 export default function PlansInfo() {
   return (
-    <div className="relative isolate max-w-7xl mx-auto py-20">
+    <div className="relative isolate max-w-5xl mx-auto py-20">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"

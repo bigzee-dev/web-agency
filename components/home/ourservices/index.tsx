@@ -32,7 +32,7 @@ export default function OurServices() {
             landscape. Let us transform your vision into an engaging online
             experience.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 justify-items-center gap-x-12 gap-y-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 justify-between gap-x-12 gap-y-8 mt-12">
             {services.map((service, index) => (
               <div
                 key={index}
