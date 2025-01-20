@@ -21,24 +21,24 @@ export default function Showcase() {
         />
       </div>
       <div className="w-full h-full px-2 py-9 lg:py-16 lg:px-8 ">
-        <div className="flex flex-col lg:flex-row-reverse items-center mx-auto max-w-6xl">
+        <div className="flex flex-col lg:flex-row-reverse lg: gap-12 items-center mx-auto max-w-6xl">
           <div
-            className="relative isolate w-[100%] md:w-[40%] h-full flex justify-center items-center  border-b-2 border-primary "
-            style={{
-              transformOrigin: "bottom right",
-            }}
+            className="relative isolate w-[100%] md:w-[40%] h-full flex justify-center items-center"
+            // style={{
+            //   transformOrigin: "bottom right",
+            // }}
           >
             <Image
-              src="/img/our-process.png"
+              src="/img/showcase-frame.png"
               alt="image"
-              width={500}
-              height={500}
-              className="self-end rotate-6 shadow-xl border bg-slate-600/10 border-secondary rounded-2xl"
-              style={{ transformOrigin: "bottom right" }}
+              width={750}
+              height={750}
+              className="self-end"
+              // style={{ transformOrigin: "bottom right" }}
             />
           </div>
-          <div className="w-[100%] md:w-[60%]  lg:pl-4">
-            <div className="mb-6 flex">
+          <div className="w-[100%] md:w-[60%]  lg:pr-4">
+            <div className="mb-7 flex">
               <div className="bg-gray-400/15 relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-500 hover:ring-neutral-200/70">
                 Announcing our new Whatsapp integration.{" "}
                 <a href="#" className="font-medium leading-6 text-gray-600">
@@ -52,12 +52,12 @@ export default function Showcase() {
             </div>
             <div className="space-y-6">
               <p
-                className={` ${montserrat.className}  font-bold text-gray-800`}
+                className={` ${montserrat.className}  font-semibold text-gray-800`}
                 style={{ fontSize: "4rem", lineHeight: "1.1" }}
               >
                 Building Modern and Reliable Web Solutions
               </p>
-              <div className="flex text-blue-400 ">
+              <div className="flex text-yellow-600 ">
                 <IoStarSharp />
                 <IoStarSharp />
                 <IoStarSharp />
@@ -73,7 +73,7 @@ export default function Showcase() {
                 </p>
 
                 <div className="flex justify-center mt-6 md:mt-12 w-full">
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-4">
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-x-8 gap-y-4">
                     <a
                       href="#"
                       className={` ${btnDimensions} bg-secondary text-neutral-200 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400`}
@@ -82,7 +82,7 @@ export default function Showcase() {
                     </a>
                     <a
                       href="#"
-                      className="font-sans text-md font-medium leading-6 text-gray-600"
+                      className="font-sans text-md font-medium leading-6 text-secondary"
                     >
                       About Us <span aria-hidden="true">→</span>
                     </a>

@@ -18,7 +18,7 @@ export default function DeployFaster() {
           Increase Your Visibility
         </h2>
         <p
-          className={` ${montserrat.className} mx-auto mt-2 max-w-lg text-center text-gray-600 text-4xl font-semibold leading-10  sm:text-5xl `}
+          className={` mx-auto mt-2 max-w-lg text-center text-gray-800 text-4xl font-semibold  sm:text-5xl `}
         >
           Everything you need to elevate your online presence.
         </p>

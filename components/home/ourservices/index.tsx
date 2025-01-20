@@ -49,13 +49,13 @@ export default function OurServices() {
                 </div> */}
                 <div className={clsx(" ")}>
                   <div
-                    className={`w-12 h-12 flex items-center justify-center p-2  bg-secondary rounded-full`}
+                    className={`w-14 h-14 flex items-center justify-center p-2  bg-slate-800 rounded-full`}
                   >
                     <div className={` ${service.color} `}>{service.icon}</div>
                   </div>
                   <h4
                     className={clsx(
-                      "font-sans text-base font-semibold text-gray-800 mt-6"
+                      "font-sans text-lg font-semibold text-gray-800 mt-6"
                     )}
                   >
                     {service.title}

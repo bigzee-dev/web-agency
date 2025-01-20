@@ -17,7 +17,7 @@ const cardData = [
     title: "Custom Solutions",
     content:
       "We offer services tailored to everyone—from individuals to businesses and organisations. Our team creates personalised solutions to meet your unique needs.",
-    className: "",
+    className: "bg-opacity-60",
   },
   {
     backgroundStyle: {},
@@ -25,7 +25,7 @@ const cardData = [
     title: "Affordable Pricing",
     content:
       "We provide high-quality services that fit your budget, offering competitive rates without compromising on excellence. Get the solutions you need at a price that works for you.",
-    className: "bg-gradient-to-b from-gray-900 to-primary",
+    className: "bg-gradient-to-b from-secondary to-primary",
   },
   {
     backgroundStyle: {},
@@ -33,7 +33,7 @@ const cardData = [
     title: "Dedicated Support",
     content:
       "Our team is here to assist you every step of the way, ensuring everything runs smoothly. Count on us for dependable support whenever you need it.",
-    className: "bg-gradient-to-b from-primary to-cyan-500",
+    className: "bg-green-900 bg-opacity-75",
   },
 ];
 
@@ -72,19 +72,9 @@ export default function Component() {
 
   return (
     <div className="w-full pt-24 pb-16  bg-gradient-to-b from-neutral-300/50 to-neutral-100">
-      <div className="mx-auto max-w-7xl grid grid-cols-12 gap-x-16">
-        <div className="lg:mx-0 px-4 col-span-5 ">
+      <div className="mx-auto max-w-7xl space-y-4">
+        <div className="">
           <h2 className={homePageheadings}>Why Choose Us</h2>
-          <div className="mt-8 py-2">
-            <p className="italic font-sans text-3xl font-normal text-gray-600">
-              We are Here to Help you{" "}
-              <span
-                className={` ${montserrat.className} font-extrabold text-gray-700 tracking-wide underline`}
-              >
-                Grow your Brand and Revenue
-              </span>
-            </p>
-          </div>
         </div>
 
         <motion.div
@@ -92,22 +82,55 @@ export default function Component() {
           variants={containerVariants}
           initial="hidden"
           animate={hasAnimated ? "visible" : "hidden"}
-          className="col-span-7 pt-2"
+          className=""
         >
-          <div className="flex flex-col gap-10">
+          <div className="grid grid-cols-2 gap-14">
+            <div className="mt-8">
+              <p className="italic font-sans text-3xl font-normal text-gray-600">
+                We are Here to Help you{" "}
+                <span
+                  className={` ${montserrat.className} font-extrabold text-gray-700 tracking-wide underline`}
+                >
+                  Grow your Brand and Revenue
+                </span>
+              </p>
+            </div>
             {cardData.map((card, index) => (
               <motion.div key={index} variants={cardVariants}>
-                <Card className="h-full flex gap-4">
+                <Card className="h-full flex gap-2">
                   <CardHeader
-                    className={`flex justify-center items-center w-full min-w-[300px] h-[150px] rounded-xl ${card.className}`}
+                    className={`relative flex flex-col justify-center items-center gap-2 overflow-hidden w-full min-w-[300px] h-[150px] rounded-xl ${card.className}`}
                     style={card.backgroundStyle as React.CSSProperties}
                   >
-                    <Image src={card.svg} height={75} width={75} alt="svg" />
-                  </CardHeader>
-                  <CardContent className="space-y-2 pt-4">
-                    <p className="w-full  text-gray-700 font-semibold">
+                    {" "}
+                    <Image
+                      src={card.svg}
+                      height={75}
+                      width={75}
+                      alt="svg"
+                      className="z-30 block m-0"
+                      style={{ lineHeight: 0 }}
+                    />
+                    <p className="font-sans text-white/80 font-bold ">
                       {card.title}
                     </p>
+                    {/* {index === 1 && (
+                      <div className="absolute top-0 left-0 h-full">
+                        <div className="relative w-full h-full z-10">
+                          <img
+                            src="/img/contact-us.png"
+                            alt=""
+                            className="object-cover"
+                          />
+                          <div className="absolute top-0 right-0 h-full w-full bg-secondary/90 z-20"></div>
+                        </div>
+                      </div>
+                    )} */}
+                  </CardHeader>
+                  <CardContent className="space-y-1 pt-2">
+                    {/* <p className="w-full  text-gray-700 font-semibold">
+                      {card.title}
+                    </p> */}
                     <p className="font-sans text-md text-gray-600 font-normal  pb-0 leading-relaxed">
                       {card.content}
                     </p>

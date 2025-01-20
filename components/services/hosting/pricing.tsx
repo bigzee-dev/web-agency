@@ -114,7 +114,7 @@ export default function HostingPlans() {
             className={classNames(
               "bg-background shadow-2xl p-8 px-6 rounded-xl",
               tier.featured
-                ? "outline outline-2 outline-offset-1 outline-primary"
+                ? "outline outline-2 outline-offset-1 outline-blue-700"
                 : "outline outline-1 outline-offset-1 outline-gray-400"
             )}
           >
@@ -126,7 +126,7 @@ export default function HostingPlans() {
             >
               {tier.name}
               {tier.featured === true ? (
-                <div className="flex items-center justify-center py-1.5 px-2 bg-primary text-xs text-neutral-200 rounded-2xl">
+                <div className="flex items-center justify-center py-1.5 px-2 bg-blue-700 text-xs text-neutral-200 rounded-2xl">
                   <span>Most Popular</span>
                 </div>
               ) : null}
@@ -170,7 +170,7 @@ export default function HostingPlans() {
               aria-describedby={tier.id}
               className={classNames(
                 "font-sans mt-8 block rounded-md px-3 py-2 text-neutral-200 text-center text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ",
-                tier.featured ? "bg-secondary" : "bg-gray-800"
+                tier.featured ? "bg-blue-700" : "bg-gray-800"
               )}
             >
               Contact us
