@@ -77,6 +77,11 @@ body {
   }
 }
 
+.x-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .fade-out {
   /* used in 'everything you need' component in the home page */
   mask-image: linear-gradient(to bottom, black, transparent);

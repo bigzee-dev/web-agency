@@ -33,7 +33,7 @@ const cardData = [
     title: "Dedicated Support",
     content:
       "Our team is here to assist you every step of the way, ensuring everything runs smoothly. Count on us for dependable support whenever you need it.",
-    className: "bg-green-900 bg-opacity-75",
+    className: "bg-gray-800 bg-opacity-70",
   },
 ];
 
@@ -71,11 +71,11 @@ export default function Component() {
   }
 
   return (
-    <div className="w-full pt-24 pb-16  bg-gradient-to-b from-neutral-300/50 to-neutral-100">
-      <div className="mx-auto max-w-7xl space-y-4">
-        <div className="">
+    <div className="x-padding w-full pt-24 pb-16  bg-gradient-to-b from-neutral-300/50 to-neutral-100">
+      <div className="mx-auto max-w-5xl">
+        {/* <div className="">
           <h2 className={homePageheadings}>Why Choose Us</h2>
-        </div>
+        </div> */}
 
         <motion.div
           ref={ref}
@@ -84,22 +84,23 @@ export default function Component() {
           animate={hasAnimated ? "visible" : "hidden"}
           className=""
         >
-          <div className="grid grid-cols-2 gap-14">
-            <div className="mt-8">
-              <p className="italic font-sans text-3xl font-normal text-gray-600">
-                We are Here to Help you{" "}
-                <span
-                  className={` ${montserrat.className} font-extrabold text-gray-700 tracking-wide underline`}
-                >
-                  Grow your Brand and Revenue
-                </span>
+          <div className="grid md:grid-cols-2 gap-x-6 gap-y-14">
+            <div className="text-center">
+              <h2 className={homePageheadings}>Why Choose Us</h2>
+              <p className="italic font-sans text-3xl font-normal text-gray-600 mt-10 mb-3">
+                We are Here to Help you
+              </p>
+              <p
+                className={` ${montserrat.className} text-3xl font-extrabold text-gray-700 tracking-wide underline`}
+              >
+                Grow your Brand and Revenue
               </p>
             </div>
             {cardData.map((card, index) => (
               <motion.div key={index} variants={cardVariants}>
-                <Card className="h-full flex gap-2">
+                <Card className="h-full flex flex-col items-center gap-2">
                   <CardHeader
-                    className={`relative flex flex-col justify-center items-center gap-2 overflow-hidden w-full min-w-[300px] h-[150px] rounded-xl ${card.className}`}
+                    className={`relative flex flex-col justify-center items-center gap-2 overflow-hidden w-full min-w-[300px] max-w-[320px] h-[150px] rounded-xl ${card.className}`}
                     style={card.backgroundStyle as React.CSSProperties}
                   >
                     {" "}
@@ -111,33 +112,18 @@ export default function Component() {
                       className="z-30 block m-0"
                       style={{ lineHeight: 0 }}
                     />
-                    <p className="font-sans text-white/80 font-bold ">
-                      {card.title}
-                    </p>
-                    {/* {index === 1 && (
-                      <div className="absolute top-0 left-0 h-full">
-                        <div className="relative w-full h-full z-10">
-                          <img
-                            src="/img/contact-us.png"
-                            alt=""
-                            className="object-cover"
-                          />
-                          <div className="absolute top-0 right-0 h-full w-full bg-secondary/90 z-20"></div>
-                        </div>
-                      </div>
-                    )} */}
-                  </CardHeader>
-                  <CardContent className="space-y-1 pt-2">
-                    {/* <p className="w-full  text-gray-700 font-semibold">
+                    {/* <p className=" text-white/80 font-semibold ">
                       {card.title}
                     </p> */}
+                  </CardHeader>
+                  <CardContent className="md:max-w-[90%] space-y-2 pt-3 text-center ">
+                    <p className="w-full  text-gray-800 font-semibold">
+                      {card.title}
+                    </p>
                     <p className="font-sans text-md text-gray-600 font-normal  pb-0 leading-relaxed">
                       {card.content}
                     </p>
                   </CardContent>
-                  {/* <CardFooter>
-                  <Button>Learn More</Button>
-                </CardFooter> */}
                 </Card>
               </motion.div>
             ))}

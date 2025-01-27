@@ -6,9 +6,9 @@ import DomainSearch from "./searchdomain";
 import { btnDimensions } from "@/app/ui/customTailwindClasses";
 import { FaLink } from "react-icons/fa";
 
-export default function OurServices() {
+export default function OurServicesLrg() {
   return (
-    <div className="w-full bg-background">
+    <div className="hidden md:block w-full bg-background">
       {/* <div className="w-full h-2 bg-gradient-to-r from-gray-900 to-primary" /> */}
       <section className="relative isolate pt-16 pb-16 px-1">
         <div
@@ -37,7 +37,7 @@ export default function OurServices() {
               <div
                 key={index}
                 className={clsx(
-                  "relative flex flex-col gap-2 w-full col-span-4 px-4 py-4 rounded-xl overflow-hidden"
+                  "relative flex flex-col gap-2 w-full col-span-1 lg:col-span-4 px-4 py-4 rounded-xl overflow-hidden"
                   // index === 3 ? "col-start-3" : "",
                   // index === 4 ? " col-start-7" : ""
                 )}
@@ -49,13 +49,13 @@ export default function OurServices() {
                 </div> */}
                 <div className={clsx(" ")}>
                   <div
-                    className={`w-14 h-14 flex items-center justify-center p-2  bg-slate-800 rounded-full`}
+                    className={`w-12 h-12 flex items-center justify-center p-2  bg-secondary rounded-full`}
                   >
                     <div className={` ${service.color} `}>{service.icon}</div>
                   </div>
                   <h4
                     className={clsx(
-                      "font-sans text-lg font-semibold text-gray-800 mt-6"
+                      "font-sans text-base font-semibold text-gray-800 mt-6"
                     )}
                   >
                     {service.title}

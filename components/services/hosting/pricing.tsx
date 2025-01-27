@@ -50,7 +50,7 @@ export default function HostingPlans() {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <div className="relative isolate mx-auto max-w-7xl px-6 lg:px-8 py-16">
+    <div className="relative isolate mx-auto max-w-7xl px-4 py-16">
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -107,12 +107,12 @@ export default function HostingPlans() {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto grid grid-cols-1 items-center gap-x-10 lg:grid-cols-2 mt-10 px-2">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 items-center gap-x-14 lg:grid-cols-2 mt-10 px-2">
         {tiers.map((tier, index) => (
           <div
             key={tier.id}
             className={classNames(
-              "bg-background shadow-2xl p-8 px-6 rounded-xl",
+              "bg-background shadow-2xl p-8 px-8 rounded-xl",
               tier.featured
                 ? "outline outline-2 outline-offset-1 outline-blue-700"
                 : "outline outline-1 outline-offset-1 outline-gray-400"

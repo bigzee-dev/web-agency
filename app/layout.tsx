@@ -16,10 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-neutral-100`}>
+      <body className={`${inter.className} antialiased bg-background`}>
         <ResponsiveNavbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

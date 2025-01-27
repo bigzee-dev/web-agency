@@ -45,7 +45,7 @@ export default function CarouselLrg() {
           {cards.map((card, index) => (
             <CarouselItem
               key={index}
-              className="flex justify-center basis-1/2 md:basis-1/3 lg:basis-1/3"
+              className="flex justify-center md:basis-1/2 lg:basis-1/3"
             >
               <Card>
                 <CardContent className="flex items-center justify-center p-0.5 max-w-[490x]">
@@ -75,7 +75,7 @@ export default function CarouselLrg() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-      <div className="mt-10">
+      <div className="mt-6 md:mt-10">
         <div className="flex items-center justify-center gap-2 py-2">
           {Array.from({ length: count }).map((_, index) => (
             <button

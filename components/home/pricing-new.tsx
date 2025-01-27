@@ -75,8 +75,9 @@ function classNames(...classes: string[]) {
 export default function PricingNew() {
   return (
     <div className="bg-neutral-100">
-      <div className="w-full px-6 py-20">
-        <div className="relative isolate overflow-hidden bg-gray-900 md:px-6 pt-16 shadow-2xl rounded-3xl lg:px-16 md:pt-24 lg:flex lg:gap-x-20  lg:pt-0">
+      <div className="w-full md:px-6 md:py-20">
+        <div className="x-padding relative isolate overflow-hidden bg-gray-900 md:px-6 py-8 md:rounded-3xl lg:px-16 md:pt-24 lg:flex lg:gap-x-20  lg:pt-0 shadow-2xl ">
+          {/* blur component */}
           <svg
             viewBox="0 0 1024 1024"
             aria-hidden="true"
@@ -96,7 +97,7 @@ export default function PricingNew() {
               </radialGradient>
             </defs>
           </svg>
-          <div className="max-w-lg lg:max-w-6xl mx-auto py-12">
+          <div className="max-w-lg lg:max-w-6xl mx-auto md:py-12">
             <div className="mb-4 flex justify-between items-center">
               <h4 className="text-neutral-300 text-5xl font-extrabold  bg-gradient-to-r from-red-600 via-purple-700 to-indigo-600 text-transparent bg-clip-text leading-normal">
                 Pricing
@@ -107,7 +108,7 @@ export default function PricingNew() {
                 <div>Whatsapp integration</div>
               </div>
             </div>
-            <div className="grid grid-cols-1 items-center gap-x-12 sm:mt-20 lg:grid-cols-3">
+            <div className="grid grid-cols-1 items-center gap-y-7 gap-x-12 sm:mt-20 lg:grid-cols-3">
               {tiers.map((tier, index) => (
                 <div
                   key={tier.id}
@@ -198,8 +199,8 @@ export default function PricingNew() {
                     aria-describedby={tier.id}
                     className={classNames(
                       tier.featured
-                        ? " bg-gray-800 text-neutral-200 ring-1 ring-inset ring-gray-600 shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
-                        : "text-neutral-300 bg-gray-800 ring-1 ring-inset ring-gray-600 hover:ring-indigo-300 focus-visible:outline-indigo-600",
+                        ? " bg-gray-900/60 text-neutral-200 py-2.5 ring-1 ring-inset ring-gray-600/60 shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
+                        : "text-neutral-300 bg-gray-900/60 py-2.5 ring-1 ring-inset ring-gray-600/60 hover:ring-indigo-300 focus-visible:outline-indigo-600",
                       "font-sans mt-8 block rounded-md px-3 py-2 text-center text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
                     )}
                   >
