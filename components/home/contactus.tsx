@@ -10,14 +10,14 @@ export default function ContactUs() {
         Talk to us
       </h2>
       <p
-        className={` ${montserrat.className} mx-auto mt-2 max-w-2xl text-pretty text-center text-3xl font-medium tracking-tight text-gray-700 sm:text-5xl `}
+        className={` ${montserrat.className} mx-auto mt-2 max-w-2xl text-pretty text-center text-3xl md:text-3xl font-medium tracking-tight text-gray-700 `}
       >
         Are you looking for a company that specialises in Web Development,
         Hosting, Cloud services and other web related technology
       </p>
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-3 max-w-lg mx-auto text-neutral-200 mt-12">
         <Link
-          className="flex items-center justify-center gap-2 bg-secondary p-2 min-w-52 rounded-lg"
+          className="flex items-center justify-center gap-2 bg-primary p-2 min-w-52 rounded-lg"
           href="/"
         >
           <TiMessages size="1.6em" />

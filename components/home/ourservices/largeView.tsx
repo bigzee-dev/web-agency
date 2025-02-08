@@ -25,7 +25,7 @@ export default function OurServicesLrg() {
         </div>
         <div className="max-w-6xl mx-auto">
           <h2 className={`${homePageheadings} text-center text-gray-800 mb-5 `}>
-            Our Services
+            Services We Offer
           </h2>
           <p className="max-w-2xl mx-auto text-base text-center text-gray-700">
             We are here to help you and your business integrate into the digital
@@ -49,20 +49,25 @@ export default function OurServicesLrg() {
                 </div> */}
                 <div className={clsx(" ")}>
                   <div
-                    className={`w-12 h-12 flex items-center justify-center p-2  bg-secondary rounded-full`}
+                    className={`w-12 h-12 flex items-center justify-center p-2  bg-gray-200/50 rounded-full border border-gray-400/50`}
                   >
-                    <div className={` ${service.color} `}>{service.icon}</div>
+                    <div
+                      className={` ${service.color} `}
+                      style={{ color: service.color }}
+                    >
+                      {service.icon}
+                    </div>
                   </div>
                   <h4
                     className={clsx(
-                      "font-sans text-base font-semibold text-gray-800 mt-6"
+                      "font-sans text-lg font-semibold text-gray-800 mt-6"
                     )}
                   >
                     {service.title}
                   </h4>
                 </div>
 
-                <div className="font-sans  text-gray-600 text-md leading-relaxed">
+                <div className="font-sans  text-gray-700 text-md leading-relaxed">
                   <div>{service.description}</div>
                 </div>
 

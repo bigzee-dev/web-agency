@@ -18,7 +18,7 @@ export default function EverythingYouNeed() {
           Increase Your Visibility
         </h2>
         <p
-          className={` ${montserrat.className} max-w-lg mx-auto mt-2 text-center text-gray-700 text-3xl font-semibold leading-10`}
+          className={` ${montserrat.className} max-w-lg mx-auto mt-2 text-center text-gray-800 text-3xl font-semibold leading-8 tracking-tight`}
         >
           Everything you need to elevate your online presence.
         </p>

@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased bg-background`}>
         <ResponsiveNavbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

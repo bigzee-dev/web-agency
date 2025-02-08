@@ -74,7 +74,7 @@ function classNames(...classes: string[]) {
 
 export default function PricingNew() {
   return (
-    <div className="bg-neutral-100">
+    <div className="bg-background">
       <div className="w-full md:px-6 md:py-20">
         <div className="x-padding relative isolate overflow-hidden bg-gray-900 md:px-6 py-8 md:rounded-3xl lg:px-16 md:pt-24 lg:flex lg:gap-x-20  lg:pt-0 shadow-2xl ">
           {/* blur component */}

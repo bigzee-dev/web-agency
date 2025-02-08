@@ -5,7 +5,7 @@ import { TbAt } from "react-icons/tb";
 import { TbTrendingUp } from "react-icons/tb";
 
 const iconProps = {
-  size: "2.2em",
+  size: "2em",
   strokeWidth: 1.4,
 };
 
@@ -13,9 +13,9 @@ const listStyles = "list-disc pl-4 space-y-1.5 w-[90%]";
 
 export const services = [
   {
-    title: "Web Development",
+    title: "Websites",
     icon: <TbWorldWww {...iconProps} />,
-    color: "text-blue-800",
+    color: "text-blue-700",
     backgroundColor: "bg-blue-300",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -24,10 +24,9 @@ export const services = [
     url: "/websites",
   },
   {
-    title: "Web Hosting",
+    title: "Hosting",
     icon: <HiOutlineServerStack {...iconProps} />,
-    color: "text-red-800",
-    backgroundColor: "bg-red-300",
+    color: "#009de6",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
@@ -35,9 +34,9 @@ export const services = [
     url: "/hosting",
   },
   {
-    title: "Email Hosting",
+    title: "Emails",
     icon: <TbMailCheck {...iconProps} />,
-    color: "text-yellow-700",
+    color: "text-yellow-600",
     backgroundColor: "bg-yellow-300",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -46,10 +45,9 @@ export const services = [
     url: "/emails",
   },
   {
-    title: "Online Growth & Visibility",
+    title: "Online Growth",
     icon: <TbTrendingUp {...iconProps} />,
-    color: "text-indigo-800",
-    backgroundColor: "bg-indigo-300",
+    color: "#783bff",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
@@ -59,8 +57,8 @@ export const services = [
   {
     title: "Register Domain",
     icon: <TbAt {...iconProps} />,
-    color: "text-cyan-800",
-    backgroundColor: "bg-cyan-300",
+    color: "#009de6",
+
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),

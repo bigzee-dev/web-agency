@@ -7,7 +7,7 @@ import { btnDimensions } from "@/app/ui/customTailwindClasses";
 export default function OurProcess() {
   return (
     <div className="bg-gradient-to-r from-indigo-500/20 via-indigo-700/20 to-primary/20 py-0">
-      <div className="x-padding w-full h-full py-12 md:py-20 px-4 bg-gradient-to-b from-neutral-100 to-transparent ">
+      <div className="x-padding w-full h-full py-12 md:py-20 px-4 bg-gradient-to-b from-transparent to-background ">
         <div className="md:max-w-6xl mx-auto">
           <div className="max-w-3xl mx-auto flex items-center justify-center">
             <div className="">

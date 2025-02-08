@@ -28,7 +28,7 @@ const cardData = [
     className: "bg-gradient-to-b from-secondary to-primary",
   },
   {
-    backgroundStyle: {},
+    backgroundStyle: { backgroundColor: "#009de6" },
     svg: "/svg/customer-support.svg",
     title: "Dedicated Support",
     content:
@@ -71,7 +71,7 @@ export default function Component() {
   }
 
   return (
-    <div className="x-padding w-full pt-24 pb-16  bg-gradient-to-b from-neutral-300/50 to-neutral-100">
+    <div className="x-padding w-full pt-24 pb-16  bg-gradient-to-b from-neutral-300/50 to-bg-background">
       <div className="mx-auto max-w-5xl">
         {/* <div className="">
           <h2 className={homePageheadings}>Why Choose Us</h2>
@@ -117,10 +117,10 @@ export default function Component() {
                     </p> */}
                   </CardHeader>
                   <CardContent className="md:max-w-[90%] space-y-2 pt-3 text-center ">
-                    <p className="w-full  text-gray-800 font-semibold">
+                    <p className="w-full text-base text-gray-800 font-semibold">
                       {card.title}
                     </p>
-                    <p className="font-sans text-md text-gray-600 font-normal  pb-0 leading-relaxed">
+                    <p className="font-sans text-md text-gray-700 font-normal  pb-0 leading-relaxed">
                       {card.content}
                     </p>
                   </CardContent>

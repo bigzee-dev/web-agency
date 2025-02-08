@@ -35,7 +35,7 @@ export default function CompanyInfo() {
         <br />
         Specialists
       </span>
-      <div className="flex space-x-8 mt-auto">
+      <div className="hidden md:flex space-x-8 mt-auto">
         <div className="text-gray-500 hover:text-gray-500">
           <IoLogoWhatsapp {...iconProps} size="1.6em" />
           {/* <img

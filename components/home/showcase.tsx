@@ -40,7 +40,7 @@ export default function Showcase() {
           </div>
           <div className="space-y-6">
             <p
-              className={` ${montserrat.className} text-5xl sm:text-6xl font-semibold text-gray-800`}
+              className={` ${montserrat.className} text-5xl font-bold text-gray-800 tracking-tight`}
               style={{ lineHeight: "1.1" }}
             >
               Building Modern and Reliable Web Solutions
@@ -64,7 +64,7 @@ export default function Showcase() {
                 <div className="flex flex-col md:flex-row items-center justify-center gap-x-8 gap-y-4">
                   <a
                     href="#"
-                    className={` ${btnDimensions} bg-secondary text-neutral-200 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400`}
+                    className={` ${btnDimensions} bg-primary text-neutral-200 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400`}
                   >
                     Start Your Project
                   </a>

@@ -7,12 +7,12 @@ const singleLink = "font-sans text-sm text-gray-600";
 
 export default function Footer() {
   return (
-    <footer className="px-2">
-      <div className="max-w-4xl mx-auto py-20 grid gap-x-8 md:grid-cols-12 ">
-        <div className="col-span-5">
+    <footer className="x-padding">
+      <div className="max-w-4xl mx-auto py-20 grid md:grid-cols-12 gap-x-8 gap-y-8">
+        <div className="md:col-span-5">
           <CompanyInfo />
         </div>
-        <div className="col-span-7 flex justify-between">
+        <div className="md:col-span-7 grid grid-cols-2 md:flex md:justify-between md:flex-wrap gap-x-8 md:gap-x-0 gap-y-6 md:gap-y-0 pr-6 md:pr-0">
           {footerLinks.map((link, i) => (
             <div key={i}>
               <h3 className={linkHeading}>{link.heading}</h3>
