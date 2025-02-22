@@ -10,7 +10,7 @@ export default function OurServicesLrg() {
   return (
     <div className="hidden md:block w-full bg-background">
       {/* <div className="w-full h-2 bg-gradient-to-r from-gray-900 to-primary" /> */}
-      <section className="relative isolate pt-16 pb-16 px-1">
+      <section className="relative isolate pt-12 pb-16 px-1">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
@@ -24,15 +24,21 @@ export default function OurServicesLrg() {
           />
         </div>
         <div className="max-w-6xl mx-auto">
-          <h2 className={`${homePageheadings} text-center text-gray-800 mb-5 `}>
-            Services We Offer
+          <h2 className={`${homePageheadings} text-center text-gray-900 mb-4 `}>
+            Services We{" "}
+            <span className="bg-gradient-to-r from-primary via-cyan-500 to-blue-700 text-transparent bg-clip-text">
+              Offer
+            </span>
           </h2>
           <p className="max-w-2xl mx-auto text-base text-center text-gray-700">
             We are here to help you and your business integrate into the digital
             landscape. Let us transform your vision into an engaging online
             experience.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 justify-between gap-x-12 gap-y-8 mt-12">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 justify-between gap-x-16 gap-y-6 mt-10"
+            id="our-services"
+          >
             {services.map((service, index) => (
               <div
                 key={index}
@@ -49,18 +55,19 @@ export default function OurServicesLrg() {
                 </div> */}
                 <div className={clsx(" ")}>
                   <div
-                    className={`w-12 h-12 flex items-center justify-center p-2  bg-gray-200/50 rounded-full border border-gray-400/50`}
+                    className={`w-12 h-12 flex items-center justify-center p-2  bg-gray-200/50 rounded-full border border-secondary`}
                   >
                     <div
-                      className={` ${service.color} `}
-                      style={{ color: service.color }}
+                      // className={` ${service.color} `}
+                      // style={{ color: service.color }}
+                      className="text-primary"
                     >
                       {service.icon}
                     </div>
                   </div>
                   <h4
                     className={clsx(
-                      "font-sans text-lg font-semibold text-gray-800 mt-6"
+                      "font-sans text-lg font-bold text-gray-800 mt-4"
                     )}
                   >
                     {service.title}
@@ -73,9 +80,9 @@ export default function OurServicesLrg() {
 
                 <Link
                   href={service.url}
-                  className={`flex items-center py-2.5 text-primary text-md font-semibold  hover:text-blue-600 min-w-52 mt-3`}
+                  className={`font-sans flex items-center justify-center py-2 text-secondary text-md text-center font-semibold bg-primary/10 hover:text-blue-600 min-w-52 mt-3 border-2 border-secondary rounded-lg uppercase`}
                 >
-                  <FaLink className="mr-3" />{" "}
+                  {/* <FaLink className="mr-3" />{" "} */}
                   <span className="mr-3" aria-hidden="true">
                     {service.link}
                   </span>

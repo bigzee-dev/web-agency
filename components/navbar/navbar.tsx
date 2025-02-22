@@ -43,25 +43,20 @@ export default function ResponsiveNavbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="isolate w-full sticky top-0 z-50 bg-background  text-primary">
-      <div className="max-w-[1350px] mx-auto px-6 md:px-8 lg:px-12 py-2.5 flex justify-between items-center">
+    <nav className="w-full sticky top-0 bg-background z-50  text-primary">
+      <div className="max-w-7xl mx-auto py-2.5 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 text-2xl">
-          <div className="flex items-center justify-center">
-            <Image
-              src="/svg/bigZee-logo.svg"
-              height={50}
-              width={50}
-              alt="svg"
-            />
+          <div className="flex items-center">
+            <Image src="/img/logo.png" height={50} width={180} alt="svg" />
           </div>
-          <h6
+          {/* <h6
             className={` ${expletus.className} tracking-wider font-extrabold text-gray-900`}
           >
             bigZee
-          </h6>
+          </h6> */}
         </Link>
         <div className="hidden lg:flex items-center gap-8">
-          <div className="flex justify-around lg:gap-x-14 pr-8 border-r-2 border-secondary">
+          <div className="flex justify-around lg:gap-x-14">
             {/* {navigation.map((item) => (
               <a
                 key={item.name}
@@ -73,15 +68,11 @@ export default function ResponsiveNavbar() {
             ))} */}
             <DropdownMenu />
           </div>
-          <Separator orientation="vertical" className="text-neutral-500" />
-          <div className="flex space-x-6">
-            <div className="text-secondary hover:text-gray-600 cursor-pointer">
-              <FaWhatsapp {...iconProps} size="1.56em" />
-            </div>
-            <Link href="#" className="text-secondary hover:text-gray-600">
-              <FaFacebook {...iconProps} />
-              <span className="sr-only">Facebook</span>
-            </Link>
+
+          <div className="flex items-center justify-center bg-primary font-sans text-md rounded-4xl px-4 py-2">
+            <button className="text-md font-sans font-medium text-center text-neutral-100">
+              Client Login
+            </button>
           </div>
         </div>
 

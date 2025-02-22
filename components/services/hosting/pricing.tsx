@@ -107,15 +107,15 @@ export default function HostingPlans() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto grid grid-cols-1 items-center gap-x-14 lg:grid-cols-2 mt-10 px-2">
+      <div className="max-w-3xl mx-auto grid grid-cols-1 items-center gap-x-10 lg:grid-cols-2 mt-10 px-2">
         {tiers.map((tier, index) => (
           <div
             key={tier.id}
             className={classNames(
               "bg-background shadow-2xl p-8 px-8 rounded-xl",
               tier.featured
-                ? "outline outline-2 outline-offset-1 outline-blue-700"
-                : "outline outline-1 outline-offset-1 outline-gray-400"
+                ? "outline outline-2 outline-offset-1 outline-primary"
+                : "outline outline-1 outline-offset-1 outline-gray-300"
             )}
           >
             <h3
@@ -126,7 +126,7 @@ export default function HostingPlans() {
             >
               {tier.name}
               {tier.featured === true ? (
-                <div className="flex items-center justify-center py-1.5 px-2 bg-blue-700 text-xs text-neutral-200 rounded-2xl">
+                <div className="flex items-center justify-center py-1.5 px-2 bg-primary text-xs text-neutral-200 rounded-2xl">
                   <span>Most Popular</span>
                 </div>
               ) : null}
@@ -159,7 +159,7 @@ export default function HostingPlans() {
                 >
                   <FaCheck
                     aria-hidden="true"
-                    className={classNames("text-indigo-600 h-4 w-3 flex-none")}
+                    className={classNames("text-blue-600 h-4 w-3 flex-none")}
                   />
                   {feature}
                 </li>
@@ -169,8 +169,10 @@ export default function HostingPlans() {
               href={tier.href}
               aria-describedby={tier.id}
               className={classNames(
-                "font-sans mt-8 block rounded-md px-3 py-2 text-neutral-200 text-center text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ",
-                tier.featured ? "bg-blue-700" : "bg-gray-800"
+                "font-sans mt-8 block rounded-md px-3 py-2 text-center text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ",
+                tier.featured
+                  ? "bg-primary text-white"
+                  : "bg-background text-gray-700 border border-1  border-gray-800"
               )}
             >
               Contact us

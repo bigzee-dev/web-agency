@@ -24,19 +24,19 @@ export default function CompanyInfo() {
           />
 
           <h6
-            className={` ${expletus.className} text-gray-900 text-2xl tracking-wider font-extrabold`}
+            className={` ${expletus.className} text-neutral-300 text-2xl tracking-wider font-extrabold`}
           >
             bigZee
           </h6>
         </Link>
       </div>
-      <span className="w-max font-sans text-sm text-gray-700  mt-1.5 font-medium text-primary">
+      <span className="w-max font-sans text-sm text-neutral-400  mt-1.5 font-medium ">
         Web Technology
         <br />
         Specialists
       </span>
       <div className="hidden md:flex space-x-8 mt-auto">
-        <div className="text-gray-500 hover:text-gray-500">
+        <div className="text-neutral-400 hover:text-neutral-400">
           <IoLogoWhatsapp {...iconProps} size="1.6em" />
           {/* <img
               src="/svg/whatsapp.svg"
@@ -45,7 +45,7 @@ export default function CompanyInfo() {
               height={30}
             /> */}
         </div>
-        <Link href="#" className="text-gray-500 hover:text-gray-500">
+        <Link href="#" className="text-neutral-400 hover:text-neutral-400">
           <FaFacebook {...iconProps} />
           {/* <img
               src="/svg/facebook.svg"
@@ -55,7 +55,7 @@ export default function CompanyInfo() {
             /> */}
           <span className="sr-only">Facebook</span>
         </Link>
-        <Link href="#" className="text-gray-500 hover:text-gray-500">
+        <Link href="#" className="text-neutral-400 hover:text-neutral-400">
           <FaXTwitter {...iconProps} />
           <span className="sr-only">Twitter</span>
         </Link>

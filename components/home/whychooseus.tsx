@@ -28,12 +28,12 @@ const cardData = [
     className: "bg-gradient-to-b from-secondary to-primary",
   },
   {
-    backgroundStyle: { backgroundColor: "#009de6" },
+    backgroundStyle: {},
     svg: "/svg/customer-support.svg",
     title: "Dedicated Support",
     content:
       "Our team is here to assist you every step of the way, ensuring everything runs smoothly. Count on us for dependable support whenever you need it.",
-    className: "bg-gray-800 bg-opacity-70",
+    className: "bg-slate-600",
   },
 ];
 
@@ -71,8 +71,8 @@ export default function Component() {
   }
 
   return (
-    <div className="x-padding w-full pt-24 pb-16  bg-gradient-to-b from-neutral-300/50 to-bg-background">
-      <div className="mx-auto max-w-5xl">
+    <div className="x-padding w-full pt-24 pb-20  bg-gradient-to-b from-background to-gray-200">
+      <div className="mx-auto max-w-6xl">
         {/* <div className="">
           <h2 className={homePageheadings}>Why Choose Us</h2>
         </div> */}
@@ -82,20 +82,22 @@ export default function Component() {
           variants={containerVariants}
           initial="hidden"
           animate={hasAnimated ? "visible" : "hidden"}
-          className=""
+          className="space-y-20"
         >
-          <div className="grid md:grid-cols-2 gap-x-6 gap-y-14">
-            <div className="text-center">
-              <h2 className={homePageheadings}>Why Choose Us</h2>
-              <p className="italic font-sans text-3xl font-normal text-gray-600 mt-10 mb-3">
-                We are Here to Help you
-              </p>
-              <p
+          <div className="text-center">
+            <h2 className={`${homePageheadings} text-gray-800`}>
+              Why Choose Us
+            </h2>
+            <p className="italic font-sans text-3xl font-normal text-gray-600 mt-10 mb-3">
+              We are Here to Help you{" "}
+              <span
                 className={` ${montserrat.className} text-3xl font-extrabold text-gray-700 tracking-wide underline`}
               >
                 Grow your Brand and Revenue
-              </p>
-            </div>
+              </span>
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-x-8 gap-y-14">
             {cardData.map((card, index) => (
               <motion.div key={index} variants={cardVariants}>
                 <Card className="h-full flex flex-col items-center gap-2">
@@ -116,7 +118,7 @@ export default function Component() {
                       {card.title}
                     </p> */}
                   </CardHeader>
-                  <CardContent className="md:max-w-[90%] space-y-2 pt-3 text-center ">
+                  <CardContent className=" space-y-2 pt-3 text-center ">
                     <p className="w-full text-base text-gray-800 font-semibold">
                       {card.title}
                     </p>

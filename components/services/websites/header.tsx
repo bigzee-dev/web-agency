@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <div className="w-full bg-gradient-to-b from-gray-900 to-primary py-20">
-      <div className="grid grid-cols-12 gap-20 max-w-7xl mx-auto">
+    <div className="w-full bg-gradient-to-b from-secondary to-primary py-16">
+      <div className="grid grid-cols-12 gap-20 max-w-6xl mx-auto">
         <div className="col-span-8  space-y-3">
           <p className="text-md font-medium text-neutral-400">
             Websites that are built with love

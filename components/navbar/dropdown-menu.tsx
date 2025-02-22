@@ -67,44 +67,22 @@ export function DropdownMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col items-center justify-center rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <img
-                      src="svg/bigZee-logo.svg"
-                      alt="svg"
-                      width={100}
-                      height={100}
-                    />
-                    {/* // <IoChevronDown className="h-6 w-6" /> */}
-                    <div
-                      className={` ${expletus.className} tracking-wider font-extrabold text-gray-900 text text-2xl`}
-                    >
-                      bigZee
-                    </div>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
+          <Link href="/contact-us" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Websites
+            </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+          <Link href="/contact-us" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Ecommerce
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Hosting</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-8 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
@@ -123,9 +101,38 @@ export function DropdownMenu() {
         <NavigationMenuItem>
           <Link href="/contact-us" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Contact Us
+              Emails
             </NavigationMenuLink>
           </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link
+            href="https://domains.bigzee.app/cart.php?a=add&domain=register"
+            legacyBehavior
+            passHref
+          >
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Domains
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Help Center</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-8 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {components.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  icon={component.icon}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
@@ -145,17 +152,17 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
           <Link
             ref={ref}
             className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              "block select-none space-y-0.5 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
               className
             )}
             href={props.href || "#"}
             {...props}
           >
             <div className="flex items-center  text-gray-800 text-md font-medium leading-none">
-              {icon && <span className="mr-2">{icon}</span>}
+              {/* {icon && <span className="mr-2">{icon}</span>} */}
               {title}
             </div>
-            <p className="font-sans text-gray-700 text-md leading-relaxed">
+            <p className="font-sans text-gray-700 text-sm leading-relaxed">
               {children}
             </p>
           </Link>

@@ -46,7 +46,7 @@ export default function Testimonials() {
   return (
     <section className="py-24 px-4 relative overflow-hidden">
       {/* Decorative corner images */}
-      <div className="absolute left-4 top-24">
+      {/* <div className="absolute left-4 top-24">
         <div className="relative">
           <Image
             src="/img/tech-lady.png"
@@ -95,16 +95,16 @@ export default function Testimonials() {
             />
           </svg>
         </div>
-      </div>
+      </div> */}
 
       {/* Main content */}
       <div className="x-padding max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <Badge className="bg-primary/20 text-sm text-blue-700 hover:bg-primary/20 mb-4">
+          <Badge className="bg-primary/20 text-sm text-blue-600 hover:bg-primary/20 mb-4">
             Customer Testimonials
           </Badge>
           <h2
-            className={` ${montserrat.className} text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-normal`}
+            className={` ${montserrat.className} text-gray-900 text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-normal`}
           >
             Your Competitors are automating,
             <br />
@@ -118,11 +118,11 @@ export default function Testimonials() {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-gray-200/65 rounded-xl">
-              <CardContent className="p-6">
-                <p className="font-sans text-gray-700 text-lg mb-6  leading-6">
+              <CardContent className="h-full flex flex-col justify-between p-6">
+                <p className="font-sans text-gray-700 text-base mb-6  leading-6">
                   {testimonial.quote}
                 </p>
-                <div className="flex items-center gap-4 mb-4">
+                <div className="justify-self-center flex items-center gap-4 mb-4">
                   <Image
                     src={testimonial.image || "/placeholder.svg"}
                     alt={testimonial.name}

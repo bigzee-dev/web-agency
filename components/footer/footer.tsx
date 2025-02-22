@@ -2,13 +2,13 @@ import Link from "next/link";
 import { footerLinks } from "./links";
 import CompanyInfo from "./companyInfo";
 
-const linkHeading = "text-md text-gray-900 font-semibold tracking-wider";
-const singleLink = "font-sans text-sm text-gray-600";
+const linkHeading = "text-md text-neutral-300 font-semibold tracking-wider";
+const singleLink = "font-sans text-sm text-neutral-300/75";
 
 export default function Footer() {
   return (
-    <footer className="x-padding">
-      <div className="max-w-4xl mx-auto py-20 grid md:grid-cols-12 gap-x-8 gap-y-8">
+    <footer className=" bg-gray-800">
+      <div className="x-padding max-w-5xl mx-auto py-20 grid md:grid-cols-12 gap-x-8 gap-y-8">
         <div className="md:col-span-5">
           <CompanyInfo />
         </div>
@@ -42,7 +42,7 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className="text-sm text-gray-600 font-medium text-center pt-5 pb-16 border-t border-gray-400">
+      <div className="x-padding bg-red text-sm text-neutral-400 font-medium text-center pt-5 pb-16 border-t border-gray-600">
         <p>&copy; Zimaman Enterprises. 2024</p>
       </div>
     </footer>

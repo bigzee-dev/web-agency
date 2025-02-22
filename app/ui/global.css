@@ -126,3 +126,10 @@ body {
     rgb(8, 36, 120, 1) 70%
   );
 }
+
+.gradient-text {
+  background: linear-gradient(to right, #4754a2, #9089fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

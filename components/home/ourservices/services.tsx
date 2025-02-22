@@ -6,7 +6,7 @@ import { TbTrendingUp } from "react-icons/tb";
 
 const iconProps = {
   size: "2em",
-  strokeWidth: 1.4,
+  strokeWidth: 1.6,
 };
 
 const listStyles = "list-disc pl-4 space-y-1.5 w-[90%]";
@@ -26,7 +26,7 @@ export const services = [
   {
     title: "Hosting",
     icon: <HiOutlineServerStack {...iconProps} />,
-    color: "#009de6",
+    color: "text-pink-700",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
@@ -36,7 +36,7 @@ export const services = [
   {
     title: "Emails",
     icon: <TbMailCheck {...iconProps} />,
-    color: "text-yellow-600",
+    color: "#009de6",
     backgroundColor: "bg-yellow-300",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -47,7 +47,7 @@ export const services = [
   {
     title: "Online Growth",
     icon: <TbTrendingUp {...iconProps} />,
-    color: "#783bff",
+    color: "text-yellow-600",
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     ),
@@ -57,7 +57,7 @@ export const services = [
   {
     title: "Register Domain",
     icon: <TbAt {...iconProps} />,
-    color: "#009de6",
+    color: "text-green-600",
 
     description: (
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

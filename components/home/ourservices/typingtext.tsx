@@ -27,16 +27,16 @@ const TypingText = () => {
           // Change color based on index
           switch (textIndex) {
             case 0:
-              textColor = "text-purple-500"; // Red for bigzee.app
+              textColor = "text-purple-400"; // Red for bigzee.app
               break;
             case 1:
-              textColor = "text-blue-500"; // Blue for example.com
+              textColor = "text-blue-400"; // Blue for example.com
               break;
             case 2:
-              textColor = "text-green-500"; // Green for mydomain.io
+              textColor = "text-green-400"; // Green for mydomain.io
               break;
             default:
-              textColor = "text-green-500"; // Default color
+              textColor = "text-green-400"; // Default color
               break;
           }
 
@@ -45,9 +45,10 @@ const TypingText = () => {
         }}
         speed={200}
         eraseSpeed={130}
-        eraseDelay={2200}
-        typingDelay={1000}
+        eraseDelay={2500}
+        typingDelay={1500}
         cursor="|"
+        cursorClassName="text-neutral-300"
         className={` ${montserrat.className} text-3xl font-bold tracking-wide`}
       />
     </div>

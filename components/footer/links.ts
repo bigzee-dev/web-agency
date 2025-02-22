@@ -48,4 +48,19 @@ export const footerLinks = [
       href: "/",
     },
   },
+  {
+    heading: "Support",
+    firstLink: {
+      title: "Contact us",
+      href: "/",
+    },
+    secondLink: {
+      title: "Support Ticket",
+      href: "/",
+    },
+    thirdLink: {
+      title: "Privacy Policy",
+      href: "/",
+    },
+  },
 ];
