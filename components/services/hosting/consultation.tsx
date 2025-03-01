@@ -1,20 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { btnDimensions } from "@/app/ui/customTailwindClasses";
+import { montserrat } from "@/app/ui/fonts";
 
 export default function Consultation() {
   return (
     <div className="x-padding w-full">
-      <section className="max-w-6xl mx-auto py-16">
-        <h1 className="flex items-center text-6xl font-bold text-gray-800 leading-tight">
+      <section className="max-w-7xl mx-auto py-16">
+        <h1
+          className={` ${montserrat.className} flex items-center text-6xl font-bold text-gray-800 leading-tight `}
+        >
           Request a <br /> Consultation
           <span className="contact__shape">
             <img src="/svg/contact-animated-arrow.svg" alt="" />
           </span>
         </h1>
 
-        <div className="w-full flex justify-between bg-gradient-to-r from-transparent via-primary/30 to-secondary py-4 px-6 border border-gray-300 rounded-2xl">
-          <div className="flex flex-col gap-y-8">
+        <div className="w-full grid grid-cols-12 rounded-2xl">
+          <div className="col-span-7 flex flex-col gap-y-8 pt-2 border-t-2 border-primary">
             <h3
               data-sal="slide-down"
               data-sal-delay={100}
@@ -57,7 +60,7 @@ export default function Consultation() {
             </div>
           </div>
           <div
-            className="w-[400px] "
+            className="col-span-4 bg-gradient-to-r from-primary/40 via-primary/80 to-secondary border-t-2 border-primary"
             data-sal="slide-left"
             data-sal-delay={400}
             data-sal-duration={800}

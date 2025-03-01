@@ -1,6 +1,6 @@
 export default function specials() {
   return (
-    <div className="x-padding w-full flex justify-center items-center gap-x-6 bg-gradient-to-r from-secondary to-primary py-1 z-10">
+    <div className="x-padding w-full flex justify-center items-center gap-x-6 bg-primary py-1.5">
       <div className="font-sans text-sm text-neutral-200 font-medium">
         Business Email
       </div>
@@ -11,9 +11,12 @@ export default function specials() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center text-md text-neutral-200 bg-primary border border-neutral-400/60 py-1.5 px-2 rounded-lg">
+      <a
+        href="https://domains.bigzee.app/index.php?rp=/store/business-email/basic-email"
+        className="flex items-center justify-center text-md text-neutral-100 bg-thatgreen/20 border border-neutral-400/60 py-1.5 px-2 rounded-md z-6000"
+      >
         Buy Now
-      </div>
+      </a>
     </div>
   );
 }

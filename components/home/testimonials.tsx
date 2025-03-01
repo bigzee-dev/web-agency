@@ -126,8 +126,8 @@ export default function Testimonials() {
                   <Image
                     src={testimonial.image || "/placeholder.svg"}
                     alt={testimonial.name}
-                    width={58}
-                    height={58}
+                    width={60}
+                    height={60}
                     className="rounded-full"
                   />
                   <div>
@@ -138,7 +138,7 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div className="pt-4 border-t border-gray-300">
-                  <div className="text-3xl font-bold mb-1">
+                  <div className="text-3xl text-primary font-bold mb-1">
                     {testimonial.metric}
                   </div>
                   <p className="font-sans text-md text-gray-700 font-medium">

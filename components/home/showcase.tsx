@@ -2,6 +2,7 @@ import Image from "next/image";
 import { montserrat } from "@/app/ui/fonts";
 import { btnDimensions } from "@/app/ui/customTailwindClasses";
 import { IoStarSharp } from "react-icons/io5";
+import { IoShieldCheckmarkSharp } from "react-icons/io5";
 
 const list = "font-sans text-gray-600 font-medium";
 
@@ -11,7 +12,7 @@ export default function Showcase() {
       {/* blur component */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 -z-20 transform-gpu  blur-3xl sm:top-[-20rem]  overflow-hidden md:overflow-visible"
+        className="absolute inset-x-0 -z-20 transform-gpu  blur-3xl top-10  overflow-hidden md:overflow-visible"
       >
         <div
           style={{
@@ -23,7 +24,7 @@ export default function Showcase() {
       </div>
       {/* main content */}
 
-      <main className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-x-1 w-full h-full ">
+      <main className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-x-1 w-full h-full ">
         {/* heading and cta */}
         <section className="w-[100%] lg:w-[50%] flex flex-col gap-y-6 lg:pr-4">
           <p
@@ -47,7 +48,7 @@ export default function Showcase() {
               email services.
             </p>
 
-            <div className="w-full flex justify-start mt-8 ">
+            <div className="w-full flex justify-start mt-7 ">
               <div className="flex flex-col md:flex-row items-center justify-center gap-x-16 gap-y-4">
                 <a
                   href="#our-services"
@@ -63,9 +64,9 @@ export default function Showcase() {
                 </a>
               </div>
             </div>
-            <div className="flex items-center text-sm text-gray-800 font-medium mt-4">
+            <div className="flex items-center text-sm text-gray-800 font-medium mt-3">
               <span className="mr-2">
-                <IoStarSharp size="1.1em" />
+                <IoShieldCheckmarkSharp size="1.4em" />
               </span>
               7 day - money back - guarantee
             </div>
@@ -73,13 +74,13 @@ export default function Showcase() {
         </section>
 
         {/* image */}
-        <section className="w-[100%] sm:max-w-[500px] lg:w-[50%] h-full flex justify-end items-center">
+        <section className="w-[100%] sm:max-w-[500px] lg:w-[50%] h-full flex justify-end items-center -m-6">
           <Image
-            src="/img/home/showcase.png"
+            src="/img/home/showcase-wide.png"
             alt="image"
-            width={675}
-            height={844}
-            className="self-end w-[400px] "
+            width={1650}
+            height={1650}
+            className="self-end w-[550px] "
             // style={{ transformOrigin: "bottom right" }}
           />
         </section>

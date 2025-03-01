@@ -6,6 +6,7 @@ import OnlineSuccess from "@/components/home/online-success";
 // import EverythingYouNeed from "@/components/home/everything-need";
 import Benefits from "@/components/home/benefits";
 import WhyChooseUs from "@/components/home/whychooseus";
+import Visibility from "@/components/home/visibility";
 import Testimonials from "@/components/home/testimonials";
 import Personal from "@/components/home/personal";
 import ContactUs from "@/components/home/contactus";
@@ -20,11 +21,14 @@ export default function Home() {
       {/* <OurServicesSml />
       <OurServicesLrg /> */}
       <OnlineSuccess />
+
       {/* <EverythingYouNeed /> */}
       <WhyChooseUs />
       <Benefits />
-      <Testimonials />
+      <Visibility />
+
       <Personal />
+      <Testimonials />
       {/* <PricingNew /> */}
       <ContactUs />
     </>

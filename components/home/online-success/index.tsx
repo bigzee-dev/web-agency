@@ -10,6 +10,9 @@ import { Badge } from "@/components/ui/badge";
 import { Lock } from "lucide-react";
 import { montserrat } from "@/app/ui/fonts";
 
+// components
+import Websites from "./websites";
+
 export default function OnlineSuccess() {
   return (
     <div className="x-padding relative overflow-hidden isolate mx-auto max-w-6xl px-4 py-16">
@@ -41,19 +44,19 @@ export default function OnlineSuccess() {
         </p>
       </div>
 
-      <Tabs defaultValue="recommended" className="w-full">
+      <Tabs defaultValue="websites" className="w-full">
         <TabsList className="w-full max-w-2xl mx-auto grid grid-cols-2 md:grid-cols-4 mb-8">
           <TabsTrigger
-            value="recommended"
-            className="data-[state=active]:bg-[#c8d1ef] data-[state=active]:text-primary"
+            value="websites"
+            className="data-[state=active]:bg-gray-200 data-[state=active]:text-primary"
           >
-            Recommended
+            Websites
           </TabsTrigger>
           <TabsTrigger
             value="website"
             className="data-[state=active]:bg-[#E6E8FF] data-[state=active]:text-[#2D1576]"
           >
-            Create a website
+            Ecommerce
           </TabsTrigger>
           <TabsTrigger
             value="hosting"
@@ -65,35 +68,12 @@ export default function OnlineSuccess() {
             value="domains"
             className="data-[state=active]:bg-[#E6E8FF] data-[state=active]:text-[#2D1576]"
           >
-            Domains & email
+            Email & Domains
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="recommended">
-          <div className="relative isolate overflow-hidden bg-gray-800 text-white rounded-3xl p-8 md:p-12">
-            <div
-              aria-hidden="true"
-              className="absolute left-1/4 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
-            >
-              <div
-                style={{
-                  clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                }}
-                className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-20"
-              />
-            </div>
-            <h2 className="text-4xl font-bold mb-6">Recommended for you</h2>
-            <p className="text-lg opacity-90">
-              Discover our most popular products and services tailored to your
-              needs.
-            </p>
-            <h2 className="text-4xl font-bold mb-6">Recommended for you</h2>
-            <p className="text-lg opacity-90">
-              Discover our most popular products and services tailored to your
-              needs.
-            </p>
-          </div>
+        <TabsContent value="websites">
+          <Websites />
         </TabsContent>
 
         <TabsContent value="website">

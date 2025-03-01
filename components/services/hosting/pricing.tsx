@@ -15,11 +15,13 @@ const tiers = [
     priceYearly: "P99.99",
     description: "Perfect for small projects and personal websites.",
     features: [
+      "1 Website",
       "1 GB Storage",
       "10 GB Bandwidth",
       "Free SSL Certificate",
-      "Daily Backups",
+      "3 Email Accounts",
       "24/7/365 Support",
+      "Cpanel Included",
     ],
     href: "#",
     featured: false,
@@ -31,14 +33,34 @@ const tiers = [
     priceYearly: "P199.99",
     description: "Ideal for growing businesses and professional websites.",
     features: [
+      "2 Websites",
       "5 GB Storage",
       "Unlimited Bandwidth",
       "Free SSL Certificate",
-      "Daily Backups",
+      "5 Email Accounts",
+      "Cpanel Included",
       "24/7/365 Support",
     ],
     href: "#",
     featured: true,
+  },
+  {
+    id: "basic",
+    name: "Basic Plan",
+    priceMonthly: "P9.99",
+    priceYearly: "P99.99",
+    description: "Perfect for small projects and personal websites.",
+    features: [
+      "1 Website",
+      "1 GB Storage",
+      "10 GB Bandwidth",
+      "Free SSL Certificate",
+      "3 Email Accounts",
+      "24/7/365 Support",
+      "Cpanel Included",
+    ],
+    href: "#",
+    featured: false,
   },
 ];
 
@@ -74,7 +96,7 @@ export default function HostingPlans() {
         </p>
       </div>
 
-      <div className="mt-12 flex justify-center items-center gap-3">
+      <div className="mt-16 flex justify-center items-center gap-3">
         <div className="relative flex items-center justify-center space-x-4">
           <Label
             htmlFor="billing-toggle"
@@ -94,7 +116,7 @@ export default function HostingPlans() {
             Yearly
           </Label>
           <div className="absolute -top-0.5 -right-5 transform translate-x-full">
-            <p className="text-primary text-base font-semibold">Save 20%</p>
+            <p className="text-pink-700 text-base font-semibold">Save 20%</p>
           </div>
           <span className="absolute -top-6 right-5 transform translate-x-full">
             <img
@@ -107,7 +129,7 @@ export default function HostingPlans() {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto grid grid-cols-1 items-center gap-x-10 lg:grid-cols-2 mt-10 px-2">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 items-center gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3 mt-12 px-2">
         {tiers.map((tier, index) => (
           <div
             key={tier.id}
@@ -115,7 +137,7 @@ export default function HostingPlans() {
               "bg-background shadow-2xl p-8 px-8 rounded-xl",
               tier.featured
                 ? "outline outline-2 outline-offset-1 outline-primary"
-                : "outline outline-1 outline-offset-1 outline-gray-300"
+                : "outline outline-1 outline-offset-1 outline-gray-400"
             )}
           >
             <h3
@@ -172,7 +194,7 @@ export default function HostingPlans() {
                 "font-sans mt-8 block rounded-md px-3 py-2 text-center text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ",
                 tier.featured
                   ? "bg-primary text-white"
-                  : "bg-background text-gray-700 border border-1  border-gray-800"
+                  : "bg-background text-gray-700 border border-1  border-gray-400"
               )}
             >
               Contact us

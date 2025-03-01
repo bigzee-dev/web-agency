@@ -5,10 +5,10 @@ import { montserrat } from "@/app/ui/fonts";
 
 const TypingText = () => {
   const domains = [
-    "mybusiness.co.bw",
-    "example.com",
-    "ourpeople.org.bw",
-    "mydomain.io",
+    " mybusiness.co.bw",
+    " example.com",
+    " ourpeople.org.bw",
+    " mydomain.io",
   ];
 
   return (
@@ -49,7 +49,7 @@ const TypingText = () => {
         typingDelay={1500}
         cursor="|"
         cursorClassName="text-neutral-300"
-        className={` ${montserrat.className} text-3xl font-bold tracking-wide`}
+        className={` ${montserrat.className} text font-bold tracking-wide pl-1`}
       />
     </div>
   );
