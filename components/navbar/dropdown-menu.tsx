@@ -67,14 +67,14 @@ export function DropdownMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/contact-us" legacyBehavior passHref>
+          <Link href="/websites" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Websites
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/contact-us" legacyBehavior passHref>
+          <Link href="/ecommerce" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Ecommerce
             </NavigationMenuLink>
@@ -99,18 +99,14 @@ export function DropdownMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/contact-us" legacyBehavior passHref>
+          <Link href="/emails" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Emails
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link
-            href="https://domains.bigzee.app/cart.php?a=add&domain=register"
-            legacyBehavior
-            passHref
-          >
+          <Link href="/domains" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Domains
             </NavigationMenuLink>

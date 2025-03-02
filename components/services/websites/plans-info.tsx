@@ -1,7 +1,10 @@
 import { montserrat } from "@/app/ui/fonts";
 import { Button } from "@/components/ui/button";
 import { FaCheck } from "react-icons/fa6";
-import { btnDimensions } from "@/app/ui/customTailwindClasses";
+import {
+  btnDimensions,
+  homePageheadings,
+} from "@/app/ui/customTailwindClasses";
 import { FaCircleQuestion } from "react-icons/fa6";
 import { CgNotes } from "react-icons/cg";
 import { Clock8 } from "lucide-react";
@@ -43,11 +46,11 @@ export default function PlansInfo() {
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
-          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[rgb(37,192,235)] to-[#89b9fc] opacity-10"
+          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[rgb(37,192,235)] to-[#89b9fc] opacity-15"
         />
       </div>
       <section>
-        <h4 className="text-neutral-300 text-5xl font-extrabold  bg-gradient-to-r from-primary via-cyan-500 to-blue-700 text-transparent bg-clip-text mb-10 leading-normal">
+        <h4 className={`text-gray-900 ${homePageheadings} mb-6`}>
           Pricing Plans
         </h4>
       </section>
@@ -58,7 +61,7 @@ export default function PlansInfo() {
         <div className="absolute top-0 left-0 w-10 h-px bg-black" />
       </div>
 
-      <article className="max-w-5xl py-16 px-0">
+      <article className="max-w-5xl py-12 px-0">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start">
           {/* Left Column - Logo and Details */}
           <div className="col-span-5 space-y-4 mb-8 lg:mb-0">
@@ -160,7 +163,7 @@ export default function PlansInfo() {
         <div className="absolute top-0 left-0 w-10 h-px bg-black" />
       </div>
 
-      <article className="max-w-5xl py-16 px-0">
+      <article className="max-w-5xl py-12 px-0">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start">
           {/* Left Column - Logo and Details */}
           <div className="col-span-5 space-y-4 mb-8 lg:mb-0">
@@ -262,7 +265,7 @@ export default function PlansInfo() {
         <div className="absolute top-0 left-0 w-10 h-px bg-black" />
       </div>
 
-      <article className="max-w-5xl py-16 px-0">
+      <article className="max-w-5xl py-12 px-0">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start">
           {/* Left Column - Logo and Details */}
           <div className="col-span-5 space-y-4 mb-8 lg:mb-0">

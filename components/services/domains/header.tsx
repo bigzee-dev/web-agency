@@ -42,14 +42,14 @@ export default function Header() {
     window.location.href = searchUrl;
   };
   return (
-    <div className="w-full bg-gradient-to-b from-secondary to-primary py-20">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-12 gap-20 max-w-6xl">
-          <div className="col-span-7  space-y-3">
-            <div className="">
+    <div className="w-full bg-secondary py-16">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-12 gap-10 max-full">
+          <div className="col-span-6">
+            <div className="pr-12">
               <div>
                 <h1
-                  className={` ${montserrat.className} text-5xl text-neutral-300 font-bold `}
+                  className={` ${montserrat.className} text-6xl text-neutral-100 font-bold `}
                 >
                   Domains
                 </h1>
@@ -59,16 +59,16 @@ export default function Header() {
               </div>
 
               <form onSubmit={handleCheck} className="flex gap-2 mt-8">
-                <div className="flex-1 flex gap-2 h-11">
+                <div className="flex-1 flex gap-2 h-10">
                   <Input
                     type="text"
                     placeholder="Enter your domain name"
                     value={domain}
                     onChange={(e) => setDomain(e.target.value)}
-                    className="flex-1 text-gray-700 text-lg h-full bg-white/90 border-neutral-400 placeholder:text-gray-400 "
+                    className="flex-1 text-neutral-300 text-lg h-full bg-black/10 border-white/25 placeholder:text-neutral-500 "
                   />
                   <Select value={selectedTLD} onValueChange={setSelectedTLD}>
-                    <SelectTrigger className="w-[120px] h-full text-gray-700 bg-white/90 border-neutral-400 outline-none focus:ring-0">
+                    <SelectTrigger className="w-[120px] h-full text-neutral-500 bg-black/10 border-white/25 outline-none focus:ring-0">
                       <SelectValue defaultValue="com" />
                     </SelectTrigger>
                     <SelectContent>
@@ -87,29 +87,29 @@ export default function Header() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="flex justify-center items-center text-base px-8 h-11 bg-gray-900/20  border border-thatgreen text-thatgreen font-medium "
+                  className="font-sans flex justify-center items-center  px-8 h-10 bg-neutral-100  text-secondary text-base font-medium "
                 >
                   Check
                   <Search className="ml-1 h-4 w-4" />
                 </Button>
               </form>
 
-              <p className="text-sm text-neutral-400 mt-6 tracking-wider">
+              <p className="font-sans text-sm text-neutral-400 mt-6">
                 Already bought a domain?{" "}
                 <a href="#" className="text-neutral-300 underline">
                   Transfer it to BigZee
                 </a>
               </p>
 
-              <div className="space-y-4 mt-20">
+              <div className="space-y-4 mt-8 pt-6 border-t border-white/25">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   {availableTLDs.map((tld) => (
                     <div key={tld.extension} className=" ">
-                      <div className="text-neutral-300 text-lg font-medium">
+                      <div className="text-neutral-300 font-medium">
                         .{tld.extension}
                       </div>
-                      <div className="text-neutral-400 text-base">
-                        ${tld.price}/year
+                      <div className="font-sans text-neutral-400 text-md">
+                        P{tld.price}/year
                       </div>
                     </div>
                   ))}
@@ -117,13 +117,13 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <div className="col-span-5">
+          <div className="col-span-4 col-start-8">
             {" "}
             <Image
-              src="/img/email2.png"
+              src="/img/hosting/hero.png"
               alt="Logo"
-              width={500}
-              height={500}
+              width={1000}
+              height={1000}
               className=""
             />
           </div>

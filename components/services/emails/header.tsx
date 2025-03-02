@@ -1,23 +1,28 @@
+import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
+import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 export default function Header() {
   return (
-    <div className="w-full bg-gradient-to-b from-secondary to-primary py-20">
+    <div className="w-full bg-secondary py-16">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-12 gap-20 max-w-6xl">
-          <div className="col-span-8  space-y-3">
-            <p className="text-md font-medium text-neutral-400">
-              Websites that are built with love
-            </p>
-            <h2 className="text-4xl font-extrabold text-neutral-300">Emails</h2>
+          <div className="flex flex-col h-full col-span-8  gap-y-3">
+            <h2
+              className={` ${montserrat.className} text-6xl font-bold text-neutral-100 `}
+            >
+              Professional Email that builds your brand
+            </h2>
             <p className="font-sans text-neutral-300 text-base font-normal max-w-4xl">
               Use these Tailwind CSS settings screen examples to build
               configuration and preference pages where users can update their
-              account information, change settings, and customize their
-              experience. These page examples are designed and built by the
-              Tailwind CSS team, and include a variety of different styles and
-              layouts.
+              account information.
             </p>
+            <button
+              className={` ${btnDimensions} bg-background text-secondary mt-auto `}
+            >
+              Get Started
+            </button>
           </div>
           <div className="col-span-4">
             {" "}

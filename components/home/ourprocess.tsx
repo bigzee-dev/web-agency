@@ -9,28 +9,27 @@ export default function OurProcess() {
     <div className="">
       <div className="x-padding w-full h-full py-12 md:py-20 px-4 ">
         <div className="md:max-w-6xl mx-auto">
-          <div className="max-w-3xl mx-auto flex items-center justify-center">
-            <div className="">
-              <h2 className={` text-center ${homePageheadings} mb-5`}>
+          <div className="max-full mx-auto flex items-center justify-center">
+            <div className="flex-1">
+              <h2 className={`text-gray-900 ${homePageheadings} mb-3`}>
                 Our Process
               </h2>
-              <p className="text-base text-center text-gray-700">
-                We are here to help you and your business integrate into the
-                digital landscape. Let us transform your vision into an engaging
-                online experience.
-              </p>
-              <div className="flex justify-center items-center px-8 md:px-0 overflow-clip">
-                <Image
-                  src="/img/process-numbers.png"
-                  alt="img"
-                  width={500}
-                  height={300}
-                  className="object-contain"
-                />
-              </div>
+              <h5 className="font-sans text-3xl text-secondary font-medium">
+                Crafting Scalable & High-Performance Websites
+              </h5>
+            </div>
+
+            <div className="flex-1 flex justify-center items-center px-8 md:px-0 overflow-clip">
+              <Image
+                src="/img/process-numbers.png"
+                alt="img"
+                width={500}
+                height={300}
+                className="object-contain"
+              />
             </div>
           </div>
-          <div className="font-sans grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-16 px-4">
+          <div className="font-sans grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-16 ">
             <div>
               <div className="font-light text-lg text-gray-500">/ 01</div>
               <div className="mt-2">

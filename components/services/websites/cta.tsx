@@ -4,7 +4,7 @@ import { btnDimensions } from "@/app/ui/customTailwindClasses";
 export default function CTA() {
   return (
     <div className="">
-      <div className="mx-auto max-w-7xl py-24">
+      <div className="mx-auto max-w-7xl py-16">
         <div className="relative isolate overflow-hidden bg-slate-800 pt-16 shadow-2xl md:rounded-3xl  md:pt-24 grid grid-cols-12 lg:gap-x-24  lg:pt-0">
           <div
             aria-hidden="true"

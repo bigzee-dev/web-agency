@@ -6,9 +6,9 @@ import { montserrat } from "@/app/ui/fonts";
 export default function Consultation() {
   return (
     <div className="x-padding w-full">
-      <section className="max-w-7xl mx-auto py-16">
+      <section className="max-w-7xl mx-auto pt-12 pb-16">
         <h1
-          className={` ${montserrat.className} flex items-center text-6xl font-bold text-gray-800 leading-tight `}
+          className={` ${montserrat.className} flex items-center text-5xl font-bold text-gray-900 leading-tight `}
         >
           Request a <br /> Consultation
           <span className="contact__shape">
