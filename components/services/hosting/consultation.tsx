@@ -17,7 +17,7 @@ export default function Consultation() {
         </h1>
 
         <div className="w-full grid grid-cols-12 rounded-2xl">
-          <div className="col-span-7 flex flex-col gap-y-8 pt-2 border-t-2 border-primary">
+          <div className="col-span-7  flex flex-col gap-y-8 pt-2 border-t-2 border-primary">
             <h3
               data-sal="slide-down"
               data-sal-delay={100}
@@ -60,7 +60,7 @@ export default function Consultation() {
             </div>
           </div>
           <div
-            className="col-span-4 bg-gradient-to-r from-primary/40 via-primary/80 to-secondary border-t-2 border-primary"
+            className="col-span-4  bg-gradient-to-r from-primary/40 via-primary/80 to-secondary border-t-2 border-primary"
             data-sal="slide-left"
             data-sal-delay={400}
             data-sal-duration={800}

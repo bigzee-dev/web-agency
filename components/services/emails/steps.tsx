@@ -3,7 +3,7 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function Steps() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">
+    <div className="max-w-7xl mx-auto px-4 py-8  md:pb-16 pt-8">
       <h2
         className={` ${montserrat.className} text-gray-800 text-3xl md:text-4xl font-bold text-center mb-16 `}
       >

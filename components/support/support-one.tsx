@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SupportOne() {
   return (
-    <div className="relative max-w-7xl mx-auto bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl overflow-hidden p-6">
+    <div className="relative max-w-7xl mx-auto bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl overflow-hidden p-6 my-16">
       {/* background pattern */}
       <img
         src="/img/bg-pattern.png"

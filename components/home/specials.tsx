@@ -13,7 +13,7 @@ export default function specials() {
 
       <a
         href="https://domains.bigzee.app/index.php?rp=/store/business-email/basic-email"
-        className="flex items-center justify-center text-md text-secondary bg-neutral-100 py-1.5 px-2 rounded-md z-6000"
+        className="flex items-center justify-center font-sans text-md text-secondary font-medium bg-[#d9d9d9] py-1 px-2 rounded-md uppercase"
       >
         Buy Now
       </a>

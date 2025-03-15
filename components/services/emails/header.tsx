@@ -5,9 +5,9 @@ import { btnDimensions } from "@/app/ui/customTailwindClasses";
 export default function Header() {
   return (
     <div className="w-full bg-secondary py-16">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-12 gap-20 max-w-6xl">
-          <div className="flex flex-col h-full col-span-8  gap-y-3">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-12 gap-12">
+          <div className="flex flex-col col-span-6 gap-y-3">
             <h2
               className={` ${montserrat.className} text-6xl font-bold text-neutral-100 `}
             >
@@ -24,13 +24,13 @@ export default function Header() {
               Get Started
             </button>
           </div>
-          <div className="col-span-4">
+          <div className="col-span-5 col-start-8">
             {" "}
             <Image
-              src="/img/email2.png"
+              src="/img/emails/email2.png"
               alt="Logo"
               width={500}
-              height={500}
+              height={400}
               className=""
             />
           </div>

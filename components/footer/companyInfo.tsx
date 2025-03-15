@@ -13,29 +13,25 @@ const iconProps = {
 export default function CompanyInfo() {
   return (
     <div className="flex flex-col h-full">
-      <div className="-mt-4">
-        <Link href="/" className="flex items-center gap-3 text-xl">
+      <div>
+        <Link href="/" className="flex items-center gap-3 text-xl h-[45px] ">
           <Image
-            src="/svg/bigZee-logo.svg"
-            height={50}
-            width={50}
+            src="/img/logo/bigzee-full-logo-dark.png"
+            height={75}
+            width={350}
             alt="svg"
-            className="grayscale"
+            className="object-cover  h-full w-auto"
           />
-
-          <h6
-            className={` ${expletus.className} text-neutral-300 text-2xl tracking-wider font-extrabold`}
-          >
-            bigZee
-          </h6>
         </Link>
       </div>
-      <span className="w-max font-sans text-sm text-neutral-400  mt-1.5 font-medium ">
-        Web Technology
+      <span className="w-max font-sans text-sm text-neutral-400  mt-4  pl-5">
+        Plot 698, Old Mall
         <br />
-        Specialists
+        Maun
+        <br />
+        Botswana
       </span>
-      <div className="hidden md:flex space-x-8 mt-auto">
+      <div className="hidden md:flex space-x-8 mt-4 pl-5">
         <div className="text-neutral-400 hover:text-neutral-400">
           <IoLogoWhatsapp {...iconProps} size="1.6em" />
           {/* <img

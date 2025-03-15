@@ -3,7 +3,7 @@ import Development from "@/components/services/ecommerce/development";
 import Shopify from "@/components/services/ecommerce/shopify";
 import WooCommerce from "@/components/services/ecommerce/woocommerce";
 import PaymentGateways from "@/components/services/ecommerce/paymentgateways";
-import Consultation from "@/components/services/hosting/consultation";
+import SupportOne from "@/components/support/support-one";
 import Faqs from "@/components/services/ecommerce/faqs";
 
 export default function Ecommerce() {
@@ -14,7 +14,7 @@ export default function Ecommerce() {
       <Shopify />
       <WooCommerce />
       <PaymentGateways />
-      <Consultation />
+      <SupportOne />
       <Faqs />
     </div>
   );

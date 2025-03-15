@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function PaymentGateways() {
   return (
-    <div className="w-full border-b border-gray-400">
+    <div className="w-full">
       <div className=" max-w-7xl mx-auto py-12 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16 items-center">
         {/* Left Column - Text Content */}
         <div className="col-span-6">

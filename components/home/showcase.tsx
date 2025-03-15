@@ -48,7 +48,7 @@ export default function Showcase() {
               email services.
             </p>
 
-            <div className="w-full flex justify-start mt-7 ">
+            <div className="w-full flex justify-start mt-5 ">
               <div className="flex flex-col md:flex-row items-center justify-center gap-x-16 gap-y-4">
                 <a
                   href="#our-services"
@@ -64,7 +64,7 @@ export default function Showcase() {
                 </a>
               </div>
             </div>
-            <div className="flex items-center text-sm text-gray-800 font-medium mt-3">
+            <div className="flex items-center text-sm text-secondary font-medium mt-3">
               <span className="mr-2">
                 <IoShieldCheckmarkSharp size="1.4em" />
               </span>

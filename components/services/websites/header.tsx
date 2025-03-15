@@ -23,7 +23,7 @@ export default function Websites() {
       <div className="absolute inset-0 max-w-7xl mx-auto py-16">
         {/* E-Commerce badge */}
         <div className="inline-block bg-neutral-100 px-6 py-2 rounded-md mb-6">
-          <span className="font-extrabold text-primary text-2xl tracking-wide">
+          <span className="font-bold text-primary text-2xl tracking-wide">
             Websites
           </span>
         </div>

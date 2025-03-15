@@ -43,11 +43,17 @@ export default function ResponsiveNavbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="w-full sticky top-0 bg-background z-50  text-primary">
+    <nav className="x-padding w-full sticky top-0 bg-background z-50  text-neutral-100">
       <div className="max-w-7xl mx-auto py-2.5 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 text-2xl">
-          <div className="flex items-center">
-            <Image src="/img/logo.png" height={50} width={180} alt="svg" />
+          <div className="flex items-center h-[45px]">
+            <Image
+              src="/img/logo/bigzee-full-logo-color.png"
+              height={75}
+              width={400}
+              alt="svg"
+              className="object-cover  h-full w-auto"
+            />
           </div>
           {/* <h6
             className={` ${expletus.className} tracking-wider font-extrabold text-gray-900`}
@@ -70,9 +76,12 @@ export default function ResponsiveNavbar() {
           </div>
 
           <div className="flex items-center justify-center bg-primary font-sans text-md rounded-4xl px-4 py-2">
-            <button className="text-md font-sans font-medium text-center text-neutral-100">
+            <a
+              href="https://domains.bigzee.app"
+              className="text-md font-sans font-medium text-center text-neutral-100"
+            >
               Client Login
-            </button>
+            </a>
           </div>
         </div>
 

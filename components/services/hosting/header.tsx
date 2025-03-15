@@ -65,7 +65,7 @@ export default function Header() {
                 </div>
               ))}
               <div className="flex items-center justify-start">
-                <button className="flex justify-center items-center gap-2  bg-neutral-100 py-2 px-3 rounded-lg min-w-52">
+                <button className="flex justify-center items-center gap-2  bg-neutral-100 py-2 px-3 rounded-lg min-w-52 outline outline-1 outline-offset-1 outline-neutral-300">
                   <span className="font-sans text-secondary font-medium">
                     Compare Plans
                     <span className="ml-2" aria-hidden="true">
@@ -104,10 +104,10 @@ export default function Header() {
         <div className="col-span-4 col-start-8 flex items-center justify-center">
           {" "}
           <Image
-            src="/img/hosting/server-guy.jpg"
+            src="/img/hosting/hosting-hero.png"
             alt="Logo"
-            width={2000}
-            height={2000}
+            width={1000}
+            height={1000}
             className="object-contain"
           />
         </div>

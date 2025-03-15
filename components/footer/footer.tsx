@@ -7,7 +7,7 @@ const singleLink = "font-sans text-sm text-neutral-300/75";
 
 export default function Footer() {
   return (
-    <footer className=" bg-gray-900">
+    <footer className=" bg-gray-800">
       <div className="x-padding max-w-5xl mx-auto py-20 grid md:grid-cols-12 gap-x-8 gap-y-8">
         <div className="md:col-span-5">
           <CompanyInfo />
