@@ -1,6 +1,6 @@
 export default function specials() {
   return (
-    <div className="x-padding w-full flex justify-center items-center gap-x-6 bg-secondary py-1.5">
+    <div className="x-padding w-full flex justify-center items-center gap-x-6 bg-gradient-to-r from-secondary to-primary py-1.5">
       <div className="font-sans text-sm text-neutral-100 font-medium">
         Business Email
       </div>

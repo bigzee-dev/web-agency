@@ -28,7 +28,7 @@ export default function LogoPanel() {
           track.style.transition = "none";
           track.style.transform = `translateX(0)`;
         }, 500);
-      }, 5000);
+      }, 4000);
     }
 
     return () => clearInterval(interval);

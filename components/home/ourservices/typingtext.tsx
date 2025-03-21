@@ -49,7 +49,7 @@ const TypingText = () => {
         typingDelay={1500}
         cursor="|"
         cursorClassName="text-neutral-300"
-        className={` ${montserrat.className} text font-bold tracking-wide pl-1`}
+        className={` ${montserrat.className} text font-semibold tracking-wide pl-1 mt-2`}
       />
     </div>
   );

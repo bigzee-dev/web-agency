@@ -2,6 +2,7 @@ import Header from "@/components/services/domains/header";
 import WhyBuy from "@/components/services/domains/whybuy";
 import TldList from "@/components/services/domains/tldlist";
 import Tips from "@/components/services/domains/tips";
+import SupportOne from "@/components/support/support-one";
 import FaqsDomains from "@/components/services/domains/faqs-domains";
 // import Steps from "@/components/services/emails/steps";
 // import HostingPlans from "@/components/services/hosting/pricing";
@@ -16,6 +17,7 @@ export default function Websites() {
       <WhyBuy />
       <TldList />
       <Tips />
+      <SupportOne />
       <FaqsDomains />
       {/* <Steps />
       <HostingPlans />

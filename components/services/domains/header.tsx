@@ -42,7 +42,7 @@ export default function Header() {
     window.location.href = searchUrl;
   };
   return (
-    <div className="w-full bg-secondary py-16">
+    <div className="w-full bg-gradient-to-br from-secondary to-primary py-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-12 gap-10 max-full">
           <div className="col-span-6">
@@ -53,8 +53,13 @@ export default function Header() {
                 >
                   Domains
                 </h1>
-                <div className="flex items-center font-sans text-lg text-neutral-400 mt-2">
-                  Search and register a domain in minutes e.g <TypingText />
+                <div className="flex items-center font-sans text-lg text-neutral-300 mt-2">
+                  <p>Search and register a domain in minutes </p>
+                  <span className="text-sm text-neutral-400 ml-2 mr-1">
+                    {" "}
+                    e.g:{" "}
+                  </span>{" "}
+                  <TypingText />
                 </div>
               </div>
 
@@ -123,7 +128,7 @@ export default function Header() {
                       <div className="text-thatgreen font-medium">
                         .{tld.extension}
                       </div>
-                      <div className="font-sans text-neutral-400 text-md">
+                      <div className="font-sans text-neutral-300 text-md">
                         P{tld.price}/year
                       </div>
                     </div>

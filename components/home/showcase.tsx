@@ -8,7 +8,7 @@ const list = "font-sans text-gray-600 font-medium";
 
 export default function Showcase() {
   return (
-    <div className="x-padding relative isolate w-full pt-12 pb-8 md:py-12">
+    <div className="x-padding relative isolate w-full pt-12 pb-8 md:py-12 ">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -24,12 +24,12 @@ export default function Showcase() {
       </div>
       {/* main content */}
 
-      <main className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-x-1 w-full h-full ">
+      <main className="max-w-7xl mx-auto w-full h-full grid grid-cols-12">
         {/* heading and cta */}
-        <section className="w-[100%] lg:w-[50%] flex flex-col gap-y-6 lg:pr-4">
+        <section className="flex flex-col gap-y-6 lg:pr-4 col-span-6">
           <p
             className={` ${montserrat.className} text-6xl font-bold text-gray-800 tracking-tight`}
-            style={{ lineHeight: "1.15" }}
+            style={{ lineHeight: "1.13" }}
           >
             Building Modern and Reliable Web Solutions
           </p>
@@ -42,10 +42,10 @@ export default function Showcase() {
           </div>
           <div className="font-sans text-md  text-gray-600 md:w-[90%] leading-6">
             <p>
-              At <strong>bigZee</strong>, we specialize in developing
-              user-friendly websites and providing secure hosting. We also
-              deliver professional email services. We also deliver professional
-              email services.
+              At BigZee, we provide businesses, organisations, and individuals
+              with online services designed to help attract more customers,
+              increase revenue, and establish a strong and effective online
+              presence.
             </p>
 
             <div className="w-full flex justify-start mt-5 ">
@@ -74,13 +74,13 @@ export default function Showcase() {
         </section>
 
         {/* image */}
-        <section className="w-[100%] sm:max-w-[500px] lg:w-[50%] h-full flex justify-end items-center -m-6">
+        <section className="h-full flex justify-end items-center col-span-5 col-start-7">
           <Image
-            src="/img/home/showcase-wide.png"
+            src="/img/home/home-hero-section.png"
             alt="image"
-            width={1650}
-            height={1650}
-            className="self-end w-[550px] "
+            width={940}
+            height={788}
+            className="object-cover  rounded-tl-2xl rounded-br-2xl"
             // style={{ transformOrigin: "bottom right" }}
           />
         </section>

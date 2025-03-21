@@ -4,7 +4,7 @@ import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 export default function Header() {
   return (
-    <div className="w-full bg-secondary py-16">
+    <div className="w-full bg-gradient-to-br from-secondary to-primary py-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-12 gap-12">
           <div className="flex flex-col col-span-6 gap-y-3">

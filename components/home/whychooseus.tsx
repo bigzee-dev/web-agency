@@ -29,7 +29,7 @@ const cardData = [
   },
   {
     backgroundStyle: {},
-    svg: "/svg/customer-support.svg",
+    svg: "/svg/support.svg",
     title: "Dedicated Support",
     content:
       "Our team is here to assist you every step of the way, ensuring everything runs smoothly. Count on us for dependable support whenever you need it.",
