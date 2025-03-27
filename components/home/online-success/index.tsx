@@ -12,6 +12,8 @@ import { montserrat } from "@/app/ui/fonts";
 
 // components
 import Websites from "./websites";
+import Hosting from "./hosting";
+import EmailsAndDomains from "./emailsdomains";
 
 export default function OnlineSuccess() {
   return (
@@ -53,7 +55,7 @@ export default function OnlineSuccess() {
             Websites
           </TabsTrigger>
           <TabsTrigger
-            value="website"
+            value="ecommerce"
             className="data-[state=active]:bg-[#E6E8FF] data-[state=active]:text-[#2D1576]"
           >
             Ecommerce
@@ -65,7 +67,7 @@ export default function OnlineSuccess() {
             Hosting
           </TabsTrigger>
           <TabsTrigger
-            value="domains"
+            value="emailsdomains"
             className="data-[state=active]:bg-[#E6E8FF] data-[state=active]:text-[#2D1576]"
           >
             Email & Domains
@@ -76,17 +78,18 @@ export default function OnlineSuccess() {
           <Websites />
         </TabsContent>
 
-        <TabsContent value="website">
-          <div className="bg-[#2D1576] text-white rounded-3xl p-8 md:p-12">
+        <TabsContent value="emailsdomains">
+          {/* <div className="bg-[#2D1576] text-white rounded-3xl p-8 md:p-12">
             <h2 className="text-4xl font-bold mb-6">Website Builder</h2>
             <p className="text-lg opacity-90">
               Create a professional website with our easy-to-use builder.
             </p>
-          </div>
+          </div> */}
+          <EmailsAndDomains />
         </TabsContent>
 
         <TabsContent value="hosting">
-          <div className="bg-[#2D1576] text-white rounded-3xl p-8 md:p-12 relative overflow-hidden">
+          {/* <div className="bg-[#2D1576] text-white rounded-3xl p-8 md:p-12 relative overflow-hidden">
             <Badge className="absolute top-8 left-8 bg-[#6558F5] hover:bg-[#6558F5] text-white">
               FREE WEBSITE MIGRATION
             </Badge>
@@ -106,7 +109,8 @@ export default function OnlineSuccess() {
                 ACTIVE
               </Badge>
             </div>
-          </div>
+          </div> */}
+          <Hosting />
         </TabsContent>
 
         <TabsContent value="domains">

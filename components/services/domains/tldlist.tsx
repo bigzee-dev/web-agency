@@ -30,7 +30,7 @@ export default function TldList() {
         {tlds.map((tld) => (
           <div
             key={tld}
-            className="flex items-center justify-center px-4 py-2 rounded-full border border-[#2E1065]/20 text-gray-700 hover:bg-[#2E1065]/5 transition-colors"
+            className="flex items-center justify-center px-4 py-2 rounded-full border border-[#2E1065]/20 text-secondary hover:bg-[#2E1065]/5 transition-colors"
           >
             {tld}
           </div>

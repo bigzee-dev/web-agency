@@ -3,12 +3,14 @@ import { montserrat } from "@/app/ui/fonts";
 import { btnDimensions } from "@/app/ui/customTailwindClasses";
 import { IoStarSharp } from "react-icons/io5";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
-
+import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
+import { IoArrowForwardCircle } from "react-icons/io5";
 const list = "font-sans text-gray-600 font-medium";
 
 export default function Showcase() {
   return (
-    <div className="x-padding relative isolate w-full pt-12 pb-8 md:py-12 ">
+    <div className="x-padding relative isolate w-full pt-12 pb-8 md:pb-14 md:pt-20">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -26,26 +28,45 @@ export default function Showcase() {
 
       <main className="max-w-7xl mx-auto w-full h-full grid grid-cols-12">
         {/* heading and cta */}
-        <section className="flex flex-col gap-y-6 lg:pr-4 col-span-6">
-          <p
-            className={` ${montserrat.className} text-6xl font-bold text-gray-800 tracking-tight`}
-            style={{ lineHeight: "1.13" }}
-          >
-            Building Modern and Reliable Web Solutions
-          </p>
-          <div className="flex text-yellow-600 ">
-            <IoStarSharp />
-            <IoStarSharp />
-            <IoStarSharp />
-            <IoStarSharp />
-            <IoStarSharp />
+        <section className="flex flex-col gap-y-4 lg:pr-4 col-span-6">
+          <div>
+            <Link
+              href="/emails"
+              className="flex justify-center items-center gap-x-3 w-max bg-primary/5 py-1 pl-3 pr-1 mb-2.5 border border-gray-500/70 rounded-3xl hover:bg-primary/10"
+            >
+              <p className="text-sm text-gray-600 font-medium">
+                Business Email
+              </p>
+              {/* <Separator orientation="vertical" className="text-red h-4 " /> */}
+              <span className="text-gray-500">|</span>
+              <p className="text-gray-600 font-medium text-md">
+                P25<span className="text-gray-500 text-sm"> /month</span>
+              </p>
+              <span>
+                <IoArrowForwardCircle className="text-primary" size="1.6em" />
+              </span>
+            </Link>
+            <p
+              className={` ${montserrat.className} text-6xl font-bold text-gray-800 tracking-tight`}
+              style={{ lineHeight: "1.13" }}
+            >
+              Building Modern and Reliable Web Solutions
+            </p>
           </div>
+
+          {/* <div className="flex text-yellow-600 ">
+            <IoStarSharp />
+            <IoStarSharp />
+            <IoStarSharp />
+            <IoStarSharp />
+            <IoStarSharp />
+          </div> */}
           <div className="font-sans text-md  text-gray-600 md:w-[90%] leading-6">
             <p>
-              At BigZee, we provide businesses, organisations, and individuals
-              with online services designed to help attract more customers,
-              increase revenue, and establish a strong and effective online
-              presence.
+              At <strong>BigZee</strong>, we provide businesses, organisations,
+              and individuals with online services designed to help attract more
+              customers, increase revenue, and establish a strong and effective
+              online presence.
             </p>
 
             <div className="w-full flex justify-start mt-5 ">
@@ -58,15 +79,18 @@ export default function Showcase() {
                 </a>
                 <a
                   href="#"
-                  className="font-sans text-md font-medium leading-6 text-primary"
+                  className="font-sans text-md font-medium leading-6 text-gray-600"
                 >
                   About Us <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
-            <div className="flex items-center text-sm text-secondary font-medium mt-3">
+            <div className="flex items-center text-sm text-gray-600 font-medium mt-4">
               <span className="mr-2">
-                <IoShieldCheckmarkSharp size="1.4em" />
+                <IoShieldCheckmarkSharp
+                  size="1.45em"
+                  className="text-gray-800"
+                />
               </span>
               7 day - money back - guarantee
             </div>

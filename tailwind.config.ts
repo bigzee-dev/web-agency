@@ -25,7 +25,7 @@ const config: Config = {
         md: "0.94rem",
       },
       colors: {
-        primary: "#005878" /*#2b5f91#0e5077*/,
+        primary: "#0e5077" /*#2b5f91#005878*/,
         secondary: "#0f3551",
         thatgreen: "#33bff2",
         background: "hsl(var(--background))",

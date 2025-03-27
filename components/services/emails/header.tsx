@@ -4,35 +4,53 @@ import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 export default function Header() {
   return (
-    <div className="w-full bg-gradient-to-br from-secondary to-primary py-16">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-12 gap-12">
-          <div className="flex flex-col col-span-6 gap-y-3">
-            <h2
-              className={` ${montserrat.className} text-6xl font-bold text-neutral-100 `}
-            >
-              Professional Email that builds your brand
-            </h2>
-            <p className="font-sans text-neutral-300 text-base font-normal max-w-4xl">
-              Use these Tailwind CSS settings screen examples to build
-              configuration and preference pages where users can update their
-              account information.
-            </p>
-            <button
-              className={` ${btnDimensions} bg-background text-secondary mt-auto `}
-            >
-              Get Started
-            </button>
-          </div>
-          <div className="col-span-5 col-start-8">
-            {" "}
-            <Image
-              src="/img/emails/email2.png"
-              alt="Logo"
-              width={500}
-              height={400}
-              className=""
-            />
+    <div className="relative w-full bg-teal-900/90">
+      <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/50 to-transparent py-16">
+        <div className="relative isolate overflow-hidden max-w-7xl mx-auto">
+          <div className="grid grid-cols-12 gap-12">
+            <div className="col-span-6">
+              {/* Email badge */}
+              <div className="inline-block bg-neutral-100 px-6 py-2 rounded-md mb-6">
+                <span className="font-bold text-primary text-2xl tracking-wide">
+                  Email
+                </span>
+              </div>
+              {/* Main heading */}
+              <h1
+                className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 leading-tight`}
+              >
+                Get a Professional Email address
+              </h1>
+
+              <div className="space-y-2 my-4 text-md">
+                <p className="font-sans text-neutral-300 font-normal max-w-4xl">
+                  Setup a personalised email address using your domain name, e.g
+                  david@mywebsite.com.
+                </p>
+                <p className="font-sans text-neutral-300 font-normal max-w-4xl">
+                  A business email address makes a great professional
+                  impression. With BigZee, you can get a work email address for
+                  each team or individual team member e.g sales@mybusiness.com,
+                  support@mybusiness.com
+                </p>
+              </div>
+
+              <button
+                className={` ${btnDimensions} bg-neutral-200/90 text-secondary mt-3 `}
+              >
+                Get Started
+              </button>
+            </div>
+            <div className="col-span-5 col-start-8">
+              {" "}
+              <Image
+                src="/img/emails/email2.png"
+                alt="Logo"
+                width={500}
+                height={400}
+                className=""
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -44,11 +44,11 @@ export default function ResponsiveNavbar() {
 
   return (
     <nav className="x-padding w-full sticky top-0 bg-background z-50  text-neutral-100">
-      <div className="max-w-7xl mx-auto py-2.5 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 text-2xl">
           <div className="flex items-center h-[45px]">
             <Image
-              src="/img/logo/bigzee-full-logo-color.png"
+              src="/img/logo/bigzee-full-logo.png"
               height={75}
               width={400}
               alt="svg"

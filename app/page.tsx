@@ -16,7 +16,7 @@ import ContactUs from "@/components/home/contactus";
 export default function Home() {
   return (
     <>
-      <Specials />
+      {/* <Specials /> */}
       <Showcase />
       {/* <OurServicesSml />
       <OurServicesLrg /> */}

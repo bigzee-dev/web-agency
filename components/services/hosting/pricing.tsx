@@ -86,7 +86,7 @@ export default function HostingPlans() {
         />
       </div>
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-base font-semibold leading-7 text-indigo-600">
+        <h2 className="text-base font-semibold leading-7 text-blue-600">
           Pricing
         </h2>
         <p

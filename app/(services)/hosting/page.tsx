@@ -1,5 +1,5 @@
 import Header from "@/components/services/hosting/header";
-import Steps from "@/components/services/emails/steps";
+import SetupAccount from "@/components/services/hosting/setup-account";
 import HostingPlans from "@/components/services/hosting/pricing";
 import HostingFeatures from "@/components/services/hosting/features";
 import LogoPanel from "@/components/services/hosting/logo-panel";
@@ -13,7 +13,7 @@ export default function Websites() {
       <Header />
       <LogoPanel />
       {/* <PricingWebsites /> */}
-      <Steps />
+      <SetupAccount />
       <HostingPlans />
 
       <HostingFeatures />

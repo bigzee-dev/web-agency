@@ -24,7 +24,7 @@ export default function WhyBuy() {
             <h3 className="text-xl font-semibold text-primary">
               24/7 live technical support
             </h3>
-            <p className="text-muted-foreground">
+            <p className="font-sans text-md text-gray-700">
               Our Customer Success team is here for you any time of the day.
               We've made our domain name registration process as easy as
               possible, but everyone needs a helping hand sometimes. Just
@@ -40,7 +40,7 @@ export default function WhyBuy() {
             <h3 className="text-xl font-semibold text-primary">
               Trusted domain registrar
             </h3>
-            <p className="text-muted-foreground">
+            <p className="font-sans text-md text-gray-700">
               Hostinger is an ICANN-accredited registrar and web host trusted by
               millions of people worldwide. We offer a comprehensive
               registration service with more than 100 domain extensions so that
@@ -56,7 +56,7 @@ export default function WhyBuy() {
             <h3 className="text-xl font-semibold text-primary">
               Instant setup and easy control
             </h3>
-            <p className="text-muted-foreground">
+            <p className="font-sans text-md text-gray-700">
               Once you complete your domain search, we'll guide you through the
               website domain registration process. It only takes a few clicks,
               and no technical knowledge is required.

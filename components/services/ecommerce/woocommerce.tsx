@@ -68,11 +68,8 @@ export default function WooCommerce() {
                   </div>
 
                   <div>
-                    <h3 className="font-medium mb-4">1. Shipping address</h3>
-                    <p className="text-xs text-gray-500 mb-3">
-                      Enter the physical address where you want us to deliver
-                      your order.
-                    </p>
+                    <h3 className="font-medium mb-4">1. Delivery address</h3>
+
                     <div className="grid grid-cols-2 gap-3 mb-3">
                       <div className="border rounded-md p-2">
                         <input
