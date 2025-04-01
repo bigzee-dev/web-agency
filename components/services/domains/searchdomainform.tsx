@@ -22,7 +22,7 @@ export default function SearchDomainForm() {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto bg-neutral-200 px-4 py-5 mt-4">
+    <div className="w-full max-w-3xl mx-auto bg-neutral-200 px-5 py-5 mt-4">
       <form onSubmit={handleSearch} className="flex items-center gap-4">
         <div className="relative flex-1">
           <div className="absolute -top-[13px] left-[50px] px-1 bg-neutral-200">

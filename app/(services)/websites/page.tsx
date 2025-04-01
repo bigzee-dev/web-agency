@@ -4,7 +4,7 @@ import PlansInfo from "@/components/services/websites/plans-info";
 import FaqsWebsites from "@/components/services/websites/faqs";
 import CTA from "@/components/services/websites/cta";
 import OurProcess from "@/components/home/ourprocess";
-import SupportOne from "@/components/support/support-one";
+import SupportOne from "@/components/shared/support/support-one";
 
 export default function Websites() {
   return (

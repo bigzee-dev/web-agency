@@ -1,11 +1,10 @@
 import Image from "next/image";
 import { montserrat } from "@/app/ui/fonts";
 import { btnDimensions } from "@/app/ui/customTailwindClasses";
-import { IoStarSharp } from "react-icons/io5";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
 import { IoArrowForwardCircle } from "react-icons/io5";
+
 const list = "font-sans text-gray-600 font-medium";
 
 export default function Showcase() {
@@ -37,7 +36,7 @@ export default function Showcase() {
               <p className="text-sm text-gray-600 font-medium">
                 Business Email
               </p>
-              {/* <Separator orientation="vertical" className="text-red h-4 " /> */}
+
               <span className="text-gray-500">|</span>
               <p className="text-gray-600 font-medium text-md">
                 P25<span className="text-gray-500 text-sm"> /month</span>
@@ -63,13 +62,12 @@ export default function Showcase() {
           </div> */}
           <div className="font-sans text-md  text-gray-600 md:w-[90%] leading-6">
             <p>
-              At <strong>BigZee</strong>, we provide businesses, organisations,
-              and individuals with online services designed to help attract more
-              customers, increase revenue, and establish a strong and effective
-              online presence.
+              At <strong>BigZee</strong>, we provide individuals and companies
+              with online services designed to build a strong online presence,
+              attract more customers, and increase revenue.
             </p>
 
-            <div className="w-full flex justify-start mt-5 ">
+            <div className="w-full flex justify-start mt-6 ">
               <div className="flex flex-col md:flex-row items-center justify-center gap-x-16 gap-y-4">
                 <a
                   href="#our-services"
@@ -105,7 +103,6 @@ export default function Showcase() {
             width={940}
             height={788}
             className="object-cover  rounded-tl-2xl rounded-br-2xl"
-            // style={{ transformOrigin: "bottom right" }}
           />
         </section>
       </main>

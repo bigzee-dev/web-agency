@@ -22,7 +22,7 @@ export default function TldSlider() {
     <section className="overflow-hidden">
       <div className="group relative m-auto max-w-7xl">
         <div className="flex flex-col items-center md:flex-row">
-          <div className="md:max-w-44 md:border-r md:pr-6">
+          <div className="md:max-w-44 md:border-r md:border-gray-400/70 md:pr-6">
             <p className="text-end text-sm text-slate-400">
               Powering the best teams
             </p>

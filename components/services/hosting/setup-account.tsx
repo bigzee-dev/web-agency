@@ -3,9 +3,9 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function SetupAccount() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8  md:pb-16 pt-0">
+    <div className="max-w-7xl mx-auto px-4 py-8  md:pb-16 pt-6">
       <h2
-        className={` ${montserrat.className} text-gray-800 text-3xl md:text-4xl font-bold text-center mb-14 `}
+        className={` ${montserrat.className} text-gray-900 text-3xl md:text-4xl font-bold text-center mb-14 `}
       >
         Setup Your Hosting Account in a Few Clicks
       </h2>

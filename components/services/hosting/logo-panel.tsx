@@ -4,11 +4,11 @@ import styles from "./logopanels.module.css";
 
 const logos = [
   { src: "/svg/hosting/cpanel.svg", alt: "cpanel", className: "h-36" },
-  { src: "/svg/hosting/wordpress.svg", alt: "wordpress", className: "h-44" },
-  { src: "/svg/hosting/nodejs.svg", alt: "nodejs", className: "h-24" },
-  { src: "/svg/hosting/php.svg", alt: "php", className: "h-28" },
-  { src: "/svg/hosting/mysql.svg", alt: "mysql", className: "h-28" },
-  { src: "/svg/hosting/html5.svg", alt: "html5", className: "h-16" },
+  { src: "/svg/hosting/wordpress.svg", alt: "wordpress", className: "h-48" },
+  { src: "/svg/hosting/nodejs.svg", alt: "nodejs", className: "h-28" },
+  { src: "/svg/hosting/php.svg", alt: "php", className: "h-32" },
+  { src: "/svg/hosting/mysql.svg", alt: "mysql", className: "h-32" },
+  { src: "/svg/hosting/html5.svg", alt: "html5", className: "h-20" },
 ];
 
 export default function LogoPanel() {

@@ -44,10 +44,10 @@ export default function Header() {
             <div className="col-span-5 col-start-8">
               {" "}
               <Image
-                src="/img/emails/email2.png"
+                src="/img/emails/email1.png"
                 alt="Logo"
-                width={500}
-                height={400}
+                width={1000}
+                height={800}
                 className=""
               />
             </div>

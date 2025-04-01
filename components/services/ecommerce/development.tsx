@@ -15,7 +15,7 @@ export default function Development() {
             >
               Ecommerce Website
               <div className="relative inline-block  rotate-1 mt-1">
-                <span className="relative z-10 bg-blue-500 text-neutral-100 px-6 py-2 rounded-md ml-2">
+                <span className="relative z-10 bg-blue-500 text-neutral-100 px-5 py-1 rounded-md ml-2">
                   Development
                 </span>
               </div>
