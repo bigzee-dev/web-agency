@@ -6,72 +6,15 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Montserrat } from "next/font/google";
 import { montserrat } from "@/app/ui/fonts";
-
-const plans = [
-  {
-    id: "basic",
-    name: "Basic",
-    priceMonthly: "P30",
-    priceYearly: "300",
-    description: "ideal for personal use and small businesses",
-    features: [
-      "3 Email Accounts",
-      "5GB Email Storage",
-      "Incoming Spam Filter",
-      "24/7/365 Support",
-      "Premium Email Deliverability",
-      "SSL Encryption",
-      "POP3/IMAP/SMTP",
-    ],
-    href: "https://domains.bigzee.app/index.php?rp=/store/business-email/basic-email",
-    linkText: "Get Basic",
-    featured: false,
-  },
-  {
-    id: "business",
-    name: "Business",
-    priceMonthly: "P85",
-    priceYearly: "P850",
-    description: "Ideal for businesses and organisations.",
-    features: [
-      "10 Email Accounts",
-      "15GB Email Storage",
-      "Incoming Spam Filter",
-      "24/7/365 Support",
-      "Premium Email Deliverability",
-      "SSL Encryption",
-      "POP3/IMAP/SMTP",
-    ],
-    href: "https://domains.bigzee.app/index.php?rp=/store/business-email/business-email",
-    linkText: "Get Business",
-    featured: true,
-  },
-  {
-    id: "enterprise",
-    name: "Enterprise",
-    priceMonthly: "P145",
-    priceYearly: "P1450",
-    description: "Perfect for large businesses and enterprises.",
-    features: [
-      "20 Email Accounts",
-      "30GB Email Storage",
-      "Incoming Spam Filter",
-      "24/7/365 Support",
-      "Premium Email Deliverability",
-      "SSL Encryption",
-      "POP3/IMAP/SMTP",
-    ],
-    href: "https://domains.bigzee.app/index.php?rp=/store/business-email/enterprise-email",
-    linkText: "Get Enterprise",
-    featured: false,
-  },
-];
+import { EmailPlans } from "@/components/shared/pricing/email-features";
+import { HostingPlans } from "@/components/shared/pricing/hosting-features";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function PricingPlans() {
+export default function PricingPlans({ plan }: { plan: string }) {
+  const plans = plan === "emails" ? EmailPlans : HostingPlans;
   const [isYearly, setIsYearly] = useState(false);
 
   return (

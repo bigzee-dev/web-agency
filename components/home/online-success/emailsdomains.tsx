@@ -2,6 +2,14 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Lock } from "lucide-react";
 import { FaCheck } from "react-icons/fa6";
 import Link from "next/link";
+import { montserrat } from "@/app/ui/fonts";
+
+type contentProps = {
+  heading: string;
+  subheading: string;
+  text: string;
+  link: string;
+};
 
 const features = [
   "Visually stunning, responsive and secure websites",
@@ -9,71 +17,69 @@ const features = [
   "FREE website migration",
 ];
 
-export default function EmailsAndDomains() {
+const headingStyles =
+  "text-sm text-thatgreen font-semibold bg-thatgreen/20 w-max py-1 px-3 rounded-2xl mb-7 uppercase";
+
+const subheadingStyles = `${montserrat.className} text-neutral-100 text-3xl font-semibold mb-4`;
+
+function Content({ heading, subheading, text, link }: contentProps) {
   return (
-    <div className="relative isolate overflow-hidden bg-gray-800 text-white rounded-3xl p-6 md:p-8">
-      <div
-        aria-hidden="true"
-        className="absolute left-1/4 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
+    <>
+      <h2 className={headingStyles}>{heading}</h2>
+      <h3 className={subheadingStyles}>{subheading}</h3>
+      <p>{text}</p>
+      <Link
+        href={link}
+        className="w-max flex items-center mt-8 text-center text-xl font-semibold text-blue-400"
       >
-        <div
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-20"
+        Start now{" "}
+        <ChevronRight
+          aria-hidden="true"
+          className="flex-none text-blue-400 font-medium pl-2"
+          size="1.35em"
+        />
+      </Link>
+    </>
+  );
+}
+export default function EmailAndDomains() {
+  return (
+    <div className="relative isolate overflow-hidden grid grid-cols-12 bg-gray-900 text-white h-auto  rounded-3xl px-6">
+      {/* blur component */}
+      <svg
+        viewBox="0 0 1024 1024"
+        aria-hidden="true"
+        className="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+      >
+        <circle
+          r={512}
+          cx={512}
+          cy={512}
+          fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+          fillOpacity="0.7"
+        />
+        <defs>
+          <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+            <stop stopColor="#7775D6" />
+            <stop offset={1} stopColor="#E935C1" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <div className="col-span-6 pr-8 md:pt-20 md:pb-12 border-r border-gray-500/30">
+        <Content
+          heading="Fully Managed Hosting"
+          subheading="Lets get your Website online"
+          text="Build and launch web apps, tools, and software in minutes – without writing any code."
+          link="/hosting"
         />
       </div>
-      <Badge className="absolute top-8 left-8 bg-[#6558F5] hover:bg-[#6558F5] text-white">
-        FREE WEBSITE MIGRATION
-      </Badge>
-
-      <div className="absolute top-8 right-8 flex items-center gap-2 bg-white text-[#2D1576] px-4 py-2 rounded-full">
-        <Lock className="w-4 h-4" />
-        <span className="text-sm font-medium">SSL certificate</span>
-        <Badge
-          variant="secondary"
-          className="bg-[#E3F9E5] text-[#14532D] hover:bg-[#E3F9E5] hover:text-[#14532D]"
-        >
-          ACTIVE
-        </Badge>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 mt-16">
-        <div className="col-span-7">
-          <h2 className="text-4xl text-neutral-200 font-bold mb-7">
-            Crafting Stunning Websites
-          </h2>
-          <p className="font-sans text-md text-neutral-300 leading-relaxed">
-            We create visually stunning, responsive and secure websites tailored
-            to your <br />
-            business needs with our expert web development services.
-          </p>
-          <ul className="text-neutral-300/85 mt-8 space-y-3">
-            {features.map((feature) => (
-              <li key={feature} className="font-sans flex items-center gap-x-3">
-                <FaCheck
-                  aria-hidden="true"
-                  className="h-4 w-3 flex-none text-indigo-400"
-                />
-                {feature}
-              </li>
-            ))}
-          </ul>
-          <Link
-            href="/websites"
-            className="w-max flex items-center mt-8 text-center text-xl font-semibold text-blue-400"
-          >
-            Lets build your Website{" "}
-            <ChevronRight
-              aria-hidden="true"
-              className="flex-none text-blue-400 font-medium pl-2"
-              size="1.35em"
-            />
-          </Link>
-        </div>
-        <div className="col-span-5 mt-auto border border-gray-700 rounded-lg">
-          <img src="/svg/web-dev-guy.svg" alt="Website" className="w-[90%]" />
-        </div>
+      <div className="col-span-6 pl-8 md:pt-20 md:pb-12 ">
+        <Content
+          heading="Shared Web Hosting"
+          subheading="Lets get your Website online"
+          text="Build and launch web apps, tools, and software in minutes – without writing any code."
+          link="/hosting"
+        />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 // import { Button } from "@/components/ui/button";
-import { homePageheadings } from "@/app/ui/customTailwindClasses";
+import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
 
 const cardData = [
@@ -93,9 +93,7 @@ export default function Component() {
           className="space-y-20"
         >
           <div className="text-center">
-            <h2 className={`${homePageheadings} text-gray-800`}>
-              Why Choose Us
-            </h2>
+            <h2 className={` ${sectionHeadings}`}>Why Choose Us</h2>
             <p className="italic font-sans text-3xl font-normal text-gray-600 mt-10 mb-3">
               We are Here to Help you{" "}
               <span

@@ -33,7 +33,7 @@ const offers = [
 export default function Header() {
   return (
     <div className="relative w-full bg-gray-900">
-      <div className="relative isolate overflow-hidden inset-0 w-full bg-gradient-to-r from-secondary to-transparent py-16">
+      <div className="relative isolate overflow-hidden inset-0 w-full bg-gradient-to-r from-secondary to-transparent py-14">
         {/* Blur component */}
         <div
           aria-hidden="true"

@@ -1,14 +1,14 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
-import { btnDimensions } from "@/app/ui/customTailwindClasses";
+import { btnDimensions, whiteButton } from "@/app/ui/customTailwindClasses";
 
 export default function Header() {
   return (
-    <div className="relative w-full bg-teal-900/90">
-      <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/50 to-transparent py-16">
+    <div className="relative w-full bg-slate-500/90">
+      <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/50 to-transparent py-14">
         <div className="relative isolate overflow-hidden max-w-7xl mx-auto">
           <div className="grid grid-cols-12 gap-12">
-            <div className="col-span-6">
+            <div className="col-span-6 relative">
               {/* Email badge */}
               <div className="inline-block bg-neutral-100 px-6 py-2 rounded-md mb-6">
                 <span className="font-bold text-primary text-2xl tracking-wide">
@@ -36,7 +36,7 @@ export default function Header() {
               </div>
 
               <button
-                className={` ${btnDimensions} bg-neutral-200/90 text-secondary mt-3 `}
+                className={` ${whiteButton} absolute bottom-0 left-0 mt-3 bg-opacity-50`}
               >
                 Get Started
               </button>

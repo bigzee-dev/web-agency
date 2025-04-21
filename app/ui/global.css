@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 @layer utilities {
@@ -80,6 +81,11 @@ body {
 .x-padding {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.glb-headings-lineheight {
+  /* for all the page headings */
+  line-height: 1.05;
 }
 
 .fade-out {

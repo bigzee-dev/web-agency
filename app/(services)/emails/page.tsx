@@ -10,7 +10,7 @@ export default function Websites() {
     <div className="pb-20">
       <Header />
       <Steps />
-      <PricingPlans />
+      <PricingPlans plan="emails" />
       <NeedMore />
       <CTA />
       <FaqsWebsites />

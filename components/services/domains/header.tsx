@@ -45,7 +45,7 @@ export default function Header() {
   };
   return (
     <div className="relative w-full bg-purple-900/50">
-      <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/60 to-transparent pt-16 pb-8">
+      <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/60 to-transparent pt-14 pb-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-12 gap-10 max-full">
             <div className="col-span-6">

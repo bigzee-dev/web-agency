@@ -9,7 +9,7 @@ const features = [
   "FREE website migration",
 ];
 
-export default function Websites() {
+export default function Ecommerce() {
   return (
     <div className="relative isolate overflow-hidden bg-gray-800 text-white rounded-3xl p-6 md:p-8">
       <div

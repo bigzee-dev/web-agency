@@ -1,19 +1,17 @@
 "use client";
-
+import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
 } from "@/components/ui/online-success-tabs/tabs";
-import { Badge } from "@/components/ui/badge";
-import { Lock } from "lucide-react";
-import { montserrat } from "@/app/ui/fonts";
 
 // components
 import Websites from "./websites";
-import Hosting from "./hosting";
 import EmailsAndDomains from "./emailsdomains";
+import Ecommerce from "./ecommerce";
+import Hosting from "./hosting";
 
 export default function OnlineSuccess() {
   return (
@@ -30,17 +28,15 @@ export default function OnlineSuccess() {
           className="mx-auto aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#4754a2] to-[#9089fc] opacity-10"
         />
       </div> */}
-      <div className="text-center mb-16 z-40">
-        <h1
-          className={` ${montserrat.className} text-4xl md:text-5xl font-bold text-gray-800 mb-4 `}
-        >
+      <div className="text-center mb-16 ">
+        <h1 className={` ${sectionHeadings} `}>
           Your online{" "}
           <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 text-transparent bg-clip-text">
             success
           </span>{" "}
           starts here
         </h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-gray-600 mt-4">
           Choose from a wide variety of products and services to grow your idea
           online.
         </p>
@@ -50,27 +46,27 @@ export default function OnlineSuccess() {
         <TabsList className="w-full max-w-2xl mx-auto grid grid-cols-2 md:grid-cols-4 mb-8">
           <TabsTrigger
             value="websites"
-            className="data-[state=active]:bg-gray-200 data-[state=active]:text-primary"
+            className="data-[state=active]:bg-background data-[state=active]:text-primary rounded-l-lg"
           >
             Websites
           </TabsTrigger>
           <TabsTrigger
+            value="emailsdomains"
+            className="data-[state=active]:bg-background data-[state=active]:text-primary"
+          >
+            Email & Domains
+          </TabsTrigger>
+          <TabsTrigger
             value="ecommerce"
-            className="data-[state=active]:bg-[#E6E8FF] data-[state=active]:text-[#2D1576]"
+            className="data-[state=active]:bg-background data-[state=active]:text-primary"
           >
             Ecommerce
           </TabsTrigger>
           <TabsTrigger
             value="hosting"
-            className="data-[state=active]:bg-[#E6E8FF] data-[state=active]:text-[#2D1576]"
+            className="data-[state=active]:bg-background data-[state=active]:text-primary rounded-r-lg"
           >
             Hosting
-          </TabsTrigger>
-          <TabsTrigger
-            value="emailsdomains"
-            className="data-[state=active]:bg-[#E6E8FF] data-[state=active]:text-[#2D1576]"
-          >
-            Email & Domains
           </TabsTrigger>
         </TabsList>
 
@@ -87,7 +83,30 @@ export default function OnlineSuccess() {
           </div> */}
           <EmailsAndDomains />
         </TabsContent>
-
+        <TabsContent value="ecommerce">
+          {/* <div className="bg-[#2D1576] text-white rounded-3xl p-8 md:p-12 relative overflow-hidden">
+            <Badge className="absolute top-8 left-8 bg-[#6558F5] hover:bg-[#6558F5] text-white">
+              FREE WEBSITE MIGRATION
+            </Badge>
+            <div className="mt-12">
+              <h2 className="text-4xl font-bold mb-6">Web hosting</h2>
+              <p className="text-lg opacity-90">
+                Secure and reliable hosting solutions for your website.
+              </p>
+            </div>
+            <div className="absolute top-8 right-8 flex items-center gap-2 bg-white text-[#2D1576] px-4 py-2 rounded-full">
+              <Lock className="w-4 h-4" />
+              <span className="text-sm font-medium">SSL certificate</span>
+              <Badge
+                variant="secondary"
+                className="bg-[#E3F9E5] text-[#14532D] hover:bg-[#E3F9E5] hover:text-[#14532D]"
+              >
+                ACTIVE
+              </Badge>
+            </div>
+          </div> */}
+          <Ecommerce />
+        </TabsContent>
         <TabsContent value="hosting">
           {/* <div className="bg-[#2D1576] text-white rounded-3xl p-8 md:p-12 relative overflow-hidden">
             <Badge className="absolute top-8 left-8 bg-[#6558F5] hover:bg-[#6558F5] text-white">

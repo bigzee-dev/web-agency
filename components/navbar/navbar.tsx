@@ -90,7 +90,7 @@ export default function ResponsiveNavbar() {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <Menu size={24} />
+          <Menu size={24} className="text-gray-800" />
         </button>
       </div>
 
