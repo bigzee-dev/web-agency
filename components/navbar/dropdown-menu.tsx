@@ -66,10 +66,10 @@ export function DropdownMenu() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <Link href="/websites" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Websites
+              About Us
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -79,10 +79,27 @@ export function DropdownMenu() {
               Ecommerce
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Hosting</NavigationMenuTrigger>
+          <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-8 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {components.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  icon={component.icon}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Websites</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-8 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
@@ -101,7 +118,7 @@ export function DropdownMenu() {
         <NavigationMenuItem>
           <Link href="/emails" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Emails
+              Email
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -109,6 +126,13 @@ export function DropdownMenu() {
           <Link href="/domains" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Domains
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/domains" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Hosting
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

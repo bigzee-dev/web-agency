@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { expletus } from "@/app/ui/fonts";
+import { cairo, expletus } from "@/app/ui/fonts";
 import { FaFacebook } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { DropdownMenu } from "./dropdown-menu";
@@ -44,16 +44,25 @@ export default function ResponsiveNavbar() {
 
   return (
     <nav className="x-padding w-full sticky top-0 bg-background z-50  text-neutral-100">
-      <div className="max-w-7xl mx-auto py-3 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 text-2xl">
           <div className="flex items-center h-[45px]">
             <Image
-              src="/img/logo/bigzee-full-logo.png"
-              height={75}
-              width={400}
+              src="/img/just-logo.png"
+              height={70}
+              width={100}
               alt="svg"
               className="object-cover  h-full w-auto"
             />
+            <a
+              className={` ${cairo.className} text-3xl text-gray-700 font-semibold ml-2`}
+            >
+              Big
+              <span className="bg-gradient-to-r from-primary via-blue-700 to-cyan-600 text-transparent bg-clip-text">
+                Zee
+              </span>{" "}
+              Digital
+            </a>
           </div>
           {/* <h6
             className={` ${expletus.className} tracking-wider font-extrabold text-gray-900`}

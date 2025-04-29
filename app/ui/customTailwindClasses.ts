@@ -4,14 +4,12 @@ export const pageHeadings = ` ${montserrat.className} text-gray-800 text-4xl md:
 export const sectionHeadings = ` ${montserrat.className} text-gray-800 text-4xl md:text-5xl font-bold`;
 export const smallTextHeadings =
   "text-center text-base/7 font-semibold text-blue-600";
-export const primaryButton =
-  "font-sans text-center py-2 px-3 w-max min-w-52 text-white  text-base font-medium bg-primary rounded-lg";
 
 export const btnDimensions =
-  "font-sans text-center py-2 px-3 w-max min-w-52 text-white text-base font-medium bg-primary rounded-lg";
+  "font-sans text-center py-2 px-3 w-max min-w-52 text-base font-medium rounded-md";
 
-export const whiteButton =
-  "font-sans text-center py-2 px-3 w-max min-w-52 text-secondary text-base font-medium bg-background border border-secondary rounded-lg";
+export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 
-export const grayButton =
-  "font-sans text-center py-2 px-3 w-max min-w-52 text-white text-base font-medium bg-gradient-to-b from-gray-700 to-gray-800 rounded-lg";
+export const grayButton = ` ${btnDimensions} text-white bg-gray-800`;
+
+export const whiteButton = ` ${btnDimensions} text-primary bg-gradient-to-b from-primary/5 via-primary/15 to-primary/5 border border-primary `;

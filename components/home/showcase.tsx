@@ -31,22 +31,22 @@ export default function Showcase() {
 
       <main className="max-w-7xl mx-auto w-full h-full grid grid-cols-12 gap-x-4">
         {/* heading and cta */}
-        <section className="flex flex-col gap-y-5 lg:pr-4 col-span-6">
+        <section className="flex flex-col gap-y-6 lg:pr-4 col-span-6">
           <div>
             <Link
               href="/emails"
-              className="flex justify-center items-center gap-x-3 w-max bg-primary/15 py-1 pl-1 pr-1.5 mb-7  rounded-3xl border border-primary hover:bg-primary/10"
+              className="flex justify-center items-center gap-x-3 w-max bg-primary/10 py-1 pl-1 pr-1.5 mb-7  rounded-3xl border-2 border-primary shadow-md hover:bg-primary/15"
             >
-              <p className="text-md text-blue-400 font-semibold bg-gray-700 border border-gray-800 rounded-3xl py-1 px-3">
+              <p className="text-md text-blue-400 font-semibold radial-background border border-gray-800 rounded-3xl py-1 px-3">
                 Business Email
               </p>
 
               {/* <span className="text-gray-400">|</span> */}
               <span className="text-slate-500">
-                <BsStars size="1.3em" />
+                <BsStars size="1.4em" />
               </span>
-              <p className="text-gray-800 font-semibold text-base">
-                P25<span className="text-gray-500 text-sm"> /month</span>
+              <p className="text-primary font-semibold text-base">
+                P40<span className="text-gray-500 text-sm"> /month</span>
               </p>
               <span>
                 <IoArrowForwardCircle className="text-primary" size="1.6em" />
@@ -56,11 +56,11 @@ export default function Showcase() {
               Building Modern and Reliable Web Solutions
             </h1>
           </div>
-          <div className="font-sans text-md  text-gray-600 md:w-[90%] leading-6">
+          <div className="font-sans text-md  text-gray-700 md:w-[90%] leading-6">
             <p>
-              Ready for a stronger online presence that drives results?{" "}
-              <strong>BigZee</strong> crafts custom web solutions to attract
-              your ideal customers and boost your revenue.
+              At <strong>BigZee Digital</strong> we help businesses and
+              organisations expand their online reach, work smarter and connect
+              with a wider audience.
             </p>
           </div>
           {/*  <span aria-hidden="true"> →</span> */}
@@ -69,19 +69,22 @@ export default function Showcase() {
               <Link href="#our-services" className={` ${primaryButton} `}>
                 Our Services
               </Link>
-              <Link href="#" className={` ${grayButton} `}>
-                About Us
+              <Link
+                href="#"
+                className="font-sans text-gray-700 font-medium ml-4"
+              >
+                About Us <span aria-hidden="true"> →</span>
               </Link>
             </div>
           </div>
-          <div className="flex items-center font-sans font-medium text-sm ">
+          {/* <div className="flex items-center font-sans font-medium text-sm ">
             <span className="text-secondary mr-2">
               <IoShieldCheckmarkSharp size="1.5em" className="text-gray-800" />
             </span>
             <span className="text-gray-700">
               7 day - money back - guarantee
             </span>
-          </div>
+          </div> */}
         </section>
 
         {/* image */}

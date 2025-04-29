@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import { Expletus_Sans } from "next/font/google"; /* this font is used for the logo */
 import { Montserrat } from "next/font/google";
+import { Cairo } from "next/font/google";
 
 export const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
@@ -15,6 +16,12 @@ export const inter = Inter({
 });
 
 export const expletus = Expletus_Sans({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const cairo = Cairo({
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
   display: "swap",
 });
