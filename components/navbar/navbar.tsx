@@ -44,7 +44,7 @@ export default function ResponsiveNavbar() {
 
   return (
     <nav className="x-padding w-full sticky top-0 bg-background z-50  text-neutral-100">
-      <div className="max-w-7xl mx-auto py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto py-3.5 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3 text-2xl">
           <div className="flex items-center h-[45px]">
             <Image

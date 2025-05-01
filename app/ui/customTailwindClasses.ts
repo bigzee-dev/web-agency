@@ -12,4 +12,4 @@ export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 
 export const grayButton = ` ${btnDimensions} text-white bg-gray-800`;
 
-export const whiteButton = ` ${btnDimensions} text-primary bg-gradient-to-b from-primary/5 via-primary/15 to-primary/5 border border-primary `;
+export const whiteButton = ` ${btnDimensions} text-blue-400 bg-gray-800/50 border border-blue-400/80 `;
