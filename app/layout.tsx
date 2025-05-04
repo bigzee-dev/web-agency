@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "@/app/ui/global.css";
 import "@/app/ui/main-nav.css";
+import "@/app/ui/claudenav.css";
 import { inter } from "@/app/ui/fonts";
 import ResponsiveNavbar from "@/components/navbar/navbar";
 import MainNav from "@/components/main-nav/main-nav";
+import ClaudeNav from "@/components/claudenav";
 import Footer from "@/components/footer/footer";
 
 export const metadata: Metadata = {
@@ -19,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased bg-background`}>
-        <MainNav />
+        <ClaudeNav />
         {children}
         <Footer />
       </body>

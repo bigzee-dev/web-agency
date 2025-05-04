@@ -13,7 +13,7 @@ import { BsStars } from "react-icons/bs";
 
 export default function Showcase() {
   return (
-    <div className="x-padding relative isolate w-full pt-12 pb-8 md:pb-14 md:pt-16">
+    <div className="x-padding relative isolate w-full pt-12 pb-8 md:pb-14 md:pt-20">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -31,11 +31,11 @@ export default function Showcase() {
 
       <main className="max-w-7xl mx-auto w-full h-full grid grid-cols-12 gap-x-4">
         {/* heading and cta */}
-        <section className="flex flex-col gap-y-6 lg:pr-4 col-span-6">
+        <section className="flex flex-col gap-y-7 lg:pr-4 col-span-6">
           <div>
             <Link
               href="/emails"
-              className="flex justify-center items-center gap-x-3 w-max bg-primary/10 py-1 pl-1 pr-1.5 mb-7  rounded-3xl border-2 border-primary shadow-md hover:bg-primary/15"
+              className="flex justify-center items-center gap-x-3 w-max bg-primary/10 py-1 pl-1 pr-1.5 mb-7  rounded-3xl border-2 border-gray-700 shadow-md hover:bg-primary/15"
             >
               <p className="text-md text-blue-400 font-semibold radial-background border border-gray-800 rounded-3xl py-1 px-3">
                 Business Email

@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-import { NavChevron } from "./chevron";
 import { montserrat } from "@/app/ui/fonts";
 import { cairo } from "@/app/ui/fonts";
-import Image from "next/image";
+
+// components
+import NavLinks from "./navlinks";
 
 export default function MainNav() {
   useEffect(() => {
@@ -18,6 +19,14 @@ export default function MainNav() {
       navLinks.classList.toggle("active");
     });
 
+    // Close dropdown after clicking a link
+    // const dropdownItems = document.querySelectorAll(".cst-nav-dropdown-item");
+    // dropdownItems.forEach((item) => {
+    //   item.addEventListener("click", (e) => {
+    //     const dropDownMenu = document.querySelector(".cst-nav-dropdown");
+    //     dropDownMenu.classList.add("close");
+    //   });
+    // });
     // Mobile dropdown toggles
     const dropdownToggles = document.querySelectorAll(
       ".cst-nav-dropdown-toggle"
@@ -79,13 +88,12 @@ export default function MainNav() {
         <a className="cst-logo-container" href="http://localhost:3000">
           <img src="/img/just-logo.png" alt="svg" />
           <h4
-            className={` ${cairo.className} text-3xl text-gray-700 font-semibold ml-2`}
+            className={` ${cairo.className}  text-gray-700 font-semibold ml-2 cst-nav-logo`}
           >
-            Big
+            BigZee{" "}
             <span className="bg-gradient-to-r from-primary via-blue-700 to-cyan-600 text-transparent bg-clip-text">
-              Zee
-            </span>{" "}
-            Digital
+              Digital
+            </span>
           </h4>
         </a>
         {/*--The mobile menu hamburger--*/}
@@ -125,134 +133,15 @@ export default function MainNav() {
           </svg>
         </button>
         {/*--Navigation links-- */}
-        <ul className="cst-nav-nav-links">
-          <li className="cst-nav-nav-item">
-            <a
-              href="#"
-              className={` ${montserrat.className} cst-nav-nav-link cst-nav-dropdown-toggle`}
-            >
-              About Us
-              <NavChevron />
-            </a>
-            <div className="cst-nav-dropdown">
-              <a href="#" className="cst-nav-dropdown-item">
-                Web Development
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                Mobile Apps
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                UI/UX Design
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                Consulting
-              </a>
-            </div>
-          </li>
-          <li className="cst-nav-nav-item">
-            <a
-              href="#"
-              className={` ${montserrat.className} cst-nav-nav-link cst-nav-dropdown-toggle `}
-            >
-              Websites
-              <NavChevron />
-            </a>
-            <div className="cst-nav-dropdown">
-              <a href="#" className="cst-nav-dropdown-item">
-                Web Development
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                Mobile Apps
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                UI/UX Design
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                Consulting
-              </a>
-            </div>
-          </li>
-          <li className="cst-nav-nav-item">
-            <a
-              href="#"
-              className={` ${montserrat.className} cst-nav-nav-link `}
-            >
-              Email
-            </a>
-          </li>
-          <li className="cst-nav-nav-item">
-            <a
-              href="#"
-              className={` ${montserrat.className} cst-nav-nav-link cst-nav-dropdown-toggle `}
-            >
-              Domains
-              <NavChevron />
-            </a>
-            <div className="cst-nav-dropdown">
-              <a href="#" className="cst-nav-dropdown-item">
-                Software
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                Templates
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                Plugins
-              </a>
-            </div>
-          </li>
-          <li className="cst-nav-nav-item">
-            <a
-              href="#"
-              className={` ${montserrat.className} cst-nav-nav-link cst-nav-dropdown-toggle `}
-            >
-              Hosting
-              <NavChevron />
-            </a>
-            <div className="cst-nav-dropdown">
-              <a href="#" className="cst-nav-dropdown-item">
-                Web Development
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                Mobile Apps
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                UI/UX Design
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                Consulting
-              </a>
-            </div>
-          </li>
-
-          <li className="cst-nav-nav-item">
-            <a
-              href="#"
-              className={` ${montserrat.className} cst-nav-nav-link cst-nav-dropdown-toggle `}
-            >
-              Help Center
-              <NavChevron />
-            </a>
-            <div className="cst-nav-dropdown">
-              <a href="#" className="cst-nav-dropdown-item">
-                Software
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                Templates
-              </a>
-              <a href="#" className="cst-nav-dropdown-item">
-                Plugins
-              </a>
-            </div>
-          </li>
-          <li className="cst-nav-nav-item">
-            <a
-              href="#"
-              className={` ${montserrat.className} cst-nav-nav-link cst-client-login `}
-            >
-              Login
-            </a>
-          </li>
-        </ul>
+        <NavLinks />
+        <div className="cst-nav-nav-item">
+          <a
+            href="https://domains.bigzee.app/clientarea.php"
+            className={` ${montserrat.className} text-xs font-medium cst-client-login `}
+          >
+            CLIENT ZONE
+          </a>
+        </div>
       </div>
     </nav>
   );
