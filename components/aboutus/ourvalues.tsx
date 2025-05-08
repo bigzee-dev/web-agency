@@ -19,8 +19,8 @@ export default function OurValues() {
       </div>
 
       <p className="text-center text-gray-600 mb-10 max-w-4xl mx-auto">
-        Our brand's heart is a solid commitment to inclusivity and a
-        client-centric ethos. We prioritise our clients' needs while staying
+        Our brand&apos;s heart is a solid commitment to inclusivity and a
+        client-centric ethos. We prioritise our clients needs while staying
         dedicated to constant progress. Our core values include:
       </p>
 

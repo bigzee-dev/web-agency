@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { homePageheadings } from "@/app/ui/customTailwindClasses";
+import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
 import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
@@ -11,7 +11,7 @@ export default function OurProcess() {
         <div className="md:max-w-6xl mx-auto">
           <div className="max-full mx-auto flex items-center justify-center">
             <div className="flex-1">
-              <h2 className={`text-gray-900 ${homePageheadings} mb-3`}>
+              <h2 className={`text-gray-900 ${sectionHeadings} mb-3`}>
                 Our Process
               </h2>
               <h5 className="font-sans text-3xl text-secondary font-medium">

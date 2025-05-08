@@ -9,8 +9,8 @@ import { IoShieldCheckmarkSharp } from "react-icons/io5";
 
 export default function Header() {
   return (
-    <div className="relative w-full bg-rose-700/80">
-      <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/50 to-transparent">
+    <div className="relative w-full bg-rose-700/70">
+      <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/70 to-slate-700/30">
         <div className="relative isolate overflow-hidden max-w-7xl mx-auto">
           <div className="grid grid-cols-12 gap-16">
             <div className="col-span-6 relative py-14 ">
@@ -43,21 +43,21 @@ export default function Header() {
               <button className={` ${whiteButton} mt-3 bg-opacity-50`}>
                 Get Started
               </button>
-              <div className="flex items-center font-sans text-white  font-medium text-sm mt-5">
+              <div className="flex items-center font-sans text-neutral-300  font-medium text-sm mt-5">
                 <span className="mr-2">
                   <IoShieldCheckmarkSharp size="1.5em" className="" />
                 </span>
                 <span className="">7 day - money back - guarantee</span>
               </div>
             </div>
-            <div className="col-span-6 pt-14">
+            <div className="col-span-6 flex items-end">
               {" "}
               <Image
                 src="/img/emails/email1.png"
                 alt="Logo"
                 width={1000}
                 height={800}
-                className=""
+                className="object-cover"
               />
             </div>
           </div>

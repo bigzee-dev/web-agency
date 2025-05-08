@@ -1,21 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/domainsforminput";
 import { Search } from "lucide-react";
-import TypingText from "./typingtext";
-import Link from "next/link";
-
-const tlds = [
-  { name: ".com", price: 9.99, color: "text-red-400" },
-  { name: ".io", price: 39.99, color: "text-green-400" },
-  { name: ".app", price: 12.99, color: "text-purple-400" },
-  { name: ".online", price: 3.99, color: "text-yellow-400" },
-  { name: ".co.bw", price: 11.99, color: "text-green-400" },
-  //   { name: ".org", price: 12.99, color: "text-indigo-400" },
-  //   { name: ".tech", price: 39.99, color: "text-pink-400" },
-];
+import { TbAt } from "react-icons/tb";
 
 export default function DomainSearch() {
   const [domain, setDomain] = useState("");
@@ -39,16 +28,31 @@ export default function DomainSearch() {
   };
 
   return (
-    <div className="h-full flex flex-col items-center max-w-2xl mx-auto">
-      <TypingText />
-      <form onSubmit={handleRedirect} className="flex gap-2 w-full mt-4 mb-4">
+    <div className="flex-1 flex flex-col  w-full max-w-2xl">
+      <div className="flex items-center gap-4">
+        <div className="flex items-center justify-center w-8 h-8  bg-neutral-300/10  outline outline-1 outline-offset-1 outline-white/30 rounded-lg">
+          <TbAt
+            className="text-yellow-400/70"
+            size="1.25em"
+            strokeWidth="1.6"
+          />
+        </div>
+        <h4 className="font-sans text-2xl font-medium text-neutral-300">
+          Domain Name Registration
+        </h4>
+      </div>
+      <span className="font-sans font-normal text-sm text-blue-400 mt-1.5">
+        * Securing the ideal domain name is a crucial first step in establishing
+        your presence online.
+      </span>
+      <form onSubmit={handleRedirect} className="flex gap-2 w-full  mt-3 mb-4">
         <Input
           type="text"
           value={domain}
           onChange={(e) => setDomain(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="e.g mywebsite.com"
-          className="flex-grow bg-neutral-200 text-gray-800 border-primary placeholder:text-gray-500 placeholder:text-sm focus:ring focus:ring-2 focus:ring-neutral-300"
+          placeholder="e.g mybusiness.co.bw"
+          className="flex-grow bg-gray-800 text-neutral-200 border border-gray-500/70 placeholder:text-neutral-500 placeholder:text-sm focus:ring-2 focus:ring-neutral-300"
           style={{ fontSize: "1rem" }}
         />
         <Button
@@ -61,14 +65,7 @@ export default function DomainSearch() {
         </Button>
       </form>
 
-      <ul className="list-disc pl-5 font-sans mt-2 text-md text-neutral-300">
-        <li>
-          Securing the ideal domain name is a crucial first step in establishing
-          your presence online. We offer a wide variety for you to select from.
-        </li>
-      </ul>
-
-      <div className="w-full mt-7 grid grid-cols-5 sm:grid-cols-3 gap-1.5 text-center">
+      {/* <div className="w-full mt-7 grid grid-cols-3 sm:grid-cols-6 gap-1.5 text-center z-30">
         {tlds.map((tld) => (
           <Link
             href="/"
@@ -83,7 +80,7 @@ export default function DomainSearch() {
             </div>
           </Link>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

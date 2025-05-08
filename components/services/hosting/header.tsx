@@ -25,15 +25,15 @@ const offers = [
   {
     icon: <IoShieldCheckmarkSharp {...iconProps} />,
     title: "Guarantee",
-    description: "We guarantee 99.9% uptime every month",
+    description: "Guaranteed 99.9% uptime every month",
     color: "text-thatgreen",
   },
 ];
 
 export default function Header() {
   return (
-    <div className="relative w-full bg-gray-900">
-      <div className="relative isolate overflow-hidden inset-0 w-full bg-gradient-to-r from-secondary to-transparent py-14">
+    <div className="relative w-full bg-green-700/80">
+      <div className="relative isolate overflow-hidden inset-0 w-full bg-gradient-to-r from-secondary via-secondary/60 to-transparent py-14">
         {/* Blur component */}
         <div
           aria-hidden="true"
@@ -44,10 +44,10 @@ export default function Header() {
               clipPath:
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
             }}
-            className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#477cf0] to-[#5b78a8] opacity-20"
+            className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#477cf0] to-[#5b78a8] opacity-25"
           />
         </div>
-        <div className="grid grid-cols-12 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-12 gap-12 max-w-7xl mx-auto">
           <div className="col-span-6">
             {/* Shared hosting badge */}
             <div className="inline-block bg-neutral-100 px-6 py-2 rounded-md mb-6">
@@ -63,29 +63,32 @@ export default function Header() {
             </h1>
 
             <div className="mt-6">
-              <p
+              {/* <p
                 className={` ${montserrat.className} text-xl font-bold text-slate-400 tracking-wide`}
               >
                 Every hosting plan offers
-              </p>
-              <div className="grid grid-cols-2 gap-y-5 gap-x-12 mt-2  pt-8 border-t border-gray-500">
+              </p> */}
+              <div className="grid grid-cols-2 gap-y-5 gap-x-5 mt-2">
                 {offers.map((offer) => (
-                  <div className="flex flex-col gap-1.5" key={offer.title}>
+                  <div
+                    className="flex flex-col gap-1.5 bg-black/10 py-4 px-5 rounded-2xl border border-gray-300/20"
+                    key={offer.title}
+                  >
                     <h6 className="flex items-center gap-2 text-neutral-200/90 tracking-wide font-medium">
                       <div
-                        className={` ${offer.color} p-3  bg-white/10 rounded-full`}
+                        className={` ${offer.color} p-2.5  bg-white/5 rounded-full mr-0.5 border border-gray-300/20`}
                       >
                         {offer.icon}
                       </div>
 
                       {offer.title}
                     </h6>
-                    <p className="font-sans text-sm text-neutral-300/80 leading-relaxed">
+                    <p className="font-sans text-sm text-neutral-300/80 leading-relaxed ml-1">
                       {offer.description}
                     </p>
                   </div>
                 ))}
-                <div className="flex items-center justify-start">
+                <div className="flex flex-col items-center justify-center gap-3">
                   <button className="flex justify-center items-center gap-2  bg-neutral-100 py-2 px-3 rounded-lg min-w-52 outline outline-1 outline-offset-1 outline-neutral-300">
                     <span className="font-sans text-secondary font-medium">
                       Compare Plans
@@ -94,6 +97,12 @@ export default function Header() {
                       </span>
                     </span>
                   </button>
+                  <div className="flex items-center font-sans text-neutral-300  font-medium text-sm">
+                    <span className="mr-2">
+                      <IoShieldCheckmarkSharp size="1.5em" className="" />
+                    </span>
+                    <span className="">7 day - money back - guarantee</span>
+                  </div>
                 </div>
               </div>
 
@@ -122,14 +131,14 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="col-span-4 col-start-8 flex items-center justify-center">
+          <div className="col-span-5 col-start-8 flex items-center justify-center">
             {" "}
             <Image
-              src="/img/hosting/hosting-hero.png"
+              src="/svg/hosting/hosting-servers.svg"
               alt="Logo"
               width={1000}
               height={1000}
-              className="object-contain border-8 border-slate-400 rounded-tl-3xl rounded-br-3xl"
+              className="object-contain"
             />
           </div>
         </div>

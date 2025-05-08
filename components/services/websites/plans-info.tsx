@@ -1,10 +1,7 @@
 import { montserrat } from "@/app/ui/fonts";
 import { Button } from "@/components/ui/button";
 import { FaCheck } from "react-icons/fa6";
-import {
-  btnDimensions,
-  homePageheadings,
-} from "@/app/ui/customTailwindClasses";
+import { btnDimensions, sectionHeadings } from "@/app/ui/customTailwindClasses";
 import { FaCircleQuestion } from "react-icons/fa6";
 import { CgNotes } from "react-icons/cg";
 import { Clock8 } from "lucide-react";
@@ -50,7 +47,7 @@ export default function PlansInfo() {
         />
       </div>
       <section>
-        <h4 className={`text-gray-900 ${homePageheadings} mb-6`}>
+        <h4 className={`text-gray-900 ${sectionHeadings} mb-6`}>
           Pricing Plans
         </h4>
       </section>

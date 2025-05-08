@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { montserrat } from "@/app/ui/fonts";
-import { Button } from "@/components/ui/button";
 import { btnDimensions } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 

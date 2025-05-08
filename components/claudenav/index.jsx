@@ -252,7 +252,7 @@ export default function ClaudeNav() {
           </li>
           <li className="nav-item">
             <Link
-              href="/email"
+              href="/emails"
               className={` ${montserrat.className} nav-link `}
             >
               {" "}

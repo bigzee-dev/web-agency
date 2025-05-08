@@ -108,7 +108,7 @@ export function ClientTestimonialCarousel() {
 
         <div className="w-full md:w-2/3 flex flex-col justify-center">
           <blockquote className="text-xl md:text-xl text-gray-700 fobt-medium italic mb-8">
-            "{currentTestimonial.quote}"
+            &quot;{currentTestimonial.quote}&quot;
           </blockquote>
           <div>
             <h3 className="font-sans text-xl md:text-xl font-bold text-gray-900">

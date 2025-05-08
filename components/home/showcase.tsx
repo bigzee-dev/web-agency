@@ -58,9 +58,10 @@ export default function Showcase() {
           </div>
           <div className="font-sans text-md  text-gray-700 md:w-[90%] leading-6">
             <p>
-              At <strong>BigZee Digital</strong> we help businesses and
-              organisations expand their online reach, work smarter and connect
-              with a wider audience.
+              At <strong>BigZee Digital</strong> we empower businesses and
+              organisations to expand their online reach and connect with a
+              wider audience. Our main objective is to help brands establish a
+              successful digital presence.
             </p>
           </div>
           {/*  <span aria-hidden="true"> →</span> */}

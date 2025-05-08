@@ -6,7 +6,7 @@ export default function AboutUsHero() {
       <h1
         className={` ${montserrat.className} max-w-6xl text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight`}
       >
-        We're An{" "}
+        We&apos;re An{" "}
         <span className="inline-block bg-[#30b8e6] text-white px-4 py-1 rounded-md">
           Independent
         </span>{" "}
