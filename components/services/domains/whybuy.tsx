@@ -26,7 +26,7 @@ export default function WhyBuy() {
             </h3>
             <p className="font-sans text-md text-gray-700">
               Our Customer Success team is here for you any time of the day.
-              We've made our domain name registration process as easy as
+              We&apos;ve made our domain name registration process as easy as
               possible, but everyone needs a helping hand sometimes. Just
               contact us – we will be happy to assist.
             </p>
@@ -57,9 +57,9 @@ export default function WhyBuy() {
               Instant setup and easy control
             </h3>
             <p className="font-sans text-md text-gray-700">
-              Once you complete your domain search, we'll guide you through the
-              website domain registration process. It only takes a few clicks,
-              and no technical knowledge is required.
+              Once you complete your domain search, we&apos;ll guide you through
+              the website domain registration process. It only takes a few
+              clicks, and no technical knowledge is required.
             </p>
           </div>
         </div>

@@ -24,7 +24,7 @@ export default function TldList() {
       <h1
         className={` ${montserrat.className} text-center text-3xl font-bold text-gray-800 mb-8 `}
       >
-        Checkout our List of available TLD's
+        Checkout our List of available TLD&apos;s
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 max-w-7xl mx-auto">
         {tlds.map((tld) => (

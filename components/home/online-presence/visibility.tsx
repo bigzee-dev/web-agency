@@ -1,5 +1,4 @@
 import { montserrat } from "@/app/ui/fonts";
-import Image from "next/image";
 import { HiOutlineServerStack } from "react-icons/hi2";
 import { TbMailCheck } from "react-icons/tb";
 import { TbAt } from "react-icons/tb";

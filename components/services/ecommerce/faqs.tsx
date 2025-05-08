@@ -13,7 +13,7 @@ export default function FaqsEcommerce() {
           Frequently asked questions
         </h3>
         <p className="text-gray-600 mt-4">
-          Can’t find the answer you’re looking for? Reach out to our{" "}
+          Can&apos;t find the answer you’re looking for? Reach out to our{" "}
           <span className="text-blue-700">customer support</span> team.
         </p>
       </div>
@@ -40,7 +40,7 @@ export default function FaqsEcommerce() {
           <AccordionItem value="item-3">
             <AccordionTrigger>Is it animated?</AccordionTrigger>
             <AccordionContent>
-              Yes. It's animated by default, but you can disable it if you
+              Yes. It&apos;s animated by default, but you can disable it if you
               prefer.
             </AccordionContent>
           </AccordionItem>

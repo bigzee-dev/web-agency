@@ -1,14 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { montserrat } from "@/app/ui/fonts";
-import {
-  btnDimensions,
-  grayButton,
-  pageHeadings,
-  primaryButton,
-  whiteButton,
-} from "@/app/ui/customTailwindClasses";
-import { IoShieldCheckmarkSharp, IoArrowForwardCircle } from "react-icons/io5";
+
+import { pageHeadings, primaryButton } from "@/app/ui/customTailwindClasses";
+import { IoArrowForwardCircle } from "react-icons/io5";
 import { BsStars } from "react-icons/bs";
 
 export default function Showcase() {

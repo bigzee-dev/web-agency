@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/domainsforminput";
 import { Search } from "lucide-react";
@@ -64,23 +64,6 @@ export default function DomainSearch() {
           Search
         </Button>
       </form>
-
-      {/* <div className="w-full mt-7 grid grid-cols-3 sm:grid-cols-6 gap-1.5 text-center z-30">
-        {tlds.map((tld) => (
-          <Link
-            href="/"
-            key={tld.name}
-            className="flex flex-col items-center justify-center pt-0.5 pb-1 bg-neutral-300/10 rounded-lg"
-          >
-            <span className={`${tld.color} text-lg font-semibold`}>
-              {tld.name}
-            </span>
-            <div className="text-xs text-neutral-300 font-medium">
-              ${tld.price.toFixed(2)}/yr
-            </div>
-          </Link>
-        ))}
-      </div> */}
     </div>
   );
 }

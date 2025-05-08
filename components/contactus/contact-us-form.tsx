@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { IoIosSend } from "react-icons/io";
@@ -113,23 +112,7 @@ export default function ContactUsForm() {
                 />
               </div>
             </div>
-            {/* <div className="col-span-6">
-            <label
-              htmlFor="email"
-              className="block text-sm/6 font-semibold text-neutral-400"
-            >
-              Email
-            </label>
-            <div className="mt-2.5">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-white/15 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-              />
-            </div>
-          </div> */}
+
             <div className="col-span-12">
               <label htmlFor="message" className={labelStyles}>
                 Message <span className="text-red-600"> *</span>

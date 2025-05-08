@@ -1,6 +1,6 @@
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, Lock } from "lucide-react";
-import { FaCheck } from "react-icons/fa6";
+// import { Badge } from "@/components/ui/badge";
+import { ChevronRight } from "lucide-react";
+// import { FaCheck } from "react-icons/fa6";
 import Link from "next/link";
 import { montserrat } from "@/app/ui/fonts";
 
@@ -10,12 +10,6 @@ type contentProps = {
   text: string;
   link: string;
 };
-
-const features = [
-  "Visually stunning, responsive and secure websites",
-  "Expert web development services",
-  "FREE website migration",
-];
 
 const headingStyles =
   "text-sm text-thatgreen font-semibold bg-thatgreen/20 w-max py-1 px-3 rounded-2xl mb-7 uppercase";

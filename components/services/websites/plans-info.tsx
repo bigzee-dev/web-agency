@@ -114,8 +114,7 @@ export default function PlansInfo() {
 
             <p className="mt-6 font-sans text-gray-600 text-base leading-relaxed">
               We developed a custom CMS to power their blog with and optimised
-              their site to rank higher for the keywords "Gary Vee" and "Tony
-              Robbins".
+              their site to rank higher for the keywords.
             </p>
 
             <Button
@@ -140,14 +139,6 @@ export default function PlansInfo() {
                   </li>
                 ))}
               </div>
-              {/* <p className="text-gray-600 italic">
-                "Working with Studio, we felt more like a partner than a
-                customer. They really resonated with our mission to change the
-                way people convince their parents to cash out their pensions."
-              </p>
-              <footer className="mt-4 font-medium">
-                Debra Fiscal, CEO of FamilyFund
-              </footer> */}
             </div>
           </div>
         </div>
@@ -216,8 +207,7 @@ export default function PlansInfo() {
 
             <p className="mt-6 font-sans text-gray-600 text-base leading-relaxed">
               We developed a custom CMS to power their blog with and optimised
-              their site to rank higher for the keywords "Gary Vee" and "Tony
-              Robbins".
+              their site to rank higher for the keywords.
             </p>
 
             <Button
@@ -242,14 +232,6 @@ export default function PlansInfo() {
                   </li>
                 ))}
               </div>
-              {/* <p className="text-gray-600 italic">
-                "Working with Studio, we felt more like a partner than a
-                customer. They really resonated with our mission to change the
-                way people convince their parents to cash out their pensions."
-              </p>
-              <footer className="mt-4 font-medium">
-                Debra Fiscal, CEO of FamilyFund
-              </footer> */}
             </div>
           </div>
         </div>
@@ -318,8 +300,7 @@ export default function PlansInfo() {
 
             <p className="mt-6 font-sans text-gray-600 text-base leading-relaxed">
               We developed a custom CMS to power their blog with and optimised
-              their site to rank higher for the keywords "Gary Vee" and "Tony
-              Robbins".
+              their site to rank higher for the keywords.
             </p>
 
             <Button
@@ -344,14 +325,6 @@ export default function PlansInfo() {
                   </li>
                 ))}
               </div>
-              {/* <p className="text-gray-600 italic">
-                "Working with Studio, we felt more like a partner than a
-                customer. They really resonated with our mission to change the
-                way people convince their parents to cash out their pensions."
-              </p>
-              <footer className="mt-4 font-medium">
-                Debra Fiscal, CEO of FamilyFund
-              </footer> */}
             </div>
           </div>
         </div>
