@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { cairo, montserrat } from "@/app/ui/fonts";
-import { NavChevron } from "../main-nav/chevron"; // Assuming this is correct path
+import { NavChevron } from "./chevron"; // Assuming this is correct path
 import Link from "next/link";
 
 export default function ClaudeNav() {
