@@ -13,3 +13,5 @@ export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 export const grayButton = ` ${btnDimensions} text-white bg-gray-800`;
 
 export const whiteButton = ` ${btnDimensions} text-secondary bg-background`;
+
+export const greenButton = ` ${btnDimensions} text-white bg-cyan-500`;

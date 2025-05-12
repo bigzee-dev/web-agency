@@ -2,22 +2,6 @@ import { FaFacebook } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Image from "next/image";
 
-const iconProps = {
-  className: "text-gray-400",
-  size: "1.4em",
-};
-
-const links = [
-  {
-    name: "facebook",
-    icon: <FaFacebook {...iconProps} />,
-  },
-  {
-    name: "whatsapp",
-    icon: <IoLogoWhatsapp {...iconProps} />,
-  },
-];
-
 export default function Header() {
   return (
     <div className="w-full isolate bg-gray-900 overflow-hidden py-16">

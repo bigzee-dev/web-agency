@@ -4,16 +4,6 @@ import { useForm } from "react-hook-form";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { IoIosSend } from "react-icons/io";
 
-type ContactUs = {
-  preventDefault: () => void;
-  target: {
-    name: { value: string };
-    email: { value: string };
-    company: { value: string };
-    message: { value: string };
-  };
-};
-
 export default function ContactUsForm() {
   const { register, handleSubmit, setValue } = useForm<FormData>();
 

@@ -26,7 +26,7 @@ const config: Config = {
       },
       colors: {
         primary: "#0e5077" /*#2b5f91#005878*/,
-        secondary: "#0f3551",
+        secondary: "#001238" /*#0f3551*/,
         thatgreen: "#33bff2",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

@@ -10,14 +10,14 @@ import SearchDomainForm from "./searchdomainform";
 export default function Header() {
   return (
     <div className="relative w-full bg-purple-900/50">
-      <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/60 to-transparent pt-14 pb-2">
+      <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/60 to-transparent pt-12 pb-2">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-12 gap-10 max-full">
             <div className="col-span-6">
               {/* Domains badge */}
-              <div className="inline-block bg-neutral-100 px-6 py-2 rounded-md mb-6">
-                <span className="font-bold text-primary text-2xl tracking-wide">
-                  Domains
+              <div className="inline-block mb-1">
+                <span className="font-semibold text-neutral-300 tracking-widest">
+                  DOMAIN NAMES
                 </span>
               </div>
               {/* Main heading */}

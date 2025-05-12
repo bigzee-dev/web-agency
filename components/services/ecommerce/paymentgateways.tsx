@@ -1,5 +1,3 @@
-import { ArrowUpRight, Edit3, RefreshCw, TicketIcon } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
 

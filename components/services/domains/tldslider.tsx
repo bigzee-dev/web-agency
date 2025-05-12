@@ -27,7 +27,7 @@ export default function TldSlider() {
               Powering the best teams
             </p>
           </div>
-          <div className="relative py-6 md:w-[calc(100%-11rem)]">
+          <div className="relative py-4 md:w-[calc(100%-11rem)]">
             <InfiniteSlider speedOnHover={20} speed={30} gap={112}>
               {availableTLDs.map((tld) => (
                 <div key={tld.extension} className=" ">

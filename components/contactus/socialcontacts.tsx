@@ -24,8 +24,11 @@ export default function SocialContacts() {
         <div className="flex flex-col gap-y-3 col-span-10">
           <h6 className="text-neutral-300 text-xl font-semibold">Socials</h6>
           <div className="max-w-lg grid grid-cols-1 gap-x-6 md:grid-cols-2 mt-auto">
-            {links.map((link) => (
-              <button className="flex justify-center items-center gap-2  bg-neutral-400/30 py-2 px-3  outline outline-1 outline-offset-1 outline-white/50 rounded-lg min-w-52">
+            {links.map((link, index) => (
+              <button
+                key={index}
+                className="flex justify-center items-center gap-2  bg-neutral-400/30 py-2 px-3  outline outline-1 outline-offset-1 outline-white/50 rounded-lg min-w-52"
+              >
                 {link.icon}
 
                 <span className="font-sans text-md text-neutral-100 font-medium">

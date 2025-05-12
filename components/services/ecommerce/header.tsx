@@ -20,7 +20,7 @@ export default function EcommerceHeeader() {
         <div className="col-span-1 bg-gradient-to-r from-secondary to-transparent"></div>
         <div className="col-span-1 bg-transparent"></div>
       </div>
-      <div className="absolute inset-0 max-w-7xl mx-auto py-14">
+      <div className="absolute inset-0 max-w-7xl mx-auto py-12">
         {/* E-Commerce badge */}
         <div className="inline-block bg-neutral-100 px-6 py-2 rounded-md mb-6">
           <span className="font-bold text-primary text-2xl tracking-wide">
