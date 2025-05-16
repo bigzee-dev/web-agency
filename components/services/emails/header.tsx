@@ -10,7 +10,7 @@ import { IoShieldCheckmarkSharp } from "react-icons/io5";
 
 export default function Header() {
   return (
-    <div className="relative w-full bg-rose-700/70">
+    <div className="relative w-full bg-rose-700/60">
       <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/70 to-slate-700/30">
         <div className="relative isolate overflow-hidden max-w-7xl mx-auto">
           <div className="grid grid-cols-12 gap-16">

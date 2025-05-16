@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/domainsforminput";
 import { Search } from "lucide-react";
 import { TbAt } from "react-icons/tb";
+import { AtSign, type LucideIcon } from "lucide-react";
 
 export default function DomainSearch() {
   const [domain, setDomain] = useState("");
@@ -29,13 +30,9 @@ export default function DomainSearch() {
 
   return (
     <div className="flex-1 flex flex-col  w-full max-w-2xl">
-      <div className="flex items-center gap-4">
-        <div className="flex items-center justify-center w-8 h-8  bg-neutral-300/10  outline outline-1 outline-offset-1 outline-white/30 rounded-lg">
-          <TbAt
-            className="text-yellow-400/70"
-            size="1.25em"
-            strokeWidth="1.6"
-          />
+      <div className="flex items-center gap-2">
+        <div className="flex items-center justify-center p-2  bg-yellow-500/15  rounded-lg">
+          <AtSign className="text-yellow-500/75 h-6 w-6" />
         </div>
         <h4 className="font-sans text-2xl font-medium text-neutral-300">
           Domain Name Registration
@@ -45,7 +42,7 @@ export default function DomainSearch() {
         * Securing the ideal domain name is a crucial first step in establishing
         your presence online.
       </span>
-      <form onSubmit={handleRedirect} className="flex gap-2 w-full  mt-3 mb-4">
+      <form onSubmit={handleRedirect} className="flex gap-2 w-full  mt-5">
         <Input
           type="text"
           value={domain}

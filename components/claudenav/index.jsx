@@ -215,12 +215,9 @@ export default function ClaudeNav() {
           <img src="/img/just-logo.png" alt="BigZee Digital Logo" />{" "}
           {/* Added alt text */}
           <h4
-            className={` ${cairo.className}  text-gray-700 font-semibold ml-2 cst-nav-logo`}
+            className={` ${cairo.className} font-light   text-gray-700 ml-2 cst-nav-logo `}
           >
-            BigZee{" "}
-            <span className="bg-gradient-to-r from-primary via-blue-700 to-cyan-600 text-transparent bg-clip-text">
-              Digital
-            </span>
+            delta<span className="font-semibold text-gray-800">worx</span>
           </h4>
         </Link>
         <button className="hamburger" aria-label="Open menu">
@@ -246,7 +243,7 @@ export default function ClaudeNav() {
                 Website Development
               </Link>
               <Link href="/ecommerce" className="dropdown-item">
-                Ecommerce
+                Ecommerce Stores
               </Link>
             </div>
           </li>

@@ -7,6 +7,7 @@ import Link from "next/link";
 // components
 import DomainSearch from "./searchdomain";
 import Slider from "./slider";
+import Cards from "./cards";
 
 const iconProps = {
   size: "1.25em",
@@ -47,7 +48,7 @@ const cardButtons =
 
 export default function Visibility() {
   return (
-    <main className="relative isolate overflow-hidden  w-full py-4 md:pt-16 md:pb-2 bg-gray-900 shadow-lg">
+    <main className="relative isolate overflow-hidden  w-full py-4 md:pt-20 md:pb-2 bg-gray-900 shadow-lg">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -62,27 +63,27 @@ export default function Visibility() {
         />
       </div>
 
-      <div className="flex flex-col gap-y-8 w-full">
+      <div className="flex flex-col  w-full">
         {/* Heading */}
         <div className="mx-auto max-w-lg">
           {/* <h2 className="text-center text-base/7 font-smedium text-neutral-300/80">
             Increase Your Visibility
           </h2> */}
           <p
-            className={` ${montserrat.className} text-center text-blue-400 text-4xl font-semibold leading-9 tracking-tight`}
+            className={` ${montserrat.className} text-center text-neutral-300 text-4xl font-semibold leading-9 tracking-tight`}
           >
             We have everything you need to elevate your online presence.
           </p>
         </div>
         {/* Search Domain */}
-        <div className="flex items-center gap-x-4 max-w-7xl mx-auto mt-10 border-t  border-gray-500/50 pt-9">
+        <div className="flex items-center gap-x-4 max-w-7xl mx-auto mt-20 border-t  border-gray-500/50 py-9">
           <DomainSearch />
           <Slider />
         </div>
 
         {/* cards */}
-        <div className="w-full max-w-7xl mx-auto border-t  border-gray-500/50 py-10">
-          <div className="grid md:grid-cols-3 gap-x-14 max-w-7xl mx-auto">
+        <div className="w-full max-w-7xl mx-auto border-t  border-gray-500/50">
+          {/* <div className="grid md:grid-cols-3 gap-x-14 max-w-7xl mx-auto">
             {cards.map((card, index) => (
               <div key={index} className="flex flex-col gap-4 md:gap-y-4">
                 <div className="flex items-center gap-4">
@@ -113,7 +114,8 @@ export default function Visibility() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+          <Cards />
         </div>
       </div>
     </main>

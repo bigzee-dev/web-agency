@@ -32,7 +32,7 @@ const offers = [
 
 export default function Header() {
   return (
-    <div className="relative w-full bg-green-700/80">
+    <div className="relative w-full bg-green-700/70">
       <div className="relative isolate overflow-hidden inset-0 w-full bg-gradient-to-r from-secondary via-secondary/70 to-transparent py-12">
         <div className="grid grid-cols-12 gap-12 max-w-7xl mx-auto">
           <div className="col-span-6">
