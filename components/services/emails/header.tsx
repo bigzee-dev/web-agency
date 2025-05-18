@@ -16,14 +16,14 @@ export default function Header() {
           <div className="grid grid-cols-12 gap-16">
             <div className="col-span-6 relative py-12 ">
               {/* Email badge */}
-              <div className="inline-block mb-1">
+              <div className="inline-block">
                 <span className="font-semibold text-neutral-300 tracking-widest">
                   EMAIL
                 </span>
               </div>
               {/* Main heading */}
               <h1
-                className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 leading-tight`}
+                className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 mt-3 leading-tight`}
               >
                 Get a Professional Email address
               </h1>
@@ -46,7 +46,7 @@ export default function Header() {
                 </p>
               </div>
 
-              <button className={` ${greenButton} mt-3 `}>Get Started</button>
+              <button className={` ${whiteButton} mt-3 `}>Get Started</button>
               <div className="flex items-center font-sans text-neutral-400  font-medium text-sm mt-5">
                 <span className="mr-2">
                   <IoShieldCheckmarkSharp size="1.5em" className="" />

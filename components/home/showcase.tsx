@@ -52,10 +52,9 @@ export default function Showcase() {
           </div>
           <div className="font-sans text-md  text-gray-700 md:w-[90%] leading-6">
             <p>
-              At <strong>BigZee Digital</strong> we empower businesses and
-              organisations to expand their online reach and connect with a
-              wider audience. Our main objective is to help brands establish a
-              successful digital presence.
+              Deltaworx empowers businesses and organisations to grow online by
+              helping them reach a wider audience and build a powerful digital
+              presence that drives results.
             </p>
           </div>
           {/*  <span aria-hidden="true"> →</span> */}
@@ -66,7 +65,7 @@ export default function Showcase() {
               </Link>
               <Link
                 href="#"
-                className="font-sans text-gray-700 font-medium ml-4"
+                className="font-sans text-gray-800 font-medium ml-4"
               >
                 About Us <span aria-hidden="true"> →</span>
               </Link>

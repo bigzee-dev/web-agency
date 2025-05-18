@@ -17,24 +17,24 @@ const availableTLDs: DomainTLD[] = [
   { extension: "net", price: 8.95 },
 ];
 
-export default function Slider() {
+export default function TldSlider() {
   return (
-    <section className="overflow-hidden flex-1  pl-2">
-      <div className="group relative m-auto max-w-7xl">
+    <section className="overflow-hidden">
+      <div className="group relative w-full">
         <div className="flex flex-col items-center md:flex-row">
-          <div className="md:max-w-44 md:border-r md:border-gray-400/70 md:pr-6">
-            {/* <p className="text-end text-sm text-slate-400">
+          {/* <div className="md:max-w-44 md:border-r md:border-gray-400/70 md:pr-6">
+            <p className="text-end text-sm text-slate-400">
               Powering the best teams
-            </p> */}
-          </div>
-          <div className="relative py-6 md:w-[calc(100%-1rem)] border-l border-gray-500/50">
+            </p>
+          </div> */}
+          <div className="relative pt-3">
             <InfiniteSlider speedOnHover={20} speed={30} gap={112}>
               {availableTLDs.map((tld) => (
                 <div key={tld.extension} className=" ">
-                  <div className="text-slate-300 font-semibold">
+                  <div className="text-sm text-slate-300 font-semibold">
                     .{tld.extension}
                   </div>
-                  <div className="font-sans text-neutral-300/80 text-md">
+                  <div className="font-sans text-neutral-300/80 text-sm">
                     P{tld.price}/year
                   </div>
                 </div>

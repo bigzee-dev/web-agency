@@ -21,19 +21,19 @@ export default function EcommerceHeeader() {
         <div className="col-span-1 bg-transparent"></div>
       </div>
       <div className="absolute inset-0 max-w-7xl mx-auto py-12">
-        {/* E-Commerce badge */}
-        <div className="inline-block bg-neutral-100 px-6 py-2 rounded-md mb-6">
-          <span className="font-bold text-primary text-2xl tracking-wide">
-            E-Commerce
+        {/* Ecommerce badge */}
+        <div className="inline-block">
+          <span className="font-semibold text-neutral-300 tracking-widest">
+            ECOMMERCE
           </span>
         </div>
 
         {/* Main heading */}
         <h1
-          className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 leading-tight`}
+          className={` ${montserrat.className} max-w-3xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 mt-3 leading-tight`}
         >
-          Generate more sales on your website with user-focused design and
-          functionality.
+          We Build Powerful E-Commerce Websites That Help You Sell More and Grow
+          Faster
         </h1>
 
         {/* Scroll down indicator */}

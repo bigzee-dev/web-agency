@@ -29,20 +29,20 @@ export default function DomainSearch() {
   };
 
   return (
-    <div className="flex-1 flex flex-col  w-full max-w-2xl">
+    <div className="flex-1 flex flex-col  w-full">
       <div className="flex items-center gap-2">
-        <div className="flex items-center justify-center p-2  bg-yellow-500/15  rounded-lg">
+        <div className="flex items-center justify-center p-2  bg-yellow-500/10  rounded-lg">
           <AtSign className="text-yellow-500/75 h-6 w-6" />
         </div>
         <h4 className="font-sans text-2xl font-medium text-neutral-300">
           Domain Name Registration
         </h4>
       </div>
-      <span className="font-sans font-normal text-sm text-blue-400 mt-1.5">
+      <span className="font-sans font-normal text-sm text-blue-400 mt-4">
         * Securing the ideal domain name is a crucial first step in establishing
         your presence online.
       </span>
-      <form onSubmit={handleRedirect} className="flex gap-2 w-full  mt-5">
+      <form onSubmit={handleRedirect} className="flex gap-2 w-full mt-2">
         <Input
           type="text"
           value={domain}

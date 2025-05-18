@@ -4,6 +4,7 @@ import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { BsLightningChargeFill } from "react-icons/bs";
 import Image from "next/image";
 import { color } from "framer-motion";
+import { whiteButton } from "@/app/ui/customTailwindClasses";
 
 const iconProps = {
   size: "1.4em",
@@ -33,18 +34,18 @@ const offers = [
 export default function Header() {
   return (
     <div className="relative w-full bg-green-700/70">
-      <div className="relative isolate overflow-hidden inset-0 w-full bg-gradient-to-r from-secondary via-secondary/70 to-transparent py-12">
+      <div className="relative isolate overflow-hidden inset-0 w-full bg-gradient-to-r from-secondary via-secondary/75 to-transparent py-12">
         <div className="grid grid-cols-12 gap-12 max-w-7xl mx-auto">
           <div className="col-span-6">
             {/* Shared hosting badge */}
-            <div className="inline-block mb-1">
+            <div className="inline-block">
               <span className="font-semibold text-neutral-300 tracking-widest">
                 SHARED WEB HOSTING
               </span>
             </div>
             {/* Main heading */}
             <h1
-              className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 leading-tight`}
+              className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 mt-3 leading-tight`}
             >
               Top quality web hosting plans
             </h1>
@@ -74,9 +75,7 @@ export default function Header() {
                 ))}
               </div>
 
-              <button className="flex justify-center items-center gap-2  bg-cyan-500 font-sans text-white font-medium  py-2 px-3 rounded-lg min-w-52 mt-8">
-                Compare Plans
-              </button>
+              <button className={` ${whiteButton} mt-6`}>Compare Plans</button>
 
               <div className="flex items-center font-sans text-neutral-400  font-medium text-sm mt-4">
                 <span className="mr-2">

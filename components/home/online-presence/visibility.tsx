@@ -48,7 +48,7 @@ const cardButtons =
 
 export default function Visibility() {
   return (
-    <main className="relative isolate overflow-hidden  w-full py-4 md:pt-20 md:pb-2 bg-gray-900 shadow-lg">
+    <main className="x-padding relative isolate overflow-hidden  w-full py-4 md:pt-20 md:pb-20 bg-gray-900 shadow-lg">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -75,14 +75,9 @@ export default function Visibility() {
             We have everything you need to elevate your online presence.
           </p>
         </div>
-        {/* Search Domain */}
-        <div className="flex items-center gap-x-4 max-w-7xl mx-auto mt-20 border-t  border-gray-500/50 py-9">
-          <DomainSearch />
-          <Slider />
-        </div>
 
         {/* cards */}
-        <div className="w-full max-w-7xl mx-auto border-t  border-gray-500/50">
+        <div className=" grid grid-cols-2 w-full max-w-7xl mx-auto mt-20">
           {/* <div className="grid md:grid-cols-3 gap-x-14 max-w-7xl mx-auto">
             {cards.map((card, index) => (
               <div key={index} className="flex flex-col gap-4 md:gap-y-4">
@@ -115,6 +110,11 @@ export default function Visibility() {
               </div>
             ))}
           </div> */}
+          {/* Search Domain */}
+          <div className="col-span-1 flex flex-col px-16 py-9  bg-neutral-300/10 border-r border-gray-500/50">
+            <DomainSearch />
+            <Slider />
+          </div>
           <Cards />
         </div>
       </div>

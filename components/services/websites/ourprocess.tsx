@@ -15,7 +15,8 @@ export default function OurProcess() {
                 Our Process
               </h2>
               <h5 className="font-sans text-3xl text-secondary font-medium">
-                Crafting Scalable & High-Performance Websites
+                From idea to launch, our process gets your website online — fast
+                and flawlessly.
               </h5>
             </div>
 

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { montserrat } from "@/app/ui/fonts";
+import { whiteButton } from "@/app/ui/customTailwindClasses";
 
 export default function Websites() {
   return (
@@ -19,10 +20,10 @@ export default function Websites() {
         <div className="col-span-1 bg-secondary"></div>
         <div className="col-span-1 bg-transparent"></div>
       </div>
-      <div className="absolute inset-0 w-full max-w-7xl mx-auto py-12 pr-12">
-        <div className="w-[50%]">
+      <div className="absolute inset-0 w-full max-w-7xl mx-auto py-12">
+        <div className="w-[50%] pr-12">
           {/* Websites badge */}
-          <div className="inline-block mb-1">
+          <div className="inline-block">
             <span className="font-semibold text-neutral-300 tracking-widest">
               WEBSITES
             </span>
@@ -30,21 +31,17 @@ export default function Websites() {
 
           {/* Main heading */}
           <h1
-            className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 leading-tight`}
+            className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 leading-tight mt-3`}
           >
-            Generate more sales on your website with user-focused design and
-            functionality.
+            We Develop Websites that Deliver Results
           </h1>
-
-          {/* Scroll down indicator */}
-          <div className="absolute bottom-12 left-1/4 transform -translate-x-1/2 flex flex-col items-center">
-            <div className="border-2 border-white/70 rounded-full w-8 h-12 flex items-center justify-center mb-2">
-              <ChevronDown className="text-white w-5 h-5 animate-bounce" />
-            </div>
-            <span className="font-sans text-white text-sm">
-              Scroll Down to learn more
-            </span>
-          </div>
+          <p className="font-sans text-neutral-300 text-md mt-8">
+            We develop modern websites tailored to your needs — whether
+            it&apos;s a business site, a content hub, or an informational
+            platform. From design to deployment, we make sure your site looks
+            great and works flawlessly across all devices.
+          </p>
+          <button className={` ${whiteButton} mt-7 `}>Get Started</button>
         </div>
       </div>
     </div>

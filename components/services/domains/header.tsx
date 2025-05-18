@@ -15,14 +15,14 @@ export default function Header() {
           <div className="grid grid-cols-12 gap-10 max-full">
             <div className="col-span-6">
               {/* Domains badge */}
-              <div className="inline-block mb-1">
+              <div className="inline-block">
                 <span className="font-semibold text-neutral-300 tracking-widest">
                   DOMAIN NAMES
                 </span>
               </div>
               {/* Main heading */}
               <h1
-                className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 leading-tight`}
+                className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 mt-3 leading-tight`}
               >
                 Search for and register a domain in minutes
               </h1>

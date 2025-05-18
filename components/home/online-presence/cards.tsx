@@ -56,57 +56,46 @@ export default function Home() {
   ];
 
   return (
-    <div className="  flex items-center justify-center">
-      <div className="max-w-7xl w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 py-6 md:py-10 relative">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className={clsx(
-                "pr-4",
-                (index === 0 || index === 1) && "border-r border-r-gray-500/50"
-              )}
-            >
-              <div className="flex flex-col gap-y-4 h-full">
-                <div className="flex items-center gap-x-2">
-                  <div
-                    className={` ${card.backgroundColor} inline-flex items-center justify-center p-2  rounded-lg `}
-                  >
-                    <card.icon className={`h-6 w-6 ${card.iconColor} `} />
-                  </div>
-                  <h2 className="font-sans text-2xl font-medium text-neutral-300">
-                    {card.title}
-                  </h2>
-                </div>
-
-                <p className="font-sans text-md text-neutral-300/80">
-                  {card.description}
-                </p>
-                <div className="mt-auto flex flex-wrap gap-2">
-                  {card.links.map((link, linkIndex) => (
-                    <Link
-                      key={linkIndex}
-                      href={link.href}
-                      className="font-sans inline-flex px-4 py-1.5 bg-gray-800/70 text-blue-400 border border-blue-400/50 rounded-md hover:bg-gray-700 transition-colors"
-                    >
-                      {link.text}
-                    </Link>
-                  ))}
-                </div>
+    <>
+      {cards.map((card, index) => (
+        <div
+          key={index}
+          className={clsx(
+            "col-span-1 py-9 px-16",
+            index === 1 && "border-r border-gray-500/50",
+            index === 2 && "bg-neutral-300/10",
+            (index === 1 || index === 2) && "md:border-t border-gray-500/50"
+          )}
+        >
+          <div className="flex flex-col gap-y-4 h-full">
+            <div className="flex items-center gap-x-2">
+              <div
+                className={` ${card.backgroundColor} inline-flex items-center justify-center p-2 rounded-lg `}
+              >
+                <card.icon className={`h-6 w-6 ${card.iconColor} `} />
               </div>
+              <h2 className="font-sans text-2xl font-medium text-neutral-300">
+                {card.title}
+              </h2>
             </div>
-          ))}
 
-          {/* Vertical Dividers - rendered separately */}
-          {/* {cards.slice(0, -1).map((_, index) => (
-            <div
-              key={`divider-${index}`}
-              className={`hidden md:block absolute w-px bg-gray-700 top-8 bottom-8`}
-              style={{ left: `${((index + 1) / cards.length) * 100}%` }}
-            ></div>
-          ))} */}
+            <p className="font-sans text-md text-neutral-300/80">
+              {card.description}
+            </p>
+            <div className="mt-auto flex flex-wrap gap-2">
+              {card.links.map((link, linkIndex) => (
+                <Link
+                  key={linkIndex}
+                  href={link.href}
+                  className="font-sans inline-flex px-4 py-1.5 bg-gray-800/70 text-blue-400 border border-blue-400/50 rounded-md hover:bg-gray-700 transition-colors"
+                >
+                  {link.text}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      ))}
+    </>
   );
 }
