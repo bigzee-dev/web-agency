@@ -42,15 +42,15 @@ export default function Development() {
             We build modern, high-converting online stores powered by
             WooCommerce or Shopify—tailored to help you grow your business
             online.
-            <br />
             <strong>
+              {" "}
               Start your online sales journey today and turn your website into a
               revenue-generating machine.
             </strong>
           </p>
           <Link
             href="/contact"
-            className={` ${btnDimensions} flex justify-center items-center font-sans text-md bg-primary hover:bg-sky-700 text-neutral-100 font-bold `}
+            className={` ${btnDimensions} flex justify-center items-center font-sans text-md bg-primary hover:bg-sky-700 text-neutral-100 font-bold mt-2 `}
           >
             Contact Us
           </Link>

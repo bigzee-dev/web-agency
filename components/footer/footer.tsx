@@ -7,8 +7,8 @@ const singleLink = "font-sans text-sm text-neutral-300/75";
 
 export default function Footer() {
   return (
-    <footer className=" bg-gray-800">
-      <div className="x-padding max-w-5xl mx-auto py-20 grid md:grid-cols-12 gap-x-8 gap-y-8">
+    <footer className="x-padding bg-gray-800">
+      <div className="max-w-5xl mx-auto py-20 grid md:grid-cols-12 gap-x-8 gap-y-8">
         <div className="md:col-span-5">
           <CompanyInfo />
         </div>
@@ -16,7 +16,7 @@ export default function Footer() {
           {footerLinks.map((link, i) => (
             <div key={i}>
               <h3 className={linkHeading}>{link.heading}</h3>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-4 flex flex-col gap-y-3">
                 <li>
                   <Link href="#" className={singleLink}>
                     {link.firstLink.title}
@@ -42,7 +42,7 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className="x-padding text-sm text-neutral-400 font-medium text-center pt-5 pb-16 border-t border-gray-600">
+      <div className="text-sm text-neutral-400 font-medium text-center pt-5 pb-16 border-t border-gray-600">
         <p>&copy; Zimaman Enterprises. 2024</p>
       </div>
     </footer>

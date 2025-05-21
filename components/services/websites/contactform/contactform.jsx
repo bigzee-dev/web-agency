@@ -6,6 +6,8 @@ import Script from "next/script";
 
 // componeents
 import Form from "./form";
+import TestForm from "./testform";
+import Test2Form from "./test2form";
 
 export default function ContactForm() {
   const [status, setStatus] = useState({
@@ -81,17 +83,17 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 py-4">
+    <div className="w-full px-4 sm:px-6 lg:px-8 py-6">
       <Script
         src="https://challenges.cloudflare.com/turnstile/v0/api.js"
         async
         defer
       />
 
-      <div className="shadow overflow-hidden rounded-lg">
+      <div className="overflow-hidden rounded-lg">
         <div className="px-3 sm:p-6">
           <h2
-            className={` ${montserrat.className} text-3xl font-semibold text-neutral-100 mb-5 `}
+            className={` ${montserrat.className} text-3xl font-semibold text-neutral-100 mb-6 `}
           >
             Lets start Working on your Project
           </h2>
@@ -147,7 +149,7 @@ export default function ContactForm() {
               </div>
             </div>
           ) : null}
-          <Form />
+          <Test2Form />
         </div>
       </div>
     </div>

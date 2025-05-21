@@ -1,14 +1,20 @@
 // app/api/contact/route.js
+import { sendEmail } from "@/lib/sendformdata";
 
 import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
+    console.log("Contact form submission received");
     const body = await request.json();
     const { name, email, company, budget, message, token } = body;
+    console.log("Received data:", body);
 
     // Verify Turnstile token
     const formData = new URLSearchParams();
+    formData.append("name", name);
+    formData.append("website", "bigzee.app");
+    formData.append("message", message);
     formData.append("secret", process.env.TURNSTILE_SECRET_KEY);
     formData.append("response", token);
 
@@ -26,6 +32,7 @@ export async function POST(request) {
     const turnstileData = await turnstileResponse.json();
 
     if (!turnstileData.success) {
+      console.error("Turnstile verification failed:", turnstileData);
       return new NextResponse(
         JSON.stringify({ error: "Turnstile verification failed" }),
         { status: 400 }
@@ -40,24 +47,7 @@ export async function POST(request) {
       );
     }
 
-    // Handle email sending logic here
-    // This is where you would integrate with your email service provider (SendGrid, AWS SES, etc.)
-    // For example with SendGrid:
-    //
-    // const sgMail = require('@sendgrid/mail');
-    // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    // await sgMail.send({
-    //   to: 'your-email@example.com',
-    //   from: 'website@yourdomain.com',
-    //   subject: `New contact form submission from ${name}`,
-    //   text: `
-    //     Name: ${name}
-    //     Email: ${email}
-    //     Company: ${company || 'Not provided'}
-    //     Budget: ${budget}
-    //     Message: ${message}
-    //   `,
-    // });
+    sendEmail(formData);
 
     // For now, we'll just log the form data for demonstration
     console.log("Contact form submission:", {

@@ -22,12 +22,11 @@ export default function CTA() {
               className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#477cf0] to-[#6799e8] opacity-15"
             />
           </div>
-          <div className="h-full col-span-4">
+          <div className="relative h-full col-span-4">
             <Image
               src="/img/tech-laptop.jpg"
               alt="img"
-              width={1000}
-              height={667}
+              fill
               className="object-cover"
             />
           </div>

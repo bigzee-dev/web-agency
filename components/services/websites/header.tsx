@@ -35,13 +35,13 @@ export default function Websites() {
           >
             We Develop Websites that Deliver Results
           </h1>
-          <p className="font-sans text-neutral-300 text-md mt-8">
+          <p className="font-sans text-blue-400 text-md bg-white/5 p-6 mt-8 border border-gray-500/50">
             We develop modern websites tailored to your needs — whether
             it&apos;s a business site, a content hub, or an informational
             platform. From design to deployment, we make sure your site looks
             great and works flawlessly across all devices.
           </p>
-          <button className={` ${whiteButton} mt-7 `}>Get Started</button>
+          <button className={` ${whiteButton} mt-10 `}>Get Started</button>
         </div>
       </div>
     </div>

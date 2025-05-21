@@ -10,6 +10,14 @@ export default function Form() {
     budget: "",
     message: "",
   });
+
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    error: null,
+    success: false,
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({

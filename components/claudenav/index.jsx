@@ -207,15 +207,15 @@ export default function ClaudeNav() {
   }, []); // Empty dependency array: runs once on mount, cleans up on unmount.
 
   return (
-    <nav className="navbar">
+    <nav className="x-padding navbar">
       <div className="navbar-container">
-        <Link className="cst-logo-container" href="/">
+        <Link className="logo-container" href="/">
           {" "}
           {/* Updated href to be relative */}
           <img src="/img/just-logo.png" alt="BigZee Digital Logo" />{" "}
           {/* Added alt text */}
           <h4
-            className={` ${cairo.className} font-light   text-gray-700 ml-2 cst-nav-logo `}
+            className={` ${cairo.className} font-light text-gray-700 ml-2 nav-logo mb-1`}
           >
             delta<span className="font-semibold text-gray-800">worx</span>
           </h4>
@@ -252,7 +252,6 @@ export default function ClaudeNav() {
               href="/emails"
               className={` ${montserrat.className} nav-link `}
             >
-              {" "}
               {/* Changed to Link */}
               Email
             </Link>
@@ -362,10 +361,10 @@ export default function ClaudeNav() {
             </div>
           </li>
         </ul>
-        <div className="cst-nav-nav-item">
+        <div className="client-login">
           <a
             href="https://domains.bigzee.app/clientarea.php"
-            className={` ${montserrat.className} text-xs font-medium cst-client-login `}
+            className={` ${montserrat.className} text-xs font-medium `}
           >
             CLIENT ZONE
           </a>
