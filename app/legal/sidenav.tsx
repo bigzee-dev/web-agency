@@ -14,8 +14,8 @@ const legalLinks = [
     name: "Privacy Policy",
   },
   {
-    href: "/legal/fair-usage-policy",
-    name: "Fair Usage Policy",
+    href: "/legal/acceptable-use-policy",
+    name: "Acceptable Use Policy",
   },
 ];
 

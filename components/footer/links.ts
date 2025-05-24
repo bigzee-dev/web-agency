@@ -3,64 +3,60 @@ export const footerLinks = [
     heading: "Company",
     firstLink: {
       title: "About",
-      href: "/",
+      href: "/about-us",
     },
     secondLink: {
-      title: "Our Process",
-      href: "/",
+      title: "Blog",
+      href: "/blog-posts",
     },
     thirdLink: {
-      title: "Blog",
-      href: "/",
+      title: "Terms of Service",
+      href: "/terms-of-service",
     },
   },
   {
     heading: "Solutions",
     firstLink: {
       title: "Websites",
-      href: "/",
+      href: "/websites",
     },
     secondLink: {
-      title: "Emails",
-      href: "/",
+      title: "Web Apps",
+      href: "/web-apps",
+    },
+  },
+  {
+    heading: "Services",
+    firstLink: {
+      title: "Email",
+      href: "/emails",
+    },
+    secondLink: {
+      title: "Domains",
+      href: "/domains",
     },
     thirdLink: {
       title: "Hosting",
+      href: "/hosting",
+    },
+  },
+  {
+    heading: "Support",
+    firstLink: {
+      title: "Contact us",
+      href: "/contact-us",
+    },
+    secondLink: {
+      title: "Support Ticket",
       href: "/",
+    },
+    thirdLink: {
+      title: "Privacy Policy",
+      href: "/privacy-policy",
     },
     fourthLink: {
-      title: "Domains",
-      href: "/",
-    },
-  },
-  {
-    heading: "Support",
-    firstLink: {
-      title: "Contact us",
-      href: "/",
-    },
-    secondLink: {
-      title: "Support Ticket",
-      href: "/",
-    },
-    thirdLink: {
-      title: "Privacy Policy",
-      href: "/",
-    },
-  },
-  {
-    heading: "Support",
-    firstLink: {
-      title: "Contact us",
-      href: "/",
-    },
-    secondLink: {
-      title: "Support Ticket",
-      href: "/",
-    },
-    thirdLink: {
-      title: "Privacy Policy",
-      href: "/",
+      title: "Acceptable Use",
+      href: "/acceptable-use-policy",
     },
   },
 ];

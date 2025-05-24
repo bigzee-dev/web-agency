@@ -16,7 +16,9 @@ async function getDocument(slug: string): Promise<DocumentTypes> {
   });
   const res = await fetch(
     `https://strapi.keizimmy.co.za/api/legal-docs?${ourQuery}`,
-    {}
+    {
+      cache: "no-store",
+    }
   );
   const data = await res.json();
   console.log(data);
@@ -28,7 +30,7 @@ async function getDocument(slug: string): Promise<DocumentTypes> {
 }
 
 export default async function TermsOfService() {
-  const document = await getDocument("privacy-policy");
+  const document = await getDocument("acceptable-use-policy");
   console.log(document);
   const content: BlocksContent = document.content;
 

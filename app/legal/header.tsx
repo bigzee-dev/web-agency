@@ -14,8 +14,8 @@ export default function Header() {
     case "/legal/terms-of-service":
       heading = "Terms of Service";
       break;
-    case "/legal/fair-usage-policy":
-      heading = "Fair Usage Policy";
+    case "/legal/acceptable-use-policy":
+      heading = "Acceptable Use Policy";
       break;
     default:
       heading = "Terms and Conditions";

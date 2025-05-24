@@ -1,9 +1,7 @@
 import Link from "next/link";
 
 async function getAllBlogPosts() {
-  const res = await fetch("http://localhost:1337/api/blog-posts", {
-    cache: "no-store",
-  });
+  const res = await fetch("http://localhost:1337/api/blog-posts", {});
   const blogs = await res.json();
   return blogs.data;
 }
@@ -18,7 +16,7 @@ interface BlogPost {
 
 export default async function BlogPosts() {
   const blogs = await getAllBlogPosts();
-  console.log(blogs);
+  // console.log(blogs);
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">Blog Posts</h1>

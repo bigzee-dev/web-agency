@@ -1,20 +1,36 @@
+import qs from "qs";
 import { type BlocksContent } from "@strapi/blocks-react-renderer";
 import BlockRendererClient from "@/app/blockrenderclient";
 
-async function getTermsOfService() {
-  /*http://localhost:1337/api/legal-docs*/
-  const res = await fetch("https://strapi.keizimmy.co.za/api/legal-docs", {
-    cache: "no-store",
+interface DocumentTypes {
+  title: string;
+  slug: string;
+  content: BlocksContent;
+}
+
+async function getTermsOfService(slug: string): Promise<DocumentTypes> {
+  const ourQuery = qs.stringify({
+    filters: {
+      slug: slug,
+    },
   });
+  const res = await fetch(
+    `https://strapi.keizimmy.co.za/api/legal-docs?${ourQuery}`,
+    {}
+  );
   const data = await res.json();
   console.log(data);
-  return data;
+  return {
+    title: data.data[0]?.title || "",
+    slug: data.data[0]?.slug || "",
+    content: data.data[0].content,
+  };
 }
 
 export default async function TermsOfService() {
-  const { data } = await getTermsOfService();
-  console.log(data);
-  const content: BlocksContent = data[2].content;
+  const document = await getTermsOfService("terms-of-service");
+  console.log(document);
+  const content: BlocksContent = document.content;
 
   console.log(content);
   return (

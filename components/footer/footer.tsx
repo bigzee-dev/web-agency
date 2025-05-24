@@ -28,14 +28,18 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className={singleLink}>
-                    {link.thirdLink.title}
-                  </Link>
+                  {link.thirdLink?.title && (
+                    <Link href="#" className={singleLink}>
+                      {link.thirdLink.title || null}
+                    </Link>
+                  )}
                 </li>
                 <li>
-                  <Link href="#" className={singleLink}>
-                    {link.fourthLink?.title || null}
-                  </Link>
+                  {link.fourthLink?.title && (
+                    <Link href="#" className={singleLink}>
+                      {link.fourthLink.title || null}
+                    </Link>
+                  )}
                 </li>
               </ul>
             </div>
