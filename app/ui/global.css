@@ -15,7 +15,7 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
+    --background: 0 0% 97.5%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -88,6 +88,10 @@ body {
   line-height: 1.05;
 }
 
+.showcase-top-padding {
+  padding-top: 4.5rem;
+}
+
 .fade-out {
   /* used in 'everything you need' component in the home page */
   mask-image: linear-gradient(to bottom, black, transparent);
@@ -98,11 +102,6 @@ body {
   -webkit-mask-repeat: no-repeat;
   mask-position: top;
   -webkit-mask-position: top;
-}
-
-.gbl-showcase-heading {
-  /* used in showcase */
-  line-height: 4rem;
 }
 
 .radial-background {
@@ -128,14 +127,14 @@ body {
     circle,
     rgba(41, 63, 155, 0.97) 0%,
     rgb(37, 99, 235, 1) 10%,
-
     rgb(8, 36, 120, 1) 70%
   );
 }
 
-.gradient-text {
+/* commented out 25/05/25 */
+/* .gradient-text {
   background: linear-gradient(to right, #4754a2, #9089fc);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
+} */

@@ -31,10 +31,10 @@ export default function SideNav() {
               key={link.name}
               href={link.href}
               className={clsx(
-                "flex h-[48px] grow items-center justify-center gap-2 text-secondary font-medium rounded-md p-3 md:flex-none md:justify-start md:p-2 md:px-3",
+                "flex h-[48px] grow items-center justify-center gap-2 text-gray-800 font-medium rounded-md p-3 md:flex-none md:justify-start md:p-2 md:px-3",
                 {
-                  "bg-gray-800/90 text-white": isActive, // Active link styles
-                  "hover:text-primary hover:bg-gray-200": !isActive, // Hover only for non-active links
+                  "bg-gray-300 text-blue-400": isActive, // Active link styles
+                  "hover:text-blue-600 ": !isActive, // Hover only for non-active links
                 }
               )}
             >

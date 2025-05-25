@@ -207,7 +207,7 @@ export default function ClaudeNav() {
   }, []); // Empty dependency array: runs once on mount, cleans up on unmount.
 
   return (
-    <nav className="x-padding navbar">
+    <nav className="x-padding border-b border-gray-300/70 navbar">
       <div className="navbar-container">
         <Link className="logo-container" href="/">
           {" "}
