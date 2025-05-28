@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "category": "Artificial Intelligence",
+    "categoryColor": "blue",
+    "title": "Enterprise AI vs. Consumer AI: The Software Divide Explained",
+    "description": "Explore the key differences between enterprise AI and consumer AI, and why understanding their s...",
+    "author": {
+      "name": "Scrums.com Editorial Team",
+      "avatar": "/placeholder.svg?height=32&width=32",
+      "initials": "S",
+      "avatarBg": "bg-blue-600"
+    },
+    "publishDate": "May 9, 2025",
+    "readTime": "4 min read",
+    "hasPartnership": false,
+    "partnershipText": null
+  },
+  {
+    "id": 2,
+    "category": "Artificial Intelligence",
+    "categoryColor": "blue",
+    "title": "ChatGPT vs Claude vs Gemini vs Grok vs DeepSeek vs Llama",
+    "description": "Compare top AI assistants—ChatGPT, Claude, Gemini, Grok, DeepSeek, and Llama—to see whic...",
+    "author": {
+      "name": "Scrums.com Editorial Team",
+      "avatar": "/placeholder.svg?height=32&width=32",
+      "initials": "S",
+      "avatarBg": "bg-blue-600"
+    },
+    "publishDate": "May 9, 2025",
+    "readTime": "5 min read",
+    "hasPartnership": false,
+    "partnershipText": null
+  },
+  {
+    "id": 3,
+    "category": "News",
+    "categoryColor": "green",
+    "title": "Scrums.com Partners with Windsurf to Orchestrate AI",
+    "description": "Scrums.com has entered a global partnership with Windsurf, to accelerate how enterprises orchestr...",
+    "author": {
+      "name": "Gerald Neves",
+      "avatar": "/placeholder.svg?height=32&width=32",
+      "initials": "GN",
+      "avatarBg": "bg-orange-500"
+    },
+    "publishDate": "May 7, 2025",
+    "readTime": "2min",
+    "hasPartnership": true,
+    "partnershipText": {
+      "line1": "X",
+      "line2": "Windsurf",
+      "line3": "OpenAI"
+    }
+  }
+]

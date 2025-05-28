@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { montserrat } from "@/app/ui/fonts";
 import { whiteButton } from "@/app/ui/customTailwindClasses";
+import { FaCheck } from "react-icons/fa";
 
 export default function Websites() {
   return (
@@ -35,11 +36,25 @@ export default function Websites() {
           >
             We Develop Websites that Deliver Results
           </h1>
-          <p className="font-sans text-blue-400 text-md bg-white/5 p-6 mt-8 border border-gray-500/50">
-            We develop modern websites tailored to your needs — whether
-            it&apos;s a business site, a content hub, or an informational
-            platform. From design to deployment, we make sure your site looks
-            great and works flawlessly across all devices.
+          <p className=" flex items-center gap-3 font-sans text-neutral-400 text-md mb-2 mt-6">
+            <span>
+              <FaCheck size="0.9em" className="text-blue-400" />
+            </span>
+            We develop modern websites tailored to your needs
+          </p>
+          <p className=" flex items-center gap-3 font-sans text-neutral-400 text-md  mb-2">
+            <span>
+              <FaCheck size="0.9em" className="text-blue-400" />
+            </span>
+            Whether it&apos;s a business site, a content hub, or an
+            informational platform, we build it.
+          </p>
+          <p className=" flex items-center gap-3 font-sans text-neutral-400 text-md ">
+            <span>
+              <FaCheck size="0.9em" className="text-blue-400" />
+            </span>
+            From design to deployment, we make sure your site looks great and
+            works flawlessly across all devices.
           </p>
           <button className={` ${whiteButton} mt-10 `}>Get Started</button>
         </div>

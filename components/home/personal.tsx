@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Personal() {
   return (
-    <div className="x-padding mx-auto px-4 py-12 md:py-24 border-y border-gray-400 bg-primary/5">
+    <div className="x-padding mx-auto px-4 py-12 md:py-20 border-y border-gray-400 bg-primary/5">
       <div className="grid gap-8 lg:grid-cols-[1fr_1.8fr] lg:gap-16 max-w-6xl mx-auto">
         <div className="space-y-4">
           <h2

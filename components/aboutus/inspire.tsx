@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Inspire() {
   return (
-    <section className="x-padding w-full py-12 md:py-16 lg:py-20 lg:pb-20 bg-white">
+    <section className="x-padding w-full py-12 md:py-16 lg:py-20 lg:pb-20">
       <div className="w-full max-w-7xl mx-auto">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="flex flex-col gap-y-7">
@@ -32,9 +32,9 @@ export default function Inspire() {
               Contact us
             </Link>
           </div>
-          <div className="relative h-[400px] md:h-[500px] lg:h-[500px] rounded-xl overflow-hidden">
+          <div className="relative h-[400px] md:h-[450px] lg:h-[450px] rounded-xl overflow-hidden">
             <Image
-              src="/img/digital.png"
+              src="/img/about-us/coding.jpg"
               alt="Team of entrepreneurs working together in a modern office space"
               fill
               className="object-cover"

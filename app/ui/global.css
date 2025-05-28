@@ -131,6 +131,18 @@ body {
   );
 }
 
+.valueCard1 {
+  background: linear-gradient(to top right, #113043, #174a79);
+}
+
+.valueCard2 {
+  background: linear-gradient(to bottom right, #8d81ca, #9b8fd7, #7470cb);
+}
+
+.valueCard4 {
+  background: linear-gradient(to bottom right, #5b8d75, #6aa664, #658a80);
+}
+
 /* commented out 25/05/25 */
 /* .gradient-text {
   background: linear-gradient(to right, #4754a2, #9089fc);

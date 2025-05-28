@@ -4,7 +4,19 @@ import Image from "next/image";
 
 export default function Benefits() {
   return (
-    <div className="w-full  bg-gradient-to-b from-background to-gray-100">
+    <div className="relative isolate w-full ">
+      <div
+        aria-hidden="true"
+        className="hidden sm:absolute sm:-top-28 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+      >
+        <div
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2b2774] to-[#4a4790] opacity-25"
+        />
+      </div>
       <div className="max-w-7xl mx-auto h-auto grid grid-cols-1 md:grid-cols-12 gap-y-8 pt-16 pb-20">
         {/* Image */}
         <section className="flex justify-center lg:col-span-6">

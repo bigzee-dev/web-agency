@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/domainsforminput";
 import { Search } from "lucide-react";
 import { TbAt } from "react-icons/tb";
 import { AtSign, type LucideIcon } from "lucide-react";
+import { notoSans } from "@/app/ui/fonts";
 
 export default function DomainSearch() {
   const [domain, setDomain] = useState("");
@@ -34,7 +35,9 @@ export default function DomainSearch() {
         <div className="flex items-center justify-center p-2  bg-yellow-500/10  rounded-lg">
           <AtSign className="text-yellow-500/75 h-6 w-6" />
         </div>
-        <h4 className="font-sans text-2xl font-medium text-neutral-300">
+        <h4
+          className={` ${notoSans.className} text-xl font-medium text-neutral-300 `}
+        >
           Domain Name Registration
         </h4>
       </div>

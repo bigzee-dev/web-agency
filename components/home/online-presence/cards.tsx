@@ -1,6 +1,7 @@
 import { Users, Server, Globe, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 import clsx from "clsx";
+import { notoSans } from "@/app/ui/fonts";
 
 // Define the type for our card data
 type CardLink = {
@@ -30,6 +31,7 @@ export default function Home() {
       links: [
         { text: "Websites", href: "#" },
         { text: "Web Apps", href: "#" },
+        { text: "Ecommerce", href: "#" },
       ],
     },
     {
@@ -74,7 +76,9 @@ export default function Home() {
               >
                 <card.icon className={`h-6 w-6 ${card.iconColor} `} />
               </div>
-              <h2 className="font-sans text-2xl font-medium text-neutral-300">
+              <h2
+                className={` ${notoSans.className} text-xl font-medium text-neutral-300 `}
+              >
                 {card.title}
               </h2>
             </div>
@@ -87,7 +91,7 @@ export default function Home() {
                 <Link
                   key={linkIndex}
                   href={link.href}
-                  className="font-sans inline-flex px-4 py-1.5 bg-gray-800/70 text-blue-400 border border-blue-400/50 rounded-md hover:bg-gray-700 transition-colors"
+                  className="font-sans inline-flex px-4 py-1.5 bg-gray-700/50 text-blue-400 border border-gray-600 rounded-md hover:bg-gray-700 transition-colors"
                 >
                   {link.text}
                 </Link>

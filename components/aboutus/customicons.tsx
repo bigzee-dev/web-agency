@@ -1,9 +1,9 @@
 export function TransparencyIcon() {
   return (
     <img
-      src="/svg/ourvalues/chart-success.svg"
+      src="/img/about-us/power-on.jpg"
       alt="Transparency Icon"
-      className="w-12 h-12"
+      className="w-16 h-16 rounded-lg"
     />
   );
 }
@@ -21,9 +21,9 @@ export function CreativityIcon() {
 export function GrowthIcon() {
   return (
     <img
-      src="/svg/ourvalues/arrow-up.svg"
+      src="/img/about-us/trending-up2.jpg"
       alt="Growth Icon"
-      className="w-12 h-12"
+      className="w-20 h-20 rounded-lg"
     />
   );
 }

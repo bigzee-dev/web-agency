@@ -48,7 +48,7 @@ const cardButtons =
 
 export default function Visibility() {
   return (
-    <main className="x-padding relative isolate overflow-hidden  w-full py-4 md:pt-20 md:pb-20 bg-gray-900 shadow-lg">
+    <main className="x-padding relative isolate overflow-hidden  w-full py-4 md:pt-20 md:pb-24 bg-gray-900 shadow-lg">
       {/* blur component */}
       <div
         aria-hidden="true"

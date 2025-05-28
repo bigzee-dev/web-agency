@@ -40,7 +40,7 @@ const offers = [
 export default function Header() {
   return (
     <div className="relative w-full bg-slate-700">
-      <div className="relative isolate overflow-hidden inset-0 w-full bg-gradient-to-r from-gray-900 via-slate-700 to-blue-400/60 py-12 pb-8">
+      <div className="relative isolate overflow-hidden inset-0 w-full bg-gradient-to-r from-gray-900 via-slate-700 to-blue-400/60 py-12 pb-10">
         <div className="grid grid-cols-12 gap-12 max-w-7xl mx-auto">
           <div className="col-span-6">
             {/* Shared hosting badge */}
