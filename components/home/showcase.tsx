@@ -30,21 +30,23 @@ export default function Showcase() {
           <div>
             <Link
               href="/emails"
-              className="flex justify-center items-center gap-x-3 w-max bg-primary/10 py-1 pl-1 pr-1.5 mb-5  rounded-3xl border-2 border-gray-400 shadow-md hover:bg-primary/15"
+              className="flex justify-center items-center gap-x-3 w-max bg-primary/10 py-1 pl-1 pr-1.5 mb-5  rounded-lg border border-gray-400 shadow-md hover:bg-primary/15"
             >
               <p
-                className={` ${cairo.className} text-md text-neutral-100 font-semibold bg-slate-700 rounded-3xl py-1 px-3 tracking-wide `}
+                className={` ${cairo.className} text-md text-neutral-100 font-semibold bg-slate-700 rounded-lg py-0.5 px-2 tracking-wide `}
               >
-                Business Email
+                New
               </p>
 
-              {/* <span className="text-gray-400">|</span> */}
-              <span className="text-yellow-600/75">
-                <BsStars size="1.4em" />
+              <span
+                className={` ${cairo.className} text-md text-gray-700 font-semibold `}
+              >
+                Business Email
               </span>
               <p className="text-gray-700 font-semibold text-base">
                 P40<span className="text-gray-500 text-sm"> /month</span>
               </p>
+              <span className="text-gray-400">|</span>
               <span>
                 <IoArrowForwardCircle className="text-slate-700" size="1.6em" />
               </span>
@@ -53,7 +55,7 @@ export default function Showcase() {
               Building Modern and Reliable Web Solutions
             </h1>
           </div>
-          <div className="font-sans text-md  text-gray-700 md:w-[90%] leading-6">
+          <div className="font-sans text-base  text-gray-700 md:w-[90%] leading-6">
             <p className="font-medium">
               Deltaworx is a web technology company based in Botswana.
             </p>
@@ -72,7 +74,7 @@ export default function Showcase() {
               </Link>
               <Link
                 href="#"
-                className="font-sans text-gray-800 font-medium ml-4"
+                className="font-sans text-gray-800 font-semibold ml-4"
               >
                 About Us <span aria-hidden="true"> →</span>
               </Link>

@@ -7,7 +7,7 @@ export default function Benefits() {
     <div className="relative isolate w-full ">
       <div
         aria-hidden="true"
-        className="hidden sm:absolute sm:-top-28 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+        className="hidden sm:absolute sm:-top-28 sm:right-1/3 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
       >
         <div
           style={{

@@ -11,7 +11,7 @@ const features = [
 
 export default function Websites() {
   return (
-    <div className="relative isolate overflow-hidden bg-gray-800 text-white rounded-3xl p-6 md:p-8">
+    <div className="relative isolate overflow-hiddenvw-full bg-gray-800 text-white rounded-3xl p-6 md:p-8">
       <div
         aria-hidden="true"
         className="absolute left-1/4 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
