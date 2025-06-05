@@ -2,9 +2,11 @@ import { AppWindowIcon, CodeIcon } from "lucide-react";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 // components
 import Websites from "./websites";
-import EmailsAndDomains from "./emailsdomains";
+import WebApps from "./webapps";
+import Email from "./email";
 import Ecommerce from "./ecommerce";
 import Hosting from "./hosting";
+import Domains from "./domains";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -50,29 +52,20 @@ export default function TabsDemo() {
         <TabsContent value="websites">
           <Websites />
         </TabsContent>
-        <TabsContent value="password">
-          <Card>
-            <CardHeader>
-              <CardTitle>Password</CardTitle>
-              <CardDescription>
-                Change your password here. After saving, you&apos;ll be logged
-                out.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="grid gap-6">
-              <div className="grid gap-3">
-                <Label htmlFor="tabs-demo-current">Current password</Label>
-                <Input id="tabs-demo-current" type="password" />
-              </div>
-              <div className="grid gap-3">
-                <Label htmlFor="tabs-demo-new">New password</Label>
-                <Input id="tabs-demo-new" type="password" />
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Button>Save password</Button>
-            </CardFooter>
-          </Card>
+        <TabsContent value="webapps">
+          <WebApps />
+        </TabsContent>
+        <TabsContent value="ecommerce">
+          <Ecommerce />
+        </TabsContent>
+        <TabsContent value="email">
+          <Email />
+        </TabsContent>
+        <TabsContent value="hosting">
+          <Hosting />
+        </TabsContent>
+        <TabsContent value="domains">
+          <Domains />
         </TabsContent>
       </Tabs>
     </div>

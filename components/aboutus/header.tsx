@@ -6,15 +6,14 @@ export default function AboutUsHero() {
       <h1
         className={` ${montserrat.className} max-w-6xl text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight`}
       >
-        We&apos;re An{" "}
+        A{" "}
         <span className="inline-block bg-[#30b8e6] text-white px-4 py-1 rounded-md">
-          Independent
+          Focused
         </span>{" "}
-        Team Of
+        Team Fueled by Passion for Technology and Real-World Impact
         <br />
-        Designers, Developers & Strategists.
       </h1>
-      <p className="text-gray-600 max-w-4xl mx-auto text-md md:text-base mt-6">
+      <p className="text-gray-600 max-w-4xl mx-auto text-md md:text-lg mt-6">
         As a team, we have grown and evolved significantly over the years. We
         have honed our skills and developed a seamless blend of remote and
         in-office work, implementing our efficient processes.

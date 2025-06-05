@@ -7,14 +7,15 @@ export default function Inspire() {
   return (
     <section className="x-padding w-full py-12 md:py-16 lg:py-20 lg:pb-20">
       <div className="w-full max-w-7xl mx-auto">
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-x-14 items-center">
           <div className="flex flex-col gap-y-7">
             <h1
               className={` ${montserrat.className} text-3xl md:text-4xl font-bold  text-secondary leading-tight`}
             >
-              We Aim To Inspire Entrepreneurs, Fostering A Collective Effort.
+              Deltaworx is your technology partner for innovative and impactful
+              online solutions.
             </h1>
-            <div className="font-sans text-md text-gray-700 space-y-4 ">
+            <div className="font-sans text-base text-gray-700 space-y-4 ">
               <p>
                 In a rapidly evolving online world filled with challenges,
                 having a reliable digital agency that delivers results is
@@ -28,9 +29,6 @@ export default function Inspire() {
                 extraordinary outcomes.
               </p>
             </div>
-            <Link href="/contact-us" className={` ${btnDimensions} mt-2`}>
-              Contact us
-            </Link>
           </div>
           <div className="relative h-[400px] md:h-[450px] lg:h-[450px] rounded-xl overflow-hidden">
             <Image

@@ -9,7 +9,7 @@ import {
 
 // components
 import Websites from "./websites";
-import EmailsAndDomains from "./emailsdomains";
+import EmailsAndDomains from "./email";
 import Ecommerce from "./ecommerce";
 import Hosting from "./hosting";
 

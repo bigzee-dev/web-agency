@@ -14,7 +14,7 @@ export default function Benefits() {
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
-          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2b2774] to-[#4a4790] opacity-25"
+          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2b2774] to-[#4a4790] opacity-20"
         />
       </div>
       <div className="max-w-7xl mx-auto h-auto grid grid-cols-1 md:grid-cols-12 gap-y-8 pt-16 pb-20">
@@ -38,7 +38,7 @@ export default function Benefits() {
           </h3>
 
           <div>
-            <ul className="text-md list-disc pl-6 text-gray-600 mt-4 space-y-4">
+            <ul className="text-base list-disc pl-6 text-gray-700 mt-4 space-y-4">
               <li className="font-sans">
                 Boost Business Credibility. Having a website that consumers are
                 able to find gives your business a greater level of credibility.

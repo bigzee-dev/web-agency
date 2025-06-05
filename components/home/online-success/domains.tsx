@@ -9,7 +9,7 @@ const features = [
   "FREE website migration",
 ];
 
-export default function Ecommerce() {
+export default function Domains() {
   return (
     <div className="bg-[#2D1576] text-white rounded-3xl p-8 md:p-12">
       <h2 className="text-4xl font-bold mb-6">Website Builder</h2>

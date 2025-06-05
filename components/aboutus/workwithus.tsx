@@ -1,16 +1,42 @@
+import { Mail, Phone, MessageSquare, Facebook } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { montserrat } from "@/app/ui/fonts";
 
 const links = [
-  { name: "Open roles", href: "#" },
-  { name: "Internship program", href: "#" },
-  { name: "Our values", href: "#" },
-  { name: "Meet our leadership", href: "#" },
+  { name: "Contact Us", href: "#" },
+  { name: "We Build", href: "#" },
+  { name: "We Deliver", href: "#" },
+  { name: "Launch Product", href: "#" },
 ];
-const stats = [
-  { name: "Offices worldwide", value: "12" },
-  { name: "Full-time colleagues", value: "300+" },
-  { name: "Hours per week", value: "40" },
-  { name: "Paid time off", value: "Unlimited" },
+const contactOptions = [
+  {
+    id: "email",
+    icon: Mail,
+    title: "Send us an Email",
+    contact: "support@coodiv.net",
+    href: "mailto:support@coodiv.net",
+  },
+  {
+    id: "phone",
+    icon: Phone,
+    title: "Give us a Call + Whatsapp",
+    contact: "+213-661-8388-60",
+    href: "tel:+213-661-8388-60",
+  },
+  {
+    id: "twitter",
+    icon: MessageSquare,
+    title: "Send us a Message",
+    contact: "send message",
+    href: "https://twitter.com/Coodiv",
+  },
+  {
+    id: "facebook",
+    icon: Facebook,
+    title: "Reach on Facebook",
+    contact: "@Coodiv",
+    href: "https://twitter.com/Coodiv",
+  },
 ];
 
 export default function WorkWithUs() {
@@ -50,29 +76,48 @@ export default function WorkWithUs() {
               Work with us
             </h2>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat.
+              Businesses of any size can improve their speed and efficiency by
+              using our products and services.
             </p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-neutral-300 sm:grid-cols-2 md:flex lg:gap-x-10">
               {links.map((link) => (
                 <a key={link.name} href={link.href}>
                   {link.name} <span aria-hidden="true">&rarr;</span>
                 </a>
               ))}
             </div>
-            <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-              {stats.map((stat) => (
-                <div key={stat.name} className="flex flex-col-reverse gap-1">
-                  <dt className="text-base/7 text-gray-300">{stat.name}</dt>
-                  <dd className="text-4xl font-semibold tracking-tight text-white">
-                    {stat.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+            {/* Contact Options Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 max-w-5xl mt-16">
+              {contactOptions.map((option) => {
+                const IconComponent = option.icon;
+                return (
+                  <div key={option.id} className="text-center space-y-4">
+                    <div className="flex justify-center">
+                      <div className="w-14 h-14 bg-white/5 border border-gray-500/50 rounded-lg flex items-center justify-center">
+                        <IconComponent className="w-7 h-7 text-blue-400" />
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-base/7 font-semibold text-neutral-200">
+                        {option.title}
+                      </h3>
+                      <a
+                        href={option.href}
+                        className="text-md text-neutral-400 hover:text-blue-700 font-medium"
+                        {...(option.id === "twitter" && {
+                          target: "_blank",
+                          rel: "noopener noreferrer",
+                        })}
+                      >
+                        {option.contact}
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
