@@ -6,7 +6,7 @@ import Link from "next/link";
 const features = [
   "Visually stunning, responsive and secure websites",
   "Expert web development services",
-  "FREE website migration",
+  "AI Integration, SEO Optimization, Mobile Responsiveness",
 ];
 
 export default function Websites() {
@@ -40,7 +40,7 @@ export default function Websites() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 mt-16">
         <div className="col-span-7">
-          <h2 className="text-4xl text-neutral-200 font-bold mb-7">
+          <h2 className="text-4xl text-blue-400 font-bold mb-7">
             Crafting Stunning Websites
           </h2>
           <p className="font-sans text-md text-neutral-300 leading-relaxed">
@@ -63,7 +63,7 @@ export default function Websites() {
             href="/websites"
             className="w-max flex items-center mt-8 text-center text-xl font-semibold text-blue-400"
           >
-            Lets build your Website{" "}
+            Lets build your website{" "}
             <ChevronRight
               aria-hidden="true"
               className="flex-none text-blue-400 font-medium pl-2"
@@ -72,7 +72,11 @@ export default function Websites() {
           </Link>
         </div>
         <div className="col-span-5 mt-auto border border-gray-700 rounded-lg">
-          <img src="/svg/web-dev-guy.svg" alt="Website" className="w-[90%]" />
+          <img
+            src="/svg/home/websites-cms.svg"
+            alt="Website"
+            className="w-full rounded-lg"
+          />
         </div>
       </div>
     </div>

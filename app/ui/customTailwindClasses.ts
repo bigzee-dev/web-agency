@@ -6,12 +6,12 @@ export const smallTextHeadings =
   "text-center text-base/7 font-semibold text-blue-600";
 
 export const btnDimensions =
-  "font-sans text-center py-2 px-3 w-max min-w-48 text-md font-semibold rounded-lg";
+  "font-sans text-center py-2 px-3 w-max min-w-44 text-md font-semibold rounded-lg";
 
 export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 
 export const grayButton = ` ${btnDimensions} text-white bg-gray-800`;
 
-export const whiteButton = ` ${btnDimensions} text-blue-950  bg-[#faf9f5] `;
+export const whiteButton = ` ${btnDimensions} text-gray-800  bg-[#faf9f5] `;
 
 export const greenButton = ` ${btnDimensions} text-gray-900 bg-blue-400`;

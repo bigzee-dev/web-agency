@@ -132,7 +132,7 @@ export default function Component() {
                     <p className="w-full text-base text-gray-800 font-semibold">
                       {card.title}
                     </p>
-                    <p className="font-sans text-md text-gray-700 font-normal  pb-0 leading-relaxed">
+                    <p className="font-sans text-md text-gray-700 font-normal pb-0 leading-relaxed">
                       {card.content}
                     </p>
                   </CardContent>

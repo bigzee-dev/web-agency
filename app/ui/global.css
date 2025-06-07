@@ -88,10 +88,6 @@ body {
   line-height: 1.05;
 }
 
-.showcase-top-padding {
-  padding-top: 4.5rem;
-}
-
 .fade-out {
   /* used in 'everything you need' component in the home page */
   mask-image: linear-gradient(to bottom, black, transparent);

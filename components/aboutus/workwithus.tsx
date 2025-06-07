@@ -41,9 +41,8 @@ const contactOptions = [
 
 export default function WorkWithUs() {
   return (
-    <div className="w-full x-padding">
+    <div className="w-full x-padding mt-5">
       <div className="relative isolate overflow-hidden bg-gray-900 py-20 rounded-3xl">
-        <img alt="" src="lady-laptop.jpg" />
         <div
           aria-hidden="true"
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"

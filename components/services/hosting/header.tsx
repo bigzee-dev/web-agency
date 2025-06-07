@@ -83,9 +83,12 @@ export default function Header() {
 
               <button className={` ${whiteButton} mt-7`}>Compare Plans</button>
 
-              <div className="flex items-center font-sans text-neutral-400  font-medium text-sm mt-5">
+              <div className="flex items-center font-sans text-neutral-300  font-medium text-sm mt-5">
                 <span className="mr-2">
-                  <IoShieldCheckmarkSharp size="1.5em" className="" />
+                  <IoShieldCheckmarkSharp
+                    size="1.5em"
+                    className="text-blue-400"
+                  />
                 </span>
                 <span className="">7 day - money back - guarantee</span>
               </div>

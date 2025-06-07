@@ -8,7 +8,7 @@ import { cairo } from "@/app/ui/fonts";
 
 export default function Showcase() {
   return (
-    <div className="x-padding relative isolate w-full pt-12 pb-8 md:pb-12 showcase-top-padding">
+    <div className="x-padding relative isolate w-full pb-8 md:pb-12 pt-16">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -19,18 +19,18 @@ export default function Showcase() {
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
-          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[rgb(125,218,235)] to-[#899cfc] opacity-30"
+          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[rgb(125,218,235)] to-[#899cfc] opacity-35"
         />
       </div>
       {/* main content */}
 
-      <main className="max-w-7xl mx-auto w-full h-full grid grid-cols-12 gap-x-4">
+      <main className="max-w-7xl mx-auto w-full h-full grid grid-cols-12 gap-x-6 items-center">
         {/* heading and cta */}
         <section className="flex flex-col gap-y-6 lg:pr-4 col-span-6">
           <div>
             <Link
               href="/emails"
-              className="flex justify-center items-center gap-x-3 w-max bg-primary/10 py-1 pl-1 pr-1.5 mb-5  rounded-lg border border-gray-400 shadow-md hover:bg-primary/15"
+              className="flex justify-center items-center gap-x-3 w-max bg-primary/10 py-1 pl-1 pr-1.5 mb-6  rounded-lg border border-gray-400 shadow-md hover:bg-primary/15"
             >
               <p
                 className={` ${cairo.className} text-md text-neutral-100 font-semibold bg-slate-700 rounded-lg py-0.5 px-2 tracking-wide `}
@@ -56,11 +56,9 @@ export default function Showcase() {
             </h1>
           </div>
           <div className="font-sans text-base  text-gray-700 md:w-[90%] leading-6">
-            <p className="font-medium">
-              Deltaworx is a web technology company based in Botswana.
-            </p>
             <p>
-              We specialise in web technologies that empower businesses and
+              Deltaworx is a web technology company based in Botswana. We
+              specialise in web technologies that empower businesses and
               organisations to grow online. From websites to fully featured web
               apps and custom eCommerce solutions, we help you build a digital
               presence that delivers real results.
@@ -91,7 +89,7 @@ export default function Showcase() {
         </section>
 
         {/* image */}
-        <section className="h-full flex justify-end items-start col-span-5 col-start-7">
+        <section className="h-full flex justify-end items-start col-span-6 ">
           <Image
             src="/img/home/home-hero-section.png"
             alt="image"
