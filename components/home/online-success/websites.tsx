@@ -4,14 +4,14 @@ import { FaCheck } from "react-icons/fa6";
 import Link from "next/link";
 
 const features = [
-  "Visually stunning, responsive and secure websites",
-  "Expert web development services",
-  "AI Integration, SEO Optimization, Mobile Responsiveness",
+  "Visually stunning, secure websites",
+  "Mobile Responsiveness, works flawlessly on all devices",
+  "AI Integration, SEO Optimization, Site Analytics ",
 ];
 
 export default function Websites() {
   return (
-    <div className="relative isolate overflow-hiddenvw-full bg-gray-800 text-white rounded-3xl p-6 md:p-8">
+    <div className="relative isolate overflow-hidden w-full bg-gray-800 text-white rounded-3xl p-6 md:p-8">
       <div
         aria-hidden="true"
         className="absolute left-1/4 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -40,20 +40,22 @@ export default function Websites() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 mt-16">
         <div className="col-span-7">
-          <h2 className="text-4xl text-blue-400 font-bold mb-7">
-            Crafting Stunning Websites
+          <h2 className="text-4xl text-neutral-300 font-bold mb-6">
+            Professional, high-converting websites built to grow your business
           </h2>
           <p className="font-sans text-md text-neutral-300 leading-relaxed">
-            We create visually stunning, responsive and secure websites tailored
-            to your <br />
-            business needs with our expert web development services.
+            We develop fast, secure websites designed to turn visitors into
+            customers — and support your long-term growth.
           </p>
-          <ul className="text-neutral-300/85 mt-8 space-y-3">
+          <ul className="text-neutral-300/85 mt-6 space-y-2">
             {features.map((feature) => (
-              <li key={feature} className="font-sans flex items-center gap-x-3">
+              <li
+                key={feature}
+                className="text-md font-sans flex items-center gap-x-3"
+              >
                 <FaCheck
                   aria-hidden="true"
-                  className="h-4 w-3 flex-none text-indigo-400"
+                  className="h-auto w-2.5 flex-none text-gray-400"
                 />
                 {feature}
               </li>

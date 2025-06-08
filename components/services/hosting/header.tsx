@@ -87,7 +87,7 @@ export default function Header() {
                 <span className="mr-2">
                   <IoShieldCheckmarkSharp
                     size="1.5em"
-                    className="text-blue-400"
+                    className="text-neutral-100/50"
                   />
                 </span>
                 <span className="">7 day - money back - guarantee</span>

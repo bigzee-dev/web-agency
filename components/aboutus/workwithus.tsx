@@ -75,8 +75,8 @@ export default function WorkWithUs() {
               Work with us
             </h2>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
-              Businesses of any size can improve their speed and efficiency by
-              using our products and services.
+              Businesses of any size can improve their marketing and online
+              reach by using our products and services.
             </p>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
@@ -94,8 +94,8 @@ export default function WorkWithUs() {
                 return (
                   <div key={option.id} className="text-center space-y-4">
                     <div className="flex justify-center">
-                      <div className="w-14 h-14 bg-white/5 border border-gray-500/50 rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-7 h-7 text-blue-400" />
+                      <div className="w-12 h-12 bg-white/5 border border-gray-500/50 rounded-full flex items-center justify-center">
+                        <IconComponent className="w-6 h-6 text-blue-400" />
                       </div>
                     </div>
                     <div className="space-y-2">

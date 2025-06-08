@@ -61,7 +61,7 @@ export default function Component() {
                   {article.category}
                 </Badge>
                 <h3
-                  className={` ${montserrat.className} text-gray-800 text-xl font-bold mb-3 leading-tight `}
+                  className={`  text-gray-800 text-xl font-bold mb-3 leading-tight `}
                 >
                   {article.title}
                 </h3>

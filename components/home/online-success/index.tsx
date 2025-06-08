@@ -24,7 +24,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function TabsDemo() {
   return (
     <div className="x-padding flex flex-col items-center w-full max-w-6xl mx-auto px-4 py-16 gap-6 z-40">
-      <div className="text-center mb-10 ">
+      <div className="text-center mb-6 ">
         <h1 className={` ${sectionHeadings} `}>
           Your online{" "}
           <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 text-transparent bg-clip-text">
@@ -39,7 +39,7 @@ export default function TabsDemo() {
       </div>
       <Tabs
         defaultValue="websites"
-        className="flex flex-col items-center gap-y-10 w-full"
+        className="flex flex-col items-center gap-y-2 w-full"
       >
         <TabsList className="border border-gray-300 max-w-max mx-auto rounded-lg ">
           <TabsTrigger value="websites">Websites</TabsTrigger>

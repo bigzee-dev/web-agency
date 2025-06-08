@@ -24,8 +24,8 @@ export default function Websites() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-20"
         />
       </div>
-      <Badge className="absolute top-10 left-8 bg-[#6558F5] hover:bg-[#6558F5] text-white">
-        FREE WEBSITE MIGRATION
+      <Badge className="absolute top-10 left-8 bg-[#6558F5] hover:bg-[#6558F5] text-white uppercase">
+        Business Email
       </Badge>
 
       <div className="absolute top-8 right-8 flex items-center gap-2 bg-white text-[#2D1576] px-4 py-2 rounded-full">
@@ -38,22 +38,27 @@ export default function Websites() {
           ACTIVE
         </Badge>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-x-16 mt-16">
         <div className="col-span-7">
           <h2 className="text-4xl text-neutral-200 font-bold mb-7">
-            Business Email
+            Look professional and communicate with confidence
+            <br />
+            <span className="text-blue-400">Email that means business</span>
           </h2>
           <p className="font-sans text-md text-neutral-300 leading-relaxed">
-            We create visually stunning, responsive and secure websites tailored
-            to your <br />
-            business needs with our expert web development services.
+            Our Email service helps you and your team stay connected, look
+            professional, and build trust — with secure, easy-to-manage email on
+            your domain.
           </p>
-          <ul className="text-neutral-300/85 mt-8 space-y-3">
+          <ul className="text-neutral-300/85 mt-6 space-y-2">
             {features.map((feature) => (
-              <li key={feature} className="font-sans flex items-center gap-x-3">
+              <li
+                key={feature}
+                className="font-sans text-md flex items-center gap-x-3"
+              >
                 <FaCheck
                   aria-hidden="true"
-                  className="h-4 w-3 flex-none text-indigo-400"
+                  className="h-auto w-2.5 flex-none text-gray-400"
                 />
                 {feature}
               </li>
@@ -63,7 +68,7 @@ export default function Websites() {
             href="/websites"
             className="w-max flex items-center mt-8 text-center text-xl font-semibold text-blue-400"
           >
-            Lets build your Website{" "}
+            Learn More
             <ChevronRight
               aria-hidden="true"
               className="flex-none text-blue-400 font-medium pl-2"
@@ -71,8 +76,8 @@ export default function Websites() {
             />
           </Link>
         </div>
-        <div className="col-span-5 mt-auto border border-gray-700 rounded-lg">
-          <img src="/svg/emails.svg" alt="emails" className="w-[90%]" />
+        <div className="col-span-5  border border-gray-700 rounded-lg">
+          <img src="/svg/emails.svg" alt="emails" className="w-full" />
         </div>
       </div>
     </div>

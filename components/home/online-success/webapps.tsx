@@ -21,7 +21,7 @@ const features = [
 const headingStyles =
   "text-xs text-neutral-300 font-semibold bg-thatgreen/25 w-max py-1.5 px-3 rounded-2xl mb-7 uppercase tracking-wide";
 
-const subheadingStyles = ` text-neutral-300 text-4xl font-bold mb-4`;
+const subheadingStyles = ` text-neutral-300 text-4xl font-bold mb-6 tracking-normal`;
 
 export default function WebApps() {
   return (
@@ -52,7 +52,7 @@ export default function WebApps() {
         <h3 className={subheadingStyles}>
           Smart Web Applications for Modern Business Needs
         </h3>
-        <p className="font-sans text-md text-neutral-300 leading-relaxed">
+        <p className="font-sans text-base text-neutral-300 leading-relaxed">
           Whether you're launching something new or improving what you already
           have, we’re here to make it happen. From simple booking apps to
           full-featured apps for enterprises, we’ve helped all kinds of
@@ -61,10 +61,13 @@ export default function WebApps() {
         </p>
         <ul className="text-neutral-300/85 mt-6 space-y-2">
           {features.map((feature) => (
-            <li key={feature} className="font-sans flex items-center gap-x-3">
+            <li
+              key={feature}
+              className="text-md font-sans flex items-center gap-x-3"
+            >
               <FaCheck
                 aria-hidden="true"
-                className="h-4 w-3 flex-none text-gray-400"
+                className="h-auto w-2.5 flex-none text-gray-400"
               />
               {feature}
             </li>
