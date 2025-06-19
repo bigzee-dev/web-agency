@@ -14,6 +14,7 @@ export default function Component() {
         <Badge className="bg-lime-800/60 hover:bg-lime-800/60 text-neutral-200">
           PAYMENT GATEWAY SETUP
         </Badge>
+
         <Badge
           variant="outline"
           className="bg-white/10 border-white/20 text-white px-4 py-2"

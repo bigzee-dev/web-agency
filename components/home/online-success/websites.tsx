@@ -2,6 +2,8 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Lock } from "lucide-react";
 import { FaCheck } from "react-icons/fa6";
 import Link from "next/link";
+import { notoSans } from "@/app/ui/fonts";
+console.log("Imported font object:", notoSans);
 
 const features = [
   "Visually stunning, secure websites",
@@ -40,7 +42,9 @@ export default function Websites() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 mt-16">
         <div className="col-span-7">
-          <h2 className="text-4xl text-neutral-300 font-bold mb-6">
+          <h2
+            className={` ${notoSans.className} text-4xl text-neutral-300 font-bold mb-6 `}
+          >
             Professional, high-converting websites built to grow your business
           </h2>
           <p className="font-sans text-md text-neutral-300 leading-relaxed">

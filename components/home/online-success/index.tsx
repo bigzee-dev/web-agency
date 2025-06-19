@@ -21,7 +21,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export default function TabsDemo() {
+export default function OnlineSuccess() {
   return (
     <div className="x-padding flex flex-col items-center w-full max-w-6xl mx-auto px-4 py-16 gap-6 z-40">
       <div className="text-center mb-6 ">

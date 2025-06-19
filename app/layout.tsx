@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@/app/ui/global.css";
 import "@/app/ui/main-nav.css";
 import "@/app/ui/claudenav.css";
-import { inter } from "@/app/ui/fonts";
+import { inter, notoSans } from "@/app/ui/fonts";
 import ClaudeNav from "@/components/claudenav";
 import Footer from "@/components/footer/footer";
 

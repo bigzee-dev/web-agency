@@ -77,12 +77,12 @@ function ValueCard({
   return (
     <div className="relative h-[16rem] flex flex-col items-center justify-center bg-gray-200 border border-gray-300 ">
       <h3
-        className={` ${notoSans.className} absolute top-5 left-5 text-2xl font-medium text-secondary `}
+        className={` ${notoSans.className} absolute top-5 left-5 text-2xl font-medium text-gray-700 `}
       >
         {title}
       </h3>
       <div
-        className={` ${background} w-20 h-20  p-3 mb-2  rounded-lg shadow-md`}
+        className={` ${background} w-16 h-16  p-3 mb-2  rounded-lg shadow-md`}
       >
         <img src={svg} alt="svg"></img>
       </div>
