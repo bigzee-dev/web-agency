@@ -29,7 +29,7 @@ const tips = [
 
 export default function Tips() {
   return (
-    <div className="x-padding relative isolate bg-gray-800 mt-6 py-20 overflow-hidden">
+    <div className="x-padding relative isolate bg-gray-800 mt-6 py-14 pb-8 overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"

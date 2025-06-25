@@ -46,8 +46,28 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className="text-sm text-neutral-400 font-medium text-center pt-5 pb-16 border-t border-gray-600">
-        <p>&copy; Zimaman Enterprises. 2024</p>
+      <div className="border-t border-gray-600 w-full">
+        <div className="font-sans font-light mx-auto max-w-5xl flex justify-between text-sm text-neutral-400 text-center pt-5 pb-16 ">
+          <p>
+            <span className="text-neutral-300">&copy;</span> Zimaman
+            Enterprises. 2024
+          </p>
+          <div className="font-sans  flex items-center text-sm">
+            <Link
+              href="/privacy-policy"
+              className="text-neutral-400 hover:text-neutral-300"
+            >
+              Privacy Policy
+            </Link>
+            <span className="mx-2">|</span>
+            <Link
+              href="/acceptable-use"
+              className="text-neutral-400 hover:text-neutral-300"
+            >
+              Acceptable Use
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

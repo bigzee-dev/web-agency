@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Lock } from "lucide-react";
 import { FaCheck } from "react-icons/fa6";
 import Link from "next/link";
-import { notoSans } from "@/app/ui/fonts";
+import { montserrat, notoSans } from "@/app/ui/fonts";
 console.log("Imported font object:", notoSans);
 
 const features = [
@@ -13,7 +13,7 @@ const features = [
 
 export default function Websites() {
   return (
-    <div className="relative isolate overflow-hidden w-full bg-gray-800 text-white rounded-3xl p-6 md:p-8">
+    <div className="relative isolate overflow-hidden w-full bg-gray-800 text-white rounded-3xl p-6 md:p-10 md:px-12">
       <div
         aria-hidden="true"
         className="absolute left-1/4 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -23,14 +23,14 @@ export default function Websites() {
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
-          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-20"
+          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-15"
         />
       </div>
-      <Badge className="absolute top-10 left-8 bg-[#6558F5] hover:bg-[#6558F5] text-white">
+      <Badge className="absolute top-12 left-12 bg-[#6558F5] hover:bg-[#6558F5] text-white">
         FREE WEBSITE MIGRATION
       </Badge>
 
-      <div className="absolute top-8 right-8 flex items-center gap-2 bg-white text-[#2D1576] px-4 py-2 rounded-full">
+      <div className="absolute top-10 right-12 flex items-center gap-2 bg-white text-[#2D1576] px-4 py-2 rounded-full">
         <Lock className="w-4 h-4" />
         <span className="text-sm font-medium">SSL certificate</span>
         <Badge
@@ -42,9 +42,7 @@ export default function Websites() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 mt-16">
         <div className="col-span-7">
-          <h2
-            className={` ${notoSans.className} text-4xl text-neutral-300 font-bold mb-6 `}
-          >
+          <h2 className={`  text-4xl text-neutral-300 font-bold mb-6 `}>
             Professional, high-converting websites built to grow your business
           </h2>
           <p className="font-sans text-md text-neutral-300 leading-relaxed">
@@ -67,9 +65,9 @@ export default function Websites() {
           </ul>
           <Link
             href="/websites"
-            className="w-max flex items-center mt-8 text-center text-xl font-semibold text-blue-400"
+            className={` ${montserrat.className} w-max flex items-center mt-8 text-center text-2xl font-semibold text-blue-400 `}
           >
-            Lets build your website{" "}
+            Let&apos;s Build Your Website{" "}
             <ChevronRight
               aria-hidden="true"
               className="flex-none text-blue-400 font-medium pl-2"

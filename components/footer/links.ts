@@ -24,6 +24,10 @@ export const footerLinks = [
       title: "Web Apps",
       href: "/web-apps",
     },
+    thirdLink: {
+      title: "Ecommerce",
+      href: "/ecommerce",
+    },
   },
   {
     heading: "Services",
@@ -47,15 +51,15 @@ export const footerLinks = [
       href: "/contact-us",
     },
     secondLink: {
-      title: "Support Ticket",
+      title: "Login",
       href: "/",
     },
     thirdLink: {
-      title: "Privacy Policy",
+      title: "Dashboard",
       href: "/privacy-policy",
     },
     fourthLink: {
-      title: "Acceptable Use",
+      title: "Support Ticket",
       href: "/acceptable-use-policy",
     },
   },

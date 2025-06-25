@@ -1,8 +1,9 @@
 // import { Badge } from "@/components/ui/badge";
 import { ChevronRight } from "lucide-react";
-// import { FaCheck } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa6";
 import Link from "next/link";
 import { montserrat } from "@/app/ui/fonts";
+import Image from "next/image";
 
 type contentProps = {
   heading: string;
@@ -11,34 +12,20 @@ type contentProps = {
   link: string;
 };
 
+const features = [
+  "Customer portals, Enterprise systems, SaaS products",
+  "Database-driven web applications",
+  "AI Integrations",
+];
+
 const headingStyles =
-  "text-sm text-thatgreen font-semibold bg-thatgreen/20 w-max py-1 px-3 rounded-2xl mb-7 uppercase";
+  "text-xs text-neutral-300 font-semibold bg-thatgreen/25 w-max py-1.5 px-3 rounded-2xl mb-7 uppercase tracking-wide";
 
-const subheadingStyles = `${montserrat.className} text-neutral-100 text-3xl font-semibold mb-4`;
+const subheadingStyles = ` text-neutral-300 text-4xl font-bold mb-6 tracking-normal`;
 
-function Content({ heading, subheading, text, link }: contentProps) {
-  return (
-    <>
-      <h2 className={headingStyles}>{heading}</h2>
-      <h3 className={subheadingStyles}>{subheading}</h3>
-      <p>{text}</p>
-      <Link
-        href={link}
-        className="w-max flex items-center mt-8 text-center text-xl font-semibold text-blue-400"
-      >
-        Start now{" "}
-        <ChevronRight
-          aria-hidden="true"
-          className="flex-none text-blue-400 font-medium pl-2"
-          size="1.35em"
-        />
-      </Link>
-    </>
-  );
-}
 export default function Hosting() {
   return (
-    <div className="relative isolate overflow-hidden grid grid-cols-12 bg-gray-900 text-white h-auto  rounded-3xl px-6">
+    <div className="relative isolate overflow-hidden grid grid-cols-12  gap-x-20 bg-gray-900 text-white h-auto md:pt-12 md:pb-12 md:px-12 rounded-3xl">
       {/* blur component */}
       <svg
         viewBox="0 0 1024 1024"
@@ -59,20 +46,52 @@ export default function Hosting() {
           </radialGradient>
         </defs>
       </svg>
-      <div className="col-span-6 pr-8 md:pt-20 md:pb-12 border-r border-gray-500/30">
-        <Content
-          heading="Fully Managed Hosting"
-          subheading="Lets get your Website online"
-          text="Build and launch web apps, tools, and software in minutes – without writing any code."
-          link="/hosting"
-        />
+      <div className="col-span-7">
+        <h2 className={headingStyles}>Web Applications</h2>
+
+        <h3 className={subheadingStyles}>
+          Smart Web Applications for Modern Business Needs
+        </h3>
+        <p className="font-sans text-base text-neutral-300 leading-relaxed">
+          Whether you're launching something new or improving what you already
+          have, we’re here to make it happen. From simple booking apps to
+          full-featured apps for enterprises, we’ve helped all kinds of
+          businesses create better digital experiences for their teams and
+          clients.
+        </p>
+        <ul className="text-neutral-300/85 mt-6 space-y-2">
+          {features.map((feature) => (
+            <li
+              key={feature}
+              className="text-md font-sans flex items-center gap-x-3"
+            >
+              <FaCheck
+                aria-hidden="true"
+                className="h-auto w-2.5 flex-none text-gray-400"
+              />
+              {feature}
+            </li>
+          ))}
+        </ul>
+        <Link
+          href="/webapps"
+          className={` ${montserrat.className} w-max flex items-center mt-8 text-center text-2xl font-semibold text-blue-400 `}
+        >
+          Learn More{" "}
+          <ChevronRight
+            aria-hidden="true"
+            className="flex-none text-blue-400 font-medium pl-2"
+            size="1.35em"
+          />
+        </Link>
       </div>
-      <div className="col-span-6 pl-8 md:pt-20 md:pb-12 ">
-        <Content
-          heading="Shared Web Hosting"
-          subheading="Lets get your Website online"
-          text="Build and launch web apps, tools, and software in minutes – without writing any code."
-          link="/hosting"
+      <div className="col-span-5 mt-auto border border-gray-700 rounded-lg">
+        <Image
+          src="/img/home/globe-tech.jpg"
+          alt="Web Apps"
+          width={584}
+          height={1024}
+          className="w-full h-[28rem] rounded-lg object-cover"
         />
       </div>
     </div>

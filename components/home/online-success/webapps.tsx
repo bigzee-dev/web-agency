@@ -25,7 +25,7 @@ const subheadingStyles = ` text-neutral-300 text-4xl font-bold mb-6 tracking-nor
 
 export default function WebApps() {
   return (
-    <div className="relative isolate overflow-hidden grid grid-cols-12  gap-x-20 bg-gray-900 text-white h-auto md:pt-10 md:pb-10 px-8 rounded-3xl">
+    <div className="relative isolate overflow-hidden grid grid-cols-12  gap-x-20 bg-gray-900 text-white h-auto md:pt-12 md:pb-12 md:px-12 rounded-3xl">
       {/* blur component */}
       <svg
         viewBox="0 0 1024 1024"
@@ -75,7 +75,7 @@ export default function WebApps() {
         </ul>
         <Link
           href="/webapps"
-          className="w-max flex items-center mt-8 text-center text-xl font-semibold text-blue-400"
+          className={` ${montserrat.className} w-max flex items-center mt-8 text-center text-2xl font-semibold text-blue-400 `}
         >
           Learn More{" "}
           <ChevronRight

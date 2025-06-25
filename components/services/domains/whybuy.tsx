@@ -3,7 +3,7 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function WhyBuy() {
   return (
-    <section className="py-16 px-4 md:px-6 lg:px-8">
+    <section className="py-16 px-4 md:px-6 lg:px-8 md:pt-24">
       <div className="max-w-6xl mx-auto text-center">
         <h2
           className={` ${montserrat.className} text-3xl md:text-4xl font-bold text-gray-800 mb-4 `}
@@ -21,10 +21,10 @@ export default function WhyBuy() {
             <div className="w-12 h-12 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
               <MessageSquare className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold text-primary">
+            <h3 className="text-xl font-semibold text-gray-800">
               24/7 live technical support
             </h3>
-            <p className="font-sans text-md text-gray-700">
+            <p className="font-sans text-md text-gray-700 leading-relaxed">
               Our Customer Success team is here for you any time of the day.
               We&apos;ve made our domain name registration process as easy as
               possible, but everyone needs a helping hand sometimes. Just
@@ -37,10 +37,10 @@ export default function WhyBuy() {
             <div className="w-12 h-12 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
               <CreditCard className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold text-primary">
+            <h3 className="text-xl font-semibold text-gray-800">
               Trusted domain registrar
             </h3>
-            <p className="font-sans text-md text-gray-700">
+            <p className="font-sans text-md text-gray-700 leading-relaxed">
               Hostinger is an ICANN-accredited registrar and web host trusted by
               millions of people worldwide. We offer a comprehensive
               registration service with more than 100 domain extensions so that
@@ -53,10 +53,10 @@ export default function WhyBuy() {
             <div className="w-12 h-12 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
               <FileText className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold text-primary">
+            <h3 className="text-xl font-semibold text-gray-800">
               Instant setup and easy control
             </h3>
-            <p className="font-sans text-md text-gray-700">
+            <p className="font-sans text-md text-gray-700 leading-relaxed">
               Once you complete your domain search, we&apos;ll guide you through
               the website domain registration process. It only takes a few
               clicks, and no technical knowledge is required.

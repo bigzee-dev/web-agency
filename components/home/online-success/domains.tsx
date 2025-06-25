@@ -10,11 +10,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { montserrat } from "@/app/ui/fonts";
 
 export default function Component() {
   return (
     <div
-      className="w-full p-8 rounded-3xl bg-gray-900"
+      className="w-full md:py-10 md:px-12 rounded-3xl bg-gray-900"
       // style={{ backgroundColor: "#2D1576" }}
     >
       <div className="max-w-7xl mx-auto">
@@ -35,10 +36,10 @@ export default function Component() {
           </Badge>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-12 gap-x-12">
           {/* Left content */}
-          <div className="text-neutral-300 space-y-6 pt-2">
-            <h1 className="text-3xl lg:text-4xl font-bold leading-tight">
+          <div className="col-span-7 text-neutral-300 pt-1">
+            <h1 className="text-3xl lg:text-4xl font-bold leading-tight mb-6">
               Domain registration and management — made simple
             </h1>
 
@@ -49,7 +50,7 @@ export default function Component() {
             </p>
 
             {/* Feature list */}
-            <div className="font-sans text-md space-y-2">
+            <div className="font-sans text-md space-y-2 mt-6">
               <div className="flex items-center gap-3">
                 <Check className="w-2.5 h-auto text-gray-400 flex-shrink-0" />
                 <span className=" text-gray-300/85">
@@ -73,9 +74,9 @@ export default function Component() {
             {/* CTA Button */}
             <Link
               href=""
-              className="flex items-center text-blue-400  text-xl font-semibold  mt-8"
+              className={` ${montserrat.className} w-max flex items-center mt-10 text-center text-2xl font-semibold text-blue-400 `}
             >
-              Register your domain{" "}
+              Register Your Domain{" "}
               <ChevronRight
                 aria-hidden="true"
                 className="flex-none text-blue-400 font-medium pl-2"
@@ -85,12 +86,12 @@ export default function Component() {
           </div>
 
           {/* Right illustration */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-gray-900 to-blue-400/25 backdrop-blur-md rounded-3xl p-8 border border-white/10">
+          <div className="relative col-span-5">
+            <div className="bg-gradient-to-br from-gray-900 to-blue-400/25 backdrop-blur-md rounded-3xl p-5 border border-white/10">
               {/* Domain illustration */}
               <div className="relative h-96 overflow-hidden">
                 {/* Background grid pattern */}
-                <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 opacity-15">
                   <div className="grid grid-cols-8 grid-rows-8 h-full w-full">
                     {Array.from({ length: 64 }).map((_, i) => (
                       <div key={i} className="border border-white/20"></div>

@@ -55,9 +55,9 @@ export default function DomainPricingTable() {
   ];
 
   return (
-    <div className="w-full max-w-6xl mx-auto">
+    <div className="w-full max-w-5xl mx-auto pb-8">
       {/* Header Section */}
-      <div className="grid grid-cols-1 md:grid-cols-4 bg-[#0e5ca0] text-white rounded-t-lg">
+      <div className="grid grid-cols-1 md:grid-cols-4 bg-[#0e5ca0] text-white rounded-t-2xl">
         {[
           {
             icon: <Box className="h-6 w-6" />,
@@ -84,9 +84,9 @@ export default function DomainPricingTable() {
             key={index}
             className="flex flex-col items-center text-center p-6"
           >
-            <div className="bg-[#1a6cb3] rounded-full p-4 mb-4">
+            {/* <div className="bg-[#1a6cb3] rounded-full p-4 mb-4">
               {item.icon}
-            </div>
+            </div> */}
             <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
             <p className="text-sm text-gray-100">{item.description}</p>
           </div>
@@ -98,7 +98,7 @@ export default function DomainPricingTable() {
         <Table>
           <TableHeader className="bg-gray-50">
             <TableRow className="hidden md:table-row">
-              <TableHead className="w-1/4">Domain</TableHead>
+              <TableHead className="w-1/4 text-center">Domain</TableHead>
               <TableHead className="w-1/4 text-center">Registration</TableHead>
               <TableHead className="w-1/4 text-center">Transfer</TableHead>
               <TableHead className="w-1/4 text-center">Renewal</TableHead>
@@ -110,7 +110,7 @@ export default function DomainPricingTable() {
                 key={index}
                 className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
               >
-                <TableCell className="font-medium">
+                <TableCell className="text-gray-700 font-sans text-base font-medium text-center">
                   {domain.extension}
                 </TableCell>
                 <TableCell className="text-center">
@@ -127,8 +127,12 @@ export default function DomainPricingTable() {
                     domain.registration.original
                   )}
                 </TableCell>
-                <TableCell className="text-center">{domain.transfer}</TableCell>
-                <TableCell className="text-center">{domain.renewal}</TableCell>
+                <TableCell className="text-center text-gray-800">
+                  {domain.transfer}
+                </TableCell>
+                <TableCell className="text-center text-gray-900">
+                  {domain.renewal}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

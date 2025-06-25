@@ -290,13 +290,13 @@ export default function ClaudeNav() {
                 Domains
               </Link>
               <a
-                href="https://domains.bigzee.app/cart.php?a=add&domain=register"
+                href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register`}
                 className="dropdown-item"
               >
                 Register Domain
               </a>
               <a
-                href="https://domains.bigzee.app/index.php?rp=/cart/domain/renew"
+                href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/cart/domain/renew`}
                 className="dropdown-item"
               >
                 Renew Domain
@@ -347,6 +347,16 @@ export default function ClaudeNav() {
                 {" "}
                 {/* Assuming external */}
                 Login
+              </a>
+              <a
+                href="https://domains.bigzee.app/clientarea.php"
+                className="dropdown-item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                {/* Assuming external */}
+                My Services
               </a>
               <Link href="/support/open-ticket" className="dropdown-item">
                 {" "}

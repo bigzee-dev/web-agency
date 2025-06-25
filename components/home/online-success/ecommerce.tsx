@@ -2,11 +2,12 @@ import { ShoppingCart, ArrowRight, Check, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { montserrat } from "@/app/ui/fonts";
 
 export default function Component() {
   return (
     <div
-      className="w-full py-8 px-8 rounded-3xl bg-gray-900"
+      className="w-full py-10 px-12 rounded-3xl bg-gray-900"
       // style={{ backgroundColor: "#2D1576" }}
     >
       {/* Header badges */}
@@ -29,7 +30,7 @@ export default function Component() {
 
       <div className="grid lg:grid-cols-12 gap-x-12 ">
         {/* Left content */}
-        <div className="col-span-7 pt-2">
+        <div className="col-span-7 pt-1">
           <h1 className="text-neutral-300 text-3xl lg:text-4xl font-bold mb-6">
             Ecommerce that looks great and sells even better.
           </h1>
@@ -66,7 +67,7 @@ export default function Component() {
           {/* CTA Button */}
           <Link
             href=""
-            className="flex items-center text-blue-400  text-xl font-semibold  mt-8"
+            className={` ${montserrat.className} w-max flex items-center mt-10 text-center text-2xl font-semibold text-blue-400 `}
           >
             Start Selling Online
             <ChevronRight
@@ -82,6 +83,14 @@ export default function Component() {
           <div className="bg-gradient-to-br from-gray-900 to-blue-400/25 backdrop-blur-md rounded-3xl p-8 border border-white/10">
             {/* Ecommerce illustration */}
             <div className="relative h-96 overflow-hidden">
+              <div className="absolute inset-0 opacity-15">
+                {/* Background grid pattern */}
+                <div className="grid grid-cols-8 grid-rows-8 h-full w-full">
+                  {Array.from({ length: 64 }).map((_, i) => (
+                    <div key={i} className="border border-white/20"></div>
+                  ))}
+                </div>
+              </div>
               {/* Shopping cart icon */}
               <div className="absolute top-4 left-4 bg-orange-500 p-3 rounded-xl">
                 <ShoppingCart className="w-6 h-6 text-white" />

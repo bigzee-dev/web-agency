@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Lock } from "lucide-react";
 import { FaCheck } from "react-icons/fa6";
 import Link from "next/link";
+import { montserrat } from "@/app/ui/fonts";
 
 const features = [
   "Visually stunning, responsive and secure websites",
@@ -11,7 +12,7 @@ const features = [
 
 export default function Websites() {
   return (
-    <div className="relative isolate overflow-hiddenvw-full bg-gray-800 text-white rounded-3xl p-6 md:p-8">
+    <div className="relative isolate overflow-hiddenvw-full bg-gray-800 text-white rounded-3xl p-6 md:p-10 md:px-12">
       <div
         aria-hidden="true"
         className="absolute left-1/4 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -24,11 +25,11 @@ export default function Websites() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-20"
         />
       </div>
-      <Badge className="absolute top-10 left-8 bg-[#6558F5] hover:bg-[#6558F5] text-white uppercase">
+      <Badge className="absolute top-12 left-12 bg-[#6558F5] hover:bg-[#6558F5] text-white uppercase">
         Business Email
       </Badge>
 
-      <div className="absolute top-8 right-8 flex items-center gap-2 bg-white text-[#2D1576] px-4 py-2 rounded-full">
+      <div className="absolute top-10 right-12 flex items-center gap-2 bg-white text-[#2D1576] px-4 py-2 rounded-full">
         <Lock className="w-4 h-4" />
         <span className="text-sm font-medium">SSL certificate</span>
         <Badge
@@ -66,7 +67,7 @@ export default function Websites() {
           </ul>
           <Link
             href="/websites"
-            className="w-max flex items-center mt-8 text-center text-xl font-semibold text-blue-400"
+            className={` ${montserrat.className} w-max flex items-center mt-8 text-center text-2xl font-semibold text-blue-400 `}
           >
             Learn More
             <ChevronRight
