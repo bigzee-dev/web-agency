@@ -22,15 +22,16 @@ export default function Showcase() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[rgb(125,218,235)] to-[#899cfc] opacity-35"
         />
       </div>
-      {/* main content */}
 
-      <main className="max-w-7xl mx-auto w-full h-full grid grid-cols-12 gap-x-6 items-center">
+      {/* main content */}
+      <main className="max-w-7xl mx-auto w-full h-full grid grid-cols-1 items-center gap-y-12 md:gap-x-6 lg:grid-cols-12">
         {/* heading and cta */}
-        <section className="flex flex-col gap-y-6 lg:pr-4 col-span-6">
-          <div>
+        <section className="flex flex-col gap-y-6 lg:pr-4 md:col-span-6">
+          <div className="w-full flex justify-center mb-2 lg:justify-start">
+            {/* Business Email Link */}
             <Link
               href="/emails"
-              className="flex justify-center items-center gap-x-3 w-max bg-primary/10 py-1 pl-1 pr-1.5 mb-6  rounded-lg border border-gray-400 shadow-md hover:bg-primary/15"
+              className="flex justify-center items-center gap-x-3 w-max bg-primary/10 py-1 pl-1 pr-1.5   rounded-lg border border-gray-400 shadow-md hover:bg-primary/15"
             >
               <p
                 className={` ${cairo.className} text-md text-neutral-100 font-semibold bg-slate-700 rounded-lg py-0.5 px-2 tracking-wide `}
@@ -51,12 +52,13 @@ export default function Showcase() {
                 <IoArrowForwardCircle className="text-slate-700" size="1.6em" />
               </span>
             </Link>
+          </div>
+
+          <div className="max-w-xl mx-auto space-y-6 lg:mr-auto lg:ml-0">
             <h1 className={` ${pageHeadings} `}>
               Building Modern and Reliable Web Solutions
             </h1>
-          </div>
-          <div className="font-sans text-base  text-gray-700 md:w-[90%] leading-6">
-            <p>
+            <p className="font-sans text-base text-gray-700 text-center leading-6 w-[90%] lg:text-start">
               Deltaworx is a web technology company based in Botswana. We
               specialise in web technologies that empower businesses and
               organisations to grow online. From websites to fully featured web
@@ -64,38 +66,28 @@ export default function Showcase() {
               presence that delivers real results.
             </p>
           </div>
-          {/*  <span aria-hidden="true"> →</span> */}
-          <div className="w-full flex justify-start mt-2">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-x-8 gap-y-4">
-              <Link href="#our-services" className={` ${primaryButton} `}>
-                Our Services
-              </Link>
-              <Link
-                href="#"
-                className="font-sans text-gray-800 font-semibold ml-4"
-              >
-                About Us <span aria-hidden="true"> →</span>
-              </Link>
-            </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-x-8 gap-y-5 mt-2 lg:justify-start lg:mt-2.5">
+            <Link href="#our-services" className={` ${primaryButton} `}>
+              Our Services
+            </Link>
+            <Link
+              href="#"
+              className="font-sans text-gray-800 font-semibold ml-4"
+            >
+              About Us <span aria-hidden="true"> →</span>
+            </Link>
           </div>
-          {/* <div className="flex items-center font-sans font-medium text-sm ">
-            <span className="text-secondary mr-2">
-              <IoShieldCheckmarkSharp size="1.5em" className="text-gray-800" />
-            </span>
-            <span className="text-gray-700">
-              7 day - money back - guarantee
-            </span>
-          </div> */}
         </section>
 
         {/* image */}
-        <section className="h-full flex justify-end items-start col-span-6 ">
+        <section className="h-full flex justify-end items-start lg:col-span-6 ">
           <Image
             src="/img/home/home-hero-section.png"
             alt="image"
             width={940}
             height={788}
-            className="object-cover  rounded-tl-2xl rounded-br-2xl"
+            className="mx-auto object-cover rounded-tl-2xl rounded-br-2xl sm:max-w-xl md:max-w-2xl "
           />
         </section>
       </main>

@@ -1,6 +1,11 @@
 "use client";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/online-success-tabs/tabs";
 
 import {
   Card,

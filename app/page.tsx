@@ -12,12 +12,12 @@ export default function Home() {
     <>
       <Showcase />
       <OnlineSuccess />
-      <WhyChooseUs />
+      {/* <WhyChooseUs />
       <Visibility />
       <Testimonials />
       <Personal />
       <BlogLinks />
-      <ContactUs />
+      <ContactUs /> */}
     </>
   );
 }

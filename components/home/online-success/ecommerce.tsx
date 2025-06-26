@@ -80,7 +80,7 @@ export default function Component() {
 
         {/* Right illustration */}
         <div className="col-span-5">
-          <div className="bg-gradient-to-br from-gray-900 to-blue-400/25 backdrop-blur-md rounded-3xl p-8 border border-white/10">
+          <div className="bg-gradient-to-br from-gray-900 to-blue-400/25 backdrop-blur-md rounded-3xl p-6 border border-white/10">
             {/* Ecommerce illustration */}
             <div className="relative h-96 overflow-hidden">
               <div className="absolute inset-0 opacity-15">

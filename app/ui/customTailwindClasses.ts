@@ -1,12 +1,12 @@
 import { montserrat } from "@/app/ui/fonts";
 
-export const pageHeadings = ` ${montserrat.className} text-gray-800 text-4xl md:text-6xl font-bold glb-headings-lineheight`;
+export const pageHeadings = ` ${montserrat.className} text-gray-800 text-5xl md:text-6xl font-bold glb-headings-lineheight text-center lg:text-left`;
 export const sectionHeadings = ` ${montserrat.className} text-gray-800 text-4xl md:text-5xl font-bold`;
 export const smallTextHeadings =
   "text-center text-base/7 font-semibold text-blue-600";
 
 export const btnDimensions =
-  "font-sans text-center py-2.5 px-3 w-max min-w-44 text-md font-semibold rounded-lg";
+  "font-sans text-center py-2.5 px-3 w-max min-w-44 text-md font-semibold rounded-xl";
 
 export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 

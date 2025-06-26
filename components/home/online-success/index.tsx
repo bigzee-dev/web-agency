@@ -1,5 +1,11 @@
-import { AppWindowIcon, CodeIcon } from "lucide-react";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/online-success-tabs/tabs";
+
 // components
 import Websites from "./websites";
 import WebApps from "./webapps";
@@ -7,19 +13,6 @@ import Email from "./email";
 import Ecommerce from "./ecommerce";
 import Hosting from "./hosting";
 import Domains from "./domains";
-
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function OnlineSuccess() {
   return (
@@ -41,7 +34,7 @@ export default function OnlineSuccess() {
         defaultValue="websites"
         className="flex flex-col items-center gap-y-2 w-full"
       >
-        <TabsList className="border border-gray-300 max-w-max mx-auto rounded-lg ">
+        <TabsList className="border border-gray-300 max-w-max mx-auto rounded-lg   overflow-x-auto whitespace-nowrap w-full">
           <TabsTrigger value="websites">Websites</TabsTrigger>
           <TabsTrigger value="webapps">Web Apps</TabsTrigger>
           <TabsTrigger value="ecommerce">Ecommerce</TabsTrigger>
