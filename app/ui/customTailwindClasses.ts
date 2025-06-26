@@ -6,7 +6,7 @@ export const smallTextHeadings =
   "text-center text-base/7 font-semibold text-blue-600";
 
 export const btnDimensions =
-  "font-sans text-center py-2.5 px-3 w-max min-w-44 text-md font-semibold rounded-xl";
+  "font-sans text-center py-2.5 px-3 w-max min-w-44 text-base md:text-md font-semibold rounded-xl";
 
 export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 

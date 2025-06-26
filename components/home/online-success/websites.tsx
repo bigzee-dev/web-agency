@@ -13,10 +13,11 @@ const features = [
 
 export default function Websites() {
   return (
-    <div className="relative isolate overflow-hidden w-full bg-gray-800 text-white rounded-3xl p-6 md:p-10 md:px-12">
+    <div className="relative isolate w-full overflow-hidden rounded-3xl bg-gray-800 p-4 pt-5 text-white md:p-10 md:px-12">
+      {/* Blur component */}
       <div
         aria-hidden="true"
-        className="absolute left-1/4 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
+        className="absolute left-1/4 top-0 -z-10 -translate-x-1/2 overflow-hidden blur-3xl xl:-top-6"
       >
         <div
           style={{
@@ -26,12 +27,12 @@ export default function Websites() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-15"
         />
       </div>
-      <Badge className="absolute top-12 left-12 bg-[#6558F5] hover:bg-[#6558F5] text-white">
+      <Badge className="absolute left-12 top-12 hidden bg-[#6558F5] text-white hover:bg-[#6558F5] md:block">
         FREE WEBSITE MIGRATION
       </Badge>
 
-      <div className="absolute top-10 right-12 flex items-center gap-2 bg-white text-[#2D1576] px-4 py-2 rounded-full">
-        <Lock className="w-4 h-4" />
+      <div className="absolute right-12 top-10 hidden items-center gap-2 rounded-full bg-white px-4 py-2 text-[#2D1576] md:flex">
+        <Lock className="h-4 w-4" />
         <span className="text-sm font-medium">SSL certificate</span>
         <Badge
           variant="secondary"
@@ -40,20 +41,33 @@ export default function Websites() {
           ACTIVE
         </Badge>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 mt-16">
-        <div className="col-span-7">
-          <h2 className={`  text-4xl text-neutral-300 font-bold mb-6 `}>
+      {/* <div className="block w-full rounded-lg border border-gray-500/30 bg-white/10 p-4 text-center md:hidden">
+        <span className="bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-600 bg-clip-text text-3xl font-semibold text-transparent">
+          Websites
+        </span>{" "}
+      </div> */}
+      <Badge
+        variant="secondary"
+        className={` ${notoSans.className} block max-w-max bg-background/95 text-center font-semibold text-secondary md:hidden`}
+      >
+        WEBSITES
+      </Badge>
+      <div className="mt-4 grid grid-cols-1 items-center gap-x-8 gap-y-8 md:mt-16 md:grid-cols-12">
+        <div className="md:col-span-7">
+          <h2
+            className={`mb-4 text-3xl font-semibold text-neutral-300 md:mb-6 md:text-4xl md:font-bold`}
+          >
             Professional, high-converting websites built to grow your business
           </h2>
-          <p className="font-sans text-md text-neutral-300 leading-relaxed">
+          <p className="font-sans text-md leading-relaxed text-neutral-300">
             We develop fast, secure websites designed to turn visitors into
             customers — and support your long-term growth.
           </p>
-          <ul className="text-neutral-300/85 mt-6 space-y-2">
+          <ul className="mt-6 space-y-2 text-neutral-300/85">
             {features.map((feature) => (
               <li
                 key={feature}
-                className="text-md font-sans flex items-center gap-x-3"
+                className="flex items-center gap-x-3 font-sans text-md"
               >
                 <FaCheck
                   aria-hidden="true"
@@ -65,17 +79,17 @@ export default function Websites() {
           </ul>
           <Link
             href="/websites"
-            className={` ${montserrat.className} w-max flex items-center mt-8 text-center text-2xl font-semibold text-blue-400 `}
+            className={` ${montserrat.className} mx-auto mt-6 flex w-max items-center text-center text-xl font-semibold text-blue-400 md:ml-0 md:mr-auto md:mt-8 md:text-start md:text-2xl`}
           >
             Let&apos;s Build Your Website{" "}
             <ChevronRight
               aria-hidden="true"
-              className="flex-none text-blue-400 font-medium pl-2"
+              className="flex-none font-medium text-blue-400 md:pl-2"
               size="1.35em"
             />
           </Link>
         </div>
-        <div className="col-span-5 mt-auto border border-gray-700 rounded-lg">
+        <div className="mt-auto rounded-lg border border-gray-700 md:col-span-5">
           <img
             src="/svg/home/websites-cms.svg"
             alt="Website"

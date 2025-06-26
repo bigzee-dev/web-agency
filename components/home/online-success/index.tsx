@@ -16,51 +16,63 @@ import Domains from "./domains";
 
 export default function OnlineSuccess() {
   return (
-    <div className="x-padding flex flex-col items-center w-full max-w-6xl mx-auto px-4 py-16 gap-6 z-40">
-      <div className="text-center mb-6 ">
+    <div className="x-padding z-40 mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-4 py-16">
+      <div className="mb-6 text-center">
         <h1 className={` ${sectionHeadings} `}>
           Your online{" "}
-          <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 bg-clip-text text-transparent">
             success
           </span>{" "}
           starts here
         </h1>
-        <p className="text-lg text-gray-600 mt-4">
+        <p className="mt-4 text-lg text-gray-600">
           Choose from a wide variety of products and services to grow your idea
           online.
         </p>
       </div>
-      <Tabs
-        defaultValue="websites"
-        className="flex flex-col items-center gap-y-2 w-full"
-      >
-        <TabsList className="border border-gray-300 max-w-max mx-auto rounded-lg   overflow-x-auto whitespace-nowrap w-full">
-          <TabsTrigger value="websites">Websites</TabsTrigger>
-          <TabsTrigger value="webapps">Web Apps</TabsTrigger>
-          <TabsTrigger value="ecommerce">Ecommerce</TabsTrigger>
-          <TabsTrigger value="email">Email</TabsTrigger>
-          <TabsTrigger value="hosting">Hosting</TabsTrigger>
-          <TabsTrigger value="domains">Domains</TabsTrigger>
-        </TabsList>
-        <TabsContent value="websites">
-          <Websites />
-        </TabsContent>
-        <TabsContent value="webapps">
-          <WebApps />
-        </TabsContent>
-        <TabsContent value="ecommerce">
-          <Ecommerce />
-        </TabsContent>
-        <TabsContent value="email">
-          <Email />
-        </TabsContent>
-        <TabsContent value="hosting">
-          <Hosting />
-        </TabsContent>
-        <TabsContent value="domains">
-          <Domains />
-        </TabsContent>
-      </Tabs>
+      {/* Tabs for larger screens */}
+      {/* Hidden on small screens, visible on medium and larger screens */}
+      <div className="hidden md:block">
+        <Tabs
+          defaultValue="websites"
+          className="flex w-full flex-col items-center gap-y-2"
+        >
+          <TabsList className="mx-auto w-full max-w-max rounded-lg border border-gray-300">
+            <TabsTrigger value="websites">Websites</TabsTrigger>
+            <TabsTrigger value="webapps">Web Apps</TabsTrigger>
+            <TabsTrigger value="ecommerce">Ecommerce</TabsTrigger>
+            <TabsTrigger value="email">Email</TabsTrigger>
+            <TabsTrigger value="hosting">Hosting</TabsTrigger>
+            <TabsTrigger value="domains">Domains</TabsTrigger>
+          </TabsList>
+          <TabsContent value="websites">
+            <Websites />
+          </TabsContent>
+          <TabsContent value="webapps">
+            <WebApps />
+          </TabsContent>
+          <TabsContent value="ecommerce">
+            <Ecommerce />
+          </TabsContent>
+          <TabsContent value="email">
+            <Email />
+          </TabsContent>
+          <TabsContent value="hosting">
+            <Hosting />
+          </TabsContent>
+          <TabsContent value="domains">
+            <Domains />
+          </TabsContent>
+        </Tabs>
+      </div>
+      <div className="block w-full space-y-2 md:hidden">
+        <Websites />
+        <WebApps />
+        {/* <Ecommerce />
+        <Email />
+        <Hosting />
+        <Domains /> */}
+      </div>
     </div>
   );
 }
