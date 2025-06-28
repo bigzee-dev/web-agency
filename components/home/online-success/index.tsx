@@ -16,7 +16,7 @@ import Domains from "./domains";
 
 export default function OnlineSuccess() {
   return (
-    <div className="x-padding z-40 mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-4 py-16">
+    <div className="x-padding z-40 mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-4 py-12 md:py-16">
       <div className="mb-6 text-center">
         <h1 className={` ${sectionHeadings} `}>
           Your online{" "}
@@ -68,8 +68,8 @@ export default function OnlineSuccess() {
       <div className="block w-full space-y-2 md:hidden">
         <Websites />
         <WebApps />
-        {/* <Ecommerce />
-        <Email />
+        <Ecommerce />
+        {/* <Email />
         <Hosting />
         <Domains /> */}
       </div>

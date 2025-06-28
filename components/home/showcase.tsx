@@ -8,7 +8,7 @@ import { cairo } from "@/app/ui/fonts";
 
 export default function Showcase() {
   return (
-    <div className="x-padding relative isolate w-full overflow-hidden pb-8 pt-16 md:pb-12">
+    <div className="x-padding relative isolate w-full overflow-hidden pb-8 pt-16 md:overflow-visible md:pb-12">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -27,7 +27,7 @@ export default function Showcase() {
       <main className="mx-auto grid h-full w-full max-w-7xl grid-cols-1 items-center gap-y-12 md:gap-x-6 lg:grid-cols-12">
         {/* heading and cta */}
         <section className="flex flex-col gap-y-6 md:col-span-6 lg:pr-4">
-          <div className="mb-2 flex w-full justify-center lg:justify-start">
+          <div className="mb-2.5 flex w-full justify-center lg:justify-start">
             {/* Business Email Link */}
             <Link
               href="/emails"
@@ -73,7 +73,7 @@ export default function Showcase() {
             </Link>
             <Link
               href="#"
-              className="ml-4 font-sans text-base font-semibold text-gray-800 md:text-md"
+              className="ml-4 font-sans text-base font-semibold tracking-wide text-gray-800 md:text-md"
             >
               About Us <span aria-hidden="true"> →</span>
             </Link>

@@ -75,7 +75,7 @@ export default function Component() {
   }
 
   return (
-    <div className="relative isolate x-padding w-full pt-20 pb-20">
+    <div className="x-padding relative isolate w-full overflow-hidden pb-20 pt-20 md:overflow-visible">
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -98,21 +98,21 @@ export default function Component() {
         >
           <div className="text-center">
             <h2 className={` ${sectionHeadings}`}>Why Choose Us</h2>
-            <p className="italic font-sans text-3xl font-normal text-gray-600 mt-10 mb-3">
+            <p className="mb-3 mt-10 font-sans text-3xl font-normal italic text-gray-600">
               We are Here to Help you{" "}
               <span
-                className={` ${montserrat.className} text-3xl font-extrabold text-gray-700 tracking-wide underline`}
+                className={` ${montserrat.className} text-3xl font-extrabold tracking-wide text-gray-700 underline`}
               >
                 Grow your Brand and Revenue
               </span>
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-x-8 gap-y-14">
+          <div className="grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
             {cardData.map((card, index) => (
               <motion.div key={index} variants={cardVariants}>
-                <Card className="h-full flex flex-col items-center gap-2">
+                <Card className="flex h-full flex-col items-center gap-2">
                   <CardHeader
-                    className={`relative flex flex-col justify-center items-center gap-2 overflow-hidden w-full min-w-[300px] max-w-[320px] h-[150px] rounded-xl ${card.className}`}
+                    className={`relative flex h-[150px] w-full min-w-[300px] max-w-[320px] flex-col items-center justify-center gap-2 overflow-hidden rounded-xl ${card.className}`}
                     style={card.backgroundStyle as React.CSSProperties}
                   >
                     {" "}
@@ -121,18 +121,18 @@ export default function Component() {
                       height={75}
                       width={75}
                       alt="svg"
-                      className="z-30 block m-0"
+                      className="z-30 m-0 block"
                       style={{ lineHeight: 0 }}
                     />
                     {/* <p className=" text-white/80 font-semibold ">
                       {card.title}
                     </p> */}
                   </CardHeader>
-                  <CardContent className=" space-y-2 pt-3 text-center ">
-                    <p className="w-full text-base text-gray-800 font-semibold">
+                  <CardContent className="space-y-2 pt-3 text-center">
+                    <p className="w-full text-base font-semibold text-gray-800">
                       {card.title}
                     </p>
-                    <p className="font-sans text-md text-gray-700 font-normal pb-0 leading-relaxed">
+                    <p className="pb-0 font-sans text-md font-normal leading-relaxed text-gray-700">
                       {card.content}
                     </p>
                   </CardContent>

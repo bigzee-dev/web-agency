@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-background`}>
-        {/* <ClaudeNav /> */}
+      <body className={`${inter.className} bg-background antialiased`}>
+        <ClaudeNav />
         {children}
         {/* <Footer /> */}
       </body>

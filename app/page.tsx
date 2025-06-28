@@ -12,8 +12,8 @@ export default function Home() {
     <>
       <Showcase />
       <OnlineSuccess />
-      {/* <WhyChooseUs />
-      <Visibility />
+      <WhyChooseUs />
+      {/* <Visibility />
       <Testimonials />
       <Personal />
       <BlogLinks />

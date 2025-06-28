@@ -13,7 +13,7 @@ const features = [
 
 export default function Websites() {
   return (
-    <div className="relative isolate w-full overflow-hidden rounded-3xl bg-gray-800 p-4 pt-5 text-white md:p-10 md:px-12">
+    <div className="relative isolate w-full overflow-hidden rounded-3xl bg-gray-800 p-4 pt-5 text-white sm:p-5 md:p-8 md:px-12">
       {/* Blur component */}
       <div
         aria-hidden="true"
@@ -27,11 +27,11 @@ export default function Websites() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-15"
         />
       </div>
-      <Badge className="absolute left-12 top-12 hidden bg-[#6558F5] text-white hover:bg-[#6558F5] md:block">
+      <Badge className="absolute left-12 top-12 hidden bg-[#6558F5] text-white hover:bg-[#6558F5] lg:block">
         FREE WEBSITE MIGRATION
       </Badge>
 
-      <div className="absolute right-12 top-10 hidden items-center gap-2 rounded-full bg-white px-4 py-2 text-[#2D1576] md:flex">
+      <div className="absolute right-12 top-10 hidden items-center gap-2 rounded-full bg-white px-4 py-2 text-[#2D1576] lg:flex">
         <Lock className="h-4 w-4" />
         <span className="text-sm font-medium">SSL certificate</span>
         <Badge
@@ -48,14 +48,14 @@ export default function Websites() {
       </div> */}
       <Badge
         variant="secondary"
-        className={` ${notoSans.className} block max-w-max bg-background/95 text-center font-semibold text-secondary md:hidden`}
+        className={`block max-w-max bg-background/95 text-center font-semibold text-secondary lg:hidden`}
       >
         WEBSITES
       </Badge>
-      <div className="mt-4 grid grid-cols-1 items-center gap-x-8 gap-y-8 md:mt-16 md:grid-cols-12">
-        <div className="md:col-span-7">
+      <div className="mt-4 grid grid-cols-1 items-center gap-x-8 gap-y-8 lg:mt-16 lg:grid-cols-12">
+        <div className="lg:col-span-7">
           <h2
-            className={`mb-4 text-3xl font-semibold text-neutral-300 md:mb-6 md:text-4xl md:font-bold`}
+            className={`mb-4 text-3xl font-bold text-neutral-300 md:mb-6 md:text-4xl`}
           >
             Professional, high-converting websites built to grow your business
           </h2>
@@ -79,17 +79,17 @@ export default function Websites() {
           </ul>
           <Link
             href="/websites"
-            className={` ${montserrat.className} mx-auto mt-6 flex w-max items-center text-center text-xl font-semibold text-blue-400 md:ml-0 md:mr-auto md:mt-8 md:text-start md:text-2xl`}
+            className={` ${montserrat.className} mx-auto mt-6 flex w-max items-center text-center text-xl font-semibold text-blue-400 md:text-2xl lg:ml-0 lg:mr-auto lg:mt-8 lg:text-start`}
           >
             Let&apos;s Build Your Website{" "}
             <ChevronRight
               aria-hidden="true"
-              className="flex-none font-medium text-blue-400 md:pl-2"
+              className="flex-none font-medium text-blue-400 lg:pl-2"
               size="1.35em"
             />
           </Link>
         </div>
-        <div className="mt-auto rounded-lg border border-gray-700 md:col-span-5">
+        <div className="mt-auto rounded-lg border border-gray-700 lg:col-span-5">
           <img
             src="/svg/home/websites-cms.svg"
             alt="Website"

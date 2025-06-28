@@ -19,13 +19,13 @@ const features = [
 ];
 
 const headingStyles =
-  "text-xs text-neutral-300 font-semibold bg-thatgreen/25 w-max py-1.5 px-3 rounded-2xl mb-7 uppercase tracking-wide";
+  "text-xs text-neutral-200 font-semibold bg-blue-400/20 w-max py-1.5 px-3 rounded-2xl mb-4 md:mb-7 uppercase tracking-wide";
 
-const subheadingStyles = ` text-neutral-300 text-4xl font-bold mb-6 tracking-normal`;
+const subheadingStyles = ` text-neutral-300 text-3xl md:text-4xl font-bold mb-5 tracking-normal`;
 
 export default function WebApps() {
   return (
-    <div className="relative isolate grid h-auto grid-cols-1 gap-x-20 overflow-hidden rounded-3xl bg-gray-900 p-4 pt-5 text-white md:grid-cols-12 md:px-12 md:pb-12 md:pt-12">
+    <div className="relative isolate gap-x-20 overflow-hidden rounded-3xl bg-gray-900 p-4 pt-6 text-white md:px-12 md:pb-12 md:pt-12 lg:grid lg:grid-cols-12">
       {/* blur component */}
       <svg
         viewBox="0 0 1024 1024"
@@ -75,23 +75,23 @@ export default function WebApps() {
         </ul>
         <Link
           href="/webapps"
-          className={` ${montserrat.className} mt-8 flex w-max items-center text-center text-2xl font-semibold text-blue-400`}
+          className={` ${montserrat.className} mx-auto mt-6 flex w-max items-center text-center text-xl font-semibold text-blue-400 md:text-2xl lg:ml-0 lg:mr-auto lg:mt-8 lg:text-start`}
         >
           Learn More{" "}
           <ChevronRight
             aria-hidden="true"
-            className="flex-none pl-2 font-medium text-blue-400"
+            className="flex-none font-medium text-blue-400 md:pl-2"
             size="1.35em"
           />
         </Link>
       </div>
-      <div className="col-span-5 mt-auto rounded-lg border border-gray-700">
+      <div className="col-span-5 mt-8 rounded-lg border border-gray-700 lg:mt-auto">
         <Image
           src="/img/home/coding.jpg"
           alt="Web Apps"
           width={667}
           height={1000}
-          className="h-[28rem] w-full rounded-lg object-cover"
+          className="h-[21rem] w-full rounded-lg object-cover md:h-[28rem]"
         />
       </div>
     </div>

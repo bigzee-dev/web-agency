@@ -2,7 +2,8 @@
 
 import { useEffect } from "react";
 import { cairo, montserrat } from "@/app/ui/fonts";
-import { NavChevron } from "./chevron"; // Assuming this is correct path
+import { NavChevron } from "./chevron";
+import { GlobeIcon, ShoppingBagIcon } from "./icons";
 import Link from "next/link";
 
 export default function ClaudeNav() {
@@ -147,7 +148,7 @@ export default function ClaudeNav() {
           if (listener.parentElement)
             listener.parentElement.addEventListener(
               "mouseleave",
-              listener.mouseleave
+              listener.mouseleave,
             );
         });
       } else {
@@ -158,7 +159,7 @@ export default function ClaudeNav() {
           if (listener.parentElement)
             listener.parentElement.removeEventListener(
               "mouseleave",
-              listener.mouseleave
+              listener.mouseleave,
             );
         });
       }
@@ -196,7 +197,7 @@ export default function ClaudeNav() {
         if (listener.parentElement)
           listener.parentElement.removeEventListener(
             "mouseleave",
-            listener.mouseleave
+            listener.mouseleave,
           );
       });
 
@@ -207,7 +208,7 @@ export default function ClaudeNav() {
   }, []); // Empty dependency array: runs once on mount, cleans up on unmount.
 
   return (
-    <nav className="x-padding border-b border-gray-300/70 navbar">
+    <nav className="x-padding navbar border-b border-gray-300/70">
       <div className="navbar-container">
         <Link className="logo-container" href="/">
           {" "}
@@ -215,7 +216,7 @@ export default function ClaudeNav() {
           <img src="/img/just-logo.png" alt="BigZee Digital Logo" />{" "}
           {/* Added alt text */}
           <h4
-            className={` ${cairo.className} font-light text-gray-700 ml-2 nav-logo mb-1`}
+            className={` ${cairo.className} nav-logo mb-1 ml-2 font-light text-gray-700`}
           >
             delta<span className="font-semibold text-gray-800">worx</span>
           </h4>
@@ -228,153 +229,172 @@ export default function ClaudeNav() {
           ✕
         </button>{" "}
         {/* Added aria-label */}
-        <ul className={` ${montserrat.className} nav-menu `}>
-          <li className="nav-item">
-            <div
-              className={` ${montserrat.className} nav-link nav-link-with-dropdown `}
-            >
-              Websites{" "}
-              <span className="chevron">
-                <NavChevron />
-              </span>
-            </div>
-            <div className="dropdown-menu">
-              <Link href="/websites" className="dropdown-item">
-                Website Development
-              </Link>
-              <Link href="/ecommerce" className="dropdown-item">
-                Ecommerce Stores
-              </Link>
-            </div>
-          </li>
-          <li className="nav-item">
-            <Link
-              href="/emails"
-              className={` ${montserrat.className} nav-link `}
-            >
-              {/* Changed to Link */}
-              Email
-            </Link>
-          </li>
-          <li className="nav-item">
-            <div
-              className={` ${montserrat.className} nav-link nav-link-with-dropdown `}
-            >
-              Hosting{" "}
-              <span className="chevron">
-                <NavChevron />
-              </span>
-            </div>
-            <div className="dropdown-menu">
-              <Link href="/managed-hosting" className="dropdown-item">
-                {" "}
-                {/* Changed to Link if internal */}
-                Managed Hosting
-              </Link>
-              <Link href="/hosting" className="dropdown-item">
-                Web Hosting
-              </Link>
-            </div>
-          </li>
-          <li className="nav-item">
-            <div
-              className={` ${montserrat.className} nav-link nav-link-with-dropdown `}
-            >
-              Domains{" "}
-              <span className="chevron">
-                <NavChevron />
-              </span>
-            </div>
-            <div className="dropdown-menu">
-              <Link href="/domains" className="dropdown-item">
-                Domains
-              </Link>
-              <a
-                href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register`}
-                className="dropdown-item"
+        <div className="nav-menu">
+          <ul className={` ${montserrat.className} nav-menu-stylingcontainer`}>
+            <li className="nav-item">
+              <div
+                className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                Register Domain
-              </a>
-              <a
-                href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/cart/domain/renew`}
-                className="dropdown-item"
+                Websites{" "}
+                <span className="chevron">
+                  <NavChevron />
+                </span>
+              </div>
+              <div className="dropdown-menu">
+                <Link href="/websites" className="dropdown-item">
+                  <div className="flex items-center gap-x-2 whitespace-nowrap text-gray-700 lg:text-neutral-300">
+                    <GlobeIcon />
+                    Website Development
+                  </div>{" "}
+                </Link>
+                <Link href="/ecommerce" className="dropdown-item">
+                  <div className="flex items-center gap-x-2 whitespace-nowrap text-gray-700 lg:text-neutral-300">
+                    <ShoppingBagIcon />
+                    Ecommerce Stores
+                  </div>{" "}
+                </Link>
+              </div>
+            </li>
+            <li className="nav-item">
+              <Link
+                href="/emails"
+                className={` ${montserrat.className} nav-link`}
               >
-                Renew Domain
-              </a>
-            </div>
-          </li>
-          <li className="nav-item">
-            <div
-              className={` ${montserrat.className} nav-link nav-link-with-dropdown `}
-            >
-              About Us{" "}
-              <span className="chevron">
-                <NavChevron />
-              </span>
-            </div>
-            <div className="dropdown-menu">
-              <Link href="/about-us" className="dropdown-item">
-                About Us
+                {/* Changed to Link */}
+                Email
               </Link>
-              <Link href="/blog-posts" className="dropdown-item">
-                Blog
-              </Link>
-              <Link href="/terms-conditions" className="dropdown-item">
-                Terms & Conditions
-              </Link>
-            </div>
-          </li>
-
-          <li className="nav-item">
-            <div
-              className={` ${montserrat.className} nav-link nav-link-with-dropdown `}
-            >
-              Help Center{" "}
-              <span className="chevron">
-                <NavChevron />
-              </span>
-            </div>
-            <div className="dropdown-menu">
-              <Link href="/contact-us" className="dropdown-item">
-                Contact Us
-              </Link>
-              <a
-                href="https://domains.bigzee.app/clientarea.php"
-                className="dropdown-item"
-                target="_blank"
-                rel="noopener noreferrer"
+            </li>
+            <li className="nav-item">
+              <div
+                className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                {" "}
-                {/* Assuming external */}
-                Login
-              </a>
-              <a
-                href="https://domains.bigzee.app/clientarea.php"
-                className="dropdown-item"
-                target="_blank"
-                rel="noopener noreferrer"
+                Hosting{" "}
+                <span className="chevron">
+                  <NavChevron />
+                </span>
+              </div>
+              <div className="dropdown-menu">
+                <Link href="/managed-hosting" className="dropdown-item">
+                  {" "}
+                  {/* Changed to Link if internal */}
+                  Managed Hosting
+                </Link>
+                <Link href="/hosting" className="dropdown-item">
+                  Web Hosting
+                </Link>
+              </div>
+            </li>
+            <li className="nav-item">
+              <div
+                className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                {" "}
-                {/* Assuming external */}
-                My Services
-              </a>
-              <Link href="/support/open-ticket" className="dropdown-item">
-                {" "}
-                {/* Assuming internal */}
-                Open Ticket
-              </Link>
-              <Link href="/support/tickets" className="dropdown-item">
-                {" "}
-                {/* Assuming internal */}
-                Tickets
-              </Link>
-            </div>
-          </li>
-        </ul>
+                Domains{" "}
+                <span className="chevron">
+                  <NavChevron />
+                </span>
+              </div>
+              <div className="dropdown-menu">
+                <Link href="/domains" className="dropdown-item">
+                  Domains
+                </Link>
+                <a
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register`}
+                  className="dropdown-item"
+                >
+                  Register Domain
+                </a>
+                <a
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/cart/domain/renew`}
+                  className="dropdown-item"
+                >
+                  Renew Domain
+                </a>
+              </div>
+            </li>
+            <li className="nav-item">
+              <div
+                className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
+              >
+                About Us{" "}
+                <span className="chevron">
+                  <NavChevron />
+                </span>
+              </div>
+              <div className="dropdown-menu">
+                <Link href="/about-us" className="dropdown-item">
+                  About Us
+                </Link>
+                <Link href="/blog-posts" className="dropdown-item">
+                  Blog
+                </Link>
+                <Link href="/terms-conditions" className="dropdown-item">
+                  Terms & Conditions
+                </Link>
+              </div>
+            </li>
+            <li className="nav-item">
+              <div
+                className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
+              >
+                Help Center{" "}
+                <span className="chevron">
+                  <NavChevron />
+                </span>
+              </div>
+              <div className="dropdown-menu">
+                <Link href="/contact-us" className="dropdown-item">
+                  Contact Us
+                </Link>
+                <a
+                  href="https://domains.bigzee.app/clientarea.php"
+                  className="dropdown-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  {/* Assuming external */}
+                  Login
+                </a>
+                <a
+                  href="https://domains.bigzee.app/clientarea.php"
+                  className="dropdown-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  {/* Assuming external */}
+                  My Services
+                </a>
+                <Link href="/support/open-ticket" className="dropdown-item">
+                  {" "}
+                  {/* Assuming internal */}
+                  Open Ticket
+                </Link>
+                <Link href="/support/tickets" className="dropdown-item">
+                  {" "}
+                  {/* Assuming internal */}
+                  Tickets
+                </Link>
+              </div>
+            </li>
+            <li className="nav-item">
+              <div className="nav-link">
+                <div className="smlscrn-client-login">
+                  <a
+                    href="https://domains.bigzee.app/clientarea.php"
+                    className={` ${montserrat.className} text-xs tracking-wide text-blue-600 text-white`}
+                  >
+                    CLIENT ZONE
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div className="client-login">
           <a
             href="https://domains.bigzee.app/clientarea.php"
-            className={` ${montserrat.className} text-xs font-medium `}
+            className={` ${montserrat.className} text-xs font-medium`}
           >
             CLIENT ZONE
           </a>
