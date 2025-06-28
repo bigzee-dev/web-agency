@@ -21,28 +21,23 @@ export default function TldSlider() {
   return (
     <section className="overflow-hidden">
       <div className="group relative w-full">
-        <div className="flex flex-col items-center md:flex-row">
-          {/* <div className="md:max-w-44 md:border-r md:border-gray-400/70 md:pr-6">
-            <p className="text-end text-sm text-slate-400">
-              Powering the best teams
-            </p>
-          </div> */}
-          <div className="relative pt-3">
-            <InfiniteSlider speedOnHover={20} speed={30} gap={112}>
+        <div className="">
+          <div className="relative pt-4 md:pt-3">
+            <InfiniteSlider speedOnHover={20} speed={30} gap={80}>
               {availableTLDs.map((tld) => (
                 <div key={tld.extension} className=" ">
-                  <div className="text-sm text-slate-300 font-semibold">
+                  <div className="text-sm font-semibold text-slate-300">
                     .{tld.extension}
                   </div>
-                  <div className="font-sans text-neutral-300/80 text-sm">
+                  <div className="font-sans text-sm text-neutral-300/80">
                     P{tld.price}/year
                   </div>
                 </div>
               ))}
             </InfiniteSlider>
 
-            <div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"></div>
-            <div className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"></div>
+            <div className="bg-linear-to-r absolute inset-y-0 left-0 w-12 from-background md:w-20"></div>
+            <div className="bg-linear-to-l absolute inset-y-0 right-0 w-12 from-background md:w-20"></div>
             <ProgressiveBlur
               className="pointer-events-none absolute left-0 top-0 h-full w-20"
               direction="left"

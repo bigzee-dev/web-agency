@@ -48,7 +48,7 @@ const cardButtons =
 
 export default function Visibility() {
   return (
-    <main className="x-padding relative isolate overflow-hidden  w-full py-4 md:pt-16 md:pb-12 bg-gray-900 shadow-lg">
+    <main className="relative isolate w-full overflow-hidden bg-gray-900 py-12 pb-0 shadow-lg md:pb-12 md:pt-16">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -75,57 +75,21 @@ export default function Visibility() {
         />
       </div>
 
-      <div className="flex flex-col  w-full">
+      <div className="flex w-full flex-col">
         {/* Heading */}
-        <div className="mx-auto max-w-lg">
-          {/* <h2 className="text-center text-base/7 font-smedium text-neutral-300/80">
-            Increase Your Visibility
-          </h2> */}
+        <div className="mx-auto w-[85%] max-w-lg md:w-full">
           <p
-            className={` ${montserrat.className} text-center text-neutral-300 text-4xl font-semibold leading-9 tracking-tight`}
+            className={` ${montserrat.className} text-center text-4xl font-semibold leading-9 tracking-tight text-neutral-300`}
           >
             We have everything you need to elevate your online presence.
           </p>
         </div>
 
         {/* cards */}
-        <div className=" grid grid-cols-2 w-full max-w-7xl mx-auto mt-20">
-          {/* <div className="grid md:grid-cols-3 gap-x-14 max-w-7xl mx-auto">
-            {cards.map((card, index) => (
-              <div key={index} className="flex flex-col gap-4 md:gap-y-4">
-                <div className="flex items-center gap-4">
-                  <div
-                    className={` ${card.className} flex items-center justify-center w-8 h-8  bg-neutral-300/10  outline outline-1 outline-offset-1 outline-white/30 rounded-lg`}
-                  >
-                    {card.icon}
-                  </div>
-                  <h4 className="font-sans text-2xl font-medium text-neutral-300">
-                    {card.title}
-                  </h4>
-                </div>
-
-                <div>
-                  <p className="font-sans text-md text-neutral-300/80">
-                    {card.description}
-                  </p>
-                </div>
-                <div className="flex items-center gap-4 text-sm mt-auto">
-                  <Link href="/" className={`${cardButtons} `}>
-                    {card.linkOne}
-                  </Link>
-                  {card.linkTwo && (
-                    <Link href="/" className={`${cardButtons} `}>
-                      {card.linkTwo}
-                    </Link>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div> */}
+        <div className="mx-auto mt-12 grid w-full max-w-7xl grid-cols-1 md:mt-20 lg:grid-cols-2">
           {/* Search Domain */}
-          <div className="col-span-1 flex flex-col px-16 py-9  bg-neutral-300/10 border-r border-gray-500/50">
+          <div className="col-span-1 border-r border-gray-500/50 bg-neutral-300/10">
             <DomainSearch />
-            <Slider />
           </div>
           <Cards />
         </div>

@@ -63,21 +63,22 @@ export default function Home() {
         <div
           key={index}
           className={clsx(
-            "col-span-1 py-9 px-16",
-            index === 1 && "border-r border-gray-500/50",
-            index === 2 && "bg-neutral-300/10",
-            (index === 1 || index === 2) && "md:border-t border-gray-500/50"
+            "px-2 py-9 sm:px-4 md:px-16",
+            index === 1 &&
+              "border-r border-gray-500/50 bg-neutral-300/10 lg:bg-transparent",
+            index === 2 && "lg:bg-neutral-300/10",
+            (index === 1 || index === 2) && "border-gray-500/50 md:border-t",
           )}
         >
-          <div className="flex flex-col gap-y-4 h-full">
+          <div className="flex h-full flex-col gap-y-4">
             <div className="flex items-center gap-x-2">
               <div
-                className={` ${card.backgroundColor} inline-flex items-center justify-center p-2 rounded-lg `}
+                className={` ${card.backgroundColor} inline-flex items-center justify-center rounded-lg p-2`}
               >
                 <card.icon className={`h-6 w-6 ${card.iconColor} `} />
               </div>
               <h2
-                className={` ${notoSans.className} text-xl font-medium text-neutral-300 `}
+                className={` ${notoSans.className} text-xl font-medium text-neutral-300`}
               >
                 {card.title}
               </h2>
@@ -91,7 +92,7 @@ export default function Home() {
                 <Link
                   key={linkIndex}
                   href={link.href}
-                  className="font-sans inline-flex px-4 py-1.5 bg-gray-700/50 text-blue-400 border border-gray-600 rounded-md hover:bg-gray-700 transition-colors"
+                  className="inline-flex rounded-md border border-gray-600 bg-gray-700/50 px-4 py-1 font-sans text-blue-400 transition-colors hover:bg-gray-700"
                 >
                   {link.text}
                 </Link>

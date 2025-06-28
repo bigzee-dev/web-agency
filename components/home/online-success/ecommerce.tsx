@@ -7,7 +7,7 @@ import { montserrat } from "@/app/ui/fonts";
 export default function Component() {
   return (
     <div
-      className="w-full rounded-3xl bg-gradient-to-b from-gray-900 via-gray-900 to-primary p-4 sm:p-6 md:px-12 md:py-10"
+      className="w-full rounded-3xl bg-gradient-to-b from-gray-900 via-gray-900 to-primary p-4 sm:p-6 md:bg-gradient-to-tr md:px-12 md:py-10"
       // style={{ backgroundColor: "#2D1576" }}
     >
       {/* Header badges */}
@@ -29,10 +29,21 @@ export default function Component() {
       </div>
       {/* small screen badge */}
       <Badge
-        variant="secondary"
-        className={`block max-w-max bg-background/95 text-center font-semibold text-secondary sm:hidden`}
+        className={`flex max-w-max gap-1 bg-neutral-100 text-center font-semibold text-slate-800 lg:hidden`}
       >
-        Ecommerce
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          className="size-4"
+        >
+          <path
+            fillRule="evenodd"
+            d="M6 5v1H4.667a1.75 1.75 0 0 0-1.743 1.598l-.826 9.5A1.75 1.75 0 0 0 3.84 19H16.16a1.75 1.75 0 0 0 1.743-1.902l-.826-9.5A1.75 1.75 0 0 0 15.333 6H14V5a4 4 0 0 0-8 0Zm4-2.5A2.5 2.5 0 0 0 7.5 5v1h5V5A2.5 2.5 0 0 0 10 2.5ZM7.5 10a2.5 2.5 0 0 0 5 0V8.75a.75.75 0 0 1 1.5 0V10a4 4 0 0 1-8 0V8.75a.75.75 0 0 1 1.5 0V10Z"
+            clipRule="evenodd"
+          />
+        </svg>
+        ECOMMERCE
       </Badge>
 
       <div className="mt-4 grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-12">
