@@ -1,42 +1,40 @@
+import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
 
 export default function DigitalRealEstate() {
   return (
-    <div className="grid grid-cols-12 bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl max-w-7xl mx-auto  mt-20 border border-gray-300">
-      <div className="relative h-full col-span-4">
+    <div className="mx-auto mb-20 mt-16 grid max-w-7xl grid-cols-12 rounded-2xl border border-gray-300 bg-gradient-to-r from-primary/5 to-primary/10">
+      <div className="relative col-span-4 h-full">
         <Image
-          src="/img/domains/domain-design.jpg"
+          src="/img/home/globe-tech.jpg"
           alt="img"
           fill
-          className="object-cover rounded-l-2xl"
+          className="rounded-l-2xl object-cover"
         />
       </div>
-      <div className="col-span-8 text-center p-12">
-        <h3 className="text-2xl md:text-3xl font-bold mb-6">
-          Your domain is your digital real estate
+      <div className="col-span-8 p-12 text-center">
+        <h3
+          className={`${montserrat.className} mb-12 text-2xl font-bold text-gray-800 md:text-4xl`}
+        >
+          Your Domain is your <br />
+          Digital Real Estate
         </h3>
-        <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-          Just like prime real estate in the physical world, premium domains in
-          the digital space command attention, drive traffic, and build lasting
-          value. Every day without the right domain is a missed opportunity to
-          strengthen your brand, improve your search rankings, and connect with
-          your target audience.
-        </p>
-        <div className="grid md:grid-cols-3 gap-8 text-center">
+
+        <div className="grid gap-8 text-center md:grid-cols-3">
           <div>
-            <div className="text-3xl font-bold text-primary mb-2">73%</div>
+            <div className="mb-2 text-5xl font-bold text-primary">73%</div>
             <p className="text-sm text-muted-foreground">
               of consumers judge credibility based on domain quality
             </p>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary mb-2">2.5x</div>
+            <div className="mb-2 text-5xl font-bold text-primary">2.5x</div>
             <p className="text-sm text-muted-foreground">
               higher click-through rates with branded domains
             </p>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary mb-2">46%</div>
+            <div className="mb-2 text-5xl font-bold text-primary">46%</div>
             <p className="text-sm text-muted-foreground">
               increase in brand recall with memorable domains
             </p>

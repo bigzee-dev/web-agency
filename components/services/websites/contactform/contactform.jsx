@@ -36,7 +36,7 @@ export default function ContactForm() {
 
     // Get the Turnstile token
     const token = document.querySelector(
-      '[name="cf-turnstile-response"]'
+      '[name="cf-turnstile-response"]',
     ).value;
 
     try {
@@ -83,7 +83,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 py-6">
+    <div className="w-full px-4 py-6 sm:px-6 lg:px-8">
       <Script
         src="https://challenges.cloudflare.com/turnstile/v0/api.js"
         async
@@ -92,14 +92,12 @@ export default function ContactForm() {
 
       <div className="overflow-hidden rounded-lg">
         <div className="px-3 sm:p-6">
-          <h2
-            className={` ${montserrat.className} text-3xl font-semibold text-neutral-100 mb-6 `}
-          >
+          <h2 className={`mb-6 text-3xl font-semibold text-neutral-100`}>
             Lets start Working on your Project
           </h2>
 
           {status.success ? (
-            <div className="rounded-md bg-green-50 p-4 mb-6">
+            <div className="mb-6 rounded-md bg-green-50 p-4">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <svg
@@ -125,7 +123,7 @@ export default function ContactForm() {
           ) : null}
 
           {status.error ? (
-            <div className="rounded-md bg-red-50 p-4 mb-6">
+            <div className="mb-6 rounded-md bg-red-50 p-4">
               <div className="flex">
                 <div className="flex-shrink-0">
                   <svg

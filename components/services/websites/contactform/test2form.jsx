@@ -207,7 +207,7 @@ export default function Test2Form() {
           .json()
           .catch(() => ({ message: "Submission failed. Please try again." }));
         throw new Error(
-          errorData.message || "Something went wrong with the submission."
+          errorData.message || "Something went wrong with the submission.",
         );
       }
 
@@ -246,14 +246,14 @@ export default function Test2Form() {
     }
   };
 
-  const labelStyles = "block text-sm font-medium text-neutral-300";
+  const labelStyles = "block text-sm  text-neutral-300/80";
   const inputStyles =
-    "shadow-sm block w-full sm:text-sm text-neutral-300 bg-white/5 py-1.5 px-1.5 border border-gray-300/40 rounded-md placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
+    "shadow-sm block w-full sm:text-sm text-neutral-300 bg-neutral-300/5 py-1.5 px-1.5 border border-gray-400/40 rounded-md placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
       {/* ... (your existing form fields for name, email, etc. remain unchanged) ... */}
-      <div className="grid grid-cols-2 gap-x-2">
+      <div className="grid grid-cols-2 gap-x-4">
         <div>
           <label htmlFor="name" className={` ${labelStyles} `}>
             Name
@@ -288,7 +288,7 @@ export default function Test2Form() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-x-2">
+      <div className="grid grid-cols-2 gap-x-4">
         <div>
           <label htmlFor="company" className={` ${labelStyles} `}>
             Company (Optional)
@@ -370,7 +370,7 @@ export default function Test2Form() {
         </div>
       )}
 
-      <div className="w-full flex flex-col sm:flex-row justify-between items-center mt-16 gap-4">
+      <div className="mt-16 flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
         {/* Container for Turnstile. data-sitekey etc. are handled by explicit render */}
         <Turnstile
           sitekey="1x00000000000000000000AA"
@@ -384,7 +384,7 @@ export default function Test2Form() {
         <button
           type="submit"
           disabled={status.submitting || (!turnstileToken && !status.success)}
-          className={` ${whiteButton} flex items-center justify-center gap-2 `}
+          className={` ${whiteButton} flex items-center justify-center gap-2`}
         >
           {status.submitting ? "Submitting..." : "Submit"}
           <IoIosSend size="1.6em" />

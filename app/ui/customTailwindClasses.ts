@@ -6,9 +6,9 @@ export const smallTextHeadings =
   "text-center text-base/7 font-semibold text-blue-600";
 
 export const btnDimensions =
-  "font-sans text-center py-2.5 md:py-2 px-3 w-max min-w-44 text-base md:text-md font-semibold rounded-[0.64rem] tracking-wide";
+  "text-center py-2 md:py-[0.56rem] px-3 w-max min-w-44 text-base md:text-md font-semibold rounded-[0.7rem]";
 
-export const primaryButton = ` ${btnDimensions} text-blue-100 bg-gradient-to-b from-secondary to-primary`;
+export const primaryButton = ` ${btnDimensions} text-neutral-100 bg-primary`;
 
 export const grayButton = ` ${btnDimensions} text-white bg-gray-800`;
 

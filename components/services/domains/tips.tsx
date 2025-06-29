@@ -29,7 +29,7 @@ const tips = [
 
 export default function Tips() {
   return (
-    <div className="x-padding relative isolate bg-gray-800 mt-6 py-14 pb-8 overflow-hidden">
+    <div className="x-padding relative isolate mt-6 overflow-hidden bg-gray-800 py-16">
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -43,22 +43,22 @@ export default function Tips() {
         />
       </div>
       <h2
-        className={`${montserrat.className} max-w-3xl mx-auto text-3xl md:text-4xl font-bold text-center text-neutral-200 mb-16 `}
+        className={`${montserrat.className} mx-auto mb-20 max-w-2xl text-center text-3xl font-bold text-neutral-200 md:text-4xl`}
       >
         A few tips to help you buy a Domain
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-8 md:gap-16 max-w-7xl mx-auto">
+      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3 md:gap-16">
         {tips.map((tip, index) => {
           return (
-            <div key={index} className="space-y-4">
-              <div className="w-12 h-12 bg-neutral-300/10  rounded-lg flex items-center justify-center outline outline-1 outline-offset-1 outline-white/25 ">
+            <div key={index} className="relative space-y-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-300/10 outline outline-1 outline-offset-1 outline-white/25">
                 {tip.icon}
               </div>
-              <h3 className="font-sans text-xl font-semibold text-thatgreen">
+              <h3 className="font-sans text-xl font-semibold text-blue-400">
                 {tip.title}
               </h3>
-              <p className="font-sans text-md text-neutral-300/65 leading-relaxed">
+              <p className="font-sans text-md leading-relaxed text-neutral-300/65">
                 {tip.description}
               </p>
             </div>

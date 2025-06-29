@@ -3,66 +3,57 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function WhyBuy() {
   return (
-    <section className="py-16 px-4 md:px-6 lg:px-8 md:pt-24">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="px-4 py-16 md:px-6 md:pt-24 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <h2
-          className={` ${montserrat.className} text-3xl md:text-4xl font-bold text-gray-800 mb-4 `}
+          className={` ${montserrat.className} mb-4 text-3xl font-bold text-gray-800 md:text-4xl`}
         >
           Why Buy Domain Names at BigZee?
         </h2>
-        <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+        <p className="mb-12 max-w-3xl text-lg text-muted-foreground">
           Hostinger offers reliable domain registration services with instant
           activation, dedicated live support, and full DNS management.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <ul className="disc grid max-w-5xl list-disc grid-cols-1 gap-12 pl-5">
           {/* 24/7 Support */}
-          <div className="space-y-4">
-            <div className="w-12 h-12 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
-              <MessageSquare className="w-6 h-6 text-primary" />
-            </div>
+          <li className="space-y-4">
             <h3 className="text-xl font-semibold text-gray-800">
               24/7 live technical support
             </h3>
-            <p className="font-sans text-md text-gray-700 leading-relaxed">
+            <p className="font-sans text-md leading-relaxed text-gray-700">
               Our Customer Success team is here for you any time of the day.
               We&apos;ve made our domain name registration process as easy as
               possible, but everyone needs a helping hand sometimes. Just
               contact us – we will be happy to assist.
             </p>
-          </div>
+          </li>
 
           {/* Trusted Registrar */}
-          <div className="space-y-4">
-            <div className="w-12 h-12 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
-              <CreditCard className="w-6 h-6 text-primary" />
-            </div>
+          <li className="space-y-4">
             <h3 className="text-xl font-semibold text-gray-800">
               Trusted domain registrar
             </h3>
-            <p className="font-sans text-md text-gray-700 leading-relaxed">
+            <p className="font-sans text-md leading-relaxed text-gray-700">
               Hostinger is an ICANN-accredited registrar and web host trusted by
               millions of people worldwide. We offer a comprehensive
               registration service with more than 100 domain extensions so that
               you can have plenty of choices.
             </p>
-          </div>
+          </li>
 
           {/* Instant Setup */}
-          <div className="space-y-4">
-            <div className="w-12 h-12 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
-              <FileText className="w-6 h-6 text-primary" />
-            </div>
+          <li className="space-y-4">
             <h3 className="text-xl font-semibold text-gray-800">
               Instant setup and easy control
             </h3>
-            <p className="font-sans text-md text-gray-700 leading-relaxed">
+            <p className="font-sans text-md leading-relaxed text-gray-700">
               Once you complete your domain search, we&apos;ll guide you through
               the website domain registration process. It only takes a few
               clicks, and no technical knowledge is required.
             </p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
   );

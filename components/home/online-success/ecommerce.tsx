@@ -101,8 +101,8 @@ export default function Component() {
           <div className="w-full rounded-3xl border border-white/10 bg-gray-800 from-gray-900 to-blue-400/25 p-3 backdrop-blur-md md:bg-gradient-to-br md:p-6">
             {/* Ecommerce illustration */}
             <div className="relative h-72 w-full overflow-hidden lg:h-96">
+              {/* Background grid pattern */}
               <div className="absolute inset-0 opacity-20">
-                {/* Background grid pattern */}
                 <div className="grid h-full w-full grid-cols-8 grid-rows-8">
                   {Array.from({ length: 64 }).map((_, i) => (
                     <div key={i} className="border border-white/20"></div>

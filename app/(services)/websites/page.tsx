@@ -1,5 +1,5 @@
 import Header from "@/components/services/websites/header";
-import PlansInfo from "@/components/services/websites/plans-info";
+import PricingWebsites from "@/components/services/websites/pricing";
 
 import FaqsWebsites from "@/components/services/websites/faqs";
 import CTA from "@/components/services/websites/cta";
@@ -12,7 +12,7 @@ export default function Websites() {
       <Header />
       <OurProcess />
       <CTA />
-      <PlansInfo />
+      <PricingWebsites />
       <SupportOne />
       <FaqsWebsites />
     </div>

@@ -31,7 +31,7 @@ export default function DomainSearch() {
   };
 
   return (
-    <div className="flex w-full flex-col px-2 py-9 sm:px-4 md:px-16">
+    <div className="flex w-full flex-col px-4 py-9 sm:px-4 md:px-16">
       <div className="flex items-center gap-2">
         <div className="flex items-center justify-center rounded-lg bg-yellow-500/10 p-2">
           <AtSign className="h-6 w-6 text-yellow-500/75" />

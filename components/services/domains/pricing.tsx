@@ -7,6 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 
 export default function DomainPricingTable() {
   const domainExtensions = [
@@ -52,12 +53,37 @@ export default function DomainPricingTable() {
       transfer: "£22.99",
       renewal: "£22.99",
     },
+    {
+      extension: ".art",
+      registration: { original: "$15.95", discounted: "$9.95" },
+      transfer: "$15.95",
+      renewal: "$15.95",
+    },
+    {
+      extension: ".biz",
+      registration: { original: "$20.95", discounted: "$10.95" },
+      transfer: "$20.95",
+      renewal: "$20.95",
+    },
+    {
+      extension: ".cc",
+      registration: { original: "£36.99", discounted: "£33.29" },
+      transfer: "£36.99",
+      renewal: "£36.99",
+    },
+    {
+      extension: ".ch",
+      registration: { original: "£22.99", discounted: "£20.69" },
+      transfer: "£22.99",
+      renewal: "£22.99",
+    },
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto pb-8">
+    <div className="mx-auto w-full max-w-5xl pb-8">
+      <h2 className={sectionHeadings}>Available Tld's</h2>
       {/* Header Section */}
-      <div className="grid grid-cols-1 md:grid-cols-4 bg-[#0e5ca0] text-white rounded-t-2xl">
+      <div className="mt-12 grid grid-cols-1 rounded-t-2xl bg-gray-800 text-white md:grid-cols-4">
         {[
           {
             icon: <Box className="h-6 w-6" />,
@@ -82,12 +108,12 @@ export default function DomainPricingTable() {
         ].map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center p-6"
+            className="flex flex-col items-center p-6 text-center"
           >
             {/* <div className="bg-[#1a6cb3] rounded-full p-4 mb-4">
               {item.icon}
             </div> */}
-            <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
+            <h3 className="mb-1 text-xl font-semibold">{item.title}</h3>
             <p className="text-sm text-gray-100">{item.description}</p>
           </div>
         ))}
@@ -110,16 +136,16 @@ export default function DomainPricingTable() {
                 key={index}
                 className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
               >
-                <TableCell className="text-gray-700 font-sans text-base font-medium text-center">
+                <TableCell className="text-center font-sans text-base font-medium text-gray-700">
                   {domain.extension}
                 </TableCell>
                 <TableCell className="text-center">
                   {domain.registration.discounted ? (
                     <div>
-                      <span className="line-through text-gray-500 mr-2">
+                      <span className="mr-2 text-gray-500 line-through">
                         {domain.registration.original}
                       </span>
-                      <span className="text-[#0e5ca0] font-medium">
+                      <span className="font-medium text-[#0e5ca0]">
                         {domain.registration.discounted}
                       </span>
                     </div>

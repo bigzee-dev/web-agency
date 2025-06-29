@@ -18,10 +18,11 @@ export default function Websites() {
     <div className="pb-20">
       <Header />
       <Importance />
-      <TldList />
+
       <DomainPricingTable />
-      <Tips />
       <DigitalRealEstate />
+      <Tips />
+
       <WhyBuy />
       <SupportOne />
       <FaqsDomains />
