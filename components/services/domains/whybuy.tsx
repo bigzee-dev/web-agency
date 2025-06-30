@@ -4,7 +4,7 @@ import { montserrat } from "@/app/ui/fonts";
 export default function WhyBuy() {
   return (
     <section className="px-4 py-16 md:px-6 md:pt-24 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-5xl">
         <h2
           className={` ${montserrat.className} mb-4 text-3xl font-bold text-gray-800 md:text-4xl`}
         >
@@ -15,7 +15,7 @@ export default function WhyBuy() {
           activation, dedicated live support, and full DNS management.
         </p>
 
-        <ul className="disc grid max-w-5xl list-disc grid-cols-1 gap-12 pl-5">
+        <ul className="disc grid max-w-4xl list-disc grid-cols-1 gap-12 pl-5">
           {/* 24/7 Support */}
           <li className="space-y-4">
             <h3 className="text-xl font-semibold text-gray-800">

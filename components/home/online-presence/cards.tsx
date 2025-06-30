@@ -65,8 +65,8 @@ export default function Home() {
           className={clsx(
             "px-4 py-9 sm:px-4 md:px-16",
             index === 1 &&
-              "border-r border-gray-500/50 bg-neutral-300/10 lg:bg-transparent",
-            index === 2 && "lg:bg-neutral-300/10",
+              "border-r border-gray-500/50 bg-neutral-400/10 lg:bg-transparent",
+            index === 2 && "lg:bg-neutral-400/10",
             (index === 1 || index === 2) && "border-gray-500/50 md:border-t",
           )}
         >
@@ -92,7 +92,7 @@ export default function Home() {
                 <Link
                   key={linkIndex}
                   href={link.href}
-                  className="inline-flex rounded-lg bg-neutral-100/10 px-4 py-1 font-sans text-neutral-100 transition-colors hover:bg-gray-700"
+                  className="inline-flex rounded-lg bg-neutral-100/10 px-4 py-1.5 font-sans text-neutral-300 transition-colors hover:bg-gray-700"
                 >
                   {link.text}
                 </Link>

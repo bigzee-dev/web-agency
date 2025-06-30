@@ -23,7 +23,7 @@ export default function DomainSearch() {
     window.location.href = url; // Redirect to the external website
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: { key: string; preventDefault: () => void }) => {
     if (e.key === "Enter") {
       e.preventDefault(); // Prevent default form submission behavior (if inside a form)
       handleRedirect();
@@ -54,12 +54,12 @@ export default function DomainSearch() {
           onKeyDown={handleKeyDown}
           placeholder="e.g mybusiness.co.bw"
           className="flex-grow border border-gray-500/70 bg-gray-800 text-neutral-200 placeholder:text-sm placeholder:text-neutral-500 focus:ring-2 focus:ring-neutral-300"
-          style={{ fontSize: "1rem" }}
+          style={{ fontSize: "1rem", textDecoration: "none" }}
         />
         <Button
           type="button"
           onClick={handleRedirect}
-          className="min-w-40 rounded-lg border border-secondary bg-neutral-200 font-sans text-md font-medium text-secondary transition duration-300 ease-in-out hover:bg-neutral-100 hover:text-blue-600"
+          className="min-w-28 rounded-lg border border-secondary bg-neutral-200 font-sans text-md font-medium text-secondary transition duration-300 ease-in-out hover:bg-neutral-100 hover:text-blue-600 md:min-w-40"
         >
           <Search />
           Search

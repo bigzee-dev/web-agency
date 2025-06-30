@@ -43,7 +43,7 @@ export default function Tips() {
         />
       </div>
       <h2
-        className={`${montserrat.className} mx-auto mb-20 max-w-2xl text-center text-3xl font-bold text-neutral-200 md:text-4xl`}
+        className={`${montserrat.className} mx-auto mb-16 max-w-2xl text-center text-3xl font-bold text-neutral-300 md:text-4xl`}
       >
         A few tips to help you buy a Domain
       </h2>
@@ -51,7 +51,7 @@ export default function Tips() {
       <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3 md:gap-16">
         {tips.map((tip, index) => {
           return (
-            <div key={index} className="relative space-y-3">
+            <div key={index} className="relative space-y-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-300/10 outline outline-1 outline-offset-1 outline-white/25">
                 {tip.icon}
               </div>

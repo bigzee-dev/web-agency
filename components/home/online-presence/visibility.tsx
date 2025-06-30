@@ -52,7 +52,7 @@ export default function Visibility() {
       {/* blur component */}
       <div
         aria-hidden="true"
-        className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+        className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:transform-gpu sm:blur-3xl md:block"
       >
         <div
           style={{
@@ -64,7 +64,7 @@ export default function Visibility() {
       </div>
       <div
         aria-hidden="true"
-        className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+        className="absolute -top-52 left-1/2 -z-10 hidden -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu md:block"
       >
         <div
           style={{
@@ -88,7 +88,7 @@ export default function Visibility() {
         {/* cards */}
         <div className="mx-auto mt-12 grid w-full max-w-7xl grid-cols-1 md:mt-20 lg:grid-cols-2">
           {/* Search Domain */}
-          <div className="col-span-1 border-r border-gray-500/50 bg-neutral-300/10">
+          <div className="col-span-1 border-r border-gray-500/50 bg-neutral-400/10">
             <DomainSearch />
           </div>
           <Cards />

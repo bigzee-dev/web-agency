@@ -35,7 +35,7 @@ export default function OnlineSuccess() {
       <div className="hidden md:block">
         <Tabs
           defaultValue="websites"
-          className="flex w-full flex-col items-center gap-y-2"
+          className="flex w-full flex-col items-center gap-y-4"
         >
           <TabsList className="mx-auto w-full max-w-max rounded-lg border border-gray-300">
             <TabsTrigger value="websites">Websites</TabsTrigger>

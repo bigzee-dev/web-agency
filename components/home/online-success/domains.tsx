@@ -15,56 +15,56 @@ import { montserrat } from "@/app/ui/fonts";
 export default function Component() {
   return (
     <div
-      className="w-full md:py-10 md:px-12 rounded-3xl bg-gray-900"
+      className="w-full rounded-3xl bg-gradient-to-b from-gray-900 via-gray-900 to-primary md:bg-gradient-to-tr md:px-12 md:py-10"
       // style={{ backgroundColor: "#2D1576" }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
         {/* Header badges */}
-        <div className="flex justify-between items-start mb-8">
-          <Badge className="bg-lime-800/60 hover:bg-lime-800/60 text-neutral-200 uppercase">
+        <div className="mb-8 flex items-start justify-between">
+          <Badge className="bg-lime-800/60 uppercase text-neutral-200 hover:bg-lime-800/60">
             Domain Management
           </Badge>
           <Badge
             variant="outline"
-            className="bg-white/10 border-white/20 text-white px-4 py-2"
+            className="border-white/20 bg-white/10 px-4 py-2 text-white"
           >
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+              <div className="h-2 w-2 rounded-full bg-blue-400"></div>
               <span>DNS management</span>
-              <span className="text-blue-400 font-semibold">24/7</span>
+              <span className="font-semibold text-blue-400">24/7</span>
             </div>
           </Badge>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-x-12">
+        <div className="grid gap-x-12 lg:grid-cols-12">
           {/* Left content */}
-          <div className="col-span-7 text-neutral-300 pt-1">
-            <h1 className="text-3xl lg:text-4xl font-bold leading-tight mb-6">
+          <div className="col-span-7 pt-1 text-neutral-300">
+            <h1 className="mb-6 text-3xl font-bold leading-tight lg:text-4xl">
               Domain registration and management — made simple
             </h1>
 
-            <p className="font-sans text-base text-gray-300 leading-relaxed">
+            <p className="font-sans text-base leading-relaxed text-gray-300">
               From securing the perfect domain to managing DNS and nameservers,
               we simplify every step — giving you full control without the
               hassle.
             </p>
 
             {/* Feature list */}
-            <div className="font-sans text-md space-y-2 mt-6">
+            <div className="mt-6 space-y-2 font-sans text-md">
               <div className="flex items-center gap-3">
-                <Check className="w-2.5 h-auto text-gray-400 flex-shrink-0" />
-                <span className=" text-gray-300/85">
+                <Check className="h-auto w-2.5 flex-shrink-0 text-gray-400" />
+                <span className="text-gray-300/85">
                   Domain registration, transfers, and renewals
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <Check className="w-2.5 h-auto text-gray-400 flex-shrink-0" />
+                <Check className="h-auto w-2.5 flex-shrink-0 text-gray-400" />
                 <span className="text-gray-300/85">
                   Advanced DNS management
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <Check className="w-2.5 h-auto text-gray-400 flex-shrink-0" />
+                <Check className="h-auto w-2.5 flex-shrink-0 text-gray-400" />
                 <span className="text-gray-300/85">
                   Domain privacy protection, Bulk domain management
                 </span>
@@ -74,12 +74,12 @@ export default function Component() {
             {/* CTA Button */}
             <Link
               href=""
-              className={` ${montserrat.className} w-max flex items-center mt-10 text-center text-2xl font-semibold text-blue-400 `}
+              className={` ${montserrat.className} mt-10 flex w-max items-center text-center text-2xl font-semibold text-blue-400`}
             >
               Register Your Domain{" "}
               <ChevronRight
                 aria-hidden="true"
-                className="flex-none text-blue-400 font-medium pl-2"
+                className="flex-none pl-2 font-medium text-blue-400"
                 size="1.35em"
               />
             </Link>
@@ -87,12 +87,12 @@ export default function Component() {
 
           {/* Right illustration */}
           <div className="relative col-span-5">
-            <div className="bg-gradient-to-br from-gray-900 to-blue-400/25 backdrop-blur-md rounded-3xl p-5 border border-white/10">
+            <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-gray-900 to-blue-400/25 p-5 backdrop-blur-md">
               {/* Domain illustration */}
               <div className="relative h-96 overflow-hidden">
                 {/* Background grid pattern */}
                 <div className="absolute inset-0 opacity-15">
-                  <div className="grid grid-cols-8 grid-rows-8 h-full w-full">
+                  <div className="grid h-full w-full grid-cols-8 grid-rows-8">
                     {Array.from({ length: 64 }).map((_, i) => (
                       <div key={i} className="border border-white/20"></div>
                     ))}
@@ -100,12 +100,12 @@ export default function Component() {
                 </div>
 
                 {/* Central domain hub */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                  <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-4 rounded-2xl shadow-2xl">
-                    <div className="bg-white rounded-xl p-4 w-40">
-                      <div className="text-center mb-3">
-                        <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <Globe className="w-5 h-5 text-white" />
+                <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform">
+                  <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 p-4 shadow-2xl">
+                    <div className="w-40 rounded-xl bg-white p-4">
+                      <div className="mb-3 text-center">
+                        <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-purple-600">
+                          <Globe className="h-5 w-5 text-white" />
                         </div>
                         <div className="text-sm font-bold text-gray-800">
                           Domain Control
@@ -115,31 +115,31 @@ export default function Component() {
                         </div>
                       </div>
 
-                      <div className="space-y-2 mb-3">
+                      <div className="mb-3 space-y-2">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <Shield className="w-3 h-3 text-green-500" />
+                            <Shield className="h-3 w-3 text-green-500" />
                             <span className="text-xs text-gray-600">SSL</span>
                           </div>
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                          <div className="h-2 w-2 rounded-full bg-green-500"></div>
                         </div>
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <Mail className="w-3 h-3 text-blue-500" />
+                            <Mail className="h-3 w-3 text-blue-500" />
                             <span className="text-xs text-gray-600">Email</span>
                           </div>
-                          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                          <div className="h-2 w-2 rounded-full bg-blue-500"></div>
                         </div>
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <Server className="w-3 h-3 text-purple-500" />
+                            <Server className="h-3 w-3 text-purple-500" />
                             <span className="text-xs text-gray-600">DNS</span>
                           </div>
-                          <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                          <div className="h-2 w-2 rounded-full bg-purple-500"></div>
                         </div>
                       </div>
 
-                      <div className="h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded text-white text-xs flex items-center justify-center font-medium">
+                      <div className="flex h-6 items-center justify-center rounded bg-gradient-to-r from-blue-500 to-purple-500 text-xs font-medium text-white">
                         Active
                       </div>
                     </div>
@@ -147,13 +147,13 @@ export default function Component() {
                 </div>
 
                 {/* Top left - Available domains */}
-                <div className="absolute top-8 left-8">
-                  <div className="bg-white rounded-lg shadow-lg p-3 w-36">
+                <div className="absolute left-8 top-8">
+                  <div className="w-36 rounded-lg bg-white p-3 shadow-lg">
                     <div className="text-center">
-                      <div className="text-sm font-bold text-gray-800 mb-1">
+                      <div className="mb-1 text-sm font-bold text-gray-800">
                         mybrand.com
                       </div>
-                      <div className="text-xs text-green-600 mb-2">
+                      <div className="mb-2 text-xs text-green-600">
                         ✓ Available
                       </div>
                       <div className="text-lg font-bold text-blue-600">
@@ -165,22 +165,22 @@ export default function Component() {
                 </div>
 
                 {/* Top right - Domain extensions */}
-                <div className="absolute top-8 right-8">
-                  <div className="bg-white rounded-lg shadow-lg p-3">
-                    <div className="text-xs font-bold text-gray-800 mb-2 text-center">
+                <div className="absolute right-8 top-8">
+                  <div className="rounded-lg bg-white p-3 shadow-lg">
+                    <div className="mb-2 text-center text-xs font-bold text-gray-800">
                       Popular TLDs
                     </div>
                     <div className="grid grid-cols-2 gap-1">
-                      <div className="bg-blue-600 text-white px-2 py-1 rounded text-xs font-medium text-center">
+                      <div className="rounded bg-blue-600 px-2 py-1 text-center text-xs font-medium text-white">
                         .com
                       </div>
-                      <div className="bg-green-600 text-white px-2 py-1 rounded text-xs font-medium text-center">
+                      <div className="rounded bg-green-600 px-2 py-1 text-center text-xs font-medium text-white">
                         .org
                       </div>
-                      <div className="bg-purple-600 text-white px-2 py-1 rounded text-xs font-medium text-center">
+                      <div className="rounded bg-purple-600 px-2 py-1 text-center text-xs font-medium text-white">
                         .net
                       </div>
-                      <div className="bg-orange-600 text-white px-2 py-1 rounded text-xs font-medium text-center">
+                      <div className="rounded bg-orange-600 px-2 py-1 text-center text-xs font-medium text-white">
                         .io
                       </div>
                     </div>
@@ -189,23 +189,23 @@ export default function Component() {
 
                 {/* Bottom left - DNS Management */}
                 <div className="absolute bottom-8 left-8">
-                  <div className="bg-white rounded-lg shadow-lg p-3 w-32">
-                    <div className="text-xs font-bold text-gray-800 mb-2 flex items-center gap-1">
-                      <Server className="w-3 h-3" />
+                  <div className="w-32 rounded-lg bg-white p-3 shadow-lg">
+                    <div className="mb-2 flex items-center gap-1 text-xs font-bold text-gray-800">
+                      <Server className="h-3 w-3" />
                       DNS Records
                     </div>
                     <div className="space-y-1">
-                      <div className="flex justify-between items-center text-xs">
+                      <div className="flex items-center justify-between text-xs">
                         <span className="text-gray-600">A Record</span>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="h-2 w-2 rounded-full bg-green-500"></div>
                       </div>
-                      <div className="flex justify-between items-center text-xs">
+                      <div className="flex items-center justify-between text-xs">
                         <span className="text-gray-600">CNAME</span>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="h-2 w-2 rounded-full bg-green-500"></div>
                       </div>
-                      <div className="flex justify-between items-center text-xs">
+                      <div className="flex items-center justify-between text-xs">
                         <span className="text-gray-600">MX</span>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="h-2 w-2 rounded-full bg-green-500"></div>
                       </div>
                     </div>
                   </div>
@@ -213,45 +213,45 @@ export default function Component() {
 
                 {/* Bottom right - Security features */}
                 <div className="absolute bottom-8 right-8">
-                  <div className="bg-white rounded-lg shadow-lg p-3 w-32">
-                    <div className="text-xs font-bold text-gray-800 mb-2 flex items-center gap-1">
-                      <Shield className="w-3 h-3" />
+                  <div className="w-32 rounded-lg bg-white p-3 shadow-lg">
+                    <div className="mb-2 flex items-center gap-1 text-xs font-bold text-gray-800">
+                      <Shield className="h-3 w-3" />
                       Security
                     </div>
                     <div className="space-y-1">
-                      <div className="flex justify-between items-center text-xs">
+                      <div className="flex items-center justify-between text-xs">
                         <span className="text-gray-600">Privacy</span>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="h-2 w-2 rounded-full bg-green-500"></div>
                       </div>
-                      <div className="flex justify-between items-center text-xs">
+                      <div className="flex items-center justify-between text-xs">
                         <span className="text-gray-600">2FA</span>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="h-2 w-2 rounded-full bg-green-500"></div>
                       </div>
-                      <div className="flex justify-between items-center text-xs">
+                      <div className="flex items-center justify-between text-xs">
                         <span className="text-gray-600">Lock</span>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="h-2 w-2 rounded-full bg-green-500"></div>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Connection lines from center to corners */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
                   {/* Line to top-left */}
-                  <div className="absolute w-24 h-px bg-gradient-to-l from-blue-400 to-transparent transform -rotate-45 origin-right"></div>
+                  <div className="absolute h-px w-24 origin-right -rotate-45 transform bg-gradient-to-l from-blue-400 to-transparent"></div>
                   {/* Line to top-right */}
-                  <div className="absolute w-24 h-px bg-gradient-to-r from-purple-400 to-transparent transform rotate-45 origin-left"></div>
+                  <div className="absolute h-px w-24 origin-left rotate-45 transform bg-gradient-to-r from-purple-400 to-transparent"></div>
                   {/* Line to bottom-left */}
-                  <div className="absolute w-24 h-px bg-gradient-to-l from-green-400 to-transparent transform rotate-45 origin-right"></div>
+                  <div className="absolute h-px w-24 origin-right rotate-45 transform bg-gradient-to-l from-green-400 to-transparent"></div>
                   {/* Line to bottom-right */}
-                  <div className="absolute w-24 h-px bg-gradient-to-r from-orange-400 to-transparent transform -rotate-45 origin-left"></div>
+                  <div className="absolute h-px w-24 origin-left -rotate-45 transform bg-gradient-to-r from-orange-400 to-transparent"></div>
                 </div>
 
                 {/* Floating particles */}
-                <div className="absolute top-16 right-24 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                <div className="absolute bottom-20 left-24 w-3 h-3 bg-green-400 rounded-full animate-pulse opacity-60"></div>
-                <div className="absolute top-32 left-32 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-80"></div>
-                <div className="absolute bottom-32 right-32 w-2 h-2 bg-orange-400 rounded-full animate-pulse opacity-70"></div>
+                <div className="absolute right-24 top-16 h-2 w-2 animate-pulse rounded-full bg-blue-400"></div>
+                <div className="absolute bottom-20 left-24 h-3 w-3 animate-pulse rounded-full bg-green-400 opacity-60"></div>
+                <div className="absolute left-32 top-32 h-2 w-2 animate-pulse rounded-full bg-purple-400 opacity-80"></div>
+                <div className="absolute bottom-32 right-32 h-2 w-2 animate-pulse rounded-full bg-orange-400 opacity-70"></div>
               </div>
             </div>
           </div>

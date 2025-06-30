@@ -19,11 +19,11 @@ const availableTLDs: DomainTLD[] = [
 
 export default function TldSlider() {
   return (
-    <section className="overflow-hidden">
+    <section className="mt-5 overflow-hidden md:mt-3">
       <div className="group relative w-full">
         <div className="">
-          <div className="relative pt-4 md:pt-3">
-            <InfiniteSlider speedOnHover={20} speed={30} gap={80}>
+          <div className="relative pt-0">
+            <InfiniteSlider speedOnHover={10} speed={15} gap={60}>
               {availableTLDs.map((tld) => (
                 <div key={tld.extension} className=" ">
                   <div className="text-sm font-semibold text-slate-300">
@@ -41,11 +41,6 @@ export default function TldSlider() {
             <ProgressiveBlur
               className="pointer-events-none absolute left-0 top-0 h-full w-20"
               direction="left"
-              blurIntensity={1}
-            />
-            <ProgressiveBlur
-              className="pointer-events-none absolute right-0 top-0 h-full w-20"
-              direction="right"
               blurIntensity={1}
             />
           </div>

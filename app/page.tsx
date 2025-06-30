@@ -14,10 +14,10 @@ export default function Home() {
       <OnlineSuccess />
       <WhyChooseUs />
       <Visibility />
-      {/* <Testimonials />
+      <Testimonials />
       <Personal />
       <BlogLinks />
-      <ContactUs /> */}
+      <ContactUs />
     </>
   );
 }

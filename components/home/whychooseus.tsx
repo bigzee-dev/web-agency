@@ -75,7 +75,7 @@ export default function Component() {
   }
 
   return (
-    <div className="x-padding relative isolate w-full overflow-hidden pb-20 pt-20 md:overflow-visible">
+    <div className="x-padding relative isolate w-full overflow-hidden pb-20 pt-14 md:overflow-visible md:pt-20">
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"

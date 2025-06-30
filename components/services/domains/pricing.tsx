@@ -83,7 +83,7 @@ export default function DomainPricingTable() {
     <div className="mx-auto w-full max-w-5xl pb-8">
       <h2 className={sectionHeadings}>Available Tld's</h2>
       {/* Header Section */}
-      <div className="mt-12 grid grid-cols-1 rounded-t-2xl bg-gray-800 text-white md:grid-cols-4">
+      <div className="mt-12 grid grid-cols-1 rounded-t-2xl bg-blue-700 text-white md:grid-cols-4">
         {[
           {
             icon: <Box className="h-6 w-6" />,
@@ -110,9 +110,6 @@ export default function DomainPricingTable() {
             key={index}
             className="flex flex-col items-center p-6 text-center"
           >
-            {/* <div className="bg-[#1a6cb3] rounded-full p-4 mb-4">
-              {item.icon}
-            </div> */}
             <h3 className="mb-1 text-xl font-semibold">{item.title}</h3>
             <p className="text-sm text-gray-100">{item.description}</p>
           </div>

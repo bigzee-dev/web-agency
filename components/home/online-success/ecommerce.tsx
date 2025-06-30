@@ -85,7 +85,7 @@ export default function Component() {
           {/* CTA Button */}
           <Link
             href=""
-            className={` ${montserrat.className} mx-auto mt-6 flex w-max items-center text-center text-xl font-semibold text-blue-400 lg:ml-0 lg:mr-auto lg:mt-8 lg:text-start`}
+            className={` ${montserrat.className} mx-auto mt-6 flex w-max items-center text-center text-xl font-semibold text-blue-400 md:text-2xl lg:ml-0 lg:mr-auto lg:mt-8 lg:text-start`}
           >
             Start Selling Online
             <ChevronRight
@@ -130,7 +130,7 @@ export default function Component() {
               </div>
 
               {/* Payment icons */}
-              <div className="absolute bottom-2 left-4 flex gap-2 md:bottom-8">
+              <div className="absolute bottom-2 left-4 flex gap-2 md:bottom-4">
                 <div className="flex h-auto w-12 items-center justify-center rounded border border-white/20">
                   <img src="/img/home/visa.png" alt="Visa" />
                 </div>

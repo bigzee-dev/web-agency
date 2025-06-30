@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { cairo, montserrat } from "@/app/ui/fonts";
 import { NavChevron } from "./chevron";
-import { GlobeIcon, ShoppingBagIcon } from "./icons";
+import { GlobeIcon, ShoppingBagIcon, WebAppIcon } from "./icons";
 import Link from "next/link";
 
 export default function ClaudeNav() {
@@ -207,6 +207,8 @@ export default function ClaudeNav() {
     };
   }, []); // Empty dependency array: runs once on mount, cleans up on unmount.
 
+  const linkStyles =
+    "flex items-center gap-x-2.5 whitespace-nowrap text-gray-700 lg:text-neutral-100 hover:text-blue-400 transition-colors duration-300";
   return (
     <nav className="x-padding navbar border-b border-gray-300/70">
       <div className="navbar-container">
@@ -242,14 +244,26 @@ export default function ClaudeNav() {
               </div>
               <div className="dropdown-menu">
                 <Link href="/websites" className="dropdown-item">
-                  <div className="flex items-center gap-x-2 whitespace-nowrap text-gray-700 lg:text-neutral-300">
-                    <GlobeIcon />
+                  <div className={linkStyles}>
+                    <span className="text-blue-400">
+                      <GlobeIcon />
+                    </span>
                     Website Development
                   </div>{" "}
                 </Link>
                 <Link href="/ecommerce" className="dropdown-item">
-                  <div className="flex items-center gap-x-2 whitespace-nowrap text-gray-700 lg:text-neutral-300">
-                    <ShoppingBagIcon />
+                  <div className={linkStyles}>
+                    <span className="text-blue-400">
+                      <WebAppIcon />
+                    </span>
+                    Web Applications
+                  </div>{" "}
+                </Link>
+                <Link href="/ecommerce" className="dropdown-item">
+                  <div className={linkStyles}>
+                    <span className="text-blue-400">
+                      <ShoppingBagIcon />
+                    </span>
                     Ecommerce Stores
                   </div>{" "}
                 </Link>
