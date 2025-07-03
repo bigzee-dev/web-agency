@@ -65,12 +65,12 @@ export default function OnlineSuccess() {
           </TabsContent>
         </Tabs>
       </div>
-      <div className="block w-full space-y-2 md:hidden">
+      <div className="block w-full space-y-4 md:hidden">
         <Websites />
         <WebApps />
         <Ecommerce />
-        {/* <Email />
-        <Hosting />
+        <Email />
+        {/* <Hosting />
         <Domains /> */}
       </div>
     </div>

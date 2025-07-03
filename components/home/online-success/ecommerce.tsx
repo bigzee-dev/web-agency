@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { montserrat } from "@/app/ui/fonts";
+import { FaCircleCheck } from "react-icons/fa6";
 
 export default function Component() {
   return (
@@ -154,22 +155,19 @@ export default function Component() {
               </div>
 
               {/* Mobile phone mockup */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-gray-800 p-2">
-                <div className="h-40 w-24 rounded-xl bg-white p-2">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-gradient-to-br from-secondary to-primary p-2">
+                <div className="flex h-40 w-24 flex-col items-center rounded-xl bg-white p-2">
                   <div className="mb-2 h-6 w-full rounded bg-purple-600"></div>
                   <div className="space-y-1">
                     <div className="h-1 rounded bg-gray-300"></div>
                     <div className="h-1 w-3/4 rounded bg-gray-300"></div>
                     <div className="h-1 w-1/2 rounded bg-gray-300"></div>
                   </div>
-                  <div className="mt-2 space-y-1">
-                    <div className="flex gap-1">
-                      <div className="h-4 w-4 rounded bg-gray-200"></div>
-                      <div className="flex-1 space-y-1">
-                        <div className="h-1 rounded bg-gray-300"></div>
-                        <div className="h-1 w-2/3 rounded bg-gray-300"></div>
-                      </div>
-                    </div>
+                  <FaCircleCheck className="mt-1 text-green-500" size="12em" />
+                  <p className="mt-1 w-full text-center text-[0.6rem] font-medium text-secondary">
+                    Payment Received
+                  </p>
+                  <div className="mt-2 w-full space-y-1">
                     <div className="flex gap-1">
                       <div className="h-4 w-4 rounded bg-gray-200"></div>
                       <div className="flex-1 space-y-1">

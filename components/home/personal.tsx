@@ -8,7 +8,7 @@ export default function Personal() {
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_1.8fr] lg:gap-16">
         <div className="space-y-4">
           <h2
-            className={` ${montserrat.className} text-4xl font-medium tracking-tight text-gray-800 md:text-5xl lg:text-6xl`}
+            className={` ${montserrat.className} text-4xl font-medium tracking-tight text-gray-900 md:text-5xl lg:text-6xl`}
           >
             <span className="block">Honest.</span>
             <span className="block">Reliable.</span>

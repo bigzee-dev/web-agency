@@ -52,21 +52,21 @@ export default function Importance() {
                   height={716}
                   className="h-44 rounded-l-2xl object-cover"
                 />
-                <div className="absolute left-0 top-0 z-10 h-44 w-full bg-gray-800/35"></div>
+                <div className="absolute left-0 top-0 z-10 h-44 w-full bg-gray-800/20"></div>
                 <div className="space-y-6 p-8 px-16">
-                  <div className="flex items-center justify-between border-b border-gray-700 py-3 text-neutral-400">
+                  <div className="flex items-center justify-between border-b border-gray-700 py-3 text-neutral-300/80">
                     <span className="font-medium">Brand Recognition</span>
                     <span className="text-2xl font-bold text-blue-400">
                       +340%
                     </span>
                   </div>
-                  <div className="flex items-center justify-between border-b border-gray-700 py-3 text-neutral-400">
+                  <div className="flex items-center justify-between border-b border-gray-700 py-3 text-neutral-300/80">
                     <span className="font-medium">Customer Trust</span>
                     <span className="text-2xl font-bold text-blue-400">
                       +250%
                     </span>
                   </div>
-                  <div className="flex items-center justify-between py-3 text-neutral-400">
+                  <div className="flex items-center justify-between py-3 text-neutral-300/80">
                     <span className="font-medium">Search Visibility</span>
                     <span className="text-2xl font-bold text-blue-400">
                       +180%

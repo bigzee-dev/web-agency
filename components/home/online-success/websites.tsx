@@ -27,7 +27,7 @@ export default function Websites() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-15"
         />
       </div>
-      <Badge className="absolute left-12 top-12 hidden bg-[#6558F5] text-white hover:bg-[#6558F5] lg:block">
+      <Badge className="absolute left-12 top-12 hidden bg-[#6558F5] uppercase text-white hover:bg-[#6558F5] lg:block">
         FREE WEBSITE MIGRATION
       </Badge>
 
@@ -36,18 +36,14 @@ export default function Websites() {
         <span className="text-sm font-medium">SSL certificate</span>
         <Badge
           variant="secondary"
-          className="bg-[#E3F9E5] text-[#14532D] hover:bg-[#E3F9E5] hover:text-[#14532D]"
+          className="upppercase hover:text-[#14532D]6 bg-[#E3F9E5] text-[#14532D] hover:bg-[#E3F9E5]"
         >
           ACTIVE
         </Badge>
       </div>
-      {/* <div className="block w-full rounded-lg border border-gray-500/30 bg-white/10 p-4 text-center md:hidden">
-        <span className="bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-600 bg-clip-text text-3xl font-semibold text-transparent">
-          Websites
-        </span>{" "}
-      </div> */}
+
       <Badge
-        className={`flex max-w-max gap-1 bg-neutral-100 text-center font-semibold text-slate-800 lg:hidden`}
+        className={`flex max-w-max items-center gap-1.5 bg-neutral-100 text-center font-semibold text-slate-800 lg:hidden`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -59,8 +55,8 @@ export default function Websites() {
         </svg>
         WEBSITES
       </Badge>
-      <div className="mt-4 grid grid-cols-1 items-center gap-x-8 gap-y-8 lg:mt-16 lg:grid-cols-12">
-        <div className="lg:col-span-7">
+      <div className="mt-4 grid grid-cols-1 items-start gap-x-8 gap-y-8 lg:mt-20 lg:grid-cols-12">
+        <div className="pt-1 lg:col-span-7">
           <h2
             className={`mb-4 text-3xl font-bold text-neutral-300 md:mb-6 md:text-4xl`}
           >
@@ -96,7 +92,7 @@ export default function Websites() {
             />
           </Link>
         </div>
-        <div className="mt-auto rounded-lg border border-gray-700 lg:col-span-5">
+        <div className="relative rounded-lg border border-gray-700 lg:col-span-5">
           <img
             src="/svg/home/websites-cms.svg"
             alt="Website"

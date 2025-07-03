@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/home/everything-need"
+    "components/home/everything-need",
+    "components/home/online-success/email.disabled.tsx"
   ],
   "exclude": ["node_modules"]
 }

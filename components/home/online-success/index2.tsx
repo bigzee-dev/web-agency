@@ -22,13 +22,13 @@ import { Button } from "@/components/ui/button";
 
 // components
 import Websites from "./websites";
-import EmailsAndDomains from "./email";
+import EmailsAndDomains from "./email.disabled.tsx";
 import Ecommerce from "./ecommerce";
 import Hosting from "./hosting";
 
 export default function OnlineSuccess() {
   return (
-    <div className="x-padding relative overflow-hidden isolate mx-auto max-w-6xl px-4 py-16">
+    <div className="x-padding relative isolate mx-auto max-w-6xl overflow-hidden px-4 py-16">
       {/* <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
@@ -41,15 +41,15 @@ export default function OnlineSuccess() {
           className="mx-auto aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#4754a2] to-[#9089fc] opacity-10"
         />
       </div> */}
-      <div className="text-center mb-16 ">
+      <div className="mb-16 text-center">
         <h1 className={` ${sectionHeadings} `}>
           Your online{" "}
-          <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 bg-clip-text text-transparent">
             success
           </span>{" "}
           starts here
         </h1>
-        <p className="text-lg text-gray-600 mt-4">
+        <p className="mt-4 text-lg text-gray-600">
           Choose from a wide variety of products and services to grow your idea
           online.
         </p>

@@ -3,7 +3,13 @@
 import { useEffect } from "react";
 import { cairo, montserrat } from "@/app/ui/fonts";
 import { NavChevron } from "./chevron";
-import { GlobeIcon, ShoppingBagIcon, WebAppIcon } from "./icons";
+import {
+  GlobeIcon,
+  ShoppingBagIcon,
+  WebAppIcon,
+  ServerStackIcon,
+  AtSymbolIcon,
+} from "../icons";
 import Link from "next/link";
 
 export default function ClaudeNav() {
@@ -289,12 +295,20 @@ export default function ClaudeNav() {
               </div>
               <div className="dropdown-menu">
                 <Link href="/managed-hosting" className="dropdown-item">
-                  {" "}
-                  {/* Changed to Link if internal */}
-                  Managed Hosting
+                  <div className={linkStyles}>
+                    <span className="text-blue-400">
+                      <ServerStackIcon size="size-5" />
+                    </span>
+                    Managed Hosting
+                  </div>
                 </Link>
                 <Link href="/hosting" className="dropdown-item">
-                  Web Hosting
+                  <div className={linkStyles}>
+                    <span className="text-blue-400">
+                      <ServerStackIcon size="size-5" />
+                    </span>
+                    Web Hosting
+                  </div>
                 </Link>
               </div>
             </li>

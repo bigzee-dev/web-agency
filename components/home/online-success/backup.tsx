@@ -9,13 +9,13 @@ import {
 
 // components
 import Websites from "./websites";
-import EmailsAndDomains from "./email";
+import EmailsAndDomains from "./email.disabled.tsx";
 import Ecommerce from "./ecommerce";
 import Hosting from "./hosting";
 
 export default function OnlineSuccess() {
   return (
-    <div className="x-padding relative overflow-hidden isolate mx-auto max-w-6xl px-4 py-16">
+    <div className="x-padding relative isolate mx-auto max-w-6xl overflow-hidden px-4 py-16">
       {/* <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
@@ -28,58 +28,58 @@ export default function OnlineSuccess() {
           className="mx-auto aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#4754a2] to-[#9089fc] opacity-10"
         />
       </div> */}
-      <div className="text-center mb-16 ">
+      <div className="mb-16 text-center">
         <h1 className={` ${sectionHeadings} `}>
           Your online{" "}
-          <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 bg-clip-text text-transparent">
             success
           </span>{" "}
           starts here
         </h1>
-        <p className="text-lg text-gray-600 mt-4">
+        <p className="mt-4 text-lg text-gray-600">
           Choose from a wide variety of products and services to grow your idea
           online.
         </p>
       </div>
 
       <Tabs defaultValue="websites" className="w-full">
-        <TabsList className="w-full max-w-2xl mx-auto grid grid-cols-2 md:grid-cols-4 rounded-lg border border-gray-300">
+        <TabsList className="mx-auto grid w-full max-w-2xl grid-cols-2 rounded-lg border border-gray-300 md:grid-cols-4">
           <TabsTrigger
             value="websites"
-            className="data-[state=active]:bg-background data-[state=active]:text-blue-600 rounded-l-lg border-r border-gray-300"
+            className="rounded-l-lg border-r border-gray-300 data-[state=active]:bg-background data-[state=active]:text-blue-600"
           >
             Websites
           </TabsTrigger>
           <TabsTrigger
             value="webapps"
-            className="data-[state=active]:bg-background data-[state=active]:text-blue-600 border-r border-gray-300"
+            className="border-r border-gray-300 data-[state=active]:bg-background data-[state=active]:text-blue-600"
           >
             Web Apps
           </TabsTrigger>
 
           <TabsTrigger
             value="ecommerce"
-            className="data-[state=active]:bg-background data-[state=active]:text-blue-600 border-r border-gray-300"
+            className="border-r border-gray-300 data-[state=active]:bg-background data-[state=active]:text-blue-600"
           >
             Ecommerce
           </TabsTrigger>
           <TabsTrigger
             value="email"
-            className="data-[state=active]:bg-background data-[state=active]:text-blue-600 rounded-r-lg"
+            className="rounded-r-lg data-[state=active]:bg-background data-[state=active]:text-blue-600"
           >
             Email
           </TabsTrigger>
         </TabsList>
-        <TabsList className="w-full max-w-[21rem] mx-auto grid grid-cols-2 md:grid-cols-2 mb-8 rounded-br-lg rounded-bl-lg  border-b border-l border-r border-gray-300">
+        <TabsList className="mx-auto mb-8 grid w-full max-w-[21rem] grid-cols-2 rounded-bl-lg rounded-br-lg border-b border-l border-r border-gray-300 md:grid-cols-2">
           <TabsTrigger
             value="domains"
-            className="data-[state=active]:bg-background data-[state=active]:text-blue-600 border-r border-gray-300 rounded-bl-lg"
+            className="rounded-bl-lg border-r border-gray-300 data-[state=active]:bg-background data-[state=active]:text-blue-600"
           >
             Domains
           </TabsTrigger>
           <TabsTrigger
             value="hosting"
-            className="data-[state=active]:bg-background data-[state=active]:text-blue-600 rounded-r-lg rounded-br-lg"
+            className="rounded-r-lg rounded-br-lg data-[state=active]:bg-background data-[state=active]:text-blue-600"
           >
             Hosting
           </TabsTrigger>
@@ -151,8 +151,8 @@ export default function OnlineSuccess() {
         </TabsContent>
 
         <TabsContent value="domains">
-          <div className="bg-[#2D1576] text-white rounded-3xl p-8 md:p-12">
-            <h2 className="text-4xl font-bold mb-6">Domains & Email</h2>
+          <div className="rounded-3xl bg-[#2D1576] p-8 text-white md:p-12">
+            <h2 className="mb-6 text-4xl font-bold">Domains & Email</h2>
             <p className="text-lg opacity-90">
               Register your perfect domain name and set up professional email
               addresses.

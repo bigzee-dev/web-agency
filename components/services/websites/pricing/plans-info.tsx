@@ -10,20 +10,20 @@ function classNames(...classes: string[]) {
 
 export default function PlansInfo({ plans }) {
   return (
-    <article className="mx-auto w-full min-w-[50rem] max-w-5xl overflow-x-auto py-10">
+    <article className="mx-auto w-full min-w-[50rem] max-w-5xl overflow-x-auto py-16">
       <div className="grid w-full grid-cols-12 lg:gap-8">
         {/* Starter */}
         {plans.map((plan, index) => {
           return (
             <div
               key={plan.id}
-              className="col-span-4 mb-8 space-y-4 border-l border-gray-400 pl-8 lg:mb-0"
+              className="col-span-4 border-l border-gray-400 pl-8 lg:mb-0"
             >
               <div className={plan.containerClass}>
                 <h2 className={plan.titleClass}>{plan.title}</h2>
               </div>
 
-              <div className="space-y-4 text-md text-gray-500">
+              <div className="mt-8 space-y-4 text-md text-gray-500">
                 <div>
                   <span className="mb-1 text-xs font-medium text-gray-500">
                     Payment Type:
@@ -57,7 +57,7 @@ export default function PlansInfo({ plans }) {
               {/* Suitable for */}
               <div className="mt-4">
                 <h5 className="mb-1 font-medium text-primary">Suitable for:</h5>
-                <div className="grid grid-cols-1 space-y-1">
+                <div className="grid grid-cols-1 space-y-1.5">
                   {plan.features.map((feature) => (
                     <li
                       key={feature}
