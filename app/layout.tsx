@@ -3,7 +3,7 @@ import "@/app/ui/global.css";
 import "@/app/ui/main-nav.css";
 import "@/app/ui/claudenav.css";
 import { inter, notoSans } from "@/app/ui/fonts";
-import ClaudeNav from "@/components/claudenav";
+import ResponsiveNav from "@/components/responsive-nav";
 import Footer from "@/components/footer/footer";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-background antialiased`}>
-        <ClaudeNav />
+        <ResponsiveNav />
         {children}
         {/* <Footer /> */}
       </body>

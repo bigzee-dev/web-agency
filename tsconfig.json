@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "components/home/everything-need",
-    "components/home/online-success/email.disabled.tsx"
+    "components/home/online-success/email.disabled.tsx",
+    "app/hooks/useResponsiveNav.js"
   ],
   "exclude": ["node_modules"]
 }
