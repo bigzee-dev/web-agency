@@ -26,12 +26,12 @@ export default function ResponsiveNav() {
         <Link className="logo-container" href="/">
           {" "}
           {/* Updated href to be relative */}
-          <img src="/img/just-logo.png" alt="BigZee Digital Logo" />{" "}
+          <img src="/img/alt-logo.png" alt="BigZee Digital Logo" />{" "}
           {/* Added alt text */}
           <h4
-            className={` ${cairo.className} nav-logo mb-1 ml-2 font-light text-gray-700`}
+            className={` ${cairo.className} nav-logo mb-1 ml-2.5 text-cyan-700`}
           >
-            delta<span className="font-semibold text-gray-800">worx</span>
+            delta<span className="font-semibold text-gray-700">worx</span>
           </h4>
         </Link>
         <button className="hamburger" aria-label="Open menu">
@@ -48,10 +48,7 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                Websites{" "}
-                <span className="chevron">
-                  <NavChevron />
-                </span>
+                Websites <span className="chevron">{/* <NavChevron /> */}</span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/websites" className="dropdown-item">
@@ -93,10 +90,7 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                Hosting{" "}
-                <span className="chevron">
-                  <NavChevron />
-                </span>
+                Hosting <span className="chevron">{/* <NavChevron /> */}</span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/managed-hosting" className="dropdown-item">
@@ -121,10 +115,7 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                Domains{" "}
-                <span className="chevron">
-                  <NavChevron />
-                </span>
+                Domains <span className="chevron">{/* <NavChevron /> */}</span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/domains" className="dropdown-item">
@@ -174,10 +165,7 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                About Us{" "}
-                <span className="chevron">
-                  <NavChevron />
-                </span>
+                About Us <span className="chevron">{/* <NavChevron /> */}</span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/about-us" className="dropdown-item">
@@ -196,9 +184,7 @@ export default function ResponsiveNav() {
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
                 Help Center{" "}
-                <span className="chevron">
-                  <NavChevron />
-                </span>
+                <span className="chevron">{/* <NavChevron /> */}</span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/contact-us" className="dropdown-item">
@@ -250,13 +236,27 @@ export default function ResponsiveNav() {
             </li>
           </ul>
         </div>
-        <div className="client-login">
-          <a
-            href="https://domains.bigzee.app/clientarea.php"
-            className={` ${montserrat.className} text-xs font-medium`}
-          >
-            CLIENT ZONE
-          </a>
+        <div className="hidden items-center justify-between gap-x-1 lg:flex">
+          <div className="flex items-center justify-end gap-x-8">
+            <img
+              src="/svg/facebook-nav.svg"
+              alt="BigZee Digital Logo"
+              className="hidden h-[1.55rem] w-[1.55rem] lg:block"
+            />
+            <img
+              src="/svg/whatsapp-nav.svg"
+              alt="BigZee Digital Logo"
+              className="hidden h-[1.35rem] w-[1.35rem] lg:block"
+            />
+          </div>
+          <div className="client-login bg-primary text-white">
+            <a
+              href="https://domains.bigzee.app/clientarea.php"
+              className={` ${montserrat.className} text-xs font-medium`}
+            >
+              CLIENT ZONE
+            </a>
+          </div>
         </div>
       </div>
     </nav>

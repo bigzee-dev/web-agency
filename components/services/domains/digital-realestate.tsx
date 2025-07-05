@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function DigitalRealEstate() {
   return (
-    <div className="mx-auto mb-20 mt-16 grid max-w-7xl grid-cols-12 rounded-2xl border border-gray-300 bg-gradient-to-r from-primary/5 to-primary/10">
+    <div className="mx-auto mb-24 mt-16 grid max-w-7xl grid-cols-12 rounded-2xl border border-gray-300 bg-gradient-to-r from-primary/5 to-primary/10">
       <div className="relative col-span-4 h-full">
         <Image
-          src="/img/home/globe-tech.jpg"
+          src="/img/domains/laptop-domains.jpg"
           alt="img"
           fill
           className="rounded-l-2xl object-cover"

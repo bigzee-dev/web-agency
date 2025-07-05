@@ -5,24 +5,24 @@ import Link from "next/link";
 
 export default function Development() {
   return (
-    <section className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-      <div className="space-y-3 mb-10">
+    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mb-14 space-y-3">
         <h2
-          className={`${montserrat.className} max-w-2xl text-5xl font-bold text-gray-800 leading-tight `}
+          className={`${montserrat.className} max-w-2xl text-5xl font-bold leading-tight text-gray-800`}
         >
           Ecommerce Website
-          <div className="relative inline-block  rotate-1 mt-1">
-            <span className="relative z-10 bg-blue-500 text-neutral-100 px-5 py-1 rounded-md ml-2">
+          <div className="relative mt-1 inline-block rotate-1">
+            <span className="relative z-10 ml-2 rounded-md bg-blue-500 px-5 py-1 text-neutral-100">
               Development
             </span>
           </div>
         </h2>
       </div>
-      <div className="grid md:grid-cols-12 gap-x-20 items-start">
+      <div className="grid items-start gap-x-20 md:grid-cols-12">
         {/* Left Column */}
-        <div className="col-span-7 space-y-4">
+        <div className="col-span-7 flex flex-col gap-y-4">
           <p
-            className={` ${montserrat.className} text-3xl text-secondary font-sans font-semibold `}
+            className={` ${montserrat.className} font-sans text-3xl font-semibold text-secondary`}
           >
             Start Your Online Retail Business Today
           </p>
@@ -50,7 +50,7 @@ export default function Development() {
           </p>
           <Link
             href="/contact"
-            className={` ${btnDimensions} flex justify-center items-center font-sans text-md bg-primary hover:bg-sky-700 text-neutral-100 font-bold mt-2 `}
+            className={` ${btnDimensions} mt-8 flex items-center justify-center bg-primary font-sans text-md font-bold text-neutral-100 hover:bg-sky-700`}
           >
             Contact Us
           </Link>
@@ -74,10 +74,10 @@ export default function Development() {
               "Supporting you beyond the project",
             ].map((feature, index) => (
               <li key={index} className="flex items-start gap-3">
-                <div className="bg-thatgreen rounded-full p-1 mt-0.5">
+                <div className="mt-0.5 rounded-full bg-thatgreen p-1">
                   <Check className="h-4 w-4 text-white" />
                 </div>
-                <span className="font-sans text-gray-700 text-base">
+                <span className="font-sans text-base text-gray-700">
                   {feature}
                 </span>
               </li>

@@ -8,7 +8,7 @@ export default function WhyBuy() {
         <h2
           className={` ${montserrat.className} mb-4 text-3xl font-bold text-gray-800 md:text-4xl`}
         >
-          Why Buy Domain Names at BigZee?
+          Why Buy Domain Names at DeltaWorx?
         </h2>
         <p className="mb-12 max-w-3xl text-lg text-muted-foreground">
           Hostinger offers reliable domain registration services with instant

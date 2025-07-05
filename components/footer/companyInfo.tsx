@@ -12,28 +12,25 @@ const iconProps = {
 
 export default function CompanyInfo() {
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex h-full flex-col">
       <Link className="logo-container" href="/">
         <img
-          src="/img/just-logo.png"
+          src="/img/alt-logo.png"
           alt="BigZee Digital Logo"
           className="grayscale"
         />
 
         <h4
-          className={` ${cairo.className} font-light text-neutral-400 ml-2 mb-1 nav-logo`}
+          className={` ${cairo.className} nav-logo mb-1 ml-2 font-light text-neutral-400`}
         >
           delta<span className="font-semibold text-neutral-300">worx</span>
         </h4>
       </Link>
-
-      <span className="w-max font-sans text-sm text-neutral-400  mt-4  pl-5">
-        Plot 698, Old Mall
-        <br />
-        Maun
-        <br />
-        Botswana
-      </span>
+      <div className="mt-4 flex w-max flex-col pl-5 font-sans text-sm text-neutral-400">
+        <span className="">Plot 698, Old Mall</span>
+        <span className="mt-1">Maun</span>
+        <span className="mt-1">Botswana</span>
+      </div>
 
       {/*  </div>
         <Link href="#" className="text-neutral-400 hover:text-neutral-400">

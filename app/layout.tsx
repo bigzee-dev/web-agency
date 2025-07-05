@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-background antialiased`}>
         <ResponsiveNav />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

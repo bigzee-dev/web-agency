@@ -83,7 +83,7 @@ export default function DomainPricingTable() {
     <div className="mx-auto w-full max-w-5xl pb-8">
       <h2 className={sectionHeadings}>Available Tld's</h2>
       {/* Header Section */}
-      <div className="mt-12 grid grid-cols-1 rounded-t-2xl bg-blue-700 text-white md:grid-cols-4">
+      <div className="mt-12 grid grid-cols-1 rounded-t-2xl bg-slate-700 text-white md:grid-cols-4">
         {[
           {
             icon: <Box className="h-6 w-6" />,

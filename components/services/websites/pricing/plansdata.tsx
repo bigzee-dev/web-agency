@@ -4,8 +4,7 @@ export const oneTimePlans = [
     title: "Starter",
     containerClass:
       "radial-background flex h-36 w-36 items-center justify-center  rounded-full",
-    titleClass:
-      "bg-gradient-to-r from-blue-500 via-cyan-500 to-indigo-400 bg-clip-text font-sans text-2xl font-bold text-transparent",
+    titleClass: "font-sans text-2xl font-bold text-blue-400",
     paymentType: "One-Time Payment",
     price: "P5000-6000",
     pages: "3-5 pages",
@@ -38,7 +37,7 @@ export const oneTimePlans = [
     id: 3,
     title: "Pro",
     containerClass:
-      "radial-secondary  flex h-36 w-36 items-center justify-center  rounded-full",
+      "radial-pro  flex h-36 w-36 items-center justify-center  rounded-full",
     titleClass: "font-sans text-2xl font-bold text-white",
     paymentType: "One-Time Payment",
     price: "> P15000",
@@ -93,9 +92,9 @@ export const monthlyPlans = [
     id: 3,
     title: "Pro",
     containerClass:
-      "radial-secondary  flex h-36 w-36 items-center justify-center  rounded-full",
+      "radial-pro  flex h-36 w-36 items-center justify-center  rounded-full",
     titleClass: "font-sans text-2xl font-bold text-white",
-    paymentType: "One-Time Payment",
+    paymentType: "One-Time Payment Pro",
     price: "> P15000",
     pages: "> 10 pages",
     time: "> 8 weeks",

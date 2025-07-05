@@ -31,7 +31,7 @@ export default function Importance() {
           <h2
             className={` ${montserrat.className} mb-4 text-3xl font-bold text-gray-800 md:text-4xl`}
           >
-            The importance of a Domain name
+            The importance of a Domain Name
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-gray-600">
             Your domain name is more than just a web address—it's the foundation
@@ -80,7 +80,7 @@ export default function Importance() {
             {domainBenefits.map((benefit, index) => (
               <div key={index} className="space-y-2">
                 <h3
-                  className={` ${montserrat.className} text-2xl font-bold leading-tight text-gray-800 md:text-2xl`}
+                  className={` ${montserrat.className} text-2xl font-bold leading-tight text-primary md:text-2xl`}
                 >
                   {benefit.title}
                 </h3>

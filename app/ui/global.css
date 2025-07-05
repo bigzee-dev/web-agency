@@ -100,6 +100,8 @@ body {
   -webkit-mask-position: top;
 }
 
+/* these radial gradients are used in the websites pricing section */
+
 .radial-background {
   background: radial-gradient(
     circle,
@@ -109,13 +111,8 @@ body {
   );
 }
 
-.radial-services {
-  background: radial-gradient(
-    circle,
-    rgba(80, 80, 80, 0.9) 0%,
-    rgba(64, 64, 64, 1) 10%,
-    rgba(31, 41, 55, 1) 70%
-  );
+.radial-pro {
+  background: radial-gradient(circle, #22d3ee 0%, #06b6d4 10%, #0e7490 70%);
 }
 
 .radial-secondary {

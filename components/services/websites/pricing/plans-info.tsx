@@ -13,7 +13,7 @@ export default function PlansInfo({ plans }) {
     <article className="mx-auto w-full min-w-[50rem] max-w-5xl overflow-x-auto py-16">
       <div className="grid w-full grid-cols-12 lg:gap-8">
         {/* Starter */}
-        {plans.map((plan, index) => {
+        {plans.map((plan) => {
           return (
             <div
               key={plan.id}
