@@ -8,9 +8,9 @@ export default function CTA() {
   return (
     <div className="">
       <div className="mx-auto max-w-7xl py-16">
-        <div className="relative isolate grid grid-cols-12 overflow-hidden bg-slate-800 pt-16 shadow-2xl md:rounded-3xl md:pt-24 lg:gap-x-24 lg:pt-0">
+        <div className="relative isolate grid grid-cols-1 gap-x-12 overflow-hidden rounded-3xl bg-gray-900 pt-0 shadow-2xl md:grid-cols-12 lg:gap-x-24">
           {/* Blur component */}
-          <div
+          {/* <div
             aria-hidden="true"
             className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
           >
@@ -21,8 +21,8 @@ export default function CTA() {
               }}
               className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#477cf0] to-[#6799e8] opacity-15"
             />
-          </div>
-          <div className="relative col-span-4 h-full">
+          </div> */}
+          <div className="relative order-2 col-span-1 h-80 md:order-1 md:col-span-4 md:h-full">
             <Image
               src="/img/tech-laptop.jpg"
               alt="img"
@@ -30,7 +30,7 @@ export default function CTA() {
               className="object-cover"
             />
           </div>
-          <div className="col-span-8 mx-auto flex max-w-2xl justify-center text-center lg:mx-0 lg:flex-auto lg:text-left">
+          <div className="order-1 col-span-1 mx-auto flex max-w-2xl justify-center text-center md:order-2 md:col-span-8 lg:mx-0 lg:flex-auto lg:text-left">
             <ContactForm />
           </div>
         </div>

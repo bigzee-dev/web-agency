@@ -10,7 +10,7 @@ function classNames(...classes: string[]) {
 
 export default function PlansInfo({ plans }) {
   return (
-    <article className="mx-auto w-full min-w-[50rem] max-w-5xl overflow-x-auto py-16">
+    <article className="mx-auto w-full min-w-[50rem] max-w-5xl py-16 pb-6">
       <div className="grid w-full grid-cols-12 lg:gap-8">
         {/* Starter */}
         {plans.map((plan) => {

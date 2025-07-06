@@ -19,7 +19,7 @@ export default function ResponsiveNav() {
   useResponsiveNav(); // <-- This runs the nav javascript
 
   const linkStyles =
-    "flex items-center gap-x-2.5 whitespace-nowrap text-gray-700 lg:text-neutral-100 hover:text-blue-400 transition-colors duration-300";
+    "flex items-center gap-x-2.5 whitespace-nowrap text-gray-700 lg:text-neutral-100 hover:text-blue-300 transition-colors duration-300";
   return (
     <nav className="x-padding navbar border-b border-gray-300/70">
       <div className="navbar-container">
@@ -53,7 +53,7 @@ export default function ResponsiveNav() {
               <div className="dropdown-menu">
                 <Link href="/websites" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-400">
+                    <span className="text-blue-300">
                       <GlobeIcon />
                     </span>
                     Website Development
@@ -61,7 +61,7 @@ export default function ResponsiveNav() {
                 </Link>
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-400">
+                    <span className="text-blue-300">
                       <WebAppIcon />
                     </span>
                     Web Applications
@@ -69,7 +69,7 @@ export default function ResponsiveNav() {
                 </Link>
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-400">
+                    <span className="text-blue-300">
                       <ShoppingBagIcon />
                     </span>
                     Ecommerce Stores

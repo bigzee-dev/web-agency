@@ -5,7 +5,7 @@ import { oneTimePlans, monthlyPlans } from "./plansdata";
 
 export default function PricingWebsites() {
   return (
-    <div className="x-padding relative isolate mx-auto max-w-6xl py-20">
+    <div className="x-padding relative isolate mx-auto max-w-6xl py-20 pb-16">
       {/* Blur component for background effect */}
       <div
         aria-hidden="true"

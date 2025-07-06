@@ -3,7 +3,17 @@ import { useState, useEffect, useRef } from "react";
 import { IoIosSend } from "react-icons/io";
 import Turnstile, { useTurnstile } from "react-turnstile";
 
-export default function Test2Form() {
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/websites-form-select";
+
+export default function WebsitesForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -246,9 +256,10 @@ export default function Test2Form() {
     }
   };
 
-  const labelStyles = "block text-sm  text-neutral-300/80";
+  const labelStyles =
+    "flex items-center justify-between text-sm  text-neutral-300/80";
   const inputStyles =
-    "shadow-sm block w-full sm:text-sm text-neutral-300 bg-neutral-300/5 py-1.5 px-1.5 border border-gray-400/40 rounded-md placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
+    "shadow-sm block w-full sm:text-sm text-neutral-300 bg-neutral-300/5 py-1.5 px-1.5 border border-gray-400/20 rounded-md placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
@@ -291,7 +302,8 @@ export default function Test2Form() {
       <div className="grid grid-cols-2 gap-x-4">
         <div>
           <label htmlFor="company" className={` ${labelStyles} `}>
-            Company (Optional)
+            <span>Company </span>
+            <span className="pr-2 text-xs text-neutral-400/90">Optional</span>
           </label>
           <div className="mt-1">
             <input
@@ -306,10 +318,11 @@ export default function Test2Form() {
         </div>
         <div>
           <label htmlFor="budget" className={` ${labelStyles} `}>
-            Budget Range
+            <span>Budget Range </span>
+            <span className="pr-2 text-xs text-neutral-400/90">Optional</span>
           </label>
           <div className="mt-1">
-            <select
+            {/* <select
               id="budget"
               name="budget"
               value={formData.budget}
@@ -317,7 +330,7 @@ export default function Test2Form() {
               required
               className={` ${inputStyles} ${
                 formData.budget === "" ? "text-gray-700" : "text-neutral-300"
-              } `}
+              } text-sm placeholder:text-sm`}
             >
               <option value="" disabled>
                 Select a budget range
@@ -337,7 +350,28 @@ export default function Test2Form() {
               <option className="text-gray-700" value="$50,000+">
                 $50,000+
               </option>
-            </select>
+            </select> */}
+            <Select className={inputStyles}>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select a budget range" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Fruits</SelectLabel>
+                  <SelectItem value="Under p5,000">Under P5,000</SelectItem>
+                  <SelectItem value="P5,000 - P10,000">
+                    P5,000 - P10,000
+                  </SelectItem>
+                  <SelectItem value="P10,000 - P15,000">
+                    P10,000 - P15,000
+                  </SelectItem>
+                  <SelectItem value="P15,000 - P20,000">
+                    P15,000 - P20,000
+                  </SelectItem>
+                  <SelectItem value="> P20,000">&gt; P20,000</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
           </div>
         </div>
       </div>
@@ -384,7 +418,7 @@ export default function Test2Form() {
         <button
           type="submit"
           disabled={status.submitting || (!turnstileToken && !status.success)}
-          className={` ${whiteButton} flex items-center justify-center gap-2`}
+          className={` ${whiteButton} flex items-center justify-center gap-3`}
         >
           {status.submitting ? "Submitting..." : "Submit"}
           <IoIosSend size="1.6em" />

@@ -67,7 +67,7 @@ export default function Showcase() {
             </p>
           </div>
 
-          <div className="mt-2 flex flex-col items-center justify-center gap-x-8 gap-y-6 sm:flex-row lg:mt-1 lg:justify-start">
+          <div className="mt-2 flex flex-col items-center justify-center gap-x-8 gap-y-6 sm:flex-row lg:mt-3 lg:justify-start">
             <Link href="#our-services" className={` ${primaryButton} `}>
               Our Services
             </Link>
