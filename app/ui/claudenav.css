@@ -38,12 +38,6 @@
   font-size: 1.7rem;
 }
 
-.nav-menu {
-  /* display: flex;
-  list-style: none;
-  align-items: center; */
-}
-
 .nav-menu-stylingcontainer {
   display: flex;
   list-style: none;
@@ -53,10 +47,6 @@
 .nav-item {
   position: relative;
   margin-left: 4px;
-}
-
-.smlscrn-client-login {
-  display: none;
 }
 
 .nav-link {
@@ -81,6 +71,10 @@
   cursor: pointer;
 }
 
+.smlscreen-client-login {
+  display: none;
+}
+
 .client-login {
   position: relative;
   margin-left: 2rem;
@@ -101,7 +95,6 @@
   position: absolute;
   top: 100%;
   left: 0;
-
   padding: 1rem;
   background-color: rgb(51, 51, 51);
   border-radius: 4px;

@@ -62,11 +62,11 @@ export default function Websites() {
           >
             Professional, high-converting websites built to grow your business
           </h2>
-          <p className="font-sans text-md leading-relaxed text-neutral-300">
+          <p className="font-sans text-base leading-relaxed text-neutral-300">
             We develop fast, secure websites designed to turn visitors into
             customers — and support your long-term growth.
           </p>
-          <ul className="mt-6 space-y-2 text-neutral-300/85">
+          <ul className="mt-6 space-y-2 text-neutral-300/90">
             {features.map((feature) => (
               <li
                 key={feature}

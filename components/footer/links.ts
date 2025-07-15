@@ -2,7 +2,7 @@ export const footerLinks = [
   {
     heading: "Company",
     firstLink: {
-      title: "About",
+      title: "About us",
       href: "/about-us",
     },
     secondLink: {

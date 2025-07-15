@@ -15,9 +15,9 @@ export default function CompanyInfo() {
     <div className="flex h-full flex-col">
       <Link className="logo-container" href="/">
         <img
-          src="/img/alt-logo.png"
+          src="/logo/whiteLogo-500x500.png"
           alt="BigZee Digital Logo"
-          className="grayscale"
+          className="opacity-90"
         />
 
         <h4

@@ -1,39 +1,35 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
-import {
-  btnDimensions,
-  grayButton,
-  greenButton,
-  whiteButton,
-} from "@/app/ui/customTailwindClasses";
+import { whiteButton } from "@/app/ui/customTailwindClasses";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <div className="relative w-full bg-rose-700/60">
       <div className="inset-0 w-full bg-gradient-to-r from-gray-900 via-primary to-slate-600">
-        <div className="relative isolate overflow-hidden max-w-7xl mx-auto">
+        <div className="relative isolate mx-auto max-w-7xl overflow-hidden">
           <div className="grid grid-cols-12 gap-16">
-            <div className="col-span-6 relative py-12 ">
+            <div className="col-span-6 py-12">
               {/* Email badge */}
               <div className="inline-block">
-                <span className="font-semibold text-neutral-300 tracking-widest">
+                <span className="font-semibold tracking-widest text-neutral-300">
                   EMAIL
                 </span>
               </div>
               {/* Main heading */}
               <h1
-                className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 mt-3 leading-tight`}
+                className={`${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
               >
                 Get a Professional Email address
               </h1>
 
-              <div className="space-y-3 my-5 text-md">
-                <p className="font-sans text-neutral-300 font-normal max-w-[90%]">
+              <div className="my-6 space-y-3 text-md">
+                <p className="max-w-[90%] font-sans font-normal text-neutral-300">
                   Setup a personalised email address using your domain name, e.g
                   <span className="text-neutral-400"> david@mywebsite.com</span>
                 </p>
-                <p className="font-sans text-neutral-300 font-normal max-w-[90%]">
+                <p className="max-w-[90%] font-sans font-normal text-neutral-300">
                   A business email address makes a great professional
                   impression. With BigZee, you can get a work email address for
                   each team or individual team member e.g{" "}
@@ -46,8 +42,13 @@ export default function Header() {
                 </p>
               </div>
 
-              <button className={` ${whiteButton} mt-3 `}>Get Started</button>
-              <div className="flex items-center font-sans text-neutral-300  font-medium text-sm mt-5">
+              <Link
+                href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/business-email`}
+                className={` ${whiteButton} mt-3 inline-block`}
+              >
+                Get Email
+              </Link>
+              <div className="mt-5 flex items-center font-sans text-sm font-medium text-neutral-300">
                 <span className="mr-2">
                   <IoShieldCheckmarkSharp
                     size="1.5em"

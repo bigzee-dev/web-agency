@@ -87,7 +87,7 @@ export default function Component() {
 
           {/* Right illustration */}
           <div className="relative col-span-5">
-            <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-gray-900 to-blue-400/25 p-5 backdrop-blur-md">
+            <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-gray-900 to-blue-400/25 p-4 backdrop-blur-md">
               {/* Domain illustration */}
               <div className="relative h-96 overflow-hidden">
                 {/* Background grid pattern */}
@@ -147,7 +147,7 @@ export default function Component() {
                 </div>
 
                 {/* Top left - Available domains */}
-                <div className="absolute left-8 top-8">
+                <div className="absolute left-4 top-4">
                   <div className="w-36 rounded-lg bg-white p-3 shadow-lg">
                     <div className="text-center">
                       <div className="mb-1 text-sm font-bold text-gray-800">
@@ -165,7 +165,7 @@ export default function Component() {
                 </div>
 
                 {/* Top right - Domain extensions */}
-                <div className="absolute right-8 top-8">
+                <div className="absolute right-4 top-4">
                   <div className="rounded-lg bg-white p-3 shadow-lg">
                     <div className="mb-2 text-center text-xs font-bold text-gray-800">
                       Popular TLDs
@@ -188,7 +188,7 @@ export default function Component() {
                 </div>
 
                 {/* Bottom left - DNS Management */}
-                <div className="absolute bottom-8 left-8">
+                <div className="absolute bottom-4 left-4">
                   <div className="w-32 rounded-lg bg-white p-3 shadow-lg">
                     <div className="mb-2 flex items-center gap-1 text-xs font-bold text-gray-800">
                       <Server className="h-3 w-3" />
@@ -212,7 +212,7 @@ export default function Component() {
                 </div>
 
                 {/* Bottom right - Security features */}
-                <div className="absolute bottom-8 right-8">
+                <div className="absolute bottom-4 right-4">
                   <div className="w-32 rounded-lg bg-white p-3 shadow-lg">
                     <div className="mb-2 flex items-center gap-1 text-xs font-bold text-gray-800">
                       <Shield className="h-3 w-3" />

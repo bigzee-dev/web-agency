@@ -79,7 +79,7 @@ export default function Visibility() {
         {/* Heading */}
         <div className="mx-auto w-[85%] max-w-lg md:w-full">
           <p
-            className={` ${montserrat.className} text-center text-4xl font-semibold leading-9 tracking-tight text-neutral-300`}
+            className={` ${montserrat.className} text-center text-4xl font-semibold leading-10 tracking-tight text-neutral-300`}
           >
             We have everything you need to elevate your online presence.
           </p>

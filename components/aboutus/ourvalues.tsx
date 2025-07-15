@@ -11,19 +11,19 @@ import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 
 export default function OurValues() {
   return (
-    <div className="x-padding relative mx-auto pb-24 pt-20 max-w-7xl">
-      <div className="flex items-center justify-center mb-6">
+    <div className="x-padding relative mx-auto max-w-7xl pb-24 pt-20">
+      <div className="mb-6 flex items-center justify-center">
         <h2 className={` ${sectionHeadings} max-w-6xl`}>Our Values</h2>
       </div>
 
-      <p className="text-lg text-center text-gray-600 mb-10 max-w-4xl mx-auto">
+      <p className="mx-auto mb-10 max-w-3xl text-center text-lg text-gray-600">
         Our brand&apos;s heart is a solid commitment to inclusivity and a
         client-centric ethos. We prioritise our clients needs while staying
         dedicated to constant progress.{" "}
         <strong>Our core values include:</strong>
       </p>
 
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
+      <div className="mx-auto mt-16 grid w-full max-w-7xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         <ValueCard
           icon={<TransparencyIcon />}
           title="Transparency"
@@ -75,19 +75,18 @@ function ValueCard({
   svg,
 }: ValueCardProps) {
   return (
-    <div className="relative h-[16rem] flex flex-col items-center justify-center bg-gray-200 border border-gray-300 ">
+    <div className="flex h-[12rem] flex-col items-center justify-center gap-y-4">
+      <div className={` ${background} mb-2 h-16 w-16 rounded-lg p-3 shadow-md`}>
+        <img src={svg} alt="svg"></img>
+      </div>
       <h3
-        className={` ${notoSans.className} absolute top-5 left-5 text-2xl font-medium text-gray-700 `}
+        className={` ${notoSans.className} text-2xl font-medium text-gray-900`}
       >
         {title}
       </h3>
-      <div
-        className={` ${background} w-16 h-16  p-3 mb-2  rounded-lg shadow-md`}
-      >
-        <img src={svg} alt="svg"></img>
-      </div>
-      <div className="absolute bottom-0 left-0 pb-5 px-4 text-center ">
-        <p className="font-sans text-gray-700 text-md md:w-full">
+
+      <div className="px-4 pb-5 text-center">
+        <p className="font-sans text-md text-gray-700 md:w-full">
           {description}
         </p>
       </div>

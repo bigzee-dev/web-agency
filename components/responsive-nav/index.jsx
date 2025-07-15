@@ -19,17 +19,17 @@ export default function ResponsiveNav() {
   useResponsiveNav(); // <-- This runs the nav javascript
 
   const linkStyles =
-    "flex items-center gap-x-2.5 whitespace-nowrap text-gray-700 lg:text-neutral-100 hover:text-blue-300 transition-colors duration-300";
+    "flex items-center gap-x-2.5 whitespace-nowrap text-gray-700 lg:text-neutral-100 hover:text-neutral-400 transition-colors duration-200";
   return (
     <nav className="x-padding navbar border-b border-gray-300/70">
       <div className="navbar-container">
         <Link className="logo-container" href="/">
           {" "}
           {/* Updated href to be relative */}
-          <img src="/img/alt-logo.png" alt="BigZee Digital Logo" />{" "}
+          <img src="/logo/logo-500x500.png" alt="BigZee Digital Logo" />{" "}
           {/* Added alt text */}
           <h4
-            className={` ${cairo.className} nav-logo mb-1 ml-2.5 text-cyan-700`}
+            className={` ${cairo.className} nav-logo mb-[0.30rem] ml-2 text-cyan-700`}
           >
             delta<span className="font-semibold text-gray-700">worx</span>
           </h4>
@@ -224,10 +224,10 @@ export default function ResponsiveNav() {
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                <div className="smlscrn-client-login">
+                <div className="smlscreen-client-login">
                   <a
                     href="https://domains.bigzee.app/clientarea.php"
-                    className={` ${montserrat.className} text-xs tracking-wide text-blue-600 text-white`}
+                    className={` ${montserrat.className} text-xs tracking-wide text-white`}
                   >
                     CLIENT ZONE
                   </a>
@@ -246,7 +246,7 @@ export default function ResponsiveNav() {
             <img
               src="/svg/whatsapp-nav.svg"
               alt="BigZee Digital Logo"
-              className="hidden h-[1.35rem] w-[1.35rem] lg:block"
+              className="hidden h-[1.355rem] w-[1.355rem] lg:block"
             />
           </div>
           <div className="client-login bg-primary text-white">

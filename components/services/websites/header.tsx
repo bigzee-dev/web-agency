@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { montserrat } from "@/app/ui/fonts";
 import { whiteButton } from "@/app/ui/customTailwindClasses";
 import { FaCheck } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Websites() {
   return (
@@ -100,7 +101,9 @@ export default function Websites() {
               From design to deployment, we make sure your site looks great and
               works flawlessly across all devices.
             </p>
-            <button className={` ${whiteButton} mt-10`}>Get Started</button>
+            <Link href="" className={` ${whiteButton} mt-10`}>
+              Get Started
+            </Link>
           </div>
         </div>
 

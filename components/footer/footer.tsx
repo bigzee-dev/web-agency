@@ -8,11 +8,11 @@ const singleLink = "font-sans text-sm text-neutral-300/75";
 export default function Footer() {
   return (
     <footer className="x-padding bg-gray-800">
-      <div className="max-w-5xl mx-auto py-20 grid md:grid-cols-12 gap-x-8 gap-y-8">
+      <div className="mx-auto grid max-w-5xl gap-x-8 gap-y-8 py-20 md:grid-cols-12">
         <div className="md:col-span-5">
           <CompanyInfo />
         </div>
-        <div className="md:col-span-7 grid grid-cols-2 md:flex md:justify-between md:flex-wrap gap-x-8 md:gap-x-0 gap-y-6 md:gap-y-0 pr-6 md:pr-0">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-6 pr-6 md:col-span-7 md:flex md:flex-wrap md:justify-between md:gap-x-0 md:gap-y-0 md:pr-0">
           {footerLinks.map((link, i) => (
             <div key={i}>
               <h3 className={linkHeading}>{link.heading}</h3>
@@ -46,13 +46,13 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className="border-t border-gray-600 w-full">
-        <div className="font-sans font-light mx-auto max-w-5xl flex justify-between text-sm text-neutral-400 text-center pt-5 pb-16 ">
+      <div className="w-full border-t border-gray-600">
+        <div className="mx-auto flex max-w-5xl justify-between pb-16 pt-5 text-center font-sans text-sm font-light text-neutral-400">
           <p>
             <span className="text-neutral-300">&copy;</span> Zimaman
             Enterprises. 2024
           </p>
-          <div className="font-sans  flex items-center text-sm">
+          <div className="flex items-center font-sans text-sm">
             <Link
               href="/privacy-policy"
               className="text-neutral-400 hover:text-neutral-300"

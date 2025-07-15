@@ -58,12 +58,12 @@ export default function Email() {
             <br />
             <span className="text-blue-400">Email that means business</span>
           </h2>
-          <p className="font-sans text-md leading-relaxed text-neutral-300">
+          <p className="font-sans text-base leading-relaxed text-neutral-300">
             Our Email service helps you and your team stay connected, look
             professional, and build trust — with secure, easy-to-manage email on
             your domain.
           </p>
-          <ul className="mt-6 space-y-2 text-neutral-300/85">
+          <ul className="mt-6 space-y-2 text-neutral-300/90">
             {features.map((feature) => (
               <li
                 key={feature}
