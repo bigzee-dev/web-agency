@@ -1,5 +1,4 @@
-import { ShoppingCart, ArrowRight, Check, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ShoppingCart, Check, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { montserrat } from "@/app/ui/fonts";

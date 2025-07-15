@@ -7,12 +7,12 @@ import {
 
 export default function FaqsWebsites() {
   return (
-    <div className="max-w-7xl mx-auto grid grid-cols-12 gap-x-20 pt-20 pb-4">
+    <div className="mx-auto grid max-w-7xl grid-cols-12 gap-x-20 pb-4 pt-20">
       <div className="col-span-6">
-        <h3 className="text-4xl text-gray-800 font-bold">
+        <h3 className="text-4xl font-bold text-gray-800">
           Frequently asked questions
         </h3>
-        <p className="text-gray-600 mt-4">
+        <p className="mt-4 text-gray-600">
           Can’t find the answer you’re looking for? Reach out to our{" "}
           <span className="text-blue-700">customer support</span> team.
         </p>
@@ -40,7 +40,7 @@ export default function FaqsWebsites() {
           <AccordionItem value="item-3">
             <AccordionTrigger>Is it animated?</AccordionTrigger>
             <AccordionContent>
-              Yes. It's animated by default, but you can disable it if you
+              Yes. Its animated by default, but you can disable it if you
               prefer.
             </AccordionContent>
           </AccordionItem>
@@ -60,7 +60,7 @@ export default function FaqsWebsites() {
           <AccordionItem value="item-6">
             <AccordionTrigger>Is it animated?</AccordionTrigger>
             <AccordionContent>
-              Yes. It's animated by default, but you can disable it if you
+              Yes. Its animated by default, but you can disable it if you
               prefer.
             </AccordionContent>
           </AccordionItem>

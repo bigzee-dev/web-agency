@@ -31,8 +31,8 @@ export default function Development() {
             Sell your products directly through your website and accept credit
             card payments from customers worldwide. An e-commerce website gives
             you all the tools you need to launch and manage a successful online
-            store. Whether you're selling physical products like clothing and
-            furniture, or offering services and digital goods such as online
+            store. Whether you&apos;re selling physical products like clothing
+            and furniture, or offering services and digital goods such as online
             courses or downloadable software, your e-commerce site can handle it
             all.
             <br />

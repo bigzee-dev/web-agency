@@ -1,5 +1,4 @@
 import { Mail, Phone, MessageSquare, Facebook } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { montserrat } from "@/app/ui/fonts";
 
 const links = [
@@ -41,8 +40,8 @@ const contactOptions = [
 
 export default function WorkWithUs() {
   return (
-    <div className="w-full x-padding mt-5">
-      <div className="relative isolate overflow-hidden bg-gray-900 py-20 rounded-3xl">
+    <div className="x-padding mt-5 w-full">
+      <div className="relative isolate overflow-hidden rounded-3xl bg-gray-900 py-20">
         <div
           aria-hidden="true"
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
@@ -70,7 +69,7 @@ export default function WorkWithUs() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2
-              className={` ${montserrat.className} max-w-6xl text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight`}
+              className={` ${montserrat.className} max-w-6xl text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl`}
             >
               Work with us
             </h2>
@@ -88,14 +87,14 @@ export default function WorkWithUs() {
               ))}
             </div>
             {/* Contact Options Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 max-w-5xl mt-16">
+            <div className="mt-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-4 md:gap-12">
               {contactOptions.map((option) => {
                 const IconComponent = option.icon;
                 return (
-                  <div key={option.id} className="text-center space-y-4">
+                  <div key={option.id} className="space-y-4 text-center">
                     <div className="flex justify-center">
-                      <div className="w-12 h-12 bg-white/5 border border-gray-500/50 rounded-full flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-blue-400" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-500/50 bg-white/5">
+                        <IconComponent className="h-6 w-6 text-blue-400" />
                       </div>
                     </div>
                     <div className="space-y-2">
@@ -104,7 +103,7 @@ export default function WorkWithUs() {
                       </h3>
                       <a
                         href={option.href}
-                        className="text-md text-neutral-400 hover:text-blue-700 font-medium"
+                        className="text-md font-medium text-neutral-400 hover:text-blue-700"
                         {...(option.id === "twitter" && {
                           target: "_blank",
                           rel: "noopener noreferrer",

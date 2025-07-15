@@ -1,13 +1,5 @@
-import {
-  Globe,
-  ArrowRight,
-  Check,
-  Shield,
-  Mail,
-  Server,
-  ChevronRight,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Globe, Check, Shield, Mail, Server, ChevronRight } from "lucide-react";
+
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { montserrat } from "@/app/ui/fonts";

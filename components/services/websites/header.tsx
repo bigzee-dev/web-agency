@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+
 import { montserrat } from "@/app/ui/fonts";
 import { whiteButton } from "@/app/ui/customTailwindClasses";
 import { FaCheck } from "react-icons/fa";

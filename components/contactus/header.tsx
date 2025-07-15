@@ -1,14 +1,12 @@
-import { FaFacebook } from "react-icons/fa";
-import { IoLogoWhatsapp } from "react-icons/io";
 import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="w-full isolate bg-gray-900 overflow-hidden py-16">
-      <div className="relative font-sans ">
+    <div className="isolate w-full overflow-hidden bg-gray-900 py-16">
+      <div className="relative font-sans">
         <div
           aria-hidden="true"
-          className="absolute left-1/2 -top-8 -z-10 -translate-x-1/2 blur-3xl"
+          className="absolute -top-8 left-1/2 -z-10 -translate-x-1/2 blur-3xl"
         >
           <div
             style={{
@@ -19,20 +17,20 @@ export default function Header() {
           />
         </div>
 
-        <div className="relative z-50 max-w-4xl mx-auto flex flex-col gap-8 justify-center">
+        <div className="relative z-50 mx-auto flex max-w-4xl flex-col justify-center gap-8">
           <Image
             src="/img/contact-us.png"
             alt="Banner Image"
             width={494}
             height={260}
-            className="absolute right-0 top-0 w-[300px] h-auto rounded-lg"
+            className="absolute right-0 top-0 h-auto w-[300px] rounded-lg"
           />
-          <div className="space-y-4 max-w-lg">
+          <div className="max-w-lg space-y-4">
             <p className="text-md font-medium text-gray-400">
               Lets Discuss your Project
             </p>
             <p className="text-3xl font-extrabold text-gray-300">Contact Us</p>
-            <p className="font-sans text-gray-400 text-base font-normal">
+            <p className="font-sans text-base font-normal text-gray-400">
               Use these Tailwind CSS settings screen examples to build
               configuration and preference pages where users can update their
               account information, change settings, and customize their

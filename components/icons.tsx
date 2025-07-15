@@ -83,7 +83,7 @@ export const AtSymbolIcon = ({ size }: { size: string }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      className="size-5"
+      className={size}
     >
       <path
         fillRule="evenodd"
@@ -100,7 +100,7 @@ export const ClipboardCopyIcon = ({ size }: { size: string }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      className="size-5"
+      className={size}
     >
       <path
         fillRule="evenodd"
@@ -122,7 +122,7 @@ export const ArrowPathIcon = ({ size }: { size: string }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      className="size-5"
+      className={size}
     >
       <path
         fillRule="evenodd"
@@ -139,7 +139,7 @@ export const DocumentTextIcon = ({ size }: { size: string }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
       fill="currentColor"
-      className="size-5"
+      className={size}
     >
       <path
         fillRule="evenodd"

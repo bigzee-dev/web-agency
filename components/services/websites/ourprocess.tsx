@@ -1,8 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
-import { montserrat } from "@/app/ui/fonts";
-import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 export default function OurProcess() {
   return (

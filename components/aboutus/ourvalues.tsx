@@ -1,11 +1,5 @@
 import type React from "react";
-import {
-  TransparencyIcon,
-  CreativityIcon,
-  GrowthIcon,
-  SuccessIcon,
-} from "./customicons";
-import { montserrat } from "@/app/ui/fonts";
+
 import { notoSans } from "@/app/ui/fonts";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 
@@ -25,7 +19,6 @@ export default function OurValues() {
 
       <div className="mx-auto mt-16 grid w-full max-w-7xl grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         <ValueCard
-          icon={<TransparencyIcon />}
           title="Transparency"
           description="A clear path to success through expert direction"
           background="valueCard1"
@@ -33,14 +26,12 @@ export default function OurValues() {
         />
 
         <ValueCard
-          icon={<CreativityIcon />}
           title="Creativity"
           description="Innovative ideas powered by the most gifted minds in the industry"
           background="valueCard2"
           svg="/svg/about-us/creativity.svg"
         />
         <ValueCard
-          icon={<SuccessIcon />}
           title="Success"
           description="Result driven activities in a constant state of refinement"
           background="valueCard4"
@@ -48,7 +39,6 @@ export default function OurValues() {
         />
 
         <ValueCard
-          icon={<GrowthIcon />}
           title="Growth"
           description="Committed to creating progressive outcomes for our clients"
           background="valueCard2"
@@ -60,20 +50,13 @@ export default function OurValues() {
 }
 
 interface ValueCardProps {
-  icon: React.ReactNode;
   title: string;
   description: string;
   background?: string;
   svg?: string;
 }
 
-function ValueCard({
-  icon,
-  title,
-  description,
-  background,
-  svg,
-}: ValueCardProps) {
+function ValueCard({ title, description, background, svg }: ValueCardProps) {
   return (
     <div className="flex h-[12rem] flex-col items-center justify-center gap-y-4">
       <div className={` ${background} mb-2 h-16 w-16 rounded-lg p-3 shadow-md`}>

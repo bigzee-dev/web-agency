@@ -5,13 +5,6 @@ import Link from "next/link";
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
 
-type contentProps = {
-  heading: string;
-  subheading: string;
-  text: string;
-  link: string;
-};
-
 const features = [
   "Customer portals, Enterprise systems, SaaS products",
   "Database-driven web applications",
@@ -25,7 +18,7 @@ const subheadingStyles = ` text-neutral-300 text-4xl font-bold mb-6 tracking-nor
 
 export default function Hosting() {
   return (
-    <div className="relative isolate overflow-hidden grid grid-cols-12  gap-x-20 bg-gray-900 text-white h-auto md:pt-12 md:pb-12 md:px-12 rounded-3xl">
+    <div className="relative isolate grid h-auto grid-cols-12 gap-x-20 overflow-hidden rounded-3xl bg-gray-900 text-white md:px-12 md:pb-12 md:pt-12">
       {/* blur component */}
       <svg
         viewBox="0 0 1024 1024"
@@ -52,18 +45,18 @@ export default function Hosting() {
         <h3 className={subheadingStyles}>
           Smart Web Applications for Modern Business Needs
         </h3>
-        <p className="font-sans text-base text-neutral-300 leading-relaxed">
-          Whether you're launching something new or improving what you already
+        <p className="font-sans text-base leading-relaxed text-neutral-300">
+          Whether you are launching something new or improving what you already
           have, we’re here to make it happen. From simple booking apps to
-          full-featured apps for enterprises, we’ve helped all kinds of
+          full-featured apps for enterprises, we&apos;ve helped all kinds of
           businesses create better digital experiences for their teams and
           clients.
         </p>
-        <ul className="text-neutral-300/85 mt-6 space-y-2">
+        <ul className="mt-6 space-y-2 text-neutral-300/85">
           {features.map((feature) => (
             <li
               key={feature}
-              className="text-md font-sans flex items-center gap-x-3"
+              className="flex items-center gap-x-3 font-sans text-md"
             >
               <FaCheck
                 aria-hidden="true"
@@ -75,23 +68,23 @@ export default function Hosting() {
         </ul>
         <Link
           href="/webapps"
-          className={` ${montserrat.className} w-max flex items-center mt-8 text-center text-2xl font-semibold text-blue-400 `}
+          className={` ${montserrat.className} mt-8 flex w-max items-center text-center text-2xl font-semibold text-blue-400`}
         >
           Learn More{" "}
           <ChevronRight
             aria-hidden="true"
-            className="flex-none text-blue-400 font-medium pl-2"
+            className="flex-none pl-2 font-medium text-blue-400"
             size="1.35em"
           />
         </Link>
       </div>
-      <div className="col-span-5 mt-auto border border-gray-700 rounded-lg">
+      <div className="col-span-5 mt-auto rounded-lg border border-gray-700">
         <Image
           src="/img/home/globe-tech.jpg"
           alt="Web Apps"
           width={584}
           height={1024}
-          className="w-full h-[28rem] rounded-lg object-cover"
+          className="h-[28rem] w-full rounded-lg object-cover"
         />
       </div>
     </div>

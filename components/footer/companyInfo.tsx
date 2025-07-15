@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { cairo, montserrat } from "@/app/ui/fonts";
+import { cairo } from "@/app/ui/fonts";
 
 const iconProps = {
   size: "1.4em",

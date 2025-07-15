@@ -3,14 +3,14 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function SetupAccount() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8  md:pb-16 pt-6">
+    <div className="mx-auto max-w-7xl px-4 py-8 pt-6 md:pb-16">
       <h2
-        className={` ${montserrat.className} text-gray-900 text-3xl md:text-4xl font-bold text-center mb-14 `}
+        className={` ${montserrat.className} mb-14 text-center text-3xl font-bold text-gray-900 md:text-4xl`}
       >
         Setup Your Hosting Account in a Few Clicks
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <div className="grid gap-8 md:grid-cols-3 md:gap-12">
         <SetupCard number="01" title="Choose a Hosting Plan">
           Running a new business? Go with the{" "}
           <span className="font-semibold">US$ 0.39/mo</span> Business Starter
@@ -20,9 +20,9 @@ export default function SetupAccount() {
         </SetupCard>
 
         <SetupCard number="02" title="Proceed to Checkout">
-          Select the number of mailboxes and subscription period. Once you've
-          completed the payment process, you will be able to access your
-          business email address dashboard.
+          Select the number of mailboxes and subscription period. Once
+          you&apos;ve completed the payment process, you will be able to access
+          your business email address dashboard.
         </SetupCard>
 
         <SetupCard number="03" title="Configure your plan">

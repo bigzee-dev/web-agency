@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { btnDimensions } from "@/app/ui/customTailwindClasses";
 
 // components
 import ContactForm from "./contactform/contactform";

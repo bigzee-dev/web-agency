@@ -3,7 +3,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import articlesData from "./blogcontent.json";
-import { montserrat, notoSans } from "@/app/ui/fonts";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 
 interface Article {
@@ -33,9 +32,9 @@ export default function Component() {
 
   return (
     <div className="x-padding">
-      <div className="w-full max-w-7xl mx-auto pt-16 pb-16 space-y-12">
+      <div className="mx-auto w-full max-w-7xl space-y-12 pb-16 pt-16">
         <h2 className={` ${sectionHeadings} `}>Latest Blogs</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <Card key={article.id} className="overflow-hidden">
               <CardHeader className="p-0">
@@ -45,7 +44,7 @@ export default function Component() {
                     alt="coding"
                     width={1000}
                     height={667}
-                    className="object-cover w-full h-full"
+                    className="h-full w-full object-cover"
                   />
                 </div>
               </CardHeader>
@@ -54,34 +53,34 @@ export default function Component() {
                   variant="secondary"
                   className={`mb-3 ${
                     article.categoryColor === "blue"
-                      ? "text-blue-600 bg-blue-50"
-                      : "text-green-600 bg-green-50"
+                      ? "bg-blue-50 text-blue-600"
+                      : "bg-green-50 text-green-600"
                   }`}
                 >
                   {article.category}
                 </Badge>
                 <h3
-                  className={`  text-gray-800 text-xl font-bold mb-3 leading-tight `}
+                  className={`mb-3 text-xl font-bold leading-tight text-gray-800`}
                 >
                   {article.title}
                 </h3>
-                <p className="font-sans text-gray-700 mb-4 text-sm leading-relaxed">
+                <p className="mb-4 font-sans text-sm leading-relaxed text-gray-700">
                   {article.description}
                 </p>
                 <div className="flex items-center gap-3">
-                  <Avatar className="w-8 h-8">
+                  <Avatar className="h-8 w-8">
                     <AvatarImage
                       src={article.author.avatar || "/placeholder.svg"}
                     />
                     <AvatarFallback
-                      className={`${article.author.avatarBg} text-white text-xs`}
+                      className={`${article.author.avatarBg} text-xs text-white`}
                     >
                       {article.author.initials}
                     </AvatarFallback>
                   </Avatar>
                   <div className="flex-1">
-                    <p className="font-medium text-sm">{article.author.name}</p>
-                    <p className="text-gray-500 text-xs">
+                    <p className="text-sm font-medium">{article.author.name}</p>
+                    <p className="text-xs text-gray-500">
                       {article.publishDate} • {article.readTime}
                     </p>
                   </div>

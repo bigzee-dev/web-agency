@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Lock } from "lucide-react";
 import { FaCheck } from "react-icons/fa6";
 import Link from "next/link";
-import { montserrat, notoSans } from "@/app/ui/fonts";
+import { montserrat } from "@/app/ui/fonts";
 import { EmailIcon } from "@/components/icons";
 
 const features = [

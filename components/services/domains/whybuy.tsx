@@ -1,4 +1,3 @@
-import { MessageSquare, CreditCard, FileText } from "lucide-react";
 import { montserrat } from "@/app/ui/fonts";
 
 export default function WhyBuy() {

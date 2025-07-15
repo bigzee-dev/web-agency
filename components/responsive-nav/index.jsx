@@ -48,7 +48,10 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                Websites <span className="chevron">{/* <NavChevron /> */}</span>
+                Websites{" "}
+                <span className="chevron">
+                  <NavChevron />
+                </span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/websites" className="dropdown-item">
@@ -90,7 +93,10 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                Hosting <span className="chevron">{/* <NavChevron /> */}</span>
+                Hosting{" "}
+                <span className="chevron">
+                  <NavChevron />
+                </span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/managed-hosting" className="dropdown-item">
@@ -115,7 +121,10 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                Domains <span className="chevron">{/* <NavChevron /> */}</span>
+                Domains{" "}
+                <span className="chevron">
+                  <NavChevron />
+                </span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/domains" className="dropdown-item">
@@ -165,7 +174,10 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                About Us <span className="chevron">{/* <NavChevron /> */}</span>
+                About Us{" "}
+                <span className="chevron">
+                  <NavChevron />
+                </span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/about-us" className="dropdown-item">
@@ -184,7 +196,9 @@ export default function ResponsiveNav() {
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
                 Help Center{" "}
-                <span className="chevron">{/* <NavChevron /> */}</span>
+                <span className="chevron">
+                  <NavChevron />
+                </span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/contact-us" className="dropdown-item">

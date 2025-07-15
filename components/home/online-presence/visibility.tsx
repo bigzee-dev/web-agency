@@ -1,50 +1,8 @@
 import { montserrat } from "@/app/ui/fonts";
-import { HiOutlineServerStack } from "react-icons/hi2";
-import { TbMailCheck } from "react-icons/tb";
-import { TbAt } from "react-icons/tb";
-import Link from "next/link";
 
 // components
 import DomainSearch from "./searchdomain";
-import Slider from "./slider";
 import Cards from "./cards";
-
-const iconProps = {
-  size: "1.25em",
-  strokeWidth: 1.6,
-};
-
-const cards = [
-  {
-    title: "Web Development",
-    className: "text-blue-400 ",
-    description:
-      "Whether you need a Website or a full-featured Web Application, our team has the skills and experience to build it from the ground up—tailored exactly to your needs.",
-    icon: <HiOutlineServerStack {...iconProps} />,
-    linkOne: "Websites",
-    linkTwo: "Web Apps",
-  },
-  {
-    title: "Robust Backend & Security",
-    className: "text-rose-300/70",
-    description:
-      "Once deployed, your application is protected using industry best practices. Our robust backend keeps it reliable, secure, and always available to users.",
-    icon: <TbMailCheck {...iconProps} />,
-    linkOne: "Managed Hosting",
-    linkTwo: "Server Management",
-  },
-  {
-    title: "Marketing Integration",
-    className: "text-thatgreen",
-    description:
-      "We know effective marketing is key to business success. That’s why every project we deliver includes built-in social media integration. We also offer reliable email solutions to keep you connected with clients.",
-    icon: <TbAt {...iconProps} />,
-    linkOne: "Emails",
-  },
-];
-
-const cardButtons =
-  "text-blue-400 font-sans text-sm font-medium bg-gray-800 py-1 px-1 border border-blue-400/50 rounded-lg hover:text-blue-500 transition duration-300 ease-in-out";
 
 export default function Visibility() {
   return (

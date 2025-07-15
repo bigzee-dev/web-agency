@@ -1,5 +1,4 @@
 import { montserrat } from "@/app/ui/fonts";
-import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
 export default function Importance() {
@@ -34,10 +33,10 @@ export default function Importance() {
             The importance of a Domain Name
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-gray-600">
-            Your domain name is more than just a web address—it's the foundation
-            of your digital identity. In today's competitive landscape, the
-            right domain can make the difference between being found or
-            forgotten.
+            Your domain name is more than just a web address—it&apos;s the
+            foundation of your digital identity. In today&apos;s competitive
+            landscape, the right domain can make the difference between being
+            found or forgotten.
           </p>
         </div>
 

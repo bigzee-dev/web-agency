@@ -4,7 +4,6 @@ import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-import { Montserrat } from "next/font/google";
 import { montserrat } from "@/app/ui/fonts";
 
 const tiers = [
@@ -90,13 +89,13 @@ export default function HostingPlans() {
           Pricing
         </h2>
         <p
-          className={` ${montserrat.className} mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl `}
+          className={` ${montserrat.className} mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl`}
         >
           Choose the right plan for you
         </p>
       </div>
 
-      <div className="mt-16 flex justify-center items-center gap-3">
+      <div className="mt-16 flex items-center justify-center gap-3">
         <div className="relative flex items-center justify-center space-x-4">
           <Label
             htmlFor="billing-toggle"
@@ -115,10 +114,10 @@ export default function HostingPlans() {
           >
             Yearly
           </Label>
-          <div className="absolute -top-0.5 -right-5 transform translate-x-full">
-            <p className="text-pink-700 text-base font-semibold">Save 20%</p>
+          <div className="absolute -right-5 -top-0.5 translate-x-full transform">
+            <p className="text-base font-semibold text-pink-700">Save 20%</p>
           </div>
-          <span className="absolute -top-6 right-5 transform translate-x-full">
+          <span className="absolute -top-6 right-5 translate-x-full transform">
             <img
               src="/svg/hosting/offer-vector.svg"
               height={20}
@@ -129,26 +128,26 @@ export default function HostingPlans() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 items-center gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3 mt-12 px-2">
-        {tiers.map((tier, index) => (
+      <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 items-center gap-x-10 gap-y-8 px-2 md:grid-cols-2 lg:grid-cols-3">
+        {tiers.map((tier) => (
           <div
             key={tier.id}
             className={classNames(
-              "bg-background shadow-2xl p-8 px-8 rounded-xl",
+              "rounded-xl bg-background p-8 px-8 shadow-2xl",
               tier.featured
                 ? "outline outline-2 outline-offset-1 outline-primary"
-                : "outline outline-1 outline-offset-1 outline-gray-400"
+                : "outline outline-1 outline-offset-1 outline-gray-400",
             )}
           >
             <h3
               id={tier.id}
               className={classNames(
-                "flex items-center justify-between text-lg text-gray-800 font-semibold leading-7"
+                "flex items-center justify-between text-lg font-semibold leading-7 text-gray-800",
               )}
             >
               {tier.name}
               {tier.featured === true ? (
-                <div className="flex items-center justify-center py-1.5 px-2 bg-primary text-xs text-neutral-200 rounded-2xl">
+                <div className="flex items-center justify-center rounded-2xl bg-primary px-2 py-1.5 text-xs text-neutral-200">
                   <span>Most Popular</span>
                 </div>
               ) : null}
@@ -156,7 +155,7 @@ export default function HostingPlans() {
             <p className="mt-4 flex items-baseline gap-x-2">
               <span
                 className={classNames(
-                  "text-gray-800 text-5xl font-bold tracking-tight"
+                  "text-5xl font-bold tracking-tight text-gray-800",
                 )}
               >
                 {isYearly ? tier.priceYearly : tier.priceMonthly}
@@ -165,23 +164,23 @@ export default function HostingPlans() {
                 /{isYearly ? "year" : "month"}
               </span>
             </p>
-            <p className={classNames("text-gray-600 mt-6 text-base leading-7")}>
+            <p className={classNames("mt-6 text-base leading-7 text-gray-600")}>
               {tier.description}
             </p>
             <ul
               role="list"
               className={classNames(
-                "text-gray-600 mt-8 space-y-3 text-sm leading-6 sm:mt-10"
+                "mt-8 space-y-3 text-sm leading-6 text-gray-600 sm:mt-10",
               )}
             >
               {tier.features.map((feature) => (
                 <li
                   key={feature}
-                  className="font-sans flex items-center gap-x-3"
+                  className="flex items-center gap-x-3 font-sans"
                 >
                   <FaCheck
                     aria-hidden="true"
-                    className={classNames("text-blue-600 h-4 w-3 flex-none")}
+                    className={classNames("h-4 w-3 flex-none text-blue-600")}
                   />
                   {feature}
                 </li>
@@ -191,10 +190,10 @@ export default function HostingPlans() {
               href={tier.href}
               aria-describedby={tier.id}
               className={classNames(
-                "font-sans mt-8 block rounded-md px-3 py-2 text-center text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ",
+                "mt-8 block rounded-md px-3 py-2 text-center font-sans text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
                 tier.featured
                   ? "bg-primary text-white"
-                  : "bg-background text-gray-700 border border-1  border-gray-400"
+                  : "border-1 border border-gray-400 bg-background text-gray-700",
               )}
             >
               Contact us

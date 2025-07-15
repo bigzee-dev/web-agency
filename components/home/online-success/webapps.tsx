@@ -6,13 +6,6 @@ import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 
-type contentProps = {
-  heading: string;
-  subheading: string;
-  text: string;
-  link: string;
-};
-
 const features = [
   "Customer portals, Enterprise systems, SaaS products",
   "Database-driven web applications",
@@ -71,11 +64,11 @@ export default function WebApps() {
           Smart Web Applications for Modern Business Needs
         </h3>
         <p className="font-sans text-base leading-relaxed text-neutral-300">
-          Whether you're launching something new or improving what you already
-          have, we’re here to make it happen. From simple booking apps to
-          full-featured apps for enterprises, we’ve helped all kinds of
-          businesses create better digital experiences for their teams and
-          clients.
+          Whether you&apos;re launching something new or improving what you
+          already have, we&apos;re here to make it happen. From simple booking
+          apps to full-featured apps for enterprises, we&apos;ve helped all
+          kinds of businesses create better digital experiences for their teams
+          and clients.
         </p>
         <ul className="mt-6 space-y-2 text-neutral-300/85">
           {features.map((feature) => (

@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { ChevronDown } from "lucide-react";
+// import { ChevronDown } from "lucide-react";
 import { Plus } from "lucide-react";
-import { TiMinus } from "react-icons/ti";
+// import { TiMinus } from "react-icons/ti";
 
 import { cn } from "@/lib/utils";
 
@@ -33,8 +33,8 @@ const AccordionTrigger = React.forwardRef<
       <AccordionPrimitive.Trigger
         ref={ref}
         className={cn(
-          "flex flex-1 items-center justify-between py-4 text-base text-gray-800 font-medium transition-all hover:underline text-left [&[data-state=open]>svg]:rotate-180",
-          className
+          "flex flex-1 items-center justify-between py-4 text-left text-base font-medium text-gray-800 transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+          className,
         )}
         {...props}
       >

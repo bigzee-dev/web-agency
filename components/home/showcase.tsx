@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import { pageHeadings, primaryButton } from "@/app/ui/customTailwindClasses";
 import { IoArrowForwardCircle } from "react-icons/io5";
-import { BsStars } from "react-icons/bs";
 import { cairo } from "@/app/ui/fonts";
 
 export default function Showcase() {

@@ -4,8 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/domainsforminput";
 import { Search } from "lucide-react";
-import { TbAt } from "react-icons/tb";
-import { AtSign, type LucideIcon } from "lucide-react";
+import { AtSign } from "lucide-react";
 import { notoSans } from "@/app/ui/fonts";
 import Slider from "./slider";
 
