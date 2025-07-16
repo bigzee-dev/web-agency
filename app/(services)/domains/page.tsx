@@ -13,8 +13,8 @@ export default function Websites() {
       <Header />
       <Importance />
       <DomainPricingTable />
-      <DigitalRealEstate />
       <Tips />
+      <DigitalRealEstate />
       <WhyBuy />
       <SupportOne />
       <FaqsDomains />

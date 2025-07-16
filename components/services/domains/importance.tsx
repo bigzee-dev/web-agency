@@ -40,34 +40,34 @@ export default function Importance() {
           </p>
         </div>
 
-        <div className="mb-16 grid items-center gap-x-20 lg:grid-cols-2">
+        <div className="mb-16 grid items-center gap-x-16 lg:grid-cols-2">
           <div className="relative">
-            <div className="relative overflow-hidden rounded-3xl bg-gray-800">
+            <div className="relative overflow-hidden rounded-3xl bg-neutral-200">
               <div className="relative z-10">
                 <Image
-                  src="/img/domains/domain-design.jpg"
+                  src="/svg/Web-Hosting.svg"
                   alt="img"
                   width={1075}
                   height={716}
-                  className="h-44 rounded-l-2xl object-cover"
+                  className="h-52 rounded-l-2xl object-cover"
                 />
-                <div className="absolute left-0 top-0 z-10 h-44 w-full bg-gray-800/20"></div>
-                <div className="space-y-6 p-8 px-16">
-                  <div className="flex items-center justify-between border-b border-gray-700 py-3 text-neutral-300/80">
+                {/* <div className="absolute left-0 top-0 z-10 h-52 w-full bg-gray-800/15"></div> */}
+                <div className="space-y-5 px-16 py-6">
+                  <div className="flex items-center justify-between border-b border-gray-700 py-3 text-gray-800">
                     <span className="font-medium">Brand Recognition</span>
-                    <span className="text-2xl font-bold text-blue-400">
+                    <span className="text-2xl font-bold text-gray-600">
                       +340%
                     </span>
                   </div>
-                  <div className="flex items-center justify-between border-b border-gray-700 py-3 text-neutral-300/80">
+                  <div className="flex items-center justify-between border-b border-gray-700 py-3 text-gray-800">
                     <span className="font-medium">Customer Trust</span>
-                    <span className="text-2xl font-bold text-blue-400">
+                    <span className="text-2xl font-bold text-gray-600">
                       +250%
                     </span>
                   </div>
-                  <div className="flex items-center justify-between py-3 text-neutral-300/80">
+                  <div className="flex items-center justify-between py-3 text-gray-800">
                     <span className="font-medium">Search Visibility</span>
-                    <span className="text-2xl font-bold text-blue-400">
+                    <span className="text-2xl font-bold text-gray-600">
                       +180%
                     </span>
                   </div>
@@ -75,15 +75,15 @@ export default function Importance() {
               </div>
             </div>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-6">
             {domainBenefits.map((benefit, index) => (
-              <div key={index} className="space-y-2">
+              <div key={index} className="space-y-1.5">
                 <h3
-                  className={` ${montserrat.className} text-2xl font-bold leading-tight text-primary md:text-2xl`}
+                  className={` ${montserrat.className} text-2xl font-bold leading-tight text-secondary md:text-2xl`}
                 >
                   {benefit.title}
                 </h3>
-                <p className="font-sans text-base leading-relaxed text-gray-700">
+                <p className="ww-full font-sans text-base leading-relaxed text-gray-700 lg:w-[90%]">
                   {benefit.description}
                 </p>
               </div>

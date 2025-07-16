@@ -29,7 +29,7 @@ const tips = [
 
 export default function Tips() {
   return (
-    <div className="x-padding relative isolate mt-6 overflow-hidden bg-gray-800 py-20">
+    <div className="x-padding relative isolate mt-6 overflow-hidden bg-gray-800 py-16">
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -43,7 +43,7 @@ export default function Tips() {
         />
       </div>
       <h2
-        className={`${montserrat.className} mx-auto mb-20 max-w-2xl text-center text-3xl font-bold text-neutral-300 md:text-4xl`}
+        className={`${montserrat.className} mx-auto mb-16 max-w-2xl text-center text-3xl font-bold text-neutral-300 md:text-4xl`}
       >
         A few tips to help you buy a Domain
       </h2>
