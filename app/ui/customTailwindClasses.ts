@@ -5,8 +5,11 @@ export const sectionHeadings = ` ${montserrat.className} text-gray-900 text-4xl 
 export const smallTextHeadings =
   "text-center text-base/7 font-semibold text-blue-600";
 
+export const sectionSubHeadings =
+  "text-[1.06rem] leading-relaxed text-gray-600";
+
 export const btnDimensions =
-  "text-center py-2.5 md:py-[0.67rem] px-3 w-max min-w-44 text-base font-medium md:text-[1.008rem]  rounded-[0.75rem]";
+  "text-center py-2.5 md:py-[0.67rem] px-3 w-max min-w-44 text-base font-medium md:text-[1.008rem]  rounded-[0.6rem]";
 
 export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 

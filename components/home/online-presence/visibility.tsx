@@ -39,7 +39,7 @@ export default function Visibility() {
           <p
             className={` ${montserrat.className} text-center text-4xl font-semibold leading-10 tracking-tight text-neutral-300`}
           >
-            We have everything you need to elevate your online presence.
+            We have everything you need to elevate your digital presence.
           </p>
         </div>
 

@@ -29,7 +29,7 @@ const tips = [
 
 export default function Tips() {
   return (
-    <div className="x-padding relative isolate mt-6 overflow-hidden bg-gray-800 py-16">
+    <div className="x-padding relative isolate mt-6 overflow-hidden bg-gray-800 pb-16 pt-20">
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -43,7 +43,7 @@ export default function Tips() {
         />
       </div>
       <h2
-        className={`${montserrat.className} mx-auto mb-16 max-w-2xl text-center text-3xl font-bold text-neutral-300 md:text-4xl`}
+        className={`${montserrat.className} mx-auto mb-20 max-w-2xl text-center text-3xl font-bold text-neutral-300 md:text-4xl`}
       >
         A few tips to help you buy a Domain
       </h2>
@@ -51,14 +51,14 @@ export default function Tips() {
       <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3 md:gap-16">
         {tips.map((tip, index) => {
           return (
-            <div key={index} className="relative space-y-4">
+            <div key={index} className="relative flex flex-col gap-y-5">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-300/10 outline outline-1 outline-offset-1 outline-white/25">
                 {tip.icon}
               </div>
               <h3 className="font-sans text-xl font-semibold text-blue-400">
                 {tip.title}
               </h3>
-              <p className="font-sans text-md leading-relaxed text-neutral-300/65">
+              <p className="-mt-1.5 font-sans text-md leading-relaxed text-neutral-300/65">
                 {tip.description}
               </p>
             </div>

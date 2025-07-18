@@ -80,7 +80,7 @@ export default function DomainPricingTable() {
   ];
 
   return (
-    <div className="mx-auto w-full max-w-5xl pb-8">
+    <div className="mx-auto w-full max-w-5xl pb-16">
       <h2 className={sectionHeadings}>Available Tld&apos;s</h2>
       {/* Header Section */}
       <div className="mt-12 grid grid-cols-1 rounded-t-2xl bg-primary text-white md:grid-cols-4">

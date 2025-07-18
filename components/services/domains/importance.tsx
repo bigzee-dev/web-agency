@@ -1,5 +1,6 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
+import { sectionSubHeadings } from "@/app/ui/customTailwindClasses";
 
 export default function Importance() {
   const domainBenefits = [
@@ -32,7 +33,7 @@ export default function Importance() {
           >
             The importance of a Domain Name
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-gray-600">
+          <p className={` ${sectionSubHeadings} mx-auto max-w-3xl`}>
             Your domain name is more than just a web address—it&apos;s the
             foundation of your digital identity. In today&apos;s competitive
             landscape, the right domain can make the difference between being
@@ -42,7 +43,7 @@ export default function Importance() {
 
         <div className="mb-16 grid items-center gap-x-16 lg:grid-cols-2">
           <div className="relative">
-            <div className="relative overflow-hidden rounded-3xl bg-neutral-200">
+            <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-primary/10">
               <div className="relative z-10">
                 <Image
                   src="/svg/Web-Hosting.svg"
@@ -52,22 +53,22 @@ export default function Importance() {
                   className="h-52 rounded-l-2xl object-cover"
                 />
                 {/* <div className="absolute left-0 top-0 z-10 h-52 w-full bg-gray-800/15"></div> */}
-                <div className="space-y-5 px-16 py-6">
+                <div className="space-y-5 border-t border-gray-400 px-16 py-6">
                   <div className="flex items-center justify-between border-b border-gray-700 py-3 text-gray-800">
                     <span className="font-medium">Brand Recognition</span>
-                    <span className="text-2xl font-bold text-gray-600">
+                    <span className="text-2xl font-bold text-gray-800">
                       +340%
                     </span>
                   </div>
                   <div className="flex items-center justify-between border-b border-gray-700 py-3 text-gray-800">
                     <span className="font-medium">Customer Trust</span>
-                    <span className="text-2xl font-bold text-gray-600">
+                    <span className="text-2xl font-bold text-gray-800">
                       +250%
                     </span>
                   </div>
                   <div className="flex items-center justify-between py-3 text-gray-800">
                     <span className="font-medium">Search Visibility</span>
-                    <span className="text-2xl font-bold text-gray-600">
+                    <span className="text-2xl font-bold text-gray-800">
                       +180%
                     </span>
                   </div>
@@ -79,7 +80,7 @@ export default function Importance() {
             {domainBenefits.map((benefit, index) => (
               <div key={index} className="space-y-1.5">
                 <h3
-                  className={` ${montserrat.className} text-2xl font-bold leading-tight text-secondary md:text-2xl`}
+                  className={`${montserrat.className} text-xl font-semibold leading-tight text-gray-800 md:text-2xl`}
                 >
                   {benefit.title}
                 </h3>

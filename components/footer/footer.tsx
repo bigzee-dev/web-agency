@@ -7,50 +7,53 @@ const singleLink = "font-sans text-sm text-neutral-300/75";
 
 export default function Footer() {
   return (
-    <footer className="x-padding bg-gray-800">
-      <div className="mx-auto grid max-w-5xl gap-x-8 gap-y-8 py-20 md:grid-cols-12">
-        <div className="md:col-span-5">
-          <CompanyInfo />
-        </div>
-        <div className="grid grid-cols-2 gap-x-8 gap-y-6 pr-6 md:col-span-7 md:flex md:flex-wrap md:justify-between md:gap-x-0 md:gap-y-0 md:pr-0">
-          {footerLinks.map((link, i) => (
-            <div key={i}>
-              <h3 className={linkHeading}>{link.heading}</h3>
-              <ul className="mt-4 flex flex-col gap-y-3">
-                <li>
-                  <Link href="#" className={singleLink}>
-                    {link.firstLink.title}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className={singleLink}>
-                    {link.secondLink.title}
-                  </Link>
-                </li>
-                <li>
-                  {link.thirdLink?.title && (
+    <footer className="w-full bg-gray-800">
+      <div className="w-full px-8">
+        <div className="mx-auto grid max-w-5xl gap-x-4 gap-y-14 pb-14 pt-16 md:grid-cols-12">
+          <div className="order-2 md:order-1 md:col-span-5">
+            <CompanyInfo />
+          </div>
+          <div className="order-1 grid grid-cols-2 gap-x-12 gap-y-8 pr-6 md:order-2 md:col-span-7 md:flex md:flex-wrap md:justify-between md:gap-x-0 md:gap-y-0 md:pr-0">
+            {footerLinks.map((link, i) => (
+              <div key={i}>
+                <h3 className={linkHeading}>{link.heading}</h3>
+                <ul className="mb-4 mt-4 flex flex-col gap-y-3">
+                  <li>
                     <Link href="#" className={singleLink}>
-                      {link.thirdLink.title || null}
+                      {link.firstLink.title}
                     </Link>
-                  )}
-                </li>
-                <li>
+                  </li>
+                  <li>
+                    <Link href="#" className={singleLink}>
+                      {link.secondLink.title}
+                    </Link>
+                  </li>
+                  <li>
+                    {link.thirdLink?.title && (
+                      <Link href="#" className={singleLink}>
+                        {link.thirdLink.title || null}
+                      </Link>
+                    )}
+                  </li>
+
                   {link.fourthLink?.title && (
-                    <Link href="#" className={singleLink}>
-                      {link.fourthLink.title || null}
-                    </Link>
+                    <li>
+                      <Link href="#" className={`${singleLink} `}>
+                        {link.fourthLink.title || null}
+                      </Link>
+                    </li>
                   )}
-                </li>
-              </ul>
-            </div>
-          ))}
-        </div>
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>{" "}
       </div>
-      <div className="w-full border-t border-gray-600">
+
+      <div className="w-full border-t border-gray-600 px-8">
         <div className="mx-auto flex max-w-5xl justify-between pb-16 pt-5 text-center font-sans text-sm font-light text-neutral-400">
           <p>
-            <span className="text-neutral-300">&copy;</span> Zimaman
-            Enterprises. 2024
+            <span className="text-neutral-300">&copy;</span>&nbsp;Deltaworx 2024
           </p>
           <div className="flex items-center font-sans text-sm">
             <Link
@@ -59,7 +62,7 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
-            <span className="mx-2">|</span>
+            <span className="mx-1 md:mx-2">|</span>
             <Link
               href="/acceptable-use"
               className="text-neutral-400 hover:text-neutral-300"

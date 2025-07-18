@@ -6,7 +6,7 @@ import { montserrat } from "@/app/ui/fonts";
 interface Testimonial {
   quote: string;
   name: string;
-  title: string;
+
   metric: string;
   metricLabel: string;
   image: string;
@@ -15,133 +15,81 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "The A/B testing helped us refine our email campaigns, resulting in a huge increase in open rates.",
-    name: "Frederic Hill",
-    title: "Founder & CEO",
-    metric: "+ 120 %",
-    metricLabel: "Increase in ad awareness in the first month",
+      "With most people browsing the internet on their phones, all our projects are built to look great and work perfectly on all mobile devices.",
+    name: " Mobile-Friendly Designs",
+    metric: "100%",
+    metricLabel: "Mobile responsiveness across all builds",
     image: "/img/tech-lady.png",
   },
   {
     quote:
-      "Our social media engagement soared within the first month of using this software.",
-    name: "Safaa Sampson",
-    title: "Account Executive",
-    metric: "+ 10 k",
-    metricLabel: "New followers in the last 4 months",
+      "Have a question or need assistance? Our team is available every day with quick, helpful replies. No tech jargon, just clear answers.",
+    name: "Support Availability",
+
+    metric: "24/7/365",
+    metricLabel: "We’re Here When You Need Us",
     image: "/img/tech-lady.png",
   },
   {
     quote:
-      "This software allowed us to increase our lead generation, leading to a rise in conversions.",
-    name: "Brendan Buck",
-    title: "Marketing Manager",
-    metric: "+ 50 %",
-    metricLabel: "Increase in paid bookings vs last year",
+      "We use fast, secure servers with a 99.9% uptime guarantee — so your business stays online and ready for customers.",
+    name: "Uptime Guarantee",
+
+    metric: "99.9%",
+    metricLabel: "Online. All the Time.",
     image: "/img/tech-lady.png",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
-      {/* Decorative corner images */}
-      {/* <div className="absolute left-4 top-24">
-        <div className="relative">
-          <Image
-            src="/img/tech-lady.png"
-            alt=""
-            width={80}
-            height={80}
-            className="rounded-full"
-          />
-          <svg
-            className="absolute -bottom-8 -right-8 text-primary/20"
-            width="90"
-            height="90"
-            viewBox="0 0 100 100"
-            fill="none"
-          >
-            <path
-              d="M0 0L100 100"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeDasharray="4 4"
-            />
-          </svg>
-        </div>
-      </div>
-      <div className="absolute right-4 bottom-0">
-        <div className="relative">
-          <Image
-            src="/img/tech-lady.png"
-            alt=""
-            width={80}
-            height={80}
-            className="rounded-full"
-          />
-          <svg
-            className="absolute -top-8 -left-8 text-primary/20"
-            width="70"
-            height="70"
-            viewBox="0 0 100 100"
-            fill="none"
-          >
-            <path
-              d="M100 0L0 100"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeDasharray="4 4"
-            />
-          </svg>
-        </div>
-      </div> */}
-
+    <section className="relative overflow-hidden px-4 py-24">
       {/* Main content */}
-      <div className="x-padding max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <Badge className="bg-primary/20 text-sm text-blue-600 hover:bg-primary/20 mb-4">
+      <div className="x-padding mx-auto max-w-7xl">
+        <div className="mb-20 text-center">
+          <Badge className="mb-4 bg-primary/20 text-sm text-blue-600 hover:bg-primary/20">
             Customer Testimonials
           </Badge>
           <h2
-            className={` ${montserrat.className} text-gray-900 text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-normal`}
+            className={` ${montserrat.className} mb-6 text-3xl font-bold tracking-normal text-gray-900 md:text-4xl lg:text-5xl`}
           >
-            Your Competitors are automating,
+            Your Competitors are online,
             <br />
             why aren&apos;t you?
           </h2>
           <p className="text-lg text-neutral-700">
-            Join Thousands of Stores Already Winning with EmailWish.
+            Join Hundreds of Businesses Already Winning with Deltaworx.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-gray-200/65 rounded-xl">
-              <CardContent className="h-full flex flex-col justify-between p-6">
-                <p className="font-sans text-gray-700 text-base mb-6  leading-6">
+            <Card key={index} className="rounded-xl bg-gray-200/65">
+              <CardContent className="flex h-full flex-col justify-between p-6">
+                <p className="mb-6 font-sans text-base leading-6 text-gray-700">
                   {testimonial.quote}
                 </p>
-                <div className="justify-self-center flex items-center gap-4 mb-4">
+                <div className="mb-4 flex items-center gap-4 justify-self-center">
                   <Image
                     src={testimonial.image || "/placeholder.svg"}
                     alt={testimonial.name}
-                    width={60}
-                    height={60}
+                    width={64}
+                    height={64}
                     className="rounded-full"
                   />
                   <div>
-                    <h3 className="font-semibold">{testimonial.name}</h3>
-                    <p className="font-sans text-sm text-gray-700">
-                      {testimonial.title}
-                    </p>
+                    <h3
+                      className={` ${montserrat.className} font-semibold text-gray-800`}
+                    >
+                      {testimonial.name}
+                    </h3>
                   </div>
                 </div>
-                <div className="pt-4 border-t border-gray-300">
-                  <div className="text-3xl text-primary font-bold mb-1">
+                <div className="border-t border-gray-300 pt-4">
+                  <div className="mb-1 text-3xl font-bold text-primary">
                     {testimonial.metric}
                   </div>
-                  <p className="font-sans text-md text-gray-700 font-medium">
+                  <p className="font-sans text-md font-medium text-gray-700">
                     {testimonial.metricLabel}
                   </p>
                 </div>

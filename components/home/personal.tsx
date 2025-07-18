@@ -21,7 +21,7 @@ export default function Personal() {
           >
             Doing things differently since day one.
           </h3>
-          <div className="space-y-4 font-sans text-md leading-relaxed text-gray-600">
+          <div className="space-y-4 font-sans text-base leading-relaxed text-gray-600">
             <p>
               Krystal is, and always will be, fiercely independent. We set out
               to challenge the big faceless hosting corporations, and we&apos;ll

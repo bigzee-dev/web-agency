@@ -19,7 +19,7 @@ export default function ResponsiveNav() {
   useResponsiveNav(); // <-- This runs the nav javascript
 
   const linkStyles =
-    "flex items-center gap-x-2.5 whitespace-nowrap text-gray-700 lg:text-neutral-100 hover:text-neutral-400 transition-colors duration-200";
+    "flex items-center gap-x-2.5 whitespace-nowrap text-neutral-100 md:hover:text-neutral-400 transition-colors duration-200";
   return (
     <nav className="x-padding navbar border-b border-gray-300/70">
       <div className="navbar-container">
@@ -56,7 +56,7 @@ export default function ResponsiveNav() {
               <div className="dropdown-menu">
                 <Link href="/websites" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-300">
+                    <span className="text-neutral-100 lg:text-blue-300">
                       <GlobeIcon />
                     </span>
                     Website Development
@@ -64,7 +64,7 @@ export default function ResponsiveNav() {
                 </Link>
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-300">
+                    <span className="text-neutral-100 lg:text-blue-300">
                       <WebAppIcon />
                     </span>
                     Web Applications
@@ -72,7 +72,7 @@ export default function ResponsiveNav() {
                 </Link>
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-300">
+                    <span className="text-neutral-100 lg:text-blue-300">
                       <ShoppingBagIcon />
                     </span>
                     Ecommerce Stores
@@ -236,15 +236,27 @@ export default function ResponsiveNav() {
                 </Link>
               </div>
             </li>
-            <li className="nav-item">
+            <li className="nav-item block lg:hidden">
               <div className="nav-link">
-                <div className="smlscreen-client-login">
+                <div className="smlscreen-client-login bg-primary text-white">
                   <a
                     href="https://domains.bigzee.app/clientarea.php"
-                    className={` ${montserrat.className} text-xs tracking-wide text-white`}
+                    className={` ${montserrat.className} text-xs font-medium`}
                   >
                     CLIENT ZONE
                   </a>
+                </div>
+                <div className="flex items-center justify-end gap-x-8">
+                  <img
+                    src="/svg/facebook-nav.svg"
+                    alt="BigZee Digital Logo"
+                    className="h-[1.9rem] w-[1.9rem]"
+                  />
+                  <img
+                    src="/svg/whatsapp-nav.svg"
+                    alt="BigZee Digital Logo"
+                    className="h-[1.76rem] w-[1.76rem]"
+                  />
                 </div>
               </div>
             </li>
@@ -255,12 +267,12 @@ export default function ResponsiveNav() {
             <img
               src="/svg/facebook-nav.svg"
               alt="BigZee Digital Logo"
-              className="hidden h-[1.55rem] w-[1.55rem] lg:block"
+              className="hidden h-[1.6rem] w-[1.6rem] lg:block"
             />
             <img
               src="/svg/whatsapp-nav.svg"
               alt="BigZee Digital Logo"
-              className="hidden h-[1.355rem] w-[1.355rem] lg:block"
+              className="hidden h-[1.425rem] w-[1.425rem] lg:block"
             />
           </div>
           <div className="client-login bg-primary text-white">

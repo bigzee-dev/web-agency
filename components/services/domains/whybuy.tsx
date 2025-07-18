@@ -1,4 +1,5 @@
 import { montserrat } from "@/app/ui/fonts";
+import { sectionSubHeadings } from "@/app/ui/customTailwindClasses";
 
 export default function WhyBuy() {
   return (
@@ -9,7 +10,7 @@ export default function WhyBuy() {
         >
           Why Buy Domain Names at DeltaWorx?
         </h2>
-        <p className="mb-12 max-w-3xl text-lg text-muted-foreground">
+        <p className={` ${sectionSubHeadings} mb-12 max-w-3xl`}>
           Hostinger offers reliable domain registration services with instant
           activation, dedicated live support, and full DNS management.
         </p>
@@ -20,7 +21,7 @@ export default function WhyBuy() {
             <h3 className="text-xl font-semibold text-gray-800">
               24/7 live technical support
             </h3>
-            <p className="font-sans text-md leading-relaxed text-gray-700">
+            <p className="font-sans text-base leading-relaxed text-gray-700">
               Our Customer Success team is here for you any time of the day.
               We&apos;ve made our domain name registration process as easy as
               possible, but everyone needs a helping hand sometimes. Just
@@ -33,7 +34,7 @@ export default function WhyBuy() {
             <h3 className="text-xl font-semibold text-gray-800">
               Trusted domain registrar
             </h3>
-            <p className="font-sans text-md leading-relaxed text-gray-700">
+            <p className="font-sans text-base leading-relaxed text-gray-700">
               Hostinger is an ICANN-accredited registrar and web host trusted by
               millions of people worldwide. We offer a comprehensive
               registration service with more than 100 domain extensions so that
@@ -46,7 +47,7 @@ export default function WhyBuy() {
             <h3 className="text-xl font-semibold text-gray-800">
               Instant setup and easy control
             </h3>
-            <p className="font-sans text-md leading-relaxed text-gray-700">
+            <p className="font-sans text-base leading-relaxed text-gray-700">
               Once you complete your domain search, we&apos;ll guide you through
               the website domain registration process. It only takes a few
               clicks, and no technical knowledge is required.
