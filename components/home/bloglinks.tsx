@@ -32,7 +32,7 @@ export default function Component() {
 
   return (
     <div className="x-padding">
-      <div className="mx-auto w-full max-w-7xl space-y-12 pb-16 pt-16">
+      <div className="mx-auto w-full max-w-7xl space-y-12 pb-20 pt-16">
         <h2 className={` ${sectionHeadings} `}>Latest Blogs</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (

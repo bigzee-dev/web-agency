@@ -3,6 +3,7 @@ import Image from "next/image";
 import { whiteButton } from "@/app/ui/customTailwindClasses";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 
 export default function Header() {
   return (
@@ -21,10 +22,10 @@ export default function Header() {
               <h1
                 className={`${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
               >
-                Get a Professional Email address
+                Use a Professional Email Service
               </h1>
 
-              <div className="my-6 space-y-3 text-md">
+              <div className="my-6 space-y-4 text-md">
                 <p className="max-w-[90%] font-sans font-normal text-neutral-300">
                   Setup a personalised email address using your domain name, e.g
                   <span className="text-neutral-400"> david@mywebsite.com</span>
@@ -44,9 +45,9 @@ export default function Header() {
 
               <Link
                 href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/business-email`}
-                className={` ${whiteButton} mt-3 inline-block`}
+                className={` ${whiteButton} mt-2 inline-block`}
               >
-                Get Email
+                Compare Plans
               </Link>
               <div className="mt-5 flex items-center font-sans text-sm font-medium text-neutral-300">
                 <span className="mr-2">
@@ -58,15 +59,25 @@ export default function Header() {
                 <span className="">7 day - money back - guarantee</span>
               </div>
             </div>
-            <div className="col-span-6 flex items-end">
+            <div className="relative col-span-6 flex items-center">
               {" "}
               <Image
-                src="/img/emails/email1.png"
+                src="/img/emails/emails-filter.png"
                 alt="Logo"
                 width={1000}
                 height={800}
-                className="object-cover"
+                className="rounded-3xl bg-neutral-400/40 object-cover px-12 py-6"
               />
+              <Badge
+                variant="outline"
+                className="absolute right-6 top-12 border-white/20 bg-gray-800/20 px-4 py-2 text-white"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-purple-400"></div>
+                  <span>1 New msg</span>
+                  <span className="font-semibold text-green-400">INBOX</span>
+                </div>
+              </Badge>
             </div>
           </div>
         </div>

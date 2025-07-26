@@ -3,21 +3,36 @@ import { FaCheck } from "react-icons/fa6";
 import { FaCircleQuestion } from "react-icons/fa6";
 import { CgNotes } from "react-icons/cg";
 import { Clock8 } from "lucide-react";
+import Link from "next/link";
+import clsx from "clsx";
+
+export interface Plan {
+  id: number;
+  title: string;
+  containerClass: string;
+  titleClass: string;
+  paymentType: string;
+  price: string;
+  pages: string;
+  time: string;
+  features: string[];
+  href: string;
+  btntext: string;
+}
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function PlansInfo({ plans }) {
+export default function PlansInfo({ plans }: { plans: Plan[] }) {
   return (
-    <article className="mx-auto w-full min-w-[50rem] max-w-5xl py-16 pb-6">
-      <div className="grid w-full grid-cols-12 lg:gap-8">
-        {/* Starter */}
-        {plans.map((plan) => {
-          return (
+    <article className="mx-auto w-full max-w-5xl pb-6 pt-12 md:pt-16">
+      <div className="w-full overflow-x-auto">
+        <div className="flex min-w-[50rem] gap-6 pb-8 lg:grid lg:grid-cols-12 lg:gap-9">
+          {plans.map((plan, index) => (
             <div
               key={plan.id}
-              className="col-span-4 border-l border-gray-400 pl-8 lg:mb-0"
+              className="min-w-[18rem] shrink-0 border-l border-gray-400 pl-6 md:pl-9 lg:col-span-4"
             >
               <div className={plan.containerClass}>
                 <h2 className={plan.titleClass}>{plan.title}</h2>
@@ -54,9 +69,9 @@ export default function PlansInfo({ plans }) {
                   <span className="text-gray-900">{plan.time}</span>
                 </div>
               </div>
-              {/* Suitable for */}
+
               <div className="mt-4">
-                <h5 className="mb-1 font-medium text-primary">Suitable for:</h5>
+                <h5 className="mb-2 font-medium text-primary">Suitable for:</h5>
                 <div className="grid grid-cols-1 space-y-1.5">
                   {plan.features.map((feature) => (
                     <li
@@ -65,18 +80,29 @@ export default function PlansInfo({ plans }) {
                     >
                       <FaCheck
                         aria-hidden="true"
-                        className={classNames(
-                          "h-auto w-2.5 flex-none text-gray-600",
-                        )}
+                        className="h-auto w-2.5 flex-none text-gray-600"
                       />
                       {feature}
                     </li>
                   ))}
                 </div>
               </div>
+              <Link
+                href={plan.href}
+                className={clsx(
+                  "mt-8 flex w-full items-center justify-center rounded-lg border border-gray-500 px-2 py-2 text-center font-sans text-md",
+                  {
+                    "bg-gray-800 text-white": index === 0 || index === 2,
+                    "bg-secondary text-white": index === 1,
+                    "bg-primary text-white": index === 2,
+                  },
+                )}
+              >
+                Get Started
+              </Link>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </article>
   );

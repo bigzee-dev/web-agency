@@ -6,7 +6,7 @@ import Cards from "./cards";
 
 export default function Visibility() {
   return (
-    <main className="relative isolate w-full overflow-hidden bg-gray-900 py-12 pb-0 shadow-lg md:pb-16 md:pt-16">
+    <main className="relative isolate w-full overflow-hidden bg-gray-900 py-12 pb-0 shadow-2xl md:pb-16 md:pt-16">
       {/* blur component */}
       <div
         aria-hidden="true"

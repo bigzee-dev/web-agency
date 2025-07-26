@@ -70,10 +70,10 @@ export default function Home() {
             (index === 1 || index === 2) && "border-gray-500/50 md:border-t",
           )}
         >
-          <div className="flex h-full flex-col gap-y-4">
+          <div className="flex h-full flex-col gap-y-5">
             <div className="flex items-center gap-x-2">
               <div
-                className={` ${card.backgroundColor} inline-flex items-center justify-center rounded-lg p-2`}
+                className={` ${card.backgroundColor} inline-flex items-center justify-center rounded-lg p-3`}
               >
                 <card.icon className={`h-6 w-6 ${card.iconColor} `} />
               </div>
@@ -84,7 +84,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <p className="font-sans text-md text-neutral-300/80">
+            <p className="font-sans text-md leading-relaxed text-neutral-300/80">
               {card.description}
             </p>
             <div className="mt-auto flex flex-wrap gap-2">
@@ -92,7 +92,10 @@ export default function Home() {
                 <Link
                   key={linkIndex}
                   href={link.href}
-                  className="inline-flex rounded-lg bg-neutral-100/10 px-4 py-1.5 font-sans text-neutral-300 transition-colors hover:bg-gray-700"
+                  className={clsx(
+                    "inline-flex rounded-lg border border-gray-600/50 bg-[#202734] px-4 py-1.5 font-sans text-neutral-100 transition-colors hover:bg-gray-700",
+                    link.text === "Emails" && "bg-[#111827]",
+                  )}
                 >
                   {link.text}
                 </Link>

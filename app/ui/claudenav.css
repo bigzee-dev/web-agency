@@ -224,7 +224,7 @@
     visibility: visible;
     transform: translateY(0);
     transition: max-height 0.25s ease-in-out;
-    background-color: #005878;
+    background-color: #404040;
     border-radius: 0;
   }
 

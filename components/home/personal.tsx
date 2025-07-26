@@ -1,6 +1,7 @@
-import { btnDimensions } from "@/app/ui/customTailwindClasses";
+import { btnDimensions, primaryButton } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Personal() {
   return (
@@ -15,34 +16,35 @@ export default function Personal() {
             <span className="block md:text-primary">Personal.</span>
           </h2>
         </div>
-        <div className="space-y-6 border-l border-gray-400 pl-8 md:pl-12">
+        <div className="space-y-8 border-l border-gray-400 pl-8 md:pl-12">
           <h3
-            className={` ${montserrat.className} text-2xl font-semibold tracking-tight text-primary md:text-3xl md:text-gray-900`}
+            className={` ${montserrat.className} text-2xl font-semibold tracking-tight text-primary md:text-3xl md:text-gray-800`}
           >
             Doing things differently since day one.
           </h3>
           <div className="space-y-4 font-sans text-base leading-relaxed text-gray-600">
             <p>
-              Krystal is, and always will be, fiercely independent. We set out
-              to challenge the big faceless hosting corporations, and we&apos;ll
-              never sell to them or anyone else. We choose exactly how we
-              operate and forge our own path, creating a premium service
-              that&apos;s uncompromisingly good for our clients and for the
-              planet.
+              The web is our playground — we&apos;re endlessly curious about how
+              it works and excited by what it can become. Our love for the
+              internet and the technologies behind it fuels every project we
+              take on. We build with purpose, driven by creativity and care, not
+              by profit.
             </p>
+
             <p>
-              Our clients love us because of our unwavering commitment to
-              service, ethics and quality, and this can be seen throughout our
-              entire operations. From our clear and fair pricing to our
-              custom-built infrastructure and award-winning support.
+              Our clients choose us because they can feel that passion in every
+              interaction — in the way we code, communicate, and support. We
+              believe in doing things right, not rushed. That means high-quality
+              work, honest advice, and reliable service built on genuine
+              enthusiasm for modern web solutions.
             </p>
           </div>
-          <Button
-            size="lg"
-            className={` ${btnDimensions} bg-primary text-neutral-100`}
+          <Link
+            href="/about-us"
+            className={` ${primaryButton} inline-flex items-center justify-center`}
           >
-            About us
-          </Button>
+            About Us
+          </Link>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function WooCommerce() {
   return (
-    <div className="relative isolate bg-gray-800  flex items-center justify-center py-16">
+    <div className="relative isolate flex items-center justify-center overflow-hidden bg-gray-800 py-16">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -16,34 +16,34 @@ export default function WooCommerce() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-25"
         />
       </div>
-      <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
+      <div className="flex w-full max-w-7xl flex-col items-center gap-8 lg:flex-row lg:gap-20">
         {/* Left side - Device mockups */}
-        <div className="relative w-full lg:w-1/2 flex justify-center">
+        <div className="relative flex w-full justify-center lg:w-1/2">
           {/* Desktop mockup */}
-          <div className="hidden md:block relative z-10 rounded-lg overflow-hidden shadow-2xl">
-            <div className="bg-gray-100 h-8 flex items-center px-3 gap-1.5">
+          <div className="relative z-10 hidden overflow-hidden rounded-lg shadow-2xl md:block">
+            <div className="flex h-8 items-center gap-1.5 bg-gray-100 px-3">
               <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                <div className="h-3 w-3 rounded-full bg-red-400"></div>
+                <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
+                <div className="h-3 w-3 rounded-full bg-green-400"></div>
               </div>
-              <div className="flex items-center bg-white rounded-md px-2 py-1 text-xs text-gray-500 ml-4 flex-1">
+              <div className="ml-4 flex flex-1 items-center rounded-md bg-white px-2 py-1 text-xs text-gray-500">
                 <span className="truncate">
                   https://www.myshop.com/checkout
                 </span>
               </div>
             </div>
             <div className="bg-neutral-100 p-4">
-              <h2 className="text-xl text-gray-700 mb-6">Checkout</h2>
+              <h2 className="mb-6 text-xl text-gray-700">Checkout</h2>
 
               <div className="flex gap-8">
                 <div className="flex-1">
-                  <div className="border rounded-md p-4 mb-6">
-                    <h3 className="font-medium mb-2">Express Checkout</h3>
+                  <div className="mb-6 rounded-md border p-4">
+                    <h3 className="mb-2 font-medium">Express Checkout</h3>
                     {/* <p className="text-xs text-gray-500 mb-2">
                       In a hurry? Use one of our express checkout options below:
                     </p> */}
-                    <button className="w-full bg-black text-white rounded-md py-2 flex items-center justify-center gap-2 mb-3">
+                    <button className="mb-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-white">
                       {/* <svg
                         width="16"
                         height="16"
@@ -68,40 +68,40 @@ export default function WooCommerce() {
                   </div>
 
                   <div>
-                    <h3 className="font-medium mb-4">1. Delivery address</h3>
+                    <h3 className="mb-4 font-medium">1. Delivery address</h3>
 
-                    <div className="grid grid-cols-2 gap-3 mb-3">
-                      <div className="border rounded-md p-2">
+                    <div className="mb-3 grid grid-cols-2 gap-3">
+                      <div className="rounded-md border p-2">
                         <input
                           type="text"
                           placeholder="First name"
-                          className="w-full outline-none text-sm"
+                          className="w-full text-sm outline-none"
                         />
                       </div>
-                      <div className="border rounded-md p-2">
+                      <div className="rounded-md border p-2">
                         <input
                           type="text"
                           placeholder="Last name"
-                          className="w-full outline-none text-sm"
+                          className="w-full text-sm outline-none"
                         />
                       </div>
                     </div>
-                    <div className="border rounded-md p-2 mb-3">
+                    <div className="mb-3 rounded-md border p-2">
                       <input
                         type="text"
                         placeholder="Address"
-                        className="w-full outline-none text-sm"
+                        className="w-full text-sm outline-none"
                       />
                     </div>
                   </div>
                 </div>
 
                 <div className="w-64">
-                  <div className="bg-gray-100 rounded-md p-4">
-                    <h3 className="font-medium mb-4">Order Summary</h3>
-                    <div className="border-b pb-3 mb-3">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="w-10 h-10 bg-gray-200 rounded-md flex items-center justify-center">
+                  <div className="rounded-md bg-gray-100 p-4">
+                    <h3 className="mb-4 font-medium">Order Summary</h3>
+                    <div className="mb-3 border-b pb-3">
+                      <div className="mb-3 flex items-center gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gray-200">
                           <span className="text-xs">🧢</span>
                         </div>
                         <div className="flex-1">
@@ -123,7 +123,7 @@ export default function WooCommerce() {
                       </div> */}
 
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-gray-200 rounded-md flex items-center justify-center">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gray-200">
                           <span className="text-xs">👕</span>
                         </div>
                         <div className="flex-1">
@@ -135,7 +135,7 @@ export default function WooCommerce() {
                     </div>
 
                     <div className="mb-3">
-                      <div className="flex justify-between mb-2">
+                      <div className="mb-2 flex justify-between">
                         <div className="text-sm">Subtotal</div>
                         <div className="text-sm">P71.00</div>
                       </div>
@@ -168,7 +168,7 @@ export default function WooCommerce() {
                         via USPS Priority
                       </div> */}
 
-                      <div className="flex justify-between mb-2">
+                      <div className="mb-2 flex justify-between">
                         <div className="text-sm">Sales tax (14%)</div>
                         <div className="text-sm">P7.75</div>
                       </div>
@@ -187,15 +187,15 @@ export default function WooCommerce() {
           </div>
 
           {/* Mobile mockup */}
-          <div className="md:absolute md:left-0 md:bottom-0 md:z-0 bg-white rounded-3xl overflow-hidden shadow-2xl w-64 md:w-48 lg:w-64 z-20">
-            <div className="bg-gray-100 h-6 flex items-center justify-center">
-              <div className="w-20 h-1 bg-gray-300 rounded-full"></div>
+          <div className="z-20 w-64 overflow-hidden rounded-3xl bg-white shadow-2xl md:absolute md:bottom-0 md:left-0 md:z-0 md:w-48 lg:w-64">
+            <div className="flex h-6 items-center justify-center bg-gray-100">
+              <div className="h-1 w-20 rounded-full bg-gray-300"></div>
             </div>
             <div className="p-3">
-              <h2 className="text-lg text-gray-700 mb-4">Checkout</h2>
+              <h2 className="mb-4 text-lg text-gray-700">Checkout</h2>
 
-              <div className="border-b pb-2 mb-2">
-                <div className="flex justify-between items-center mb-1">
+              <div className="mb-2 border-b pb-2">
+                <div className="mb-1 flex items-center justify-between">
                   <h3 className="text-sm font-medium">Order Summary</h3>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -213,8 +213,8 @@ export default function WooCommerce() {
                   </svg>
                 </div>
 
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 bg-gray-200 rounded-md flex items-center justify-center">
+                <div className="mb-2 flex items-center gap-2">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gray-200">
                     <span className="text-xs">🧢</span>
                   </div>
                   <div className="flex-1">
@@ -226,12 +226,12 @@ export default function WooCommerce() {
               </div>
 
               <div className="mb-2">
-                <div className="flex justify-between mb-1">
+                <div className="mb-1 flex justify-between">
                   <div className="text-xs">Subtotal</div>
                   <div className="text-xs">$86.00</div>
                 </div>
 
-                <div className="flex items-center justify-between mb-1">
+                <div className="mb-1 flex items-center justify-between">
                   <div className="text-xs">Coupon code?</div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -249,33 +249,33 @@ export default function WooCommerce() {
                   </svg>
                 </div>
 
-                <div className="flex justify-between mb-1">
+                <div className="mb-1 flex justify-between">
                   <div className="text-xs">Shipping</div>
                   <div className="text-xs">$18.00</div>
                 </div>
-                <div className="text-xs text-gray-500 mb-1">
+                <div className="mb-1 text-xs text-gray-500">
                   via USPS Priority
                 </div>
 
-                <div className="flex justify-between mb-1">
+                <div className="mb-1 flex justify-between">
                   <div className="text-xs">Sales tax (7.75%)</div>
                   <div className="text-xs">$7.75</div>
                 </div>
               </div>
 
-              <div className="border-t pt-2 mb-3">
+              <div className="mb-3 border-t pt-2">
                 <div className="flex justify-between font-medium">
                   <div className="text-sm">Total</div>
                   <div className="text-sm">$107.75</div>
                 </div>
               </div>
 
-              <div className="border rounded-md p-2 mb-3">
-                <h3 className="text-xs font-medium mb-1">Express Checkout</h3>
-                <p className="text-xs text-gray-500 mb-1">
+              <div className="mb-3 rounded-md border p-2">
+                <h3 className="mb-1 text-xs font-medium">Express Checkout</h3>
+                <p className="mb-1 text-xs text-gray-500">
                   In a hurry? Use one of our express checkout options below:
                 </p>
-                <button className="w-full bg-black text-white rounded-md py-1 flex items-center justify-center gap-1 text-xs mb-1">
+                <button className="mb-1 flex w-full items-center justify-center gap-1 rounded-md bg-black py-1 text-xs text-white">
                   <svg
                     width="12"
                     height="12"
@@ -300,7 +300,7 @@ export default function WooCommerce() {
         </div>
 
         {/* Right side - Text content */}
-        <div className="w-full lg:w-1/2 text-white">
+        <div className="w-full text-white lg:w-1/2">
           <div>
             <img
               src="/svg/ecommerce/woocommerce-logo.svg"
@@ -309,11 +309,11 @@ export default function WooCommerce() {
             />
           </div>
           <h1
-            className={` ${montserrat.className} text-neutral-100 text-4xl md:text-5xl font-bold mb-6`}
+            className={` ${montserrat.className} mb-6 text-4xl font-bold text-neutral-100 md:text-5xl`}
           >
             WooCommerce
           </h1>
-          <div className="font-sans text-neutral-100 space-y-4">
+          <div className="space-y-4 font-sans text-neutral-100">
             <p>
               WooCommerce has demonstrated remarkable dominance and resilience,
               solidifying its position as a leading force in the e-commerce

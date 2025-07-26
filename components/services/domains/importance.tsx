@@ -1,28 +1,35 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
 import { sectionSubHeadings } from "@/app/ui/customTailwindClasses";
+import { FaCircleCheck } from "react-icons/fa6";
 
 export default function Importance() {
   const domainBenefits = [
     {
       title: "First Impressions Matter",
       description:
-        "Your domain name is often the first interaction customers have with your brand. A professional, memorable domain instantly communicates credibility and establishes trust before visitors even see your website content.",
+        "Your domain is the first thing people see. A clean, memorable name builds trust instantly—before they even visit your site.",
     },
     {
       title: "SEO & Discoverability",
       description:
-        "Search engines favor domains that match user intent and brand consistency. A well-chosen domain name can significantly boost your search rankings and make it easier for potential customers to find you organically.",
+        "Search engines prefer relevant domains. The right name boosts your visibility and helps customers find you faster.",
     },
     {
       title: "Brand Protection & Growth",
       description:
-        "Securing the right domain protects your brand from competitors and gives you complete control over your online narrative. As your business grows, your domain becomes an increasingly valuable digital asset.",
+        "Owning your domain secures your brand, keeps competitors out, and grows in value as your business expands.",
     },
   ];
 
+  const domainStats = [
+    { label: "Brand Recognition", value: "+340%" },
+    { label: "Customer Trust", value: "+250%" },
+    { label: "Search Visibility", value: "+180%" },
+  ];
+
   return (
-    <section className="w-full bg-gradient-to-br from-slate-50 to-white py-16 md:py-24 md:pb-12">
+    <section className="w-full bg-gradient-to-br from-slate-50 to-white py-16 md:py-24 md:pb-20">
       <div className="mx-auto max-w-7xl px-4 md:px-4">
         <div className="mb-16 text-center">
           {/* <Badge variant="outline" className="mb-4 text-sm font-medium">
@@ -41,56 +48,55 @@ export default function Importance() {
           </p>
         </div>
 
-        <div className="mb-16 grid items-center gap-x-16 lg:grid-cols-2">
+        <div className="mb-8 grid gap-x-16 lg:grid-cols-2">
           <div className="relative">
-            <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-primary/10">
+            <div className="relative overflow-hidden">
               <div className="relative z-10">
                 <Image
-                  src="/svg/Web-Hosting.svg"
+                  src="/img/domains/domain-design.jpg"
                   alt="img"
                   width={1075}
                   height={716}
-                  className="h-52 rounded-l-2xl object-cover"
+                  className="h-[22rem] object-cover"
                 />
-                {/* <div className="absolute left-0 top-0 z-10 h-52 w-full bg-gray-800/15"></div> */}
-                <div className="space-y-5 border-t border-gray-400 px-16 py-6">
-                  <div className="flex items-center justify-between border-b border-gray-700 py-3 text-gray-800">
-                    <span className="font-medium">Brand Recognition</span>
-                    <span className="text-2xl font-bold text-gray-800">
-                      +340%
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between border-b border-gray-700 py-3 text-gray-800">
-                    <span className="font-medium">Customer Trust</span>
-                    <span className="text-2xl font-bold text-gray-800">
-                      +250%
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between py-3 text-gray-800">
-                    <span className="font-medium">Search Visibility</span>
-                    <span className="text-2xl font-bold text-gray-800">
-                      +180%
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
-          <div className="space-y-6">
+          <div className="flex flex-col justify-center space-y-6 md:pt-2">
             {domainBenefits.map((benefit, index) => (
-              <div key={index} className="space-y-1.5">
-                <h3
-                  className={`${montserrat.className} text-xl font-semibold leading-tight text-gray-800 md:text-2xl`}
-                >
-                  {benefit.title}
-                </h3>
-                <p className="ww-full font-sans text-base leading-relaxed text-gray-700 lg:w-[90%]">
-                  {benefit.description}
-                </p>
+              <div key={index} className="flex items-start gap-x-4">
+                <FaCircleCheck
+                  aria-hidden="true"
+                  className="mt-[0.15rem] h-auto w-6 flex-none text-primary"
+                />
+                <div className="space-y-1.5">
+                  <h3
+                    className={`${montserrat.className} flex items-center text-xl font-bold text-gray-800 md:text-xl`}
+                  >
+                    {benefit.title}
+                  </h3>
+                  <p className="w-full text-md leading-relaxed text-gray-700 lg:w-[85%]">
+                    {benefit.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
+
+        {/* <div className="flex w-full items-center justify-between gap-x-6 bg-gray-800 px-6 py-4">
+          {domainStats.map((stat) => (
+            <div
+              key={stat.label}
+              className="flex flex-1 items-center justify-between rounded-md bg-white/10 px-6 py-2"
+            >
+              <span className="font-medium text-neutral-300">{stat.label}</span>
+              <span className="text-2xl font-bold text-blue-400">
+                {stat.value}
+              </span>
+            </div>
+          ))}
+        </div> */}
       </div>
     </section>
   );

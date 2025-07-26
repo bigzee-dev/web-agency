@@ -15,6 +15,8 @@ export const oneTimePlans = [
       "Advanced analytics",
       "Dedicated support representative",
     ],
+    href: "/contact-us",
+    btntext: "Get Started",
   },
   {
     id: 2,
@@ -32,6 +34,8 @@ export const oneTimePlans = [
       "Advanced analytics",
       "Dedicated support representative",
     ],
+    href: "/contact-us",
+    btntext: "Get Started",
   },
   {
     id: 3,
@@ -49,6 +53,8 @@ export const oneTimePlans = [
       "Advanced analytics",
       "Dedicated support representative",
     ],
+    href: "/contact-us",
+    btntext: "Get Started",
   },
 ];
 
@@ -70,6 +76,8 @@ export const monthlyPlans = [
       "Advanced analytics",
       "Dedicated support representative",
     ],
+    href: "/contact-us",
+    btntext: "Get Started",
   },
   {
     id: 2,
@@ -87,6 +95,8 @@ export const monthlyPlans = [
       "Advanced analytics",
       "Dedicated support representative",
     ],
+    href: "/contact-us",
+    btntext: "Get Started",
   },
   {
     id: 3,
@@ -104,5 +114,7 @@ export const monthlyPlans = [
       "Advanced analytics",
       "Dedicated support representative",
     ],
+    href: "/contact-us",
+    btntext: "Get Started",
   },
 ];

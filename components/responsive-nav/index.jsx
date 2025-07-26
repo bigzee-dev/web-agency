@@ -19,7 +19,7 @@ export default function ResponsiveNav() {
   useResponsiveNav(); // <-- This runs the nav javascript
 
   const linkStyles =
-    "flex items-center gap-x-2.5 whitespace-nowrap text-neutral-100 md:hover:text-neutral-400 transition-colors duration-200";
+    "flex items-center gap-x-2.5 whitespace-nowrap text-neutral-50 md:hover:text-neutral-400 transition-colors duration-200";
   return (
     <nav className="x-padding navbar border-b border-gray-300/70">
       <div className="navbar-container">
@@ -31,7 +31,8 @@ export default function ResponsiveNav() {
           <h4
             className={` ${cairo.className} nav-logo mb-[0.30rem] ml-2 text-cyan-700`}
           >
-            delta<span className="font-semibold text-gray-700">worx</span>
+            delta
+            <span className="font-semibold text-gray-700">worx</span>
           </h4>
         </Link>
         <button className="hamburger" aria-label="Open menu">
@@ -48,15 +49,15 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                Websites{" "}
-                <span className="chevron">
+                Solutions{" "}
+                <span className="chevron text-neutral-700">
                   <NavChevron />
                 </span>
               </div>
               <div className="dropdown-menu">
                 <Link href="/websites" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-neutral-100 lg:text-blue-300">
+                    <span className="text-blue-300">
                       <GlobeIcon />
                     </span>
                     Website Development
@@ -64,7 +65,7 @@ export default function ResponsiveNav() {
                 </Link>
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-neutral-100 lg:text-blue-300">
+                    <span className="text-blue-300">
                       <WebAppIcon />
                     </span>
                     Web Applications
@@ -72,7 +73,7 @@ export default function ResponsiveNav() {
                 </Link>
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-neutral-100 lg:text-blue-300">
+                    <span className="text-blue-300">
                       <ShoppingBagIcon />
                     </span>
                     Ecommerce Stores
@@ -101,7 +102,7 @@ export default function ResponsiveNav() {
               <div className="dropdown-menu">
                 <Link href="/managed-hosting" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-400">
+                    <span className="text-blue-300">
                       <ServerStackIcon size="size-5" />
                     </span>
                     Managed Hosting
@@ -109,7 +110,7 @@ export default function ResponsiveNav() {
                 </Link>
                 <Link href="/hosting" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-400">
+                    <span className="text-blue-300">
                       <ServerStackIcon size="size-5" />
                     </span>
                     Web Hosting
@@ -129,7 +130,7 @@ export default function ResponsiveNav() {
               <div className="dropdown-menu">
                 <Link href="/domains" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-400">
+                    <span className="text-blue-300">
                       <AtSymbolIcon size="size-5" />
                     </span>
                     Domain Names
@@ -140,7 +141,7 @@ export default function ResponsiveNav() {
                   className="dropdown-item"
                 >
                   <div className={linkStyles}>
-                    <span className="text-blue-400">
+                    <span className="text-blue-300">
                       <ClipboardCopyIcon size="size-5" />
                     </span>
                     Register Domain
@@ -151,7 +152,7 @@ export default function ResponsiveNav() {
                   className="dropdown-item"
                 >
                   <div className={linkStyles}>
-                    <span className="text-blue-400">
+                    <span className="text-blue-300">
                       <DocumentTextIcon size="size-5" />
                     </span>
                     My Domains
@@ -162,7 +163,7 @@ export default function ResponsiveNav() {
                   className="dropdown-item"
                 >
                   <div className={linkStyles}>
-                    <span className="text-blue-400">
+                    <span className="text-blue-300">
                       <ArrowPathIcon size="size-5" />
                     </span>
                     Renew Domain
@@ -174,7 +175,7 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                About Us{" "}
+                Company{" "}
                 <span className="chevron">
                   <NavChevron />
                 </span>
@@ -195,7 +196,7 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                Help Center{" "}
+                Support{" "}
                 <span className="chevron">
                   <NavChevron />
                 </span>

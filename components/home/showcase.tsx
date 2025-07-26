@@ -66,13 +66,13 @@ export default function Showcase() {
             </p>
           </div>
 
-          <div className="mt-2 flex flex-col items-center justify-center gap-x-8 gap-y-6 sm:flex-row lg:mt-2 lg:justify-start">
+          <div className="mt-2 flex flex-col items-center justify-center gap-x-8 gap-y-6 sm:flex-row lg:mt-1.5 lg:justify-start">
             <Link href="#our-services" className={` ${primaryButton} `}>
               Our Services
             </Link>
             <Link
               href="#"
-              className="ml-4 font-sans text-base font-semibold tracking-wide text-gray-800 md:text-md"
+              className="ml-4 font-sans text-base font-semibold tracking-wide text-gray-800 md:text-[1.01rem]"
             >
               About Us <span aria-hidden="true"> →</span>
             </Link>

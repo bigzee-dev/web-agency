@@ -14,7 +14,7 @@ export default function Websites() {
           src="/img/websites/male-phone-hq.jpg"
           alt="Background image of person using mobile device"
           fill
-          className="object-cover object-right"
+          className="object-cover object-right grayscale filter"
           priority
         />
 
@@ -109,8 +109,7 @@ export default function Websites() {
 
         {/* Background image */}
         <div className="relative h-[400px] w-full overflow-hidden sm:h-[450px]">
-          <div className="absolute inset-0 z-10 bg-black opacity-10"></div>
-          <div className="absolute left-[-500px]">
+          <div className="absolute left-[-500px] grayscale filter">
             <Image
               src="/img/websites/male-phone-hq.jpg"
               alt="Background image of person using mobile device"

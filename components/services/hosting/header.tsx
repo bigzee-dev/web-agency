@@ -40,18 +40,18 @@ const offers = [
 export default function Header() {
   return (
     <div className="relative w-full bg-slate-700">
-      <div className="relative isolate overflow-hidden inset-0 w-full bg-gradient-to-r from-gray-900 via-slate-700 to-blue-400/60 py-12 pb-10">
-        <div className="grid grid-cols-12 gap-12 max-w-7xl mx-auto">
+      <div className="relative inset-0 isolate w-full overflow-hidden bg-gradient-to-r from-gray-900 via-slate-700 to-blue-400/60 py-12 pb-10">
+        <div className="mx-auto grid max-w-7xl grid-cols-12 gap-12">
           <div className="col-span-6">
             {/* Shared hosting badge */}
             <div className="inline-block">
-              <span className="font-semibold text-neutral-300 tracking-widest">
+              <span className="font-semibold tracking-widest text-neutral-300">
                 SHARED WEB HOSTING
               </span>
             </div>
             {/* Main heading */}
             <h1
-              className={` ${montserrat.className} max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-100 mt-3 leading-tight`}
+              className={` ${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
             >
               Top quality web hosting plans
             </h1>
@@ -62,28 +62,28 @@ export default function Header() {
               >
                 Every hosting plan offers
               </p> */}
-              <div className="grid grid-cols-2 gap-y-5  mt-3">
+              <div className="mt-4 grid grid-cols-2 gap-y-5">
                 {offers.map((offer) => (
-                  <div className="flex flex-col gap-1.5 " key={offer.title}>
-                    <h6 className="flex items-center gap-2 text-neutral-200/90 tracking-wide font-medium">
+                  <div className="flex flex-col gap-1.5" key={offer.title}>
+                    <h6 className="flex items-center gap-2 font-medium tracking-wide text-neutral-200/90">
                       <div
-                        className={` text-blue-400 p-2  bg-white/5 rounded-lg mr-0.5 outline outline-1 outline-gray-500/50`}
+                        className={`mr-0.5 rounded-lg bg-white/5 p-2 text-blue-400 outline outline-1 outline-gray-500/50`}
                       >
                         {offer.icon}
                       </div>
 
                       <span>{offer.title}</span>
                     </h6>
-                    <p className="font-sans text-sm text-neutral-300/80 leading-relaxed ml-1">
+                    <p className="ml-1 font-sans text-sm leading-relaxed text-neutral-300/80">
                       {offer.description}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <button className={` ${whiteButton} mt-7`}>Compare Plans</button>
+              <button className={` ${whiteButton} mt-8`}>Compare Plans</button>
 
-              <div className="flex items-center font-sans text-neutral-300  font-medium text-sm mt-5">
+              <div className="mt-5 flex items-center font-sans text-sm font-medium text-neutral-300">
                 <span className="mr-2">
                   <IoShieldCheckmarkSharp
                     size="1.5em"
@@ -102,7 +102,7 @@ export default function Header() {
               alt="Logo"
               width={1000}
               height={1000}
-              className="object-contain -mt-4"
+              className="-mt-4 object-contain"
             />
           </div>
         </div>

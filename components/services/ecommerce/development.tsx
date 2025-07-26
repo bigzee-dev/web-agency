@@ -1,11 +1,53 @@
 import { Check } from "lucide-react";
 import { montserrat } from "@/app/ui/fonts";
-import { btnDimensions } from "@/app/ui/customTailwindClasses";
+import { btnDimensions, primaryButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
+import { FiTrendingUp } from "react-icons/fi";
+import { FaCreditCard } from "react-icons/fa6";
+import { RiShoppingBag4Fill } from "react-icons/ri";
+import { RiArchive2Fill } from "react-icons/ri";
+import type { IconType } from "react-icons";
+
+const iconProps = {
+  className: "h-6 w-6 mt-[0.05rem] text-secondary",
+};
+
+type Feature = {
+  title: string;
+  description: string;
+  icon: IconType; // <-- icon is a component, not JSX
+};
+
+const features: Feature[] = [
+  {
+    title: "Sell Anywhere.",
+    description:
+      "Launch a professional e-commerce site and accept credit/debit card payments from customers countrywide.",
+    icon: FaCreditCard,
+  },
+  {
+    title: "Physical or Digital.",
+    description:
+      "Sell anything—from clothing and furniture to online courses and downloadable software.",
+    icon: RiShoppingBag4Fill,
+  },
+  {
+    title: "Easy Store Management.",
+    description:
+      "Manage products, track orders, and view customer insights with a user-friendly dashboard ",
+    icon: RiArchive2Fill,
+  },
+  {
+    title: "Built to Convert.",
+    description:
+      "High-performing online stores powered by WooCommerce or Shopify, tailored to grow your business.",
+    icon: FiTrendingUp,
+  },
+];
 
 export default function Development() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <section className="x-padding mx-auto max-w-6xl py-16 sm:px-6 lg:px-8">
       <div className="mb-14 space-y-3">
         <h2
           className={`${montserrat.className} max-w-2xl text-5xl font-bold leading-tight text-gray-800`}
@@ -18,46 +60,37 @@ export default function Development() {
           </div>
         </h2>
       </div>
-      <div className="grid items-start gap-x-20 md:grid-cols-12">
-        {/* Left Column */}
-        <div className="col-span-7 flex flex-col gap-y-4">
-          <p
+      <div className="flex flex-col gap-y-10">
+        {/* <p
             className={` ${montserrat.className} font-sans text-3xl font-semibold text-secondary`}
           >
             Start Your Online Retail Business Today
-          </p>
+          </p> */}
 
-          <p className="font-sans text-slate-700">
-            Sell your products directly through your website and accept credit
-            card payments from customers worldwide. An e-commerce website gives
-            you all the tools you need to launch and manage a successful online
-            store. Whether you&apos;re selling physical products like clothing
-            and furniture, or offering services and digital goods such as online
-            courses or downloadable software, your e-commerce site can handle it
-            all.
-            <br />
-          </p>
-          <p className="font-sans text-slate-700">
-            {" "}
-            We build modern, high-converting online stores powered by
-            WooCommerce or Shopify—tailored to help you grow your business
-            online.
-            <strong>
-              {" "}
-              Start your online sales journey today and turn your website into a
-              revenue-generating machine.
-            </strong>
-          </p>
-          <Link
-            href="/contact"
-            className={` ${btnDimensions} mt-8 flex items-center justify-center bg-primary font-sans text-md font-bold text-neutral-100 hover:bg-sky-700`}
-          >
-            Contact Us
-          </Link>
-        </div>
+        <ul className="grid items-start gap-x-16 gap-y-6 md:grid-cols-2">
+          {features.map(({ title, description, icon: Icon }, index) => (
+            <li key={index} className="flex items-start gap-4">
+              <div className="h-auto min-w-6">
+                <Icon {...iconProps} />
+              </div>
+
+              <div>
+                <p className="font-sans text-base text-gray-600">
+                  <strong>{title}</strong> {description}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <Link
+          href="/contact"
+          className={` ${primaryButton} inline-flex items-center justify-center self-center md:self-start`}
+        >
+          Get Started
+        </Link>
 
         {/* Right Column */}
-        <div className="col-span-5 space-y-6">
+        {/* <div className="col-span-5 space-y-6">
           <h3
             className={` ${montserrat.className} text-3xl font-bold text-gray-800`}
           >
@@ -83,7 +116,7 @@ export default function Development() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     </section>
   );

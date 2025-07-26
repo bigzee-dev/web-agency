@@ -1,6 +1,21 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
 
+const stats = [
+  {
+    value: "73%",
+    description: "of consumers judge credibility based on domain quality",
+  },
+  {
+    value: "2.5x",
+    description: "higher click-through rates with branded domains",
+  },
+  {
+    value: "46%",
+    description: "increase in brand recall with memorable domains",
+  },
+];
+
 export default function DigitalRealEstate() {
   return (
     <div className="mx-auto mt-24 grid max-w-7xl grid-cols-12 rounded-2xl border border-gray-300 bg-gradient-to-r from-primary/5 to-primary/10">
@@ -21,24 +36,16 @@ export default function DigitalRealEstate() {
         </h3>
 
         <div className="grid gap-8 text-center md:grid-cols-3">
-          <div>
-            <div className="mb-2 text-5xl font-bold text-primary">73%</div>
-            <p className="text-sm text-muted-foreground">
-              of consumers judge credibility based on domain quality
-            </p>
-          </div>
-          <div>
-            <div className="mb-2 text-5xl font-bold text-primary">2.5x</div>
-            <p className="text-sm text-muted-foreground">
-              higher click-through rates with branded domains
-            </p>
-          </div>
-          <div>
-            <div className="mb-2 text-5xl font-bold text-primary">46%</div>
-            <p className="text-sm text-muted-foreground">
-              increase in brand recall with memorable domains
-            </p>
-          </div>
+          {stats.map((stat, idx) => (
+            <div key={idx}>
+              <div className="mb-3 text-5xl font-bold text-primary">
+                {stat.value}
+              </div>
+              <p className="font-sans text-sm text-gray-700">
+                {stat.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

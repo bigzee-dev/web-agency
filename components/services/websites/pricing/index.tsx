@@ -33,10 +33,14 @@ export default function PricingWebsites() {
         <div className="absolute left-0 top-0 flex items-center gap-2 pt-5"></div>
       </div>
       <Tabs defaultValue="onetime" className="mt-4">
-        <TabsList>
-          <TabsTrigger value="onetime">One-Time</TabsTrigger>
-          <TabsTrigger value="monthly">Monthly</TabsTrigger>
-        </TabsList>
+        <div className="flex w-full items-center justify-between">
+          <TabsList>
+            <TabsTrigger value="onetime">One-Time</TabsTrigger>
+            <TabsTrigger value="monthly">Monthly</TabsTrigger>
+          </TabsList>
+          <span className="text-xl">&rarr;</span>
+        </div>
+
         <TabsContent value="onetime">
           <PlansInfo plans={oneTimePlans} />
         </TabsContent>
