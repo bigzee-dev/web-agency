@@ -12,6 +12,7 @@ import {
   ClipboardCopyIcon,
   ArrowPathIcon,
   DocumentTextIcon,
+  MouseClickIcon,
 } from "../icons";
 import Link from "next/link";
 
@@ -57,7 +58,7 @@ export default function ResponsiveNav() {
               <div className="dropdown-menu">
                 <Link href="/websites" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-300">
+                    <span className="text-neutral-300">
                       <GlobeIcon />
                     </span>
                     Website Development
@@ -65,7 +66,7 @@ export default function ResponsiveNav() {
                 </Link>
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-300">
+                    <span className="text-neutral-300">
                       <WebAppIcon />
                     </span>
                     Web Applications
@@ -73,7 +74,7 @@ export default function ResponsiveNav() {
                 </Link>
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className={linkStyles}>
-                    <span className="text-blue-300">
+                    <span className="text-neutral-300">
                       <ShoppingBagIcon />
                     </span>
                     Ecommerce Stores
@@ -100,20 +101,20 @@ export default function ResponsiveNav() {
                 </span>
               </div>
               <div className="dropdown-menu">
-                <Link href="/managed-hosting" className="dropdown-item">
-                  <div className={linkStyles}>
-                    <span className="text-blue-300">
-                      <ServerStackIcon size="size-5" />
-                    </span>
-                    Managed Hosting
-                  </div>
-                </Link>
                 <Link href="/hosting" className="dropdown-item">
                   <div className={linkStyles}>
                     <span className="text-blue-300">
                       <ServerStackIcon size="size-5" />
                     </span>
                     Web Hosting
+                  </div>
+                </Link>
+                <Link href="/managed-hosting" className="dropdown-item">
+                  <div className={linkStyles}>
+                    <span className="text-blue-300">
+                      <MouseClickIcon size="size-5" />
+                    </span>
+                    Client Hosting
                   </div>
                 </Link>
               </div>

@@ -5,7 +5,7 @@ export default function SupportOne() {
     <div className="mx-auto max-w-7xl pt-12">
       <h1 className={`${sectionHeadings} flex items-center`}>
         Get in Touch
-        <span className="mb-3 ml-3">
+        <span className="z-20 mb-3 ml-3">
           <img
             src="/svg/contact-animated-arrow.svg"
             alt=""
@@ -14,7 +14,7 @@ export default function SupportOne() {
         </span>
       </h1>
 
-      <div className="relative mb-9 overflow-hidden rounded-xl bg-gradient-to-r from-blue-400 to-blue-600 p-6 pl-12">
+      <div className="relative mb-9 overflow-hidden rounded-xl bg-gradient-to-r from-blue-400 to-blue-600 p-6 pl-16">
         {/* background pattern */}
         <img
           src="/img/bg-pattern.png"
@@ -37,9 +37,6 @@ export default function SupportOne() {
                 className={` ${btnDimensions} bg-white text-secondary shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`}
               >
                 Get Started
-              </a>
-              <a href="#" className="text-sm/6 font-semibold text-white">
-                Learn more <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>

@@ -5,6 +5,7 @@ import { BsLightningChargeFill } from "react-icons/bs";
 import { FaServer } from "react-icons/fa6";
 import Image from "next/image";
 import { whiteButton } from "@/app/ui/customTailwindClasses";
+import Link from "next/link";
 
 const iconProps = {
   size: "1.2em",
@@ -39,9 +40,29 @@ const offers = [
 
 export default function Header() {
   return (
-    <div className="relative w-full bg-slate-700">
-      <div className="relative inset-0 isolate w-full overflow-hidden bg-gradient-to-r from-gray-900 via-slate-700 to-blue-400/60 py-12 pb-10">
-        <div className="mx-auto grid max-w-7xl grid-cols-12 gap-12">
+    <div className="relative bg-black">
+      <div className="absolute inset-0 grid w-full grid-cols-12 overflow-hidden">
+        <div className="col-span-6"></div>
+        <div className="relative col-span-6 flex items-center justify-center">
+          {" "}
+          <Image
+            src="/img/hosting/cpu-tech.jpg"
+            alt="Logo"
+            width={2534}
+            height={1774}
+            className="mb-16 h-auto w-[60%]"
+          />
+          <div className="absolute bottom-14 left-0 flex w-full items-center justify-center">
+            <img
+              src="/svg/hosting/cpanel.svg"
+              alt="Cpanel Logo"
+              className="h-28"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="inset-0 w-full">
+        <div className="mx-auto grid max-w-7xl grid-cols-12 py-12">
           <div className="col-span-6">
             {/* Shared hosting badge */}
             <div className="inline-block">
@@ -56,18 +77,13 @@ export default function Header() {
               Top quality web hosting plans
             </h1>
 
-            <div className="mt-6">
-              {/* <p
-                className={` ${montserrat.className} text-xl font-bold text-slate-400 tracking-wide`}
-              >
-                Every hosting plan offers
-              </p> */}
+            <div className="mt-7">
               <div className="mt-4 grid grid-cols-2 gap-y-5">
                 {offers.map((offer) => (
                   <div className="flex flex-col gap-1.5" key={offer.title}>
                     <h6 className="flex items-center gap-2 font-medium tracking-wide text-neutral-200/90">
                       <div
-                        className={`mr-0.5 rounded-lg bg-white/5 p-2 text-blue-400 outline outline-1 outline-gray-500/50`}
+                        className={`mr-0.5 rounded-lg bg-white/10 p-2 text-blue-400 outline outline-1 outline-gray-500/50`}
                       >
                         {offer.icon}
                       </div>
@@ -80,33 +96,18 @@ export default function Header() {
                   </div>
                 ))}
               </div>
-
-              <button className={` ${whiteButton} mt-8`}>Compare Plans</button>
-
-              <div className="mt-5 flex items-center font-sans text-sm font-medium text-neutral-300">
-                <span className="mr-2">
-                  <IoShieldCheckmarkSharp
-                    size="1.5em"
-                    className="text-neutral-100/50"
-                  />
-                </span>
-                <span className="">7 day - money back - guarantee</span>
-              </div>
+              <Link
+                href=""
+                className={` ${whiteButton} mt-8 flex items-center justify-center`}
+              >
+                Compare Plans
+              </Link>
             </div>
           </div>
-
-          <div className="col-span-5 col-start-8 flex items-center justify-center">
-            {" "}
-            <Image
-              src="/svg/hosting/hosting-servers.svg"
-              alt="Logo"
-              width={1000}
-              height={1000}
-              className="-mt-4 object-contain"
-            />
-          </div>
+          <div className="col-span-6"></div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 z-10 h-full bg-gradient-to-tr from-transparent via-blue-400/15 to-blue-400/30"></div>
     </div>
   );
 }

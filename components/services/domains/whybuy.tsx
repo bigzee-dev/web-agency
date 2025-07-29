@@ -15,7 +15,7 @@ const whyBuyFeatures = [
   {
     title: "Instant setup and easy control",
     description:
-      "Once you complete your domain search, we&apos;ll guide you through the website domain registration process. It only takes a few clicks, and no technical knowledge is required.",
+      "Once you have registered your domain, you can manage it through our dashboard, including tasks such as updating DNS records, configuring nameservers, and renewing your domain.",
   },
 ];
 

@@ -49,7 +49,7 @@ export default function Header() {
               >
                 Compare Plans
               </Link>
-              <div className="mt-5 flex items-center font-sans text-sm font-medium text-neutral-300">
+              {/* <div className="mt-5 flex items-center font-sans text-sm font-medium text-neutral-300">
                 <span className="mr-2">
                   <IoShieldCheckmarkSharp
                     size="1.5em"
@@ -57,9 +57,9 @@ export default function Header() {
                   />
                 </span>
                 <span className="">7 day - money back - guarantee</span>
-              </div>
+              </div> */}
             </div>
-            <div className="relative col-span-6 flex items-center">
+            <div className="relative col-span-6 flex items-center py-8">
               {" "}
               <Image
                 src="/img/emails/emails-filter.png"

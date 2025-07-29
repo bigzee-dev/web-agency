@@ -1,9 +1,9 @@
 import { montserrat } from "@/app/ui/fonts";
-import { FaCheck } from "react-icons/fa";
+import { FaCircleCheck } from "react-icons/fa6";
 
 export default function StartToday() {
   return (
-    <div className="relative isolate w-full">
+    <div className="relative isolate w-full pt-10">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -17,36 +17,42 @@ export default function StartToday() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-15"
         />
       </div>
-      <div className="mx-auto flex max-w-6xl flex-col gap-y-8 px-4 pt-12">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-y-10 px-4 py-4">
         <h2
-          className={` ${montserrat.className} w-full text-left text-3xl font-bold text-gray-900 md:text-4xl`}
+          className={` ${montserrat.className} w-full bg-primary py-2 text-center text-3xl font-bold text-neutral-200 md:text-4xl`}
         >
-          Start Your{" "}
-          <span className="bg-gradient-to-r from-cyan-600 via-primary to-blue-600 bg-clip-text text-transparent">
-            Online Business
-          </span>{" "}
-          Today
+          Start Your Online Business Today
         </h2>
-        <ul className="grid max-w-5xl grid-cols-2 gap-x-4 gap-y-4">
+        <ul className="grid max-w-3xl grid-cols-2 gap-x-5 gap-y-5">
           {[
-            "Customised eCommerce Web Design and Development",
-            "Seamless API integration",
+            "Customised eCommerce Web Design",
+            "Seamless API Integration",
             "Secured Payment Gateway",
             "Search Engine Optimisation",
             "Certified eCommerce Developers",
             "Supporting you beyond the project",
           ].map((feature, index) => (
-            <li key={index} className="flex items-center gap-3">
+            <li
+              key={index}
+              className="flex items-center gap-3 rounded-lg bg-gray-800 px-4 py-3"
+            >
               <div className="">
-                <FaCheck className="h-auto w-2.5 text-gray-500" />
+                <FaCircleCheck className="mt-0.5 h-auto w-5 text-blue-400" />
               </div>
-              <span className="font-sans text-base text-gray-600">
+              <span className="font-sans text-md text-neutral-300">
                 {feature}
               </span>
             </li>
           ))}
         </ul>
       </div>
+      {/* <span className="z-20 mb-3 ml-3 rotate-90">
+        <img
+          src="/svg/contact-animated-arrow.svg"
+          alt=""
+          className="max-h-32"
+        />
+      </span> */}
     </div>
   );
 }

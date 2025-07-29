@@ -40,14 +40,14 @@ const features: Feature[] = [
   {
     title: "Built to Convert.",
     description:
-      "High-performing online stores powered by WooCommerce or Shopify, tailored to grow your business.",
+      "High-performing online stores powered by WooCommerce or Shopify, designed to grow your business.",
     icon: FiTrendingUp,
   },
 ];
 
 export default function Development() {
   return (
-    <section className="x-padding mx-auto max-w-6xl py-16 sm:px-6 lg:px-8">
+    <section className="x-padding mx-auto max-w-6xl py-20 sm:px-6 lg:px-8">
       <div className="mb-14 space-y-3">
         <h2
           className={`${montserrat.className} max-w-2xl text-5xl font-bold leading-tight text-gray-800`}
@@ -61,12 +61,6 @@ export default function Development() {
         </h2>
       </div>
       <div className="flex flex-col gap-y-10">
-        {/* <p
-            className={` ${montserrat.className} font-sans text-3xl font-semibold text-secondary`}
-          >
-            Start Your Online Retail Business Today
-          </p> */}
-
         <ul className="grid items-start gap-x-16 gap-y-6 md:grid-cols-2">
           {features.map(({ title, description, icon: Icon }, index) => (
             <li key={index} className="flex items-start gap-4">

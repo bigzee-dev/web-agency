@@ -2,7 +2,7 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function WooCommerce() {
   return (
-    <div className="relative isolate flex items-center justify-center overflow-hidden bg-gray-800 py-16">
+    <div className="relative isolate flex items-center justify-center overflow-hidden bg-gray-800 py-20">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -40,35 +40,14 @@ export default function WooCommerce() {
                 <div className="flex-1">
                   <div className="mb-6 rounded-md border p-4">
                     <h3 className="mb-2 font-medium">Express Checkout</h3>
-                    {/* <p className="text-xs text-gray-500 mb-2">
-                      In a hurry? Use one of our express checkout options below:
-                    </p> */}
-                    <button className="mb-3 flex w-full items-center justify-center gap-2 rounded-md bg-black py-2 text-white">
-                      {/* <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12.6 5.2C12.0 5.7 11.1 6.1 10.2 6C10.1 5.1 10.4 4.2 10.9 3.6C11.5 3 12.5 2.7 13.3 2.6C13.4 3.6 13 4.4 12.6 5.2Z"
-                          fill="white"
-                        />
-                        <path
-                          d="M13.3 6.2C12.1 6.1 11.1 6.8 10.5 6.8C9.9 6.8 9 6.2 8.1 6.2C6.9 6.2 5.6 7 4.9 8.3C3.5 10.8 4.6 14.5 5.9 16.5C6.6 17.5 7.4 18.6 8.5 18.6C9.5 18.6 9.9 18 11.1 18C12.3 18 12.6 18.6 13.7 18.5C14.8 18.5 15.5 17.5 16.2 16.5C16.7 15.8 17 15.1 17.2 14.9C17.2 14.9 17.2 14.9 17.1 14.9C16.6 14.7 15.3 13.9 15.3 12.1C15.3 10.6 16.3 9.9 16.4 9.8C16.4 9.8 16.4 9.8 16.4 9.8C15.5 8.4 14.1 8.3 13.7 8.3C12.9 6.2 13.3 6.2 13.3 6.2Z"
-                          fill="white"
-                        />
-                      </svg> */}
+
+                    <button className="mb-3 flex w-full items-center justify-center gap-2 rounded-lg bg-gray-800 py-2 text-white">
                       Pay
                     </button>
-                    <div className="text-center text-xs text-gray-500">
-                      Or continue below:
-                    </div>
                   </div>
 
                   <div>
-                    <h3 className="mb-4 font-medium">1. Delivery address</h3>
+                    <h3 className="mb-4 font-medium">Delivery address</h3>
 
                     <div className="mb-3 grid grid-cols-2 gap-3">
                       <div className="rounded-md border p-2">
@@ -106,21 +85,10 @@ export default function WooCommerce() {
                         </div>
                         <div className="flex-1">
                           <div className="text-sm">Cap</div>
-                          <div className="text-xs text-gray-500">$18.00</div>
+                          <div className="text-xs text-gray-500">P18.00</div>
                         </div>
                         <div className="text-sm">P18.00</div>
                       </div>
-
-                      {/* <div className="flex items-center gap-3 mb-3">
-                        <div className="w-10 h-10 bg-gray-200 rounded-md flex items-center justify-center">
-                          <span className="text-xs">👕</span>
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-sm">Regular with Logo</div>
-                          <div className="text-xs text-gray-500">$35.00</div>
-                        </div>
-                        <div className="text-sm">$35.00</div>
-                      </div> */}
 
                       <div className="flex items-center gap-3">
                         <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gray-200">
@@ -128,7 +96,7 @@ export default function WooCommerce() {
                         </div>
                         <div className="flex-1">
                           <div className="text-sm">T-Shirt</div>
-                          <div className="text-xs text-gray-500">$18.00</div>
+                          <div className="text-xs text-gray-500">P18.00</div>
                         </div>
                         <div className="text-sm">P18.00</div>
                       </div>
@@ -139,34 +107,6 @@ export default function WooCommerce() {
                         <div className="text-sm">Subtotal</div>
                         <div className="text-sm">P71.00</div>
                       </div>
-
-                      {/* <div className="flex items-center justify-between mb-2">
-                        <div className="text-sm">Coupon code?</div>
-                        <div className="text-sm">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="lucide lucide-chevron-down"
-                          >
-                            <path d="m6 9 6 6 6-6" />
-                          </svg>
-                        </div>
-                      </div> */}
-
-                      {/* <div className="flex justify-between mb-2">
-                        <div className="text-sm">Shipping</div>
-                        <div className="text-sm">$18.00</div>
-                      </div>
-                      <div className="text-xs text-gray-500 mb-2">
-                        via USPS Priority
-                      </div> */}
 
                       <div className="mb-2 flex justify-between">
                         <div className="text-sm">Sales tax (14%)</div>

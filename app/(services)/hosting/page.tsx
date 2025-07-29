@@ -10,13 +10,13 @@ export default function Websites() {
   return (
     <div className="pb-20">
       <Header />
-      <LogoPanel />
+
       {/* <PricingWebsites /> */}
       <SetupAccount />
       <PricingPlans plan="hosting" />
 
       <HostingFeatures />
-
+      <LogoPanel />
       <Consultation />
       <FaqsWebsites />
     </div>

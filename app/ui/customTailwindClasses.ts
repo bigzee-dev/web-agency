@@ -9,12 +9,12 @@ export const sectionSubHeadings =
   "text-[1.06rem] leading-relaxed text-gray-600";
 
 export const btnDimensions =
-  "text-center font-sans py-2.5 md:py-[0.66rem] px-3 w-max min-w-44 text-base font-medium md:text-[1.01rem]  rounded-[0.62rem]";
+  "text-center font-sans py-2.5 md:py-[0.65rem] px-3 w-max min-w-44 text-base font-medium md:text-[1.01rem]  rounded-[0.62rem] hover:cursor";
 
 export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 
 export const grayButton = ` ${btnDimensions} text-white bg-gray-800`;
 
-export const whiteButton = ` ${btnDimensions} text-gray-900 bg-[#faf9f5] `;
+export const whiteButton = ` ${btnDimensions} text-secondary bg-[#faf9f5] `;
 
 export const greenButton = ` ${btnDimensions} text-gray-900 bg-blue-400`;

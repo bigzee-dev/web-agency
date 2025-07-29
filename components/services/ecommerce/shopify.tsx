@@ -4,8 +4,8 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function Shopify() {
   return (
-    <div className="w-full max-w-7xl mx-auto py-12">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+    <div className="mx-auto w-full max-w-7xl pb-16 pt-12">
+      <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
         {/* Left Column - Text Content */}
         <div className="space-y-6">
           <div>
@@ -16,11 +16,11 @@ export default function Shopify() {
             />
           </div>
           <h1
-            className={` ${montserrat.className} text-4xl md:text-5xl font-bold text-slate-900 `}
+            className={` ${montserrat.className} text-4xl font-bold text-slate-900 md:text-5xl`}
           >
             Shopify
           </h1>
-          <p className="font-sans text-gray-700 leading-relaxed">
+          <p className="font-sans leading-relaxed text-gray-700">
             Shopify is a prominent player in the realm of e-commerce software.
             We greatly appreciate working with Shopify due to its ability to
             prioritise user experience while seamlessly managing all other
@@ -32,24 +32,24 @@ export default function Shopify() {
 
         {/* Right Column - Dashboard */}
         <div className="relative">
-          <div className="bg-indigo-100 rounded-3xl p-6 md:p-8 relative overflow-hidden">
+          <div className="relative overflow-hidden rounded-3xl bg-neutral-900/20 p-6 md:p-8">
             {/* Floating Icons */}
-            <div className="absolute top-6 right-40 bg-slate-700 rounded-full p-3 shadow-lg z-50">
-              <TicketIcon className="w-6 h-6 text-white" />
+            <div className="absolute right-40 top-6 z-50 rounded-full bg-slate-700 p-3 shadow-lg">
+              <TicketIcon className="h-6 w-6 text-white" />
             </div>
-            <div className="absolute top-16 left-44 bg-slate-700 rounded-full p-3 shadow-lg z-50">
-              <RefreshCw className="w-6 h-6 text-white" />
+            <div className="absolute left-44 top-16 z-50 rounded-full bg-slate-700 p-3 shadow-lg">
+              <RefreshCw className="h-6 w-6 text-white" />
             </div>
-            <div className="absolute top-56 right-20 bg-slate-700 rounded-full p-3 shadow-lg z-50">
-              <Edit3 className="w-6 h-6 text-white" />
+            <div className="absolute right-20 top-56 z-50 rounded-full bg-slate-700 p-3 shadow-lg">
+              <Edit3 className="h-6 w-6 text-white" />
             </div>
 
             {/* Phone Mockup */}
-            <div className="relative mx-auto max-w-xs md:max-w-sm mt-12 mb-4">
-              <div className="bg-gray-800 rounded-[32px] p-3 shadow-xl">
-                <div className="bg-gray-800 rounded-[28px] overflow-hidden">
+            <div className="relative mx-auto mb-4 mt-12 max-w-xs md:max-w-sm">
+              <div className="rounded-[32px] bg-gray-800 p-3 shadow-xl">
+                <div className="overflow-hidden rounded-[28px] bg-gray-800">
                   {/* Phone Status Bar */}
-                  <div className="bg-white px-4 py-2 flex justify-between items-center">
+                  <div className="flex items-center justify-between bg-white px-4 py-2">
                     <span className="text-xs font-medium text-gray-800">
                       9:41
                     </span>
@@ -57,12 +57,12 @@ export default function Shopify() {
 
                   {/* Phone Content */}
                   <div className="bg-white p-4">
-                    <h3 className="text-lg font-medium mb-4">
+                    <h3 className="mb-4 text-lg font-medium">
                       Sales over time
                     </h3>
 
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="bg-gray-100 p-1 rounded">
+                    <div className="mb-2 flex items-center gap-2">
+                      <div className="rounded bg-gray-100 p-1">
                         <svg
                           width="16"
                           height="16"
@@ -101,11 +101,11 @@ export default function Shopify() {
                       <span className="text-sm">Feb 26-Mar 26, 2023</span>
                     </div>
 
-                    <div className="h-40 relative mb-4">
+                    <div className="relative mb-4 h-40">
                       <div className="absolute inset-0">
                         {/* Chart Placeholder */}
                         <svg
-                          className="w-full h-full"
+                          className="h-full w-full"
                           viewBox="0 0 300 120"
                           preserveAspectRatio="none"
                         >
@@ -123,7 +123,7 @@ export default function Shopify() {
                       <div className="absolute left-0 top-1/2 -translate-y-1/2 text-xs text-gray-500">
                         $1k
                       </div>
-                      <div className="absolute left-0 bottom-0 text-xs text-gray-500">
+                      <div className="absolute bottom-0 left-0 text-xs text-gray-500">
                         $0k
                       </div>
                     </div>
@@ -139,22 +139,22 @@ export default function Shopify() {
             </div>
 
             {/* Floating Card */}
-            <Card className="absolute top-10 right-4 md:right-8 w-64 md:w-72 bg-background shadow-xl rounded-xl">
+            <Card className="absolute right-4 top-10 w-64 rounded-xl border border-gray-600 bg-background shadow-xl md:right-8 md:w-72">
               <CardContent className="p-4">
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center">
+                  <div className="flex items-center justify-between">
                     <h3 className="font-medium">Total sales</h3>
                     <a
                       href="#"
-                      className="text-blue-600 text-sm flex items-center"
+                      className="flex items-center text-sm text-blue-600"
                     >
-                      View report <ArrowUpRight className="ml-1 w-3 h-3" />
+                      View report <ArrowUpRight className="ml-1 h-3 w-3" />
                     </a>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <span className="text-2xl font-bold">P4,102.98</span>
-                    <span className="text-rose-500 text-sm font-medium bg-rose-50 px-1.5 py-0.5 rounded">
+                    <span className="rounded bg-rose-50 px-1.5 py-0.5 text-sm font-medium text-rose-500">
                       ↑ 21%
                     </span>
                   </div>
@@ -164,7 +164,7 @@ export default function Shopify() {
                       <span>Online store</span>
                       <div className="flex items-center gap-2">
                         <span>P3,449.29</span>
-                        <span className="text-rose-500 text-xs font-medium bg-rose-50 px-1 py-0.5 rounded">
+                        <span className="rounded bg-rose-50 px-1 py-0.5 text-xs font-medium text-rose-500">
                           ↑ 25%
                         </span>
                       </div>
@@ -174,7 +174,7 @@ export default function Shopify() {
                       <span>Shop</span>
                       <div className="flex items-center gap-2">
                         <span>P581.69</span>
-                        <span className="text-emerald-500 text-xs font-medium bg-emerald-50 px-1 py-0.5 rounded">
+                        <span className="rounded bg-emerald-50 px-1 py-0.5 text-xs font-medium text-emerald-500">
                           ↑ 2%
                         </span>
                       </div>
@@ -184,7 +184,7 @@ export default function Shopify() {
                       <span>Subscriptions</span>
                       <div className="flex items-center gap-2">
                         <span>P72.00</span>
-                        <span className="text-emerald-500 text-xs font-medium bg-emerald-50 px-1 py-0.5 rounded">
+                        <span className="rounded bg-emerald-50 px-1 py-0.5 text-xs font-medium text-emerald-500">
                           ↑ 14%
                         </span>
                       </div>
@@ -192,13 +192,13 @@ export default function Shopify() {
                   </div>
 
                   <div className="pt-2">
-                    <h4 className="text-xs uppercase text-gray-500 font-medium mb-2">
+                    <h4 className="mb-2 text-xs font-medium uppercase text-gray-500">
                       SALES OVER TIME
                     </h4>
-                    <div className="h-20 relative">
+                    <div className="relative h-20">
                       {/* Chart Placeholder */}
                       <svg
-                        className="w-full h-full"
+                        className="h-full w-full"
                         viewBox="0 0 300 80"
                         preserveAspectRatio="none"
                       >
@@ -211,13 +211,13 @@ export default function Shopify() {
                       </svg>
                     </div>
 
-                    <div className="flex items-center gap-4 mt-2">
+                    <div className="mt-2 flex items-center gap-4">
                       <div className="flex items-center gap-1">
-                        <div className="w-3 h-1 bg-blue-500 rounded"></div>
+                        <div className="h-1 w-3 rounded bg-blue-500"></div>
                         <span className="text-xs">Feb 26-Mar 26, 2023</span>
                       </div>
                       <div className="flex items-center gap-1 text-gray-400">
-                        <div className="w-3 h-1 bg-gray-300 rounded"></div>
+                        <div className="h-1 w-3 rounded bg-gray-300"></div>
                         <span className="text-xs">Jan 25-Feb 25, 2023</span>
                       </div>
                     </div>
