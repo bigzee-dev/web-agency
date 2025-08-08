@@ -38,6 +38,9 @@
   font-size: 1.7rem;
 }
 
+.nav-menu {
+}
+
 .nav-menu-stylingcontainer {
   display: flex;
   list-style: none;
@@ -77,9 +80,9 @@
 
 .client-login {
   position: relative;
-  margin-left: 2rem;
-  padding: 8px 8px;
-  border-radius: 9px;
+  margin-left: 0.5rem;
+  padding: 8px 10px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,9 +98,8 @@
   position: absolute;
   top: 100%;
   left: 0;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: rgb(51, 51, 51);
-  border-radius: 4px;
   min-width: 250px;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -127,8 +129,22 @@
 }
 
 .dropdown-item:hover {
-  color: red;
-  transition: color 0.3s;
+  background-color: #005878;
+  color: white;
+}
+
+.dropdown-item-link {
+  display: flex;
+  align-items: center;
+  column-gap: 0.625rem;
+  white-space: nowrap;
+  color: #fafafa; /* neutral-50 */
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.dropdown-item-link span {
+  color: #93c5fd; /* blue-300 */
 }
 
 .hamburger {
@@ -238,7 +254,7 @@
   }
 
   .dropdown-menu > :last-child {
-    /* styles for the first child */
+    /* styles for the last child */
     margin-bottom: 0.5rem;
   }
 

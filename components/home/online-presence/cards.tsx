@@ -93,7 +93,7 @@ export default function Home() {
                   key={linkIndex}
                   href={link.href}
                   className={clsx(
-                    "inline-flex rounded-lg border border-gray-600/50 bg-[#202734] px-4 py-1.5 font-sans text-neutral-100 transition-colors hover:bg-gray-700",
+                    "inline-flex rounded-lg border border-gray-600/50 bg-[#5e6368] px-4 py-1.5 font-sans text-neutral-100 transition-colors hover:bg-gray-700",
                     link.text === "Emails" && "bg-[#111827]",
                   )}
                 >

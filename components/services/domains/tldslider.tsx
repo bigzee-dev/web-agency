@@ -32,7 +32,7 @@ export default function TldSlider() {
       <div className="group relative m-auto max-w-7xl">
         <div className="flex flex-col items-center md:flex-row">
           <div className="md:max-w-44 md:pr-6">
-            <p className="text-center font-sans text-sm font-semibold uppercase text-blue-400">
+            <p className="text-center font-sans text-xs font-semibold uppercase text-blue-400">
               Powering the best Teams
             </p>
           </div>

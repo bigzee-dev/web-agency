@@ -9,7 +9,7 @@ export const sectionSubHeadings =
   "text-[1.06rem] leading-relaxed text-gray-600";
 
 export const btnDimensions =
-  "text-center font-sans py-2.5 md:py-[0.65rem] px-3 w-max min-w-44 text-base font-medium md:text-[1.01rem]  rounded-[0.62rem] hover:cursor";
+  "text-center font-sans py-2.5 md:py-[0.67rem] px-3 w-max min-w-44 text-base font-medium md:text-[1.01rem]  rounded-[0.62rem] hover:pointer";
 
 export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 

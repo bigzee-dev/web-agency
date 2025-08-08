@@ -67,6 +67,9 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="rounded-2xl bg-gray-200/65">
               <CardContent className="flex h-full flex-col justify-between p-6">
+                <p className="mb-4 font-sans text-md leading-6 text-gray-700">
+                  {testimonial.quote}
+                </p>
                 <div className="mb-4 flex items-center gap-4 justify-self-center">
                   <div className="relative h-16 w-16 overflow-hidden rounded-full bg-gray-300">
                     <Image
@@ -78,21 +81,17 @@ export default function Testimonials() {
                   </div>
                   <div>
                     <h3
-                      className={` ${montserrat.className} text-2xl font-semibold text-gray-900`}
+                      className={` ${montserrat.className} text-xl font-bold text-gray-800`}
                     >
                       {testimonial.name}
                     </h3>
                   </div>
                 </div>
-                <p className="mb-4 text-md leading-6 text-gray-700">
-                  {testimonial.quote}
-                </p>
-
                 <div className="border-t border-gray-400/70 pt-4">
                   <div className="mb-1 text-4xl font-bold text-primary">
                     {testimonial.metric}
                   </div>
-                  <p className="font-sans text-xs font-medium text-gray-800">
+                  <p className="font-sans text-xs uppercase text-secondary">
                     {testimonial.metricLabel}
                   </p>
                 </div>

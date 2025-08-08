@@ -81,7 +81,7 @@ export default function Header() {
               <div className="mt-4 grid grid-cols-2 gap-y-5">
                 {offers.map((offer) => (
                   <div className="flex flex-col gap-1.5" key={offer.title}>
-                    <h6 className="flex items-center gap-2 font-medium tracking-wide text-neutral-200/90">
+                    <h6 className="flex items-center gap-2 font-medium tracking-wide text-blue-400">
                       <div
                         className={`mr-0.5 rounded-lg bg-white/10 p-2 text-blue-400 outline outline-1 outline-gray-500/50`}
                       >
