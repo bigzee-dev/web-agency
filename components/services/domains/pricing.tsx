@@ -83,7 +83,7 @@ export default function DomainPricingTable() {
     <div className="mx-auto w-full max-w-5xl pb-16 pt-4">
       <h2 className={sectionHeadings}>Available Tld&apos;s</h2>
       {/* Header Section */}
-      <div className="mt-12 grid grid-cols-1 rounded-t-2xl bg-primary text-white md:grid-cols-4">
+      <div className="mt-12 grid grid-cols-1 rounded-t-2xl bg-slate-700 text-white md:grid-cols-4">
         {[
           {
             icon: <Box className="h-6 w-6" />,
@@ -110,8 +110,10 @@ export default function DomainPricingTable() {
             key={index}
             className="flex flex-col items-center p-6 text-center"
           >
-            <h3 className="mb-1 text-xl font-semibold">{item.title}</h3>
-            <p className="text-sm text-gray-100">{item.description}</p>
+            <h3 className="mb-1 text-xl font-semibold text-neutral-100">
+              {item.title}
+            </h3>
+            <p className="text-sm text-neutral-300">{item.description}</p>
           </div>
         ))}
       </div>
@@ -121,10 +123,18 @@ export default function DomainPricingTable() {
         <Table>
           <TableHeader className="bg-gray-50">
             <TableRow className="hidden md:table-row">
-              <TableHead className="w-1/4 text-center">Domain</TableHead>
-              <TableHead className="w-1/4 text-center">Registration</TableHead>
-              <TableHead className="w-1/4 text-center">Transfer</TableHead>
-              <TableHead className="w-1/4 text-center">Renewal</TableHead>
+              <TableHead className="w-1/4 text-center text-gray-600">
+                Domain
+              </TableHead>
+              <TableHead className="w-1/4 text-center text-gray-600">
+                Registration
+              </TableHead>
+              <TableHead className="w-1/4 text-center text-gray-600">
+                Transfer
+              </TableHead>
+              <TableHead className="w-1/4 text-center text-gray-600">
+                Renewal
+              </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

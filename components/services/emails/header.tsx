@@ -11,7 +11,7 @@ export default function Header() {
       <div className="inset-0 w-full bg-gradient-to-r from-gray-900 via-primary to-slate-600">
         <div className="relative isolate mx-auto max-w-7xl overflow-hidden">
           <div className="grid grid-cols-12 gap-16">
-            <div className="col-span-6 py-12">
+            <div className="col-span-6 py-16">
               {/* Email badge */}
               <div className="inline-block">
                 <span className="font-semibold tracking-widest text-neutral-300">
@@ -45,7 +45,7 @@ export default function Header() {
 
               <Link
                 href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/business-email`}
-                className={` ${whiteButton} mt-2 inline-block`}
+                className={` ${whiteButton} mt-4 inline-block`}
               >
                 Compare Plans
               </Link>

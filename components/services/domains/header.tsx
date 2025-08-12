@@ -10,7 +10,7 @@ import SearchDomainForm from "./searchdomainform";
 export default function Header() {
   return (
     <div className="relative w-full bg-gray-900">
-      <div className="inset-0 w-full bg-gradient-to-r from-secondary via-secondary/60 to-transparent pb-2 pt-12">
+      <div className="inset-0 w-full bg-gradient-to-r from-transparent via-secondary/60 to-secondary pb-2 pt-16">
         <div className="mx-auto max-w-7xl">
           <div className="max-full grid grid-cols-12 gap-10">
             <div className="col-span-6">

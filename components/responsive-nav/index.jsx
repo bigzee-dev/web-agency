@@ -5,15 +5,27 @@ import { NavChevron } from "./chevron";
 import useResponsiveNav from "@/app/hooks/useResponsiveNav";
 import {
   WebsiteIcon,
-  ShoppingBagIcon,
   WebAppIcon,
+  ShoppingBagIcon,
+  EmailIcon,
+  WebMailIcon,
   ServerStackIcon,
-  AtSymbolIcon,
-  ClipboardCopyIcon,
-  ArrowPathIcon,
-  DocumentTextIcon,
   MouseClickIcon,
-} from "../icons";
+  DomainIcon,
+  ClipboardCopyIcon,
+  DocumentTextIcon,
+  ArrowPathIcon,
+  InfoIcon,
+  BookIcon,
+  ListIcon,
+  LoginIcon,
+  RegisterIcon,
+  DashboardIcon,
+  OpenTicketIcon,
+  TicketsIcon,
+  KnowledgebaseIcon,
+  ChatIcon,
+} from "../nav-icons";
 import Link from "next/link";
 
 export default function ResponsiveNav() {
@@ -22,7 +34,7 @@ export default function ResponsiveNav() {
   return (
     <nav className="x-padding navbar border-b border-gray-300/70">
       <div className="navbar-container">
-        <Link className="logo-container mr-6" href="/">
+        <Link className="logo-container mr-6 text-neutral-800" href="/">
           {" "}
           {/* Updated href to be relative */}
           <img src="/logo/logo-500x500.png" alt="BigZee Digital Logo" />{" "}
@@ -81,13 +93,36 @@ export default function ResponsiveNav() {
               </div>
             </li>
             <li className="nav-item">
-              <Link
-                href="/emails"
-                className={` ${montserrat.className} nav-link`}
+              <div
+                className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
                 {/* Changed to Link */}
                 Email
-              </Link>
+                <span className="chevron text-neutral-700">
+                  <NavChevron />
+                </span>
+              </div>
+              <div className="dropdown-menu">
+                <Link href="/emails" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <EmailIcon size="size-5" />
+                    </span>
+                    Business Email
+                  </div>{" "}
+                </Link>
+                <Link
+                  href="https://webmail.bigzee.app"
+                  className="dropdown-item"
+                >
+                  <div className="dropdown-item-link">
+                    <span>
+                      <WebMailIcon size="size-5" />
+                    </span>
+                    WebMail Login
+                  </div>{" "}
+                </Link>
+              </div>
             </li>
             <li className="nav-item">
               <div
@@ -130,7 +165,7 @@ export default function ResponsiveNav() {
                 <Link href="/domains" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
-                      <AtSymbolIcon size="size-5" />
+                      <DomainIcon size="size-5" />
                     </span>
                     Domain Names
                   </div>
@@ -181,13 +216,28 @@ export default function ResponsiveNav() {
               </div>
               <div className="dropdown-menu">
                 <Link href="/about-us" className="dropdown-item">
-                  About Us
+                  <div className="dropdown-item-link">
+                    <span>
+                      <InfoIcon size="size-5" />
+                    </span>
+                    About Us
+                  </div>
                 </Link>
                 <Link href="/blog-posts" className="dropdown-item">
-                  Blog
+                  <div className="dropdown-item-link">
+                    <span>
+                      <BookIcon size="size-5" />
+                    </span>
+                    Blog
+                  </div>
                 </Link>
                 <Link href="/terms-conditions" className="dropdown-item">
-                  Terms & Conditions
+                  <div className="dropdown-item-link">
+                    <span>
+                      <ListIcon size="size-5" />
+                    </span>
+                    Terms & Conditions
+                  </div>
                 </Link>
               </div>
             </li>
@@ -201,8 +251,26 @@ export default function ResponsiveNav() {
                 </span>
               </div>
               <div className="dropdown-menu">
+                <a
+                  href="https://domains.bigzee.app/clientarea.php"
+                  className="dropdown-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="dropdown-item-link">
+                    <span>
+                      <LoginIcon size="size-5" />
+                    </span>
+                    Login
+                  </div>
+                </a>
                 <Link href="/contact-us" className="dropdown-item">
-                  Contact Us
+                  <div className="dropdown-item-link">
+                    <span>
+                      <RegisterIcon size="size-5" />
+                    </span>
+                    Register
+                  </div>
                 </Link>
                 <a
                   href="https://domains.bigzee.app/clientarea.php"
@@ -210,30 +278,42 @@ export default function ResponsiveNav() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {" "}
-                  {/* Assuming external */}
-                  Login
-                </a>
-                <a
-                  href="https://domains.bigzee.app/clientarea.php"
-                  className="dropdown-item"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  {/* Assuming external */}
-                  My Services
+                  <div className="dropdown-item-link">
+                    <span>
+                      <DashboardIcon size="size-5" />
+                    </span>
+                    Dashboard
+                  </div>
                 </a>
                 <Link href="/support/open-ticket" className="dropdown-item">
-                  {" "}
-                  {/* Assuming internal */}
-                  Open Ticket
+                  <div className="dropdown-item-link">
+                    <span>
+                      <OpenTicketIcon size="size-5" />
+                    </span>
+                    Open Ticket
+                  </div>
                 </Link>
                 <Link href="/support/tickets" className="dropdown-item">
-                  {" "}
-                  {/* Assuming internal */}
-                  Tickets
+                  <div className="dropdown-item-link">
+                    <span>
+                      <TicketsIcon size="size-5" />
+                    </span>
+                    Tickets
+                  </div>
                 </Link>
+                <a
+                  href="https://domains.bigzee.app/clientarea.php"
+                  className="dropdown-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="dropdown-item-link">
+                    <span>
+                      <KnowledgebaseIcon size="size-5" />
+                    </span>
+                    Knowledgebase
+                  </div>
+                </a>
               </div>
             </li>
             <li className="nav-item block lg:hidden">
@@ -267,20 +347,7 @@ export default function ResponsiveNav() {
             href=""
             className="box-border flex items-center justify-center gap-x-1 rounded-[10px] border-2 border-gray-800 bg-neutral-100 px-[10px] py-[8px] text-xs font-medium uppercase text-gray-800"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
-              />
-            </svg>
+            <ChatIcon size="size-5" />
             Contact us
           </Link>
           <div className="client-login box-border border-2 border-transparent bg-primary text-white">
@@ -288,18 +355,7 @@ export default function ResponsiveNav() {
               href="https://domains.bigzee.app/clientarea.php"
               className={` ${montserrat.className} flex items-center justify-center gap-x-1 text-xs font-medium`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="size-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6Zm10.72 4.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 1 1-1.06-1.06l1.72-1.72H9a.75.75 0 0 1 0-1.5h10.94l-1.72-1.72a.75.75 0 0 1 0-1.06Z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <LoginIcon size="size-5" />
               CLIENT ZONE
             </a>
           </div>

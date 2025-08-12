@@ -62,7 +62,7 @@ export default function Header() {
         </div>
       </div>
       <div className="inset-0 w-full">
-        <div className="mx-auto grid max-w-7xl grid-cols-12 py-12">
+        <div className="mx-auto grid max-w-7xl grid-cols-12 py-16">
           <div className="col-span-6">
             {/* Shared hosting badge */}
             <div className="inline-block">
@@ -77,7 +77,7 @@ export default function Header() {
               Top quality web hosting plans
             </h1>
 
-            <div className="mt-7">
+            <div className="mt-9">
               <div className="mt-4 grid grid-cols-2 gap-y-5">
                 {offers.map((offer) => (
                   <div className="flex flex-col gap-1.5" key={offer.title}>
@@ -98,7 +98,7 @@ export default function Header() {
               </div>
               <Link
                 href=""
-                className={` ${whiteButton} mt-8 flex items-center justify-center`}
+                className={` ${whiteButton} mt-10 flex items-center justify-center`}
               >
                 Compare Plans
               </Link>

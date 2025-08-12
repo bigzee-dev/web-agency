@@ -14,16 +14,16 @@ export default function Websites() {
           src="/img/websites/male-phone-hq.jpg"
           alt="Background image of person using mobile device"
           fill
-          className="object-cover object-right grayscale filter"
+          className="object-cover object-right"
           priority
         />
 
         {/* Content overlay */}
-        <div className="absolute inset-0 grid bg-black/30 lg:grid-cols-2">
+        <div className="absolute inset-0 grid bg-gray-900/30 lg:grid-cols-2">
           <div className="col-span-1 bg-secondary"></div>
           <div className="col-span-1 bg-transparent"></div>
         </div>
-        <div className="absolute inset-0 mx-auto w-full max-w-7xl py-12">
+        <div className="absolute inset-0 mx-auto w-full max-w-7xl py-16">
           <div className="w-full pr-12 lg:w-[50%]">
             {/* Websites badge */}
             <div className="inline-block">

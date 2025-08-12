@@ -30,10 +30,12 @@ export default function DomainSearch() {
   };
 
   return (
-    <div className="flex w-full flex-col px-4 py-9 sm:px-4 md:px-16">
-      <div className="flex items-center gap-2">
-        <div className="flex items-center justify-center rounded-lg bg-yellow-500/10 p-2">
-          <AtSign className="h-6 w-6 text-yellow-500/75" />
+    <div className="flex h-full w-full flex-col gap-y-7 px-4 py-9 sm:px-4 md:px-16">
+      <div className="flex items-center gap-x-3">
+        <div
+          className={`inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-primary via-cyan-700 to-secondary p-3`}
+        >
+          <AtSign className="h-6 min-h-6 text-neutral-300" />
         </div>
         <h4
           className={` ${notoSans.className} text-xl font-medium text-neutral-300`}
@@ -41,11 +43,7 @@ export default function DomainSearch() {
           Domain Name Registration
         </h4>
       </div>
-      <span className="mt-4 font-sans text-sm font-normal text-blue-400">
-        * Securing the ideal domain name is a crucial first step in establishing
-        your presence online.
-      </span>
-      <form onSubmit={handleRedirect} className="mt-2 flex w-full gap-2">
+      <form onSubmit={handleRedirect} className="flex h-auto w-full gap-2">
         <Input
           type="text"
           value={domain}
@@ -58,13 +56,15 @@ export default function DomainSearch() {
         <Button
           type="button"
           onClick={handleRedirect}
-          className="min-w-28 rounded-lg border border-secondary bg-neutral-200 font-sans text-md font-medium text-secondary transition duration-300 ease-in-out hover:bg-neutral-100 hover:text-blue-600 md:min-w-40"
+          className="min-w-28 rounded-lg bg-[#5e6368] py-1.5 font-sans text-base font-normal text-neutral-100 transition duration-300 ease-in-out md:min-w-40"
         >
           <Search />
           Search
         </Button>
       </form>
-      <Slider />
+      <div className="mt-auto">
+        <Slider />
+      </div>
     </div>
   );
 }

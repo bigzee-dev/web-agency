@@ -71,11 +71,11 @@ export default function Home() {
           )}
         >
           <div className="flex h-full flex-col gap-y-5">
-            <div className="flex items-center gap-x-2">
+            <div className="flex items-center gap-x-3">
               <div
-                className={` ${card.backgroundColor} inline-flex items-center justify-center rounded-lg p-3`}
+                className={`inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-primary via-cyan-700 to-secondary p-3`}
               >
-                <card.icon className={`h-6 w-6 ${card.iconColor} `} />
+                <card.icon className={`h-6 w-6 text-neutral-300`} />
               </div>
               <h2
                 className={` ${notoSans.className} text-xl font-medium text-neutral-300`}
@@ -94,7 +94,7 @@ export default function Home() {
                   href={link.href}
                   className={clsx(
                     "inline-flex rounded-lg border border-gray-600/50 bg-[#5e6368] px-4 py-1.5 font-sans text-neutral-100 transition-colors hover:bg-gray-700",
-                    link.text === "Emails" && "bg-[#111827]",
+                    link.text === "Emails" && "bg-[#5e6368]",
                   )}
                 >
                   {link.text}

@@ -18,7 +18,7 @@ export default function Importance() {
     {
       title: "Brand Protection & Growth",
       description:
-        "Owning your domain secures your brand, keeps competitors out, and grows in value as your business expands.",
+        "Securing the ideal domain name is a crucial first step in establishing your online presence.",
     },
   ];
 
@@ -31,7 +31,7 @@ export default function Importance() {
   return (
     <section className="w-full bg-gradient-to-br from-slate-50 to-white py-16 md:py-24 md:pb-20">
       <div className="mx-auto max-w-7xl px-4 md:px-4">
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center">
           {/* <Badge variant="outline" className="mb-4 text-sm font-medium">
             Domain Strategy
           </Badge> */}
@@ -51,13 +51,13 @@ export default function Importance() {
         <div className="mb-8 grid gap-x-16 lg:grid-cols-2">
           <div className="relative">
             <div className="relative overflow-hidden">
-              <div className="relative z-10">
+              <div className="relative z-10 flex items-center justify-center">
                 <Image
-                  src="/img/domains/domain-design.jpg"
+                  src="/img/domains/nice-design.png"
                   alt="img"
-                  width={1075}
-                  height={716}
-                  className="h-[22rem] object-cover"
+                  width={614}
+                  height={409}
+                  className="h-[21rem] w-auto object-cover"
                 />
               </div>
             </div>
@@ -67,11 +67,11 @@ export default function Importance() {
               <div key={index} className="flex items-start gap-x-4">
                 <FaCircleCheck
                   aria-hidden="true"
-                  className="mt-[0.15rem] h-auto w-6 flex-none text-primary"
+                  className="mt-[0.25rem] h-auto w-5 flex-none text-slate-700"
                 />
                 <div className="space-y-1.5">
                   <h3
-                    className={`${montserrat.className} flex items-center text-xl font-bold text-gray-800 md:text-xl`}
+                    className={`${montserrat.className} flex items-center text-xl font-bold text-primary md:text-xl`}
                   >
                     {benefit.title}
                   </h3>

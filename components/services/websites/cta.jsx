@@ -54,7 +54,7 @@ export default function CTA() {
                 {/* Header */}
                 <div className="mx-auto mb-16 max-w-2xl text-center">
                   <h2 className="mb-6 text-4xl font-bold md:text-5xl lg:text-5xl">
-                    Trusted by creators worldwide
+                    Trusted by Proffesionals countrywide
                   </h2>
                   <p className="mx-auto max-w-2xl text-lg text-slate-300 md:text-xl">
                     Lorem ipsum dolor sit amet consectetur adipisicing possimus.
