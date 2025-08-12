@@ -53,11 +53,19 @@ export default function useResponsiveNav() {
 
       if (!currentDropdownMenu) return;
 
+      // Only close others, not the current one
       if (currentDropdownMenu.classList.contains("show")) {
         currentDropdownMenu.classList.remove("show");
         if (chevron) chevron.style.transform = "rotate(0)";
       } else {
-        closeAllDropdowns(); // Close others before opening current
+        // Close all except the current one
+        dropdownMenus.forEach((menu, idx) => {
+          if (menu !== currentDropdownMenu) menu.classList.remove("show");
+          if (navLinksWithDropdown[idx]) {
+            const chev = navLinksWithDropdown[idx].querySelector(".chevron");
+            if (chev) chev.style.transform = "rotate(0)";
+          }
+        });
         currentDropdownMenu.classList.add("show");
         if (chevron) chevron.style.transform = "rotate(180deg)";
       }

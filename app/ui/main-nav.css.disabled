@@ -5,7 +5,9 @@
   top: 0;
   background-color: white;
   z-index: 1000;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 /* Add shadow when scrolled */
@@ -183,7 +185,9 @@
   left: 0;
   width: 24px;
   height: 24px;
-  transition: opacity 0.3s, transform 0.3s;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
 }
 
 .cst-nav-menu-toggle .cst-nav-close-icon {
@@ -268,7 +272,10 @@
     visibility: visible;
     transform: none;
     box-shadow: none;
-    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease,
+      padding 0.3s ease;
     padding: 0 1rem;
   }
 

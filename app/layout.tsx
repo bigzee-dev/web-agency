@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/ui/global.css";
-import "@/app/ui/main-nav.css";
+// import "@/app/ui/main-nav.css";
 import "@/app/ui/claudenav.css";
 import { inter } from "@/app/ui/fonts";
 import ResponsiveNav from "@/components/responsive-nav";

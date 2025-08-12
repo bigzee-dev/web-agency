@@ -8,6 +8,7 @@ import Link from "next/link";
 export default function Websites() {
   return (
     <>
+      {/* Desktop Header */}
       <div className="relative hidden h-[35rem] w-full overflow-hidden lg:block">
         {/* Background image */}
         <Image
@@ -62,7 +63,7 @@ export default function Websites() {
           </div>
         </div>
       </div>
-
+      {/* Mobile Header */}
       <div className="flex h-auto w-full flex-col lg:hidden">
         {/* Content overlay */}
 

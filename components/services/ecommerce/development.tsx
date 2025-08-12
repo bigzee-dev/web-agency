@@ -50,7 +50,7 @@ export default function Development() {
     <section className="x-padding mx-auto max-w-6xl py-20 sm:px-6 lg:px-8">
       <div className="mb-14 space-y-3">
         <h2
-          className={`${montserrat.className} max-w-2xl text-5xl font-bold leading-tight text-gray-800`}
+          className={`${montserrat.className} max-w-2xl text-4xl font-bold leading-tight text-gray-800 md:text-5xl`}
         >
           Ecommerce Website
           <div className="relative mt-1 inline-block rotate-1">

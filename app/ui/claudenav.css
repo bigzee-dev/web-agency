@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0;
+  /* padding: 0 0; cmt-out 12/08/25 */
   height: 65px;
   max-width: 80rem;
   margin: 0 auto;
@@ -141,7 +141,7 @@
 .dropdown-item-link {
   display: flex;
   align-items: center;
-  column-gap: 0.65rem;
+  column-gap: 0.7rem;
   white-space: nowrap;
   color: #fafafa; /* neutral-50 */
   padding-left: 1.25rem;
@@ -188,9 +188,10 @@
     padding: 0 1rem;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.25s ease-in-out;
+    transition: max-height 0.1s ease-in-out;
     z-index: 10;
-    border-bottom: 1px solid rgb(197, 197, 197);
+    /* border-bottom: 1px solid rgb(197, 197, 197); com-out 12/08/25*/
+    transform: none;
   }
 
   .nav-menu.active {
@@ -201,7 +202,7 @@
   .nav-menu-stylingcontainer {
     width: 100%;
     padding: 1rem 0rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
     flex-direction: column;
     align-items: flex-start;
     background-color: white;
@@ -218,6 +219,7 @@
     width: 100%;
     padding: 15px 24px;
     justify-content: space-between;
+    column-gap: 1rem;
     font-size: 1rem;
     font-weight: 600;
   }
@@ -226,7 +228,7 @@
     display: block;
     background-color: #005878;
     color: white !important;
-    padding: 9px 9px;
+    padding: 8px 12px;
     border-radius: 9px;
     display: flex;
     align-items: center;
@@ -241,11 +243,11 @@
     box-shadow: none;
     max-height: 0;
     overflow: hidden;
-    opacity: 1;
+    /* opacity: 1; commented out 12/08/25*/
     visibility: visible;
     transform: translateY(0);
-    transition: max-height 0.25s ease-in-out;
-    background-color: #404040;
+    transition: max-height 0.2s ease-in-out;
+    background-color: #1f2937;
     border-radius: 0;
   }
 
@@ -255,17 +257,23 @@
 
   .dropdown-menu > :first-child {
     /* styles for the first child */
-    margin-top: 0.5rem;
+    margin-top: 0.7rem;
   }
 
   .dropdown-menu > :last-child {
     /* styles for the last child */
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
   }
 
+  /* Alternate row background color */
+  /* .dropdown-menu > :nth-child(2n) {
+    background-color: rgb(55 65 81); /* This is Tailwind's gray-700 */
+  /*} */
+
   .dropdown-item {
-    padding-left: 40px;
-    font-size: 1rem;
+    padding: 0.6rem 0;
+    padding-left: 22px;
+    font-size: 0.94rem;
     font-weight: 500;
   }
 
@@ -275,6 +283,11 @@
 
   .hamburger.active {
     display: none;
+  }
+
+  .nav-buttons {
+    margin-top: 0.5rem;
+    justify-content: center;
   }
 
   .client-login {

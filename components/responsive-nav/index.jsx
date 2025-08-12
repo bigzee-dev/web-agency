@@ -32,9 +32,9 @@ export default function ResponsiveNav() {
   useResponsiveNav(); // <-- This runs the nav javascript
 
   return (
-    <nav className="x-padding navbar border-b border-gray-300/70">
-      <div className="navbar-container">
-        <Link className="logo-container mr-6 text-neutral-800" href="/">
+    <nav className="navbar border-b border-gray-300/70">
+      <div className="x-padding navbar-container">
+        <Link className="logo-container text-neutral-800 lg:mr-6" href="/">
           {" "}
           {/* Updated href to be relative */}
           <img src="/logo/logo-500x500.png" alt="BigZee Digital Logo" />{" "}
@@ -317,32 +317,28 @@ export default function ResponsiveNav() {
               </div>
             </li>
             <li className="nav-item block lg:hidden">
-              <div className="nav-link">
-                <div className="smlscreen-client-login bg-primary text-white">
+              <div className="nav-link nav-buttons">
+                <Link
+                  href=""
+                  className="box-border flex items-center justify-center gap-x-1.5 rounded-[10px] border-2 border-gray-800 bg-neutral-100 px-[12px] py-[8px] text-xs font-medium uppercase text-gray-800"
+                >
+                  <ChatIcon size="size-5" />
+                  Contact us
+                </Link>
+                <div className="smlscreen-client-login box-border border-2 border-transparent bg-primary text-white">
                   <a
                     href="https://domains.bigzee.app/clientarea.php"
-                    className={` ${montserrat.className} text-xs font-medium`}
+                    className={` ${montserrat.className} flex items-center justify-center gap-x-1.5 text-xs font-medium`}
                   >
+                    <LoginIcon size="size-5" />
                     CLIENT ZONE
                   </a>
-                </div>
-                <div className="flex items-center justify-end gap-x-8">
-                  <img
-                    src="/svg/facebook-nav.svg"
-                    alt="BigZee Digital Logo"
-                    className="h-[1.9rem] w-[1.9rem]"
-                  />
-                  <img
-                    src="/svg/whatsapp-nav.svg"
-                    alt="BigZee Digital Logo"
-                    className="h-[1.76rem] w-[1.76rem]"
-                  />
                 </div>
               </div>
             </li>
           </ul>
         </div>
-        <div className="hidden items-center justify-between lg:flex">
+        <div className="hidden items-center justify-between text-gray-800 lg:flex">
           <Link
             href=""
             className="box-border flex items-center justify-center gap-x-1 rounded-[10px] border-2 border-gray-800 bg-neutral-100 px-[10px] py-[8px] text-xs font-medium uppercase text-gray-800"
