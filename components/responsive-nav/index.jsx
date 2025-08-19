@@ -32,8 +32,8 @@ export default function ResponsiveNav() {
   useResponsiveNav(); // <-- This runs the nav javascript
 
   return (
-    <nav className="navbar border-b border-gray-300/70">
-      <div className="x-padding navbar-container">
+    <nav className="x-padding navbar border-b border-gray-300/70">
+      <div className="navbar-container">
         <Link className="logo-container text-neutral-800 lg:mr-6" href="/">
           {" "}
           {/* Updated href to be relative */}

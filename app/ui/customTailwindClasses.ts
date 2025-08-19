@@ -6,10 +6,10 @@ export const smallTextHeadings =
   "text-center text-base/7 font-semibold text-blue-600";
 
 export const sectionSubHeadings =
-  "text-[1.06rem] leading-relaxed text-gray-600";
+  "text-[1.05rem] leading-relaxed text-gray-600";
 
 export const btnDimensions =
-  "text-center font-sans py-2.5 md:py-[0.67rem] px-3 w-max min-w-44 text-base font-medium md:text-[1.01rem]  rounded-[0.62rem] hover:pointer";
+  "text-center font-sans py-2.5 md:py-[0.68rem] px-3 w-max min-w-44 text-base font-medium md:text-[1.01rem]  rounded-[0.63rem] hover:pointer";
 
 export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 

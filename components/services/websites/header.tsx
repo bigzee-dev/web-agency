@@ -20,7 +20,7 @@ export default function Websites() {
         />
 
         {/* Content overlay */}
-        <div className="absolute inset-0 grid bg-gray-900/30 lg:grid-cols-2">
+        <div className="absolute inset-0 grid bg-gray-900/20 lg:grid-cols-2">
           <div className="col-span-1 bg-secondary"></div>
           <div className="col-span-1 bg-transparent"></div>
         </div>

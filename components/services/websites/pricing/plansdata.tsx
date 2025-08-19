@@ -44,9 +44,9 @@ export const oneTimePlans = [
       "radial-pro  flex h-36 w-36 items-center justify-center  rounded-full",
     titleClass: "font-sans text-2xl font-bold text-white",
     paymentType: "One-Time Payment",
-    price: "> P15000",
-    pages: "> 10 pages",
-    time: "> 8 weeks",
+    price: "P15000+",
+    pages: "10+ pages",
+    time: "8 weeks",
     features: [
       "Unlimited products",
       "Unlimited subscribers",
@@ -105,7 +105,7 @@ export const monthlyPlans = [
       "radial-pro  flex h-36 w-36 items-center justify-center  rounded-full",
     titleClass: "font-sans text-2xl font-bold text-white",
     paymentType: "One-Time Payment Pro",
-    price: "> P15000",
+    price: "P15000 +",
     pages: "> 10 pages",
     time: "> 8 weeks",
     features: [

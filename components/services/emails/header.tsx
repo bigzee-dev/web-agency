@@ -22,7 +22,7 @@ export default function Header() {
               <h1
                 className={`${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
               >
-                Use a Professional Email Service
+                Look Professional with our Email Service
               </h1>
 
               <div className="my-6 space-y-4 text-md">

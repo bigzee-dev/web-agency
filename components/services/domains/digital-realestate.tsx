@@ -18,7 +18,7 @@ const stats = [
 
 export default function DigitalRealEstate() {
   return (
-    <div className="mx-auto mt-24 grid max-w-7xl grid-cols-12 rounded-2xl border border-gray-300 bg-gradient-to-r from-primary/5 to-primary/10">
+    <div className="mx-auto mb-4 mt-28 grid max-w-7xl grid-cols-12 rounded-2xl border border-gray-300 bg-gradient-to-r from-primary/5 to-primary/10">
       <div className="relative col-span-4 h-full">
         <Image
           src="/img/domains/laptop-domains.jpg"

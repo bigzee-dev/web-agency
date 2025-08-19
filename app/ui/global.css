@@ -112,7 +112,7 @@ body {
 }
 
 .radial-pro {
-  background: radial-gradient(circle, #22d3ee 0%, #06b6d4 10%, #0e7490 70%);
+  background: radial-gradient(circle, #22d3ee 0%, #06b6d4 10%, #005878 70%);
 }
 
 .radial-secondary {
@@ -120,7 +120,7 @@ body {
     circle,
     rgba(41, 63, 155, 0.97) 0%,
     rgb(37, 99, 235, 1) 10%,
-    rgb(8, 36, 120, 1) 70%
+    #0f3551 70%
   );
 }
 

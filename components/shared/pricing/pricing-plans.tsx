@@ -74,12 +74,12 @@ export default function PricingPlans({ plan }: { plan: string }) {
         </div>
       </div>
 
-      <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 items-center gap-x-10 gap-y-8 px-2 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 items-center gap-x-10 gap-y-8 px-1 md:grid-cols-2 lg:grid-cols-3">
         {plans.map((plan) => (
           <div
             key={plan.id}
             className={classNames(
-              "rounded-xl bg-background p-8 px-8 shadow-2xl",
+              "rounded-xl bg-background p-8 shadow-2xl",
               plan.featured
                 ? "outline outline-2 outline-offset-1 outline-primary"
                 : "outline outline-1 outline-offset-1 outline-gray-400",
@@ -113,10 +113,22 @@ export default function PricingPlans({ plan }: { plan: string }) {
             <p className={classNames("mt-6 text-base leading-7 text-gray-600")}>
               {plan.description}
             </p>
+            <a
+              href={plan.href}
+              aria-describedby={plan.id}
+              className={classNames(
+                "mx-auto mt-6 block w-full rounded-[5rem] px-3 py-2.5 text-center font-sans text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
+                plan.featured
+                  ? "bg-primary text-white"
+                  : "bg-gray-800 text-neutral-100",
+              )}
+            >
+              {plan.linkText}
+            </a>
             <ul
               role="list"
               className={classNames(
-                "mt-8 space-y-3 text-sm leading-6 text-gray-600 sm:mt-10",
+                "mt-8 space-y-3 text-sm leading-6 text-gray-600",
               )}
             >
               {plan.features.map((feature) => (
@@ -132,18 +144,6 @@ export default function PricingPlans({ plan }: { plan: string }) {
                 </li>
               ))}
             </ul>
-            <a
-              href={plan.href}
-              aria-describedby={plan.id}
-              className={classNames(
-                "mt-8 block rounded-md px-3 py-2 text-center font-sans text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
-                plan.featured
-                  ? "bg-primary text-white"
-                  : "bg-gray-800 text-neutral-100",
-              )}
-            >
-              {plan.linkText}
-            </a>
           </div>
         ))}
       </div>

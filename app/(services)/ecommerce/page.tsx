@@ -4,8 +4,10 @@ import Shopify from "@/components/services/ecommerce/shopify";
 import WooCommerce from "@/components/services/ecommerce/woocommerce";
 import PaymentGateways from "@/components/services/ecommerce/paymentgateways";
 import StartToday from "@/components/services/ecommerce/start-today";
-import SupportOne from "@/components/shared/support/support-one";
+import Consultation from "@/components/shared/support/consultation";
 import Faqs from "@/components/services/ecommerce/faqs";
+
+const ecommerceText = "an eCommerce store?";
 
 export default function Ecommerce() {
   return (
@@ -16,7 +18,7 @@ export default function Ecommerce() {
       <WooCommerce />
       <PaymentGateways />
       <StartToday />
-      <SupportOne />
+      <Consultation text={ecommerceText} />
       <Faqs />
     </div>
   );

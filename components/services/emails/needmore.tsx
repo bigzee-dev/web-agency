@@ -1,25 +1,29 @@
 import { Button } from "@/components/ui/button";
-import { btnDimensions } from "@/app/ui/customTailwindClasses";
+import { btnDimensions, primaryButton } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
+import Link from "next/link";
 export default function NeedMore() {
   return (
-    <section className="mx-auto max-w-3xl px-4 py-16 text-center">
-      <h2
-        className={` ${montserrat.className} mb-4 text-4xl font-medium tracking-tight text-gray-800 `}
+    <section className="mx-auto max-w-3xl space-y-10 px-4 pb-12 pt-16 text-center">
+      <div className="space-y-4">
+        <h2
+          className={` ${montserrat.className} text-balance text-center text-4xl font-semibold text-gray-900 md:text-4xl`}
+        >
+          Need More? Get a Custom Plan.
+        </h2>
+        <p className="text-gray-600">
+          If you need more than 50 email accounts or want Private Email for more
+          than 20 domains, reach out, and one of our team will create a custom
+          plan for your business.
+        </p>
+      </div>
+
+      <Link
+        href="/contact-us"
+        className={` ${primaryButton} inline-flex items-center justify-center`}
       >
-        Need more? Get a custom plan
-      </h2>
-      <p className="mb-8 text-gray-600">
-        If you need more than 50 email accounts or want Private Email for more
-        than 20 domains, reach out, and one of our team will create a custom
-        plan for your business.
-      </p>
-      <Button
-        size="lg"
-        className={` ${btnDimensions} bg-primary text-white hover:bg-blue-500 px-8 `}
-      >
-        Get in touch
-      </Button>
+        Contact us &nbsp;<span aria-hidden="true"> →</span>
+      </Link>
     </section>
   );
 }

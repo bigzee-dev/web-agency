@@ -41,12 +41,13 @@ export default function LogoPanel() {
 
   return (
     <div
-      className={`x-padding mx-auto max-w-7xl pt-8 ${styles.carouselContainer}`}
+      className={`x-padding mx-auto max-w-7xl pb-8 pt-20 ${styles.carouselContainer}`}
     >
       <h3
         className={` ${montserrat.className} mb-2 w-full text-center text-4xl font-bold text-gray-900`}
       >
-        Deploy your favourite Apps and CMS
+        Deploy your favourite <span className="text-primary">Apps</span> and{" "}
+        <span className="text-primary">CMS</span>
       </h3>
       <div ref={trackRef} className={styles.carouselTrack}>
         {logos.map((logo, index) => (

@@ -96,13 +96,13 @@ export default function Header() {
                   </div>
                 ))}
               </div>
-              <Link
-                href=""
-                className={` ${whiteButton} mt-10 flex items-center justify-center`}
-              >
-                Compare Plans
-              </Link>
             </div>
+            <Link
+              href=""
+              className={` ${whiteButton} mt-10 inline-flex justify-center`}
+            >
+              Compare Plans
+            </Link>
           </div>
           <div className="col-span-6"></div>
         </div>

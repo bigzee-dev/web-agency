@@ -89,7 +89,7 @@ export default function Email() {
             />
           </Link>
         </div>
-        <div className="relative rounded-2xl border border-gray-600/70 bg-gray-900/30 lg:col-span-5">
+        <div className="relative rounded-2xl border border-gray-600/70 bg-gray-900/30 md:h-auto lg:col-span-5">
           {/* Background grid pattern */}
           <div className="absolute inset-0 opacity-20">
             <div className="grid h-full w-full grid-cols-8 grid-rows-8">

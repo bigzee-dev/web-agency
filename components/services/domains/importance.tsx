@@ -1,7 +1,7 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
 import { sectionSubHeadings } from "@/app/ui/customTailwindClasses";
-import { FaCircleCheck } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa6";
 
 export default function Importance() {
   const domainBenefits = [
@@ -31,7 +31,7 @@ export default function Importance() {
   return (
     <section className="w-full bg-gradient-to-br from-slate-50 to-white py-16 md:py-24 md:pb-20">
       <div className="mx-auto max-w-7xl px-4 md:px-4">
-        <div className="mb-12 text-center">
+        <div className="mb-8 text-center">
           {/* <Badge variant="outline" className="mb-4 text-sm font-medium">
             Domain Strategy
           </Badge> */}
@@ -62,20 +62,20 @@ export default function Importance() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center space-y-6 md:pt-2">
+          <div className="flex flex-col justify-center space-y-6">
             {domainBenefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-x-4">
-                <FaCircleCheck
+                <FaCheck
                   aria-hidden="true"
-                  className="mt-[0.25rem] h-auto w-5 flex-none text-slate-700"
+                  className="mt-[0.45rem] h-auto w-3.5 flex-none text-slate-600"
                 />
                 <div className="space-y-1.5">
                   <h3
-                    className={`${montserrat.className} flex items-center text-xl font-bold text-primary md:text-xl`}
+                    className={`${montserrat.className} flex items-center text-xl font-semibold text-gray-800 md:text-xl`}
                   >
                     {benefit.title}
                   </h3>
-                  <p className="w-full text-md leading-relaxed text-gray-700 lg:w-[85%]">
+                  <p className="w-full font-sans text-md leading-relaxed text-gray-700 lg:w-[85%]">
                     {benefit.description}
                   </p>
                 </div>

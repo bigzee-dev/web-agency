@@ -60,7 +60,7 @@ export default function Development() {
           </div>
         </h2>
       </div>
-      <div className="flex flex-col gap-y-10">
+      <div className="flex flex-col gap-y-12">
         <ul className="grid items-start gap-x-16 gap-y-6 md:grid-cols-2">
           {features.map(({ title, description, icon: Icon }, index) => (
             <li key={index} className="flex items-start gap-4">
@@ -78,7 +78,7 @@ export default function Development() {
         </ul>
         <Link
           href="/contact"
-          className={` ${primaryButton} inline-flex items-center justify-center self-center md:self-start`}
+          className={` ${primaryButton} inline-flex items-center justify-center self-center`}
         >
           Get Started
         </Link>

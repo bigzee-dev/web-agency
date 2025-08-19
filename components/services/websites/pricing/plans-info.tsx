@@ -50,7 +50,9 @@ export default function PlansInfo({ plans }: { plans: Plan[] }) {
                     Approx:
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-900">{plan.price}</span>
+                    <span className="text-2xl font-medium text-gray-900">
+                      {plan.price}
+                    </span>
                     <span className="align-middlex ml-2 text-gray-800">
                       <FaCircleQuestion size="1.3em" />
                     </span>

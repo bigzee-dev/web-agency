@@ -1,9 +1,10 @@
 import Header from "@/components/services/websites/header";
-import PricingWebsites from "@/components/services/websites/pricing";
-
-import FaqsWebsites from "@/components/services/websites/faqs";
-import CTA from "@/components/services/websites/cta";
 import OurProcess from "@/components/services/websites/ourprocess";
+import CTA from "@/components/services/websites/cta";
+import PricingWebsites from "@/components/services/websites/pricing";
+import ContentSection from "@/components/services/websites/content";
+import FaqsWebsites from "@/components/services/websites/faqs";
+
 import SupportOne from "@/components/shared/support/support-one";
 
 export default function Websites() {
@@ -12,6 +13,7 @@ export default function Websites() {
       <Header />
       <OurProcess />
       <CTA />
+      <ContentSection />
       <PricingWebsites />
       <SupportOne />
       <FaqsWebsites />

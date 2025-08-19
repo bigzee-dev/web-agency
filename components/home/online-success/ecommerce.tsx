@@ -29,13 +29,13 @@ export default function Component() {
       </div>
       {/* small screen badge */}
       <Badge
-        className={`flex max-w-max gap-1 bg-neutral-100 text-center font-semibold text-slate-800 lg:hidden`}
+        className={`flex max-w-max items-center gap-x-1.5 border border-gray-700 bg-blue-400/10 p-1.5 text-center text-base font-semibold text-blue-400 lg:hidden`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="size-4"
+          className="size-5"
         >
           <path
             fillRule="evenodd"
@@ -43,7 +43,7 @@ export default function Component() {
             clipRule="evenodd"
           />
         </svg>
-        ECOMMERCE
+        <span>ECOMMERCE</span>
       </Badge>
 
       <div className="mt-4 grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-12">

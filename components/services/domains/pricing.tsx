@@ -8,6 +8,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function DomainPricingTable() {
   const domainExtensions = [
@@ -80,7 +82,7 @@ export default function DomainPricingTable() {
   ];
 
   return (
-    <div className="mx-auto w-full max-w-5xl pb-16 pt-4">
+    <div className="mx-auto w-full max-w-5xl pb-12 pt-4">
       <h2 className={sectionHeadings}>Available Tld&apos;s</h2>
       {/* Header Section */}
       <div className="mt-12 grid grid-cols-1 rounded-t-2xl bg-slate-700 text-white md:grid-cols-4">
@@ -170,6 +172,21 @@ export default function DomainPricingTable() {
             ))}
           </TableBody>
         </Table>
+      </div>
+      {/* Search Bar */}
+      <div className="mx-auto mt-16 flex w-full max-w-xl items-center gap-2 rounded-xl border-2 border-gray-800 bg-neutral-100 p-3">
+        <Input
+          type="text"
+          placeholder="Search for domain"
+          className="border border-gray-400 bg-background placeholder:text-sm placeholder:text-gray-500"
+        />
+        <Button
+          type="submit"
+          variant="default"
+          className="rounded-lg bg-gray-800 text-neutral-200"
+        >
+          Search
+        </Button>
       </div>
     </div>
   );

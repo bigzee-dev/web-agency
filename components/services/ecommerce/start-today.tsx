@@ -1,9 +1,52 @@
+import { sectionSubHeadings } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
 import { FaCircleCheck } from "react-icons/fa6";
+import {
+  RocketIcon,
+  DashboardIcon,
+  CreditCardIcon,
+  GlobeIcon,
+  SocialIcon,
+  ShoppingBagIcon,
+} from "./icons-start-today";
+
+const features = [
+  {
+    icon: RocketIcon,
+    title: "Customised eCommerce Web Design",
+    text: "Get a unique, professional eCommerce website tailored to your brand and business needs.",
+  },
+  {
+    icon: DashboardIcon,
+    title: "Manage Products and Customers",
+    text: "Easily add, edit, and manage products, customers, and orders with our user-friendly dashboard.",
+  },
+
+  {
+    icon: CreditCardIcon,
+    title: "Secured Payment Gateway",
+    text: "Accept payments securely with PCI-compliant payment gateways that protect your customers' data.",
+  },
+  {
+    icon: GlobeIcon,
+    title: "Search Engine Optimisation",
+    text: "Optimise your eCommerce site for search engines to attract more organic traffic and increase sales.",
+  },
+  {
+    icon: SocialIcon,
+    title: "AI & Social Media Integration",
+    text: "Integrate AI tools and social media platforms to enhance customer engagement and streamline marketing efforts.",
+  },
+  {
+    icon: ShoppingBagIcon,
+    title: "Supporting you beyond the project",
+    text: "Get ongoing support and maintenance to ensure your eCommerce site runs smoothly and stays up-to-date.",
+  },
+];
 
 export default function StartToday() {
   return (
-    <div className="relative isolate w-full pt-10">
+    <div className="relative isolate w-full py-12">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -17,7 +60,7 @@ export default function StartToday() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-15"
         />
       </div>
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-y-10 px-4 py-4">
+      {/* <div className="mx-auto flex max-w-6xl flex-col items-center gap-y-10 px-4 py-4">
         <h2
           className={` ${montserrat.className} w-full bg-primary py-2 text-center text-3xl font-bold text-neutral-200 md:text-4xl`}
         >
@@ -45,14 +88,40 @@ export default function StartToday() {
             </li>
           ))}
         </ul>
-      </div>
-      {/* <span className="z-20 mb-3 ml-3 rotate-90">
-        <img
-          src="/svg/contact-animated-arrow.svg"
-          alt=""
-          className="max-h-32"
-        />
-      </span> */}
+      </div> */}
+      <section className="mx-auto max-w-6xl px-6 py-16 leading-normal">
+        <div className="mb-20 text-center">
+          <p className="mb-4 font-medium text-blue-600">Everything you need</p>
+          <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
+            Start your Online Business Today!
+          </h2>
+          <p className={` ${sectionSubHeadings} mx-auto max-w-3xl text-pretty`}>
+            Everyone’s online. Data is cheap. Smartphones are everywhere. It’s
+            the best time to start your online business.
+          </p>
+        </div>
+
+        <div className="grid gap-9 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => {
+            const IconComponent = feature.icon;
+            return (
+              <div key={index} className="flex flex-col items-center gap-4">
+                <div className="flex-shrink-0">
+                  <IconComponent size="size-12" />
+                </div>
+                <div>
+                  <p className="mt-1 flex flex-col items-center text-center leading-relaxed text-foreground">
+                    <span className="font-semibold">{feature.title}</span>{" "}
+                    <span className="mt-1 font-sans text-md text-gray-600">
+                      {feature.text}
+                    </span>
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
     </div>
   );
 }
