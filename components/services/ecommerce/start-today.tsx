@@ -1,6 +1,7 @@
-import { sectionSubHeadings } from "@/app/ui/customTailwindClasses";
-import { montserrat } from "@/app/ui/fonts";
-import { FaCircleCheck } from "react-icons/fa6";
+import {
+  longSectionHeadings,
+  sectionSubHeadings,
+} from "@/app/ui/customTailwindClasses";
 import {
   RocketIcon,
   DashboardIcon,
@@ -92,7 +93,7 @@ export default function StartToday() {
       <section className="mx-auto max-w-6xl px-6 py-16 leading-normal">
         <div className="mb-20 text-center">
           <p className="mb-4 font-medium text-blue-600">Everything you need</p>
-          <h2 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">
+          <h2 className={` ${longSectionHeadings} mb-4`}>
             Start your Online Business Today!
           </h2>
           <p className={` ${sectionSubHeadings} mx-auto max-w-3xl text-pretty`}>
