@@ -136,10 +136,23 @@ body {
   background: linear-gradient(to bottom right, #5b8d75, #6aa664, #658a80);
 }
 
-/* commented out 25/05/25 */
-/* .gradient-text {
-  background: linear-gradient(to right, #4754a2, #9089fc);
+.loading-text {
+  place-self: center;
+  background: linear-gradient(90deg, #0ff, rgb(220, 231, 71)) -100%/ 200%;
+  /* being excessively careful with compat, 
+	 * though this has been supported unprefixed and 
+	 * in the shorthand across major browsers for a while */
   -webkit-background-clip: text;
   background-clip: text;
+  /* use color, don't use -webkit-text-fill-color anymore, 
+	 * was meant to solve a problem we haven't had in years */
   color: transparent;
-} */
+  font: sans-serif;
+  /* animation: shimmer 3s linear infinite; */
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 100%;
+  }
+}

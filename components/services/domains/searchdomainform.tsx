@@ -10,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/domainsformselect";
 import { Input } from "@/components/ui/domainsforminput";
+import { primaryButton } from "@/app/ui/customTailwindClasses";
 
 export default function SearchDomainForm() {
   const [domain, setDomain] = React.useState("");
@@ -22,25 +23,25 @@ export default function SearchDomainForm() {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto bg-neutral-200 px-5 py-5 mt-4">
+    <div className="mx-auto mt-4 w-full max-w-3xl bg-neutral-200 px-5 py-5">
       <form onSubmit={handleSearch} className="flex items-center gap-4">
         <div className="relative flex-1">
-          <div className="absolute -top-[13px] left-[50px] px-1 bg-neutral-200">
-            <span className="text-primary text-xs px-1">
+          <div className="absolute -top-[13px] left-[50px] bg-neutral-200 px-1">
+            <span className="px-1 text-xs text-primary">
               Enter desired domain name <span className="text-primary">*</span>
             </span>
           </div>
-          <div className="flex border-2 border-primary rounded-md overflow-hidden">
+          <div className="flex overflow-hidden rounded-md border-2 border-primary">
             <Input
               id="domain"
               value={domain}
               onChange={(e) => setDomain(e.target.value)}
-              className="flex-1 text-gray-700 border-0 focus-visible:ring-0 shadow-none"
+              className="flex-1 border-0 text-gray-700 shadow-none focus-visible:ring-0"
               placeholder=""
             />
             <div className="text-grey-700 border-l border-gray-400">
               <Select value={tld} onValueChange={setTld}>
-                <SelectTrigger className="w-[100px] border-0 focus:ring-0 shadow-none">
+                <SelectTrigger className="w-[100px] border-0 shadow-none focus:ring-0">
                   <SelectValue defaultValue=".com" />
                 </SelectTrigger>
                 <SelectContent>
@@ -55,7 +56,7 @@ export default function SearchDomainForm() {
         </div>
         <Button
           type="submit"
-          className="bg-primary text-neutral-100 hover:bg-purple-700 px-8"
+          className={`h-full w-24 rounded-lg bg-primary text-white`}
         >
           Search
         </Button>

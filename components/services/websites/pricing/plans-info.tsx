@@ -28,11 +28,11 @@ export default function PlansInfo({ plans }: { plans: Plan[] }) {
   return (
     <article className="mx-auto w-full max-w-5xl pb-6 pt-12 md:pt-16">
       <div className="w-full overflow-x-auto">
-        <div className="flex min-w-[50rem] gap-6 pb-8 lg:grid lg:grid-cols-12 lg:gap-9">
+        <div className="flex min-w-[50rem] gap-6 pb-8 lg:grid lg:grid-cols-12 lg:gap-10">
           {plans.map((plan, index) => (
             <div
               key={plan.id}
-              className="min-w-[18rem] shrink-0 border-l border-gray-400 pl-6 md:pl-9 lg:col-span-4"
+              className="min-w-[18rem] shrink-0 border-l border-gray-400 pl-6 md:pl-10 lg:col-span-4"
             >
               <div className={plan.containerClass}>
                 <h2 className={plan.titleClass}>{plan.title}</h2>
@@ -50,7 +50,7 @@ export default function PlansInfo({ plans }: { plans: Plan[] }) {
                     Approx:
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl font-medium text-gray-900">
+                    <span className="text-2xl font-medium text-primary">
                       {plan.price}
                     </span>
                     <span className="align-middlex ml-2 text-gray-800">

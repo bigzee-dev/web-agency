@@ -77,7 +77,7 @@ export default function Header() {
               Top quality web hosting plans
             </h1>
 
-            <div className="mt-9">
+            <div className="mt-9 max-w-xl">
               <div className="mt-4 grid grid-cols-2 gap-y-5">
                 {offers.map((offer) => (
                   <div className="flex flex-col gap-1.5" key={offer.title}>

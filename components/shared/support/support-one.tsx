@@ -1,4 +1,9 @@
-import { btnDimensions, sectionHeadings } from "@/app/ui/customTailwindClasses";
+import {
+  btnDimensions,
+  grayButton,
+  sectionHeadings,
+  whiteButton,
+} from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 
 export default function SupportOne() {
@@ -27,10 +32,7 @@ export default function SupportOne() {
           </div>
 
           <div className="mt-auto flex items-center justify-center">
-            <Link
-              href="/contact-us"
-              className={` ${btnDimensions} border border-blue-700 bg-[#faf9f5] text-primary hover:bg-gray-100`}
-            >
+            <Link href="/contact-us" className={` ${whiteButton} `}>
               Contact us <span aria-hidden="true"> →</span>
             </Link>
           </div>

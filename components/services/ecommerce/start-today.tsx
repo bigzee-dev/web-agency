@@ -47,7 +47,7 @@ const features = [
 
 export default function StartToday() {
   return (
-    <div className="relative isolate w-full py-12">
+    <div className="relative isolate w-full py-10">
       {/* blur component */}
       <div
         aria-hidden="true"

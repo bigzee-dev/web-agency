@@ -114,6 +114,8 @@ export default function ResponsiveNav() {
                 <Link
                   href="https://webmail.bigzee.app"
                   className="dropdown-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <div className="dropdown-item-link">
                     <span>
@@ -134,20 +136,20 @@ export default function ResponsiveNav() {
                 </span>
               </div>
               <div className="dropdown-menu">
-                <Link href="/hosting" className="dropdown-item">
+                <Link href="/linux-vps" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <MouseClickIcon size="size-5" />
+                    </span>
+                    Linux VPS
+                  </div>
+                </Link>
+                <Link href="/web-hosting" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
                       <ServerStackIcon size="size-5" />
                     </span>
                     Web Hosting
-                  </div>
-                </Link>
-                <Link href="/managed-hosting" className="dropdown-item">
-                  <div className="dropdown-item-link">
-                    <span>
-                      <MouseClickIcon size="size-5" />
-                    </span>
-                    Client Hosting
                   </div>
                 </Link>
               </div>

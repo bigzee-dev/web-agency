@@ -1,4 +1,5 @@
 import { sectionSubHeadings } from "@/app/ui/customTailwindClasses";
+import Image from "next/image";
 
 import {
   FaMobileScreen,
@@ -10,18 +11,6 @@ import { FaGoogle } from "react-icons/fa";
 import { MdSecurity } from "react-icons/md";
 
 const features = [
-  {
-    icon: FaGoogle,
-    title: "SEO Optimisation",
-    description:
-      "Get found on Google with SEO-friendly websites that help your business attract more visitors and customers.",
-  },
-  {
-    icon: FaMobileScreen,
-    title: "Responsive Design",
-    description:
-      "Your website will look great and work smoothly on any device — desktop, tablet, or mobile.",
-  },
   {
     icon: FaRobot,
     title: "AI Integration",
@@ -48,13 +37,13 @@ const features = [
   },
 ];
 
-export default function ContentSection() {
+export default function WhyBuyVps() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20 leading-normal">
+    <section className="mx-auto max-w-7xl px-6 py-20 leading-normal">
       <div className="mb-16">
-        <p className="mb-4 font-medium text-blue-600">Everything you need</p>
+        <p className="mb-4 font-medium text-blue-600">Virtual Private Server</p>
         <h2 className="mb-6 text-4xl font-bold text-foreground md:text-5xl">
-          No Website? No problem.
+          Why buy a VPS from us?
         </h2>
         <p className={` ${sectionSubHeadings} mb-8 max-w-2xl`}>
           From design to launch, we handle it all. Get a modern, mobile-friendly
@@ -62,25 +51,35 @@ export default function ContentSection() {
         </p>
       </div>
 
-      <div className="grid gap-9 md:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature, index) => {
-          const IconComponent = feature.icon;
-          return (
-            <div key={index} className="flex gap-4">
-              <div className="flex-shrink-0">
-                <IconComponent className="h-6 w-6 text-primary" />
+      <div className="grid gap-x-16 lg:grid-cols-12">
+        <div className="relative col-span-4">
+          <Image
+            src="/img/linux-vps/cloud.jpg"
+            alt="linux-vps"
+            fill
+            className="rounded-lg object-cover"
+          />
+        </div>
+        <div className="col-span-8 grid gap-9 md:grid-cols-2">
+          {features.map((feature, index) => {
+            const IconComponent = feature.icon;
+            return (
+              <div key={index} className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <IconComponent className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <p className="leading-relaxed text-foreground">
+                    <span className="font-semibold">{feature.title}</span>{" "}
+                    <span className="font-sans text-md text-gray-600">
+                      {feature.description}
+                    </span>
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="leading-relaxed text-foreground">
-                  <span className="font-semibold">{feature.title}</span>{" "}
-                  <span className="font-sans text-md text-gray-600">
-                    {feature.description}
-                  </span>
-                </p>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );
