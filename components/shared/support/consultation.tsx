@@ -9,7 +9,7 @@ export default function Consultation({ text }: { text?: string }) {
       <section className="mx-auto max-w-5xl py-16">
         <div className="grid w-full grid-cols-12 gap-x-20 rounded-3xl">
           <div className="col-span-7 flex flex-col gap-y-10">
-            <div className="space-y-4">
+            <div className="space-y-4 pt-0.5 text-center">
               <h2
                 className={` ${montserrat.className} text-pretty text-4xl font-bold text-gray-900 md:text-4xl`}
               >
@@ -24,7 +24,7 @@ export default function Consultation({ text }: { text?: string }) {
               </p>
             </div>
 
-            <div className="flex items-center justify-start">
+            <div className="flex items-center justify-center">
               <Link href="/contact-us" className={` ${primaryButton} `}>
                 Contact us&nbsp; <span aria-hidden="true"> →</span>
               </Link>

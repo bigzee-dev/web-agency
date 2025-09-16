@@ -74,7 +74,7 @@ export default function HeaderVps() {
               </div>
 
               <div className="x-auto relative mx-auto mt-8 max-w-lg sm:mt-12">
-                <p className="mb-1 text-center font-sans text-sm font-medium text-gray-700">
+                <p className="mb-1 text-center font-sans text-sm font-medium text-gray-500">
                   Deploy your Favourite Tech Stack
                 </p>
                 <div className="absolute inset-0 -top-8 left-1/2 -z-20 h-56 w-full -translate-x-1/2 [background-image:linear-gradient(to_bottom,transparent_60%,theme(colors.gray.200/75%)_98%),linear-gradient(to_right,transparent_94%,_theme(colors.gray.200/75%)_94%)] [background-size:16px_35px] [mask:radial-gradient(black,transparent_85%)] dark:opacity-10"></div>

@@ -56,24 +56,24 @@ export default function CTA() {
           {/* Left Section - Text Content */}
           <div className="col-span-9 lg:mx-0 lg:py-12 lg:pt-12">
             <div className="mx-auto flex max-w-4xl flex-col gap-y-10 px-4">
-              <h2 className={` ${longSectionHeadings} text-neutral-300/90`}>
+              <h2 className={` ${longSectionHeadings} text-neutral-300`}>
                 Email Built for Business
                 <br />{" "}
-                <span className="mt-10 text-xl font-semibold uppercase tracking-wide text-slate-400">
+                <span className="mt-10 text-xl font-medium uppercase tracking-wider text-sky-400">
                   Designed for You
                 </span>
               </h2>
               {/* Stats Grid - Desktop (4 columns) */}
-              <div className="grid gap-x-1 gap-y-1 md:grid-cols-2">
+              <div className="grid gap-x-2 gap-y-2 md:grid-cols-2">
                 {stats.map((stat, index) => (
                   <div
                     key={index}
                     className={clsx(
                       "border border-gray-600/30 bg-slate-800/90 px-8 py-6 text-center shadow-lg",
-                      index === 0 && "rounded-xl",
-                      index === 1 && "rounded-xl",
-                      index === 2 && "rounded-xl",
-                      index === 3 && "rounded-xl",
+                      index === 0 && "rounded-lg",
+                      index === 1 && "rounded-lg",
+                      index === 2 && "rounded-lg",
+                      index === 3 && "rounded-lg",
                     )}
                   >
                     <div className="mb-3 flex items-center gap-x-2.5">

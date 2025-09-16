@@ -1,4 +1,7 @@
-import { sectionSubHeadings } from "@/app/ui/customTailwindClasses";
+import {
+  sectionHeadings,
+  sectionSubHeadings,
+} from "@/app/ui/customTailwindClasses";
 import Image from "next/image";
 
 import {
@@ -42,9 +45,7 @@ export default function WhyBuyVps() {
     <section className="mx-auto max-w-7xl px-6 py-20 leading-normal">
       <div className="mb-16">
         <p className="mb-4 font-medium text-blue-600">Virtual Private Server</p>
-        <h2 className="mb-6 text-4xl font-bold text-foreground md:text-5xl">
-          Why buy a VPS from us?
-        </h2>
+        <h2 className={` ${sectionHeadings} mb-6`}>Why buy a VPS from us?</h2>
         <p className={` ${sectionSubHeadings} mb-8 max-w-2xl`}>
           From design to launch, we handle it all. Get a modern, mobile-friendly
           website that helps your business attract more customers..

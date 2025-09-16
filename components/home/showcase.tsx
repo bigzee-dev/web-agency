@@ -43,9 +43,7 @@ export default function Showcase() {
               >
                 Business Email
               </span>
-              <p className="text-base font-semibold text-gray-700">
-                P40<span className="text-sm text-gray-500"> /month</span>
-              </p>
+              <p className="text-base font-semibold text-gray-700">P40</p>
               <span className="text-gray-400">|</span>
               <span>
                 <IoArrowForwardCircle className="text-slate-700" size="1.6em" />

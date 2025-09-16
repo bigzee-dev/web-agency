@@ -9,7 +9,7 @@ const pricingData = [
     ram: "1GB",
     storage: "20GB",
     bandwidth: "1TB",
-    price: "P95",
+    price: "P85",
     popular: false,
   },
   {
@@ -17,8 +17,8 @@ const pricingData = [
     vCores: 1,
     ram: "2GB",
     storage: "40GB",
-    bandwidth: "1TB",
-    price: "P130",
+    bandwidth: "5TB",
+    price: "P120",
     popular: false,
   },
   {
@@ -26,8 +26,8 @@ const pricingData = [
     vCores: 2,
     ram: "4GB",
     storage: "60GB",
-    bandwidth: "3TB",
-    price: "P190",
+    bandwidth: "10TB",
+    price: "P180",
     popular: true,
   },
   {
@@ -35,7 +35,7 @@ const pricingData = [
     vCores: 3,
     ram: "6GB",
     storage: "90GB",
-    bandwidth: "5TB",
+    bandwidth: "10TB",
     price: "P250",
     popular: false,
   },
@@ -44,8 +44,17 @@ const pricingData = [
     vCores: 4,
     ram: "8GB",
     storage: "120GB",
-    bandwidth: "10TB",
+    bandwidth: "20TB",
     price: "P320",
+    popular: false,
+  },
+  {
+    cpu: "Intel® Xeon®",
+    vCores: 6,
+    ram: "12GB",
+    storage: "160GB",
+    bandwidth: "20TB",
+    price: "P395",
     popular: false,
   },
 ];
@@ -53,7 +62,7 @@ const pricingData = [
 export default function PricingVpsTable() {
   return (
     <div className="x-padding w-full">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 py-16">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 pb-16 pt-28">
         {/* Title */}
         <h1
           className={` ${montserrat.className} text-center text-3xl font-bold text-gray-800 md:text-5xl`}

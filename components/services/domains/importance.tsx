@@ -71,7 +71,7 @@ export default function Importance() {
                 />
                 <div className="space-y-1.5">
                   <h3
-                    className={`${montserrat.className} flex items-center text-xl font-semibold text-gray-800 md:text-xl`}
+                    className={`${montserrat.className} flex items-center text-xl font-bold text-primary md:text-xl`}
                   >
                     {benefit.title}
                   </h3>
