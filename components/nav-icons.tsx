@@ -1,28 +1,50 @@
-export const WebsiteIcon = () => {
+export const WebsiteIcon = ({ size }: { size: string }) => {
+  return (
+    // <svg
+    //   fill="currentColor"
+    //   width="20px"
+    //   height="20px"
+    //   viewBox="0 0 32 32"
+    //   id="icon"
+    //   xmlns="http://www.w3.org/2000/svg"
+    // >
+    //   <defs>
+    //     <style>{`.cls-1 { fill: none; }`}</style>
+    //   </defs>
+    //   <rect x="20" y="20" width="10" height="2" />
+    //   <rect x="20" y="24" width="6" height="2" />
+    //   <path
+    //     d="M30,17V16A13.9871,13.9871,0,1,0,19.23,29.625l-.46-1.9463A12.0419,12.0419,0,0,1,16,28c-.19,0-.375-.0186-.563-.0273A20.3044,20.3044,0,0,1,12.0259,17Zm-2.0415-2H21.9751A24.2838,24.2838,0,0,0,19.2014,4.4414,12.0228,12.0228,0,0,1,27.9585,15ZM16.563,4.0273A20.3044,20.3044,0,0,1,19.9741,15H12.0259A20.3044,20.3044,0,0,1,15.437,4.0273C15.625,4.0186,15.81,4,16,4S16.375,4.0186,16.563,4.0273Zm-3.7644.4141A24.2838,24.2838,0,0,0,10.0249,15H4.0415A12.0228,12.0228,0,0,1,12.7986,4.4414Zm0,23.1172A12.0228,12.0228,0,0,1,4.0415,17h5.9834A24.2838,24.2838,0,0,0,12.7986,27.5586Z"
+    //     transform="translate(0 0)"
+    //   />
+    //   <rect
+    //     id="_Transparent_Rectangle_"
+    //     data-name="<Transparent Rectangle>"
+    //     className="cls-1"
+    //     width="32"
+    //     height="32"
+    //   />
+    // </svg>
+    <div className={size}>
+      <img src="/svg/navbar/internet.svg" alt="website icon"></img>
+    </div>
+  );
+};
+
+export const MouseClickIcon = ({ size }: { size: string }) => {
   return (
     <svg
-      fill="currentColor"
-      width="20px"
-      height="20px"
-      viewBox="0 0 32 32"
-      id="icon"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={size}
     >
-      <defs>
-        <style>{`.cls-1 { fill: none; }`}</style>
-      </defs>
-      <rect x="20" y="20" width="10" height="2" />
-      <rect x="20" y="24" width="6" height="2" />
       <path
-        d="M30,17V16A13.9871,13.9871,0,1,0,19.23,29.625l-.46-1.9463A12.0419,12.0419,0,0,1,16,28c-.19,0-.375-.0186-.563-.0273A20.3044,20.3044,0,0,1,12.0259,17Zm-2.0415-2H21.9751A24.2838,24.2838,0,0,0,19.2014,4.4414,12.0228,12.0228,0,0,1,27.9585,15ZM16.563,4.0273A20.3044,20.3044,0,0,1,19.9741,15H12.0259A20.3044,20.3044,0,0,1,15.437,4.0273C15.625,4.0186,15.81,4,16,4S16.375,4.0186,16.563,4.0273Zm-3.7644.4141A24.2838,24.2838,0,0,0,10.0249,15H4.0415A12.0228,12.0228,0,0,1,12.7986,4.4414Zm0,23.1172A12.0228,12.0228,0,0,1,4.0415,17h5.9834A24.2838,24.2838,0,0,0,12.7986,27.5586Z"
-        transform="translate(0 0)"
-      />
-      <rect
-        id="_Transparent_Rectangle_"
-        data-name="<Transparent Rectangle>"
-        className="cls-1"
-        width="32"
-        height="32"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672Zm-7.518-.267A8.25 8.25 0 1 1 20.25 10.5M8.288 14.212A5.25 5.25 0 1 1 17.25 10.5"
       />
     </svg>
   );
@@ -98,6 +120,22 @@ export const WebMailIcon = ({ size }: { size: string }) => {
   );
 };
 
+export const LinuxIcon = ({ size }: { size: string }) => {
+  return (
+    <div className={size}>
+      <img src="/svg/hosting/linux.svg" alt="windows icon"></img>
+    </div>
+  );
+};
+
+export const WindowsIcon = ({ size }: { size: string }) => {
+  return (
+    <div className={size}>
+      <img src="/svg/hosting/windows.svg" alt="windows icon"></img>
+    </div>
+  );
+};
+
 export const ServerStackIcon = ({ size }: { size: string }) => {
   return (
     <svg
@@ -116,20 +154,18 @@ export const ServerStackIcon = ({ size }: { size: string }) => {
   );
 };
 
-export const MouseClickIcon = ({ size }: { size: string }) => {
+export const CloudUploadIcon = ({ size }: { size: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
       viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
+      fill="currentColor"
       className={size}
     >
       <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672Zm-7.518-.267A8.25 8.25 0 1 1 20.25 10.5M8.288 14.212A5.25 5.25 0 1 1 17.25 10.5"
+        fillRule="evenodd"
+        d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.03 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v4.94a.75.75 0 0 0 1.5 0v-4.94l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z"
+        clipRule="evenodd"
       />
     </svg>
   );

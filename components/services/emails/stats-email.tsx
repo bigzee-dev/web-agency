@@ -13,29 +13,20 @@ import clsx from "clsx";
 
 const stats = [
   {
-    icon: <MdShop className="size-10 text-blue-400" />,
-    value: "Business Suite",
-    text: "We offer more than standard Webmail. Get integrated email, contacts, calendar, file sharing, online meetings, and more.",
+    value: "100%",
+    text: "Delivary Rate",
   },
   {
-    icon: <MdMarkEmailRead className="size-10 text-blue-400" />,
-    value: "Custom Domain Email",
-    text: "Boost your brand with domain-matching email addresses. Create personalised emails like you@yourdomain.com to build trust.",
+    value: "600",
+    text: "Emails sent per hour",
   },
   {
-    icon: <MdMemory className="size-10 text-blue-400" />,
-    value: "SMTP, POP3, IMAP",
-    text: "Supports all major mail protocols compatible with email apps. Connect via SMTP from your website to send login, signup, and other transactional emails",
-  },
-
-  {
-    icon: <MdOutlineSecurity className="size-10 text-blue-400" />,
-    value: "Premium Spam Filtering",
-    text: "Keep your inbox safe and clutter-free with our advanced spam filtering. Every plan includes SpamExperts to block spam, viruses, and phishing attempts.",
+    value: "24/7",
+    text: "Local Support in Botswana",
   },
 ];
 
-export default function CTA() {
+export default function StatsEmail() {
   return (
     <div className="">
       <div className="mx-auto max-w-7xl py-20">
@@ -54,9 +45,11 @@ export default function CTA() {
             />
           </div>
           {/* Left Section - Text Content */}
-          <div className="col-span-9 lg:mx-0 lg:py-12 lg:pt-12">
-            <div className="mx-auto flex max-w-4xl flex-col gap-y-10 px-4">
-              <h2 className={` ${longSectionHeadings} text-neutral-300`}>
+          <div className="col-span-9 lg:mx-0 lg:py-14">
+            <div className="mx-auto flex max-w-4xl flex-col gap-y-12 px-4">
+              <h2
+                className={` ${longSectionHeadings} text-center text-neutral-300 md:text-5xl`}
+              >
                 Email Built for Business
                 <br />{" "}
                 <span className="mt-10 text-xl font-medium uppercase tracking-wider text-sky-400">
@@ -64,7 +57,7 @@ export default function CTA() {
                 </span>
               </h2>
               {/* Stats Grid - Desktop (4 columns) */}
-              <div className="grid gap-x-2 gap-y-2 md:grid-cols-2">
+              <div className="grid gap-x-2 gap-y-2 md:grid-cols-3">
                 {stats.map((stat, index) => (
                   <div
                     key={index}
@@ -77,8 +70,7 @@ export default function CTA() {
                     )}
                   >
                     <div className="mb-3 flex items-center gap-x-2.5">
-                      {stat.icon}
-                      <span className="text-lg font-bold text-neutral-300">
+                      <span className="text-6xl font-bold text-neutral-300">
                         {stat.value}
                       </span>
                     </div>

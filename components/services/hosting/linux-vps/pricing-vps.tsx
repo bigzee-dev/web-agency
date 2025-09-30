@@ -4,57 +4,57 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const pricingData = [
   {
-    cpu: "Intel® Xeon®",
+    cpu: "DWLV-1",
     vCores: 1,
     ram: "1GB",
     storage: "20GB",
     bandwidth: "1TB",
-    price: "P85",
+    price: "P95",
     popular: false,
   },
   {
-    cpu: "Intel® Xeon®",
+    cpu: "DWLV-2",
     vCores: 1,
     ram: "2GB",
     storage: "40GB",
     bandwidth: "5TB",
-    price: "P120",
+    price: "P130",
     popular: false,
   },
   {
-    cpu: "Intel® Xeon®",
+    cpu: "DWLV-4",
     vCores: 2,
     ram: "4GB",
     storage: "60GB",
     bandwidth: "10TB",
-    price: "P180",
+    price: "P190",
     popular: true,
   },
   {
-    cpu: "Intel® Xeon®",
+    cpu: "DWLV-6",
     vCores: 3,
     ram: "6GB",
     storage: "90GB",
     bandwidth: "10TB",
-    price: "P250",
+    price: "P260",
     popular: false,
   },
   {
-    cpu: "Intel® Xeon®",
+    cpu: "DWLV-8",
     vCores: 4,
     ram: "8GB",
     storage: "120GB",
     bandwidth: "20TB",
-    price: "P320",
+    price: "P330",
     popular: false,
   },
   {
-    cpu: "Intel® Xeon®",
+    cpu: "DWLV-12",
     vCores: 6,
     ram: "12GB",
     storage: "160GB",
     bandwidth: "20TB",
-    price: "P395",
+    price: "P420",
     popular: false,
   },
 ];
@@ -62,7 +62,7 @@ const pricingData = [
 export default function PricingVpsTable() {
   return (
     <div className="x-padding w-full">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 pb-16 pt-28">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 pb-16 pt-32">
         {/* Title */}
         <h1
           className={` ${montserrat.className} text-center text-3xl font-bold text-gray-800 md:text-5xl`}
@@ -72,10 +72,10 @@ export default function PricingVpsTable() {
 
         {/* Desktop Table View */}
         <div className="hidden w-full md:block">
-          <div className="overflow-hidden border border-secondary/30 bg-white shadow-sm">
+          <div className="overflow-hidden border border-gray-400 bg-white shadow-sm">
             {/* Table Header */}
-            <div className="grid grid-cols-7 border-b border-secondary/30 bg-gray-50 text-primary">
-              <div className="p-4 text-center font-medium">CPU</div>
+            <div className="grid grid-cols-7 border-b border-gray-400 bg-gray-50 text-primary">
+              <div className="p-4 text-center font-medium">Plan</div>
               <div className="p-4 text-center font-medium">vCores</div>
               <div className="p-4 text-center font-medium">RAM</div>
               <div className="p-4 text-center font-medium">Storage</div>
@@ -89,7 +89,7 @@ export default function PricingVpsTable() {
             {pricingData.map((plan, index) => (
               <div
                 key={index}
-                className="relative grid grid-cols-7 items-center border-b border-secondary/30 last:border-b-0 hover:bg-gray-50"
+                className="relative grid grid-cols-7 items-center border-b border-gray-400 last:border-b-0 hover:bg-gray-50"
               >
                 {plan.popular && (
                   <div

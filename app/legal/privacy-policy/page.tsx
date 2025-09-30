@@ -15,8 +15,8 @@ async function getDocument(slug: string): Promise<DocumentTypes> {
     },
   });
   const res = await fetch(
-    `https://strapi.keizimmy.co.za/api/legal-docs?${ourQuery}`,
-    {}
+    `${process.env.STRAPI_API_URL}/api/legal-docs?${ourQuery}`,
+    {},
   );
   const data = await res.json();
   console.log(data);

@@ -4,42 +4,48 @@ import {
 } from "@/app/ui/customTailwindClasses";
 import Image from "next/image";
 
-import { FaRobot, FaUsers, FaCreditCard } from "react-icons/fa6";
-import { MdSecurity } from "react-icons/md";
+import {
+  MdOutlineSecurity,
+  MdMemory,
+  MdMarkEmailRead,
+  MdShop,
+} from "react-icons/md";
 
 const features = [
   {
-    icon: FaRobot,
-    title: "AI Integration",
+    icon: MdShop,
+    title: "Business Suite",
     description:
-      "Enhance your website with smart tools like chatbots and automation to improve customer experience.",
+      "We offer more than standard Webmail. Get integrated email, contacts, calendar, file sharing, online meetings, and more.",
   },
   {
-    icon: FaUsers,
-    title: "Social Media Integration",
+    icon: MdMarkEmailRead,
+    title: "Custom Domain Email",
     description:
-      "Connect your website with social platforms to reach more people and grow your online presence.",
+      "Boost your brand with domain-matching email addresses. Create personalised emails like you@yourdomain.com to build trust.",
   },
   {
-    icon: MdSecurity,
-    title: "Security & Maintenance",
+    icon: MdMemory,
+    title: "SMTP, POP3, IMAP",
     description:
-      "We keep your website safe, updated, and running smoothly — so you can focus on your business.",
+      "Supports all major mail protocols compatible with email apps. Connect via SMTP from your website to send login, signup, and other transactional emails",
   },
   {
-    icon: FaCreditCard,
-    title: "Payment Options",
+    icon: MdOutlineSecurity,
+    title: "Premium Spam Filtering",
     description:
-      "Choose the plan that works for you — one-time payment or monthly subscriptions to fit your budget.",
+      "Keep your inbox safe and clutter-free with our advanced spam filtering. Every plan includes SpamExperts to block spam, viruses, and phishing attempts.",
   },
 ];
 
-export default function WhyBuyVps() {
+export default function WhyUseEmail() {
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-24 pt-20 leading-normal">
-      <div className="mb-16">
-        <p className="mb-4 font-medium text-blue-600">Virtual Private Server</p>
-        <h2 className={` ${sectionHeadings} mb-6`}>Why buy a VPS from us?</h2>
+    <section className="mx-auto max-w-7xl px-6 py-16 leading-normal">
+      <div className="mb-14">
+        <p className="mb-4 font-medium text-blue-600">DeltaMail</p>
+        <h2 className={` ${sectionHeadings} mb-6`}>
+          Why use us for your Email?
+        </h2>
         <p className={` ${sectionSubHeadings} mb-8 max-w-2xl`}>
           From design to launch, we handle it all. Get a modern, mobile-friendly
           website that helps your business attract more customers..
@@ -60,8 +66,8 @@ export default function WhyBuyVps() {
             const IconComponent = feature.icon;
             return (
               <div key={index} className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <IconComponent className="h-6 w-6 text-primary" />
+                <div className="-mt-1 flex-shrink-0">
+                  <IconComponent className="h-8 w-8 text-primary" />
                 </div>
                 <div>
                   <p className="leading-relaxed text-foreground">

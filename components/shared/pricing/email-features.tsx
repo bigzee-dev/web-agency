@@ -1,7 +1,7 @@
 export const EmailPlans = [
   {
     id: "basic",
-    name: "Basic",
+    name: "DeltaMail Basic",
     priceMonthly: "P30",
     priceYearly: "300",
     description: "ideal for personal use and small businesses",
@@ -19,8 +19,8 @@ export const EmailPlans = [
     featured: false,
   },
   {
-    id: "business",
-    name: "Business",
+    id: "pro",
+    name: "DeltaMail Pro",
     priceMonthly: "P85",
     priceYearly: "P850",
     description: "Ideal for businesses and organisations.",
@@ -39,7 +39,7 @@ export const EmailPlans = [
   },
   {
     id: "enterprise",
-    name: "Enterprise",
+    name: "DeltaMail Enterprise",
     priceMonthly: "P145",
     priceYearly: "P1450",
     description: "Perfect for large businesses and enterprises.",

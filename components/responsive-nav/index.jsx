@@ -9,8 +9,11 @@ import {
   ShoppingBagIcon,
   EmailIcon,
   WebMailIcon,
-  ServerStackIcon,
   MouseClickIcon,
+  LinuxIcon,
+  WindowsIcon,
+  ServerStackIcon,
+  CloudUploadIcon,
   DomainIcon,
   ClipboardCopyIcon,
   DocumentTextIcon,
@@ -69,7 +72,7 @@ export default function ResponsiveNav() {
                 <Link href="/websites" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
-                      <WebsiteIcon />
+                      <MouseClickIcon size="size-5" />
                     </span>
                     Website Development
                   </div>{" "}
@@ -121,7 +124,7 @@ export default function ResponsiveNav() {
                     <span>
                       <WebMailIcon size="size-5" />
                     </span>
-                    WebMail Login
+                    DeltaMail Login
                   </div>{" "}
                 </Link>
               </div>
@@ -139,9 +142,17 @@ export default function ResponsiveNav() {
                 <Link href="/linux-vps" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
-                      <MouseClickIcon size="size-5" />
+                      <LinuxIcon size="size-5" />
                     </span>
-                    Linux VPS
+                    Linux Cloud VPS
+                  </div>
+                </Link>
+                <Link href="/linux-vps" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <WindowsIcon size="size-5" />
+                    </span>
+                    Windows VPS
                   </div>
                 </Link>
                 <Link href="/web-hosting" className="dropdown-item">
@@ -150,6 +161,14 @@ export default function ResponsiveNav() {
                       <ServerStackIcon size="size-5" />
                     </span>
                     Web Hosting
+                  </div>
+                </Link>
+                <Link href="/web-hosting" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <CloudUploadIcon size="size-5" />
+                    </span>
+                    Cloud Storage
                   </div>
                 </Link>
               </div>
@@ -194,7 +213,7 @@ export default function ResponsiveNav() {
                     My Domains
                   </div>
                 </a>
-                <a
+                {/* <a
                   href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/cart/domain/renew`}
                   className="dropdown-item"
                 >
@@ -204,7 +223,7 @@ export default function ResponsiveNav() {
                     </span>
                     Renew Domain
                   </div>
-                </a>
+                </a> */}
               </div>
             </li>
             <li className="nav-item">

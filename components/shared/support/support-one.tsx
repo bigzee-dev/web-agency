@@ -20,7 +20,7 @@ export default function SupportOne() {
       {/* content */}
       <div className="relative z-10 flex h-full w-full items-center justify-between">
         <div className="flex flex-col items-center gap-y-10">
-          <div className="space-y-4">
+          <div className="space-y-5">
             <h2 className="text-balance text-center text-4xl font-bold text-white md:text-4xl">
               Interested in Web Hosting? Lets Chat!
             </h2>
@@ -33,7 +33,7 @@ export default function SupportOne() {
 
           <div className="mt-auto flex items-center justify-center">
             <Link href="/contact-us" className={` ${whiteButton} `}>
-              Contact us <span aria-hidden="true"> →</span>
+              Contact us
             </Link>
           </div>
         </div>

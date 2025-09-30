@@ -16,7 +16,7 @@ export default function Page() {
       <VpsFeatures />
       <LinuxDistributions />
       <WhyBuyVps />
-      <Consultation text="our Linux VPS service?" />
+      <Consultation text="our Linux Cloud VPS?" />
       <FaqsVps />
     </>
   );

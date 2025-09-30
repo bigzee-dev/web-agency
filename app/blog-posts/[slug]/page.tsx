@@ -12,8 +12,8 @@ async function fetchpost(slug: string): Promise<PostTypes> {
     },
   });
   const res = await fetch(
-    `http://localhost:1337/api/blog-posts?${ourQuery}`,
-    {}
+    `${process.env.STRAPI_API_URL}/api/blog-posts?${ourQuery}`,
+    {},
   );
   const data = await res.json();
   console.log(data);
@@ -23,7 +23,7 @@ async function fetchpost(slug: string): Promise<PostTypes> {
   };
 }
 
-export default async function Page({ params }) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const post = await fetchpost(params.slug);
   console.log(post);
   return (

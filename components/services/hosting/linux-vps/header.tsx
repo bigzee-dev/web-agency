@@ -84,7 +84,7 @@ export default function HeaderVps() {
                   slidesPerView={1}
                   pagination={{ clickable: true }}
                   loop
-                  autoplay={{ delay: 3500 }}
+                  autoplay={{ delay: 2500 }}
                   modules={[Autoplay, EffectCoverflow]}
                 >
                   <SwiperSlide>

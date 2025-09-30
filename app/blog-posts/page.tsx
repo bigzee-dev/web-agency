@@ -1,25 +1,25 @@
 import Link from "next/link";
 
 async function getAllBlogPosts() {
-  const res = await fetch("http://localhost:1337/api/blog-posts", {});
+  const res = await fetch(` ${process.env.STRAPI_API_URL}/api/blog-posts`, {});
   const blogs = await res.json();
   return blogs.data;
 }
 
 interface BlogPost {
   id: number;
-  Title: string;
-  Subtitle: string;
+  title: string;
+  subtitle: string;
   slug: string;
   image: string;
 }
 
 export default async function BlogPosts() {
   const blogs = await getAllBlogPosts();
-  // console.log(blogs);
+  console.log(blogs);
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-4">Blog Posts</h1>
+      <h1 className="mb-4 text-3xl font-bold">Blog Posts</h1>
       <ul className="list-disc pl-5">
         {blogs.map((blog: BlogPost) => (
           <li key={blog.id} className="mb-2">
@@ -27,9 +27,9 @@ export default async function BlogPosts() {
               href={`/blog-posts/${blog.slug}`}
               className="text-blue-500 hover:underline"
             >
-              {blog.Title}
+              {blog.title}
             </Link>
-            <p>{blog.Subtitle}</p>
+            <p>{blog.subtitle}</p>
           </li>
         ))}
       </ul>

@@ -22,7 +22,7 @@ export default function Header() {
               <h1
                 className={`${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
               >
-                Look Professional with our Email Service
+                Connect with your Clients - Fast, Simple, Secure
               </h1>
 
               <div className="my-6 space-y-4 text-md">
@@ -61,23 +61,25 @@ export default function Header() {
             </div>
             <div className="relative col-span-6 flex items-center py-8">
               {" "}
-              <Image
-                src="/img/emails/emails-filter.png"
-                alt="Logo"
-                width={1000}
-                height={800}
-                className="rounded-3xl bg-neutral-400/40 object-cover px-12 py-6"
-              />
-              <Badge
-                variant="outline"
-                className="absolute right-6 top-12 border-white/20 bg-gray-800/20 px-4 py-2 text-white"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-purple-400"></div>
-                  <span>1 New msg</span>
-                  <span className="font-semibold text-green-400">INBOX</span>
-                </div>
-              </Badge>
+              <div className="relative rounded-3xl bg-neutral-400/40 px-12 py-6">
+                <Image
+                  src="/img/emails/emails-filter.png"
+                  alt="Logo"
+                  width={1000}
+                  height={800}
+                  className="rounded-3xl object-cover"
+                />
+                <Badge
+                  variant="outline"
+                  className="absolute right-4 top-4 border-white/20 bg-gray-800/20 px-4 py-2 text-white"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-purple-400"></div>
+                    <span>1 New msg</span>
+                    <span className="font-semibold text-green-400">INBOX</span>
+                  </div>
+                </Badge>
+              </div>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ export default function Websites() {
           <div className="w-full pr-12 lg:w-[50%]">
             {/* Websites badge */}
             <div className="inline-block">
-              <span className="font-semibold tracking-widest text-neutral-300">
+              <span className="font-semibold tracking-widest text-neutral-400">
                 WEBSITES
               </span>
             </div>
@@ -39,7 +39,7 @@ export default function Websites() {
             >
               We Develop Websites that Deliver Results
             </h1>
-            <p className="mb-2 mt-6 flex items-center gap-3 font-sans text-md text-neutral-400">
+            <p className="mb-2 mt-7 flex items-center gap-3 font-sans text-md text-neutral-400">
               <span>
                 <FaCheck size="0.8em" className="text-gray-400" />
               </span>

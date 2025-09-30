@@ -1,11 +1,7 @@
-"use client";
-
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-// import { ChevronDown } from "lucide-react";
 import { Plus } from "lucide-react";
-// import { TiMinus } from "react-icons/ti";
-
+import { Minus } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Accordion = AccordionPrimitive.Root;
@@ -26,21 +22,23 @@ const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => {
-  console.log("AccordionTrigger props:", props); // Debugging line
-
   return (
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         ref={ref}
         className={cn(
-          "flex flex-1 items-center justify-between py-4 text-left text-base font-medium text-gray-800 transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+          "group flex flex-1 items-center justify-between py-4 text-left text-base font-medium text-gray-800 transition-all hover:underline",
           className,
         )}
         {...props}
       >
         {children}
-
-        <Plus className="h-5 w-5 shrink-0 text-gray-800 transition-transform duration-200" />
+        <span className="ml-2 flex items-center transition-transform duration-200 group-data-[state=open]:rotate-180">
+          <span className="relative">
+            <Plus className="absolute inset-0 h-5 w-5 text-gray-800 transition-opacity duration-200 group-data-[state=open]:opacity-0" />
+            <Minus className="h-6 w-6 text-gray-800 opacity-0 transition-opacity duration-200 group-data-[state=open]:opacity-100" />
+          </span>
+        </span>
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );
