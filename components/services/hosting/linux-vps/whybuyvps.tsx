@@ -38,7 +38,7 @@ export default function WhyBuyVps() {
   return (
     <section className="mx-auto max-w-7xl px-6 pb-24 pt-20 leading-normal">
       <div className="mb-16">
-        <p className="mb-4 font-medium text-blue-600">Virtual Private Server</p>
+        <p className="mb-2 font-medium text-blue-600">Virtual Private Server</p>
         <h2 className={` ${sectionHeadings} mb-6`}>Why buy a VPS from us?</h2>
         <p className={` ${sectionSubHeadings} mb-8 max-w-2xl`}>
           From design to launch, we handle it all. Get a modern, mobile-friendly

@@ -1,6 +1,6 @@
 import { FaCheck } from "react-icons/fa6";
-import ServerStatusIndicator from "./statusdots";
-import { BsFillNutFill } from "react-icons/bs";
+
+import { BsDot } from "react-icons/bs";
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
 
@@ -31,21 +31,7 @@ const features = [
 
 export default function VpsFeatures() {
   return (
-    <div className="pb-16">
-      {/* <div className="relative mx-auto mb-10 flex max-w-5xl items-center justify-center bg-gradient-to-r from-slate-800 to-slate-700 px-3 py-2.5 text-neutral-100 shadow-md">
-        <span className="absolute left-5 mr-2 text-slate-400">
-          <BsFillNutFill size="1.4em" className="text-slate-300/95" />
-        </span>
-        <div className="rounded-sm border border-gray-500 bg-slate-600/20"></div>
-        <span className="absolute right-32 ml-2 text-slate-400">
-          <ServerStatusIndicator size="sm" speed="slow" />
-        </span>
-
-        <span className="absolute right-5 ml-2 text-slate-400">
-          <BsFillNutFill size="1.4em" className="text-slate-300/95" />
-        </span>
-        <div className="absolute -bottom-1.5 left-1/2 -z-10 flex h-3 w-3 -translate-x-1/2 rotate-45 items-center justify-center bg-slate-700 shadow-md"></div>
-      </div> */}
+    <div className="pb-12">
       <div className="mx-auto grid h-[26rem] max-w-6xl grid-cols-12 gap-x-14 border border-gray-400 p-8">
         <div className="relative col-span-6">
           <Image
@@ -60,11 +46,11 @@ export default function VpsFeatures() {
           >
             All our VPS Servers include the following features.
           </h3>
-          <ul className="mx-auto grid h-48 w-[90%] list-inside grid-cols-2 gap-x-1 gap-y-1 self-center font-sans text-md font-medium text-secondary md:gap-x-0">
+          <ul className="mx-auto grid h-48 w-[90%] list-inside grid-cols-2 gap-x-1 gap-y-1 self-center font-sans text-md text-gray-600 md:gap-x-0">
             {features.map((feature, idx) => (
               <li key={idx} className="flex items-center gap-2.5">
                 <span>
-                  <FaCheck className="h-auto w-3.5 text-blue-600" />
+                  <BsDot className="h-auto w-3.5 text-gray-600" />
                 </span>
                 {feature.label}
               </li>

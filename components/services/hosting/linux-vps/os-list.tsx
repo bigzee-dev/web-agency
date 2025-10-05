@@ -62,7 +62,7 @@ const distributions: LinuxDistribution[] = [
 export default function LinuxDistributions() {
   return (
     <div className="w-full bg-gray-800">
-      <section className="mx-auto w-full max-w-6xl px-4 py-20">
+      <section className="mx-auto w-full max-w-6xl px-4 py-20 pb-16">
         <div className="mb-12 text-center">
           {/* <p className="mb-3 font-sans text-md font-medium text-neutral-300">
             1-Click Install

@@ -45,7 +45,7 @@ export default function Header() {
 
               <Link
                 href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/business-email`}
-                className={` ${whiteButton} mt-4 inline-block`}
+                className={` ${whiteButton} mt-4 inline-block bg-blue-300 text-gray-800`}
               >
                 Compare Plans
               </Link>

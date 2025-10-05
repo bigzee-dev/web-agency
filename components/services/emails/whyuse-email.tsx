@@ -40,7 +40,7 @@ const features = [
 
 export default function WhyUseEmail() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-16 leading-normal">
+    <section className="mx-auto max-w-7xl px-6 pb-20 pt-12 leading-normal">
       <div className="mb-14">
         <p className="mb-4 font-medium text-blue-600">DeltaMail</p>
         <h2 className={` ${sectionHeadings} mb-6`}>
@@ -66,8 +66,8 @@ export default function WhyUseEmail() {
             const IconComponent = feature.icon;
             return (
               <div key={index} className="flex gap-4">
-                <div className="-mt-1 flex-shrink-0">
-                  <IconComponent className="h-8 w-8 text-primary" />
+                <div className="flex-shrink-0">
+                  <IconComponent className="h-7 w-7 text-primary" />
                 </div>
                 <div>
                   <p className="leading-relaxed text-foreground">

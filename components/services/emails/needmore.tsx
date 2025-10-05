@@ -5,9 +5,9 @@ import Link from "next/link";
 export default function NeedMore() {
   return (
     <section className="mx-auto max-w-3xl space-y-10 px-4 pb-12 pt-16 text-center">
-      <div className="space-y-4">
+      <div className="space-y-5">
         <h2
-          className={` ${montserrat.className} text-balance text-center text-4xl font-medium text-gray-800 md:text-4xl`}
+          className={` ${montserrat.className} text-balance text-center text-4xl font-medium text-secondary md:text-4xl`}
         >
           Need More? Get a Custom Plan.
         </h2>
@@ -22,7 +22,7 @@ export default function NeedMore() {
         href="/contact-us"
         className={` ${primaryButton} inline-flex items-center justify-center`}
       >
-        Contact us &nbsp;<span aria-hidden="true"> →</span>
+        Contact us
       </Link>
     </section>
   );

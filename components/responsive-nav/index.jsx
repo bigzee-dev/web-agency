@@ -4,7 +4,6 @@ import { cairo, montserrat } from "@/app/ui/fonts";
 import { NavChevron } from "./chevron";
 import useResponsiveNav from "@/app/hooks/useResponsiveNav";
 import {
-  WebsiteIcon,
   WebAppIcon,
   ShoppingBagIcon,
   EmailIcon,
@@ -12,12 +11,11 @@ import {
   MouseClickIcon,
   LinuxIcon,
   WindowsIcon,
-  ServerStackIcon,
+  CpanelIcon,
   CloudUploadIcon,
   DomainIcon,
   ClipboardCopyIcon,
   DocumentTextIcon,
-  ArrowPathIcon,
   InfoIcon,
   BookIcon,
   ListIcon,
@@ -28,7 +26,7 @@ import {
   TicketsIcon,
   KnowledgebaseIcon,
   ChatIcon,
-} from "../nav-icons";
+} from "./nav-icons";
 import Link from "next/link";
 
 export default function ResponsiveNav() {
@@ -99,6 +97,50 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
+                Cloud{" "}
+                <span className="chevron">
+                  <NavChevron />
+                </span>
+              </div>
+              <div className="dropdown-menu">
+                <Link href="/linux-vps" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <LinuxIcon size="size-5" />
+                    </span>
+                    Linux Cloud VPS
+                  </div>
+                </Link>
+                <Link href="/linux-vps" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <WindowsIcon size="size-5" />
+                    </span>
+                    Windows VPS
+                  </div>
+                </Link>
+                <Link href="/web-hosting" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <CpanelIcon size="size-5" />
+                    </span>
+                    Web Hosting
+                  </div>
+                </Link>
+                <Link href="/web-hosting" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <CloudUploadIcon size="size-5" />
+                    </span>
+                    Cloud Storage
+                  </div>
+                </Link>
+              </div>
+            </li>
+            <li className="nav-item">
+              <div
+                className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
+              >
                 {/* Changed to Link */}
                 Email
                 <span className="chevron text-neutral-700">
@@ -129,50 +171,7 @@ export default function ResponsiveNav() {
                 </Link>
               </div>
             </li>
-            <li className="nav-item">
-              <div
-                className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
-              >
-                Hosting{" "}
-                <span className="chevron">
-                  <NavChevron />
-                </span>
-              </div>
-              <div className="dropdown-menu">
-                <Link href="/linux-vps" className="dropdown-item">
-                  <div className="dropdown-item-link">
-                    <span>
-                      <LinuxIcon size="size-5" />
-                    </span>
-                    Linux Cloud VPS
-                  </div>
-                </Link>
-                <Link href="/linux-vps" className="dropdown-item">
-                  <div className="dropdown-item-link">
-                    <span>
-                      <WindowsIcon size="size-5" />
-                    </span>
-                    Windows VPS
-                  </div>
-                </Link>
-                <Link href="/web-hosting" className="dropdown-item">
-                  <div className="dropdown-item-link">
-                    <span>
-                      <ServerStackIcon size="size-5" />
-                    </span>
-                    Web Hosting
-                  </div>
-                </Link>
-                <Link href="/web-hosting" className="dropdown-item">
-                  <div className="dropdown-item-link">
-                    <span>
-                      <CloudUploadIcon size="size-5" />
-                    </span>
-                    Cloud Storage
-                  </div>
-                </Link>
-              </div>
-            </li>
+
             <li className="nav-item">
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}

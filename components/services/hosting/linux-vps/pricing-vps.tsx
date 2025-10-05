@@ -62,7 +62,7 @@ const pricingData = [
 export default function PricingVpsTable() {
   return (
     <div className="x-padding w-full">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 pb-16 pt-32">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 pb-12 pt-32">
         {/* Title */}
         <h1
           className={` ${montserrat.className} text-center text-3xl font-bold text-gray-800 md:text-5xl`}

@@ -136,6 +136,14 @@ export const WindowsIcon = ({ size }: { size: string }) => {
   );
 };
 
+export const CpanelIcon = ({ size }: { size: string }) => {
+  return (
+    <div className={` ${size} flex items-center justify-center`}>
+      <img src="/svg/navbar/cP_orange.svg" alt="cpanel icon"></img>
+    </div>
+  );
+};
+
 export const ServerStackIcon = ({ size }: { size: string }) => {
   return (
     <svg

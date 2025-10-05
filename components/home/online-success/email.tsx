@@ -3,7 +3,7 @@ import { ChevronRight, Lock } from "lucide-react";
 import { FaCheck } from "react-icons/fa6";
 import Link from "next/link";
 import { montserrat } from "@/app/ui/fonts";
-import { EmailIcon } from "@/components/nav-icons";
+import { EmailIcon } from "@/components/responsive-nav/nav-icons";
 
 const features = [
   "Professional custom email addresses (you@yourdomain.com)",

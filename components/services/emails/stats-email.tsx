@@ -52,7 +52,7 @@ export default function StatsEmail() {
               >
                 Email Built for Business
                 <br />{" "}
-                <span className="mt-10 text-xl font-medium uppercase tracking-wider text-sky-400">
+                <span className="mt-10 text-lg font-medium uppercase tracking-wider text-slate-400">
                   Designed for You
                 </span>
               </h2>

@@ -43,7 +43,7 @@ const emailsData = [
 
 export default function EmailSupport() {
   return (
-    <div className="relative mx-auto grid w-full max-w-6xl grid-cols-12 items-center gap-x-20 py-16">
+    <div className="relative mx-auto grid w-full max-w-6xl grid-cols-12 items-center gap-x-20 py-20">
       {/* Blur component */}
       <div
         aria-hidden="true"
