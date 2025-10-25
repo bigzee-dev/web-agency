@@ -58,65 +58,67 @@ export function ClientTestimonialCarousel() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-16 md:py-24">
-      <div className="flex justify-between items-center mb-12">
-        <div>
-          <h2
-            className={` ${montserrat.className} max-w-6xl text-4xl md:text-5xl font-bold text-gray-800 leading-tight`}
-          >
-            Our{" "}
-            <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 text-transparent bg-clip-text">
-              Clients
-            </span>{" "}
-            Review
-          </h2>
-          <p className="text-lg md:text-xl text-gray-700 mt-4">
-            We have worked with thousands of amazing people
-          </p>
-        </div>
+    <div className="to transparent w-full bg-gradient-to-b from-neutral-200/50">
+      <div className="mx-auto w-full max-w-7xl px-4 py-16 md:py-20">
+        <div className="mb-12 flex items-center justify-between">
+          <div>
+            <h2
+              className={` ${montserrat.className} max-w-6xl text-4xl font-bold leading-tight text-gray-800 md:text-5xl`}
+            >
+              Our{" "}
+              <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 bg-clip-text text-transparent">
+                Clients
+              </span>{" "}
+              Review
+            </h2>
+            <p className="mt-4 text-lg text-gray-700 md:text-xl">
+              We have worked with thousands of amazing people
+            </p>
+          </div>
 
-        <div className="flex justify-end gap-2">
-          <button
-            onClick={goToPrevious}
-            className="flex items-center justify-center h-12 w-12  p-2 rounded-xl border border-gray-400 hover:bg-gray-100 transition-colors"
-            aria-label="Previous testimonial"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          <button
-            onClick={goToNext}
-            className="flex items-center justify-center h-12 w-12 p-2 rounded-xl border border-gray-400 hover:bg-gray-100 transition-colors"
-            aria-label="Next testimonial"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
-        <div className="w-full md:w-1/3">
-          <div className="rounded-lg overflow-hidden bg-amber-100  h-[350px]">
-            <Image
-              src={currentTestimonial.image || "/placeholder.svg"}
-              alt={currentTestimonial.name}
-              width={667}
-              height={1000}
-              className="object-cover h-full w-full"
-            />
+          <div className="flex justify-end gap-2">
+            <button
+              onClick={goToPrevious}
+              className="flex h-12 w-12 items-center justify-center rounded-xl border border-gray-400 bg-primary p-2 text-neutral-100 transition-colors"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="flex h-12 w-12 items-center justify-center rounded-xl border border-gray-400 bg-primary p-2 text-neutral-100 transition-colors"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
           </div>
         </div>
 
-        <div className="w-full md:w-2/3 flex flex-col justify-center">
-          <blockquote className="text-xl md:text-xl text-gray-700 fobt-medium italic mb-8">
-            &quot;{currentTestimonial.quote}&quot;
-          </blockquote>
-          <div>
-            <h3 className="font-sans text-xl md:text-xl font-bold text-gray-900">
-              {currentTestimonial.name}
-            </h3>
-            <p className="font-sans text-gray-600">
-              {currentTestimonial.title}
-            </p>
+        <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:gap-12">
+          <div className="w-full md:w-1/3">
+            <div className="h-[350px] overflow-hidden rounded-lg bg-amber-100">
+              <Image
+                src={currentTestimonial.image || "/placeholder.svg"}
+                alt={currentTestimonial.name}
+                width={667}
+                height={1000}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="flex w-full flex-col justify-center md:w-2/3">
+            <blockquote className="fobt-medium mb-8 text-xl italic text-gray-700 md:text-xl">
+              &quot;{currentTestimonial.quote}&quot;
+            </blockquote>
+            <div>
+              <h3 className="font-sans text-xl font-bold text-gray-900 md:text-xl">
+                {currentTestimonial.name}
+              </h3>
+              <p className="font-sans text-gray-600">
+                {currentTestimonial.title}
+              </p>
+            </div>
           </div>
         </div>
       </div>

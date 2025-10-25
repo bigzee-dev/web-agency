@@ -26,17 +26,12 @@ export default function Header() {
             className="absolute right-0 top-0 h-auto w-[300px] rounded-lg"
           />
           <div className="max-w-lg space-y-4">
-            <p className="text-md font-medium text-gray-400">
-              Lets Discuss your Project
-            </p>
-            <p className="text-3xl font-extrabold text-gray-300">Contact Us</p>
+            <p className="text-5xl font-bold text-gray-300">Contact Us</p>
             <p className="font-sans text-base font-normal text-gray-400">
               Use these Tailwind CSS settings screen examples to build
               configuration and preference pages where users can update their
               account information, change settings, and customize their
-              experience. These page examples are designed and built by the
-              Tailwind CSS team, and include a variety of different styles and
-              layouts.
+              experience.
             </p>
           </div>
         </div>

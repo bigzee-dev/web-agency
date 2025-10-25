@@ -1,4 +1,5 @@
 import {
+  longSectionHeadings,
   sectionHeadings,
   sectionSubHeadings,
 } from "@/app/ui/customTailwindClasses";
@@ -40,11 +41,11 @@ const features = [
 
 export default function WhyUseEmail() {
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-20 pt-12 leading-normal">
+    <section className="mx-auto max-w-7xl px-6 pb-24 pt-12 leading-normal">
       <div className="mb-14">
-        <p className="mb-4 font-medium text-blue-600">DeltaMail</p>
-        <h2 className={` ${sectionHeadings} mb-6`}>
-          Why use us for your Email?
+        <p className="mb-2 font-medium text-blue-600">DeltaMail</p>
+        <h2 className={` ${longSectionHeadings} mb-6`}>
+          Why Pick Us for Email?
         </h2>
         <p className={` ${sectionSubHeadings} mb-8 max-w-2xl`}>
           From design to launch, we handle it all. Get a modern, mobile-friendly

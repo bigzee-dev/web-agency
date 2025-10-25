@@ -1,14 +1,21 @@
 import SideNav from "./sidenav";
 import Header from "./header";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="max-w-7xl mx-auto">
-      <Header />
-      <div className="flex  flex-col md:flex-row gap-x-4 md:overflow-hidden mt-5">
-        <div className="flex-none min-w-[250px]">
+    <div className="mx-auto max-w-6xl">
+      <div className="mt-5 flex flex-col gap-x-8 md:flex-row md:overflow-hidden">
+        <div className="min-w-[250px] flex-none"></div>
+        <div className="flex-grow py-2 pr-6 md:overflow-y-auto lg:pr-24">
+          <Header />
+        </div>
+      </div>
+
+      <div className="mt-5 flex flex-col gap-x-10 md:flex-row md:overflow-hidden">
+        <div className="min-w-[250px] flex-none">
           <SideNav />
         </div>
-        <div className="flex-grow px-6 py-2 md:overflow-y-auto md:px-12 lg:pr-24">
+        <div className="flex-grow py-2 pb-20 pr-6 md:overflow-y-auto lg:pr-24">
           {children}
         </div>
       </div>

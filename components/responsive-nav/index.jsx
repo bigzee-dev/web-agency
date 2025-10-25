@@ -360,7 +360,7 @@ export default function ResponsiveNav() {
         </div>
         <div className="hidden items-center justify-between text-gray-800 lg:flex">
           <Link
-            href=""
+            href="/contact-us"
             className="box-border flex items-center justify-center gap-x-1 rounded-[10px] border-2 border-gray-800 bg-neutral-100 px-[10px] py-[8px] text-xs font-medium uppercase text-gray-800"
           >
             <ChatIcon size="size-5" />

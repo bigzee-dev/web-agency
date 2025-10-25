@@ -31,7 +31,7 @@ export default function Faqs(props: FaqsProps) {
 
   return (
     <div className="mx-auto grid max-w-7xl grid-cols-12 gap-x-20 py-24">
-      <div className="col-span-6">
+      <div className="col-span-6 pt-2">
         <h3 className="text-4xl font-bold text-gray-800">{heading}</h3>
         <p className="mt-4 text-gray-600">{subheading ?? defaultSubheading}</p>
       </div>

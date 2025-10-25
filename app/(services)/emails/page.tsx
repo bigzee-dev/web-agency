@@ -8,9 +8,9 @@ import WhyUseEmail from "@/components/services/emails/whyuse-email";
 import EmailSupport from "@/components/services/emails/support";
 import FaqsEmail from "@/components/services/emails/faqs-email";
 
-export default function Websites() {
+export default function Page() {
   return (
-    <div className="pb-20">
+    <div>
       <Header />
       <Steps />
       <PricingPlans plan="emails" />

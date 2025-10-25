@@ -7,7 +7,7 @@ export default function NeedMore() {
     <section className="mx-auto max-w-3xl space-y-10 px-4 pb-12 pt-16 text-center">
       <div className="space-y-5">
         <h2
-          className={` ${montserrat.className} text-balance text-center text-4xl font-medium text-secondary md:text-4xl`}
+          className={` ${montserrat.className} text-balance text-center text-3xl font-semibold text-gray-800 md:text-3xl`}
         >
           Need More? Get a Custom Plan.
         </h2>

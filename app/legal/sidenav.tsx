@@ -22,7 +22,7 @@ const legalLinks = [
 export default function SideNav() {
   const pathname = usePathname();
   return (
-    <nav className="w-full md:w-full  p-3 rounded-lg">
+    <nav className="w-full rounded-lg p-3 md:w-full">
       <ul className="space-y-4">
         {legalLinks.map((link) => {
           const isActive = pathname === link.href;
@@ -31,11 +31,11 @@ export default function SideNav() {
               key={link.name}
               href={link.href}
               className={clsx(
-                "flex h-[48px] grow items-center justify-center gap-2 text-gray-800 font-medium rounded-md p-3 md:flex-none md:justify-start md:p-2 md:px-3",
+                "flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-md font-medium md:flex-none md:justify-start md:p-2 md:px-3",
                 {
-                  "bg-gray-300 text-blue-400": isActive, // Active link styles
-                  "hover:text-blue-600 ": !isActive, // Hover only for non-active links
-                }
+                  "bg-gray-200 text-gray-600": isActive, // Active link styles
+                  "text-primary hover:text-blue-600": !isActive, // Hover only for non-active links
+                },
               )}
             >
               <p className="hidden md:block">{link.name}</p>

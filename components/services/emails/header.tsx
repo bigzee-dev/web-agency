@@ -20,7 +20,7 @@ export default function Header() {
               </div>
               {/* Main heading */}
               <h1
-                className={`${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
+                className={`${montserrat.className} mt-3 max-w-4xl text-4xl font-semibold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
               >
                 Connect with your Clients - Fast, Simple, Secure
               </h1>
@@ -28,36 +28,36 @@ export default function Header() {
               <div className="my-6 space-y-4 text-md">
                 <p className="max-w-[90%] font-sans font-normal text-neutral-300">
                   Setup a personalised email address using your domain name, e.g
-                  <span className="text-neutral-400"> david@mywebsite.com</span>
+                  <span className="text-blue-300"> david@mywebsite.com</span>
                 </p>
                 <p className="max-w-[90%] font-sans font-normal text-neutral-300">
                   A business email address makes a great professional
-                  impression. With BigZee, you can get a work email address for
-                  each team or individual team member e.g{" "}
-                  <span className="text-neutral-400">sales@mybusiness.com</span>
-                  ,
-                  <span className="text-neutral-400">
-                    {" "}
-                    support@mybusiness.com
-                  </span>
+                  impression. With Deltaworx, you can get a work email address
+                  for each team or individual team member e.g{" "}
+                  <span className="text-blue-300">sales@mybusiness.com</span>,
+                  <span className="text-blue-300"> support@mybusiness.com</span>
                 </p>
               </div>
 
-              <Link
-                href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/business-email`}
-                className={` ${whiteButton} mt-4 inline-block bg-blue-300 text-gray-800`}
-              >
-                Compare Plans
-              </Link>
-              {/* <div className="mt-5 flex items-center font-sans text-sm font-medium text-neutral-300">
-                <span className="mr-2">
-                  <IoShieldCheckmarkSharp
-                    size="1.5em"
-                    className="text-blue-400"
-                  />
-                </span>
-                <span className="">7 day - money back - guarantee</span>
-              </div> */}
+              <div className="mt-10 flex items-end gap-x-12">
+                <Link
+                  href=""
+                  className={` ${whiteButton} inline-flex justify-center bg-blue-300`}
+                >
+                  Compare Plans
+                </Link>
+                <div className="flex flex-col items-start">
+                  <span className="mb-0.5 text-xs text-neutral-400">
+                    Starting from
+                  </span>
+                  <span className="text-4xl font-semibold text-neutral-300">
+                    P45
+                    <span className="text-lg font-medium text-neutral-400">
+                      /month
+                    </span>
+                  </span>
+                </div>
+              </div>
             </div>
             <div className="relative col-span-6 flex items-center py-8">
               {" "}

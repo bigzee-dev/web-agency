@@ -1,10 +1,30 @@
-import { btnDimensions } from "@/app/ui/customTailwindClasses";
-import { montserrat } from "@/app/ui/fonts";
+import { btnDimensions, sectionHeadings } from "@/app/ui/customTailwindClasses";
 import Image from "next/image";
+import { HiServerStack } from "react-icons/hi2";
+import { FaCloudDownloadAlt } from "react-icons/fa";
+import { IoBarChartSharp } from "react-icons/io5";
+
+const missionPoints = [
+  {
+    id: 1,
+    icon: FaCloudDownloadAlt,
+    title: "Botswana Focussed",
+  },
+  {
+    id: 2,
+    icon: HiServerStack,
+    title: "Reliability",
+  },
+  {
+    id: 3,
+    icon: IoBarChartSharp,
+    title: "Growth & Success",
+  },
+];
 
 export default function Benefits() {
   return (
-    <div className="relative isolate w-full ">
+    <div className="relative isolate w-full pt-6">
       <div
         aria-hidden="true"
         className="hidden sm:absolute sm:-top-28 sm:right-1/3 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
@@ -17,7 +37,7 @@ export default function Benefits() {
           className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2b2774] to-[#4a4790] opacity-20"
         />
       </div>
-      <div className="max-w-7xl mx-auto h-auto grid grid-cols-1 md:grid-cols-12 gap-y-8 pt-16 pb-20">
+      <div className="mx-auto grid h-auto max-w-7xl grid-cols-1 gap-y-8 pb-20 pt-16 md:grid-cols-12">
         {/* Image */}
         <section className="flex justify-center lg:col-span-6">
           <Image
@@ -25,20 +45,15 @@ export default function Benefits() {
             alt="image"
             width={823}
             height={690}
-            className="md:w-[80%] object-contain"
+            className="object-contain md:w-[80%]"
           />
         </section>
         {/* text content */}
-        <section className="col-span-1 lg:col-span-6 flex flex-col space-y-6 md:px-2 ">
-          <h3
-            className={`${montserrat.className} text-4xl font-bold text-gray-800 tracking-wide`}
-          >
-            How can you <span className="text-primary">benefit</span> from our
-            services
-          </h3>
+        <section className="col-span-1 flex flex-col space-y-8 md:px-2 lg:col-span-6">
+          <h3 className={`${sectionHeadings} `}>Our Mission</h3>
 
           <div>
-            <ul className="text-base list-disc pl-6 text-gray-700 mt-4 space-y-4">
+            {/* <ul className="text-base list-disc pl-6 text-gray-700 mt-4 space-y-4">
               <li className="font-sans">
                 Boost Business Credibility. Having a website that consumers are
                 able to find gives your business a greater level of credibility.
@@ -56,10 +71,35 @@ export default function Benefits() {
                 We build long term partnerships with our clients to ensure that
                 their project - and their broader digital marketing - works.
               </li>
-            </ul>
+            </ul> */}
+            <div className="rounded-2xl border-l-4 border-primary pl-8">
+              <p className="font-sans text-xl italic leading-relaxed text-gray-700">
+                Our mission is to deliver a reliable, accessible, and scalable
+                digital infrastructure that supports the growth and success of
+                businesses and developers in Botswana.
+              </p>
+            </div>
+            <div className="mt-4 grid grid-cols-3 gap-x-6">
+              {missionPoints.map((point) => {
+                const Icon = point.icon;
+                return (
+                  <div
+                    key={point.id}
+                    className="mt-8 flex flex-col items-center"
+                  >
+                    <div className="mb-4 rounded-full bg-primary/10 p-4 text-primary">
+                      <Icon size={32} />
+                    </div>
+                    <h4 className="text-center font-semibold text-gray-800">
+                      {point.title}
+                    </h4>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-          <div className="w-full">
-            <button className={`${btnDimensions}  bg-primary text-white mt-4`}>
+          <div className="flex w-full justify-center">
+            <button className={`${btnDimensions} mt-4 bg-primary text-white`}>
               Work with Us
             </button>
           </div>

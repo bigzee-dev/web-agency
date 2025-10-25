@@ -1,12 +1,8 @@
 import { Mail, Phone, MessageSquare, Facebook } from "lucide-react";
 import { montserrat } from "@/app/ui/fonts";
+import ContactForm from "./contactform/contactform";
+import Image from "next/image";
 
-const links = [
-  { name: "Contact Us", href: "#" },
-  { name: "We Build", href: "#" },
-  { name: "We Deliver", href: "#" },
-  { name: "Launch Product", href: "#" },
-];
 const contactOptions = [
   {
     id: "email",
@@ -41,7 +37,7 @@ const contactOptions = [
 export default function WorkWithUs() {
   return (
     <div className="x-padding mt-5 w-full">
-      <div className="relative isolate overflow-hidden rounded-3xl bg-gray-900 py-20">
+      <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gray-900 pb-6 pt-20">
         <div
           aria-hidden="true"
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
@@ -66,57 +62,72 @@ export default function WorkWithUs() {
             className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#73304c] to-[#776fff] opacity-25"
           />
         </div>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2
-              className={` ${montserrat.className} max-w-6xl text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl`}
-            >
-              Work with us
-            </h2>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
-              Businesses of any size can improve their marketing and online
-              reach by using our products and services.
-            </p>
-          </div>
-          <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-neutral-300 sm:grid-cols-2 md:flex lg:gap-x-10">
-              {links.map((link) => (
-                <a key={link.name} href={link.href}>
-                  {link.name} <span aria-hidden="true">&rarr;</span>
-                </a>
-              ))}
-            </div>
-            {/* Contact Options Grid */}
-            <div className="mt-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-4 md:gap-12">
-              {contactOptions.map((option) => {
-                const IconComponent = option.icon;
-                return (
-                  <div key={option.id} className="space-y-4 text-center">
-                    <div className="flex justify-center">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-500/50 bg-white/5">
-                        <IconComponent className="h-6 w-6 text-blue-400" />
+        <div className="px-6 lg:px-20">
+          <div className="grid w-full grid-cols-2">
+            <div className="col-span-1 flex flex-col gap-y-8">
+              <h2
+                className={` ${montserrat.className} max-w-6xl text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl`}
+              >
+                Work with us
+              </h2>
+              <div className="space-y-2">
+                <div className="flex items-center gap-x-0.5">
+                  <Image
+                    src="/logo/logo-500x500.png"
+                    alt="BigZee Digital Logo"
+                    width={40}
+                    height={40}
+                  />
+                  <h5
+                    className={` ${montserrat.className} text-[1.5rem] font-medium text-blue-300`}
+                  >
+                    eltaworx
+                  </h5>
+                </div>
+
+                <div className="flex flex-col pl-1 font-sans text-md text-neutral-400">
+                  <span>Plot 698, Old Mall</span>
+                  <span>Maun</span>
+                </div>
+              </div>
+
+              {/* Contact Options Grid */}
+              <div className="grid grid-cols-2 gap-6 gap-y-7">
+                {contactOptions.map((option) => {
+                  const IconComponent = option.icon;
+                  return (
+                    <div key={option.id} className="space-y-3">
+                      <div className="flex justify-start">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-500/50 bg-white/5">
+                          <IconComponent className="h-5 w-5 text-blue-400" />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <h3 className="text-base/7 font-medium text-neutral-200">
+                          {option.title}
+                        </h3>
+                        <a
+                          href={option.href}
+                          className="font-sans text-md text-neutral-400 hover:text-blue-700"
+                          {...(option.id === "twitter" && {
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                          })}
+                        >
+                          {option.contact}
+                        </a>
                       </div>
                     </div>
-                    <div className="space-y-2">
-                      <h3 className="text-base/7 font-semibold text-neutral-200">
-                        {option.title}
-                      </h3>
-                      <a
-                        href={option.href}
-                        className="text-md font-medium text-neutral-400 hover:text-blue-700"
-                        {...(option.id === "twitter" && {
-                          target: "_blank",
-                          rel: "noopener noreferrer",
-                        })}
-                      >
-                        {option.contact}
-                      </a>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
+            </div>
+            <div className="col-span-1">
+              <ContactForm />
             </div>
           </div>
+
+          <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none"></div>
         </div>
       </div>
     </div>

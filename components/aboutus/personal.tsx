@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Personal() {
   return (
-    <div className="x-padding mx-auto border-y border-gray-400 bg-primary/5 px-4 py-12 md:py-20">
+    <div className="x-padding mx-auto px-4 py-12 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_1.8fr] lg:gap-16">
         <div className="space-y-4">
           <h2

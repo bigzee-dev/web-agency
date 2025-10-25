@@ -26,7 +26,7 @@ export default function TldSlider() {
             <InfiniteSlider speedOnHover={10} speed={15} gap={60}>
               {availableTLDs.map((tld) => (
                 <div key={tld.extension} className=" ">
-                  <div className="text-sm font-semibold text-slate-300">
+                  <div className="text-sm font-semibold text-blue-300">
                     .{tld.extension}
                   </div>
                   <div className="font-sans text-sm text-neutral-300/80">

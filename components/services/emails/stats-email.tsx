@@ -14,7 +14,7 @@ import clsx from "clsx";
 const stats = [
   {
     value: "100%",
-    text: "Delivary Rate",
+    text: "Delivery Rate",
   },
   {
     value: "600",

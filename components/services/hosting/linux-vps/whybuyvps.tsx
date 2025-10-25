@@ -1,4 +1,5 @@
 import {
+  longSectionHeadings,
   sectionHeadings,
   sectionSubHeadings,
 } from "@/app/ui/customTailwindClasses";
@@ -9,53 +10,57 @@ import { MdSecurity } from "react-icons/md";
 
 const features = [
   {
-    icon: FaRobot,
-    title: "AI Integration",
+    icon: FaUsers,
+    title: "High Performance Compute:",
     description:
-      "Enhance your website with smart tools like chatbots and automation to improve customer experience.",
+      "Deltaworx's virtual private server is built on full KVM virtualization, giving you production-grade performance without the complexity",
   },
   {
-    icon: FaUsers,
-    title: "Social Media Integration",
+    icon: FaRobot,
+    title: "We operate our own Servers:",
     description:
-      "Connect your website with social platforms to reach more people and grow your online presence.",
+      "We fully control the hardware and software used to provision our VPS. We do not resell other companies VPS.",
   },
+
   {
     icon: MdSecurity,
-    title: "Security & Maintenance",
+    title: "24/7 Technical Support",
     description:
-      "We keep your website safe, updated, and running smoothly — so you can focus on your business.",
+      "Our friendly, Botswana-based support team is available around the clock. Whether day or night, we’re just a phone call away whenever you need assistance.",
   },
   {
     icon: FaCreditCard,
-    title: "Payment Options",
+    title: "Convenient Payment Options",
     description:
-      "Choose the plan that works for you — one-time payment or monthly subscriptions to fit your budget.",
+      "Pay in BWP. You can pay using popular methods in Botswana, including Credit/Debit cards, Mobile money, Bank transfer/EFT.",
   },
 ];
 
 export default function WhyBuyVps() {
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-24 pt-20 leading-normal">
-      <div className="mb-16">
+    <section className="mx-auto max-w-7xl px-6 pb-28 pt-20 leading-normal">
+      <div className="mb-12">
         <p className="mb-2 font-medium text-blue-600">Virtual Private Server</p>
-        <h2 className={` ${sectionHeadings} mb-6`}>Why buy a VPS from us?</h2>
+        <h2 className={` ${longSectionHeadings} mb-6`}>
+          Why Our VPS Stands Out
+        </h2>
         <p className={` ${sectionSubHeadings} mb-8 max-w-2xl`}>
-          From design to launch, we handle it all. Get a modern, mobile-friendly
-          website that helps your business attract more customers..
+          High-Performance VPS, Fair Prices – That’s Deltaworx.
         </p>
       </div>
 
-      <div className="grid gap-x-16 lg:grid-cols-12">
-        <div className="relative col-span-4">
-          <Image
-            src="/img/linux-vps/cloud.jpg"
-            alt="linux-vps"
-            fill
-            className="rounded-lg object-cover"
-          />
+      <div className="grid gap-x-8 lg:grid-cols-12">
+        <div className="col-span-6">
+          <div className="relative h-full w-full">
+            <Image
+              src="/img/linux-vps/compute.png"
+              alt="linux-vps"
+              fill
+              className="rounded-lg object-contain py-1"
+            />
+          </div>
         </div>
-        <div className="col-span-8 grid gap-9 md:grid-cols-2">
+        <div className="col-span-6 grid gap-x-2 gap-y-10 md:grid-cols-1">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (

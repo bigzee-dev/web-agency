@@ -5,8 +5,10 @@ import { montserrat } from "@/app/ui/fonts";
 import Script from "next/script";
 
 // componeents
-
+import Form from "./form";
+import TestForm from "./testform";
 import WebsitesForm from "./websitesform";
+import Image from "next/image";
 
 export default function ContactForm() {
   const [status, setStatus] = useState({
@@ -82,7 +84,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full px-4 py-6 sm:px-6 lg:px-8">
+    <div className="border border-gray-700 px-2">
       <Script
         src="https://challenges.cloudflare.com/turnstile/v0/api.js"
         async
@@ -91,10 +93,6 @@ export default function ContactForm() {
 
       <div className="overflow-hidden rounded-lg">
         <div className="px-3 sm:p-6">
-          <h2 className={`mb-6 text-4xl font-semibold text-gray-800`}>
-            Lets start Working on your Project
-          </h2>
-
           {status.success ? (
             <div className="mb-6 rounded-md bg-green-50 p-4">
               <div className="flex">

@@ -62,7 +62,7 @@ export default function HostingFeatures() {
           <div className="col-span-6">
             <div className="hosting-feature">
               <h3
-                className={` ${montserrat.className} mb-6 text-3xl font-bold text-gray-800`}
+                className={` ${montserrat.className} mb-6 text-3xl font-semibold text-gray-800`}
               >
                 Shared Hosting Features
               </h3>

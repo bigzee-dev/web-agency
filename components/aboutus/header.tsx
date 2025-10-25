@@ -2,21 +2,20 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function AboutUsHero() {
   return (
-    <section className="pt-20 pb-14 px-4 max-w-6xl mx-auto text-center">
+    <section className="mx-auto max-w-6xl px-4 pb-14 pt-20 text-center">
       <h1
-        className={` ${montserrat.className} max-w-6xl text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight`}
+        className={` ${montserrat.className} max-w-6xl text-4xl font-semibold leading-tight text-gray-800 md:text-5xl lg:text-6xl`}
       >
         A{" "}
-        <span className="inline-block bg-[#30b8e6] text-white px-4 py-1 rounded-md">
+        <span className="inline-block rounded-md bg-[#30b8e6] px-4 py-1 text-white">
           Focused
         </span>{" "}
         Team Fueled by Passion for Technology and Real-World Impact
         <br />
       </h1>
-      <p className="text-gray-600 max-w-4xl mx-auto text-md md:text-lg mt-6">
-        As a team, we have grown and evolved significantly over the years. We
-        have honed our skills and developed a seamless blend of remote and
-        in-office work, implementing our efficient processes.
+      <p className="mx-auto mt-6 max-w-4xl text-md text-gray-600 md:text-lg">
+        We bring together creativity, technology, and purpose to build digital
+        solutions that make a difference.
       </p>
     </section>
   );

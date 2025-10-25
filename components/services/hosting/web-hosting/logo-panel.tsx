@@ -46,8 +46,7 @@ export default function LogoPanel() {
       <h3
         className={` ${montserrat.className} mb-2 w-full text-center text-4xl font-bold text-gray-900`}
       >
-        Deploy your favourite <span className="text-primary">Apps</span> and{" "}
-        <span className="text-primary">CMS</span>
+        Deploy your favourite Apps and CMS
       </h3>
       <div ref={trackRef} className={styles.carouselTrack}>
         {logos.map((logo, index) => (

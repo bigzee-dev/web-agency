@@ -67,7 +67,7 @@ export default function Header() {
             {/* Shared hosting badge */}
             <div className="inline-block">
               <span className="font-semibold tracking-widest text-neutral-300">
-                SHARED WEB HOSTING
+                WEB HOSTING
               </span>
             </div>
             {/* Main heading */}
@@ -80,8 +80,8 @@ export default function Header() {
             <div className="mt-9 max-w-xl">
               <div className="mt-4 grid grid-cols-2 gap-y-5">
                 {offers.map((offer) => (
-                  <div className="flex flex-col gap-1.5" key={offer.title}>
-                    <h6 className="flex items-center gap-2 font-medium tracking-wide text-blue-400">
+                  <div className="flex flex-col gap-2" key={offer.title}>
+                    <h6 className="flex items-center gap-2 font-medium tracking-wide text-blue-300">
                       <div
                         className={`mr-0.5 rounded-lg bg-white/10 p-2 text-blue-400 outline outline-1 outline-gray-500/50`}
                       >
@@ -90,19 +90,32 @@ export default function Header() {
 
                       <span>{offer.title}</span>
                     </h6>
-                    <p className="ml-1 font-sans text-sm leading-relaxed text-neutral-300/80">
+                    <p className="ml-0.5 font-sans text-sm leading-relaxed text-neutral-300/80">
                       {offer.description}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
-            <Link
-              href=""
-              className={` ${whiteButton} mt-10 inline-flex justify-center`}
-            >
-              Compare Plans
-            </Link>
+            <div className="mt-10 flex items-end gap-x-12">
+              <Link
+                href=""
+                className={` ${whiteButton} inline-flex justify-center bg-blue-300 text-black`}
+              >
+                Compare Plans
+              </Link>
+              <div className="flex flex-col items-start">
+                <span className="mb-0.5 text-xs text-neutral-400">
+                  Starting from
+                </span>
+                <span className="text-4xl font-semibold text-neutral-300">
+                  P45
+                  <span className="text-lg font-medium text-neutral-400">
+                    /month
+                  </span>
+                </span>
+              </div>
+            </div>
           </div>
           <div className="col-span-6"></div>
         </div>

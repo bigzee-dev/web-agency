@@ -1,13 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { pageHeadings, primaryButton } from "@/app/ui/customTailwindClasses";
+import {
+  btnDimensions,
+  pageHeadings,
+  primaryButton,
+} from "@/app/ui/customTailwindClasses";
 import { IoArrowForwardCircle } from "react-icons/io5";
 import { cairo } from "@/app/ui/fonts";
+import { BsDot } from "react-icons/bs";
+import { FaCheck } from "react-icons/fa6";
+
+const features = [
+  { label: "Scalable Cloud Infrastructure" },
+  { label: "Enterprise Grade Applications" },
+  { label: "High Performance Compute" },
+  { label: "Storage & Backup" },
+  { label: "Virtual Private Servers" },
+  { label: "Domains & Email" },
+];
 
 export default function Showcase() {
   return (
-    <div className="x-padding relative isolate w-full overflow-hidden pb-8 pt-16 md:overflow-visible md:pb-12">
+    <div className="x-padding relative isolate w-full overflow-hidden pb-8 pt-20 md:overflow-visible md:pb-12">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -23,10 +38,10 @@ export default function Showcase() {
       </div>
 
       {/* main content */}
-      <main className="mx-auto grid h-full w-full max-w-7xl grid-cols-1 items-center gap-y-12 md:gap-x-6 lg:grid-cols-12">
+      <main className="mx-auto flex h-full w-full max-w-7xl flex-col items-center gap-y-24">
         {/* heading and cta */}
-        <section className="flex flex-col gap-y-6 md:col-span-6 lg:pr-4">
-          <div className="mb-3 flex w-full justify-center lg:justify-start">
+        <section className="flex w-full flex-col items-center gap-y-6">
+          <div className="mb-3 flex w-full justify-center">
             {/* Business Email Link */}
             <Link
               href="/emails"
@@ -51,41 +66,55 @@ export default function Showcase() {
             </Link>
           </div>
 
-          <div className="mx-auto max-w-xl space-y-6 lg:ml-0 lg:mr-auto">
-            <h1 className={` ${pageHeadings} `}>
-              Building Modern and Reliable Web Solutions
+          <div className="mx-auto max-w-4xl space-y-6">
+            <h1 className={` ${pageHeadings} md:text-center`}>
+              Providing Modern and Reliable Web Solutions
             </h1>
-            <p className="w-[90%] text-center font-sans text-base leading-6 text-gray-700 lg:text-start">
-              Deltaworx is a web technology company based in Botswana. We
-              specialise in web technologies that empower businesses and
-              organisations to grow online. From websites to fully featured web
-              apps and custom eCommerce solutions, we help you build a digital
-              presence that delivers real results.
+            <p className="text-center font-sans text-base leading-6 text-gray-700">
+              Deltaworx is a technology company based in Botswana. We specialize
+              in web solutions that empower developers and businesses to grow
+              online. From fully featured web apps to custom digital services
+              such as domains, email and cloud computing, we help you build a
+              digital presence that delivers real results.
             </p>
           </div>
 
-          <div className="mt-3 flex flex-col items-center justify-center gap-x-8 gap-y-6 sm:flex-row lg:mt-1.5 lg:justify-start">
+          <div className="mt-4 flex flex-col items-center justify-center gap-x-3 gap-y-6 sm:flex-row lg:mt-8 lg:justify-start">
             <Link href="#our-services" className={` ${primaryButton} `}>
               Our Services
             </Link>
             <Link
               href="#"
-              className="ml-4 font-sans text-base font-semibold tracking-wide text-gray-800 md:text-[1.01rem]"
+              className={` ${btnDimensions} md:text-[1.01rem]" bg-gray-800 font-sans text-base font-semibold tracking-wide text-neutral-100`}
             >
-              About Us <span aria-hidden="true"> →</span>
+              About Us {/* <span aria-hidden="true"> →</span> */}
             </Link>
           </div>
         </section>
 
         {/* image */}
-        <section className="flex h-full items-start justify-end lg:col-span-6">
-          <Image
-            src="/img/home/home-hero-section.png"
-            alt="image"
-            width={940}
-            height={788}
-            className="mx-auto rounded-br-2xl rounded-tl-2xl object-cover sm:max-w-xl md:max-w-2xl"
-          />
+        <section className="mx-auto grid h-full max-w-6xl grid-cols-12 items-center justify-center">
+          <div className="col-span-5">
+            <ul className="grid max-w-max list-inside grid-cols-1 gap-y-1.5 self-center border-b-[1rem] border-neutral-800 pb-4 pr-8 font-sans text-lg font-medium text-gray-700 md:gap-x-0">
+              {features.map((feature, idx) => (
+                <li key={idx} className="flex items-center gap-x-3">
+                  <span className="flex items-center">
+                    <FaCheck className="h-auto w-3 text-gray-600" />
+                  </span>
+                  {feature.label}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="col-span-7">
+            <Image
+              src="/img/home/home-hero-section.png"
+              alt="image"
+              width={940}
+              height={788}
+              className="mx-auto rounded-br-2xl rounded-tl-2xl object-cover"
+            />
+          </div>
         </section>
       </main>
     </div>

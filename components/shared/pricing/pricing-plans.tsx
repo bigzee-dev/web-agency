@@ -35,7 +35,7 @@ export default function PricingPlans({ plan }: { plan: string }) {
           Pricing
         </h2>
         <p
-          className={` ${montserrat.className} mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl`}
+          className={` ${montserrat.className} mt-2 text-4xl font-semibold tracking-tight text-gray-800 sm:text-5xl`}
         >
           Choose the right plan for you
         </p>
@@ -79,7 +79,7 @@ export default function PricingPlans({ plan }: { plan: string }) {
           <div
             key={plan.id}
             className={classNames(
-              "rounded-xl bg-background p-8 shadow-2xl",
+              "rounded-xl bg-background p-8 px-10 shadow-2xl",
               plan.featured
                 ? "outline outline-2 outline-offset-1 outline-primary"
                 : "outline outline-1 outline-offset-1 outline-gray-400",

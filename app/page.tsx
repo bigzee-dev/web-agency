@@ -3,7 +3,9 @@ import OnlineSuccess from "@/components/home/online-success";
 import WhyChooseUs from "@/components/home/whychooseus";
 import Visibility from "@/components/home/online-presence/visibility";
 import Testimonials from "@/components/home/testimonials";
+import Stats from "@/components/home/stats";
 import Personal from "@/components/home/personal";
+import { ClientTestimonialCarousel } from "@/components/aboutus/client-testimonial";
 import ContactUs from "@/components/home/contactus";
 import BlogLinks from "@/components/home/bloglinks";
 
@@ -14,8 +16,8 @@ export default function Home() {
       <OnlineSuccess />
       <WhyChooseUs />
       <Visibility />
-      <Testimonials />
-      <Personal />
+      <Stats />
+      <ClientTestimonialCarousel />
       <BlogLinks />
       <ContactUs />
     </>
