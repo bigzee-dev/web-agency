@@ -4,10 +4,10 @@ import Link from "next/link";
 // import { IoLogoWhatsapp } from "react-icons/io";
 import { cairo } from "@/app/ui/fonts";
 
-const iconProps = {
-  size: "1.4em",
-  strokeWidth: 1,
-};
+// const iconProps = {
+//   size: "1.4em",
+//   strokeWidth: 1,
+// };
 
 export default function CompanyInfo() {
   return (
