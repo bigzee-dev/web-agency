@@ -1,4 +1,3 @@
-import { whiteButton } from "@/app/ui/customTailwindClasses";
 import { useState, useEffect, useRef } from "react";
 import { IoIosSend } from "react-icons/io";
 import Turnstile, { useTurnstile } from "react-turnstile";
@@ -13,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/websites-form-select";
 
-export default function WebsitesForm() {
+export default function ContactUsForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,15 +21,20 @@ export default function WebsitesForm() {
     message: "",
   });
 
-  const [status, setStatus] = useState({
+  const [status, setStatus] = useState<{
+    submitted: boolean;
+    submitting: boolean;
+    error: string | null;
+    success: boolean;
+  }>({
     submitted: false,
     submitting: false,
     error: null,
     success: false,
   });
-  const [turnstileToken, setTurnstileToken] = useState(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -38,7 +42,7 @@ export default function WebsitesForm() {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (!turnstileToken) {
       setStatus({
@@ -67,6 +71,7 @@ export default function WebsitesForm() {
         body: JSON.stringify({
           ...formData,
           token: turnstileToken,
+          website: process.env.NEXT_PUBLIC_SITE_NAME_FOR_FORM, // hard-coded website name included in payload
         }),
       });
 
@@ -75,7 +80,8 @@ export default function WebsitesForm() {
           .json()
           .catch(() => ({ message: "Submission failed. Please try again." }));
         throw new Error(
-          errorData.message || "Something went wrong with the submission.",
+          errorData.message ||
+            "Something went wrong with the submission. Please try again.",
         );
       }
 
@@ -94,10 +100,11 @@ export default function WebsitesForm() {
         message: "",
       });
     } catch (error) {
+      const errMsg = error instanceof Error ? error.message : String(error);
       setStatus({
         submitted: true,
         submitting: false,
-        error: error.message,
+        error: errMsg,
         success: false,
       });
       // Do not reset Turnstile on error, user might want to retry with same challenge if it was a server error
@@ -105,12 +112,12 @@ export default function WebsitesForm() {
   };
 
   const labelStyles =
-    "flex items-center justify-between text-sm  text-neutral-300/80";
+    "flex items-center justify-between text-sm font-medium text-neutral-300";
   const inputStyles =
-    "shadow-sm block w-full sm:text-sm text-neutral-300 bg-neutral-300/5 py-1.5 px-1.5 border border-gray-400/20 rounded-md placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
+    "shadow-sm block w-full sm:text-sm text-neutral-300 bg-neutral-300/5 py-1.5 px-1.5 border border-gray-500 rounded-md placeholder:text-neutral-400 ";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-2 gap-x-4">
         <div>
           <label htmlFor="name" className={` ${labelStyles} `}>
@@ -150,7 +157,7 @@ export default function WebsitesForm() {
         <div>
           <label htmlFor="company" className={` ${labelStyles} `}>
             <span>Company </span>
-            <span className="pr-2 text-xs text-neutral-400/90">Optional</span>
+            <span className="pr-2 text-xs text-neutral-400">Optional</span>
           </label>
           <div className="mt-1">
             <input
@@ -166,12 +173,12 @@ export default function WebsitesForm() {
         <div>
           <label htmlFor="budget" className={` ${labelStyles} `}>
             <span>Budget Range </span>
-            <span className="pr-2 text-xs text-neutral-400/90">Optional</span>
+            <span className="pr-2 text-xs text-neutral-400">Optional</span>
           </label>
           <div className="mt-1">
-            <Select className={inputStyles}>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select a budget range" />
+            <Select>
+              <SelectTrigger className={`w-full`}>
+                <SelectValue placeholder="Select a service" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
@@ -222,10 +229,11 @@ export default function WebsitesForm() {
         </div>
       )}
 
-      <div className="mt-16 flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
+      <div className="mt-8 flex w-full flex-col justify-start gap-y-6">
+        {/* Container for Turnstile. data-sitekey etc. are handled by explicit render */}
         <Turnstile
           sitekey="1x00000000000000000000AA"
-          theme="light"
+          theme="dark"
           fixedSize={true}
           onVerify={(token) => {
             setTurnstileToken(token);
@@ -235,7 +243,7 @@ export default function WebsitesForm() {
         <button
           type="submit"
           disabled={status.submitting || (!turnstileToken && !status.success)}
-          className={` ${whiteButton} flex items-center justify-center gap-3`}
+          className={`flex w-full items-center justify-center gap-3 rounded-md bg-white/90 py-[0.60rem] font-medium text-secondary`}
         >
           {status.submitting ? "Submitting..." : "Submit"}
           <IoIosSend size="1.6em" />

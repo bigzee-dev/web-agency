@@ -1,23 +1,25 @@
+import React from "react";
 import {
   btnDimensions,
   longSectionHeadings,
   sectionHeadings,
 } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
-import { Smartphone, TabletSmartphone, TvMinimal } from "lucide-react";
 
-import React from "react";
+import { RiComputerFill } from "react-icons/ri";
+import { MdOnDeviceTraining } from "react-icons/md";
+
 import { montserrat } from "@/app/ui/fonts";
 
 const clientSections = [
   {
-    icon: TvMinimal,
+    icon: RiComputerFill,
     title: "Use Your Favorite Desktop Client",
     description:
       "Whether it's Outlook or any other popular client like Thunderbird or Apple Mail, you can use it with Deltaworx.",
   },
   {
-    icon: TabletSmartphone,
+    icon: MdOnDeviceTraining,
     title: "Sync Your Mobile Phone or Tablet",
     description:
       "Access your email on the go by syncing it with your mobile devices. Compatible with iOS and Android.",
@@ -27,7 +29,7 @@ const clientSections = [
 export default function EmailClient() {
   // const icons = [Smartphone, TvMinimal, TabletSmartphone];
   return (
-    <main className="relative isolate bg-gradient-to-tr from-secondary via-secondary to-primary pb-16 pt-20 text-neutral-200">
+    <main className="relative isolate bg-gradient-to-tr from-secondary via-secondary to-primary pb-12 pt-20 text-neutral-200">
       {/* Blur component for background effect */}
       <div
         aria-hidden="true"
@@ -45,16 +47,6 @@ export default function EmailClient() {
       <section className="px-6">
         <div className="mx-auto flex max-w-5xl flex-col gap-y-16">
           <div className="space-y-8">
-            {/* <div className="flex items-center justify-center gap-x-8 text-neutral-300">
-              {icons.map((Icon, idx) => (
-                <div
-                  className="rounded-full border border-gray-700 bg-gray-800/90 p-3 text-blue-300"
-                  key={idx}
-                >
-                  <Icon key={idx} size="1.7em" />
-                </div>
-              ))}
-            </div> */}
             <h2
               className={` ${longSectionHeadings} text-center font-medium text-neutral-100`}
             >
@@ -68,17 +60,17 @@ export default function EmailClient() {
               return (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-gray-500/30 bg-black/30 px-8 py-6"
+                  className="rounded-2xl border border-gray-500/30 bg-neutral-100/95 px-8 py-5"
                 >
-                  <div className="mb-3 inline-block rounded-full border border-gray-700 bg-primary/20 p-3 text-center text-blue-300">
+                  <div className="mb-3 inline-block rounded-full border border-secondary/50 bg-neutral-300/50 p-3 text-center text-primary">
                     <Icon size="1.8em" />
                   </div>
                   <h2
-                    className={` ${montserrat.className} mb-3 text-xl font-semibold text-blue-300`}
+                    className={` ${montserrat.className} mb-3 text-xl font-semibold text-primary`}
                   >
                     {section.title}
                   </h2>
-                  <p className="font-sans text-base leading-relaxed text-neutral-300/75">
+                  <p className="font-sans text-base leading-relaxed text-gray-700">
                     {section.description}
                   </p>
                 </div>
@@ -90,14 +82,14 @@ export default function EmailClient() {
       </section>
 
       {/* WebMail Section */}
-      <section className="px-6 pt-7">
+      <section className="px-6 pt-6">
         <div className="mx-auto max-w-4xl text-center">
           <h2
-            className={` ${montserrat.className} mb-6 text-3xl font-semibold text-blue-300 md:text-2xl`}
+            className={` ${montserrat.className} mb-6 text-3xl font-semibold text-neutral-200 md:text-2xl`}
           >
             {"...And there's the Deltaworx WebMail"}
           </h2>
-          <p className="font-sans text-lg leading-relaxed text-neutral-300/85">
+          <p className="font-sans text-base leading-relaxed text-neutral-300/95">
             {
               "Forget about the webmail apps you've used before. Yes, we mean it — just play around with the Deltaworx Webmail for a day and you might even realize that you don't need a desktop client."
             }
@@ -108,9 +100,12 @@ export default function EmailClient() {
             href="https://demo.crane.email/interface/root#/login"
             target="_blank"
             rel="noopener noreferrer"
-            className={` ${btnDimensions} mt-10 inline-flex items-center justify-center bg-blue-300 text-gray-950 shadow-sm hover:bg-white/10`}
+            className={` ${btnDimensions} mt-10 inline-flex items-center justify-center bg-[#faf9f5]/95 text-secondary shadow-sm hover:bg-white/10`}
           >
-            Checkout Demo
+            Checkout Demo{" "}
+            <span className="text-lg" aria-hidden="true">
+              &nbsp;→
+            </span>
           </Link>
         </div>
       </section>

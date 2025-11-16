@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import {
   btnDimensions,
+  grayButton,
   pageHeadings,
   primaryButton,
 } from "@/app/ui/customTailwindClasses";
@@ -83,10 +84,7 @@ export default function Showcase() {
             <Link href="#our-services" className={` ${primaryButton} `}>
               Our Services
             </Link>
-            <Link
-              href="#"
-              className={` ${btnDimensions} md:text-[1.01rem]" bg-gray-800 font-sans text-base font-semibold tracking-wide text-neutral-100`}
-            >
+            <Link href="#" className={` ${grayButton} `}>
               About Us {/* <span aria-hidden="true"> →</span> */}
             </Link>
           </div>

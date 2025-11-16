@@ -1,16 +1,16 @@
 // components
 import Header from "@/components/contactus/header";
-import EmailAndPhone from "@/components/contactus/email-phone";
-import SocialContacts from "@/components/contactus/socialcontacts";
-import ContactUsForm from "@/components/contactus/contact-us-form";
+import ContactCards from "@/components/contactus/contact-cards";
+import ContactPageFormContainer from "@/components/contactus/formcontainer";
+import Banner from "@/components/contactus/banner";
 
 export default function ContactUs() {
   return (
-    <div className="pb-28">
+    <div>
       <Header />
-      <EmailAndPhone />
-      <SocialContacts />
-      <ContactUsForm />
+      <ContactCards />
+      <ContactPageFormContainer />
+      <Banner />
     </div>
   );
 }

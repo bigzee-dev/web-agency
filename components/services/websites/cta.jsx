@@ -1,9 +1,6 @@
 import Image from "next/image";
 import clsx from "clsx";
 
-// components
-import ContactForm from "./contactform/contactform";
-
 const stats = [
   {
     value: "75%",

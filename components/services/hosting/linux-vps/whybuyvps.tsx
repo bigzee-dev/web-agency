@@ -49,7 +49,7 @@ export default function WhyBuyVps() {
         </p>
       </div>
 
-      <div className="grid gap-x-8 lg:grid-cols-12">
+      <div className="grid gap-x-10 lg:grid-cols-12">
         <div className="col-span-6">
           <div className="relative h-full w-full">
             <Image
@@ -71,7 +71,7 @@ export default function WhyBuyVps() {
                 <div>
                   <p className="leading-relaxed text-foreground">
                     <span className="font-semibold">{feature.title}</span>{" "}
-                    <span className="font-sans text-md text-gray-600">
+                    <span className="font-sans text-gray-600">
                       {feature.description}
                     </span>
                   </p>

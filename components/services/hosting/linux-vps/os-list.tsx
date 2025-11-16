@@ -71,7 +71,7 @@ export default function LinuxDistributions() {
             LINUX DISTRIBUTIONS
           </h2>
           <h4
-            className={` ${montserrat.className} mt-2.5 text-2xl font-thin text-neutral-400`}
+            className={` ${montserrat.className} mt-2.5 text-xl font-thin text-neutral-500`}
           >
             Available
           </h4>

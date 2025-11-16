@@ -22,10 +22,11 @@ import {
   LoginIcon,
   RegisterIcon,
   DashboardIcon,
+  ChatIcon,
   OpenTicketIcon,
   TicketsIcon,
   KnowledgebaseIcon,
-  ChatIcon,
+  InboxSolidIcon,
 } from "./nav-icons";
 import Link from "next/link";
 
@@ -108,7 +109,7 @@ export default function ResponsiveNav() {
                     <span>
                       <LinuxIcon size="size-5" />
                     </span>
-                    Linux Cloud VPS
+                    Linux VPS
                   </div>
                 </Link>
                 <Link href="/linux-vps" className="dropdown-item">
@@ -157,7 +158,7 @@ export default function ResponsiveNav() {
                   </div>{" "}
                 </Link>
                 <Link
-                  href="https://webmail.bigzee.app"
+                  href="https://mail.deltaworx.co.bw"
                   className="dropdown-item"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -358,21 +359,20 @@ export default function ResponsiveNav() {
             </li>
           </ul>
         </div>
-        <div className="hidden items-center justify-between text-gray-800 lg:flex">
+        <div className="hidden items-center justify-between gap-x-[0.5rem] text-gray-800 lg:flex">
           <Link
             href="/contact-us"
-            className="box-border flex items-center justify-center gap-x-1 rounded-[10px] border-2 border-gray-800 bg-neutral-100 px-[10px] py-[8px] text-xs font-medium uppercase text-gray-800"
+            className="box-border flex items-center justify-center gap-x-1 px-[10px] py-[8px] text-xs font-medium uppercase text-secondary"
           >
-            <ChatIcon size="size-5" />
+            <InboxSolidIcon size="size-5" />
             Contact us
           </Link>
-          <div className="client-login box-border border-2 border-transparent bg-primary text-white">
+          <div className="client-login box-border bg-primary text-white">
             <a
-              href="https://domains.bigzee.app/clientarea.php"
-              className={` ${montserrat.className} flex items-center justify-center gap-x-1 text-xs font-medium`}
+              href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/clientarea.php`}
+              className={` ${montserrat.className} flex items-center justify-center text-xs font-medium`}
             >
-              <LoginIcon size="size-5" />
-              CLIENT ZONE
+              LOGIN
             </a>
           </div>
         </div>

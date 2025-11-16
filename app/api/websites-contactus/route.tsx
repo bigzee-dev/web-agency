@@ -1,22 +1,32 @@
-// app/api/contact/route.js
 import { sendEmail } from "@/lib/sendformdata";
-
 import { NextResponse } from "next/server";
 
-export async function POST(request: { json: () => any }) {
+export type ContactFormData = {
+  name: string;
+  email: string;
+  company?: string;
+  budget?: string;
+  message: string;
+  token: string;
+  website?: string;
+};
+
+export async function POST(request: Request) {
   try {
     console.log("Contact form submission received");
-    const body = await request.json();
-    const { name, email, company, budget, message, token } = body;
 
-    // Verify Turnstile token
-    const formData = new URLSearchParams();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("company", company || "");
-    formData.append("budget", budget || "");
-    formData.append("message", message);
-    formData.append("website", "deltaworx.co.bw");
+    // parse and type the incoming JSON safely
+    const body = (await request.json()) as ContactFormData;
+    const { name, email, company, budget, message, website, token } = body;
+
+    // build URLSearchParams for Turnstile (expects form-encoded)
+    const turnstileForm = new URLSearchParams();
+    turnstileForm.append("name", name || "");
+    turnstileForm.append("email", email || "");
+    turnstileForm.append("company", company || "");
+    turnstileForm.append("budget", budget || "");
+    turnstileForm.append("message", message || "");
+    turnstileForm.append("website", website || "");
 
     const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
     if (!turnstileSecret) {
@@ -26,14 +36,14 @@ export async function POST(request: { json: () => any }) {
         { status: 500 },
       );
     }
-    formData.append("secret", turnstileSecret);
-    formData.append("response", token);
+    turnstileForm.append("secret", turnstileSecret);
+    turnstileForm.append("response", token || "");
 
     const turnstileResponse = await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
       {
         method: "POST",
-        body: formData,
+        body: turnstileForm,
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
@@ -58,8 +68,8 @@ export async function POST(request: { json: () => any }) {
       );
     }
 
-    // email is sent with the form data, if there is an erro sending the email it is handled and tne response sent to the front end
-    const emailResult = await sendEmail(formData);
+    // send email using a typed object
+    const emailResult = await sendEmail(body);
     if (!emailResult || emailResult.success === false) {
       console.error("sendEmail failed:", emailResult?.error || emailResult);
       return new NextResponse(

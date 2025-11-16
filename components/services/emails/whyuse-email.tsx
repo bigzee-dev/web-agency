@@ -1,5 +1,4 @@
 import {
-  longSectionHeadings,
   sectionHeadings,
   sectionSubHeadings,
 } from "@/app/ui/customTailwindClasses";
@@ -44,9 +43,7 @@ export default function WhyUseEmail() {
     <section className="mx-auto max-w-7xl px-6 pb-24 pt-12 leading-normal">
       <div className="mb-14">
         <p className="mb-2 font-medium text-blue-600">DeltaMail</p>
-        <h2 className={` ${longSectionHeadings} mb-6`}>
-          Why Pick Us for Email?
-        </h2>
+        <h2 className={` ${sectionHeadings} mb-6`}>Why Pick Us for Email?</h2>
         <p className={` ${sectionSubHeadings} mb-8 max-w-2xl`}>
           From design to launch, we handle it all. Get a modern, mobile-friendly
           website that helps your business attract more customers..
@@ -73,7 +70,7 @@ export default function WhyUseEmail() {
                 <div>
                   <p className="leading-relaxed text-foreground">
                     <span className="font-semibold">{feature.title}</span>{" "}
-                    <span className="font-sans text-md text-gray-600">
+                    <span className="font-sans text-base text-gray-600">
                       {feature.description}
                     </span>
                   </p>

@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-gray-800">
       <div className="w-full px-8">
-        <div className="mx-auto grid max-w-5xl gap-x-4 gap-y-14 pb-14 pt-16 md:grid-cols-12">
+        <div className="mx-auto grid max-w-5xl gap-x-4 gap-y-14 pb-14 pt-20 md:grid-cols-12">
           <div className="order-2 md:order-1 md:col-span-5">
             <CompanyInfo />
           </div>

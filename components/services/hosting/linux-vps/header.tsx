@@ -62,7 +62,7 @@ export default function HeaderVps() {
                   and applications, with your personal spark.
                 </p>
 
-                <div className="mt-8">
+                <div className="mt-12">
                   <Link
                     href="#"
                     className={` ${primaryButton} inline-flex items-center justify-center gap-x-2`}

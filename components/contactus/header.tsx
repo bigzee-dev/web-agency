@@ -1,8 +1,11 @@
-import Image from "next/image";
+import {
+  pageHeadingsCenter,
+  smallTextHeadings,
+} from "@/app/ui/customTailwindClasses";
 
 export default function Header() {
   return (
-    <div className="isolate w-full overflow-hidden bg-gray-900 py-16">
+    <div className="isolate w-full overflow-hidden bg-gradient-to-tr from-gray-900 via-gray-800 to-primary py-16">
       <div className="relative font-sans">
         <div
           aria-hidden="true"
@@ -18,22 +21,14 @@ export default function Header() {
         </div>
 
         <div className="relative z-50 mx-auto flex max-w-4xl flex-col justify-center gap-8">
-          <Image
-            src="/img/contact-us.png"
-            alt="Banner Image"
-            width={494}
-            height={260}
-            className="absolute right-0 top-0 h-auto w-[300px] rounded-lg"
-          />
-          <div className="max-w-lg space-y-4">
-            <p className="text-5xl font-bold text-gray-300">Contact Us</p>
-            <p className="font-sans text-base font-normal text-gray-400">
-              Use these Tailwind CSS settings screen examples to build
-              configuration and preference pages where users can update their
-              account information, change settings, and customize their
-              experience.
-            </p>
-          </div>
+          <p
+            className={` ${smallTextHeadings} max-w-max self-center rounded-3xl bg-white/5 px-4 py-1 text-blue-300`}
+          >
+            Contact us
+          </p>
+          <h1 className={` ${pageHeadingsCenter} text-neutral-100`}>
+            Need help? Our team is here for you!
+          </h1>
         </div>
       </div>
     </div>

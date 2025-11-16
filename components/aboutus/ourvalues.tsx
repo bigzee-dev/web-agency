@@ -14,7 +14,7 @@ export default function OurValues() {
       </div>
 
       <p
-        className={`{sectionSubHeadings} mx-auto max-w-4xl text-center text-gray-600`}
+        className={` ${sectionSubHeadings} mx-auto max-w-4xl text-center text-gray-600`}
       >
         We value inclusivity, clear communication, and steady improvement. We
         listen to our clients, focus on practical solutions, and keep learning
@@ -73,7 +73,7 @@ function ValueCard({ title, description, background, svg }: ValueCardProps) {
       </h3>
 
       <div className="pb-5">
-        <p className="font-sans text-md text-gray-700 md:w-full">
+        <p className="font-sans text-base text-gray-700 md:w-full">
           {description}
         </p>
       </div>
