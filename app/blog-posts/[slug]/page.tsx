@@ -23,8 +23,13 @@ async function fetchpost(slug: string): Promise<PostTypes> {
   };
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const post = await fetchpost(params.slug);
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params; // Await params here
+  const post = await fetchpost(slug);
   console.log(post);
   return (
     <>
