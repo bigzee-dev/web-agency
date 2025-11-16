@@ -1,14 +1,6 @@
 import Image from "next/image";
-import {
-  btnDimensions,
-  longSectionHeadings,
-} from "@/app/ui/customTailwindClasses";
-import {
-  MdOutlineSecurity,
-  MdMemory,
-  MdMarkEmailRead,
-  MdShop,
-} from "react-icons/md";
+import { longSectionHeadings } from "@/app/ui/customTailwindClasses";
+
 import clsx from "clsx";
 
 const stats = [

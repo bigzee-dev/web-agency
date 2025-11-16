@@ -1,7 +1,6 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
 import { whiteButton } from "@/app/ui/customTailwindClasses";
-import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 

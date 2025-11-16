@@ -2,14 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import {
-  btnDimensions,
   grayButton,
   pageHeadings,
   primaryButton,
 } from "@/app/ui/customTailwindClasses";
 import { IoArrowForwardCircle } from "react-icons/io5";
 import { cairo } from "@/app/ui/fonts";
-import { BsDot } from "react-icons/bs";
 import { FaCheck } from "react-icons/fa6";
 
 const features = [

@@ -1,6 +1,6 @@
 import type React from "react";
 
-import { montserrat, notoSans } from "@/app/ui/fonts";
+import { montserrat } from "@/app/ui/fonts";
 import {
   sectionHeadings,
   sectionSubHeadings,

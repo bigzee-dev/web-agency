@@ -1,10 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import styles from "./logopanels.module.css";
-import {
-  sectionSubHeadings,
-  smallTextHeadings,
-} from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
 
 const logos = [

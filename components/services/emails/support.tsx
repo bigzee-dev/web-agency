@@ -1,45 +1,8 @@
-import {
-  btnDimensions,
-  grayButton,
-  primaryButton,
-  sectionSubHeadings,
-} from "@/app/ui/customTailwindClasses";
+import { grayButton, primaryButton } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
-import clsx from "clsx";
-import { ChevronDown, MoreHorizontal } from "lucide-react";
+
 import Link from "next/link";
 import Image from "next/image";
-
-const emailsData = [
-  {
-    id: 1,
-    status: "Delivered",
-    email: "ken99@yahoo.com",
-    amount: "$316.00",
-    statusIcon: "success",
-  },
-  {
-    id: 2,
-    status: "Delivered",
-    email: "abe45@gmail.com",
-    amount: "$242.00",
-    statusIcon: "success",
-  },
-  {
-    id: 3,
-    status: "Delivered",
-    email: "monser@gmail.com",
-    amount: "$837.00",
-    statusIcon: "success",
-  },
-  {
-    id: 4,
-    status: "Delivered",
-    email: "carmella@hotmail.com",
-    amount: "$721.00",
-    statusIcon: "success",
-  },
-];
 
 export default function EmailSupport() {
   return (

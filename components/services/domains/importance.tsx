@@ -22,12 +22,6 @@ export default function Importance() {
     },
   ];
 
-  const domainStats = [
-    { label: "Brand Recognition", value: "+340%" },
-    { label: "Customer Trust", value: "+250%" },
-    { label: "Search Visibility", value: "+180%" },
-  ];
-
   return (
     <section className="w-full bg-gradient-to-br from-slate-50 to-white py-16 md:py-24 md:pb-20">
       <div className="mx-auto max-w-7xl px-4 md:px-4">

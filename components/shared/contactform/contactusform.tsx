@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { IoIosSend } from "react-icons/io";
-import Turnstile, { useTurnstile } from "react-turnstile";
+import Turnstile from "react-turnstile";
 
 import {
   Select,
@@ -34,7 +34,7 @@ export default function ContactUsForm() {
   });
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
-  const handleChange = (e: { target: { name: any; value: any } }) => {
+  const handleChange = (e: { target: { name: string; value: string } }) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,

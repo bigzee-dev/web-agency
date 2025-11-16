@@ -1,5 +1,4 @@
 import type React from "react";
-import { Ticket, MessageCircle, Phone } from "lucide-react";
 import { IoIosCall, IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaTicket } from "react-icons/fa6";

@@ -2,7 +2,6 @@ import React from "react";
 import {
   btnDimensions,
   longSectionHeadings,
-  sectionHeadings,
 } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 

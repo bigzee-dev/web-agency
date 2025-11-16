@@ -1,6 +1,5 @@
-import { Check } from "lucide-react";
 import { montserrat } from "@/app/ui/fonts";
-import { btnDimensions, primaryButton } from "@/app/ui/customTailwindClasses";
+import { primaryButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 import { FiTrendingUp } from "react-icons/fi";
 import { FaCreditCard } from "react-icons/fa6";

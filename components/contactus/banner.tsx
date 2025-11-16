@@ -11,8 +11,8 @@ export default function Banner() {
       </h2>
       <p className="mx-auto mt-8 max-w-3xl text-pretty text-center text-lg text-gray-600">
         We look forward to hearing from you! Whether you have a question about
-        our services, need assistance, or just want to say hello, we're here to
-        help.
+        our services, need assistance, or just want to say hello, we&apos;re
+        here to help.
       </p>
     </div>
   );

@@ -1,6 +1,5 @@
-import { btnDimensions, primaryButton } from "@/app/ui/customTailwindClasses";
+import { primaryButton } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Personal() {

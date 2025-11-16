@@ -10,7 +10,6 @@ import {
   SelectValue,
 } from "@/components/ui/domainsformselect";
 import { Input } from "@/components/ui/domainsforminput";
-import { primaryButton } from "@/app/ui/customTailwindClasses";
 
 export default function SearchDomainForm() {
   const [domain, setDomain] = React.useState("");

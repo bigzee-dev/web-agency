@@ -1,7 +1,4 @@
-import {
-  longSectionHeadings,
-  sectionSubHeadings,
-} from "@/app/ui/customTailwindClasses";
+import { longSectionHeadings } from "@/app/ui/customTailwindClasses";
 import React from "react";
 
 const processSteps = [

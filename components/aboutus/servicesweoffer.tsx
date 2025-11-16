@@ -1,11 +1,11 @@
 import React from "react";
-import { montserrat } from "@/app/ui/fonts";
+// import { montserrat } from "@/app/ui/fonts";
 import { longSectionHeadings } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 
 import { HiServerStack } from "react-icons/hi2";
-import { FaCloudDownloadAlt } from "react-icons/fa";
-import { IoBarChartSharp } from "react-icons/io5";
+// import { FaCloudDownloadAlt } from "react-icons/fa";
+// import { IoBarChartSharp } from "react-icons/io5";
 
 const services = [
   {

@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { btnDimensions, primaryButton } from "@/app/ui/customTailwindClasses";
+import { primaryButton } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
 import Link from "next/link";
 export default function NeedMore() {

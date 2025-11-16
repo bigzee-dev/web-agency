@@ -1,6 +1,5 @@
 import {
   longSectionHeadings,
-  sectionHeadings,
   sectionSubHeadings,
 } from "@/app/ui/customTailwindClasses";
 import Image from "next/image";

@@ -1,9 +1,4 @@
-import {
-  btnDimensions,
-  grayButton,
-  sectionHeadings,
-  whiteButton,
-} from "@/app/ui/customTailwindClasses";
+import { whiteButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 
 export default function SupportOne() {
