@@ -1,7 +1,9 @@
 import React from "react";
 import {
   btnDimensions,
+  greenButton,
   longSectionHeadings,
+  whiteButton,
 } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 
@@ -65,7 +67,7 @@ export default function EmailClient() {
                     <Icon size="1.8em" />
                   </div>
                   <h2
-                    className={` ${montserrat.className} mb-3 text-xl font-semibold text-primary`}
+                    className={` ${montserrat.className} mb-3 text-xl font-semibold text-gray-800`}
                   >
                     {section.title}
                   </h2>
@@ -94,18 +96,8 @@ export default function EmailClient() {
             }
           </p>
         </div>
-        <div className="mt-2 flex w-full items-center justify-center">
-          <Link
-            href="https://demo.crane.email/interface/root#/login"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={` ${btnDimensions} mt-10 inline-flex items-center justify-center bg-[#faf9f5]/95 text-secondary shadow-sm hover:bg-white/10`}
-          >
-            Checkout Demo{" "}
-            <span className="text-lg" aria-hidden="true">
-              &nbsp;→
-            </span>
-          </Link>
+        <div className="mt-12 flex w-full items-center justify-center">
+          <img src="/svg/emails/send.svg" className="size-48" alt="send" />
         </div>
       </section>
     </main>

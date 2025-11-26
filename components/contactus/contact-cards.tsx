@@ -79,7 +79,7 @@ export default function ContactCards() {
               {card.id === "ticket" ? (
                 <a
                   href={card.buttonLink}
-                  className="hover:pointer inline-flex items-center gap-2 rounded border bg-primary px-4 py-2 text-sm font-medium text-white transition-colors"
+                  className="hover:pointer inline-flex items-center gap-2 rounded-[0.57rem] border border-primary bg-primary px-4 py-2.5 text-sm font-medium text-white transition-colors"
                 >
                   {card.buttonText}
                   <span className="ml-2" aria-hidden="true">
@@ -90,7 +90,7 @@ export default function ContactCards() {
                 <div
                   role="article"
                   aria-disabled="true"
-                  className="inline-flex cursor-default items-center gap-2 rounded border border-primary bg-transparent px-4 py-2 text-sm font-medium text-secondary"
+                  className="inline-flex cursor-default items-center gap-2 rounded-[0.57rem] border border-primary bg-transparent px-4 py-2.5 text-sm font-medium text-secondary"
                 >
                   {card.buttonText}
                 </div>

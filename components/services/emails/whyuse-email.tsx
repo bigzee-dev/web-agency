@@ -50,16 +50,16 @@ export default function WhyUseEmail() {
         </p>
       </div>
 
-      <div className="grid gap-x-16 lg:grid-cols-12">
-        <div className="relative col-span-4">
+      <div className="grid gap-x-12 lg:grid-cols-12">
+        <div className="relative col-span-5">
           <Image
-            src="/img/linux-vps/cloud.jpg"
+            src="/img/emails/emaildesign.webp"
             alt="linux-vps"
             fill
             className="rounded-lg object-cover"
           />
         </div>
-        <div className="col-span-8 grid gap-9 md:grid-cols-2">
+        <div className="col-span-7 grid gap-9 md:grid-cols-2">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
@@ -70,7 +70,7 @@ export default function WhyUseEmail() {
                 <div>
                   <p className="leading-relaxed text-foreground">
                     <span className="font-semibold">{feature.title}</span>{" "}
-                    <span className="font-sans text-base text-gray-600">
+                    <span className="font-sans text-md text-gray-600">
                       {feature.description}
                     </span>
                   </p>

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function EmailSupport() {
   return (
-    <div className="relative mx-auto grid w-full max-w-6xl grid-cols-12 items-center gap-x-20 py-20 pt-24">
+    <div className="relative mx-auto grid w-full max-w-7xl grid-cols-12 items-center gap-x-12 py-12 pt-24">
       {/* Blur component */}
       <div
         aria-hidden="true"
@@ -20,10 +20,10 @@ export default function EmailSupport() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#477cf0] to-[#6799e8] opacity-20"
         />
       </div>
-      <div className="col-span-7 flex flex-col items-start gap-y-10">
+      <div className="col-span-6 flex flex-col items-start gap-y-10">
         <div className="space-y-4">
           <h2
-            className={` ${montserrat.className} text-pretty text-4xl font-semibold text-gray-800 md:text-5xl`}
+            className={` ${montserrat.className} text-pretty text-4xl font-bold leading-[1.1] text-gray-800 md:text-[2.7rem]`}
           >
             Interested in our Email service? <br />
             <span className="text-primary">Lets Chat!</span>{" "}
@@ -44,11 +44,11 @@ export default function EmailSupport() {
           </Link>
         </div>
       </div>
-      <div className="col-span-5 rounded-2xl border border-gray-300 bg-neutral-100 p-6 text-gray-900 shadow-md">
+      <div className="col-span-6">
         {/* Image */}
-        <div className="relative aspect-[4/3] w-full">
+        <div className="relative aspect-[5/3] w-full">
           <Image
-            src="/img/emails/122.jpg"
+            src="/img/emails/email_on_devices.png"
             alt="email client"
             fill
             className="object-cover"

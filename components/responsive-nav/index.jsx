@@ -370,9 +370,9 @@ export default function ResponsiveNav() {
           <div className="client-login box-border bg-primary text-white">
             <a
               href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/clientarea.php`}
-              className={` ${montserrat.className} flex items-center justify-center text-xs font-medium`}
+              className={` ${montserrat.className} flex items-center justify-center text-xs font-medium uppercase`}
             >
-              LOGIN
+              Client Zone
             </a>
           </div>
         </div>

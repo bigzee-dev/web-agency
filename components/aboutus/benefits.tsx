@@ -41,10 +41,10 @@ export default function Benefits() {
         {/* Image */}
         <section className="flex justify-center lg:col-span-6">
           <Image
-            src="/img/home/two-ladies.png"
+            src="/img/about-us/business-ladies.png"
             alt="image"
-            width={823}
-            height={690}
+            width={705}
+            height={591}
             className="object-contain md:w-[80%]"
           />
         </section>

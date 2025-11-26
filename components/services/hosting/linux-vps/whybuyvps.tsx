@@ -37,13 +37,15 @@ const features = [
 
 export default function WhyBuyVps() {
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-28 pt-20 leading-normal">
-      <div className="mb-12">
+    <section className="mx-auto max-w-7xl px-6 pb-24 pt-20 leading-normal">
+      <div className="mb-10">
         <p className="mb-2 font-medium text-blue-600">Virtual Private Server</p>
-        <h2 className={` ${longSectionHeadings} mb-6`}>
+        <h2 className={` ${longSectionHeadings} mb-2`}>
           Why Our VPS Stands Out
         </h2>
-        <p className={` ${sectionSubHeadings} mb-8 max-w-2xl`}>
+        <p
+          className={` ${sectionSubHeadings} mb-8 max-w-2xl text-md text-secondary`}
+        >
           High-Performance VPS, Fair Prices – That’s Deltaworx.
         </p>
       </div>
@@ -68,9 +70,11 @@ export default function WhyBuyVps() {
                   <IconComponent className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="leading-relaxed text-foreground">
-                    <span className="font-semibold">{feature.title}</span>{" "}
-                    <span className="font-sans text-gray-600">
+                  <p className="leading-normal text-foreground">
+                    <span className="font-semibold text-secondary">
+                      {feature.title}
+                    </span>{" "}
+                    <span className="font-sans text-gray-700">
                       {feature.description}
                     </span>
                   </p>
