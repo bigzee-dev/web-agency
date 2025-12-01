@@ -14,34 +14,30 @@ export default function Footer() {
             <CompanyInfo />
           </div>
           <div className="order-1 grid grid-cols-2 gap-x-12 gap-y-8 pr-6 md:order-2 md:col-span-7 md:flex md:flex-wrap md:justify-between md:gap-x-0 md:gap-y-0 md:pr-0">
-            {footerLinks.map((link, i) => (
-              <div key={i}>
-                <h3 className={linkHeading}>{link.heading}</h3>
-                <ul className="mb-4 mt-4 flex flex-col gap-y-3">
-                  <li>
-                    <Link href="#" className={singleLink}>
-                      {link.firstLink.title}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className={singleLink}>
-                      {link.secondLink.title}
-                    </Link>
-                  </li>
-                  <li>
-                    {link.thirdLink?.title && (
-                      <Link href="#" className={singleLink}>
-                        {link.thirdLink.title || null}
-                      </Link>
-                    )}
-                  </li>
+            {footerLinks.map((group) => (
+              <div key={group.heading}>
+                <h4 className={linkHeading}>{group.heading}</h4>
 
-                  {link.fourthLink?.title && (
-                    <li>
-                      <Link href="#" className={`${singleLink} `}>
-                        {link.fourthLink.title || null}
-                      </Link>
-                    </li>
+                <ul className="mt-2 space-y-2.5">
+                  {group.links.map((link) =>
+                    link.type === "external" ? (
+                      <li key={link.title}>
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={singleLink}
+                        >
+                          {link.title}
+                        </a>
+                      </li>
+                    ) : (
+                      <li key={link.title}>
+                        <Link href={link.href} className={singleLink}>
+                          {link.title}
+                        </Link>
+                      </li>
+                    ),
                   )}
                 </ul>
               </div>

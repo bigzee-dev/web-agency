@@ -14,16 +14,16 @@ import { Button } from "@/components/ui/button";
 export default function DomainPricingTable() {
   const domainExtensions = [
     {
-      extension: ".africa",
-      registration: { original: "$14.95", discounted: "$8.95" },
-      transfer: "$14.95",
-      renewal: "$14.95",
+      extension: ".com",
+      registration: { original: "P299.00", discounted: "P247.00" },
+      transfer: "P247.00",
+      renewal: "P257.00",
     },
     {
-      extension: ".agency",
-      registration: { original: "$21.95", discounted: "$8.95" },
-      transfer: "$21.95",
-      renewal: "$21.95",
+      extension: ".net",
+      registration: { original: "P319.00", discounted: "P275.00" },
+      transfer: "P275.00",
+      renewal: "P349.00",
     },
     {
       extension: ".apartments",

@@ -1,16 +1,16 @@
 import Header from "@/components/services/domains/header";
-import WhyBuy from "@/components/services/domains/whybuy";
-import Tips from "@/components/services/domains/tips";
-import DomainPricingTable from "@/components/services/domains/pricing";
-import MonthSpecials from "@/components/services/domains/monthspecials";
 import Importance from "@/components/services/domains/importance";
+import DomainPricingTable from "@/components/services/domains/pricing";
+import Tips from "@/components/services/domains/tips";
+import MonthSpecials from "@/components/services/domains/monthspecials";
+import DigitalRealEstate from "@/components/services/domains/digital-realestate";
+import WhyBuy from "@/components/services/domains/whybuy";
 import SupportOne from "@/components/shared/support/support-one";
 import FaqsDomains from "@/components/services/domains/faqs-domains";
-import DigitalRealEstate from "@/components/services/domains/digital-realestate";
 
 export default function Websites() {
   return (
-    <div className="pb-20">
+    <div>
       <Header />
       <Importance />
       <DomainPricingTable />

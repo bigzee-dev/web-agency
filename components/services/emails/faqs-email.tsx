@@ -3,49 +3,58 @@ import React from "react";
 
 const faqs = [
   {
-    title: "How fast will my VPS be deployed ?",
+    title: "What is Business Email ?",
     answer:
-      "Your VPS will be deployed instantly once your payment is received. You will receive an email with all important information as soon as your server is ready for use.",
+      "Professional email, business email, or custom email is an email account that uses your domain name or the domain for your business, rather than a generic domain like gmail.com. As opposed to free email solutions, you can give your business a more professional image with Business Email. You can have as many email accounts as you need with Deltaworx. Every employee, department, and service that’s a part of your business can have their own respective email accounts e.g sales@mybusiness.com or support@mybuisiness.com",
   },
   {
-    title: "What are the common uses for a Linux VPS ?",
-    answer: `
-    
-    <ul class="list-disc pl-5 mt-2">
-      <li><strong>Web Servers:</strong> Deploy your websites and applications.</li>
-      <li><strong>Development:</strong> Set up development and testing environments.</li>
-      <li><strong>Email Servers:</strong> Manage email services for businesses.</li>
-      <li><strong>Databases:</strong> Run databases like MySQL or PostgreSQL.</li>
-      <li><strong>VPN:</strong> Create a Virtual Private Network for secure connections.</li>
-      <li><strong>Game Servers:</strong> Hosting multiplayer games.</li>
-      <li><strong>File Storage:</strong> Securely store and share files.</li>
-    </ul>
-  `,
+    title: "What do I need to setup an Email account ?",
+    answer:
+      "The only thing you need to setup an email account is a domain name. You can either use your existing domain or register a new one through our domain registration service.",
   },
   {
-    title: "Can I host multiple applications on my VPS ?",
+    title: "How do I configure my email account once its been activated?",
     answer:
-      "Yes, with full root access and dedicated resources, you can host multiple websites, applications, or services on your VPS. The number of sites you can host depends on your resource usage and plan specifications.",
+      "You will have to login to the Admin Panel provided to you in the welcome email. In the Admin Panel you will be provided with DNS records (incl SPF, DKIM and DMARC records) to connect your domain to your email account. From there, you can access the Email Accounts section to create and manage your email addresses. Detailed setup instructions for various email clients will also be available in the Panel.",
   },
   {
-    title: "What about backups ?",
-    answer:
-      "Each VPS includes one free backup slot, allowing you to create one backup per day. While we provide this service, we cannot guarantee long-term data retention. We strongly recommend maintaining your own backup solution to protect critical data.",
+    title: "What options do I have to access my emails?",
+    answer: `You can access your emails using:
+      <ul class="list-disc pl-5 mt-2 mb-2">
+        <li><strong>Webmail:</strong> Access your emails through any web browser using our webmail interface. Works perfectly on mobile phones as well.</li>
+        <li><strong>Email Clients:</strong> Configure popular email clients like Microsoft Outlook, Mozilla Thunderbird, Apple Mail, etc. using IMAP/POP3 settings provided in the Admin Panel.</li>
+        <li><strong>Android and IOS Apps:</strong> Download the Titan Mail App from the Play Store or App Store and enjoy a great experience on your mobile device,</li>`,
   },
   {
-    title: "What support do I get with my Linux VPS ?",
+    title: "Which Email protocols are supported ?",
     answer:
-      "All Linux VPS packages are self-managed, meaning that you will need to manage and maintain the virtual server. We do provide support for any hardware or network issues, as well as any questions you may have about your account.",
+      "POP3/IMAP/SMTP are fully supported. This enables you to connect using any standard email client and to send transactional emails from your websites or applications.",
   },
   {
-    title: "Can I upgrade my VPS ?",
+    title: "How many emails am I allowed to send per hour/day? ?",
+    answer: `This depends on the plan you choose. 
+      <ul class="list-disc pl-5 mt-2 mb-2">
+        <li><strong>Pro Plan:</strong> 200 emails/hour, 500 emails/day.</li>
+        <li><strong>Business Plan:</strong> 300 emails/hour, 1000 emails/day.</li>
+        <li><strong>Enterprise Plan:</strong> 500 emails/hour, 2000 emails/day.</li>
+      </ul>
+      These limits are in place to prevent abuse and ensure fair usage for all customers. If you require higher sending limits, please contact our support team to discuss custom solutions.
+    `,
+  },
+  {
+    title: "Can i create aliases and forwarders ?",
     answer:
-      "Yes, your VPS can be both upgraded in individual resources like CPU, RAM or Disk Space, and upgraded to a higher VPS package.",
+      "Yes, you can create email aliases and forwarders to redirect emails from one address to another within your domain. You can create additional addresses such as support@mycompany.com and enquiries@mycompany.com that all forward to your main email address.",
+  },
+  {
+    title: "What is your spam policy ?",
+    answer:
+      "We take a zero tolerance stance against sending of unsolicited email, bulk emailing, and spam. Any user who sends out spam will have their account terminated with or without notice",
   },
   {
     title: "Do you offer a money-back guarantee ?",
     answer:
-      "Yes, we offer a 3-day money-back guarantee on our VPS plans. If you're not completely satisfied, you can request a full refund within the first 3 days.",
+      "Yes, we offer a 3-day money-back guarantee on our Email plans. If you're not completely satisfied, you can request a full refund within the first 3 days.",
   },
   {
     title: "What payment methods are accepted ?",
@@ -55,12 +64,7 @@ const faqs = [
   {
     title: "Is there any contractual obligation or can I cancel anytime ?",
     answer:
-      "By default, our VPS plans are billed monthly. You can also choose to pay every 3, 6, or 12 months. Plans can be easily modified or canceled anytime through the Client Area.",
-  },
-  {
-    title: "Do you filter any network ports ?",
-    answer:
-      "Port 25 is blocked by default to prevent spam abuse. If you need it enabled, please contact our support team. Additional account verification may be required.",
+      "By default, our Email plans are billed monthly. You can also choose to pay every 3, 6, or 12 months. Plans can be easily modified or canceled anytime through the Client Area.",
   },
 ];
 

@@ -23,13 +23,13 @@ const features = [
 
   {
     icon: MdSecurity,
-    title: "24/7 Technical Support",
+    title: "24/7 Technical Support:",
     description:
       "Our friendly, Botswana-based support team is available around the clock. Whether day or night, we’re just a phone call away whenever you need assistance.",
   },
   {
     icon: FaCreditCard,
-    title: "Convenient Payment Options",
+    title: "Convenient Payment Options:",
     description:
       "Pay in BWP. You can pay using popular methods in Botswana, including Credit/Debit cards, Mobile money, Bank transfer/EFT.",
   },
@@ -50,7 +50,7 @@ export default function WhyBuyVps() {
         </p>
       </div>
 
-      <div className="grid gap-x-10 lg:grid-cols-12">
+      <div className="grid gap-x-6 lg:grid-cols-12">
         <div className="col-span-6">
           <div className="relative h-full w-full">
             <Image
@@ -61,7 +61,7 @@ export default function WhyBuyVps() {
             />
           </div>
         </div>
-        <div className="col-span-6 grid gap-x-2 gap-y-10 md:grid-cols-1">
+        <div className="col-span-6 grid gap-x-4 gap-y-10 md:grid-cols-2">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (

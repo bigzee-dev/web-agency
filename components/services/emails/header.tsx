@@ -1,6 +1,6 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
-import { whiteButton } from "@/app/ui/customTailwindClasses";
+import { greenButton, whiteButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
@@ -39,10 +39,7 @@ export default function Header() {
               </div>
 
               <div className="mt-10 flex items-end gap-x-12">
-                <Link
-                  href=""
-                  className={` ${whiteButton} inline-flex justify-center bg-blue-300`}
-                >
+                <Link href="" className={` ${greenButton} `}>
                   Compare Plans
                 </Link>
                 <div className="flex flex-col items-start">
