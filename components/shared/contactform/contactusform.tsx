@@ -233,7 +233,7 @@ export default function ContactUsForm() {
         {/* Container for Turnstile. data-sitekey etc. are handled by explicit render */}
 
         <Turnstile
-          sitekey={process.env.TURNSTILE_SITE_KEY ?? ""}
+          sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ""}
           theme="dark"
           fixedSize={true}
           onVerify={(token) => {
