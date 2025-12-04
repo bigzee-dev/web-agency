@@ -1,9 +1,5 @@
 import React from "react";
-// import { montserrat } from "@/app/ui/fonts";
-import {
-  longSectionHeadings,
-  sectionHeadings,
-} from "@/app/ui/customTailwindClasses";
+import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 
 import { HiServer } from "react-icons/hi";
@@ -13,8 +9,6 @@ import { MdMarkEmailRead } from "react-icons/md";
 import { HiServerStack } from "react-icons/hi2";
 import { HiGlobeAlt } from "react-icons/hi2";
 import { montserrat } from "@/app/ui/fonts";
-// import { FaCloudDownloadAlt } from "react-icons/fa";
-// import { IoBarChartSharp } from "react-icons/io5";
 
 const services = [
   {

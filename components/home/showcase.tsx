@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import {
   grayButton,
-  lightBgButton,
   pageHeadings,
   primaryButton,
 } from "@/app/ui/customTailwindClasses";

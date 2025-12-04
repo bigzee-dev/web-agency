@@ -1,11 +1,6 @@
 import React from "react";
-import {
-  btnDimensions,
-  greenButton,
-  longSectionHeadings,
-  whiteButton,
-} from "@/app/ui/customTailwindClasses";
-import Link from "next/link";
+import { longSectionHeadings } from "@/app/ui/customTailwindClasses";
+
 import { montserrat } from "@/app/ui/fonts";
 import { FaGooglePlay } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
