@@ -38,12 +38,6 @@ export default function Personal() {
               enthusiasm for modern web solutions.
             </p>
           </div>
-          <Link
-            href="/about-us"
-            className={` ${primaryButton} inline-flex items-center justify-center`}
-          >
-            About Us
-          </Link>
         </div>
       </div>
     </div>

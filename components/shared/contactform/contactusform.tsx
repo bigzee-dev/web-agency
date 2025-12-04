@@ -231,8 +231,9 @@ export default function ContactUsForm() {
 
       <div className="mt-8 flex w-full flex-col justify-start gap-y-6">
         {/* Container for Turnstile. data-sitekey etc. are handled by explicit render */}
+
         <Turnstile
-          sitekey="1x00000000000000000000AA"
+          sitekey={process.env.TURNSTILE_SITE_KEY ?? ""}
           theme="dark"
           fixedSize={true}
           onVerify={(token) => {

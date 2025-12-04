@@ -1,33 +1,37 @@
-import { Mail, Phone, MessageSquare, Facebook } from "lucide-react";
+import {
+  FaFacebookF,
+  FaCommentDots,
+  FaEnvelope,
+  FaPhoneAlt,
+} from "react-icons/fa";
 import { montserrat } from "@/app/ui/fonts";
 import AboutUsFormContainer from "./formcontainer";
-import Image from "next/image";
 
 const contactOptions = [
   {
     id: "email",
-    icon: Mail,
+    icon: FaEnvelope,
     title: "Send us an Email",
     contact: "support@coodiv.net",
     href: "mailto:support@coodiv.net",
   },
   {
     id: "phone",
-    icon: Phone,
+    icon: FaPhoneAlt,
     title: "Give us a Call + Whatsapp",
     contact: "+213-661-8388-60",
     href: "tel:+213-661-8388-60",
   },
   {
     id: "twitter",
-    icon: MessageSquare,
+    icon: FaCommentDots,
     title: "Send us a Message",
     contact: "send message",
     href: "https://twitter.com/Coodiv",
   },
   {
     id: "facebook",
-    icon: Facebook,
+    icon: FaFacebookF,
     title: "Reach on Facebook",
     contact: "@Coodiv",
     href: "https://twitter.com/Coodiv",
@@ -70,22 +74,16 @@ export default function WorkWithUs() {
               >
                 Work with us
               </h2>
-              <div className="space-y-2">
+              <div className="">
                 <div className="flex items-center gap-x-0.5">
-                  <Image
-                    src="/logo/logo-500x500.png"
-                    alt="BigZee Digital Logo"
-                    width={40}
-                    height={40}
-                  />
                   <h5
                     className={` ${montserrat.className} text-[1.5rem] font-medium text-blue-300`}
                   >
-                    eltaworx
+                    Deltaworx
                   </h5>
                 </div>
 
-                <div className="flex flex-col pl-1 font-sans text-md text-neutral-400">
+                <div className="flex flex-col font-sans text-md text-neutral-400">
                   <span>Plot 698, Old Mall</span>
                   <span>Maun</span>
                 </div>
@@ -98,7 +96,7 @@ export default function WorkWithUs() {
                   return (
                     <div key={option.id} className="space-y-3">
                       <div className="flex justify-start">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-500/50 bg-white/5">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-500/50 bg-white/5">
                           <IconComponent className="h-5 w-5 text-blue-400" />
                         </div>
                       </div>

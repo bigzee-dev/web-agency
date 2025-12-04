@@ -15,7 +15,7 @@ const whyBuyFeatures = [
   {
     title: "Instant setup and easy control",
     description:
-      "Once you have registered your domain, you can manage it through our dashboard, including tasks such as <strong>updating DNS records</strong>, <strong>configuring Nameservers</strong>, and <strong>renewing your Domain</strong>.",
+      "Once you have registered your domain, you can manage it through our dashboard, including tasks such as <strong>configuring nameservers</strong>, and <strong>renewing your domain</strong>.",
   },
 ];
 
@@ -53,8 +53,8 @@ export default function WhyBuy() {
           </div>
         </h2>
         <p className={` ${sectionSubHeadings} mb-12 text-center`}>
-          Hostinger offers reliable domain registration services with instant
-          activation, dedicated live support, and full DNS management.
+          We offer reliable domain registration services with instant
+          activation, dedicated live support, and full domain management.
         </p>
 
         <ul className="disc mx-auto grid max-w-xl list-disc grid-cols-1 gap-12 pl-5">

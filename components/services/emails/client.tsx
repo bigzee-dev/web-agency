@@ -6,16 +6,19 @@ import {
   whiteButton,
 } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
-
+import { montserrat } from "@/app/ui/fonts";
+import { FaGooglePlay } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
+import { FaAppStoreIos } from "react-icons/fa";
+import { FaWindows } from "react-icons/fa";
+import { FaGlobe } from "react-icons/fa";
 import { RiComputerFill } from "react-icons/ri";
 import { MdOnDeviceTraining } from "react-icons/md";
-
-import { montserrat } from "@/app/ui/fonts";
 
 const clientSections = [
   {
     icon: RiComputerFill,
-    title: "Use Your Favorite Desktop Client",
+    title: "Use a Desktop Client or Browser",
     description:
       "Whether it's Outlook or any other popular client like Thunderbird or Apple Mail, you can use it with Deltaworx.",
   },
@@ -27,10 +30,33 @@ const clientSections = [
   },
 ];
 
+const devices = [
+  {
+    icon: FaGooglePlay,
+    title: "Android Play Store",
+  },
+  {
+    icon: FaAppStoreIos,
+    title: "IOS App Store",
+  },
+  {
+    icon: FaWindows,
+    title: "Windows",
+  },
+  {
+    icon: FaApple,
+    title: "MacOS",
+  },
+  {
+    icon: FaGlobe,
+    title: "Browser",
+  },
+];
+
 export default function EmailClient() {
   // const icons = [Smartphone, TvMinimal, TabletSmartphone];
   return (
-    <main className="relative isolate bg-gradient-to-tr from-secondary via-secondary to-primary pb-12 pt-20 text-neutral-200">
+    <main className="relative isolate bg-gradient-to-tr from-secondary via-secondary to-primary pb-16 pt-20 text-neutral-200">
       {/* Blur component for background effect */}
       <div
         aria-hidden="true"
@@ -61,9 +87,9 @@ export default function EmailClient() {
               return (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-gray-500/30 bg-neutral-100/95 px-8 py-5"
+                  className="rounded-2xl border border-gray-500/30 bg-neutral-100/95 px-8 py-4"
                 >
-                  <div className="mb-3 inline-block rounded-full border border-secondary/50 bg-neutral-300/50 p-3 text-center text-primary">
+                  <div className="mb-3 inline-block rounded-full border border-secondary/50 bg-neutral-300/50 p-3 text-center text-gray-800">
                     <Icon size="1.8em" />
                   </div>
                   <h2
@@ -77,28 +103,24 @@ export default function EmailClient() {
                 </div>
               );
             })}
-            ;
           </div>
         </div>
       </section>
 
-      {/* WebMail Section */}
-      <section className="px-6 pt-6">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2
-            className={` ${montserrat.className} mb-6 text-3xl font-semibold text-neutral-200 md:text-2xl`}
-          >
-            {"...And there's the Deltaworx WebMail"}
-          </h2>
-          <p className="font-sans text-base leading-relaxed text-neutral-300/95">
-            {
-              "Forget about the webmail apps you've used before. Yes, we mean it — just play around with the Deltaworx Webmail for a day and you might even realize that you don't need a desktop client."
-            }
-          </p>
-        </div>
-        <div className="mt-12 flex w-full items-center justify-center">
-          <img src="/svg/emails/send.svg" className="size-48" alt="send" />
-        </div>
+      {/* Icons Section */}
+      <section className="mx-auto mt-14 flex max-w-4xl justify-between">
+        {devices.map((device, idx) => {
+          const Icon = device.icon;
+          return (
+            <div
+              key={idx}
+              className="items- m-4 flex flex-col items-center gap-y-6 py-2"
+            >
+              <Icon size="3em" className="text-slate-300" />
+              <span className="font-sans text-white/90">{device.title}</span>
+            </div>
+          );
+        })}
       </section>
     </main>
   );

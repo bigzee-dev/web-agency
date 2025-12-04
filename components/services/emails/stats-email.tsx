@@ -44,9 +44,18 @@ export default function StatsEmail() {
               >
                 Email Built for Business
                 <br />{" "}
-                <span className="mt-10 text-lg font-medium uppercase tracking-wider text-slate-400">
-                  Designed for You
-                </span>
+                <div className="mt-6 flex items-center justify-center gap-x-6">
+                  <span className="text-lg font-medium uppercase tracking-wider text-slate-400">
+                    Designed for You
+                  </span>
+                  <span className="flex items-center justify-center">
+                    <img
+                      src="/svg/emails/send.svg"
+                      className="size-20"
+                      alt="send"
+                    />
+                  </span>
+                </div>
               </h2>
               {/* Stats Grid - Desktop (4 columns) */}
               <div className="grid gap-x-2 gap-y-2 md:grid-cols-3">

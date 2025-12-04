@@ -74,7 +74,7 @@ export default function MonthSpecials() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-center gap-y-12 bg-gray-50 px-4 pb-4 pt-16">
+    <main className="flex flex-col items-center justify-center gap-y-12 bg-gray-50 px-4 pb-4 pt-20">
       <h2 className={sectionHeadings}> This Months Specials</h2>
       <div className="grid w-full max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
         {pricingData.map((card) => (

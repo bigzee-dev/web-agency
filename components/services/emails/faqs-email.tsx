@@ -5,7 +5,7 @@ const faqs = [
   {
     title: "What is Business Email ?",
     answer:
-      "Professional email, business email, or custom email is an email account that uses your domain name or the domain for your business, rather than a generic domain like gmail.com. As opposed to free email solutions, you can give your business a more professional image with Business Email. You can have as many email accounts as you need with Deltaworx. Every employee, department, and service that’s a part of your business can have their own respective email accounts e.g sales@mybusiness.com or support@mybuisiness.com",
+      "Professional email, business email, or custom email is an email account that uses your domain name or the domain for your business, rather than a generic domain like gmail.com. As opposed to free email solutions, you can give your business a more professional image with Business Email. You can have as many email accounts as you need with Deltaworx. Every employee, department, and service that’s a part of your business can have their own respective email accounts e.g sales@mybusiness.com or support@mybusiness.com",
   },
   {
     title: "What do I need to setup an Email account ?",
