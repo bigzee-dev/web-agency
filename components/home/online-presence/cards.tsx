@@ -63,7 +63,7 @@ export default function Home() {
         <div
           key={index}
           className={clsx(
-            "px-4 py-9 sm:px-4 md:px-16",
+            "px-8 py-9 sm:px-4 md:px-16",
             index === 1 &&
               "border-r border-gray-500/50 bg-neutral-400/10 lg:bg-transparent",
             index === 2 && "lg:bg-neutral-400/10",

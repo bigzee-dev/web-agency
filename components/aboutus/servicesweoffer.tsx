@@ -60,13 +60,13 @@ export default function ServicesWeOffer() {
           return (
             <div
               key={s.title}
-              className="flex flex-col items-center rounded-2xl border border-gray-200/60 bg-gradient-to-tr from-gray-800 to-primary p-4 py-5 shadow-lg"
+              className="flex flex-col items-center rounded-2xl border border-gray-200/60 bg-gradient-to-tr from-secondary to-primary p-4 py-5 shadow-lg"
             >
               <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-md text-neutral-50">
                 <Icon className="size-12 text-slate-300" />
               </div>
               <div
-                className={` ${montserrat.className} mb-2 text-xl font-semibold text-slate-300`}
+                className={` ${montserrat.className} mb-2 text-xl font-semibold text-slate-200`}
               >
                 {s.title}
               </div>

@@ -18,7 +18,7 @@ export default function Websites() {
       <MonthSpecials />
       <DigitalRealEstate />
       <WhyBuy />
-      <SupportOne />
+      <SupportOne text="a Domain name" />
       <FaqsDomains />
     </div>
   );

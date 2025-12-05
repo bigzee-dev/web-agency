@@ -82,10 +82,10 @@ export default function DomainPricingTable() {
   ];
 
   return (
-    <div className="mx-auto w-full max-w-5xl pb-12 pt-4">
+    <div className="x-padding mx-auto w-full max-w-5xl pb-12 pt-4">
       <h2 className={sectionHeadings}>Available Tld&apos;s</h2>
       {/* Header Section */}
-      <div className="mt-12 grid grid-cols-1 rounded-t-2xl bg-slate-700 text-white md:grid-cols-4">
+      <div className="mt-12 grid grid-cols-2 rounded-t-2xl bg-slate-700 text-white md:grid-cols-4">
         {[
           {
             icon: <Box className="h-6 w-6" />,
@@ -101,16 +101,20 @@ export default function DomainPricingTable() {
             icon: <ChevronsRight className="h-6 w-6" />,
             title: "Transfer",
             description: "To tranfer from other registrar",
+            hideOnMd: true,
           },
           {
             icon: <Diamond className="h-6 w-6" />,
             title: "Renewal",
             description: "To renew your Domain",
+            hideOnMd: true,
           },
         ].map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-6 text-center"
+            className={`flex flex-col items-center p-6 text-center ${
+              item.hideOnMd ? "hidden md:block" : ""
+            }`}
           >
             <h3 className="mb-1 text-xl font-semibold text-neutral-100">
               {item.title}
@@ -162,10 +166,10 @@ export default function DomainPricingTable() {
                     domain.registration.original
                   )}
                 </TableCell>
-                <TableCell className="text-center text-gray-800">
+                <TableCell className="hidden text-center text-gray-800 md:table-cell">
                   {domain.transfer}
                 </TableCell>
-                <TableCell className="text-center text-gray-900">
+                <TableCell className="hidden text-center text-gray-900 md:table-cell">
                   {domain.renewal}
                 </TableCell>
               </TableRow>

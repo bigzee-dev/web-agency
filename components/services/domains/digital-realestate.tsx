@@ -18,16 +18,16 @@ const stats = [
 
 export default function DigitalRealEstate() {
   return (
-    <div className="mx-auto mb-4 mt-28 grid max-w-7xl grid-cols-12 rounded-2xl border border-gray-300 bg-gradient-to-r from-primary/5 to-primary/10">
-      <div className="relative col-span-4 h-full">
+    <div className="mx-auto mb-4 mt-28 grid max-w-7xl grid-cols-1 rounded-none border border-gray-300 bg-gradient-to-r from-primary/5 to-primary/10 md:grid-cols-12 md:rounded-2xl">
+      <div className="relative col-span-1 h-56 md:col-span-4 md:h-full">
         <Image
           src="/img/domains/laptop-domains.jpg"
           alt="img"
           fill
-          className="rounded-l-2xl object-cover"
+          className="rounded-none object-cover md:rounded-l-2xl"
         />
       </div>
-      <div className="col-span-8 p-14 text-center">
+      <div className="col-span-1 p-14 text-center md:col-span-8">
         <h3
           className={`${montserrat.className} mb-14 text-2xl font-bold text-gray-800 md:text-4xl`}
         >

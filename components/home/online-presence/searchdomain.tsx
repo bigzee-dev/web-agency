@@ -16,7 +16,7 @@ export default function DomainSearch() {
       alert("Please enter a domain name.");
       return;
     }
-    const url = `https://domains.bigzee.app/cart.php?a=add&domain=register&query=${encodeURIComponent(
+    const url = `${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register&query=${encodeURIComponent(
       domain,
     )}`;
     window.location.href = url; // Redirect to the external website
@@ -30,7 +30,7 @@ export default function DomainSearch() {
   };
 
   return (
-    <div className="flex h-full w-full flex-col gap-y-7 px-4 py-9 sm:px-4 md:px-16">
+    <div className="flex h-full w-full flex-col gap-y-7 px-8 py-9 sm:px-4 md:px-16">
       <div className="flex items-center gap-x-3">
         <div
           className={`inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-primary via-cyan-700 to-secondary p-3`}

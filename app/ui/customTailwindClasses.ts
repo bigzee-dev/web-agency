@@ -18,7 +18,7 @@ export const grayButton = ` ${btnDimensions} text-white bg-[#2a3441]`;
 
 export const whiteButton = ` ${btnDimensions} bg-[#faf9f5]/95 text-secondary`;
 
-export const greenButton = ` ${btnDimensions} text-neutral-50 bg-blue-500`;
+export const greenButton = ` ${btnDimensions} bg-blue-300 text-gray-900`;
 
 export const transparentButton = ` ${btnDimensions} text-neutral-100 border border-neutral-300/50 bg-blue-300/10`;
 

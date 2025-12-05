@@ -8,7 +8,7 @@ import {
 
 export default function OurValues() {
   return (
-    <div className="x-padding relative mx-auto max-w-7xl pb-28 pt-20">
+    <div className="x-padding relative mx-auto max-w-6xl pb-28 pt-20">
       <div className="mb-6 flex items-center justify-center">
         <h2 className={` ${sectionHeadings} max-w-6xl`}>Our Values</h2>
       </div>
@@ -21,7 +21,7 @@ export default function OurValues() {
         so we can do better work together.{" "}
       </p>
 
-      <div className="mx-auto mt-20 grid w-full max-w-5xl grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2">
+      <div className="mx-auto mt-20 grid w-full max-w-4xl grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-2">
         <ValueCard
           title="Quality Work"
           description="Our commitment to excellence drives us to provide outstanding customer service while maintaining the highest standards across our infrastructure, services, and support."
@@ -73,7 +73,7 @@ function ValueCard({ title, description, background, svg }: ValueCardProps) {
       </h3>
 
       <div className="pb-5">
-        <p className="font-sans text-base text-gray-700 md:w-full">
+        <p className="font-sans text-md text-gray-600 md:w-full">
           {description}
         </p>
       </div>

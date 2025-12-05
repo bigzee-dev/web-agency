@@ -52,12 +52,14 @@ export default function WhyBuy() {
             </svg>
           </div>
         </h2>
-        <p className={` ${sectionSubHeadings} mb-12 text-center`}>
+        <p
+          className={` ${sectionSubHeadings} mb-12 hidden text-center md:block`}
+        >
           We offer reliable domain registration services with instant
           activation, dedicated live support, and full domain management.
         </p>
 
-        <ul className="disc mx-auto grid max-w-xl list-disc grid-cols-1 gap-12 pl-5">
+        <ul className="disc mx-auto mt-10 grid max-w-xl list-disc grid-cols-1 gap-12 pl-5 md:mt-0">
           {whyBuyFeatures.map((feature, idx) => (
             <li key={idx} className="space-y-3">
               <h3 className="text-xl font-semibold text-gray-800">

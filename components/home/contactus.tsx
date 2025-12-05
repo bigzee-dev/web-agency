@@ -7,7 +7,7 @@ import { grayButton, primaryButton } from "@/app/ui/customTailwindClasses";
 
 export default function ContactUs() {
   return (
-    <div className="w-full border-t border-gray-300 bg-neutral-200/30 pb-20 pt-20">
+    <div className="w-full border-t border-gray-300 bg-neutral-200/30 py-16">
       <div className="mx-auto max-w-4xl text-center">
         <Badge className="mb-4 bg-primary/20 text-sm text-blue-600 hover:bg-primary/20">
           Talk to us

@@ -48,7 +48,7 @@ export default function Tips() {
         A few tips to help you buy a Domain
       </h2>
 
-      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3 md:gap-16">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-3 md:gap-16 md:px-0">
         {tips.map((tip, index) => {
           return (
             <div key={index} className="relative flex flex-col gap-y-5">

@@ -89,8 +89,8 @@ export default function Showcase() {
         </section>
 
         {/* image */}
-        <section className="mx-auto grid h-full max-w-6xl grid-cols-12 items-center justify-center">
-          <div className="col-span-5">
+        <section className="mx-auto grid h-full max-w-6xl grid-cols-1 items-center justify-center gap-y-12 md:grid-cols-12">
+          <div className="order-last col-span-1 md:order-first md:col-span-5">
             <ul className="grid max-w-max list-inside grid-cols-1 gap-y-1.5 self-center border-b-[1rem] border-neutral-800 pb-4 pr-8 font-sans text-lg font-medium text-gray-700 md:gap-x-0">
               {features.map((feature, idx) => (
                 <li key={idx} className="flex items-center gap-x-3">
@@ -102,7 +102,7 @@ export default function Showcase() {
               ))}
             </ul>
           </div>
-          <div className="col-span-7">
+          <div className="order-first col-span-1 md:order-last md:col-span-7">
             <Image
               src="/img/home/home-hero-section.png"
               alt="image"
