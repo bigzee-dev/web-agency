@@ -7,7 +7,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 export default function Component() {
   return (
     <div
-      className="w-full rounded-3xl bg-gradient-to-b from-gray-900 via-gray-900 to-primary p-4 sm:p-6 md:bg-gradient-to-tr md:px-12 md:py-10"
+      className="w-full rounded-3xl bg-gradient-to-b from-gray-900 via-gray-900 to-primary p-4 sm:p-6 md:bg-gradient-to-tr md:px-14 md:py-10"
       // style={{ backgroundColor: "#2D1576" }}
     >
       {/* Header badges */}
@@ -29,7 +29,7 @@ export default function Component() {
       </div>
       {/* small screen badge */}
       <Badge
-        className={`flex max-w-max items-center gap-x-1.5 border border-gray-700 bg-blue-400/10 p-1.5 text-center text-base font-semibold text-blue-400 lg:hidden`}
+        className={`flex max-w-max gap-1 bg-neutral-100 text-center font-semibold text-slate-800 hover:bg-neutral-100 lg:hidden`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ export default function Component() {
             Ecommerce that looks great and sells even better.
           </h1>
 
-          <p className="font-sans text-base leading-relaxed text-neutral-300">
+          <p className="hidden font-sans text-base leading-relaxed text-neutral-300 md:block">
             Launch your online store with a custom design, secure payments, and
             user-friendly features that turn visitors into buyers. We handle the
             tech so you can focus on running your business and growing your

@@ -14,7 +14,7 @@ const features = [
 
 export default function Email() {
   return (
-    <div className="relative isolate w-full overflow-hidden rounded-3xl bg-gray-800 p-4 pt-5 text-white sm:p-5 md:p-8 md:px-12">
+    <div className="relative isolate w-full overflow-hidden rounded-3xl bg-gray-800 p-4 pt-5 text-white sm:p-5 md:p-8 md:px-14">
       {/* Blur component */}
       <div
         aria-hidden="true"
@@ -58,7 +58,7 @@ export default function Email() {
             <br />
             <span className="text-blue-400">Email that means business</span>
           </h2>
-          <p className="font-sans text-base leading-relaxed text-neutral-300">
+          <p className="hidden font-sans text-base leading-relaxed text-neutral-300 md:block">
             Our Email service helps you and your team stay connected, look
             professional, and build trust — with secure, easy-to-manage email on
             your domain.

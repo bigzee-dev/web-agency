@@ -18,7 +18,7 @@ const subheadingStyles = ` text-neutral-300 text-4xl font-bold mb-6 tracking-nor
 
 export default function Hosting() {
   return (
-    <div className="relative isolate grid h-auto grid-cols-12 gap-x-20 overflow-hidden rounded-3xl bg-gray-900 text-white md:px-12 md:pb-12 md:pt-12">
+    <div className="relative isolate grid h-auto grid-cols-12 gap-x-20 overflow-hidden rounded-3xl bg-gray-900 text-white md:px-14 md:pb-12 md:pt-12">
       {/* blur component */}
       <svg
         viewBox="0 0 1024 1024"
@@ -40,12 +40,10 @@ export default function Hosting() {
         </defs>
       </svg>
       <div className="col-span-7">
-        <h2 className={headingStyles}>Web Applications</h2>
+        <h2 className={headingStyles}>High Powered Compute</h2>
 
-        <h3 className={subheadingStyles}>
-          Smart Web Applications for Modern Business Needs
-        </h3>
-        <p className="font-sans text-base leading-relaxed text-neutral-300">
+        <h3 className={subheadingStyles}>Scalable Cloud Infrastructure</h3>
+        <p className="hidden font-sans text-base leading-relaxed text-neutral-300 md:block">
           Whether you are launching something new or improving what you already
           have, we’re here to make it happen. From simple booking apps to
           full-featured apps for enterprises, we&apos;ve helped all kinds of
@@ -78,13 +76,13 @@ export default function Hosting() {
           />
         </Link>
       </div>
-      <div className="col-span-5 mt-auto rounded-lg border border-gray-700">
+      <div className="col-span-5 mt-auto rounded-2xl border border-gray-700 bg-white/5">
         <Image
-          src="/img/home/globe-tech.jpg"
+          src="/img/home/stack.png"
           alt="Web Apps"
-          width={584}
-          height={1024}
-          className="h-[28rem] w-full rounded-lg object-cover"
+          width={810}
+          height={648}
+          className="h-[24rem] w-full rounded-lg object-cover"
         />
       </div>
     </div>

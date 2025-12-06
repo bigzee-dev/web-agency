@@ -19,7 +19,7 @@ const subheadingStyles = ` text-neutral-300 text-3xl md:text-4xl font-bold mb-5 
 
 export default function WebApps() {
   return (
-    <div className="relative isolate gap-x-20 overflow-hidden rounded-3xl bg-gray-900 p-4 pt-6 text-white md:px-12 md:pb-12 md:pt-12 lg:grid lg:grid-cols-12">
+    <div className="relative isolate gap-x-20 overflow-hidden rounded-3xl bg-gray-900 p-4 pt-6 text-white md:px-14 md:pb-12 md:pt-12 lg:grid lg:grid-cols-12">
       {/* blur component */}
       <svg
         viewBox="0 0 1024 1024"
@@ -63,7 +63,7 @@ export default function WebApps() {
         <h3 className={subheadingStyles}>
           Smart Web Applications for Modern Business Needs
         </h3>
-        <p className="font-sans text-base leading-relaxed text-neutral-300">
+        <p className="hidden font-sans text-base leading-relaxed text-neutral-300 md:block">
           Whether you&apos;re launching something new or improving what you
           already have, we&apos;re here to make it happen. From simple booking
           apps to full-featured apps for enterprises, we&apos;ve helped all
@@ -102,7 +102,7 @@ export default function WebApps() {
           alt="Web Apps"
           width={667}
           height={1000}
-          className="h-[21rem] w-full rounded-lg object-cover md:h-[28rem]"
+          className="h-[15rem] w-full rounded-lg object-cover md:h-[24rem]"
         />
       </div>
     </div>

@@ -48,6 +48,7 @@ export default function useResponsiveNav() {
     // Click handler for nav links with dropdowns
     const createNavLinkClickHandler = (link, index) => (e) => {
       e.preventDefault();
+      e.stopPropagation();
       const chevron = link.querySelector(".chevron");
       const currentDropdownMenu = dropdownMenus[index];
 
@@ -122,6 +123,7 @@ export default function useResponsiveNav() {
     };
 
     const handleDropdownItemClick = () => {
+      e.stopPropagation();
       if (navMenu.classList.contains("active")) {
         handleCloseMenuClick(); // Close mobile menu
       }

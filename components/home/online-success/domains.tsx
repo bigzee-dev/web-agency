@@ -7,7 +7,7 @@ import { montserrat } from "@/app/ui/fonts";
 export default function Component() {
   return (
     <div
-      className="w-full rounded-3xl bg-gradient-to-b from-gray-900 via-gray-900 to-primary md:bg-gradient-to-tr md:px-12 md:py-10"
+      className="w-full rounded-3xl bg-gradient-to-b from-gray-900 via-gray-900 to-primary md:bg-gradient-to-tr md:px-14 md:py-10"
       // style={{ backgroundColor: "#2D1576" }}
     >
       <div className="mx-auto max-w-7xl">

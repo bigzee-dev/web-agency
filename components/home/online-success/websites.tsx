@@ -13,7 +13,7 @@ const features = [
 
 export default function Websites() {
   return (
-    <div className="relative isolate w-full overflow-hidden rounded-3xl bg-gray-800 p-4 pt-5 text-white sm:p-5 md:p-8 md:px-12">
+    <div className="relative isolate w-full overflow-hidden rounded-3xl bg-gray-800 p-4 pt-5 text-white sm:p-5 md:p-8 md:px-14">
       {/* Blur component */}
       <div
         aria-hidden="true"
@@ -62,7 +62,7 @@ export default function Websites() {
           >
             Professional, high-converting websites built to grow your business
           </h2>
-          <p className="font-sans text-base leading-relaxed text-neutral-300">
+          <p className="hidden font-sans text-base leading-relaxed text-neutral-300 md:block">
             We develop fast, secure websites designed to turn visitors into
             customers — and support your long-term growth.
           </p>
@@ -92,9 +92,9 @@ export default function Websites() {
             />
           </Link>
         </div>
-        <div className="relative rounded-lg border border-gray-700 lg:col-span-5">
+        <div className="relative rounded-2xl border border-gray-600 bg-white/5 lg:col-span-5">
           <img
-            src="/svg/home/websites-cms.svg"
+            src="/img/home/landing-websites.png"
             alt="Website"
             className="w-full rounded-lg"
           />

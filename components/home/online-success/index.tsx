@@ -39,29 +39,29 @@ export default function OnlineSuccess() {
         >
           <TabsList className="mx-auto w-full max-w-max rounded-lg border border-gray-300">
             <TabsTrigger value="websites">Websites</TabsTrigger>
+            <TabsTrigger value="hosting">Cloud</TabsTrigger>
             <TabsTrigger value="webapps">Web Apps</TabsTrigger>
-            <TabsTrigger value="ecommerce">Ecommerce</TabsTrigger>
             <TabsTrigger value="email">Email</TabsTrigger>
-            <TabsTrigger value="hosting">Hosting</TabsTrigger>
             <TabsTrigger value="domains">Domains</TabsTrigger>
+            <TabsTrigger value="ecommerce">Ecommerce</TabsTrigger>
           </TabsList>
           <TabsContent value="websites">
             <Websites />
           </TabsContent>
+          <TabsContent value="hosting">
+            <Hosting />
+          </TabsContent>
           <TabsContent value="webapps">
             <WebApps />
-          </TabsContent>
-          <TabsContent value="ecommerce">
-            <Ecommerce />
           </TabsContent>
           <TabsContent value="email">
             <Email />
           </TabsContent>
-          <TabsContent value="hosting">
-            <Hosting />
-          </TabsContent>
           <TabsContent value="domains">
             <Domains />
+          </TabsContent>
+          <TabsContent value="ecommerce">
+            <Ecommerce />
           </TabsContent>
         </Tabs>
       </div>
@@ -70,8 +70,8 @@ export default function OnlineSuccess() {
         <WebApps />
         <Ecommerce />
         <Email />
-        {/* <Hosting />
-        <Domains /> */}
+        {/*<Hosting />
+        <Domains />*/}
       </div>
     </div>
   );
