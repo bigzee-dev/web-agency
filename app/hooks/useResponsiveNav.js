@@ -122,7 +122,7 @@ export default function useResponsiveNav() {
       }
     };
 
-    const handleDropdownItemClick = (e) => {
+    const handleDropdownItemClick = () => {
       // e.stopPropagation();
       if (navMenu.classList.contains("active")) {
         handleCloseMenuClick(); // Close mobile menu

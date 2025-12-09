@@ -4,15 +4,15 @@ import { cairo, montserrat } from "@/app/ui/fonts";
 import { NavChevron } from "./chevron";
 import useResponsiveNav from "@/app/hooks/useResponsiveNav";
 import {
-  WebAppIcon,
+  // WebAppIcon,
   ShoppingBagIcon,
   EmailIcon,
   WebMailIcon,
   MouseClickIcon,
   LinuxIcon,
-  WindowsIcon,
+  // WindowsIcon,
   CpanelIcon,
-  CloudUploadIcon,
+  // CloudUploadIcon,
   DomainIcon,
   ClipboardCopyIcon,
   DocumentTextIcon,
