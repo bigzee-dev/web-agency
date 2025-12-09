@@ -122,14 +122,14 @@ export default function useResponsiveNav() {
       }
     };
 
-    const handleDropdownItemClick = () => {
-      e.stopPropagation();
+    const handleDropdownItemClick = (e) => {
+      // e.stopPropagation();
       if (navMenu.classList.contains("active")) {
         handleCloseMenuClick(); // Close mobile menu
       }
       // On desktop, dropdowns might need explicit closing if not handled by link navigation
       if (window.innerWidth > 768) {
-        setTimeout(closeAllDropdowns, 50); // Small delay for link navigation
+        setTimeout(closeAllDropdowns, 70); // Small delay for link navigation
       }
     };
 

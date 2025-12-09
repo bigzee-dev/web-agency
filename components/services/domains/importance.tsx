@@ -23,7 +23,7 @@ export default function Importance() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-br from-slate-50 to-white py-16 md:py-24 md:pb-20">
+    <section className="w-full bg-gradient-to-br from-slate-50 to-white py-16 md:py-24 md:pb-16">
       <div className="mx-auto max-w-7xl px-4 md:px-4">
         <div className="mb-8 text-center">
           {/* <Badge variant="outline" className="mb-4 text-sm font-medium">
@@ -42,8 +42,8 @@ export default function Importance() {
           </p>
         </div>
 
-        <div className="mb-8 grid gap-x-16 lg:grid-cols-2">
-          <div className="relative">
+        <div className="mb-8 grid gap-x-16 gap-y-6 lg:grid-cols-2">
+          <div className="relative order-2 md:order-1">
             <div className="relative overflow-hidden">
               <div className="relative z-10 flex items-center justify-center">
                 <Image
@@ -56,7 +56,7 @@ export default function Importance() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center space-y-6">
+          <div className="order-1 flex flex-col justify-center space-y-6 md:order-2">
             {domainBenefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-x-4">
                 <FaCheck

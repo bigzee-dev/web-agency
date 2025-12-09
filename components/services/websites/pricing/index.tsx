@@ -2,10 +2,11 @@ import PlansInfo from "./plans-info";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 import { oneTimePlans, monthlyPlans } from "./plansdata";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function PricingWebsites() {
   return (
-    <div className="x-padding relative isolate mx-auto max-w-6xl py-20 pb-16">
+    <div className="x-padding relative isolate mx-auto max-w-6xl overflow-hidden py-20 pb-16">
       {/* Blur component for background effect */}
       <div
         aria-hidden="true"
@@ -33,12 +34,14 @@ export default function PricingWebsites() {
         <div className="absolute left-0 top-0 flex items-center gap-2 pt-5"></div>
       </div>
       <Tabs defaultValue="onetime" className="mt-4">
-        <div className="flex w-full items-center justify-between">
+        <div className="flex w-full items-center justify-between pr-1 md:pr-0">
           <TabsList>
             <TabsTrigger value="onetime">One-Time</TabsTrigger>
             <TabsTrigger value="monthly">Monthly</TabsTrigger>
           </TabsList>
-          <span className="text-xl">&rarr;</span>
+          <span className="md:hidden">
+            <FaArrowRightLong />
+          </span>
         </div>
 
         <TabsContent value="onetime">

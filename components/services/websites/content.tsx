@@ -50,7 +50,7 @@ const features = [
 
 export default function ContentSection() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20 leading-normal">
+    <section className="mx-auto max-w-6xl px-6 py-12 leading-normal md:py-20">
       <div className="mb-16">
         <p className="mb-4 font-medium text-blue-600">Everything you need</p>
         <h2 className="mb-6 text-4xl font-bold text-foreground md:text-5xl">
@@ -68,7 +68,7 @@ export default function ContentSection() {
           return (
             <div key={index} className="flex gap-4">
               <div className="flex-shrink-0">
-                <IconComponent className="h-6 w-6 text-primary" />
+                <IconComponent className="h-8 w-8 text-primary" />
               </div>
               <div>
                 <p className="leading-relaxed text-foreground">

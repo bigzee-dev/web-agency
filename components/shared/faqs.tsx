@@ -38,7 +38,7 @@ export default function Faqs(props: FaqsProps) {
             {subheading ?? defaultSubheading}
           </p>
         </div>
-        <div className="col-span-1 md:col-span-6">
+        <div className="col-span-1 px-2 md:col-span-6 md:px-0">
           <Accordion
             type="single"
             collapsible

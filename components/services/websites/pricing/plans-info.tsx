@@ -1,5 +1,6 @@
 import { FaCheck } from "react-icons/fa6";
-
+import { FaPlusMinus } from "react-icons/fa6";
+import { IoPricetagsOutline } from "react-icons/io5";
 import { FaCircleQuestion } from "react-icons/fa6";
 import { CgNotes } from "react-icons/cg";
 import { Clock8 } from "lucide-react";
@@ -47,9 +48,10 @@ export default function PlansInfo({ plans }: { plans: Plan[] }) {
                 </div>
                 <div>
                   <div className="mb-1 text-xs font-medium text-gray-500">
-                    Approx:
+                    <IoPricetagsOutline size="1.8em" />
                   </div>
                   <div className="flex items-center gap-2">
+                    <FaPlusMinus size={12} className="text-gray-700" />
                     <span className="text-2xl font-medium text-primary">
                       {plan.price}
                     </span>

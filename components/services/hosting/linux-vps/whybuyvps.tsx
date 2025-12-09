@@ -38,30 +38,30 @@ const features = [
 export default function WhyBuyVps() {
   return (
     <section className="mx-auto max-w-7xl px-6 pb-24 pt-20 leading-normal">
-      <div className="mb-10">
+      <div className="md:mb-10">
         <p className="mb-2 font-medium text-blue-600">Virtual Private Server</p>
         <h2 className={` ${longSectionHeadings} mb-2`}>
           Why Our VPS Stands Out
         </h2>
         <p
-          className={` ${sectionSubHeadings} mb-8 max-w-2xl text-md text-secondary`}
+          className={` ${sectionSubHeadings} max-w-2xl text-md text-secondary md:mb-8`}
         >
           High-Performance VPS, Fair Prices – That’s Deltaworx.
         </p>
       </div>
 
-      <div className="grid gap-x-6 lg:grid-cols-12">
-        <div className="col-span-6">
-          <div className="relative h-full w-full">
+      <div className="grid grid-cols-1 gap-x-2 gap-y-8 md:grid-cols-12">
+        <div className="col-span-1 md:col-span-6">
+          <div className="relative h-[24rem] w-full md:h-full">
             <Image
-              src="/img/linux-vps/compute.png"
+              src="/img/linux-vps/hostiko-img.png"
               alt="linux-vps"
               fill
-              className="rounded-lg object-contain py-1"
+              className="object-contain"
             />
           </div>
         </div>
-        <div className="col-span-6 grid gap-x-4 gap-y-10 md:grid-cols-2">
+        <div className="col-span-1 grid gap-x-6 gap-y-10 md:col-span-6 md:grid-cols-2">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (

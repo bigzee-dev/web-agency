@@ -1,21 +1,22 @@
 import Header from "@/components/services/websites/header";
 import OurProcess from "@/components/services/websites/ourprocess";
-import CTA from "@/components/services/websites/cta";
+import Stats from "@/components/services/websites/stats";
 import PricingWebsites from "@/components/services/websites/pricing";
+import PlansExplained from "@/components/services/websites/plans-explained";
 import ContentSection from "@/components/services/websites/content";
-import FaqsWebsites from "@/components/services/websites/faqs";
-
+import FaqsWebsites from "@/components/services/websites/faqs-websites";
 import SupportOne from "@/components/shared/support/support-one";
 
 export default function Websites() {
   return (
-    <div className="pb-20">
+    <div>
       <Header />
       <OurProcess />
-      <CTA />
+      <Stats />
       <ContentSection />
       <PricingWebsites />
-      <SupportOne />
+      <PlansExplained />
+      <SupportOne text="a Website" />
       <FaqsWebsites />
     </div>
   );

@@ -45,8 +45,11 @@ export default function HeaderVps() {
 
                   <IoArrowForwardCircleSharp className="size-6 text-neutral-700" />
                 </Link>
-                <h1 className={` ${pageHeadingsCenter} mt-8`}>
+                <h1 className={` ${pageHeadingsCenter} mt-8 hidden md:block`}>
                   Linux VPS Optimised for <br /> the Botswana market
+                </h1>
+                <h1 className={` ${pageHeadingsCenter} mt-8 md:hidden`}>
+                  Linux VPS Optimised for the Botswana market
                 </h1>
                 <p
                   className={` ${sectionSubHeadings} mx-auto mt-6 max-w-2xl text-center`}
@@ -54,12 +57,8 @@ export default function HeaderVps() {
                   Deploy scalable, enterprise-grade Linux VPS instances to power
                   your applications and digital infrastructure.
                 </p>
-                <p className="mx-auto mt-6 max-w-2xl text-wrap sm:hidden">
-                  Highly customizable components for building modern websites
-                  and applications, with your personal spark.
-                </p>
 
-                <div className="mt-12">
+                <div className="mt-6 md:mt-12">
                   <Link
                     href="#"
                     className={` ${primaryButton} inline-flex items-center justify-center gap-x-2`}

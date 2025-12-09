@@ -6,19 +6,19 @@ const processSteps = [
     number: "/ 01",
     title: "Discover",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...",
+      "Every great project starts with discovery. We take the time to deeply understand your goals, audience, and vision, ensuring we’re building the right solution for your needs.",
   },
   {
     number: "/ 02",
     title: "Build",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...",
+      "With a focus on quality and scalability, we use the latest technologies to deliver a solution that’s fast, reliable, and future-proof. Collaboration with your team ensures the final product aligns with your goals.",
   },
   {
     number: "/ 03",
     title: "Deliver",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...",
+      "We set your website live and you’re open for business! Post-launch support packages are available if you’ve enjoyed working with our team and would like us to remain in charge of maintenance and ongoing improvements.",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function OurProcess() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-x-16 gap-y-8 font-sans md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-16 gap-y-8 px-4 font-sans md:grid-cols-3 md:px-0">
           {processSteps.map((step, idx) => (
             <div key={idx}>
               <div className="text-lg font-light text-gray-500">

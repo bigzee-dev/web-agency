@@ -1,6 +1,10 @@
 import { montserrat } from "@/app/ui/fonts";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { FiCpu } from "react-icons/fi";
+import { BsMemory } from "react-icons/bs";
+import { TfiHarddrive } from "react-icons/tfi";
+import { FaNetworkWired } from "react-icons/fa";
 
 const pricingData = [
   {
@@ -54,15 +58,24 @@ const pricingData = [
     ram: "12GB",
     storage: "180GB",
     bandwidth: "20TB",
-    price: "P400",
+    price: "P420",
     popular: false,
   },
 ];
 
+const infoContainerStyles =
+  "mx-auto flex w-[9rem] items-center justify-center text-xl text-gray-600";
+const propertyStyles = "flex flex-1 items-center justify-start";
+
+const planValueStyles =
+  "pl-3 flex flex-1 items-center justify-start text-base text-gray-800";
+const iconStyles = "mr-2 inline-block text-primary";
+const spanStyles = "text-xs font-normal text-gray-500";
+
 export default function PricingVpsTable() {
   return (
     <div className="x-padding w-full">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 pb-12 pt-32">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 pb-12 pt-20 md:pt-32">
         {/* Title */}
         <h1
           className={` ${montserrat.className} text-center text-3xl font-bold text-gray-800 md:text-5xl`}
@@ -130,38 +143,61 @@ export default function PricingVpsTable() {
         </div>
 
         {/* Mobile Card View */}
-        <div className="space-y-4 md:hidden">
+        <div className="space-y-6 md:hidden">
           {pricingData.map((plan, index) => (
             <Card
               key={index}
-              className={`relative overflow-hidden ${plan.popular ? "ring-2 ring-purple-600" : ""}`}
+              className={`relative min-w-[18rem] overflow-hidden rounded-xl ring-1 ring-gray-300 ${plan.popular ? "ring-primary" : ""}`}
             >
               {/* Popular Badge for Mobile */}
               {plan.popular && (
-                <div className="absolute right-0 top-0 rounded-bl-lg bg-purple-600 px-3 py-1 text-xs font-medium text-white">
+                <div className="absolute right-0 top-0 rounded-bl-lg bg-primary px-3 py-1 text-xs font-medium text-white">
                   Popular
                 </div>
               )}
 
               <CardContent className="space-y-4 p-6">
-                <div className="space-y-2 text-center">
-                  <div className="text-lg font-medium text-gray-700">
+                <div className="space-y-3 text-center">
+                  <div
+                    className={` ${montserrat.className} text-xl font-bold text-secondary`}
+                  >
                     {plan.cpu}
                   </div>
-                  <div className="text-2xl font-bold text-gray-900">
-                    {plan.vCores}
+                  <div className={infoContainerStyles}>
+                    <div className={propertyStyles}>
+                      <FiCpu className={iconStyles} />
+                      <span className={spanStyles}>vCpu</span>
+                    </div>
+                    <div className={planValueStyles}>{plan.vCores}</div>
                   </div>
-                  <div className="text-gray-600">{plan.ram}</div>
-                  <div className="text-gray-600">{plan.storage}</div>
-                  <div className="text-gray-600">{plan.bandwidth}</div>
-                  <div className="mt-4 text-xl font-semibold text-purple-600">
+                  <div className={infoContainerStyles}>
+                    <div className={propertyStyles}>
+                      <BsMemory className={iconStyles} />
+                      <span className={spanStyles}>Ram</span>
+                    </div>
+                    <div className={planValueStyles}>{plan.ram}</div>
+                  </div>
+                  <div className={infoContainerStyles}>
+                    <div className={propertyStyles}>
+                      <TfiHarddrive className={iconStyles} />
+                      <span className={spanStyles}>Disk</span>
+                    </div>
+                    <div className={planValueStyles}>{plan.storage}</div>
+                  </div>
+                  <div className={infoContainerStyles}>
+                    <div className={propertyStyles}>
+                      <FaNetworkWired className={iconStyles} />
+                      <span className={spanStyles}>Traffic</span>
+                    </div>
+                    <div className={planValueStyles}>{plan.bandwidth}</div>
+                  </div>
+
+                  <div className="mt-4 text-2xl font-bold text-gray-800">
                     {plan.price}
                   </div>
                 </div>
 
-                <Button className="w-full bg-purple-600 text-white hover:bg-purple-700">
-                  Order
-                </Button>
+                <Button className="w-full bg-primary text-white">Order</Button>
               </CardContent>
             </Card>
           ))}

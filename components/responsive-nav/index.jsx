@@ -34,8 +34,8 @@ export default function ResponsiveNav() {
   useResponsiveNav(); // <-- This runs the nav javascript
 
   return (
-    <nav className="x-padding navbar border-b border-gray-300/70">
-      <div className="navbar-container">
+    <nav className="navbar border-b border-gray-300/70">
+      <div className="x-padding navbar-container">
         <Link className="logo-container text-neutral-800 lg:mr-6" href="/">
           {" "}
           {/* Updated href to be relative */}
@@ -76,14 +76,14 @@ export default function ResponsiveNav() {
                     Website Development
                   </div>{" "}
                 </Link>
-                <Link href="/ecommerce" className="dropdown-item">
+                {/* <Link href="/ecommerce" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
                       <WebAppIcon />
                     </span>
                     Web Applications
                   </div>{" "}
-                </Link>
+                </Link> */}
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
@@ -112,14 +112,14 @@ export default function ResponsiveNav() {
                     Linux VPS
                   </div>
                 </Link>
-                <Link href="/linux-vps" className="dropdown-item">
+                {/* <Link href="/linux-vps" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
                       <WindowsIcon size="size-5" />
                     </span>
                     Windows VPS
                   </div>
-                </Link>
+                </Link> */}
                 <Link href="/web-hosting" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
@@ -128,14 +128,14 @@ export default function ResponsiveNav() {
                     Web Hosting
                   </div>
                 </Link>
-                <Link href="/web-hosting" className="dropdown-item">
+                {/* <Link href="/web-hosting" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
                       <CloudUploadIcon size="size-5" />
                     </span>
                     Cloud Storage
                   </div>
-                </Link>
+                </Link> */}
               </div>
             </li>
             <li className="nav-item">
@@ -158,7 +158,7 @@ export default function ResponsiveNav() {
                   </div>{" "}
                 </Link>
                 <Link
-                  href="https://mail.deltaworx.co.bw"
+                  href="https://mailhostbox.titan.email/"
                   className="dropdown-item"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -167,7 +167,7 @@ export default function ResponsiveNav() {
                     <span>
                       <WebMailIcon size="size-5" />
                     </span>
-                    DeltaMail Login
+                    Mail Login
                   </div>{" "}
                 </Link>
               </div>
@@ -252,7 +252,7 @@ export default function ResponsiveNav() {
                     Blog
                   </div>
                 </Link>
-                <Link href="/terms-conditions" className="dropdown-item">
+                <Link href="/legal/terms-of-service" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
                       <ListIcon size="size-5" />

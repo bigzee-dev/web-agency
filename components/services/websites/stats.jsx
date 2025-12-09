@@ -18,14 +18,12 @@ const stats = [
   },
 ];
 
-export default function CTA() {
+export default function Stats() {
   return (
     <div className="">
       <div className="mx-auto max-w-7xl py-16">
         <div className="relative isolate grid grid-cols-1 overflow-hidden bg-gray-900 pt-0 shadow-2xl md:grid-cols-12 md:rounded-3xl">
-          <div className="order-2 col-span-1 grid grid-cols-1 justify-items-center md:order-2 md:col-span-8 lg:mx-0">
-            {/* <ContactForm /> */}
-
+          <div className="order-2 col-span-1 grid grid-cols-1 justify-items-center md:order-1 md:col-span-8 lg:mx-0">
             <section className="w-full px-8 py-16 text-white">
               <div className="w-full">
                 {/* Header */}
@@ -34,7 +32,8 @@ export default function CTA() {
                     Why a Well-Designed Website Matters
                   </h2>
                   <p className="mx-auto max-w-2xl text-lg text-slate-300 md:text-xl">
-                    Lorem ipsum dolor sit amet consectetur adipisicing possimus.
+                    Making Your Website Trustworthy: Why People Judge Your
+                    Business by How Your Site Looks.
                   </p>
                 </div>
 
@@ -76,7 +75,7 @@ export default function CTA() {
               </div>
             </section>
           </div>
-          <div className="relative order-2 col-span-1 hidden h-80 md:order-1 md:col-span-4 md:block md:h-full">
+          <div className="relative order-1 col-span-1 h-96 md:order-2 md:col-span-4 md:h-full">
             <Image
               src="/img/emails/214.jpg"
               alt="img"

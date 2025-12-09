@@ -41,7 +41,7 @@ const contactOptions = [
 export default function WorkWithUs() {
   return (
     <div className="x-padding mt-5 w-full">
-      <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gray-900 pb-6 pt-16">
+      <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gray-900 pb-4 pt-14">
         <div
           aria-hidden="true"
           className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"

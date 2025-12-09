@@ -10,24 +10,40 @@ import {
   SelectValue,
 } from "@/components/ui/domainsformselect";
 import { Input } from "@/components/ui/domainsforminput";
+import { IoSearch } from "react-icons/io5";
 
 export default function SearchDomainForm() {
   const [domain, setDomain] = React.useState("");
-  const [tld, setTld] = React.useState(".com");
+  const [tld, setTld] = React.useState(".co.bw");
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle domain search logic here
-    console.log(`Searching for ${domain}${tld}`);
+
+    if (domain.trim() === "") {
+      alert("Please enter a domain name.");
+      return;
+    }
+
+    const fullDomain = `${domain}${tld}`;
+    const url = `${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register&query=${encodeURIComponent(
+      fullDomain,
+    )}`;
+    window.open(url); // Open in a new browser tab
   };
 
   return (
-    <div className="mx-auto mt-4 w-full max-w-3xl bg-neutral-200 px-5 py-5">
-      <form onSubmit={handleSearch} className="flex items-center gap-4">
+    <div className="mx-auto mt-4 w-full max-w-3xl bg-neutral-200 px-2 py-5 md:px-5">
+      <form
+        onSubmit={handleSearch}
+        className="flex items-center gap-x-2 md:gap-x-4"
+      >
         <div className="relative flex-1">
           <div className="absolute -top-[13px] left-[50px] bg-neutral-200 px-1">
-            <span className="px-1 text-xs text-primary">
+            <span className="hidden px-1 text-xs text-primary md:block">
               Enter desired domain name <span className="text-primary">*</span>
+            </span>
+            <span className="block px-1 text-xs text-primary md:hidden">
+              Enter domain name <span className="text-primary">*</span>
             </span>
           </div>
           <div className="flex overflow-hidden rounded-md border-2 border-primary">
@@ -40,11 +56,11 @@ export default function SearchDomainForm() {
             />
             <div className="text-grey-700 border-l border-gray-400">
               <Select value={tld} onValueChange={setTld}>
-                <SelectTrigger className="w-[100px] border-0 shadow-none focus:ring-0">
-                  <SelectValue defaultValue=".com" />
+                <SelectTrigger className="w-[85px] border-0 shadow-none focus:ring-0 md:w-[100px]">
+                  <SelectValue defaultValue=".co.bw" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value=".com">.com</SelectItem>
+                  <SelectItem value=".co.bw">.co.bw</SelectItem>
                   <SelectItem value=".net">.net</SelectItem>
                   <SelectItem value=".org">.org</SelectItem>
                   <SelectItem value=".io">.io</SelectItem>
@@ -55,9 +71,12 @@ export default function SearchDomainForm() {
         </div>
         <Button
           type="submit"
-          className={`h-full w-24 rounded-lg bg-primary text-white`}
+          className={`h-full w-12 rounded-lg border-2 border-primary bg-primary text-white md:w-24`}
         >
-          Search
+          <span className="hidden md:block">Seacrh</span>
+          <span className="block md:hidden">
+            <IoSearch size={20} />
+          </span>
         </Button>
       </form>
     </div>

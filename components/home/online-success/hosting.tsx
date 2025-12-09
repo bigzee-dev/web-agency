@@ -76,13 +76,13 @@ export default function Hosting() {
           />
         </Link>
       </div>
-      <div className="col-span-5 mt-auto rounded-2xl border border-gray-700 bg-white/5">
+      <div className="col-span-5 mt-auto rounded-2xl border border-gray-700 bg-white/5 pt-1">
         <Image
-          src="/img/home/stack.png"
+          src="/img/linux-vps/hostiko-img.png"
           alt="Web Apps"
-          width={810}
-          height={648}
-          className="h-[24rem] w-full rounded-lg object-cover"
+          width={533}
+          height={500}
+          className="h-[24rem] w-full rounded-lg object-contain"
         />
       </div>
     </div>
