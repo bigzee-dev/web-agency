@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function PaymentGateways() {
   return (
-    <div className="w-full">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 pb-4 pt-0 md:grid-cols-12 lg:gap-16">
+    <div className="x-padding w-full">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 pb-4 pt-8 md:grid-cols-12 md:pt-0 lg:gap-16">
         {/* Left Column - Text Content */}
-        <div className="col-span-6">
+        <div className="col-span-1 md:col-span-6">
           <div className="flex items-center gap-x-8">
             <img src="/svg/ecommerce/visa.svg" alt="Visa" className="h-20" />
             <img
@@ -36,7 +36,7 @@ export default function PaymentGateways() {
         </div>
 
         {/* Right Column - Dashboard */}
-        <div className="relative col-span-5 col-start-8">
+        <div className="relative col-span-1 md:col-span-5 md:col-start-8">
           <div className="relative overflow-hidden">
             <Image
               src="/img/ecommerce/credit-cards.jpg"

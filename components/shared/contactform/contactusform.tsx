@@ -118,7 +118,7 @@ export default function ContactUsForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-2 gap-x-4">
+      <div className="geid-cols-1 grid gap-x-4 md:grid-cols-2">
         <div>
           <label htmlFor="name" className={` ${labelStyles} `}>
             Name
@@ -153,7 +153,7 @@ export default function ContactUsForm() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-x-4">
+      <div className="grid grid-cols-1 gap-x-4 md:grid-cols-2">
         <div>
           <label htmlFor="company" className={` ${labelStyles} `}>
             <span>Company </span>
@@ -170,7 +170,7 @@ export default function ContactUsForm() {
             />
           </div>
         </div>
-        <div>
+        <div className="hidden md:block">
           <label htmlFor="budget" className={` ${labelStyles} `}>
             <span>Budget Range </span>
             <span className="pr-2 text-xs text-neutral-400">Optional</span>

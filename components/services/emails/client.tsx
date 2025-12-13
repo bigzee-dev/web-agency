@@ -51,7 +51,7 @@ const devices = [
 export default function EmailClient() {
   // const icons = [Smartphone, TvMinimal, TabletSmartphone];
   return (
-    <main className="relative isolate bg-gradient-to-tr from-secondary via-secondary to-primary pb-16 pt-20 text-neutral-200">
+    <main className="relative isolate overflow-hidden bg-gradient-to-tr from-secondary via-secondary to-primary pb-16 pt-20 text-neutral-200">
       {/* Blur component for background effect */}
       <div
         aria-hidden="true"
@@ -103,13 +103,13 @@ export default function EmailClient() {
       </section>
 
       {/* Icons Section */}
-      <section className="mx-auto mt-14 flex max-w-4xl justify-between">
+      <section className="mx-auto mt-14 flex max-w-4xl flex-wrap justify-between">
         {devices.map((device, idx) => {
           const Icon = device.icon;
           return (
             <div
               key={idx}
-              className="items- m-4 flex flex-col items-center gap-y-6 py-2"
+              className="items- m-4 flex flex-col items-center gap-y-6 px-4 py-2 md:px-0"
             >
               <Icon size="3em" className="text-slate-300" />
               <span className="font-sans text-white/90">{device.title}</span>

@@ -6,21 +6,8 @@ import Image from "next/image";
 
 export default function EmailSupport() {
   return (
-    <div className="relative mx-auto grid w-full max-w-7xl grid-cols-12 items-center gap-x-12 py-12 pt-24">
-      {/* Blur component */}
-      <div
-        aria-hidden="true"
-        className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
-      >
-        <div
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#477cf0] to-[#6799e8] opacity-20"
-        />
-      </div>
-      <div className="col-span-6 flex flex-col items-start gap-y-10">
+    <div className="x-padding relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-x-12 gap-y-12 pb-6 pt-24 md:grid-cols-12 md:pb-12">
+      <div className="col-span-1 flex flex-col items-start gap-y-10 md:col-span-6">
         <div className="space-y-4">
           <h2
             className={` ${montserrat.className} text-pretty text-4xl font-bold leading-[1.1] text-gray-800 md:text-[2.7rem]`}
@@ -35,16 +22,22 @@ export default function EmailSupport() {
           </p>
         </div>
 
-        <div className="flex items-center justify-start gap-x-4">
-          <Link href="/contact-us" className={` ${primaryButton} `}>
+        <div className="flex w-full items-center justify-center gap-x-4 md:justify-start">
+          <Link
+            href="/contact-us"
+            className={` ${primaryButton} !w-36 !min-w-36 md:!w-44 md:!min-w-44`}
+          >
             Contact us
           </Link>
-          <Link href="/contact-us" className={` ${grayButton} `}>
+          <Link
+            href="/contact-us"
+            className={` ${grayButton} !w-36 !min-w-36 md:!w-44 md:!min-w-44`}
+          >
             Pricing
           </Link>
         </div>
       </div>
-      <div className="col-span-6">
+      <div className="col-span-1 md:col-span-6">
         {/* Image */}
         <div className="relative aspect-[5/3] w-full">
           <Image

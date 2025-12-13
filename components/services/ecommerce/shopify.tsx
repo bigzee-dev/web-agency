@@ -1,11 +1,12 @@
 import { ArrowUpRight, Edit3, RefreshCw, TicketIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { montserrat } from "@/app/ui/fonts";
+import Image from "next/image";
 
 export default function Shopify() {
   return (
-    <div className="mx-auto w-full max-w-7xl pb-16 pt-12">
-      <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
+    <div className="x-padding w-full pb-16 pt-12">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
         {/* Left Column - Text Content */}
         <div className="space-y-6">
           <div>
@@ -30,8 +31,8 @@ export default function Shopify() {
           </p>
         </div>
 
-        {/* Right Column - Dashboard */}
-        <div className="relative">
+        {/* Right Column - Dashboard Large Screens */}
+        <div className="relative hidden md:block">
           <div className="relative overflow-hidden rounded-3xl bg-neutral-900/20 p-6 md:p-8">
             {/* Floating Icons */}
             <div className="absolute right-40 top-6 z-50 rounded-full bg-slate-700 p-3 shadow-lg">
@@ -226,6 +227,15 @@ export default function Shopify() {
               </CardContent>
             </Card>
           </div>
+        </div>
+        {/* Right Column - Dashboard Small Screens */}
+        <div className="relative md:hidden">
+          <Image
+            src="/img/ecommerce/ecom-graphs.png"
+            alt=""
+            width={766}
+            height={607}
+          />
         </div>
       </div>
     </div>

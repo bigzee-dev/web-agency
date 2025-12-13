@@ -12,22 +12,22 @@ const contactOptions = [
     id: "email",
     icon: FaEnvelope,
     title: "Send us an Email",
-    contact: "support@coodiv.net",
-    href: "mailto:support@coodiv.net",
+    contact: "support@deltaworx.co.bw",
+    href: "#",
   },
   {
     id: "phone",
     icon: FaPhoneAlt,
     title: "Give us a Call + Whatsapp",
-    contact: "+213-661-8388-60",
-    href: "tel:+213-661-8388-60",
+    contact: "+267 77810825",
+    href: "tel:+267 77819825",
   },
   {
-    id: "twitter",
+    id: "messagw",
     icon: FaCommentDots,
     title: "Send us a Message",
     contact: "send message",
-    href: "https://twitter.com/Coodiv",
+    href: "#",
   },
   {
     id: "facebook",
@@ -67,8 +67,8 @@ export default function WorkWithUs() {
           />
         </div>
         <div className="px-6 md:px-16">
-          <div className="grid w-full grid-cols-2">
-            <div className="col-span-1 flex flex-col gap-y-8">
+          <div className="grid-col-1 grid w-full gap-y-8 md:grid-cols-2">
+            <div className="col-span-1 flex flex-col gap-y-6">
               <h2
                 className={` ${montserrat.className} max-w-6xl text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl`}
               >
@@ -90,7 +90,7 @@ export default function WorkWithUs() {
               </div>
 
               {/* Contact Options Grid */}
-              <div className="grid grid-cols-2 gap-6 gap-y-7">
+              <div className="grid grid-cols-2 gap-6 gap-y-6">
                 {contactOptions.map((option) => {
                   const IconComponent = option.icon;
                   return (

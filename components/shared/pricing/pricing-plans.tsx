@@ -17,7 +17,7 @@ export default function PricingPlans({ plan }: { plan: string }) {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <div className="relative isolate mx-auto max-w-7xl px-4 py-16">
+    <div className="relative isolate mx-auto max-w-7xl overflow-hidden px-4 py-16">
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"

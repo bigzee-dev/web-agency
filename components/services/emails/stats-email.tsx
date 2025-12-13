@@ -22,7 +22,7 @@ export default function StatsEmail() {
   return (
     <div className="">
       <div className="mx-auto max-w-7xl py-20">
-        <div className="relative isolate grid grid-cols-12 overflow-hidden bg-gray-900 pt-16 shadow-2xl md:rounded-3xl md:pt-24 lg:pt-0">
+        <div className="relative isolate grid grid-cols-1 gap-y-10 overflow-hidden bg-gray-900 pt-0 shadow-2xl md:grid-cols-12 md:rounded-3xl md:pt-24 lg:pt-0">
           {/* Blur component for background effect */}
           <div
             aria-hidden="true"
@@ -37,7 +37,7 @@ export default function StatsEmail() {
             />
           </div>
           {/* Left Section - Text Content */}
-          <div className="col-span-9 lg:mx-0 lg:py-14">
+          <div className="order-2 col-span-1 pb-6 md:order-1 md:col-span-9 md:pb-0 lg:mx-0 lg:py-14">
             <div className="mx-auto flex max-w-4xl flex-col gap-y-12 px-4">
               <h2
                 className={` ${longSectionHeadings} text-center text-neutral-300 md:text-5xl`}
@@ -57,7 +57,7 @@ export default function StatsEmail() {
                   </span>
                 </div>
               </h2>
-              {/* Stats Grid - Desktop (4 columns) */}
+              {/* Stats Grid - Desktop (3 columns) */}
               <div className="grid gap-x-2 gap-y-2 md:grid-cols-3">
                 {stats.map((stat, index) => (
                   <div
@@ -70,29 +70,21 @@ export default function StatsEmail() {
                       index === 3 && "rounded-lg",
                     )}
                   >
-                    <div className="mb-3 flex items-center gap-x-2.5">
-                      <span className="text-6xl font-bold text-neutral-300">
+                    <div className="mb-3 flex w-full items-center justify-center gap-x-2.5 md:justify-start">
+                      <span className="text-center text-6xl font-bold text-neutral-300 md:text-start">
                         {stat.value}
                       </span>
                     </div>
-                    <div className="text-start font-sans text-sm leading-relaxed text-slate-400 lg:text-sm">
+                    <div className="text-center font-sans text-sm leading-relaxed text-slate-400 md:text-start lg:text-sm">
                       {stat.text}
                     </div>
                   </div>
                 ))}
               </div>
-              {/* <div className="flex items-center justify-center gap-x-6 lg:justify-center">
-                <a
-                  href="#"
-                  className={` ${btnDimensions} bg-white text-secondary shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`}
-                >
-                  Get Started
-                </a>
-              </div> */}
             </div>
           </div>
           {/* Right Section - Image */}
-          <div className="relative col-span-3 md:block md:h-full">
+          <div className="relative order-1 col-span-1 h-[20rem] md:order-2 md:col-span-3 md:block md:h-full">
             <Image
               src="/img/tech-laptop.jpg"
               alt="img"

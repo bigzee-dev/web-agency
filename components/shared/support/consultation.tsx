@@ -24,16 +24,16 @@ export default function Consultation({ text }: { text?: string }) {
               </p>
             </div>
 
-            <div className="flex items-center gap-x-2 md:gap-x-4">
+            <div className="flex w-[100%] items-center justify-center gap-x-2 md:justify-start md:gap-x-4">
               <Link
                 href="/contact-us"
-                className={` ${whiteButton} min-w-36 text-secondary md:min-w-44`}
+                className={` ${whiteButton} !w-36 !min-w-36 text-secondary md:!w-44 md:!min-w-44`}
               >
                 Contact us
               </Link>
               <Link
                 href="/contact-us"
-                className={` ${transparentButton} min-w-36 md:min-w-44`}
+                className={` ${transparentButton} !w-36 !min-w-36 md:!w-44 md:!min-w-44`}
               >
                 Pricing
               </Link>

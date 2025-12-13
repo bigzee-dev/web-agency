@@ -3,6 +3,14 @@ import React, { useEffect, useRef } from "react";
 import styles from "./logopanels.module.css";
 import { montserrat } from "@/app/ui/fonts";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
+
 const logos = [
   { src: "/svg/hosting/cpanel.svg", alt: "cpanel", className: "h-36" },
   { src: "/svg/hosting/wordpress.svg", alt: "wordpress", className: "h-48" },
@@ -35,21 +43,46 @@ export default function LogoPanel() {
     return () => clearInterval(interval);
   }, []);
 
+  const swiperContStyles =
+    "flex items-center justify-center h-40 max-w-lg rounded-xl border  border-gray-400 bg-neutral-200/50 p-9 shadow-md";
+
   return (
     <div
-      className={`x-padding mx-auto max-w-7xl pb-8 pt-20 ${styles.carouselContainer}`}
+      className={`x-padding mx-auto max-w-7xl pb-2 pt-20 ${styles.carouselContainer}`}
     >
       <h3
         className={` ${montserrat.className} mb-2 w-full text-center text-4xl font-bold text-gray-900`}
       >
         Deploy your favourite Apps and CMS
       </h3>
-      <div ref={trackRef} className={styles.carouselTrack}>
+      {/* Carousel Track for desktops*/}
+      <div
+        ref={trackRef}
+        className={` ${styles.carouselTrack} hidden gap-x-6 px-4 md:block md:gap-x-0 md:px-0`}
+      >
         {logos.map((logo, index) => (
           <div key={index} className={styles.carouselItem}>
             <img src={logo.src} alt={logo.alt} className={logo.className} />
           </div>
         ))}
+      </div>
+      {/* Carousel Track for mobile */}
+      <div className="x-auto relative mx-auto mt-8 max-w-lg sm:mt-12 md:hidden">
+        <Swiper
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          loop
+          autoplay={{ delay: 2500 }}
+          modules={[Autoplay, EffectCoverflow]}
+        >
+          {logos.map((logo, index) => (
+            <SwiperSlide key={index}>
+              <div className={swiperContStyles}>
+                <img src={logo.src} alt={logo.alt} className={logo.className} />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <div className="py-16">
-      <p className={` ${smallTextHeadings} `}>Legal</p>
+      <p className={` ${smallTextHeadings} hidden md:block`}>Legal</p>
       <h1 className={`${pageHeadings} w-full pt-3 text-center`}>{heading}</h1>
     </div>
   );

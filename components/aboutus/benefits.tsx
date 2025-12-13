@@ -24,7 +24,7 @@ const missionPoints = [
 
 export default function Benefits() {
   return (
-    <div className="relative isolate w-full pt-6">
+    <div className="x-padding relative isolate w-full pt-6">
       <div
         aria-hidden="true"
         className="hidden sm:absolute sm:-top-28 sm:right-1/3 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
@@ -37,9 +37,9 @@ export default function Benefits() {
           className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2b2774] to-[#4a4790] opacity-20"
         />
       </div>
-      <div className="mx-auto grid h-auto max-w-7xl grid-cols-1 gap-y-8 pb-20 pt-16 md:grid-cols-12">
+      <div className="mx-auto grid h-auto max-w-7xl grid-cols-1 gap-y-12 pb-20 pt-16 md:grid-cols-12">
         {/* Image */}
-        <section className="flex justify-center lg:col-span-6">
+        <section className="order-2 col-span-1 flex justify-center md:order-1 lg:col-span-6">
           <Image
             src="/img/about-us/business-ladies.png"
             alt="image"
@@ -49,7 +49,7 @@ export default function Benefits() {
           />
         </section>
         {/* text content */}
-        <section className="col-span-1 flex flex-col space-y-8 md:px-2 lg:col-span-6">
+        <section className="order-1 col-span-1 flex flex-col space-y-8 md:order-2 md:px-2 lg:col-span-6">
           <h3 className={`${sectionHeadings} `}>Our Mission</h3>
 
           <div>

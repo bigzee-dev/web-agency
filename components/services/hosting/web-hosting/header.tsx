@@ -40,17 +40,17 @@ const offers = [
 
 export default function Header() {
   return (
-    <div className="relative bg-black">
-      <div className="absolute inset-0 grid w-full grid-cols-12 overflow-hidden">
-        <div className="col-span-6"></div>
-        <div className="relative col-span-6 flex items-center justify-center">
+    <div className="x-padding relative bg-black">
+      <div className="absolute inset-0 mx-auto hidden w-full max-w-7xl grid-cols-1 overflow-hidden md:grid md:grid-cols-12">
+        <div className="col-span-1 md:col-span-6"></div>
+        <div className="relative col-span-1 flex items-center justify-center md:col-span-6">
           {" "}
           <Image
             src="/img/hosting/cpu-tech.jpg"
             alt="Logo"
             width={2534}
             height={1774}
-            className="mb-16 h-auto w-[60%]"
+            className="mb-16 h-auto w-[80%]"
           />
           <div className="absolute bottom-14 left-0 flex w-full items-center justify-center">
             <img
@@ -62,8 +62,8 @@ export default function Header() {
         </div>
       </div>
       <div className="inset-0 w-full">
-        <div className="mx-auto grid max-w-7xl grid-cols-12 py-16">
-          <div className="col-span-6">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 pb-8 pt-16 md:grid-cols-12 md:py-16">
+          <div className="col-span-1 md:col-span-6">
             {/* Shared hosting badge */}
             <div className="inline-block">
               <span className="font-semibold tracking-widest text-neutral-300">
@@ -117,7 +117,24 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <div className="col-span-6"></div>
+          <div className="col-span-1 md:col-span-6"></div>
+        </div>
+      </div>
+      <div className="relative col-span-1 flex items-center justify-center md:hidden">
+        {" "}
+        <Image
+          src="/img/hosting/cpu-tech.jpg"
+          alt="Logo"
+          width={2534}
+          height={1774}
+          className="mb-16 h-auto w-[90%]"
+        />
+        <div className="absolute bottom-0 left-0 flex w-full items-center justify-center">
+          <img
+            src="/svg/hosting/cpanel.svg"
+            alt="Cpanel Logo"
+            className="h-28"
+          />
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 z-10 h-full bg-gradient-to-tr from-transparent via-blue-400/15 to-blue-400/30"></div>

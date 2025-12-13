@@ -38,7 +38,7 @@ export default function SideNav() {
                 },
               )}
             >
-              <p className="hidden md:block">{link.name}</p>
+              <p className="">{link.name}</p>
             </Link>
           );
         })}

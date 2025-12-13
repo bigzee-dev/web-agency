@@ -34,8 +34,8 @@ export default function ResponsiveNav() {
   useResponsiveNav(); // <-- This runs the nav javascript
 
   return (
-    <nav className="navbar border-b border-gray-300/70">
-      <div className="x-padding navbar-container">
+    <nav className="navbar border-b border-gray-300/70 px-0 md:px-[1rem]">
+      <div className="navbar-container px-[1rem] md:px-0">
         <Link className="logo-container text-neutral-800 lg:mr-6" href="/">
           {" "}
           {/* Updated href to be relative */}
@@ -266,17 +266,15 @@ export default function ResponsiveNav() {
               <div
                 className={` ${montserrat.className} nav-link nav-link-with-dropdown`}
               >
-                Support{" "}
+                More{" "}
                 <span className="chevron">
                   <NavChevron />
                 </span>
               </div>
               <div className="dropdown-menu">
                 <a
-                  href="https://domains.bigzee.app/clientarea.php"
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/login`}
                   className="dropdown-item"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <div className="dropdown-item-link">
                     <span>
@@ -285,7 +283,10 @@ export default function ResponsiveNav() {
                     Login
                   </div>
                 </a>
-                <Link href="/contact-us" className="dropdown-item">
+                <Link
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/register.php`}
+                  className="dropdown-item"
+                >
                   <div className="dropdown-item-link">
                     <span>
                       <RegisterIcon size="size-5" />
@@ -294,10 +295,8 @@ export default function ResponsiveNav() {
                   </div>
                 </Link>
                 <a
-                  href="https://domains.bigzee.app/clientarea.php"
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/clientarea.php`}
                   className="dropdown-item"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <div className="dropdown-item-link">
                     <span>
@@ -306,7 +305,10 @@ export default function ResponsiveNav() {
                     Dashboard
                   </div>
                 </a>
-                <Link href="/support/open-ticket" className="dropdown-item">
+                <Link
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/submitticket.php`}
+                  className="dropdown-item"
+                >
                   <div className="dropdown-item-link">
                     <span>
                       <OpenTicketIcon size="size-5" />
@@ -314,7 +316,10 @@ export default function ResponsiveNav() {
                     Open Ticket
                   </div>
                 </Link>
-                <Link href="/support/tickets" className="dropdown-item">
+                <Link
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/supporttickets.php`}
+                  className="dropdown-item"
+                >
                   <div className="dropdown-item-link">
                     <span>
                       <TicketsIcon size="size-5" />
@@ -322,11 +327,9 @@ export default function ResponsiveNav() {
                     Tickets
                   </div>
                 </Link>
-                <a
-                  href="https://domains.bigzee.app/clientarea.php"
+                <Link
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/knowledgebase`}
                   className="dropdown-item"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <div className="dropdown-item-link">
                     <span>
@@ -334,7 +337,7 @@ export default function ResponsiveNav() {
                     </span>
                     Knowledgebase
                   </div>
-                </a>
+                </Link>
               </div>
             </li>
             <li className="nav-item block lg:hidden">

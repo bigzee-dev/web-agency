@@ -16,7 +16,7 @@ export default function Page() {
       <HostingFeatures />
       <LogoPanel />
       <StartToday />
-      <SupportOne />
+      <SupportOne text="Web hosting" />
       <FaqsHosting />
     </div>
   );

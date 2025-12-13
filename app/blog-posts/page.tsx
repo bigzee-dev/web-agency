@@ -18,7 +18,7 @@ export default async function BlogPosts() {
   const blogs = await getAllBlogPosts();
   console.log(blogs);
   return (
-    <div>
+    <div className="x-padding mx-auto max-w-7xl py-12">
       <h1 className="mb-4 text-3xl font-bold">Blog Posts</h1>
       <ul className="list-disc pl-5">
         {blogs.map((blog: BlogPost) => (

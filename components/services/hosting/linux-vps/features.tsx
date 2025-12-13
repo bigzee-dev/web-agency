@@ -30,8 +30,8 @@ const features = [
 export default function VpsFeatures() {
   return (
     <div className="pb-12">
-      <div className="mx-auto grid h-auto max-w-6xl grid-cols-1 gap-x-14 gap-y-6 border border-gray-400 bg-[#faf9f5] p-6 md:h-[27rem] md:grid-cols-12">
-        <div className="relative order-2 col-span-1 h-[20rem] md:order-1 md:col-span-6">
+      <div className="mx-auto grid h-auto max-w-6xl grid-cols-1 items-center gap-x-14 gap-y-6 border border-gray-400 bg-[#faf9f5] p-6 md:h-[27rem] md:grid-cols-12">
+        <div className="relative order-2 col-span-1 h-[20rem] md:order-1 md:col-span-6 md:h-full">
           <Image
             src="/img/linux-vps/welcome-banner.png"
             alt="Hosting Stack"

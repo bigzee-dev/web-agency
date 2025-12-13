@@ -51,7 +51,7 @@ const services = [
 
 export default function ServicesWeOffer() {
   return (
-    <section className="x-padding mx-auto max-w-6xl space-y-12 py-12 pb-20">
+    <section className="x-padding mx-auto max-w-6xl space-y-12 py-12 md:pb-20">
       <h2 className={`${sectionHeadings} text-center`}>Services We Offer</h2>
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">

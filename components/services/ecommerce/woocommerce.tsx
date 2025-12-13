@@ -2,7 +2,7 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function WooCommerce() {
   return (
-    <div className="relative isolate flex items-center justify-center overflow-hidden bg-gray-800 py-20">
+    <div className="x-padding relative isolate flex items-center justify-center overflow-hidden bg-gray-800 py-20">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -16,7 +16,7 @@ export default function WooCommerce() {
           className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#2563eb] to-[#89a6fc] opacity-25"
         />
       </div>
-      <div className="flex w-full max-w-7xl flex-col items-center gap-8 lg:flex-row lg:gap-20">
+      <div className="flex w-full max-w-7xl flex-col-reverse items-center gap-8 lg:flex-row lg:gap-20">
         {/* Left side - Device mockups */}
         <div className="relative flex w-full justify-center lg:w-1/2">
           {/* Desktop mockup */}
@@ -127,7 +127,7 @@ export default function WooCommerce() {
           </div>
 
           {/* Mobile mockup */}
-          <div className="z-20 w-64 overflow-hidden rounded-3xl bg-white shadow-2xl md:absolute md:bottom-0 md:left-0 md:z-0 md:w-48 lg:w-64">
+          <div className="z-20 w-full max-w-sm overflow-hidden rounded-3xl bg-white shadow-2xl md:absolute md:bottom-0 md:left-0 md:z-0 md:hidden md:w-48 md:max-w-none lg:w-64">
             <div className="flex h-6 items-center justify-center bg-gray-100">
               <div className="h-1 w-20 rounded-full bg-gray-300"></div>
             </div>
@@ -192,9 +192,6 @@ export default function WooCommerce() {
                 <div className="mb-1 flex justify-between">
                   <div className="text-xs">Shipping</div>
                   <div className="text-xs">$18.00</div>
-                </div>
-                <div className="mb-1 text-xs text-gray-500">
-                  via USPS Priority
                 </div>
 
                 <div className="mb-1 flex justify-between">

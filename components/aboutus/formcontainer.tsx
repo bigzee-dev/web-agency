@@ -15,7 +15,7 @@ export default function AboutUsFormContainer() {
       />
 
       <div className="overflow-hidden rounded-lg">
-        <div className="px-3 sm:p-6">
+        <div className="p-6 px-3">
           <ContactUsForm />
         </div>
       </div>

@@ -7,10 +7,10 @@ import { Badge } from "@/components/ui/badge";
 export default function Header() {
   return (
     <div className="relative w-full bg-rose-700/60">
-      <div className="inset-0 w-full bg-gradient-to-r from-gray-900 via-primary to-slate-600">
+      <div className="x-padding inset-0 w-full bg-gradient-to-r from-gray-900 via-primary to-slate-600">
         <div className="relative isolate mx-auto max-w-7xl overflow-hidden">
-          <div className="grid grid-cols-12 gap-16">
-            <div className="col-span-6 py-16">
+          <div className="grid grid-cols-1 gap-x-16 gap-y-10 md:grid-cols-12">
+            <div className="col-span-1 pt-16 md:col-span-6 md:py-16">
               {/* Email badge */}
               <div className="inline-block">
                 <span className="font-semibold tracking-widest text-neutral-300">
@@ -38,7 +38,7 @@ export default function Header() {
                 </p>
               </div>
 
-              <div className="mt-10 flex items-end gap-x-12">
+              <div className="mt-5 flex items-end gap-x-12 md:mt-10">
                 <Link href="" className={` ${greenButton} `}>
                   Compare Plans
                 </Link>
@@ -55,9 +55,9 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <div className="relative col-span-6 flex items-center py-8">
+            <div className="relative col-span-1 flex items-center pb-12 pt-0 md:col-span-6 md:py-8">
               {" "}
-              <div className="relative rounded-3xl bg-neutral-400/40 px-12 py-6">
+              <div className="relative rounded-3xl bg-neutral-400/40 px-4 py-3 md:px-12 md:py-6">
                 <Image
                   src="/img/emails/emails-filter.png"
                   alt="Logo"
@@ -67,10 +67,10 @@ export default function Header() {
                 />
                 <Badge
                   variant="outline"
-                  className="absolute right-4 top-4 border-white/20 bg-gray-800/20 px-4 py-2 text-white"
+                  className="absolute right-2 top-2 border-white/20 bg-gray-800/20 px-3 py-1.5 text-white md:right-4 md:top-4 md:px-4 md:py-2"
                 >
                   <div className="flex items-center gap-2">
-                    <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-purple-400"></div>
+                    <div className="h-2 w-2 animate-pulse rounded-full bg-purple-400 md:h-2.5 md:w-2.5"></div>
                     <span>1 New msg</span>
                     <span className="font-semibold text-green-400">INBOX</span>
                   </div>

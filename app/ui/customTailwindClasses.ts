@@ -10,7 +10,7 @@ export const smallTextHeadings = "text-center text-base/7 font-semibold";
 export const sectionSubHeadings = "text-lg leading-relaxed text-gray-600";
 
 export const btnDimensions =
-  "text-center font-sans py-2.5 md:py-[0.72rem] px-3 w-max min-w-44 text-base font-medium md:text-[1.01rem]  rounded-[0.63rem] hover:pointer";
+  "text-center font-sans py-2.5 md:py-[0.72rem] px-3 min-w-48 md:w-max md:min-w-44 text-base font-medium md:text-[1.01rem]  rounded-[0.63rem] hover:pointer";
 
 export const primaryButton = ` ${btnDimensions} text-white bg-primary`;
 
