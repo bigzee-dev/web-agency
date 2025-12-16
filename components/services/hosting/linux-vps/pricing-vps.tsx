@@ -64,11 +64,11 @@ const pricingData = [
 ];
 
 const infoContainerStyles =
-  "mx-auto flex w-[9rem] items-center justify-center text-xl text-gray-600";
-const propertyStyles = "flex flex-1 items-center justify-start";
+  "mx-auto flex w-[10rem] items-center justify-center text-xl text-gray-600";
+const propertyStyles = "flex flex-1 items-center justify-start pl-2";
 
 const planValueStyles =
-  "pl-3 flex flex-1 items-center justify-start text-base text-gray-800";
+  "pl-6 flex flex-1 items-center justify-start text-base text-gray-800";
 const iconStyles = "mr-2 inline-block text-primary";
 const spanStyles = "text-xs font-normal text-gray-500";
 
@@ -147,7 +147,7 @@ export default function PricingVpsTable() {
           {pricingData.map((plan, index) => (
             <Card
               key={index}
-              className={`relative min-w-[18rem] overflow-hidden rounded-xl ring-1 ring-gray-300 ${plan.popular ? "ring-primary" : ""}`}
+              className={`relative min-w-[18rem] overflow-hidden rounded-2xl ring-1 ring-gray-300 ${plan.popular ? "ring-primary" : ""}`}
             >
               {/* Popular Badge for Mobile */}
               {plan.popular && (
@@ -156,7 +156,7 @@ export default function PricingVpsTable() {
                 </div>
               )}
 
-              <CardContent className="space-y-4 p-6">
+              <CardContent className="space-y-5 p-6">
                 <div className="space-y-3 text-center">
                   <div
                     className={` ${montserrat.className} text-xl font-bold text-secondary`}
@@ -168,7 +168,7 @@ export default function PricingVpsTable() {
                       <FiCpu className={iconStyles} />
                       <span className={spanStyles}>vCpu</span>
                     </div>
-                    <div className={planValueStyles}>{plan.vCores}</div>
+                    <div className={planValueStyles}>{plan.vCores} cores</div>
                   </div>
                   <div className={infoContainerStyles}>
                     <div className={propertyStyles}>

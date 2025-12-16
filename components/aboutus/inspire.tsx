@@ -12,10 +12,10 @@ const points = [
 
 export default function Inspire() {
   return (
-    <section className="x-padding w-full py-12 md:py-16 lg:py-20 lg:pb-20">
+    <section className="x-padding w-full pb-10 pt-6 md:py-20 md:pb-20">
       <div className="mx-auto w-full max-w-7xl">
-        <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-x-14">
-          <div className="flex flex-col gap-y-7">
+        <div className="grid items-center gap-6 gap-y-12 lg:grid-cols-2 lg:gap-x-14">
+          <div className="order-2 flex flex-col gap-y-7 md:order-1">
             <h1
               className={` ${montserrat.className} text-3xl font-semibold leading-tight text-secondary md:text-4xl`}
             >
@@ -30,7 +30,7 @@ export default function Inspire() {
               ))}
             </ul>
           </div>
-          <div className="relative h-[400px] overflow-hidden rounded-xl md:h-[450px] lg:h-[450px]">
+          <div className="relative order-1 h-[400px] overflow-hidden rounded-xl md:order-2 md:h-[450px] lg:h-[450px]">
             <Image
               src="/img/about-us/coding.jpg"
               alt="Team of entrepreneurs working together in a modern office space"

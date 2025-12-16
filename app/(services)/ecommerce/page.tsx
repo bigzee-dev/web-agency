@@ -19,7 +19,7 @@ export default function Ecommerce() {
       <PaymentGateways />
       <StartToday />
       <Consultation text={ecommerceText} />
-      <Faqs />
+      {/* <Faqs /> */}
     </div>
   );
 }
