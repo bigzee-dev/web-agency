@@ -17,7 +17,7 @@ import {
   ClipboardCopyIcon,
   DocumentTextIcon,
   InfoIcon,
-  BookIcon,
+  // BookIcon,
   ListIcon,
   LoginIcon,
   RegisterIcon,
