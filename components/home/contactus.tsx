@@ -3,11 +3,7 @@ import { TiMessages } from "react-icons/ti";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
-import {
-  grayButton,
-  lightBgButton,
-  primaryButton,
-} from "@/app/ui/customTailwindClasses";
+import { lightBgButton, primaryButton } from "@/app/ui/customTailwindClasses";
 
 export default function ContactUs() {
   return (
