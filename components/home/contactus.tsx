@@ -3,7 +3,11 @@ import { TiMessages } from "react-icons/ti";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
-import { grayButton, primaryButton } from "@/app/ui/customTailwindClasses";
+import {
+  grayButton,
+  lightBgButton,
+  primaryButton,
+} from "@/app/ui/customTailwindClasses";
 
 export default function ContactUs() {
   return (
@@ -27,7 +31,7 @@ export default function ContactUs() {
             <span className="text-md font-semibold">Contact us</span>
           </Link>
           <div
-            className={` ${grayButton} inline-flex cursor-pointer items-center justify-center gap-x-2`}
+            className={` ${lightBgButton} inline-flex cursor-pointer items-center justify-center gap-x-2`}
           >
             <FaWhatsapp size="1.35em" />
             <span className="text-md font-semibold">Whatsapp</span>

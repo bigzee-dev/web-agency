@@ -84,7 +84,7 @@ export default function Component() {
 
           {/* CTA Button */}
           <Link
-            href=""
+            href="/ecommerce"
             className={` ${montserrat.className} mx-auto mt-6 flex w-max items-center text-center text-xl font-semibold text-blue-400 md:text-2xl lg:ml-0 lg:mr-auto lg:mt-10 lg:text-start`}
           >
             Start Selling Online

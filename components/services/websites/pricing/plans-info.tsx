@@ -1,5 +1,5 @@
 import { FaCheck } from "react-icons/fa6";
-import { FaPlusMinus } from "react-icons/fa6";
+import { TbTilde } from "react-icons/tb";
 import { IoPricetagsOutline } from "react-icons/io5";
 import { FaCircleQuestion } from "react-icons/fa6";
 import { CgNotes } from "react-icons/cg";
@@ -39,38 +39,42 @@ export default function PlansInfo({ plans }: { plans: Plan[] }) {
                 <h2 className={plan.titleClass}>{plan.title}</h2>
               </div>
 
-              <div className="mt-8 space-y-4 text-md text-gray-500">
+              <div className="mt-8 space-y-3 text-md text-gray-500">
                 <div>
                   <span className="mb-1 text-xs font-medium text-gray-500">
                     Payment Type:
                   </span>
-                  <p className="text-gray-900">{plan.paymentType}</p>
+                  <p className="font-medium text-gray-900">
+                    {plan.paymentType}
+                  </p>
                 </div>
                 <div>
                   <div className="mb-1 text-xs font-medium text-gray-500">
                     <IoPricetagsOutline size="1.8em" />
                   </div>
-                  <div className="flex items-center gap-2">
-                    <FaPlusMinus size={12} className="text-gray-700" />
+                  <div className="flex items-center gap-1">
+                    <TbTilde size={20} className="text-primary" />
                     <span className="text-2xl font-medium text-primary">
                       {plan.price}
                     </span>
-                    <span className="align-middlex ml-2 text-gray-800">
+                    <span className="align-middlex ml-6 text-gray-800">
                       <FaCircleQuestion size="1.3em" />
                     </span>
                   </div>
                 </div>
                 <div>
-                  <div className="mb-1 text-gray-500">
+                  <div className="mb-1">
                     <CgNotes size="1.4em" />
                   </div>
-                  <span className="text-gray-900">{plan.pages}</span>
+                  <span className="font-medium text-gray-900">
+                    {plan.pages}
+                  </span>
                 </div>
                 <div>
-                  <div className="mb-1 text-gray-500">
-                    <Clock8 size="1.4em" />
+                  <div className="mb-1">
+                    <Clock8 size="1.4em" className="text-gray-500" />
                   </div>
-                  <span className="text-gray-900">{plan.time}</span>
+                  <span className="font-medium text-gray-900">{plan.time}</span>
                 </div>
               </div>
 

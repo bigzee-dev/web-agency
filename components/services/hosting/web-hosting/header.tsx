@@ -20,8 +20,15 @@ const offers = [
   },
   {
     icon: <FaServer {...iconProps} />,
-    title: "Powerfull Servers",
+    title: "Servers",
     description: "High-performance NVMe servers",
+    color: "text-yellow-400",
+  },
+
+  {
+    icon: <BsLightningChargeFill {...iconProps} />,
+    title: "Cache",
+    description: "Fast and Responsive sites",
     color: "text-yellow-400",
   },
   {
@@ -29,12 +36,6 @@ const offers = [
     title: "Guarantee",
     description: "99.9% uptime every month",
     color: "text-thatgreen",
-  },
-  {
-    icon: <BsLightningChargeFill {...iconProps} />,
-    title: "Lightspeed Cache",
-    description: "Fast and Responsive sites",
-    color: "text-yellow-400",
   },
 ];
 
@@ -78,7 +79,7 @@ export default function Header() {
             </h1>
 
             <div className="mt-9 max-w-xl">
-              <div className="mt-4 grid grid-cols-2 gap-y-5">
+              <div className="mt-4 grid grid-cols-2 gap-x-2 gap-y-5">
                 {offers.map((offer) => (
                   <div className="flex flex-col gap-2" key={offer.title}>
                     <h6 className="flex items-center gap-2 font-medium tracking-wide text-blue-300">
@@ -97,7 +98,7 @@ export default function Header() {
                 ))}
               </div>
             </div>
-            <div className="mt-10 flex items-end gap-x-12">
+            <div className="mt-10 flex items-end gap-x-6 md:gap-x-12">
               <Link
                 href=""
                 className={` ${whiteButton} inline-flex justify-center bg-blue-300 text-black`}

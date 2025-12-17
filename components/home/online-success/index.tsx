@@ -11,7 +11,7 @@ import Websites from "./websites";
 import WebApps from "./webapps";
 import Email from "./email";
 import Ecommerce from "./ecommerce";
-import Hosting from "./hosting";
+import Cloud from "./cloud";
 import Domains from "./domains";
 
 export default function OnlineSuccess() {
@@ -39,7 +39,7 @@ export default function OnlineSuccess() {
         >
           <TabsList className="mx-auto w-full max-w-max rounded-lg border border-gray-300">
             <TabsTrigger value="websites">Websites</TabsTrigger>
-            <TabsTrigger value="hosting">Cloud</TabsTrigger>
+            <TabsTrigger value="cloud">Cloud</TabsTrigger>
             <TabsTrigger value="webapps">Web Apps</TabsTrigger>
             <TabsTrigger value="email">Email</TabsTrigger>
             <TabsTrigger value="domains">Domains</TabsTrigger>
@@ -48,8 +48,8 @@ export default function OnlineSuccess() {
           <TabsContent value="websites">
             <Websites />
           </TabsContent>
-          <TabsContent value="hosting">
-            <Hosting />
+          <TabsContent value="cloud">
+            <Cloud />
           </TabsContent>
           <TabsContent value="webapps">
             <WebApps />
@@ -65,13 +65,15 @@ export default function OnlineSuccess() {
           </TabsContent>
         </Tabs>
       </div>
+      {/* Tabs for larger screens */}
+      {/* Hidden on small screens, visible on medium and larger screens */}
       <div className="block w-full space-y-4 md:hidden">
         <Websites />
+        <Cloud />
         <WebApps />
         <Ecommerce />
         <Email />
-        {/*<Hosting />
-        <Domains />*/}
+        <Domains />
       </div>
     </div>
   );

@@ -29,31 +29,31 @@ export default function Home() {
       description:
         "Whether you need a Website or a full-featured Web Application, our team has the skills and experience to build it from the ground up—tailored exactly to your needs.",
       links: [
-        { text: "Websites", href: "#" },
-        { text: "Web Apps", href: "#" },
-        { text: "Ecommerce", href: "#" },
+        { text: "Websites", href: "/websites" },
+        { text: "Web Apps", href: "/#" },
+        { text: "Ecommerce", href: "/ecommerce" },
       ],
     },
     {
       icon: Server,
       iconColor: "text-purple-400",
       backgroundColor: "bg-purple-400/10",
-      title: "Robust Backend & Security",
+      title: "Robust Infrastructure",
       description:
-        "Once deployed, your application is protected using industry best practices. Our robust backend keeps it reliable, secure, and always available to users.",
+        "We provide a scalable digital infrastructure to keep your services accessible and high-performing all the time.",
       links: [
-        { text: "Managed Hosting", href: "#" },
-        { text: "Server Management", href: "#" },
+        { text: "Virtual Servers", href: "/linux-vps" },
+        { text: "Cloud Storage", href: "#" },
       ],
     },
     {
       icon: Users,
       iconColor: "text-cyan-400",
       backgroundColor: "bg-cyan-400/10",
-      title: "Marketing Integration",
+      title: "Effective Communications",
       description:
-        "We know effective marketing is key to business success. That's why every project we deliver includes built-in social media integration. We also offer reliable email solutions to keep you connected with clients.",
-      links: [{ text: "Emails", href: "#" }],
+        "We know effective communication is key to business success. That's why every project we deliver includes built-in social media integration. We also offer reliable email solutions to keep you connected with clients.",
+      links: [{ text: "Emails", href: "/emails" }],
     },
   ];
 

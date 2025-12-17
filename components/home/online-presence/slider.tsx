@@ -7,19 +7,19 @@ interface DomainTLD {
 }
 
 const availableTLDs: DomainTLD[] = [
-  { extension: "com", price: 18.95 },
-  { extension: "co.zw", price: 5.0 },
-  { extension: "co.za", price: 6.88 },
-  { extension: "africa", price: 8.95 },
-  { extension: "co.bw", price: 18.95 },
-  { extension: "app", price: 5.0 },
-  { extension: "online", price: 6.88 },
-  { extension: "net", price: 8.95 },
+  { extension: "com", price: 247 },
+  { extension: "org", price: 271 },
+  { extension: "app", price: 337 },
+  { extension: "online", price: 616 },
+  { extension: "io", price: 962 },
+  { extension: "tech", price: 1132 },
+  { extension: "store", price: 962 },
+  { extension: "net", price: 275 },
 ];
 
 export default function TldSlider() {
   return (
-    <section className="mt-5 overflow-hidden md:mt-5">
+    <section className="mt-1 overflow-hidden md:mt-5">
       <div className="group relative w-full">
         <div className="">
           <div className="relative pt-0">

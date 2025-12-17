@@ -244,14 +244,14 @@ export default function ResponsiveNav() {
                     About Us
                   </div>
                 </Link>
-                <Link href="/blog-posts" className="dropdown-item">
+                {/* <Link href="/blog-posts" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
                       <BookIcon size="size-5" />
                     </span>
                     Blog
                   </div>
-                </Link>
+                </Link> */}
                 <Link href="/legal/terms-of-service" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>

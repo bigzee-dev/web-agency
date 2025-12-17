@@ -1,11 +1,11 @@
 import Showcase from "@/components/home/showcase";
 import OnlineSuccess from "@/components/home/online-success";
 import WhyChooseUs from "@/components/home/whychooseus";
-import Visibility from "@/components/home/online-presence/visibility";
+import OnlinePresence from "@/components/home/online-presence";
 import Stats from "@/components/home/stats";
-import { ClientTestimonialCarousel } from "@/components/aboutus/client-testimonial";
+import MonthlySpecials from "@/components/home/monthlyspecials";
 import ContactUs from "@/components/home/contactus";
-import BlogLinks from "@/components/home/bloglinks";
+// import BlogLinks from "@/components/home/bloglinks";
 
 export default function Home() {
   return (
@@ -13,10 +13,10 @@ export default function Home() {
       <Showcase />
       <OnlineSuccess />
       <WhyChooseUs />
-      <Visibility />
+      <OnlinePresence />
       <Stats />
-      <ClientTestimonialCarousel />
-      <BlogLinks />
+      <MonthlySpecials />
+      {/* <BlogLinks /> */}
       <ContactUs />
     </>
   );

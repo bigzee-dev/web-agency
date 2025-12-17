@@ -30,10 +30,10 @@ export default function DomainSearch() {
   };
 
   return (
-    <div className="flex h-full w-full flex-col gap-y-7 px-8 py-9 sm:px-4 md:px-16">
+    <div className="flex h-[15rem] w-full flex-col px-8 py-9 sm:px-4 md:h-full md:gap-y-7 md:px-16">
       <div className="flex items-center gap-x-3">
         <div
-          className={`inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-primary via-cyan-700 to-secondary p-3`}
+          className={`mb-7 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-primary via-cyan-700 to-secondary p-3 md:mb-0`}
         >
           <AtSign className="h-6 min-h-6 text-neutral-300" />
         </div>
@@ -62,7 +62,7 @@ export default function DomainSearch() {
           Search
         </Button>
       </form>
-      <div className="mt-auto">
+      <div className="mt-6 md:mt-auto">
         <Slider />
       </div>
     </div>

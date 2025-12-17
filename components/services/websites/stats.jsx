@@ -77,7 +77,7 @@ export default function Stats() {
           </div>
           <div className="relative order-1 col-span-1 h-96 md:order-2 md:col-span-4 md:h-full">
             <Image
-              src="/img/emails/214.jpg"
+              src="/img/websites/canvas.jpg"
               alt="img"
               fill
               className="object-cover"
