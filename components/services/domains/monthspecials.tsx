@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 interface PricingCardProps {
