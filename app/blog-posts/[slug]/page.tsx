@@ -3,7 +3,7 @@ import { type BlocksContent } from "@strapi/blocks-react-renderer";
 import BlockRendererClient from "@/app/blockrenderclient";
 import Image from "next/image";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 interface PostTypes {
   title: string;
