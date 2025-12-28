@@ -182,7 +182,7 @@ export default function ContactUsForm() {
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectLabel>Fruits</SelectLabel>
+                  <SelectLabel>Range</SelectLabel>
                   <SelectItem value="Under p5,000">Under P5,000</SelectItem>
                   <SelectItem value="P5,000 - P10,000">
                     P5,000 - P10,000

@@ -53,14 +53,14 @@ export default function Footer() {
           </p>
           <div className="flex items-center font-sans text-sm">
             <Link
-              href="/privacy-policy"
+              href="/legal/privacy-policy"
               className="text-neutral-400 hover:text-neutral-300"
             >
               Privacy Policy
             </Link>
             <span className="mx-1 md:mx-2">|</span>
             <Link
-              href="/acceptable-use"
+              href="/legal/acceptable-use-policy"
               className="text-neutral-400 hover:text-neutral-300"
             >
               Acceptable Use

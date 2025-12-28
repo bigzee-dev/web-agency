@@ -89,8 +89,8 @@ export const footerLinks = [
       },
       {
         title: "Support Ticket",
-        href: "/acceptable-use-policy",
-        type: `${process.env.WHMCS_URL}/submitticket.php`,
+        href: `${process.env.WHMCS_URL}/submitticket.php`,
+        type: "internal",
       },
     ],
   },

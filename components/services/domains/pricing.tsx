@@ -1,3 +1,6 @@
+"use client";
+
+import * as React from "react";
 import { Box, ChevronsRight, Diamond, Users } from "lucide-react";
 import {
   Table,
@@ -26,60 +29,62 @@ export default function DomainPricingTable() {
       renewal: "P349.00",
     },
     {
-      extension: ".apartments",
-      registration: { original: "$49.95", discounted: null },
-      transfer: "$47.95",
-      renewal: "$49.95",
+      extension: ".org",
+      registration: { original: "P271.00", discounted: null },
+      transfer: "P271.00",
+      renewal: "P334.00",
     },
     {
-      extension: ".art",
-      registration: { original: "$15.95", discounted: "$9.95" },
-      transfer: "$15.95",
-      renewal: "$15.95",
+      extension: ".online",
+      registration: { original: "P616.00", discounted: null },
+      transfer: "P616.00",
+      renewal: "P616.00",
     },
     {
-      extension: ".biz",
-      registration: { original: "$20.95", discounted: "$10.95" },
-      transfer: "$20.95",
-      renewal: "$20.95",
+      extension: ".co",
+      registration: { original: "P566.00", discounted: null },
+      transfer: "P566.00",
+      renewal: "P685.00",
     },
     {
-      extension: ".cc",
-      registration: { original: "£36.99", discounted: "£33.29" },
-      transfer: "£36.99",
-      renewal: "£36.99",
+      extension: ".app",
+      registration: { original: "P375.00", discounted: "P337.00" },
+      transfer: "P337.00",
+      renewal: "P412.00",
     },
     {
-      extension: ".ch",
-      registration: { original: "£22.99", discounted: "£20.69" },
-      transfer: "£22.99",
-      renewal: "£22.99",
+      extension: ".xyz",
+      registration: { original: "P282.00", discounted: null },
+      transfer: "P282.00",
+      renewal: "P350.00",
     },
     {
-      extension: ".art",
-      registration: { original: "$15.95", discounted: "$9.95" },
-      transfer: "$15.95",
-      renewal: "$15.95",
+      extension: ".store",
+      registration: { original: "P962.00", discounted: null },
+      transfer: "P962.00",
+      renewal: "P962.00",
     },
     {
-      extension: ".biz",
-      registration: { original: "$20.95", discounted: "$10.95" },
-      transfer: "$20.95",
-      renewal: "$20.95",
+      extension: ".tech",
+      registration: { original: "P1132.00", discounted: null },
+      transfer: "P1132.00",
+      renewal: "P1132.00",
     },
     {
-      extension: ".cc",
-      registration: { original: "£36.99", discounted: "£33.29" },
-      transfer: "£36.99",
-      renewal: "£36.99",
+      extension: ".io",
+      registration: { original: "P962.00", discounted: null },
+      transfer: "P962.00",
+      renewal: "P1145.00",
     },
     {
-      extension: ".ch",
-      registration: { original: "£22.99", discounted: "£20.69" },
-      transfer: "£22.99",
-      renewal: "£22.99",
+      extension: ".co.za",
+      registration: { original: "P97.00", discounted: null },
+      transfer: "P97.00",
+      renewal: "P116.00",
     },
   ];
+
+  const [domain, setDomain] = React.useState("");
 
   return (
     <div className="x-padding mx-auto w-full max-w-5xl pb-12 pt-4">
@@ -95,18 +100,18 @@ export default function DomainPricingTable() {
           {
             icon: <Users className="h-6 w-6" />,
             title: "Registration",
-            description: "For new registration",
+            description: "Register Domain",
           },
           {
             icon: <ChevronsRight className="h-6 w-6" />,
             title: "Transfer",
-            description: "To tranfer from other registrar",
+            description: "Transfer from other Registrar",
             hideOnMd: true,
           },
           {
             icon: <Diamond className="h-6 w-6" />,
             title: "Renewal",
-            description: "To renew your Domain",
+            description: "Renew your Domain",
             hideOnMd: true,
           },
         ].map((item, index) => (
@@ -129,16 +134,16 @@ export default function DomainPricingTable() {
         <Table>
           <TableHeader className="bg-gray-50">
             <TableRow className="hidden md:table-row">
-              <TableHead className="w-1/4 text-center text-gray-600">
+              <TableHead className="w-1/4 text-center text-secondary">
                 Domain
               </TableHead>
-              <TableHead className="w-1/4 text-center text-gray-600">
+              <TableHead className="w-1/4 text-center text-secondary">
                 Registration
               </TableHead>
-              <TableHead className="w-1/4 text-center text-gray-600">
+              <TableHead className="w-1/4 text-center text-secondary">
                 Transfer
               </TableHead>
-              <TableHead className="w-1/4 text-center text-gray-600">
+              <TableHead className="w-1/4 text-center text-secondary">
                 Renewal
               </TableHead>
             </TableRow>
@@ -178,9 +183,27 @@ export default function DomainPricingTable() {
         </Table>
       </div>
       {/* Search Bar */}
-      <div className="mx-auto mt-16 flex w-full max-w-xl items-center gap-2 rounded-xl border-2 border-gray-800 bg-neutral-100 p-3">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (domain.trim() === "") {
+            alert("Please enter a domain name.");
+            return;
+          }
+          const fullDomain = `${domain}`;
+          const url = `${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register&query=${encodeURIComponent(
+            fullDomain,
+          )}`;
+          setDomain("");
+          window.open(url);
+        }}
+        className="mx-auto mt-16 flex w-full max-w-xl items-center gap-2 rounded-xl border-2 border-gray-800 bg-neutral-100 p-3"
+      >
         <Input
+          id="pricing-domain"
           type="text"
+          value={domain}
+          onChange={(e) => setDomain(e.target.value)}
           placeholder="Search for domain"
           className="border border-gray-400 bg-background placeholder:text-sm placeholder:text-gray-500"
         />
@@ -191,7 +214,7 @@ export default function DomainPricingTable() {
         >
           Search
         </Button>
-      </div>
+      </form>
     </div>
   );
 }

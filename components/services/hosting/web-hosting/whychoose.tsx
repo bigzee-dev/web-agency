@@ -2,50 +2,46 @@ import {
   longSectionHeadings,
   sectionSubHeadings,
 } from "@/app/ui/customTailwindClasses";
-import {
-  RocketIcon,
-  DashboardIcon,
-  CreditCardIcon,
-  GlobeIcon,
-  SocialIcon,
-  ShoppingBagIcon,
-} from "./icons-start-today";
+import { IoRocketSharp } from "react-icons/io5";
+import { PiCursorClickFill } from "react-icons/pi";
+import { FaBolt } from "react-icons/fa6";
+import { FaUpload } from "react-icons/fa";
+import { MdSupportAgent, MdOutlinePayment } from "react-icons/md";
 
 const features = [
   {
-    icon: RocketIcon,
-    title: "Customised eCommerce Web Design",
-    text: "Get a unique, professional eCommerce website tailored to your brand and business needs.",
+    icon: IoRocketSharp,
+    title: "Instant Activation",
+    text: "Your hosting plan will be automatically and instantly activated after your payment has been completed.",
   },
   {
-    icon: DashboardIcon,
-    title: "Manage Products and Customers",
-    text: "Easily add, edit, and manage products, customers, and orders with our user-friendly dashboard.",
-  },
-
-  {
-    icon: CreditCardIcon,
-    title: "Secured Payment Gateway",
-    text: "Accept payments securely with PCI-compliant payment gateways that protect your customers' data.",
+    icon: PiCursorClickFill,
+    title: "One Click App Install",
+    text: "You will gain access to over 450+ ready to install applications like WordPress with a single click.",
   },
   {
-    icon: GlobeIcon,
-    title: "Search Engine Optimisation",
-    text: "Optimise your eCommerce site for search engines to attract more organic traffic and increase sales.",
+    icon: FaBolt,
+    title: "LiteSpeed",
+    text: "LiteSpeed web server is 84x faster than Apache with built-in caching for optimal WordPress performance.",
   },
   {
-    icon: SocialIcon,
-    title: "AI & Social Media Integration",
-    text: "Integrate AI tools and social media platforms to enhance customer engagement and streamline marketing efforts.",
+    icon: FaUpload,
+    title: "Daily Backups",
+    text: "Automated daily backups ensure your data is always safe and recoverable with one-click restore.",
   },
   {
-    icon: ShoppingBagIcon,
-    title: "Supporting you beyond the project",
-    text: "Get ongoing support and maintenance to ensure your eCommerce site runs smoothly and stays up-to-date.",
+    icon: MdSupportAgent,
+    title: "24/7 BW Support",
+    text: "Expert Botswana based support team available around the clock to help with any hosting issues",
+  },
+  {
+    icon: MdOutlinePayment,
+    title: "Convenient Payment Options",
+    text: "Pay in BWP. You can pay using popular methods in Botswana, including Credit/Debit cards, Mobile money, Bank transfer/EFT.",
   },
 ];
 
-export default function StartToday() {
+export default function WhyChooseHosting() {
   return (
     <div className="relative isolate w-full overflow-x-clip py-10">
       {/* blur component */}
@@ -63,24 +59,27 @@ export default function StartToday() {
       </div>
 
       <section className="mx-auto max-w-6xl px-6 py-16 leading-normal">
-        <div className="mb-20 text-center">
+        <div className="mb-16 text-center">
           <p className="mb-4 font-medium text-blue-600">Everything you need</p>
           <h2 className={` ${longSectionHeadings} mb-4`}>
-            Start your Online Business Today!
+            Why Choose Our Web Hosting Service?
           </h2>
           <p className={` ${sectionSubHeadings} mx-auto max-w-3xl text-pretty`}>
-            Everyone’s online. Data is cheap. Smartphones are everywhere. It’s
-            the best time to start your online business.
+            Reliable infrastructure at affordable prices, backed by local
+            Botswana support
           </p>
         </div>
 
-        <div className="grid gap-9 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
-              <div key={index} className="flex flex-col items-center gap-4">
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center gap-y-4 rounded-xl border border-primary p-8"
+              >
                 <div className="flex-shrink-0">
-                  <IconComponent size="size-12" />
+                  <IconComponent size={40} className="text-primary" />
                 </div>
                 <div>
                   <p className="mt-1 flex flex-col items-center text-center leading-relaxed text-foreground">

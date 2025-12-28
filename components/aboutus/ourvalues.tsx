@@ -31,20 +31,20 @@ export default function OurValues() {
 
         <ValueCard
           title="Innovation"
-          description="We continuously invest in new technologies and forward-thinking approaches to stay ahead in the evolving digital landscape, ensuring our clients always benefit from the best solutions available."
+          description="We invest in innovative technologies and forward-thinking approaches to stay ahead, ensuring our clients benefit from the best solutions."
           background="valueCard2"
           svg="/svg/about-us/creativity.svg"
         />
         <ValueCard
           title="Customer Success"
-          description="We build long-term partnerships with our clients to ensure the success of their projects and broader goals. Our aim is to empower them to grow and generate income through the internet."
+          description="“We build long-term client partnerships to ensure project success and broader goals, empowering growth and income through the internet."
           background="valueCard2"
           svg="/svg/about-us/growth.svg"
         />
 
         <ValueCard
           title="Build for Africa"
-          description="We develop solutions for Africa’s unique landscape, tackling regional challenges and unlocking new opportunities. We actively collaborate with African companies to pursue a common vision, creating digital products made by Africans, for Africans."
+          description="We create solutions for Africa’s unique challenges, collaborating with local companies to unlock digital opportunities."
           background="valueCard4"
           svg="/svg/about-us/rocket.svg"
         />

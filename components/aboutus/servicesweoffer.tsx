@@ -22,7 +22,12 @@ const services = [
   {
     title: "Backup & Storage",
     icon: TiCloudStorage,
-    links: [{ name: "Storage Box", href: "/cloud-storage" }],
+    links: [
+      {
+        name: "Storage Box",
+        href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage `,
+      },
+    ],
   },
   {
     title: "Web Development",

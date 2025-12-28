@@ -4,7 +4,7 @@ import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { BsLightningChargeFill } from "react-icons/bs";
 import { FaServer } from "react-icons/fa6";
 import Image from "next/image";
-import { whiteButton } from "@/app/ui/customTailwindClasses";
+import { greenButton, whiteButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 
 const iconProps = {
@@ -62,7 +62,8 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="inset-0 w-full">
+      <div className="absolute bottom-0 left-0 right-0 z-0 h-full bg-gradient-to-tr from-transparent via-blue-400/15 to-blue-400/30"></div>
+      <div className="inset-0 z-10 w-full">
         <div className="mx-auto grid max-w-7xl grid-cols-1 pb-8 pt-16 md:grid-cols-12 md:py-16">
           <div className="col-span-1 md:col-span-6">
             {/* Shared hosting badge */}
@@ -99,10 +100,13 @@ export default function Header() {
               </div>
             </div>
             <div className="mt-10 flex items-end gap-x-6 md:gap-x-12">
-              <Link
-                href=""
+              {/* <Link
+                href={`${process.env.WHMCS_URL}/index.php?rp=/store/web-hosting`}
                 className={` ${whiteButton} inline-flex justify-center bg-blue-300 text-black`}
               >
+                Compare Plans
+              </Link> */}
+              <Link href="#" className={` ${greenButton} `}>
                 Compare Plans
               </Link>
               <div className="flex flex-col items-start">
@@ -110,7 +114,7 @@ export default function Header() {
                   Starting from
                 </span>
                 <span className="text-4xl font-semibold text-neutral-300">
-                  P45
+                  P60
                   <span className="text-lg font-medium text-neutral-400">
                     /month
                   </span>
@@ -121,7 +125,7 @@ export default function Header() {
           <div className="col-span-1 md:col-span-6"></div>
         </div>
       </div>
-      <div className="relative col-span-1 flex items-center justify-center md:hidden">
+      <div className="relative z-0 col-span-1 flex items-center justify-center md:hidden">
         {" "}
         <Image
           src="/img/hosting/cpu-tech.jpg"
@@ -138,7 +142,6 @@ export default function Header() {
           />
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 z-10 h-full bg-gradient-to-tr from-transparent via-blue-400/15 to-blue-400/30"></div>
     </div>
   );
 }

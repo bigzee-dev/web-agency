@@ -11,19 +11,18 @@ interface DomainTLD {
 }
 
 const availableTLDs: DomainTLD[] = [
-  { extension: "com", price: 260, dotColor: "text-slate-600", badge: "HOT" },
-  { extension: "co.bw", price: 120, dotColor: "text-white", badge: "NEW" },
-  { extension: "co.za", price: 120, dotColor: "text-white" },
+  { extension: "com", price: 247, dotColor: "text-slate-600", badge: "HOT" },
+  { extension: "net", price: 275, dotColor: "text-white", badge: "NEW" },
+  { extension: "co.za", price: 97, dotColor: "text-white" },
   {
-    extension: "africa",
-    price: 8.95,
+    extension: "org",
+    price: 271,
     dotColor: "text-green-500",
-    badge: "NEW",
   },
-  { extension: "org.bw", price: 120, dotColor: "text-white", badge: "HOT" },
-  { extension: "app", price: 260, dotColor: "text-slate-600", badge: "NEW" },
-  { extension: "online", price: 260, dotColor: "text-green-500" },
-  { extension: "net", price: 260, dotColor: "text-yellow-400" },
+  { extension: "store", price: 962, dotColor: "text-white", badge: "HOT" },
+  { extension: "app", price: 337, dotColor: "text-slate-600", badge: "NEW" },
+  { extension: "online", price: 616, dotColor: "text-green-500" },
+  { extension: "io", price: 962, dotColor: "text-yellow-400", badge: "NEW" },
 ];
 
 export default function TldSlider() {

@@ -12,23 +12,23 @@ export default function Steps() {
 
       <div className="grid gap-8 md:grid-cols-3 md:gap-12">
         <StepCard number="01" title="Choose an Email Hosting Plan">
-          Running a new business? Go with the{" "}
-          <span className="font-semibold">US$ 0.39/mo</span> Business Starter
-          plan. If you need more resources, opt for the{" "}
-          <span className="font-semibold">US$ 2.99/mo</span> Business Premium
-          plan. Note that prices are per mailbox.
+          Getting started? Go with the{" "}
+          <span className="font-semibold">BWP 35/mo</span> Pro Plan. If you need
+          more resources, opt for the{" "}
+          <span className="font-semibold">BWP 60/mo</span> Business Plan. You
+          can always upgrade later.
         </StepCard>
 
         <StepCard number="02" title="Proceed to Checkout">
           Select the number of mailboxes and subscription period. Once
-          yo&apos;ve completed the payment process, you will be able to access
-          your business email address dashboard.
+          you&apos;ve completed the payment process, yor account will be setup
+          and you will be able to access admin panel.
         </StepCard>
 
         <StepCard number="03" title="Configure your Email Hosting">
-          Finally, create a business email account based on your own domain
-          name, like youremail@yourdomain.com, set up the DNS settings, and sync
-          your email to other devices.
+          Login to the admin panel and create an email account based on your own
+          domain name, like admin@yourdomain.com, set up the DNS settings, and
+          sync your email to other devices.
         </StepCard>
       </div>
     </div>

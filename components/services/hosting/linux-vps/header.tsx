@@ -60,7 +60,7 @@ export default function HeaderVps() {
 
                 <div className="mt-6 md:mt-12">
                   <Link
-                    href="#"
+                    href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/linux-vps`}
                     className={` ${primaryButton} inline-flex items-center justify-center gap-x-2`}
                   >
                     <Rocket className="size-4" />

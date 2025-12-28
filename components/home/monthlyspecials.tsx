@@ -26,19 +26,19 @@ const specials: Special[] = [
     quote:
       "Launch your new business quickly with our Business Starter Pack. For one low monthly price, you get everything you need to get started:",
     features: [
-      "1-Page Website & Hosting",
+      "1-Page Website",
       "Annual Domain Registration",
       "Business Email Account",
       "4-Page Company Profile",
-      "Monthly Maintenance & Updates",
+      "Monthly Maintenance & Hosting",
     ],
     price: "P295/month",
     href: "/contact-us",
-    linkText: "Contact Us",
+    linkText: "Get Started",
   },
   {
     id: 2,
-    image: "/img/home/compute.png",
+    image: "/img/linux-vps/hostiko-img.png",
     title: "Linux Vps",
     quote:
       "Get powerful performance and full control over your deployment environment with our Linux VPS. Perfect for growing websites and applications that need more resources and flexibility.",
@@ -109,7 +109,7 @@ export default function MonthlySpecials() {
 
         <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:gap-12">
           <div className="w-full md:w-1/3">
-            <div className="relative h-[350px] overflow-hidden rounded-lg">
+            <div className="relative h-[350px] overflow-hidden rounded-xl bg-gray-800/25">
               <Image
                 src={currentSpecial.image || "/placeholder.svg"}
                 alt={currentSpecial.title}

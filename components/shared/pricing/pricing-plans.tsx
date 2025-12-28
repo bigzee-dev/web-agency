@@ -107,7 +107,11 @@ export default function PricingPlans({ plan }: { plan: string }) {
                 {isYearly ? plan.priceYearly : plan.priceMonthly}
               </span>
               <span className="text-base text-gray-500">
-                /{isYearly ? "year" : "month"}
+                /
+                {plan.name === "Business" || plan.name === "Enterprise"
+                  ? "acc/"
+                  : ""}
+                {isYearly ? "year" : "month"}
               </span>
             </p>
             <p className={classNames("mt-6 text-base leading-7 text-gray-600")}>

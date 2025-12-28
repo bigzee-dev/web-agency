@@ -18,7 +18,7 @@ export default function Ecommerce() {
       <WooCommerce />
       <PaymentGateways />
       <StartToday />
-      <Consultation text={ecommerceText} />
+      <Consultation text={ecommerceText} href="#" />
       {/* <Faqs /> */}
     </div>
   );

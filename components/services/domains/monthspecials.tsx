@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
+import Link from "next/link";
 interface PricingCardProps {
   logoSrc: string;
   logoAlt: string;
@@ -46,9 +47,12 @@ function PricingCard({
       </div>
 
       {/* Register Button */}
-      <Button className="w-full rounded-md bg-primary px-6 py-3 font-semibold text-white hover:bg-blue-800">
+      <Link
+        href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register`}
+        className="w-full rounded-md bg-primary px-6 py-2 font-semibold text-white"
+      >
         Register
-      </Button>
+      </Link>
     </div>
   );
 }

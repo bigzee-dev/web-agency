@@ -16,7 +16,10 @@ export default function Page() {
       <VpsFeatures />
       <LinuxDistributions />
       <WhyBuyVps />
-      <Consultation text="our Linux Cloud VPS?" />
+      <Consultation
+        text="our Linux Cloud VPS?"
+        href={`${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps`}
+      />
       <FaqsVps />
     </>
   );

@@ -5,6 +5,7 @@ import { FiCpu } from "react-icons/fi";
 import { BsMemory } from "react-icons/bs";
 import { TfiHarddrive } from "react-icons/tfi";
 import { FaNetworkWired } from "react-icons/fa";
+import Link from "next/link";
 
 const pricingData = [
   {
@@ -15,6 +16,7 @@ const pricingData = [
     bandwidth: "1TB",
     price: "P85",
     popular: false,
+    url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-1`,
   },
   {
     cpu: "LVPS-2",
@@ -24,6 +26,7 @@ const pricingData = [
     bandwidth: "5TB",
     price: "P120",
     popular: false,
+    url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-2`,
   },
   {
     cpu: "LVPS-4",
@@ -33,6 +36,7 @@ const pricingData = [
     bandwidth: "10TB",
     price: "P180",
     popular: true,
+    url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-4`,
   },
   {
     cpu: "LVPS-6",
@@ -42,6 +46,7 @@ const pricingData = [
     bandwidth: "10TB",
     price: "P240",
     popular: false,
+    url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-6`,
   },
   {
     cpu: "LVPS-8",
@@ -51,6 +56,7 @@ const pricingData = [
     bandwidth: "20TB",
     price: "P300",
     popular: false,
+    url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-8`,
   },
   {
     cpu: "LVPS-12",
@@ -60,6 +66,7 @@ const pricingData = [
     bandwidth: "20TB",
     price: "P420",
     popular: false,
+    url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-12`,
   },
 ];
 
@@ -133,9 +140,12 @@ export default function PricingVpsTable() {
                   </span>
                 </div>
                 <div className="flex items-center justify-center p-4">
-                  <Button className="rounded-lg bg-primary px-6 text-white hover:bg-primary/80">
+                  <Link
+                    href={plan.url}
+                    className="rounded-lg bg-primary px-4 py-1.5 text-white hover:bg-primary/80"
+                  >
                     Order
-                  </Button>
+                  </Link>
                 </div>
               </div>
             ))}

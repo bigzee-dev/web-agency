@@ -3,7 +3,7 @@ import SetupAccount from "@/components/services/hosting/web-hosting/setup-accoun
 import PricingPlans from "@/components/shared/pricing/pricing-plans";
 import HostingFeatures from "@/components/services/hosting/web-hosting/features";
 import LogoPanel from "@/components/services/hosting/web-hosting/logo-panel";
-import StartToday from "@/components/services/ecommerce/start-today";
+import WhyChooseHosting from "@/components/services/hosting/web-hosting/whychoose";
 import SupportOne from "@/components/shared/support/support-one";
 import FaqsHosting from "@/components/services/hosting/web-hosting/faqs-hosting";
 
@@ -15,7 +15,7 @@ export default function Page() {
       <PricingPlans plan="hosting" />
       <HostingFeatures />
       <LogoPanel />
-      <StartToday />
+      <WhyChooseHosting />
       <SupportOne text="Web hosting" />
       <FaqsHosting />
     </div>

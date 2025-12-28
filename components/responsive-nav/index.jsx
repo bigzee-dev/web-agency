@@ -12,7 +12,7 @@ import {
   LinuxIcon,
   // WindowsIcon,
   CpanelIcon,
-  // CloudUploadIcon,
+  CloudUploadIcon,
   DomainIcon,
   ClipboardCopyIcon,
   DocumentTextIcon,
@@ -128,14 +128,17 @@ export default function ResponsiveNav() {
                     Web Hosting
                   </div>
                 </Link>
-                {/* <Link href="/web-hosting" className="dropdown-item">
+                <Link
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage `}
+                  className="dropdown-item"
+                >
                   <div className="dropdown-item-link">
                     <span>
                       <CloudUploadIcon size="size-5" />
                     </span>
                     Cloud Storage
                   </div>
-                </Link> */}
+                </Link>
               </div>
             </li>
             <li className="nav-item">
@@ -203,7 +206,7 @@ export default function ResponsiveNav() {
                   </div>
                 </a>
                 <a
-                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register`}
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/clientarea.php?action=domains`}
                   className="dropdown-item"
                 >
                   <div className="dropdown-item-link">

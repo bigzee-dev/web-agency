@@ -3,7 +3,13 @@ import { transparentButton, whiteButton } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
 import Link from "next/link";
 
-export default function Consultation({ text }: { text?: string }) {
+export default function Consultation({
+  text,
+  href,
+}: {
+  text?: string;
+  href: string;
+}) {
   return (
     <div className="x-padding w-full pb-4 pt-2 md:py-12">
       <section className="mx-auto max-w-7xl rounded-3xl bg-gradient-to-tr from-primary via-primary to-gray-800 py-8 pl-8 pr-8 shadow-lg md:pl-20">
@@ -31,12 +37,14 @@ export default function Consultation({ text }: { text?: string }) {
               >
                 Contact us
               </Link>
-              <Link
-                href="/contact-us"
-                className={` ${transparentButton} !w-36 !min-w-36 md:!w-44 md:!min-w-44`}
-              >
-                Pricing
-              </Link>
+              {href === "#" ? null : (
+                <Link
+                  href={href}
+                  className={` ${transparentButton} !w-36 !min-w-36 md:!w-44 md:!min-w-44`}
+                >
+                  Pricing
+                </Link>
+              )}
             </div>
           </div>
           <div className="from-neutral-primary/30 relative order-1 col-span-1 md:order-2 md:col-span-5">

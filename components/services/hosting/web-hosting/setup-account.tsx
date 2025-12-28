@@ -12,23 +12,22 @@ export default function SetupAccount() {
 
       <div className="grid gap-8 md:grid-cols-3 md:gap-12">
         <SetupCard number="01" title="Choose a Hosting Plan">
-          Running a new business? Go with the{" "}
-          <span className="font-semibold">US$ 0.39/mo</span> Business Starter
-          plan. If you need more resources, opt for the{" "}
-          <span className="font-semibold">US$ 2.99/mo</span> Business Premium
-          plan. Note that prices are per mailbox.
+          Getting Started? Go with the{" "}
+          <span className="font-semibold">BWP 60/mo</span> Startup plan. If you
+          need more resources, opt for the{" "}
+          <span className="font-semibold">BWP 110/mo</span> Standard plan. Note
+          that you can always upgrade later.
         </SetupCard>
 
         <SetupCard number="02" title="Proceed to Checkout">
-          Select the number of mailboxes and subscription period. Once
-          you&apos;ve completed the payment process, you will be able to access
-          your business email address dashboard.
+          After selecting your desired Hosting Plan proceed to checkout. Once
+          you&apos;ve completed the payment process, your service will be
+          activated and you can access the control panel.
         </SetupCard>
 
-        <SetupCard number="03" title="Configure your plan">
-          Finally, create a business email account based on your own domain
-          name, like youremail@yourdomain.com, set up the DNS settings, and sync
-          your email to other devices.
+        <SetupCard number="03" title="Manage Your Account">
+          Finally, log in to your hosting control panel to deploy your website,
+          set up email accounts, configure DNS and other hosting features.
         </SetupCard>
       </div>
     </div>

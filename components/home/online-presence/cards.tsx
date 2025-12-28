@@ -43,7 +43,11 @@ export default function Home() {
         "We provide a scalable digital infrastructure to keep your services accessible and high-performing all the time.",
       links: [
         { text: "Virtual Servers", href: "/linux-vps" },
-        { text: "Cloud Storage", href: "#" },
+        { text: "Hosting", href: "/web-hosting" },
+        {
+          text: "Cloud Storage",
+          href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage `,
+        },
       ],
     },
     {

@@ -47,7 +47,7 @@ export default function Header() {
                     Starting from
                   </span>
                   <span className="text-4xl font-semibold text-neutral-300">
-                    P45
+                    P35
                     <span className="text-lg font-medium text-neutral-400">
                       /month
                     </span>
