@@ -10,7 +10,7 @@ const SMTP_PWD = process.env.SMTP_PWD ?? "";
 
 // Configure the transporter to use Zoho SMTP
 const transporter = nodemailer.createTransport({
-  host: "eu1.workspace.org",
+  host: "mail.deltaworx.co.bw",
   port: 465, // SSL
   secure: true,
   auth: {
