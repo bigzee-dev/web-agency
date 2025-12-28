@@ -1,6 +1,8 @@
 import { sendEmail } from "@/lib/sendformdata";
 import { NextResponse } from "next/server";
 
+export const runtime = "edge";
+
 export type ContactFormData = {
   name: string;
   email: string;
