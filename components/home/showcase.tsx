@@ -2,11 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import {
-  grayButton,
   lightBgButton,
   pageHeadings,
   primaryButton,
-  transparentButton,
 } from "@/app/ui/customTailwindClasses";
 import { IoArrowForwardCircle } from "react-icons/io5";
 import { cairo } from "@/app/ui/fonts";
