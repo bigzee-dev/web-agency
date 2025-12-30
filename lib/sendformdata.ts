@@ -29,7 +29,7 @@ export async function sendEmail(
 
     // Build mail options (use Nodemailer's type for clarity)
     const mailOptions: import("nodemailer").SendMailOptions = {
-      from: `${formData.website ?? "your site"} <mail@bigzee-mxr1.xyz>`, // Sender address
+      from: `${formData.website ?? "your site"} <mail@deltaworx.co.bw>`, // Sender address
       to: "zimamankei@gmail.com",
       subject: `You have a new message on ${formData.website ?? "your site"}!`,
       text: `From: ${formData.name}\n\nEmail: ${formData.email}\n\nCompany: ${formData.company}\n\nBudget: ${formData.budget}\n\nMessage: ${formData.message}`,
