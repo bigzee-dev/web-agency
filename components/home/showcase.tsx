@@ -3,8 +3,10 @@ import Link from "next/link";
 
 import {
   grayButton,
+  lightBgButton,
   pageHeadings,
   primaryButton,
+  transparentButton,
 } from "@/app/ui/customTailwindClasses";
 import { IoArrowForwardCircle } from "react-icons/io5";
 import { cairo } from "@/app/ui/fonts";
@@ -82,7 +84,7 @@ export default function Showcase() {
             <Link href="#our-services" className={` ${primaryButton} `}>
               Our Services
             </Link>
-            <Link href="#" className={` ${grayButton} `}>
+            <Link href="/about-us" className={` ${lightBgButton} `}>
               About Us {/* <span aria-hidden="true"> →</span> */}
             </Link>
           </div>
