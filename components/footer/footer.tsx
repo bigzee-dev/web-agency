@@ -2,7 +2,8 @@ import Link from "next/link";
 import { footerLinks } from "./links";
 import CompanyInfo from "./companyInfo";
 
-const linkHeading = "text-md text-neutral-300 font-semibold tracking-wider";
+const linkHeading =
+  "text-md text-neutral-300 font-semibold tracking-wider mb-3";
 const singleLink = "font-sans text-sm text-neutral-300/75";
 
 export default function Footer() {
@@ -18,7 +19,7 @@ export default function Footer() {
               <div key={group.heading}>
                 <h4 className={linkHeading}>{group.heading}</h4>
 
-                <ul className="mt-2 space-y-2.5">
+                <ul className="mt-4 space-y-3.5">
                   {group.links.map((link) =>
                     link.type === "external" ? (
                       <li key={link.title}>
