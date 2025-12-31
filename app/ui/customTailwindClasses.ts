@@ -22,4 +22,4 @@ export const greenButton = ` ${btnDimensions} bg-blue-300 text-gray-900`;
 
 export const transparentButton = ` ${btnDimensions} text-neutral-100 border border-neutral-300/50 bg-blue-300/10`;
 
-export const lightBgButton = ` ${btnDimensions} text-gray-800  bg-[#faf9f5]/95 shadow-[inset_0_0_0_1px_black]`;
+export const lightBgButton = ` ${btnDimensions} text-primary  bg-[#faf9f5]/95 shadow-[inset_0_0_0_1px_#005878]`;

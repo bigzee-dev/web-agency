@@ -38,12 +38,12 @@ const specials: Special[] = [
   },
   {
     id: 2,
-    image: "/img/linux-vps/hostiko-img.png",
-    title: "Linux Vps",
+    image: "/img/linux-vps/hostiko-hosting-img.png",
+    title: "Linux Virtual Machine",
     quote:
       "Get powerful performance and full control over your deployment environment with our Linux VPS. Perfect for growing websites and applications that need more resources and flexibility.",
     features: [
-      "Dedicated Resources (2 vCPU, 4GB RAM, 60GB SSD)",
+      "2 vCPU, 4GB RAM, 60GB SSD",
       "Full Root Access",
       "Choice of Linux Distributions",
       "Deploy the tech stack you need",
@@ -92,14 +92,14 @@ export default function MonthlySpecials() {
           <div className="flex justify-end gap-2">
             <button
               onClick={goToPrevious}
-              className="flex h-12 w-12 items-center justify-center rounded-xl border border-gray-400 bg-gray-800 p-2 text-neutral-100 transition-colors"
+              className="flex h-12 w-12 items-center justify-center rounded-xl border border-gray-400 bg-gray-700 p-2 text-neutral-100 transition-colors"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={goToNext}
-              className="flex h-12 w-12 items-center justify-center rounded-xl border border-gray-400 bg-gray-800 p-2 text-neutral-100 transition-colors"
+              className="flex h-12 w-12 items-center justify-center rounded-xl border border-gray-400 bg-gray-700 p-2 text-neutral-100 transition-colors"
               aria-label="Next testimonial"
             >
               <ChevronRight className="h-5 w-5" />

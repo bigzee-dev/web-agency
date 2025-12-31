@@ -4,21 +4,21 @@ import React from "react";
 const processSteps = [
   {
     number: "/ 01",
-    title: "Discover",
+    title: "Configure",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...",
+      "Choose a virtual machine that fits your workload requirements and complete the ordering process.",
   },
   {
     number: "/ 02",
-    title: "Build",
+    title: "Deploy",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...",
+      "Once your service is activated you can choose an Operating System to install and deploy your VPS.",
   },
   {
     number: "/ 03",
-    title: "Deliver",
+    title: "Manage",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...",
+      "Use our modern control panel to monitor performance, adjust resources, and scale as needed.",
   },
 ];
 
