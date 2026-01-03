@@ -4,13 +4,13 @@ import { cairo, montserrat } from "@/app/ui/fonts";
 import { NavChevron } from "./chevron";
 import useResponsiveNav from "@/app/hooks/useResponsiveNav";
 import {
-  // WebAppIcon,
+  WebAppIcon,
   ShoppingBagIcon,
   EmailIcon,
   WebMailIcon,
   MouseClickIcon,
   LinuxIcon,
-  // WindowsIcon,
+  WindowsIcon,
   CpanelIcon,
   CloudUploadIcon,
   DomainIcon,
@@ -76,14 +76,14 @@ export default function ResponsiveNav() {
                     Website Development
                   </div>{" "}
                 </Link>
-                {/* <Link href="/ecommerce" className="dropdown-item">
+                <Link href="/webapps" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
                       <WebAppIcon />
                     </span>
                     Web Applications
                   </div>{" "}
-                </Link> */}
+                </Link>
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
@@ -112,14 +112,17 @@ export default function ResponsiveNav() {
                     Linux VPS
                   </div>
                 </Link>
-                {/* <Link href="/linux-vps" className="dropdown-item">
+                <Link
+                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/windows-vps`}
+                  className="dropdown-item"
+                >
                   <div className="dropdown-item-link">
                     <span>
                       <WindowsIcon size="size-5" />
                     </span>
                     Windows VPS
                   </div>
-                </Link> */}
+                </Link>
                 <Link href="/web-hosting" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>

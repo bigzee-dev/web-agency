@@ -106,7 +106,10 @@ export default function Header() {
               >
                 Compare Plans
               </Link> */}
-              <Link href="#" className={` ${greenButton} `}>
+              <Link
+                href={`${process.env.WHMCS_URL}/index.php?rp=/store/web-hosting`}
+                className={` ${greenButton} `}
+              >
                 Compare Plans
               </Link>
               <div className="flex flex-col items-start">

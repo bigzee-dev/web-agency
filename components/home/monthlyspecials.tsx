@@ -109,7 +109,7 @@ export default function MonthlySpecials() {
 
         <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:gap-12">
           <div className="w-full md:w-1/3">
-            <div className="relative h-[350px] overflow-hidden rounded-xl bg-gray-800/25">
+            <div className="relative h-[350px] overflow-hidden rounded-xl bg-gray-800/15">
               <Image
                 src={currentSpecial.image || "/placeholder.svg"}
                 alt={currentSpecial.title}

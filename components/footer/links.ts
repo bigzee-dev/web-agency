@@ -34,7 +34,7 @@ export const footerLinks = [
       },
       {
         title: "Web Apps",
-        href: "/web-apps",
+        href: "/webapps",
         type: "internal",
       },
       {

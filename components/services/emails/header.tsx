@@ -39,7 +39,10 @@ export default function Header() {
               </div>
 
               <div className="mt-5 flex items-end gap-x-12 md:mt-10">
-                <Link href="" className={` ${greenButton} `}>
+                <Link
+                  href={`${process.env.WHMCS_URL}/index.php?rp=/store/business-email`}
+                  className={` ${greenButton} `}
+                >
                   Compare Plans
                 </Link>
                 <div className="flex flex-col items-start">

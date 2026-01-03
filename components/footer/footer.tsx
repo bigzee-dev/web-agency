@@ -7,6 +7,7 @@ const linkHeading =
 const singleLink = "font-sans text-sm text-neutral-300/75";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="w-full bg-gray-800">
       <div className="w-full px-8">
@@ -50,7 +51,8 @@ export default function Footer() {
       <div className="w-full border-t border-gray-600 px-8">
         <div className="mx-auto flex max-w-5xl justify-between pb-16 pt-5 text-center font-sans text-sm font-light text-neutral-400">
           <p>
-            <span className="text-neutral-300">&copy;</span>&nbsp;Deltaworx 2024
+            <span className="text-neutral-300">&copy;</span>&nbsp;Deltaworx{" "}
+            {currentYear}
           </p>
           <div className="flex items-center font-sans text-sm">
             <Link
