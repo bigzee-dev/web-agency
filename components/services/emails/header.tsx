@@ -38,7 +38,7 @@ export default function Header() {
                 </p>
               </div>
 
-              <div className="mt-5 flex items-end gap-x-12 md:mt-10">
+              <div className="mt-5 flex items-end gap-x-5 md:mt-10 md:gap-x-12">
                 <Link href="#pricing-plans" className={` ${greenButton} `}>
                   Compare Plans
                 </Link>

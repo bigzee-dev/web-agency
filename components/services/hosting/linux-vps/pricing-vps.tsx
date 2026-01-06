@@ -1,5 +1,5 @@
 import { montserrat, notoSans } from "@/app/ui/fonts";
-import { Button } from "@/components/ui/button";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { FiCpu } from "react-icons/fi";
 import { BsMemory } from "react-icons/bs";
