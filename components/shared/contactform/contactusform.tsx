@@ -118,7 +118,7 @@ export default function ContactUsForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="geid-cols-1 grid gap-x-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-4 md:grid-cols-2">
         <div>
           <label htmlFor="name" className={` ${labelStyles} `}>
             Name

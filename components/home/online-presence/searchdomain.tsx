@@ -33,7 +33,7 @@ export default function DomainSearch() {
     <div className="flex h-[15rem] w-full flex-col px-8 py-9 sm:px-4 md:h-full md:gap-y-7 md:px-16">
       <div className="flex items-center gap-x-3">
         <div
-          className={`mb-7 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-primary via-cyan-700 to-secondary p-3 md:mb-0`}
+          className={`mb-0 inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-primary via-cyan-700 to-secondary p-3`}
         >
           <AtSign className="h-6 min-h-6 text-neutral-300" />
         </div>
@@ -43,7 +43,10 @@ export default function DomainSearch() {
           Domain Name Registration
         </h4>
       </div>
-      <form onSubmit={handleRedirect} className="flex h-auto w-full gap-2">
+      <form
+        onSubmit={handleRedirect}
+        className="mt-7 flex h-auto w-full gap-2 md:mt-0"
+      >
         <Input
           type="text"
           value={domain}
@@ -56,10 +59,10 @@ export default function DomainSearch() {
         <Button
           type="button"
           onClick={handleRedirect}
-          className="min-w-28 rounded-lg bg-[#5e6368] py-1.5 font-sans text-base font-normal text-neutral-100 transition duration-300 ease-in-out md:min-w-40"
+          className="min-w-20 rounded-lg bg-[#5e6368] py-1.5 font-sans text-base font-normal text-neutral-100 transition duration-300 ease-in-out md:min-w-40"
         >
           <Search />
-          Search
+          <span className="hidden sm:block">Search</span>
         </Button>
       </form>
       <div className="mt-6 md:mt-auto">

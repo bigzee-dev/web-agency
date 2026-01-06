@@ -21,7 +21,7 @@ const features = [
 
 export default function Showcase() {
   return (
-    <div className="x-padding relative isolate w-full overflow-hidden pb-8 pt-20 md:overflow-visible md:pb-12">
+    <div className="x-padding relative isolate w-full overflow-hidden pb-8 pt-20 md:overflow-visible md:pb-6">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -57,7 +57,7 @@ export default function Showcase() {
               >
                 Business Email
               </span>
-              <p className="text-base font-semibold text-gray-700">P40</p>
+              <p className="text-base font-semibold text-gray-700">P35</p>
               <span className="text-gray-400">|</span>
               <span>
                 <IoArrowForwardCircle className="text-slate-700" size="1.6em" />

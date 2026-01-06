@@ -17,7 +17,10 @@ export default function PricingPlans({ plan }: { plan: string }) {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <div className="relative isolate mx-auto max-w-7xl overflow-hidden px-4 py-16">
+    <div
+      className="relative isolate mx-auto max-w-7xl overflow-hidden px-4 py-16"
+      id="pricing-plans"
+    >
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -142,7 +145,7 @@ export default function PricingPlans({ plan }: { plan: string }) {
                 >
                   <FaCheck
                     aria-hidden="true"
-                    className={classNames("h-4 w-3 flex-none text-blue-600")}
+                    className={classNames("h-4 w-3 flex-none text-gray-500")}
                   />
                   {feature}
                 </li>

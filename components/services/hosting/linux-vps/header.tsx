@@ -38,7 +38,7 @@ export default function HeaderVps() {
                   <span className="text-[0.8rem] font-medium text-gray-600">
                     1vCPU / 2GB RAM -{" "}
                     <span className="text-sm font-semibold text-gray-700">
-                      P130
+                      P140
                     </span>
                   </span>
                   <span className="block h-4 w-px bg-gray-800"></span>
@@ -60,7 +60,7 @@ export default function HeaderVps() {
 
                 <div className="mt-6 md:mt-12">
                   <Link
-                    href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/linux-vps`}
+                    href="#pricing-vps"
                     className={` ${primaryButton} inline-flex items-center justify-center gap-x-2`}
                   >
                     <Rocket className="size-4" />

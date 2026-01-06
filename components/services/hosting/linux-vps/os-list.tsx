@@ -81,7 +81,7 @@ export default function LinuxDistributions() {
           {distributions.map((distro) => (
             <div
               key={distro.id}
-              className="flex flex-col space-y-4 rounded-lg border border-gray-600 bg-gray-700/50 p-6 text-center"
+              className="mx-auto flex w-[90%] flex-col space-y-4 rounded-lg border border-gray-600 bg-gray-700/50 p-6 text-center md:w-full"
             >
               <div className="flex items-center space-x-4">
                 <img

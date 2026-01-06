@@ -3,14 +3,14 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function SetupAccount() {
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-20 md:pb-14">
+    <div className="x-padding mx-auto max-w-7xl pt-20 md:pb-14">
       <h2
         className={` ${montserrat.className} mb-14 text-center text-3xl font-bold text-gray-900 md:text-4xl`}
       >
         Setup Your Hosting Account in a Few Clicks
       </h2>
 
-      <div className="grid gap-8 md:grid-cols-3 md:gap-12">
+      <div className="grid gap-8 px-4 md:grid-cols-3 md:gap-12 md:px-0">
         <SetupCard number="01" title="Choose a Hosting Plan">
           Getting Started? Go with the{" "}
           <span className="font-semibold">BWP 60/mo</span> Startup plan. If you

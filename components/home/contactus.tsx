@@ -21,17 +21,18 @@ export default function ContactUs() {
         <div className="mx-auto mt-12 flex max-w-lg flex-col items-center justify-center gap-4 text-neutral-200 md:flex-row md:gap-3">
           <Link
             className={` ${primaryButton} inline-flex cursor-pointer justify-center gap-x-2`}
-            href="/"
+            href="/contact-us"
           >
             <TiMessages size="1.5em" />
             <span className="text-md font-semibold">Contact us</span>
           </Link>
-          <div
+          <Link
             className={` ${lightBgButton} inline-flex cursor-pointer items-center justify-center gap-x-2`}
+            href="/contact-us"
           >
             <FaWhatsapp size="1.35em" />
             <span className="text-md font-semibold">Whatsapp</span>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

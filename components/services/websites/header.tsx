@@ -24,7 +24,7 @@ export default function Websites() {
           <div className="col-span-1 bg-secondary"></div>
           <div className="col-span-1 bg-transparent"></div>
         </div>
-        <div className="absolute inset-0 mx-auto w-full max-w-7xl py-16">
+        <div className="x-padding absolute inset-0 mx-auto w-full max-w-7xl py-16">
           <div className="w-full pr-12 lg:w-[50%]">
             {/* Websites badge */}
             <div className="inline-block">
@@ -59,7 +59,12 @@ export default function Websites() {
               From design to deployment, we make sure your site looks great and
               works flawlessly across all devices.
             </p>
-            <button className={` ${whiteButton} mt-10`}>Get Started</button>
+            <Link
+              className={` ${whiteButton} mt-10 inline-flex items-center justify-center`}
+              href="/contact-us"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
       </div>

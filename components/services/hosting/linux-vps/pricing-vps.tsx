@@ -1,10 +1,11 @@
-import { montserrat } from "@/app/ui/fonts";
+import { montserrat, notoSans } from "@/app/ui/fonts";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FiCpu } from "react-icons/fi";
 import { BsMemory } from "react-icons/bs";
 import { TfiHarddrive } from "react-icons/tfi";
 import { FaNetworkWired } from "react-icons/fa";
+import { GoArrowSwitch } from "react-icons/go";
 import Link from "next/link";
 
 const pricingData = [
@@ -14,6 +15,7 @@ const pricingData = [
     ram: "1GB",
     storage: "15GB",
     bandwidth: "1TB",
+    network: "1 IPv4",
     price: "P95",
     popular: false,
     url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-1`,
@@ -24,6 +26,7 @@ const pricingData = [
     ram: "2GB",
     storage: "30GB",
     bandwidth: "5TB",
+    network: "1 IPv4",
     price: "P140",
     popular: false,
     url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-2`,
@@ -34,6 +37,7 @@ const pricingData = [
     ram: "4GB",
     storage: "60GB",
     bandwidth: "10TB",
+    network: "1 IPv4",
     price: "P220",
     popular: true,
     url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-4`,
@@ -44,6 +48,7 @@ const pricingData = [
     ram: "6GB",
     storage: "90GB",
     bandwidth: "10TB",
+    network: "1 IPv4",
     price: "P300",
     popular: false,
     url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-6`,
@@ -54,6 +59,7 @@ const pricingData = [
     ram: "8GB",
     storage: "120GB",
     bandwidth: "20TB",
+    network: "1 IPv4",
     price: "P380",
     popular: false,
     url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-8`,
@@ -64,6 +70,7 @@ const pricingData = [
     ram: "12GB",
     storage: "180GB",
     bandwidth: "20TB",
+    network: "1 IPv4",
     price: "P530",
     popular: false,
     url: `${process.env.WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-12`,
@@ -71,17 +78,16 @@ const pricingData = [
 ];
 
 const infoContainerStyles =
-  "mx-auto flex w-[10rem] items-center justify-center text-xl text-gray-600";
+  "mx-auto flex  items-center justify-center text-xl text-gray-600";
 const propertyStyles = "flex flex-1 items-center justify-start pl-2";
 
-const planValueStyles =
-  "pl-6 flex flex-1 items-center justify-start text-base text-gray-800";
+const planValueStyles = ` ${montserrat.className} flex flex-1 items-center justify-end text-base font-semibold text-gray-800`;
 const iconStyles = "mr-2 inline-block text-primary";
-const spanStyles = "text-xs font-normal text-gray-500";
+const spanStyles = "text-xs font-normal text-gray-700";
 
 export default function PricingVpsTable() {
   return (
-    <div className="x-padding w-full">
+    <div className="x-padding w-full" id="pricing-vps">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 pb-12 pt-20 md:pt-32">
         {/* Title */}
         <h1
@@ -166,48 +172,64 @@ export default function PricingVpsTable() {
                 </div>
               )}
 
-              <CardContent className="space-y-5 p-6">
+              <CardContent className="space-y-4 bg-neutral-50 p-6">
                 <div className="space-y-3 text-center">
                   <div
-                    className={` ${montserrat.className} text-xl font-bold text-secondary`}
+                    className={` ${notoSans.className} text-2xl font-medium text-gray-800`}
                   >
                     {plan.cpu}
                   </div>
-                  <div className={infoContainerStyles}>
-                    <div className={propertyStyles}>
-                      <FiCpu className={iconStyles} />
-                      <span className={spanStyles}>vCpu</span>
-                    </div>
-                    <div className={planValueStyles}>{plan.vCores} cores</div>
+                  <div className="mb-4 mt-4 flex flex-col items-center justify-center">
+                    <span className="text-2xl font-semibold text-primary">
+                      {plan.price}
+                    </span>
+                    <span className="text-xs text-gray-500">BWP/mon</span>
                   </div>
-                  <div className={infoContainerStyles}>
-                    <div className={propertyStyles}>
-                      <BsMemory className={iconStyles} />
-                      <span className={spanStyles}>Ram</span>
+                  <div className="space-y-3 border-t border-gray-300 px-2 pb-3 pt-5">
+                    <div className={infoContainerStyles}>
+                      <div className={propertyStyles}>
+                        <FiCpu className={iconStyles} />
+                        <span className={spanStyles}>CPU</span>
+                      </div>
+                      <div className={planValueStyles}>{plan.vCores} vCPU</div>
                     </div>
-                    <div className={planValueStyles}>{plan.ram}</div>
-                  </div>
-                  <div className={infoContainerStyles}>
-                    <div className={propertyStyles}>
-                      <TfiHarddrive className={iconStyles} />
-                      <span className={spanStyles}>Disk</span>
+                    <div className={infoContainerStyles}>
+                      <div className={propertyStyles}>
+                        <BsMemory className={iconStyles} />
+                        <span className={spanStyles}>RAM</span>
+                      </div>
+                      <div className={planValueStyles}>{plan.ram}</div>
                     </div>
-                    <div className={planValueStyles}>{plan.storage}</div>
-                  </div>
-                  <div className={infoContainerStyles}>
-                    <div className={propertyStyles}>
-                      <FaNetworkWired className={iconStyles} />
-                      <span className={spanStyles}>Traffic</span>
+                    <div className={infoContainerStyles}>
+                      <div className={propertyStyles}>
+                        <TfiHarddrive className={iconStyles} />
+                        <span className={spanStyles}>Disk</span>
+                      </div>
+                      <div className={planValueStyles}>{plan.storage}</div>
                     </div>
-                    <div className={planValueStyles}>{plan.bandwidth}</div>
-                  </div>
-
-                  <div className="mt-4 text-2xl font-bold text-gray-800">
-                    {plan.price}
+                    <div className={infoContainerStyles}>
+                      <div className={propertyStyles}>
+                        <GoArrowSwitch className={iconStyles} />
+                        <span className={spanStyles}>Traffic</span>
+                      </div>
+                      <div className={planValueStyles}>{plan.bandwidth}</div>
+                    </div>
+                    <div className={infoContainerStyles}>
+                      <div className={propertyStyles}>
+                        <FaNetworkWired className={iconStyles} />
+                        <span className={spanStyles}>Network</span>
+                      </div>
+                      <div className={planValueStyles}>{plan.network}</div>
+                    </div>
                   </div>
                 </div>
 
-                <Button className="w-full bg-primary text-white">Order</Button>
+                <Link
+                  href={plan.url}
+                  className="inline-flex w-full items-center justify-center rounded-3xl bg-primary px-4 py-2.5 text-md text-white"
+                >
+                  Order
+                </Link>
               </CardContent>
             </Card>
           ))}

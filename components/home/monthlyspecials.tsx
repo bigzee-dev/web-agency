@@ -50,7 +50,7 @@ const specials: Special[] = [
       "Web Apps, Databases, Docker and more",
       "Use as Proxy or VPN",
     ],
-    price: "P180/month",
+    price: "P220/month",
     href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-4`,
     linkText: "Order Now",
   },

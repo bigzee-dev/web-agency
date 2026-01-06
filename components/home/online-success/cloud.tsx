@@ -64,11 +64,9 @@ export default function Cloud() {
           Cloud Infrastructure To Power Your Services
         </h3>
         <p className="hidden font-sans text-base leading-relaxed text-neutral-300 md:block">
-          Whether you are launching something new or improving what you already
-          have, we’re here to make it happen. From simple booking apps to
-          full-featured apps for enterprises, we&apos;ve helped all kinds of
-          businesses create better digital experiences for their teams and
-          clients.
+          Build and scale your applications with ease using our robust cloud
+          infrastructure. Experience unparalleled performance, flexibility, and
+          security tailored to meet the demands of modern businesses.
         </p>
         <ul className="mt-6 space-y-2 text-neutral-300/85">
           {features.map((feature) => (
