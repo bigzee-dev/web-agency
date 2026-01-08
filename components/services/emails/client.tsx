@@ -28,7 +28,7 @@ const clientSections = [
 const devices = [
   {
     icon: FaGooglePlay,
-    title: "Android Play Store",
+    title: "Play Store",
   },
   {
     icon: FaAppStoreIos,
@@ -103,7 +103,7 @@ export default function EmailClient() {
       </section>
 
       {/* Icons Section */}
-      <section className="mx-auto mt-14 flex max-w-4xl flex-wrap justify-between">
+      <section className="mx-auto mt-14 grid max-w-4xl grid-cols-2 flex-wrap justify-between lg:flex">
         {devices.map((device, idx) => {
           const Icon = device.icon;
           return (

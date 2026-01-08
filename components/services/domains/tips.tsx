@@ -55,7 +55,7 @@ export default function Tips() {
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-300/10 outline outline-1 outline-offset-1 outline-white/25">
                 {tip.icon}
               </div>
-              <h3 className="font-sans text-xl font-semibold text-blue-400">
+              <h3 className="font-sans text-xl font-semibold text-neutral-200">
                 {tip.title}
               </h3>
               <p className="-mt-1.5 font-sans text-md leading-relaxed text-neutral-300/65">

@@ -127,7 +127,7 @@ export default function MonthlySpecials() {
               {currentSpecial.quote}
             </blockquote>
             {currentSpecial.features && (
-              <ul className="grid list-disc grid-cols-2 gap-y-2 pl-5 text-gray-800">
+              <ul className="grid list-disc grid-cols-2 gap-x-3 gap-y-2 pl-5 text-gray-800">
                 {currentSpecial.features.map((feature, index) => (
                   <li key={index} className="col-span-1 text-md text-gray-600">
                     {feature}

@@ -47,10 +47,10 @@ export default function Consultation({
               )}
             </div>
           </div>
-          <div className="from-neutral-primary/30 relative order-1 col-span-1 md:order-2 md:col-span-5">
+          <div className="relative order-1 col-span-1 md:order-2 md:col-span-5">
             <Image
               src="/img/hosting/support247.png"
-              alt=""
+              alt="support"
               width={750}
               height={600}
               className="h-auto w-full object-contain"

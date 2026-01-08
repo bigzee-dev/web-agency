@@ -6,14 +6,14 @@ import Image from "next/image";
 
 export default function EmailSupport() {
   return (
-    <div className="x-padding relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-x-12 gap-y-12 pb-6 pt-24 md:grid-cols-12 md:pb-12">
+    <div className="x-padding relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-x-12 gap-y-16 pb-6 pt-24 md:grid-cols-12 md:pb-12">
       <div className="col-span-1 flex flex-col items-start gap-y-10 md:col-span-6">
         <div className="space-y-4">
           <h2
             className={` ${montserrat.className} text-pretty text-4xl font-bold leading-[1.1] text-gray-800 md:text-[2.7rem]`}
           >
             Interested in our Email service? <br />
-            <span className="text-primary">Lets Chat!</span>{" "}
+            <span className="text-gray-600">Lets Chat!</span>{" "}
           </h2>
           <p className={`text-pretty text-base text-gray-600`}>
             We look forward to hearing from you! Whether you have a question

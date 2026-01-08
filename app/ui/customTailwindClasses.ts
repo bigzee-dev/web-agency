@@ -3,7 +3,7 @@ import { montserrat } from "@/app/ui/fonts";
 export const pageHeadings = ` ${montserrat.className} text-gray-900 text-5xl md:text-6xl font-bold glb-headings-lineheight text-center`;
 export const pageHeadingsCenter = ` ${montserrat.className} text-gray-900 text-5xl md:text-6xl font-bold glb-headings-lineheight text-center`;
 export const sectionHeadings = ` ${montserrat.className} text-gray-900 text-4xl md:text-5xl font-bold`;
-export const longSectionHeadings = ` ${montserrat.className} text-gray-800 text-[2.5rem] md:text-4xl font-bold`;
+export const longSectionHeadings = ` ${montserrat.className} text-gray-800 text-[2.5rem] leading-tight md:text-4xl font-bold text-balanced`;
 
 export const smallTextHeadings = "text-center text-base/7 font-semibold";
 

@@ -27,21 +27,21 @@ export default function DigitalRealEstate() {
           className="rounded-none object-cover md:rounded-l-2xl"
         />
       </div>
-      <div className="col-span-1 p-14 text-center md:col-span-8">
+      <div className="col-span-1 p-14 px-8 text-center md:col-span-8">
         <h3
-          className={`${montserrat.className} mb-14 text-2xl font-bold text-gray-800 md:text-4xl`}
+          className={`${montserrat.className} mb-14 text-pretty text-3xl font-bold text-gray-800 md:text-4xl`}
         >
           Your Domain is your <br />
           Digital Real Estate
         </h3>
 
-        <div className="grid gap-8 text-center md:grid-cols-3">
+        <div className="grid gap-8 gap-y-12 px-6 text-center md:grid-cols-3">
           {stats.map((stat, idx) => (
             <div key={idx}>
-              <div className="mb-3 text-5xl font-bold text-primary">
+              <div className="mb-3 text-6xl font-bold text-gray-800 md:text-primary">
                 {stat.value}
               </div>
-              <p className="font-sans text-sm text-gray-700">
+              <p className="text=md font-sans text-gray-600 md:text-sm">
                 {stat.description}
               </p>
             </div>

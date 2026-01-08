@@ -41,7 +41,7 @@ export default function GetStartedVps() {
               className="h-fit w-[12rem] md:hidden"
             />
             <h2
-              className={` ${longSectionHeadings} mb-14 text-pretty text-neutral-300`}
+              className={` ${longSectionHeadings} text-pretty text-neutral-300/90 md:mb-14`}
             >
               VPS Setup Made Simple
             </h2>
@@ -57,10 +57,10 @@ export default function GetStartedVps() {
                   {step.number}
                 </div>
                 <div className="mt-2">
-                  <h3 className="mb-2 text-lg font-bold text-blue-400">
+                  <h3 className="mb-2 text-lg font-bold text-neutral-200">
                     {step.title}
                   </h3>
-                  <p className="font-sans text-md leading-relaxed text-neutral-300">
+                  <p className="font-sans text-md leading-relaxed text-neutral-300/80">
                     {step.description}
                   </p>
                 </div>

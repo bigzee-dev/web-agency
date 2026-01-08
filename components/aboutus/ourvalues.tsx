@@ -16,9 +16,8 @@ export default function OurValues() {
       <p
         className={` ${sectionSubHeadings} mx-auto max-w-4xl text-center text-gray-600`}
       >
-        We value inclusivity, clear communication, and steady improvement. We
-        listen to our clients, focus on practical solutions, and keep learning
-        so we can do better work together.{" "}
+        We value inclusivity and clear communication, listen to our clients,
+        focus on practical solutions, and continuously improve our work.{" "}
       </p>
 
       <div className="mx-auto mt-20 grid w-full max-w-4xl grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-2">
@@ -63,8 +62,10 @@ interface ValueCardProps {
 function ValueCard({ title, description, background, svg }: ValueCardProps) {
   return (
     <div className="flex flex-col items-center gap-y-3">
-      <div className={` ${background} mb-2 h-14 w-14 rounded-lg p-3 shadow-md`}>
-        <img src={svg} alt="svg"></img>
+      <div
+        className={` ${background} mb-2 h-14 w-14 rounded-lg p-3 shadow-md grayscale`}
+      >
+        <img src={svg} className="grayscale" alt="svg"></img>
       </div>
       <h3
         className={` ${montserrat.className} text-2xl font-semibold text-gray-800`}

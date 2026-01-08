@@ -65,7 +65,7 @@ export default function WhyUseEmail() {
             return (
               <div key={index} className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <IconComponent className="h-7 w-7 text-primary" />
+                  <IconComponent className="h-7 w-7 text-gray-800" />
                 </div>
                 <div>
                   <p className="leading-relaxed text-foreground">

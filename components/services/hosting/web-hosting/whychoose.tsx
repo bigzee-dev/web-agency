@@ -36,8 +36,8 @@ const features = [
   },
   {
     icon: MdOutlinePayment,
-    title: "Convenient Payment Options",
-    text: "Pay in BWP. You can pay using popular methods in Botswana, including Credit/Debit cards, Mobile money, Bank transfer/EFT.",
+    title: "Payment Options",
+    text: "Pay in BWP. Pay using popular methods in Botswana, including Credit/Debit cards, Mobile money, Bank transfer/EFT.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function WhyChooseHosting() {
         <div className="mb-16 text-center">
           <p className="mb-4 font-medium text-blue-600">Everything you need</p>
           <h2 className={` ${longSectionHeadings} mb-4`}>
-            Why Choose Our Web Hosting Service?
+            Why Choose Our Web Hosting?
           </h2>
           <p className={` ${sectionSubHeadings} mx-auto max-w-3xl text-pretty`}>
             Reliable infrastructure at affordable prices, backed by local
@@ -76,18 +76,19 @@ export default function WhyChooseHosting() {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center gap-y-4 rounded-xl border border-primary p-8"
+                className="flex flex-col justify-center gap-y-4 rounded-xl border border-primary bg-neutral-100 p-5 shadow-md"
               >
-                <div className="flex-shrink-0">
-                  <IconComponent size={40} className="text-primary" />
-                </div>
-                <div>
-                  <p className="mt-1 flex flex-col items-center text-center leading-relaxed text-foreground">
-                    <span className="font-semibold">{feature.title}</span>{" "}
-                    <span className="mt-1 font-sans text-md text-gray-600">
-                      {feature.text}
-                    </span>
-                  </p>
+                <div className="mt-1 flex flex-col leading-relaxed text-foreground">
+                  <div className="flex items-center gap-x-3">
+                    <IconComponent size={36} className="text-gray-700" />
+                    <span className="text-lg font-semibold text-gray-800">
+                      {feature.title}
+                    </span>{" "}
+                  </div>
+
+                  <span className="mt-1 font-sans text-md text-gray-600">
+                    {feature.text}
+                  </span>
                 </div>
               </div>
             );

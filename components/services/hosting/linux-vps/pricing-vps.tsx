@@ -79,10 +79,10 @@ const pricingData = [
 
 const infoContainerStyles =
   "mx-auto flex  items-center justify-center text-xl text-gray-600";
-const propertyStyles = "flex flex-1 items-center justify-start pl-2";
+const propertyStyles = "flex flex-1 items-center justify-start";
 
 const planValueStyles = ` ${montserrat.className} flex flex-1 items-center justify-end text-base font-semibold text-gray-800`;
-const iconStyles = "mr-2 inline-block text-primary";
+const iconStyles = "mr-2 inline-block text-gray-500";
 const spanStyles = "text-xs font-normal text-gray-700";
 
 export default function PricingVpsTable() {
@@ -127,16 +127,20 @@ export default function PricingVpsTable() {
                     </span>
                   </div>
                 )}
-                <div className="p-4 text-center text-gray-800">{plan.cpu}</div>
-                <div className="p-4 text-center text-gray-800">
+                <div className="p-4 text-center font-medium text-gray-800">
+                  {plan.cpu}
+                </div>
+                <div className="p-4 text-center font-medium text-gray-800">
                   {plan.vCores}
                 </div>
-                <div className="p-4 text-center text-gray-800">{plan.ram}</div>
-                <div className="p-4 text-center text-gray-800">
+                <div className="p-4 text-center font-medium text-gray-800">
+                  {plan.ram}
+                </div>
+                <div className="p-4 text-center font-medium text-gray-800">
                   {plan.storage}
                   <span className="text-xs text-gray-500"> NVMe</span>
                 </div>
-                <div className="p-4 text-center text-gray-800">
+                <div className="p-4 text-center font-medium text-gray-800">
                   {plan.bandwidth}
                 </div>
                 <div className="p-4 text-center text-xl font-semibold text-primary">
@@ -163,7 +167,7 @@ export default function PricingVpsTable() {
           {pricingData.map((plan, index) => (
             <Card
               key={index}
-              className={`relative min-w-[18rem] overflow-hidden rounded-2xl ring-1 ring-gray-300 ${plan.popular ? "ring-primary" : ""}`}
+              className={`relative min-w-[18rem] overflow-hidden rounded-2xl ring-1 ring-gray-300 ${plan.popular ? "ring-2 ring-primary" : ""}`}
             >
               {/* Popular Badge for Mobile */}
               {plan.popular && (

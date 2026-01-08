@@ -44,11 +44,11 @@ export default function LogoPanel() {
   }, []);
 
   const swiperContStyles =
-    "flex items-center justify-center h-40 max-w-lg rounded-xl border  border-gray-400 bg-neutral-200/50 p-9 shadow-md";
+    "flex items-center justify-center h-36 max-w-lg rounded-xl border  border-gray-800 bg-neutral-50 p-6 shadow-md";
 
   return (
     <div
-      className={`x-padding mx-auto max-w-7xl pb-2 pt-20 ${styles.carouselContainer}`}
+      className={`x-padding mx-auto max-w-7xl border-b border-t border-gray-400 bg-neutral-200 pb-12 pt-16 md:bg-transparent ${styles.carouselContainer}`}
     >
       <h3
         className={` ${montserrat.className} mb-2 w-full text-center text-4xl font-bold text-gray-900`}
@@ -67,7 +67,7 @@ export default function LogoPanel() {
         ))}
       </div>
       {/* Carousel Track for mobile */}
-      <div className="x-auto relative mx-auto mt-8 max-w-lg sm:mt-12 md:hidden">
+      <div className="x-auto relative mx-auto mt-8 max-w-lg bg-neutral-100 sm:mt-12 md:hidden">
         <Swiper
           slidesPerView={1}
           pagination={{ clickable: true }}

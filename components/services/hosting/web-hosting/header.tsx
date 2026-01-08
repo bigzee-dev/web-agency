@@ -94,7 +94,7 @@ export default function Header() {
                           {offer.icon}
                         </div>
 
-                        <span>{offer.title}</span>
+                        <span className="text-neutral-200">{offer.title}</span>
                       </h6>
                       <p className="ml-0.5 font-sans text-sm leading-relaxed text-neutral-300/80">
                         {offer.description}

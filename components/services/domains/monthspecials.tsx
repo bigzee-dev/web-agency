@@ -16,7 +16,7 @@ function PricingCard({
   originalPrice,
 }: PricingCardProps) {
   return (
-    <div className="flex flex-col items-center rounded-lg bg-white p-6 text-center shadow-md">
+    <div className="flex flex-col items-start rounded-3xl bg-white px-8 py-6 text-center shadow-md">
       {/* Logo */}
       <div className="mb-4 flex h-16 items-center justify-center">
         <img
@@ -30,18 +30,20 @@ function PricingCard({
       <h2 className="mb-4 text-base leading-relaxed text-gray-600">{title}</h2>
 
       {/* Pricing Section */}
-      <div className="mb-8">
-        <p className="mb-2 text-sm text-gray-500">Starts at</p>
-        <div className="flex items-end justify-center gap-2">
+      <div className="mb-6">
+        <p className="mb-1 text-start text-sm text-gray-800">Starts at</p>
+        <div className="flex flex-col items-start justify-center gap-2">
           {originalPrice > price && (
-            <span className="text-lg text-orange-400 line-through">
+            <span className="text-lg text-gray-400 line-through">
               P{originalPrice.toFixed(2)}
             </span>
           )}
-          <span className="text-4xl font-semibold text-gray-800">
-            P{price.toFixed(2)}
-          </span>
-          <span className="text-base text-gray-600">/year</span>
+          <div>
+            <span className="text-4xl font-semibold text-gray-800">
+              P{price.toFixed(2)}
+            </span>
+            <span className="text-base text-gray-600">/year</span>
+          </div>
         </div>
       </div>
 

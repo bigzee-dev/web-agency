@@ -12,7 +12,7 @@ const contactOptions = [
     id: "email",
     icon: FaEnvelope,
     title: "Email",
-    contact: "support@deltaworx.co.bw",
+    contact: "admin@deltaworx.co.bw",
     href: "#",
   },
   {
@@ -33,14 +33,14 @@ const contactOptions = [
     id: "facebook",
     icon: FaFacebookF,
     title: "Facebook",
-    contact: "@Coodiv",
+    contact: "@DeltaworxBW",
     href: "https://twitter.com/Coodiv",
   },
 ];
 
 export default function WorkWithUs() {
   return (
-    <div className="x-padding mt-5 w-full">
+    <div className="md:x-padding w-full md:mt-5">
       <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gray-900 pb-4 pt-14">
         <div
           aria-hidden="true"
@@ -90,14 +90,14 @@ export default function WorkWithUs() {
               </div>
 
               {/* Contact Options Grid */}
-              <div className="grid grid-cols-2 gap-6 gap-y-6">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-6">
                 {contactOptions.map((option) => {
                   const IconComponent = option.icon;
                   return (
                     <div key={option.id} className="space-y-3">
                       <div className="flex justify-start">
                         <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-500/50 bg-white/5">
-                          <IconComponent className="h-5 w-5 text-blue-400" />
+                          <IconComponent className="h-5 w-5 text-gray-400" />
                         </div>
                       </div>
                       <div className="space-y-2">

@@ -48,7 +48,7 @@ export default function StatsEmail() {
                   <span className="text-lg font-medium uppercase tracking-wider text-slate-400">
                     Designed for You
                   </span>
-                  <span className="flex items-center justify-center">
+                  <span className="flex hidden items-center justify-center md:block">
                     <img
                       src="/svg/emails/send.svg"
                       className="size-20"

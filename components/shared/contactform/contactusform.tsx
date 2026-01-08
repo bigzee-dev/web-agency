@@ -117,8 +117,8 @@ export default function ContactUsForm() {
     "shadow-sm block w-full sm:text-sm text-neutral-300 bg-neutral-300/5 py-1.5 px-1.5 border border-gray-500 rounded-md placeholder:text-neutral-400 ";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 gap-x-4 md:grid-cols-2">
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2">
         <div>
           <label htmlFor="name" className={` ${labelStyles} `}>
             Name

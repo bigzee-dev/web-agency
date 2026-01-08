@@ -63,10 +63,10 @@ export default function PricingPlans({ plan }: { plan: string }) {
           >
             Yearly
           </Label>
-          <div className="absolute -right-5 -top-0.5 translate-x-full transform">
-            <p className="text-base font-semibold text-pink-700">Save 20%</p>
+          <div className="absolute -right-3 -top-0.5 translate-x-full transform">
+            <p className="text-base font-semibold text-pink-700">Save 16%</p>
           </div>
-          <span className="absolute -top-6 right-5 translate-x-full transform">
+          <span className="absolute -top-6 right-4 translate-x-full transform">
             <img
               src="/svg/hosting/offer-vector.svg"
               height={20}

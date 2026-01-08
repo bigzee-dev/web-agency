@@ -37,7 +37,7 @@ export default function Benefits() {
           className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#2b2774] to-[#4a4790] opacity-20"
         />
       </div>
-      <div className="mx-auto grid h-auto max-w-7xl grid-cols-1 gap-y-12 pb-20 pt-16 md:grid-cols-12">
+      <div className="mx-auto grid h-auto max-w-7xl grid-cols-1 gap-y-16 pb-16 pt-16 md:grid-cols-12 md:pb-20">
         {/* Image */}
         <section className="order-2 col-span-1 flex justify-center md:order-1 lg:col-span-6">
           <Image

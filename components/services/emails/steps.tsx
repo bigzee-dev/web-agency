@@ -3,14 +3,14 @@ import { montserrat } from "@/app/ui/fonts";
 
 export default function Steps() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 pt-24 md:pb-20">
+    <div className="x-padding mx-auto max-w-7xl py-8 pt-24 md:pb-20">
       <h2
         className={` ${montserrat.className} mb-16 text-center text-3xl font-bold text-gray-800 md:text-4xl`}
       >
         Setup your Email Account in a Few Clicks.
       </h2>
 
-      <div className="grid gap-8 md:grid-cols-3 md:gap-12">
+      <div className="grid gap-8 px-4 md:grid-cols-3 md:gap-12">
         <StepCard number="01" title="Choose an Email Hosting Plan">
           Getting started? Go with the{" "}
           <span className="font-semibold">BWP 35/mo</span> Pro Plan. If you need

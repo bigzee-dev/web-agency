@@ -8,7 +8,7 @@ export default function Importance() {
     {
       title: "First Impressions Matter",
       description:
-        "Your domain is the first thing people see. A clean, memorable name builds trust instantly—before they even visit your site.",
+        "Your domain is the first thing people see. A clean, memorable name builds trust instantly, before they even visit your site.",
     },
     {
       title: "SEO & Discoverability",
@@ -23,7 +23,7 @@ export default function Importance() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-br from-slate-50 to-white py-16 md:py-24 md:pb-16">
+    <section className="w-full py-16 md:py-24 md:pb-16">
       <div className="mx-auto max-w-7xl px-4 md:px-4">
         <div className="mb-8 text-center">
           {/* <Badge variant="outline" className="mb-4 text-sm font-medium">
@@ -35,10 +35,7 @@ export default function Importance() {
             The importance of a Domain Name
           </h2>
           <p className={` ${sectionSubHeadings} mx-auto max-w-3xl`}>
-            Your domain name is more than just a web address—it&apos;s the
-            foundation of your digital identity. In today&apos;s competitive
-            landscape, the right domain can make the difference between being
-            found or forgotten.
+            More than a web address, your domain is key to being found online.
           </p>
         </div>
 
@@ -65,7 +62,7 @@ export default function Importance() {
                 />
                 <div className="space-y-1.5">
                   <h3
-                    className={`${montserrat.className} flex items-center text-xl font-bold text-primary md:text-xl`}
+                    className={`${montserrat.className} flex items-center text-xl font-bold text-gray-800 md:text-xl`}
                   >
                     {benefit.title}
                   </h3>

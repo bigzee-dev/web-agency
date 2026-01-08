@@ -67,7 +67,7 @@ export default function WhyBuyVps() {
             return (
               <div key={index} className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <IconComponent className="h-6 w-6 text-primary" />
+                  <IconComponent className="h-6 w-6 text-gray-800" />
                 </div>
                 <div>
                   <p className="leading-normal text-foreground">

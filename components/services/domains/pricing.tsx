@@ -90,7 +90,7 @@ export default function DomainPricingTable() {
     <div className="x-padding mx-auto w-full max-w-5xl pb-12 pt-4">
       <h2 className={sectionHeadings}>Available Tld&apos;s</h2>
       {/* Header Section */}
-      <div className="mt-12 grid grid-cols-2 rounded-t-2xl bg-slate-700 text-white md:grid-cols-4">
+      <div className="mt-12 grid grid-cols-2 rounded-t-2xl bg-gray-800 text-white md:grid-cols-4">
         {[
           {
             icon: <Box className="h-6 w-6" />,
@@ -163,7 +163,7 @@ export default function DomainPricingTable() {
                       <span className="mr-2 text-gray-500 line-through">
                         {domain.registration.original}
                       </span>
-                      <span className="font-medium text-[#0e5ca0]">
+                      <span className="font-medium text-primary">
                         {domain.registration.discounted}
                       </span>
                     </div>
