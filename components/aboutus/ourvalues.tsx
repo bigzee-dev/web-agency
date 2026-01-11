@@ -38,27 +38,23 @@ export default function OurValues() {
         <ValueCard
           title="Quality Work"
           description="Our commitment to excellence ensures outstanding service and high standards."
-          background="valueCard1"
           svg={GoRocket}
         />
 
         <ValueCard
           title="Innovation"
           description="We invest in innovation to ensure clients receive the best solutions."
-          background="valueCard2"
           svg={GoRocket}
         />
         <ValueCard
           title="Customer Success"
           description="We build long-term partnerships to ensure success and support online growth."
-          background="valueCard2"
           svg={GoRocket}
         />
 
         <ValueCard
           title="Build for Africa"
           description="Local collaboration drives digital solutions for Africa’s challenges."
-          background="valueCard4"
           svg={GoRocket}
         />
       </div>
@@ -69,11 +65,11 @@ export default function OurValues() {
 interface ValueCardProps {
   title: string;
   description: string;
-  background?: string;
+
   svg?: IconType;
 }
 
-function ValueCard({ title, description, background, svg }: ValueCardProps) {
+function ValueCard({ title, description, svg }: ValueCardProps) {
   const Icon = svg;
   return (
     <div className="flex flex-col rounded-2xl border border-gray-500 bg-neutral-100 p-7 shadow-md">

@@ -1,9 +1,4 @@
-import {
-  grayButton,
-  lightBgButton,
-  transparentButton,
-  whiteButton,
-} from "@/app/ui/customTailwindClasses";
+import { transparentButton, whiteButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 
 export default function SupportOne({ text }: { text?: string }) {

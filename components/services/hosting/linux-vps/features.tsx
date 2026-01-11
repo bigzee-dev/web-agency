@@ -1,6 +1,4 @@
-import { BsDot } from "react-icons/bs";
 import { montserrat } from "@/app/ui/fonts";
-import Image from "next/image";
 
 // const features = [
 //   {
