@@ -50,7 +50,7 @@ function PricingCard({
       {/* Register Button */}
       <Link
         href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register`}
-        className="w-full rounded-md bg-primary px-6 py-2 font-semibold text-white"
+        className="w-full rounded-lg bg-primary px-6 py-2.5 font-semibold text-white"
       >
         Register
       </Link>

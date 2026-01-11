@@ -1,14 +1,28 @@
 import type React from "react";
+import { GoRocket } from "react-icons/go";
 
 import { montserrat } from "@/app/ui/fonts";
 import {
   sectionHeadings,
   sectionSubHeadings,
 } from "@/app/ui/customTailwindClasses";
+import { IconType } from "react-icons";
 
 export default function OurValues() {
   return (
-    <div className="x-padding relative mx-auto max-w-6xl pb-28 pt-20">
+    <div className="x-padding relative isolate mx-auto max-w-6xl pb-28 pt-20">
+      <div
+        aria-hidden="true"
+        className="sm:right-1/9 hidden sm:absolute sm:-top-28 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+      >
+        <div
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#277074] to-[#478a90] opacity-20"
+        />
+      </div>
       <div className="mb-6 flex items-center justify-center">
         <h2 className={` ${sectionHeadings} max-w-6xl`}>Our Values</h2>
       </div>
@@ -20,32 +34,32 @@ export default function OurValues() {
         focus on practical solutions, and continuously improve our work.{" "}
       </p>
 
-      <div className="mx-auto mt-20 grid w-full max-w-4xl grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-2">
+      <div className="mx-auto mt-20 grid w-full max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
         <ValueCard
           title="Quality Work"
-          description="Our commitment to excellence drives us to provide outstanding customer service while maintaining the highest standards across our infrastructure, services, and support."
+          description="Our commitment to excellence ensures outstanding service and high standards."
           background="valueCard1"
-          svg="/svg/about-us/checked.svg"
+          svg={GoRocket}
         />
 
         <ValueCard
           title="Innovation"
-          description="We invest in innovative technologies and forward-thinking approaches to stay ahead, ensuring our clients benefit from the best solutions."
+          description="We invest in innovation to ensure clients receive the best solutions."
           background="valueCard2"
-          svg="/svg/about-us/creativity.svg"
+          svg={GoRocket}
         />
         <ValueCard
           title="Customer Success"
-          description="“We build long-term client partnerships to ensure project success and broader goals, empowering growth and income through the internet."
+          description="We build long-term partnerships to ensure success and support online growth."
           background="valueCard2"
-          svg="/svg/about-us/growth.svg"
+          svg={GoRocket}
         />
 
         <ValueCard
           title="Build for Africa"
-          description="We create solutions for Africa’s unique challenges, collaborating with local companies to unlock digital opportunities."
+          description="Local collaboration drives digital solutions for Africa’s challenges."
           background="valueCard4"
-          svg="/svg/about-us/rocket.svg"
+          svg={GoRocket}
         />
       </div>
     </div>
@@ -56,24 +70,23 @@ interface ValueCardProps {
   title: string;
   description: string;
   background?: string;
-  svg?: string;
+  svg?: IconType;
 }
 
 function ValueCard({ title, description, background, svg }: ValueCardProps) {
+  const Icon = svg;
   return (
-    <div className="flex flex-col items-center gap-y-3">
-      <div
-        className={` ${background} mb-2 h-14 w-14 rounded-lg p-3 shadow-md grayscale`}
-      >
-        <img src={svg} className="grayscale" alt="svg"></img>
+    <div className="flex flex-col rounded-2xl border border-gray-500 bg-neutral-100 p-7 shadow-md">
+      <div className={`mb-2 h-10 w-10 rounded-lg bg-gray-800 p-2 shadow-md`}>
+        {Icon && <Icon className="h-full w-full text-white" />}
       </div>
       <h3
-        className={` ${montserrat.className} text-2xl font-semibold text-gray-800`}
+        className={` ${montserrat.className} mt-2 text-xl font-semibold text-gray-800`}
       >
         {title}
       </h3>
 
-      <div className="pb-5">
+      <div className="mt-1">
         <p className="font-sans text-md text-gray-600 md:w-full">
           {description}
         </p>

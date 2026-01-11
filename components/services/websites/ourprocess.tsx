@@ -54,7 +54,7 @@ export default function OurProcess() {
                 {step.number}
               </div>
               <div className="mt-2">
-                <h3 className="mb-2 text-lg font-bold text-primary">
+                <h3 className="mb-2 text-lg font-bold text-gray-800">
                   {step.title}
                 </h3>
                 <p className="font-sans text-md leading-relaxed text-gray-600">

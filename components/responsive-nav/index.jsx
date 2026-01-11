@@ -36,7 +36,7 @@ export default function ResponsiveNav() {
   return (
     <nav className="navbar border-b border-gray-300/70 px-0 md:px-[1rem]">
       <div className="navbar-container px-[1rem] md:px-0">
-        <Link className="logo-container text-neutral-800 lg:mr-6" href="/">
+        <Link className="logo-container logo text-neutral-800 lg:mr-6" href="/">
           {" "}
           {/* Updated href to be relative */}
           <img src="/logo/logo-500x500.png" alt="BigZee Digital Logo" />{" "}
@@ -349,19 +349,19 @@ export default function ResponsiveNav() {
             <li className="nav-item block lg:hidden">
               <div className="nav-link nav-buttons">
                 <Link
-                  href=""
-                  className="box-border flex items-center justify-center gap-x-1.5 rounded-[10px] border-2 border-gray-800 bg-neutral-100 px-[12px] py-[8px] text-xs font-medium uppercase text-gray-800"
+                  href="/contact-us"
+                  className="contact-us-btn box-border flex items-center justify-center gap-x-1.5 rounded-[10px] border-2 border-gray-800 bg-neutral-100 px-[12px] py-[8px] text-xs font-medium uppercase text-gray-800"
                 >
                   <ChatIcon size="size-5" />
                   Contact us
                 </Link>
                 <div className="smlscreen-client-login box-border border-2 border-transparent bg-primary text-white">
                   <a
-                    href="https://domains.bigzee.app/clientarea.php"
+                    href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/clientarea.php`}
                     className={` ${montserrat.className} flex items-center justify-center gap-x-1.5 text-xs font-medium`}
                   >
                     <LoginIcon size="size-5" />
-                    CLIENT ZONE
+                    My Account
                   </a>
                 </div>
               </div>
@@ -381,7 +381,7 @@ export default function ResponsiveNav() {
               href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/clientarea.php`}
               className={` ${montserrat.className} flex items-center justify-center text-xs font-medium uppercase`}
             >
-              Client Zone
+              My Account
             </a>
           </div>
         </div>

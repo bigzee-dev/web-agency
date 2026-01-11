@@ -83,7 +83,7 @@ export default function WorkWithUs() {
                   </h5>
                 </div>
 
-                <div className="flex flex-col font-sans text-md text-neutral-400">
+                <div className="flex flex-col gap-y-1 font-sans text-md text-neutral-400">
                   <span>Plot 698, Old Mall</span>
                   <span>Maun</span>
                 </div>

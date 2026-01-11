@@ -48,8 +48,18 @@ export const footerLinks = [
     heading: "Services",
     links: [
       {
-        title: "linux VPS",
+        title: "Linux VPS",
         href: "/linux-vps",
+        type: "internal",
+      },
+      {
+        title: "Windows VPS",
+        href: `${process.env.WHMCS_URL}/index.php?rp=/store/windows-vps`,
+        type: "internal",
+      },
+      {
+        title: "Cloud Storage",
+        href: `${process.env.WHMCS_URL}/index.php?rp=/store/cloud-storage`,
         type: "internal",
       },
       {

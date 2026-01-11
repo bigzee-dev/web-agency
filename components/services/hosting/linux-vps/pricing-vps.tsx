@@ -88,7 +88,7 @@ const spanStyles = "text-xs font-normal text-gray-700";
 export default function PricingVpsTable() {
   return (
     <div className="x-padding w-full" id="pricing-vps">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 pb-12 pt-20 md:pt-32">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-16 pt-20 md:pt-32">
         {/* Title */}
         <h1
           className={` ${montserrat.className} text-center text-3xl font-bold text-gray-800 md:text-5xl`}
@@ -98,9 +98,9 @@ export default function PricingVpsTable() {
 
         {/* Desktop Table View */}
         <div className="hidden w-full md:block">
-          <div className="overflow-hidden border border-gray-400 bg-white shadow-sm">
+          <div className="overflow-hidden border border-gray-500 bg-white shadow-sm">
             {/* Table Header */}
-            <div className="grid grid-cols-7 border-b border-gray-400 bg-gray-50 text-primary">
+            <div className="grid grid-cols-7 border-b border-gray-500 bg-gray-50 text-primary">
               <div className="p-4 text-center font-medium">Plan</div>
               <div className="p-4 text-center font-medium">vCores</div>
               <div className="p-4 text-center font-medium">RAM</div>
@@ -115,7 +115,7 @@ export default function PricingVpsTable() {
             {pricingData.map((plan, index) => (
               <div
                 key={index}
-                className="relative grid grid-cols-7 items-center border-b border-gray-400 last:border-b-0 hover:bg-gray-50"
+                className="relative grid grid-cols-7 items-center border-b border-gray-500 last:border-b-0 hover:bg-gray-50"
               >
                 {plan.popular && (
                   <div
@@ -152,7 +152,7 @@ export default function PricingVpsTable() {
                 <div className="flex items-center justify-center p-4">
                   <Link
                     href={plan.url}
-                    className="rounded-lg bg-primary px-4 py-1.5 text-white hover:bg-primary/80"
+                    className="rounded-lg bg-primary px-4 py-2 text-md text-white hover:bg-primary/80"
                   >
                     Order
                   </Link>

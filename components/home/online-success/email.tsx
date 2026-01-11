@@ -56,7 +56,9 @@ export default function Email() {
           >
             Look professional and communicate with confidence
             <br />
-            <span className="text-blue-400">Email that means business</span>
+            <span className="hidden text-blue-400 md:block">
+              Email that means business
+            </span>
           </h2>
           <p className="hidden font-sans text-base leading-relaxed text-neutral-300 md:block">
             Our Email service helps you and your team stay connected, look

@@ -1,4 +1,9 @@
-import { whiteButton } from "@/app/ui/customTailwindClasses";
+import {
+  grayButton,
+  lightBgButton,
+  transparentButton,
+  whiteButton,
+} from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 
 export default function SupportOne({ text }: { text?: string }) {
@@ -26,9 +31,12 @@ export default function SupportOne({ text }: { text?: string }) {
             </p>
           </div>
 
-          <div className="mt-auto flex items-center text-secondary">
+          <div className="mt-auto flex items-center gap-x-4 text-secondary">
             <Link href="/contact-us" className={` ${whiteButton} `}>
               Contact us
+            </Link>
+            <Link href="/contact-us" className={` ${transparentButton} `}>
+              Pricing
             </Link>
           </div>
         </div>

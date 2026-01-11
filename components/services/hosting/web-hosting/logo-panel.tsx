@@ -48,7 +48,7 @@ export default function LogoPanel() {
 
   return (
     <div
-      className={`x-padding mx-auto max-w-7xl border-b border-t border-gray-400 bg-neutral-200 pb-12 pt-16 md:bg-transparent ${styles.carouselContainer}`}
+      className={`x-padding mx-auto max-w-7xl border-b border-t border-gray-400 bg-neutral-200 pb-12 pt-16 md:border-hidden md:bg-transparent ${styles.carouselContainer}`}
     >
       <h3
         className={` ${montserrat.className} mb-2 w-full text-center text-4xl font-bold text-gray-900`}

@@ -14,7 +14,7 @@ import { IoSearch } from "react-icons/io5";
 
 export default function SearchDomainForm() {
   const [domain, setDomain] = React.useState("");
-  const [tld, setTld] = React.useState(".co.bw");
+  const [tld, setTld] = React.useState(".com");
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,13 +57,20 @@ export default function SearchDomainForm() {
             <div className="text-grey-700 border-l border-gray-400">
               <Select value={tld} onValueChange={setTld}>
                 <SelectTrigger className="w-[85px] border-0 shadow-none focus:ring-0 md:w-[100px]">
-                  <SelectValue defaultValue=".co.bw" />
+                  <SelectValue defaultValue=".com" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value=".co.bw">.co.bw</SelectItem>
+                  <SelectItem value=".com">.com</SelectItem>
                   <SelectItem value=".net">.net</SelectItem>
                   <SelectItem value=".org">.org</SelectItem>
+                  <SelectItem value=".online">.online</SelectItem>
+                  <SelectItem value=".co">.co</SelectItem>
+                  <SelectItem value=".app">.app</SelectItem>
+                  <SelectItem value=".xyz">.xyz</SelectItem>
+                  <SelectItem value=".store">.store</SelectItem>
+                  <SelectItem value=".tech">.tech</SelectItem>
                   <SelectItem value=".io">.io</SelectItem>
+                  <SelectItem value=".co.za">.co.za</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -73,7 +80,7 @@ export default function SearchDomainForm() {
           type="submit"
           className={`h-full w-12 rounded-lg border-2 border-primary bg-primary text-white md:w-24`}
         >
-          <span className="hidden md:block">Seacrh</span>
+          <span className="hidden md:block">Search</span>
           <span className="block md:hidden">
             <IoSearch size={20} />
           </span>

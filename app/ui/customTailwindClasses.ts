@@ -20,6 +20,6 @@ export const whiteButton = ` ${btnDimensions} bg-[#faf9f5]/95 text-secondary`;
 
 export const greenButton = ` ${btnDimensions} bg-blue-300 text-gray-900`;
 
-export const transparentButton = ` ${btnDimensions} text-neutral-100 border border-neutral-300/50 bg-blue-300/10`;
+export const transparentButton = ` ${btnDimensions} text-neutral-100 border border-neutral-300/60 bg-blue-300/10`;
 
 export const lightBgButton = ` ${btnDimensions} text-primary  bg-[#faf9f5]/95 shadow-[inset_0_0_0_1px_#005878]`;

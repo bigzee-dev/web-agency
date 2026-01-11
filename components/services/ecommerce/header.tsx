@@ -15,9 +15,9 @@ export default function EcommerceHeader() {
           className="object-cover object-right"
           priority
         />
-
+        {/* Desktop Header */}
         {/* Content overlay */}
-        <div className="absolute inset-0 grid grid-cols-3 bg-black/30">
+        <div className="absolute inset-0 grid bg-black/30 md:grid-cols-3">
           <div className="col-span-1 bg-secondary"></div>
           <div className="col-span-1 bg-gradient-to-r from-secondary to-transparent"></div>
           <div className="col-span-1 bg-transparent"></div>
@@ -53,10 +53,10 @@ export default function EcommerceHeader() {
       <div className="flex w-full flex-col lg:hidden">
         <div className="relative h-[29rem] w-full bg-[#030303]">
           {/* Content overlay */}
-          <div className="absolute inset-0 grid">
-            <div className="col-span-1 bg-secondary"></div>
-            <div className="col-span-1 bg-gradient-to-b from-secondary to-transparent"></div>
-            <div className="col-span-1 bg-transparent"></div>
+          <div className="absolute inset-0 grid h-full">
+            <div className="row-span-1 bg-gradient-to-b from-secondary to-secondary/70"></div>
+            <div className="row-span-1 bg-secondary/70"></div>
+            <div className="row-span-1 bg-gradient-to-b from-secondary/70 to-transparent"></div>
           </div>
           {/* Content  */}
           <div className="x-padding absolute inset-0 pt-16">

@@ -100,7 +100,7 @@ export default function Cloud() {
           alt="Web Apps"
           width={533}
           height={500}
-          className="h-[15rem] w-full rounded-lg object-cover md:h-[24rem]"
+          className="h-[15rem] w-full rounded-lg object-contain md:h-[24rem]"
         />
       </div>
     </div>

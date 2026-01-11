@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="order-2 md:order-1 md:col-span-5">
             <CompanyInfo />
           </div>
-          <div className="order-1 grid grid-cols-2 gap-x-12 gap-y-8 pr-6 md:order-2 md:col-span-7 md:flex md:flex-wrap md:justify-between md:gap-x-0 md:gap-y-0 md:pr-0">
+          <div className="order-1 grid grid-cols-2 gap-x-12 gap-y-12 pr-6 md:order-2 md:col-span-7 md:flex md:flex-wrap md:justify-between md:gap-x-0 md:gap-y-0 md:pr-0">
             {footerLinks.map((group) => (
               <div key={group.heading}>
                 <h4 className={linkHeading}>{group.heading}</h4>
@@ -54,7 +54,7 @@ export default function Footer() {
             <span className="text-neutral-300">&copy;</span>&nbsp;Deltaworx{" "}
             {currentYear}
           </p>
-          <div className="flex items-center font-sans text-sm">
+          <div className="flex items-center text-sm">
             <Link
               href="/legal/privacy-policy"
               className="text-neutral-400 hover:text-neutral-300"

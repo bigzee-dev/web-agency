@@ -5,12 +5,12 @@ const whyBuyFeatures = [
   {
     title: "24/7 live technical support",
     description:
-      "Our Customer Success team is here for you any time of the day. We&apos;ve made our domain name registration process as easy as possible, but everyone needs a helping hand sometimes. Just contact us – we will be happy to assist.",
+      "Our Customer Success team is here for you any time of the day. We&apos;ve made our domain name registration process as easy as possible, but everyone needs a helping hand sometimes. Just contact us, we will be happy to assist.",
   },
   {
     title: "Trusted Domain Registrar",
     description:
-      "Hostinger is an ICANN-accredited registrar and web host trusted by millions of people worldwide. We offer a comprehensive registration service with more than 100 domain extensions so that you can have plenty of choices.",
+      "Deltaworx is a reliable registrar trusted by lots of people and companies. We offer a comprehensive registration service with around 20 domain extensions so that you can have plenty of choices.",
   },
   {
     title: "Instant setup and easy control",

@@ -7,8 +7,10 @@ export default function useResponsiveNav() {
     const queryAll = (selector) => document.querySelectorAll(selector);
 
     // Elements
+    const logo = query(".logo");
     const hamburger = query(".hamburger");
     const closeMenu = query(".close-menu");
+    const contactusbtn = query(".contact-us-btn");
     const navMenu = query(".nav-menu");
     const navbar = query(".navbar");
     const navLinksWithDropdown = queryAll(".nav-link-with-dropdown");
@@ -30,6 +32,13 @@ export default function useResponsiveNav() {
       queryAll(".chevron").forEach((chevron) => {
         if (chevron) chevron.style.transform = "rotate(0)";
       });
+    };
+
+    const handleLogoClick = () => {
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("active");
+      closeMenu.classList.remove("active");
+      closeAllDropdowns();
     };
 
     const handleHamburgerClick = () => {
@@ -133,6 +142,13 @@ export default function useResponsiveNav() {
       }
     };
 
+    const handleContactUsClick = () => {
+      // e.stopPropagation();
+      if (navMenu.classList.contains("active")) {
+        handleCloseMenuClick(); // Close mobile menu
+      }
+    };
+
     dropdownItems.forEach((item) => {
       item.addEventListener("click", handleDropdownItemClick);
     });
@@ -178,8 +194,10 @@ export default function useResponsiveNav() {
     };
 
     // --- Add Event Listeners ---
+    logo.addEventListener("click", handleLogoClick);
     hamburger.addEventListener("click", handleHamburgerClick);
     closeMenu.addEventListener("click", handleCloseMenuClick);
+    contactusbtn.addEventListener("click", handleContactUsClick);
     document.addEventListener("click", handleDocumentClick);
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
@@ -189,6 +207,7 @@ export default function useResponsiveNav() {
 
     // --- Cleanup Function ---
     return () => {
+      logo.removeEventListener("click", handleLogoClick);
       hamburger.removeEventListener("click", handleHamburgerClick);
       closeMenu.removeEventListener("click", handleCloseMenuClick);
       document.removeEventListener("click", handleDocumentClick);

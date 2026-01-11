@@ -1,5 +1,6 @@
 import {
   longSectionHeadings,
+  primaryButton,
   sectionSubHeadings,
 } from "@/app/ui/customTailwindClasses";
 import { IoRocketSharp } from "react-icons/io5";
@@ -7,6 +8,7 @@ import { PiCursorClickFill } from "react-icons/pi";
 import { FaBolt } from "react-icons/fa6";
 import { FaUpload } from "react-icons/fa";
 import { MdSupportAgent, MdOutlinePayment } from "react-icons/md";
+import Link from "next/link";
 
 const features = [
   {
@@ -43,7 +45,7 @@ const features = [
 
 export default function WhyChooseHosting() {
   return (
-    <div className="relative isolate w-full overflow-x-clip py-10">
+    <div className="relative isolate w-full overflow-x-clip pb-4 pt-2">
       {/* blur component */}
       <div
         aria-hidden="true"
@@ -93,6 +95,17 @@ export default function WhyChooseHosting() {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-14 flex w-full justify-center">
+          <Link
+            href="https://trycpanel.net/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={primaryButton}
+          >
+            Try the Demo
+          </Link>
         </div>
       </section>
     </div>

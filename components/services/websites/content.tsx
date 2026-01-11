@@ -62,7 +62,7 @@ export default function ContentSection() {
         </p>
       </div>
 
-      <div className="grid gap-9 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-9 px-2 md:grid-cols-2 md:px-0 lg:grid-cols-3">
         {features.map((feature, index) => {
           const IconComponent = feature.icon;
           return (

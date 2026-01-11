@@ -25,10 +25,10 @@ export default function CompanyInfo() {
           delta<span className="font-semibold text-neutral-300">worx</span>
         </h4>
       </Link>
-      <div className="mt-4 flex w-max flex-col pl-5 font-sans text-sm text-neutral-400">
+      <div className="mt-4 flex w-max flex-col space-y-1.5 pl-5 font-sans text-sm text-neutral-400">
         <span className="">Plot 698, Old Mall</span>
-        <span className="mt-1">Maun</span>
-        <span className="mt-1">Botswana</span>
+        <span className="">Maun</span>
+        <span className="">Botswana</span>
       </div>
 
       {/*  </div>
