@@ -60,6 +60,11 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        backup: {
+          "1": "hsl(var(--backup-1))",
+          "2": "hsl(var(--backup-2))",
+          "3": "hsl(var(--backup-3))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

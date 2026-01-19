@@ -8,8 +8,7 @@ import Footer from "@/components/footer/footer";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title:
-    "Deltaworx | Botswana, Cloud Computing, Web Dev, Domains, Email, Servers, Networks",
+  title: "Cloud Compute, Web Dev, Domains, Email, Servers in BW | Deltaworx",
   description:
     "Deltaworx is a leading IT solutions provider in Botswana, specializing in cloud computing, web development, domain registration, email hosting, virtual servers, and network solutions. We empower businesses with cutting-edge technology and reliable services to enhance their online presence and operational efficiency.",
   icons: {

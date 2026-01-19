@@ -68,7 +68,7 @@ const VpsFeatures = () => {
               </p>
 
               {/* Buttons */}
-              <div className="mb-10 flex flex-wrap gap-4">
+              {/* <div className="mb-10 flex flex-wrap gap-4">
                 <Link
                   href="/"
                   className={` ${primaryButton} inline-flex items-center justify-center gap-x-2 text-md`}
@@ -80,7 +80,7 @@ const VpsFeatures = () => {
                   Our Network
                   <ChevronRight className="h-4 w-4" />
                 </Button>
-              </div>
+              </div> */}
 
               {/* Feature badges */}
               <div className="flex flex-wrap gap-6">

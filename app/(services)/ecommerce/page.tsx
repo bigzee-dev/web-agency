@@ -5,7 +5,23 @@ import WooCommerce from "@/components/services/ecommerce/woocommerce";
 import PaymentGateways from "@/components/services/ecommerce/paymentgateways";
 import StartToday from "@/components/services/ecommerce/start-today";
 import Consultation from "@/components/shared/support/consultation";
+import type { Metadata } from "next";
 // import Faqs from "@/components/services/ecommerce/faqs";
+
+export const metadata: Metadata = {
+  title: "E-Commerce Development - Online Store Solutions | Deltaworx",
+  description:
+    "Build your online store with Deltaworx. E-commerce development using Shopify, WooCommerce, and custom solutions. Payment gateway integration, secure checkout, and full support in Botswana.",
+  keywords: [
+    "ecommerce development Botswana",
+    "online store",
+    "Shopify development",
+    "WooCommerce",
+    "payment gateway integration",
+    "online shopping cart",
+    "ecommerce website",
+  ],
+};
 
 const ecommerceText = "an eCommerce store?";
 

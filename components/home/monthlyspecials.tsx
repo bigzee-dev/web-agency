@@ -119,8 +119,8 @@ export default function MonthlySpecials() {
             </div>
           </div>
 
-          <div className="md:w-2/ flex w-full flex-col justify-center space-y-5">
-            <h2 className="text-4xl font-bold text-primary">
+          <div className="flex w-full flex-col justify-center space-y-5 md:w-2/3">
+            <h2 className="text-4xl font-bold text-gray-800">
               {currentSpecial.title}
             </h2>
             <blockquote className="text-xl font-medium italic text-gray-800 md:text-xl">

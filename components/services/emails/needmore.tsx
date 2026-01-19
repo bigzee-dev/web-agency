@@ -6,8 +6,11 @@ export default function NeedMore() {
     <section className="mx-auto max-w-3xl space-y-10 px-4 pb-12 pt-16 text-center">
       <div className="space-y-5">
         <h2
-          className={` ${montserrat.className} text-balance text-center text-3xl font-semibold text-gray-800 md:text-3xl`}
+          className={` ${montserrat.className} flex items-center justify-center gap-x-4 text-balance text-center text-3xl font-semibold text-gray-800 md:text-3xl`}
         >
+          <span className="hidden items-center justify-center md:block">
+            <img src="/svg/emails/send.svg" className="size-20" alt="send" />
+          </span>
           Need More? Get a Custom Plan.
         </h2>
         <p className="text-gray-600">

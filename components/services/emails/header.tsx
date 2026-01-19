@@ -1,6 +1,6 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
-import { greenButton } from "@/app/ui/customTailwindClasses";
+import { greenButton, transparentButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
@@ -39,7 +39,10 @@ export default function Header() {
               </div>
 
               <div className="mt-5 flex items-end gap-x-5 md:mt-10 md:gap-x-12">
-                <Link href="#pricing-plans" className={` ${greenButton} `}>
+                <Link
+                  href="#pricing-plans"
+                  className={` ${transparentButton} `}
+                >
                   Compare Plans
                 </Link>
                 <div className="flex flex-col items-start">

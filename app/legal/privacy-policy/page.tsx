@@ -1,6 +1,19 @@
 import qs from "qs";
 import { type BlocksContent } from "@strapi/blocks-react-renderer";
 import BlockRendererClient from "@/app/blockrenderclient";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Deltaworx",
+  description:
+    "Read Deltaworx's privacy policy. Learn how we collect, use, and protect your personal information when you use our IT services and solutions.",
+  keywords: [
+    "privacy policy",
+    "data protection",
+    "personal information",
+    "GDPR compliance",
+  ],
+};
 
 interface DocumentTypes {
   title: string;

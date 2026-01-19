@@ -112,10 +112,7 @@ export default function ResponsiveNav() {
                     Linux VPS
                   </div>
                 </Link>
-                <Link
-                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/windows-vps`}
-                  className="dropdown-item"
-                >
+                <Link href="/windows-vps" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
                       <WindowsIcon size="size-5" />
@@ -131,10 +128,7 @@ export default function ResponsiveNav() {
                     Web Hosting
                   </div>
                 </Link>
-                <Link
-                  href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage `}
-                  className="dropdown-item"
-                >
+                <Link href="/cloud-storage" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
                       <CloudUploadIcon size="size-5" />

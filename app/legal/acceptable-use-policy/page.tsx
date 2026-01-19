@@ -1,6 +1,20 @@
 import qs from "qs";
 import { type BlocksContent } from "@strapi/blocks-react-renderer";
 import BlockRendererClient from "@/app/blockrenderclient";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Acceptable Use Policy | Deltaworx",
+  description:
+    "Learn about Deltaworx's acceptable use policy. Understand the guidelines and restrictions for using our IT services, hosting, and cloud computing solutions responsibly.",
+  keywords: [
+    "acceptable use policy",
+    "AUP",
+    "service guidelines",
+    "usage restrictions",
+    "prohibited activities",
+  ],
+};
 
 interface DocumentTypes {
   title: string;
