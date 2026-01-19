@@ -26,8 +26,6 @@ import { montserrat } from "@/app/ui/fonts";
 // ];
 
 import {
-  Zap,
-  ChevronRight,
   Clock,
   Copy,
   Globe,
@@ -36,9 +34,7 @@ import {
   Network,
   Server,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { primaryButton, sectionHeadings } from "@/app/ui/customTailwindClasses";
-import Link from "next/link";
+import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 
 const specs = [
   { icon: Cpu, label: "CPU", value: "Intel Xeon" },

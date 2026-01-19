@@ -10,7 +10,8 @@
     "lint": "next lint",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "sitemap:validate": "node scripts/validate-sitemap.mjs"
   },
   "dependencies": {
     "@hcaptcha/react-hcaptcha": "^1.11.0",

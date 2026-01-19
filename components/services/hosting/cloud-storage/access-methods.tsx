@@ -3,11 +3,8 @@ import {
   sectionHeadings,
   sectionSubHeadings,
 } from "@/app/ui/customTailwindClasses";
-import { FaTerminal, FaNetworkWired, FaSync } from "react-icons/fa";
-import { MonitorDot, Cpu, HardDrive, Network, Lock, Gauge } from "lucide-react";
-import { BiTransfer } from "react-icons/bi";
-import { MdSecurity } from "react-icons/md";
-import { HiServer } from "react-icons/hi";
+import { FaTerminal } from "react-icons/fa";
+import { Network, Gauge } from "lucide-react";
 
 const iconProps = { className: "h-6 w-6 text-neutral-50" };
 
@@ -57,7 +54,7 @@ export default function AccessMethods() {
       </div>
 
       <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {accessMethods.map((method, index) => (
+        {accessMethods.map((method) => (
           <div
             key={method.title}
             className="group relative overflow-hidden rounded-2xl border border-gray-300 bg-white px-6 pb-4 pt-5 shadow-sm transition-all hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"

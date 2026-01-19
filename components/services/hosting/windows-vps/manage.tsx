@@ -1,12 +1,10 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { CheckCircle2, Rocket, Server } from "lucide-react";
+
+import { CheckCircle2, Rocket } from "lucide-react";
 import Image from "next/image";
 import {
   longSectionHeadings,
-  pageHeadingsCenter,
   primaryButton,
-  sectionHeadings,
 } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 

@@ -4,7 +4,7 @@ import AccessMethods from "@/components/services/hosting/cloud-storage/access-me
 import PricingPlans from "@/components/shared/pricing/pricing-plans";
 import ControlPanel from "@/components/services/hosting/cloud-storage/control-panel";
 import UseCases from "@/components/services/hosting/cloud-storage/use-cases";
-import WhyChoose from "@/components/services/hosting/cloud-storage/why-choose";
+
 import Rule321 from "@/components/services/hosting/cloud-storage/321rule";
 import CloudStorageSupport from "@/components/services/hosting/cloud-storage/support";
 import CloudStorageFAQs from "@/components/services/hosting/cloud-storage/faqs";

@@ -1,6 +1,6 @@
 import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
-import { greenButton, transparentButton } from "@/app/ui/customTailwindClasses";
+import { transparentButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 

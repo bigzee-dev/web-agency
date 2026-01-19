@@ -41,12 +41,12 @@ const supportCards: SupportCard[] = [
     buttonLink: "#",
   },
   {
-    id: "whattsapp",
+    id: "whatsapp",
     icon: <IoLogoWhatsapp className={iconStyles} />,
     title: "Whatsapp",
     description: "Chat with support now",
     buttonText: "+267 77810825",
-    buttonLink: "#",
+    buttonLink: "https://wa.me/26777810825",
   },
 ];
 
@@ -75,10 +75,12 @@ export default function ContactCards() {
                 {card.description}
               </p>
 
-              {/* Button: only the 'ticket' card is an actual link; others are informational */}
-              {card.id === "ticket" ? (
+              {/* Button: only the 'ticket' and "whatsapp" cards are actual link; others are informational */}
+              {card.id === "ticket" || card.id === "whatsapp" ? (
                 <a
                   href={card.buttonLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:pointer inline-flex items-center gap-2 rounded-[0.57rem] border border-primary bg-primary px-4 py-2.5 text-sm font-medium text-white transition-colors"
                 >
                   {card.buttonText}

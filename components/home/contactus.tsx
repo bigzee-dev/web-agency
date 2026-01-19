@@ -28,7 +28,9 @@ export default function ContactUs() {
           </Link>
           <Link
             className={` ${lightBgButton} inline-flex cursor-pointer items-center justify-center gap-x-2`}
-            href="/contact-us"
+            href="https://wa.me/26777810825"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaWhatsapp size="1.35em" />
             <span className="text-md font-semibold">Whatsapp</span>

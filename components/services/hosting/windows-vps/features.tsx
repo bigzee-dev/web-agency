@@ -1,8 +1,7 @@
 import { montserrat } from "@/app/ui/fonts";
 
 import { MonitorDot, Cpu, HardDrive, Network, Lock, Gauge } from "lucide-react";
-import { sectionHeadings, primaryButton } from "@/app/ui/customTailwindClasses";
-import Link from "next/link";
+import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 
 const features = [
   // {

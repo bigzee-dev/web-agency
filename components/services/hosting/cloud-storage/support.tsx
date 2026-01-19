@@ -1,9 +1,4 @@
-import {
-  grayButton,
-  primaryButton,
-  transparentButton,
-  whiteButton,
-} from "@/app/ui/customTailwindClasses";
+import { transparentButton, whiteButton } from "@/app/ui/customTailwindClasses";
 import { montserrat } from "@/app/ui/fonts";
 
 import Link from "next/link";

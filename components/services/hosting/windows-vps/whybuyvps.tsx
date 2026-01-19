@@ -11,7 +11,6 @@ import {
   Zap,
   CheckCircle2,
   Award,
-  Server,
 } from "lucide-react";
 
 const benefits = [

@@ -4,7 +4,7 @@ import {
   sectionSubHeadings,
 } from "@/app/ui/customTailwindClasses";
 import Image from "next/image";
-import { FaFolder, FaShare, FaChartLine, FaUserShield } from "react-icons/fa";
+import { FaChartLine, FaUserShield } from "react-icons/fa";
 import { MdOutlineFileUpload } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 

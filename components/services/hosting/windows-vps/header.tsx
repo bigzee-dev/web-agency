@@ -1,16 +1,8 @@
 "use client";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
+
 import Link from "next/link";
 
-import { Server } from "lucide-react";
-import { IoArrowForwardCircleSharp } from "react-icons/io5";
 import { FaWindows } from "react-icons/fa";
 import {
   pageHeadings,
@@ -20,9 +12,6 @@ import {
 } from "@/app/ui/customTailwindClasses";
 
 export default function HeaderVps() {
-  const swiperContStyles =
-    "flex items-center justify-center h-40 max-w-lg rounded-xl border bg-gradient-to-br from-gray-800 to-gray-700 p-9";
-
   return (
     <>
       <main className="overflow-hidden">

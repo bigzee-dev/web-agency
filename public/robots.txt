@@ -1,0 +1,11 @@
+# Robots.txt for Deltaworx
+# https://deltaworx.co.bw
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://deltaworx.co.bw/sitemap.xml
+
+# Disallow admin/private areas if any
+Disallow: /api/
