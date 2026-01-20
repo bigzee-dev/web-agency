@@ -41,7 +41,7 @@ export default function Stats() {
           </p>
         </div>
 
-        <div className="grid gap-12 divide-y divide-gray-400 *:text-center md:grid-cols-3 md:gap-2 md:divide-x md:divide-y-0">
+        <div className="grid gap-12 divide-gray-400 *:text-center md:grid-cols-3 md:gap-2 md:divide-x">
           {stats.map((stat, idx) => (
             <div className="space-y-4 px-3" key={idx}>
               {/* <span className="font-sans text-sm font-medium text-secondary">

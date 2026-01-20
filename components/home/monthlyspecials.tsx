@@ -41,7 +41,7 @@ const specials: Special[] = [
     image: "/img/linux-vps/hostiko-hosting-img.png",
     title: "Linux Virtual Machine",
     quote:
-      "Get powerful performance and full control over your deployment environment with our Linux VPS. Perfect for growing websites and applications that need more resources and flexibility.",
+      "Get full control and high performance with our Linux VPS, ideal for growing websites and apps that need more resources and flexibility.",
     features: [
       "2 vCPU, 4GB RAM, 60GB SSD",
       "Full Root Access",
@@ -50,7 +50,7 @@ const specials: Special[] = [
       "Web Apps, Databases, Docker and more",
       "Use as Proxy or VPN",
     ],
-    price: "P220/month",
+    price: "P195/month",
     href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-4`,
     linkText: "Order Now",
   },
@@ -109,12 +109,12 @@ export default function MonthlySpecials() {
 
         <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:gap-12">
           <div className="w-full md:w-1/3">
-            <div className="relative h-[350px] overflow-hidden rounded-xl bg-gray-800/15">
+            <div className="relative h-[350px] overflow-hidden">
               <Image
                 src={currentSpecial.image || "/placeholder.svg"}
                 alt={currentSpecial.title}
                 fill
-                className="h-full w-full object-cover"
+                className="h-full w-full rounded-2xl object-cover"
               />
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function MonthlySpecials() {
                 ))}
               </ul>
             )}
-            <div>
+            <div className="self-center md:self-start">
               <h3 className="font-sans text-3xl font-bold text-gray-900 md:text-3xl">
                 {currentSpecial.price}
               </h3>

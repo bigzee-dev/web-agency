@@ -35,7 +35,7 @@ export default function Page() {
       <HostingFeatures />
       <LogoPanel />
       <WhyChooseHosting />
-      <SupportOne text="Web hosting" />
+      <SupportOne text="Web hosting" pricingLink="#pricing-plans" />
       <FaqsHosting />
     </div>
   );

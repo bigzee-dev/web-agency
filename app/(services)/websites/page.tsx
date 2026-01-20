@@ -32,7 +32,7 @@ export default function Websites() {
       <ContentSection />
       <PricingWebsites />
       <PlansExplained />
-      <SupportOne text="a Website" />
+      <SupportOne text="a Website" pricingLink="#pricing" />
       <FaqsWebsites />
     </div>
   );

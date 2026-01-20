@@ -69,7 +69,7 @@ export default function Rule321() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="relative"
+          className="relative px-4 lg:px-0"
         >
           {/* Connecting Line */}
           <div className="absolute bottom-0 left-1/2 top-0 hidden w-px bg-gradient-to-b from-backup-3 via-backup-2 to-backup-1 lg:block" />

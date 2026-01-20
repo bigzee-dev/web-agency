@@ -44,7 +44,7 @@ const accessMethods = [
 
 export default function AccessMethods() {
   return (
-    <div className="x-padding relative mx-auto w-full max-w-7xl py-20">
+    <div className="x-padding relative mx-auto w-full max-w-7xl py-16 md:py-20">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className={sectionHeadings}>FLEXIBLE ACCESS</h2>
         <p className={`${sectionSubHeadings} mx-auto mt-4`}>
@@ -53,7 +53,7 @@ export default function AccessMethods() {
         </p>
       </div>
 
-      <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-9 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
         {accessMethods.map((method) => (
           <div
             key={method.title}

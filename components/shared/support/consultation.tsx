@@ -17,7 +17,7 @@ export default function Consultation({
           <div className="order-2 col-span-1 flex flex-col gap-y-8 md:order-1 md:col-span-7 md:gap-y-10">
             <div className="space-y-6 pt-0.5 text-start">
               <h2
-                className={` ${montserrat.className} text-4xl font-bold leading-[1.15] text-neutral-200 md:text-[2.8rem]`}
+                className={` ${montserrat.className} text-pretty text-3xl font-bold leading-[1.2] text-neutral-200 md:text-[2.8rem] md:leading-[1.15]`}
               >
                 Interested in&nbsp;{text}
                 <br />

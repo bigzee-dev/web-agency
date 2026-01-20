@@ -6,7 +6,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function PricingWebsites() {
   return (
-    <div className="x-padding relative isolate mx-auto max-w-6xl overflow-hidden py-20 pb-16">
+    <div
+      className="x-padding relative isolate mx-auto max-w-6xl overflow-hidden py-20 pb-16"
+      id="pricing"
+    >
       {/* Blur component for background effect */}
       <div
         aria-hidden="true"

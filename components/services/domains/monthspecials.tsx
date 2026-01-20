@@ -16,9 +16,9 @@ function PricingCard({
   originalPrice,
 }: PricingCardProps) {
   return (
-    <div className="flex flex-col items-start rounded-3xl bg-white px-8 py-6 text-center shadow-md">
+    <div className="flex flex-col items-start rounded-3xl border border-gray-300 bg-white px-8 py-6 text-center shadow-md">
       {/* Logo */}
-      <div className="mb-4 flex h-16 items-center justify-center">
+      <div className="mb-3 flex h-12 items-center justify-center">
         <img
           src={logoSrc || "/placeholder.svg"}
           alt={logoAlt}
@@ -27,10 +27,10 @@ function PricingCard({
       </div>
 
       {/* Title */}
-      <h2 className="mb-4 text-base leading-relaxed text-gray-600">{title}</h2>
+      <h2 className="mb-3 text-base leading-relaxed text-gray-600">{title}</h2>
 
       {/* Pricing Section */}
-      <div className="mb-6">
+      <div className="mb-4">
         <p className="mb-1 text-start text-sm text-gray-800">Starts at</p>
         <div className="flex flex-col items-start justify-center gap-2">
           {originalPrice > price && (
@@ -50,7 +50,7 @@ function PricingCard({
       {/* Register Button */}
       <Link
         href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register`}
-        className="w-full rounded-lg bg-primary px-6 py-2.5 font-semibold text-white"
+        className="w-full rounded-lg bg-primary px-6 py-2 font-semibold text-white"
       >
         Register
       </Link>

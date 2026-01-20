@@ -1,9 +1,15 @@
 import { transparentButton, whiteButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 
-export default function SupportOne({ text }: { text?: string }) {
+export default function SupportOne({
+  text,
+  pricingLink,
+}: {
+  text?: string;
+  pricingLink: string;
+}) {
   return (
-    <div className="relative mx-auto mb-0 mt-4 max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-r from-blue-400 to-blue-600 px-8 pb-8 pt-10 md:my-12 md:p-10 md:pl-20">
+    <div className="relative mx-auto mb-0 mt-4 max-w-7xl overflow-hidden rounded-none bg-gradient-to-r from-blue-400 to-blue-600 px-8 pb-8 pt-10 md:my-12 md:rounded-3xl md:p-10 md:pl-20">
       {/* background pattern */}
       <img
         src="/img/bg-pattern.png"
@@ -27,10 +33,16 @@ export default function SupportOne({ text }: { text?: string }) {
           </div>
 
           <div className="mt-auto flex items-center gap-x-4 text-secondary">
-            <Link href="/contact-us" className={` ${whiteButton} `}>
+            <Link
+              href="/contact-us"
+              className={` ${whiteButton} !w-36 !min-w-36 md:!w-44 md:!min-w-44`}
+            >
               Contact us
             </Link>
-            <Link href="/contact-us" className={` ${transparentButton} `}>
+            <Link
+              href={pricingLink}
+              className={` ${transparentButton} !w-36 !min-w-36 md:!w-44 md:!min-w-44`}
+            >
               Pricing
             </Link>
           </div>

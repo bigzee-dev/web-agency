@@ -30,7 +30,7 @@ export default function EmailSupport() {
             Contact us
           </Link>
           <Link
-            href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/business-email`}
+            href="#pricing-plans"
             className={` ${grayButton} !w-36 !min-w-36 md:!w-44 md:!min-w-44`}
           >
             Pricing

@@ -42,7 +42,7 @@ export default function Header() {
   return (
     <div className="relative min-h-[34rem] w-full overflow-hidden bg-gradient-to-tr from-gray-900 via-gray-800 to-primary">
       <div className="x-padding w-full">
-        <div className="relative mx-auto grid w-full max-w-7xl gap-x-12 gap-y-12 pb-4 pt-16 md:grid-cols-12 md:py-16">
+        <div className="relative mx-auto grid w-full max-w-7xl gap-x-12 gap-y-12 pb-12 pt-16 md:grid-cols-12 md:py-16">
           <div className="col-span-1 md:col-span-6">
             {/* Cloud storage badge */}
             <div className="inline-block">
@@ -105,10 +105,10 @@ export default function Header() {
                 src="/img/cloudstorage/150857.jpg"
                 alt="Cloud Storage"
                 fill
-                className="rounded-3xl object-cover"
+                className="object-cover md:rounded-3xl"
               />
               {/* Floating badge */}
-              <div className="absolute -bottom-5 -right-8 rounded-xl bg-gradient-to-br from-yellow-500 to-sky-700 px-6 py-4 shadow-xl">
+              <div className="absolute -bottom-5 right-8 rounded-xl bg-gradient-to-br from-yellow-500 to-sky-700 px-6 py-4 shadow-xl md:-right-8">
                 <div className="text-sm text-neutral-200">Up to</div>
                 <div className="text-3xl font-bold text-white">1TB</div>
                 <div className="text-sm text-neutral-200">Storage</div>

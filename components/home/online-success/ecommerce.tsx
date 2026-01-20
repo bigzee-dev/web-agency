@@ -130,7 +130,7 @@ export default function Component() {
               </div>
 
               {/* Payment icons */}
-              <div className="absolute bottom-2 left-4 flex gap-2 md:bottom-4">
+              <div className="absolute bottom-2 left-4 hidden gap-2 md:bottom-4 md:flex">
                 <div className="flex h-auto w-12 items-center justify-center rounded border border-white/20">
                   <img src="/img/home/visa.png" alt="Visa" />
                 </div>

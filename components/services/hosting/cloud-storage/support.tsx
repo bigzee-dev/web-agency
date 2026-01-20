@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function CloudStorageSupport() {
   return (
-    <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-x-12 gap-y-16 rounded-3xl bg-gradient-to-tr from-gray-900 via-gray-900 to-primary px-20 py-12 pb-6 pt-12 md:grid-cols-12">
+    <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-x-12 gap-y-16 rounded-none bg-gradient-to-tr from-gray-900 via-gray-900 to-primary px-8 py-12 pb-6 pt-12 md:grid-cols-12 md:rounded-3xl md:px-20">
       <div className="col-span-1 flex flex-col items-start gap-y-10 md:col-span-6">
         <div className="space-y-4">
           <h2

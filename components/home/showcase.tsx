@@ -70,11 +70,10 @@ export default function Showcase() {
               Providing Modern and Reliable Web Solutions
             </h1>
             <p className="text-center font-sans text-base leading-6 text-gray-700">
-              Deltaworx is a technology company based in Botswana. We specialize
-              in web solutions that empower developers and businesses to grow
-              online. From fully featured web apps to custom digital services
-              such as domains, email and cloud computing, we help you build a
-              digital presence that delivers real results.
+              Deltaworx, a Botswana-based tech company, offers web solutions
+              that help developers and businesses grow online. From web apps to
+              domains, email, and cloud services, we provide a digital
+              infrastructure that deliver results.
             </p>
           </div>
 

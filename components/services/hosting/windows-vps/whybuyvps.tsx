@@ -64,7 +64,7 @@ export default function WhyBuyVps() {
             Why Choose Our Windows VPS
           </h2>
           <p
-            className={` ${sectionSubHeadings} mx-auto max-w-2xl text-gray-600`}
+            className={` ${sectionSubHeadings} mx-auto hidden max-w-2xl text-gray-600 md:block`}
           >
             Reliable Windows hosting with licensing included, expert support,
             and infrastructure built for business.

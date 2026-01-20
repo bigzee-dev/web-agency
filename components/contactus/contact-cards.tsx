@@ -52,7 +52,7 @@ const supportCards: SupportCard[] = [
 
 export default function ContactCards() {
   return (
-    <main className="bg-background px-4 py-20">
+    <main className="bg-background px-4 py-12 md:py-20">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
           {supportCards.map((card) => (
@@ -65,7 +65,7 @@ export default function ContactCards() {
 
               {/* Title */}
               <h3
-                className={` ${montserrat.className} mb-2 text-xl font-semibold text-gray-800`}
+                className={` ${montserrat.className} mb-2 text-xl font-bold text-gray-800`}
               >
                 {card.title}
               </h3>

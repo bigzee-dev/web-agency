@@ -2,7 +2,7 @@ import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 
 export default function Banner() {
   return (
-    <div className="flex w-full flex-col items-center justify-center py-28">
+    <div className="flex w-full flex-col items-center justify-center py-20 md:py-28">
       <h2
         className={` ${sectionHeadings} mx-auto max-w-3xl text-pretty text-center leading-relaxed`}
       >

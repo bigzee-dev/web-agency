@@ -98,7 +98,7 @@ export default function PricingPlans({
             <div
               key={plan.id}
               className={classNames(
-                "rounded-xl bg-background p-8 px-10 shadow-2xl lg:px-10",
+                "rounded-xl bg-background p-8 px-10 shadow-md md:shadow-2xl lg:px-10",
                 plan.featured
                   ? "outline outline-2 outline-offset-1 outline-primary"
                   : "outline outline-1 outline-offset-1 outline-gray-400",
@@ -150,7 +150,7 @@ export default function PricingPlans({
                   "mx-auto mt-6 block w-full rounded-[5rem] px-3 py-2.5 text-center font-sans text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
                   plan.featured
                     ? "bg-primary text-white"
-                    : "border border-gray-700 bg-gray-800/10 text-gray-800 hover:border-transparent hover:bg-primary hover:text-white",
+                    : "bg-gray-800 text-white hover:border-transparent hover:bg-primary hover:text-white md:border md:border-gray-700 md:bg-gray-800/10 md:text-gray-800",
                 )}
               >
                 {plan.linkText}

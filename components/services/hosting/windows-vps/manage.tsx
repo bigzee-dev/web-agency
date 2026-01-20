@@ -24,13 +24,13 @@ function DashboardFeature() {
   ];
 
   return (
-    <section className="px-4 pb-0 pt-16 sm:px-6 lg:px-8">
+    <section className="px-4 pb-12 pt-0 sm:px-6 md:px-8 md:pb-0 md:pt-16">
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
 
         {/* Content Grid */}
-        <div className="mt-16 grid items-center gap-12 md:grid-cols-2 lg:gap-16">
-          {/* Left: Mockups */}
+        <div className="mt-8 grid items-center gap-x-12 gap-y-0 md:mt-16 md:grid-cols-2 lg:gap-16">
+          {/* Left: Image */}
           <div
             className="relative flex justify-center"
             style={{ width: "100%", height: "400px" }}
@@ -43,15 +43,15 @@ function DashboardFeature() {
             />
           </div>
 
-          {/* Right: Features */}
-          <div className="flex flex-col gap-6">
+          {/* Right: Content */}
+          <div className="flex flex-col gap-6 px-4">
             <h2 className={` ${longSectionHeadings} `}>
               Manage Your Instance with Ease
             </h2>
             <p className="text-lg leading-relaxed text-gray-600">
-              Manage, monitor, and configure your VPS from a clean, intuitive
-              control panel. From OS installs to backups, security, and user
-              access, everything is just a click away.
+              Manage and configure your VPS from an intuitive panel. OS
+              installs, backups, security, and user access are just a click
+              away.
             </p>
 
             {/* Feature List */}
@@ -67,7 +67,7 @@ function DashboardFeature() {
             </div>
 
             {/* CTA Button */}
-            <div className="pt-2">
+            <div className="self-center pt-2 md:self-start">
               <Link
                 href="#pricing-vps"
                 className={` ${primaryButton} inline-flex items-center justify-center gap-x-2`}

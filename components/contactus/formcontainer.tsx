@@ -5,7 +5,7 @@ import ContactUsForm from "../shared/contactform/contactusform";
 
 export default function ContactPageFormContainer() {
   return (
-    <div className="relative isolate mx-auto mt-4 max-w-3xl overflow-hidden rounded-[2rem] bg-gray-900 px-10 py-8">
+    <div className="relative isolate mx-auto mt-4 max-w-3xl overflow-hidden bg-gray-900 px-10 py-8 md:rounded-[2rem]">
       <Script
         src="https://challenges.cloudflare.com/turnstile/v0/api.js"
         async

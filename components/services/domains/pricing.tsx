@@ -87,7 +87,7 @@ export default function DomainPricingTable() {
   const [domain, setDomain] = React.useState("");
 
   return (
-    <div className="x-padding mx-auto w-full max-w-5xl pb-12 pt-4">
+    <div className="x-padding mx-auto w-full max-w-5xl pb-12 pt-4" id="pricing">
       <h2 className={sectionHeadings}>Available Tld&apos;s</h2>
       {/* Header Section */}
       <div className="mt-12 grid grid-cols-2 rounded-t-2xl bg-gray-800 text-white md:grid-cols-4">

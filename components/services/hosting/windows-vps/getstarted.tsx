@@ -30,10 +30,10 @@ export default function GetStartedVps() {
   return (
     <div className="w-full bg-gradient-to-tr from-gray-900 via-gray-900 to-primary">
       <section className="mx-auto flex w-full max-w-7xl items-center gap-x-12 px-6 pb-10 pt-12">
-        <div className="flex flex-1 flex-col">
+        <div className="flex flex-1 flex-col gap-y-6 md:gap-y-0">
           <div className="flex items-center gap-x-4">
             <h2
-              className={` ${longSectionHeadings} text-pretty text-neutral-100 md:mb-14`}
+              className={` ${longSectionHeadings} text-pretty text-neutral-100 md:mb-7`}
             >
               Quick Windows VPS Setup
             </h2>
