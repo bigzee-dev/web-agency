@@ -10,9 +10,9 @@ import Consultation from "@/components/shared/support/consultation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Linux VPS Hosting - Cloud Virtual Servers | Deltaworx",
+  title: "Linux VPS - Cloud Virtual Machines | Deltaworx",
   description:
-    "High-performance Linux VPS hosting in Botswana. Get dedicated resources, full root access, and choice of Ubuntu, Debian, CentOS. Scalable cloud virtual private servers with 99.9% uptime.",
+    "High-performance Linux VPS in Botswana. Get dedicated resources, full root access, and choice of Ubuntu, Debian, CentOS. Scalable cloud virtual private servers with 99.9% uptime.",
   keywords: [
     "Linux VPS Botswana",
     "cloud VPS",

@@ -12,7 +12,7 @@ import Consultation from "@/components/shared/support/consultation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Windows VPS Hosting - Cloud Windows Servers | Deltaworx",
+  title: "Windows VPS - Cloud Windows Virtual Machines | Deltaworx",
   description:
     "Windows VPS hosting in Botswana. Run Windows Server with full RDP access, dedicated resources, and Microsoft applications. Reliable cloud Windows virtual private servers with expert support.",
   keywords: [
