@@ -56,7 +56,7 @@ const benefits = [
 
 export default function WhyBuyVps() {
   return (
-    <section className="w-full bg-gradient-to-b from-gray-50 to-white pb-16 pt-6">
+    <section className="w-full bg-gradient-to-b from-gray-50 to-white pb-16 pt-16">
       <div className="mx-auto max-w-6xl px-6">
         {/* Header */}
         <div className="mb-12 text-center">

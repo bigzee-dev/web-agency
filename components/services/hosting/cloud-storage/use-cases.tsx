@@ -1,47 +1,45 @@
 import { montserrat } from "@/app/ui/fonts";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
-import { FaServer, FaCamera, FaCode, FaUsers } from "react-icons/fa";
-import { HiDocumentDuplicate } from "react-icons/hi";
-import { MdBackup } from "react-icons/md";
+import { Server, Camera, Code, Users, FileText, HardDrive } from "lucide-react";
 
 const useCases = [
   {
-    icon: <MdBackup className="h-6 w-6" />,
+    icon: <HardDrive className="h-6 w-6" />,
     title: "Automated Backups",
     description:
       "Schedule automated backups from your servers using rsync or rclone. Perfect for database dumps, application backups, and disaster recovery.",
     tags: ["rsync", "cron jobs", "automation"],
   },
   {
-    icon: <FaCamera className="h-6 w-6" />,
+    icon: <Camera className="h-6 w-6" />,
     title: "Media Storage",
     description:
       "Store photos, videos, and large media files. Share download links with clients or team members without email attachment limits.",
     tags: ["photos", "videos", "sharing"],
   },
   {
-    icon: <FaCode className="h-6 w-6" />,
+    icon: <Code className="h-6 w-6" />,
     title: "Local Support",
     description:
       "Get help from our Botswana-based support team who understand your needs. No outsourced call centers.",
     tags: ["CI/CD", "builds", "deployments"],
   },
   {
-    icon: <HiDocumentDuplicate className="h-6 w-6" />,
+    icon: <FileText className="h-6 w-6" />,
     title: "24/7 Availability",
     description:
       "Your files are always accessible with 99.9% uptime guarantee. Access your data whenever you need it, day or night.",
     tags: ["documents", "compliance", "archive"],
   },
   {
-    icon: <FaUsers className="h-6 w-6" />,
+    icon: <Users className="h-6 w-6" />,
     title: "Developer Friendly",
     description:
       "Access your Storage Box via modern protocols in your applications. Setup Cronjobs to regularly run you backups .",
     tags: ["teams", "collaboration", "secure"],
   },
   {
-    icon: <FaServer className="h-6 w-6" />,
+    icon: <Server className="h-6 w-6" />,
     title: "Server Offloading",
     description:
       "Offload static files, logs, and archives from your web servers. Keep your production servers lean and performant.",
@@ -68,7 +66,7 @@ export default function UseCases() {
               className="group relative overflow-hidden rounded-xl p-6 transition-all dark:bg-gray-800"
             >
               {/* Icon background */}
-              <div className="mb-4 inline-flex rounded-lg bg-gradient-to-br from-gray-800 to-gray-700 p-3 text-white">
+              <div className="hite mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gray-800 bg-gradient-to-br from-gray-800 to-gray-700 text-white shadow-lg">
                 {useCase.icon}
               </div>
 
@@ -89,7 +87,7 @@ export default function UseCases() {
                 {useCase.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-gray-600 dark:bg-blue-900/30 dark:text-blue-400"
+                    className="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-gray-600"
                   >
                     {tag}
                   </span>

@@ -4,13 +4,6 @@ import { MonitorDot, Cpu, HardDrive, Network, Lock, Gauge } from "lucide-react";
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 
 const features = [
-  // {
-  //   icon: Shield,
-  //   title: "Windows Licensing",
-  //   description:
-  //     "All Windows Server licenses included. No additional costs or compliance worries.",
-  //   color: "from-blue-500 to-blue-600",
-  // },
   {
     icon: MonitorDot,
     title: "Full RDP Access",
@@ -39,13 +32,7 @@ const features = [
       "High-speed connectivity with dedicated bandwidth for your applications.",
     color: "from-blue-500 to-cyan-600",
   },
-  // {
-  //   icon: Cloud,
-  //   title: "Auto Updates",
-  //   description:
-  //     "Automatic Windows updates keep your server secure without manual intervention.",
-  //   color: "from-sky-500 to-sky-600",
-  // },
+
   {
     icon: Lock,
     title: "Enterprise Security",

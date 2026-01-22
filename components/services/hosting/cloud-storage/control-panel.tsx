@@ -4,29 +4,23 @@ import {
   sectionSubHeadings,
 } from "@/app/ui/customTailwindClasses";
 import Image from "next/image";
-import { FaChartLine, FaUserShield } from "react-icons/fa";
-import { MdOutlineFileUpload } from "react-icons/md";
-import { IoMdSettings } from "react-icons/io";
+import { Check } from "lucide-react";
 
 const panelFeatures = [
   {
-    icon: <MdOutlineFileUpload className="h-5 w-5" />,
     title: "Bulk Upload",
     description: "Upload multiple files and compressed folders",
   },
 
   {
-    icon: <FaChartLine className="h-5 w-5" />,
     title: "Storage Analytics",
     description: "Monitor your storage usage and file statistics",
   },
   {
-    icon: <FaUserShield className="h-5 w-5" />,
     title: "Access Control",
     description: "Manage permissions and user access rights",
   },
   {
-    icon: <IoMdSettings className="h-5 w-5" />,
     title: "Configuration",
     description: "Easily configure FTP, SSH, and sync settings",
   },
@@ -50,23 +44,23 @@ export default function ControlPanel() {
         {/* Main content */}
         <div className="mt-16 grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           {/* Image/Demo section */}
-          <div className="col-span-1 lg:col-span-8">
+          <div className="col-span-1 lg:col-span-7">
             <Image
-              src="/img/cloudstorage/directadmin2.png"
+              src="/img/cloudstorage/direct3.png"
               alt="Control Panel"
-              width={1916}
-              height={866}
-              className="rounded-3xl shadow-2xl"
+              width={1445}
+              height={864}
+              className="rounded-2xl shadow-2xl"
             />
           </div>
 
           {/* Features list */}
-          <div className="col-span-1 lg:col-span-4">
+          <div className="col-span-1 lg:col-span-5">
             <div className="space-y-6">
               {panelFeatures.map((feature) => (
                 <div key={feature.title} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 rounded-lg bg-blue-500/10 p-3 text-primary dark:text-blue-400">
-                    {feature.icon}
+                  <div className="flex-shrink-0 rounded-lg bg-blue-500/15 p-3 text-primary dark:text-blue-400">
+                    <Check className="h-5 w-5" />
                   </div>
                   <div>
                     <h3

@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function ManageInstance() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="bg-background">
       <DashboardFeature />
     </main>
   );
@@ -24,12 +24,12 @@ function DashboardFeature() {
   ];
 
   return (
-    <section className="px-4 pb-12 pt-0 sm:px-6 md:px-8 md:pb-0 md:pt-16">
+    <section className="px-4 pb-6 pt-0 sm:px-6 md:px-8 md:pb-12 md:pt-16">
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
 
         {/* Content Grid */}
-        <div className="mt-8 grid items-center gap-x-12 gap-y-0 md:mt-16 md:grid-cols-2 lg:gap-16">
+        <div className="mt-3 grid items-center gap-x-12 gap-y-0 sm:mt-8 md:mt-12 md:grid-cols-2 lg:gap-16">
           {/* Left: Image */}
           <div
             className="relative flex justify-center"

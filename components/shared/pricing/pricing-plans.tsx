@@ -139,7 +139,7 @@ export default function PricingPlans({
                 )}
               >
                 <span>
-                  <IoIosPricetags size={16} />
+                  <IoIosPricetags size={18} />
                 </span>
                 Save 16% with yearly billing
               </p>

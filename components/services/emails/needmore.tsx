@@ -8,7 +8,7 @@ export default function NeedMore() {
         <h2
           className={` ${montserrat.className} flex items-center justify-center gap-x-4 text-balance text-center text-3xl font-semibold text-gray-800 md:text-3xl`}
         >
-          <span className="hidden items-center justify-center md:block">
+          <span className="flex items-center justify-center">
             <img src="/svg/emails/send.svg" className="size-20" alt="send" />
           </span>
           Need More? Get a Custom Plan.

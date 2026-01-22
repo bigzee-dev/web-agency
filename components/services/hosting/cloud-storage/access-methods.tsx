@@ -19,8 +19,7 @@ const accessMethods = [
     description:
       "Secure shell access with SFTP, SCP, and FTPS protocols for encrypted file transfers. Perfect for automation and scripting.",
 
-    color: "from-blue-500 to-cyan-500",
-    bgColor: "bg-blue-500/10",
+    bgColor: "from-violet-500 to-violet-600",
   },
   {
     icon: <Gauge {...iconProps} />,
@@ -28,8 +27,7 @@ const accessMethods = [
     description:
       "Industry-standard sync tools for efficient incremental backups and bi-directional file synchronization with compression support.",
 
-    color: "from-purple-500 to-pink-500",
-    bgColor: "bg-purple-500/10",
+    bgColor: "from-teal-500 to-teal-600",
   },
   {
     icon: <Network {...iconProps} />,
@@ -37,8 +35,7 @@ const accessMethods = [
     description:
       "Mount your Storage Box as a network drive on Windows, Mac, or Linux. Access files just like a local hard drive with drag-and-drop simplicity.",
 
-    color: "from-green-500 to-emerald-500",
-    bgColor: "bg-green-500/10",
+    bgColor: "from-blue-500 to-cyan-600",
   },
 ];
 
@@ -61,12 +58,12 @@ export default function AccessMethods() {
           >
             {/* Background gradient on hover */}
             <div
-              className={`absolute inset-0 bg-gradient-to-br ${method.color} opacity-0 transition-opacity group-hover:opacity-5`}
+              className={`absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity group-hover:opacity-5`}
             ></div>
 
             {/* Icon */}
             <div
-              className={`relative mb-4 inline-flex rounded-xl bg-gradient-to-br from-gray-800 to-purple-500 p-2 text-gray-700 transition-transform group-hover:scale-110 dark:text-gray-300`}
+              className={`relative mb-4 inline-flex rounded-xl bg-gradient-to-br ${method.bgColor} p-2 text-gray-300 transition-transform group-hover:scale-110`}
             >
               {method.icon}
             </div>
