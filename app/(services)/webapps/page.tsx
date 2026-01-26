@@ -1,5 +1,5 @@
 import WebAppsHeader from "@/components/services/webapps/header";
-import type { Metadata } from "next";
+import type { Metadata } from "next/types";
 
 export const metadata: Metadata = {
   title: "Web Application Development - Custom Software Solutions | Deltaworx",

@@ -9,7 +9,7 @@ import WhyBuyVps from "@/components/services/hosting/windows-vps/whybuyvps";
 import ManageInstance from "@/components/services/hosting/windows-vps/manage";
 import FaqsVps from "@/components/services/hosting/windows-vps/faqs-vps";
 import Consultation from "@/components/shared/support/consultation";
-import type { Metadata } from "next";
+import type { Metadata } from "next/types";
 
 export const metadata: Metadata = {
   title: "Windows VPS - Cloud Windows Virtual Machines | Deltaworx",

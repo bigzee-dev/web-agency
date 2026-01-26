@@ -6,7 +6,7 @@ import LogoPanel from "@/components/services/hosting/web-hosting/logo-panel";
 import WhyChooseHosting from "@/components/services/hosting/web-hosting/whychoose";
 import SupportOne from "@/components/shared/support/support-one";
 import FaqsHosting from "@/components/services/hosting/web-hosting/faqs-hosting";
-import type { Metadata } from "next";
+import type { Metadata } from "next/types";
 
 export const metadata: Metadata = {
   title: "Web Hosting - Fast & Reliable Hosting | Deltaworx",

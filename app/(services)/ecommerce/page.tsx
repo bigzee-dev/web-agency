@@ -5,7 +5,7 @@ import WooCommerce from "@/components/services/ecommerce/woocommerce";
 import PaymentGateways from "@/components/services/ecommerce/paymentgateways";
 import StartToday from "@/components/services/ecommerce/start-today";
 import Consultation from "@/components/shared/support/consultation";
-import type { Metadata } from "next";
+import type { Metadata } from "next/types";
 // import Faqs from "@/components/services/ecommerce/faqs";
 
 export const metadata: Metadata = {
