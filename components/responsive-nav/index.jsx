@@ -22,7 +22,7 @@ import {
   LoginIcon,
   RegisterIcon,
   DashboardIcon,
-  ChatIcon,
+  // ChatIcon,
   OpenTicketIcon,
   TicketsIcon,
   KnowledgebaseIcon,

@@ -64,7 +64,7 @@ const availableTLDs: DomainTLD[] = [
 
 export default function TldSlider() {
   const { currency } = useCurrency();
-  const currencyId = currency === "USD" ? 2 : 1;
+
   const currencySymbol = currency === "USD" ? "$" : "P";
   return (
     <section className="overflow-hidden">
