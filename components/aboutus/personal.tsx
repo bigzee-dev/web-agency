@@ -21,7 +21,7 @@ export default function Personal() {
           </h3>
           <div className="space-y-4 font-sans text-base leading-relaxed text-gray-600">
             <p>
-              The web is our playground — we&apos;re endlessly curious about how
+              The web is our playground, we&apos;re endlessly curious about how
               it works and excited by what it can become. Our love for the
               internet and the technologies behind it fuels every project we
               take on. We build with purpose, driven by creativity and care, not
@@ -29,11 +29,11 @@ export default function Personal() {
             </p>
 
             <p>
-              Our clients choose us because they can feel that passion in every
-              interaction — in the way we code, communicate, and support. We
-              believe in doing things right, not rushed. That means high-quality
-              work, honest advice, and reliable service built on genuine
-              enthusiasm for modern web solutions.
+              Our clients choose us because they feel our passion in every
+              interaction, from the way we write code to how we communicate and
+              provide support. We focus on doing things right rather than
+              rushing, delivering high quality work, honest advice, and reliable
+              service built on a genuine passion for modern web solutions.
             </p>
           </div>
         </div>

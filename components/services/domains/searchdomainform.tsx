@@ -11,10 +11,13 @@ import {
 } from "@/components/ui/domainsformselect";
 import { Input } from "@/components/ui/domainsforminput";
 import { IoSearch } from "react-icons/io5";
+import { useCurrency } from "@/contexts/currency-context";
 
 export default function SearchDomainForm() {
   const [domain, setDomain] = React.useState("");
   const [tld, setTld] = React.useState(".com");
+  const { currency } = useCurrency();
+  const currencyId = currency === "USD" ? 2 : 1;
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,7 +30,7 @@ export default function SearchDomainForm() {
     const fullDomain = `${domain}${tld}`;
     const url = `${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register&query=${encodeURIComponent(
       fullDomain,
-    )}`;
+    )}&currency=${currencyId}`;
     window.open(url); // Open in a new browser tab
   };
 

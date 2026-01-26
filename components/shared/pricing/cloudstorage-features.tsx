@@ -2,8 +2,8 @@ export const CloudStoragePlans = [
   {
     id: "storage-100gb",
     name: "Storage Box 100GB",
-    priceMonthly: "P60",
-    priceYearly: "P600",
+    priceMonthly: { BWP: "60", USD: "4.50" },
+    priceYearly: { BWP: "600", USD: "45.00" },
 
     features: [
       "100GB Available Storage",
@@ -13,15 +13,16 @@ export const CloudStoragePlans = [
       "rsync/rclone",
       "Usable as network drive",
     ],
-    href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-100gb`,
+    monthlyUrl: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-100gb&billingcycle=monthly`,
+    annualUrl: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-100gb&billingcycle=annually`,
     linkText: "Get 100GB",
     featured: false,
   },
   {
     id: "storage-250gb",
     name: "Storage Box 250GB",
-    priceMonthly: "P120",
-    priceYearly: "P1200",
+    priceMonthly: { BWP: "120", USD: "8.00" },
+    priceYearly: { BWP: "1200", USD: "80.00" },
 
     features: [
       "250GB Available Storage",
@@ -31,15 +32,16 @@ export const CloudStoragePlans = [
       "rsync/rclone",
       "Usable as network drive",
     ],
-    href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-250gb`,
+    monthlyUrl: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-250gb&billingcycle=monthly`,
+    annualUrl: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-250gb&billingcycle=annually`,
     linkText: "Get 250GB",
     featured: false,
   },
   {
     id: "storage-500gb",
     name: "Storage Box 500GB",
-    priceMonthly: "P180",
-    priceYearly: "P1800",
+    priceMonthly: { BWP: "180", USD: "13.50" },
+    priceYearly: { BWP: "1800", USD: "135.00" },
 
     features: [
       "500GB Available Storage",
@@ -49,15 +51,16 @@ export const CloudStoragePlans = [
       "rsync/rclone",
       "Usable as network drive",
     ],
-    href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-500gb`,
+    monthlyUrl: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-500gb&billingcycle=monthly`,
+    annualUrl: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-500gb&billingcycle=annually`,
     linkText: "Get 500GB",
     featured: true,
   },
   {
     id: "storage-1tb",
     name: "Storage Box 1TB",
-    priceMonthly: "P260",
-    priceYearly: "P2600",
+    priceMonthly: { BWP: "260", USD: "19.00" },
+    priceYearly: { BWP: "2600", USD: "190.00" },
 
     features: [
       "1TB Available Storage",
@@ -67,7 +70,8 @@ export const CloudStoragePlans = [
       "rsync/rclone",
       "Usable as network drive",
     ],
-    href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-1tb`,
+    monthlyUrl: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-1tb&billingcycle=monthly`,
+    annualUrl: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/cloud-storage/storage-box-1tb&billingcycle=annually`,
     linkText: "Get 1TB",
     featured: false,
   },

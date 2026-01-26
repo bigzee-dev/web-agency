@@ -3,9 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { montserrat } from "@/app/ui/fonts";
+import { lora, montserrat } from "@/app/ui/fonts";
 import { primaryButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
+import { useCurrency } from "@/contexts/currency-context";
 
 interface Special {
   id: number;
@@ -13,7 +14,7 @@ interface Special {
   title: string;
   quote: string;
   features?: string[];
-  price: string;
+  price: { BWP: string; USD: string };
   href: string;
   linkText: string;
 }
@@ -32,7 +33,7 @@ const specials: Special[] = [
       "4-Page Company Profile",
       "Monthly Maintenance & Hosting",
     ],
-    price: "P295/month",
+    price: { BWP: "295", USD: "19.95" },
     href: "/contact-us",
     linkText: "Get Started",
   },
@@ -50,13 +51,17 @@ const specials: Special[] = [
       "Web Apps, Databases, Docker and more",
       "Use as Proxy or VPN",
     ],
-    price: "P195/month",
+    price: { BWP: "180", USD: "13.50" },
     href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-4`,
     linkText: "Order Now",
   },
 ];
 
 export default function MonthlySpecials() {
+  const { currency } = useCurrency();
+
+  const currencyId = currency === "USD" ? 2 : 1;
+  const currencySymbol = currency === "USD" ? "$" : "P";
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -136,11 +141,17 @@ export default function MonthlySpecials() {
               </ul>
             )}
             <div className="self-center md:self-start">
-              <h3 className="font-sans text-3xl font-bold text-gray-900 md:text-3xl">
-                {currentSpecial.price}
+              <h3
+                className={`font-sans text-3xl font-bold text-gray-800 md:text-3xl`}
+              >
+                <span className={lora.className}>{currencySymbol}</span>
+                {currentSpecial.price[currency]}/month
               </h3>
             </div>
-            <Link href={currentSpecial.href} className={primaryButton}>
+            <Link
+              href={` ${currentSpecial.href}/&currency=${currencyId} `}
+              className={primaryButton}
+            >
               {currentSpecial.linkText}
             </Link>
           </div>

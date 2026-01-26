@@ -15,7 +15,7 @@ export default function SetupAccount() {
           Getting Started? Go with the{" "}
           <span className="font-semibold">BWP 60/mo</span> Startup plan. If you
           need more resources, opt for the{" "}
-          <span className="font-semibold">BWP 110/mo</span> Standard plan. Note
+          <span className="font-semibold">BWP 120/mo</span> Standard plan. Note
           that you can always upgrade later.
         </SetupCard>
 

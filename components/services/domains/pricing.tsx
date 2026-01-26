@@ -13,76 +13,15 @@ import {
 import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useCurrency } from "@/contexts/currency-context";
+import clsx from "clsx";
+import { merriweather } from "@/app/ui/fonts";
+import { domainExtensions } from "./extensionsdata";
 
 export default function DomainPricingTable() {
-  const domainExtensions = [
-    {
-      extension: ".com",
-      registration: { original: "P299.00", discounted: "P247.00" },
-      transfer: "P247.00",
-      renewal: "P257.00",
-    },
-    {
-      extension: ".net",
-      registration: { original: "P319.00", discounted: "P275.00" },
-      transfer: "P275.00",
-      renewal: "P349.00",
-    },
-    {
-      extension: ".org",
-      registration: { original: "P271.00", discounted: null },
-      transfer: "P271.00",
-      renewal: "P334.00",
-    },
-    {
-      extension: ".online",
-      registration: { original: "P616.00", discounted: null },
-      transfer: "P616.00",
-      renewal: "P616.00",
-    },
-    {
-      extension: ".co",
-      registration: { original: "P566.00", discounted: null },
-      transfer: "P566.00",
-      renewal: "P685.00",
-    },
-    {
-      extension: ".app",
-      registration: { original: "P375.00", discounted: "P337.00" },
-      transfer: "P337.00",
-      renewal: "P412.00",
-    },
-    {
-      extension: ".xyz",
-      registration: { original: "P282.00", discounted: null },
-      transfer: "P282.00",
-      renewal: "P350.00",
-    },
-    {
-      extension: ".store",
-      registration: { original: "P962.00", discounted: null },
-      transfer: "P962.00",
-      renewal: "P962.00",
-    },
-    {
-      extension: ".tech",
-      registration: { original: "P1132.00", discounted: null },
-      transfer: "P1132.00",
-      renewal: "P1132.00",
-    },
-    {
-      extension: ".io",
-      registration: { original: "P962.00", discounted: null },
-      transfer: "P962.00",
-      renewal: "P1145.00",
-    },
-    {
-      extension: ".co.za",
-      registration: { original: "P97.00", discounted: null },
-      transfer: "P97.00",
-      renewal: "P116.00",
-    },
-  ];
+  const { currency } = useCurrency();
+  const currencyId = currency === "USD" ? 2 : 1;
+  const currencySymbol = currency === "USD" ? "$" : "P";
 
   const [domain, setDomain] = React.useState("");
 
@@ -158,24 +97,71 @@ export default function DomainPricingTable() {
                   {domain.extension}
                 </TableCell>
                 <TableCell className="text-center">
-                  {domain.registration.discounted ? (
+                  {domain.registration[currency].discounted ? (
                     <div>
                       <span className="mr-2 text-gray-500 line-through">
-                        {domain.registration.original}
+                        <span
+                          className={clsx(
+                            "mr-[0.25rem]",
+                            currency === "USD" && merriweather.className,
+                            currency === "USD" && "text-[0.85rem]",
+                          )}
+                        >
+                          {currencySymbol}
+                        </span>
+                        {domain.registration[currency].original}
                       </span>
                       <span className="font-medium text-primary">
-                        {domain.registration.discounted}
+                        <span
+                          className={clsx(
+                            "mr-[0.25rem]",
+                            currency === "USD" && merriweather.className,
+                            currency === "USD" && "text-[0.85rem]",
+                          )}
+                        >
+                          {currencySymbol}
+                        </span>
+                        {domain.registration[currency].discounted}
                       </span>
                     </div>
                   ) : (
-                    domain.registration.original
+                    <span>
+                      <span
+                        className={clsx(
+                          "mr-[0.25rem]",
+                          currency === "USD" && merriweather.className,
+                          currency === "USD" && "text-[0.85rem]",
+                        )}
+                      >
+                        {currencySymbol}
+                      </span>
+                      {domain.registration[currency].original}
+                    </span>
                   )}
                 </TableCell>
                 <TableCell className="hidden text-center text-gray-800 md:table-cell">
-                  {domain.transfer}
+                  <span
+                    className={clsx(
+                      "mr-[0.25rem]",
+                      currency === "USD" && merriweather.className,
+                      currency === "USD" && "text-[0.85rem]",
+                    )}
+                  >
+                    {currencySymbol}
+                  </span>
+                  {domain.transfer[currency]}
                 </TableCell>
                 <TableCell className="hidden text-center text-gray-900 md:table-cell">
-                  {domain.renewal}
+                  <span
+                    className={clsx(
+                      "mr-[0.25rem]",
+                      currency === "USD" && merriweather.className,
+                      currency === "USD" && "text-[0.85rem]",
+                    )}
+                  >
+                    {currencySymbol}
+                  </span>
+                  {domain.renewal[currency]}
                 </TableCell>
               </TableRow>
             ))}
@@ -193,7 +179,7 @@ export default function DomainPricingTable() {
           const fullDomain = `${domain}`;
           const url = `${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register&query=${encodeURIComponent(
             fullDomain,
-          )}`;
+          )}&currency=${currencyId}`;
           setDomain("");
           window.open(url);
         }}

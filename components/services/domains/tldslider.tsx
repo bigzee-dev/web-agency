@@ -2,30 +2,70 @@ import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 import { ProgressiveBlur } from "@/components/motion-primitives/progressive-blur";
 import React from "react";
 import { Badge } from "@/components/ui/domains-slider/badge";
+import { merriweather } from "@/app/ui/fonts";
+
+import { useCurrency } from "@/contexts/currency-context";
+import clsx from "clsx";
 
 interface DomainTLD {
   extension: string;
-  price: number;
+  price: { BWP: string; USD: string };
   dotColor?: string; // Optional property for color customization
   badge?: "HOT" | "NEW"; // Optional badge for special TLDs
 }
 
 const availableTLDs: DomainTLD[] = [
-  { extension: "com", price: 247, dotColor: "text-slate-600", badge: "HOT" },
-  { extension: "net", price: 275, dotColor: "text-white", badge: "NEW" },
-  { extension: "co.za", price: 97, dotColor: "text-white" },
+  {
+    extension: "com",
+    price: { BWP: "247", USD: "18.00" },
+    dotColor: "text-slate-600",
+    badge: "HOT",
+  },
+  {
+    extension: "net",
+    price: { BWP: "275", USD: "20.00" },
+    dotColor: "text-white",
+    badge: "NEW",
+  },
+  {
+    extension: "co.za",
+    price: { BWP: "97", USD: "7.00" },
+    dotColor: "text-white",
+  },
   {
     extension: "org",
-    price: 271,
+    price: { BWP: "271", USD: "20.00" },
     dotColor: "text-green-500",
   },
-  { extension: "store", price: 962, dotColor: "text-white", badge: "HOT" },
-  { extension: "app", price: 337, dotColor: "text-slate-600", badge: "NEW" },
-  { extension: "online", price: 616, dotColor: "text-green-500" },
-  { extension: "io", price: 962, dotColor: "text-yellow-400", badge: "NEW" },
+  {
+    extension: "store",
+    price: { BWP: "962", USD: "69.00" },
+    dotColor: "text-white",
+    badge: "HOT",
+  },
+  {
+    extension: "app",
+    price: { BWP: "337", USD: "24.00" },
+    dotColor: "text-slate-600",
+    badge: "NEW",
+  },
+  {
+    extension: "online",
+    price: { BWP: "616", USD: "44.00" },
+    dotColor: "text-green-500",
+  },
+  {
+    extension: "io",
+    price: { BWP: "962", USD: "69.00" },
+    dotColor: "text-yellow-400",
+    badge: "NEW",
+  },
 ];
 
 export default function TldSlider() {
+  const { currency } = useCurrency();
+  const currencyId = currency === "USD" ? 2 : 1;
+  const currencySymbol = currency === "USD" ? "$" : "P";
   return (
     <section className="overflow-hidden">
       <div className="group relative m-auto max-w-7xl">
@@ -68,7 +108,16 @@ export default function TldSlider() {
                     )}
                   </div>
                   <div className="font-sans text-md text-neutral-300/90">
-                    P{tld.price}/year
+                    <span
+                      className={clsx(
+                        "mr-[0.1rem]",
+                        currency === "USD" && merriweather.className,
+                        currency === "USD" && "text-[0.85rem]",
+                      )}
+                    >
+                      {currencySymbol}
+                    </span>
+                    {tld.price[currency]}/year
                   </div>
                 </div>
               ))}

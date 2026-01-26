@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { FiCpu } from "react-icons/fi";
@@ -5,8 +7,10 @@ import { BsMemory } from "react-icons/bs";
 import { TfiHarddrive } from "react-icons/tfi";
 import { FaNetworkWired } from "react-icons/fa";
 import { GoArrowSwitch } from "react-icons/go";
-import { notoSans, montserrat } from "@/app/ui/fonts";
+import { notoSans, montserrat, merriweather } from "@/app/ui/fonts";
 import { VpsPlan } from "./vpspricing";
+import { useCurrency } from "@/contexts/currency-context";
+import clsx from "clsx";
 
 interface MobileCardViewProps {
   plans: VpsPlan[];
@@ -25,6 +29,9 @@ export default function MobileCardView({
   billingType,
 }: MobileCardViewProps) {
   const isMonthly = billingType === "monthly";
+  const { currency } = useCurrency();
+  const currencyId = currency === "USD" ? 2 : 1;
+  const currencySymbol = currency === "USD" ? "$" : "P";
 
   return (
     <div className="space-y-6 md:hidden">
@@ -49,10 +56,21 @@ export default function MobileCardView({
               </div>
               <div className="mb-4 mt-4 flex flex-col items-center justify-center">
                 <span className="text-2xl font-semibold text-primary">
-                  {isMonthly ? plan.monthlyPrice : plan.annualPrice}
+                  <span
+                    className={clsx(
+                      "mr-[0.1rem]",
+                      currency === "USD" && merriweather.className,
+                      currency === "USD" && "text-[1.3rem]",
+                    )}
+                  >
+                    {currencySymbol}
+                  </span>
+                  {isMonthly
+                    ? plan.monthlyPrice[currency]
+                    : plan.annualPrice[currency]}
                 </span>
                 <span className="text-xs text-gray-500">
-                  BWP/{isMonthly ? "mon" : "year"}
+                  {currency}/{isMonthly ? "mon" : "year"}
                 </span>
               </div>
               <div className="space-y-3 border-t border-gray-300 px-2 pb-3 pt-5">
@@ -95,7 +113,7 @@ export default function MobileCardView({
             </div>
 
             <Link
-              href={isMonthly ? plan.monthlyUrl : plan.annualUrl}
+              href={` ${isMonthly ? plan.monthlyUrl : plan.annualUrl}&currency=${currencyId} `}
               className="inline-flex w-full items-center justify-center rounded-3xl bg-primary px-4 py-2.5 text-md text-white"
             >
               Order

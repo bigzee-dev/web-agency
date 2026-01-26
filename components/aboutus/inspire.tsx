@@ -1,14 +1,30 @@
 import Image from "next/image";
 import { montserrat } from "@/app/ui/fonts";
+import Link from "next/link";
 
 const points = [
-  "The online world is constantly evolving and having a reliable digital agency that delivers results is essential.",
-  "At Deltaworx, technology and the internet aren’t just what we do, they’re what we live for.",
-
-  "We work on projects that make a positive impact and that we truly believe in.",
-  "Our team is driven by curiosity and a love for learning, from coding and system maintenance to server management.",
-  "The web never stops evolving and neither do we.",
-];
+  <>
+    Mandy Zee Investments T/A <strong>Deltaworx</strong> is a registered
+    business in Botswana.
+  </>,
+  <>Our office is located at Plot 698 Old Mall, Maun .</>,
+  <>
+    We value open communication and are always here to help. You can reach us by
+    phone at <strong>+267 72537524</strong>, by email at{" "}
+    <strong>admin@deltaworx.co.bw</strong>, or{" "}
+    <Link href="/contact-us" className="text-blue-600 hover:underline">
+      send us a message
+    </Link>
+    .
+  </>,
+  <>
+    You may also connect with us via our{" "}
+    <Link href="#" className="text-blue-600 hover:underline">
+      official social media channels
+    </Link>{" "}
+    for updates and inquiries.
+  </>,
+] as const;
 
 export default function Inspire() {
   return (

@@ -1,5 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { VpsPlan } from "./vpspricing";
+import { useCurrency } from "@/contexts/currency-context";
+import { merriweather } from "@/app/ui/fonts";
+import clsx from "clsx";
 
 interface DesktopTableViewProps {
   plans: VpsPlan[];
@@ -11,6 +16,9 @@ export default function DesktopTableView({
   billingType,
 }: DesktopTableViewProps) {
   const isMonthly = billingType === "monthly";
+  const { currency } = useCurrency();
+  const currencyId = currency === "USD" ? 2 : 1;
+  const currencySymbol = currency === "USD" ? "$" : "P";
 
   return (
     <div className="hidden w-full md:block">
@@ -56,14 +64,26 @@ export default function DesktopTableView({
               {plan.bandwidth}
             </div>
             <div className="p-4 text-center text-xl font-semibold text-primary">
-              {isMonthly ? plan.monthlyPrice : plan.annualPrice}/
+              <span
+                className={clsx(
+                  "mr-[0.1rem]",
+                  currency === "USD" && merriweather.className,
+                  currency === "USD" && "text-[1.2rem]",
+                )}
+              >
+                {currencySymbol}
+              </span>
+              {isMonthly
+                ? plan.monthlyPrice[currency]
+                : plan.annualPrice[currency]}
+              /
               <span className="text-sm font-normal text-gray-500">
                 {isMonthly ? "month" : "year"}
               </span>
             </div>
             <div className="flex items-center justify-center p-4">
               <Link
-                href={isMonthly ? plan.monthlyUrl : plan.annualUrl}
+                href={` ${isMonthly ? plan.monthlyUrl : plan.annualUrl}&currency=${currencyId} `}
                 className="rounded-lg bg-primary px-4 py-2 text-md text-white hover:bg-primary/80"
               >
                 Order

@@ -128,7 +128,7 @@ body {
   );
 }
 
-.valueCard1 {
+/* .valueCard1 {
   background: linear-gradient(to top right, #113043, #174a79);
 }
 
@@ -138,7 +138,7 @@ body {
 
 .valueCard4 {
   background: linear-gradient(to bottom right, #5b8d75, #6aa664, #658a80);
-}
+} */
 
 .loading-text {
   place-self: center;

@@ -13,11 +13,10 @@ export default function SetupAccount() {
       <div className="grid gap-8 px-4 md:grid-cols-3 md:gap-12 md:px-0">
         <SetupCard number="01" title="Choose a Storage Plan">
           Starting small? Go with the{" "}
-          <span className="font-semibold">BWP 40/mo</span> 100GB plan. Need
-          more space? Select the{" "}
-          <span className="font-semibold">BWP 80/mo</span> 500GB plan or{" "}
-          <span className="font-semibold">BWP 140/mo</span> 1TB plan. You can
-          always upgrade as your needs grow.
+          <span className="font-semibold">BWP 60/mo</span> 100GB plan. Need more
+          space? Select the <span className="font-semibold">BWP 180/mo</span>{" "}
+          500GB plan or <span className="font-semibold">BWP 260/mo</span> 1TB
+          plan. You can always upgrade as your needs grow.
         </SetupCard>
 
         <SetupCard number="02" title="Proceed to Checkout">

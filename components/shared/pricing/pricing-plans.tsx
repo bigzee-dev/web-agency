@@ -5,10 +5,12 @@ import { FaCheck } from "react-icons/fa";
 import { IoIosPricetags } from "react-icons/io";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-import { montserrat } from "@/app/ui/fonts";
+import { montserrat, merriweather } from "@/app/ui/fonts";
 import { EmailPlans } from "@/components/shared/pricing/email-features";
 import { HostingPlans } from "@/components/shared/pricing/hosting-features";
 import { CloudStoragePlans } from "@/components/shared/pricing/cloudstorage-features";
+import { useCurrency } from "@/contexts/currency-context";
+import clsx from "clsx";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -27,7 +29,11 @@ export default function PricingPlans({
       : plan === "cloudstorage"
         ? CloudStoragePlans
         : HostingPlans;
+
   const [isYearly, setIsYearly] = useState(false);
+  const { currency } = useCurrency();
+  const currencyId = currency === "USD" ? 2 : 1;
+  const currencySymbol = currency === "USD" ? "$" : "P";
 
   return (
     <div className="x-padding w-full">
@@ -117,15 +123,26 @@ export default function PricingPlans({
                   </div>
                 ) : null}
               </h3>
-              <p className="mt-4 flex items-baseline gap-x-2">
+              <p className="mt-4 flex items-baseline gap-x-1">
                 <span
                   className={classNames(
                     "text-5xl font-bold tracking-tight text-gray-800",
                   )}
                 >
-                  {isYearly ? plan.priceYearly : plan.priceMonthly}
+                  <span
+                    className={clsx(
+                      "mr-[0.25rem]",
+                      currency === "USD" && merriweather.className,
+                      currency === "USD" && "text-[2.7rem]",
+                    )}
+                  >
+                    {currencySymbol}
+                  </span>
+                  {isYearly
+                    ? plan.priceYearly[currency]
+                    : plan.priceMonthly[currency]}
                 </span>
-                <span className="text-base text-gray-500">
+                <span className="text-md text-gray-500">
                   /
                   {plan.name === "Business" || plan.name === "Enterprise"
                     ? "acc/"
@@ -144,7 +161,7 @@ export default function PricingPlans({
                 Save 16% with yearly billing
               </p>
               <a
-                href={plan.href}
+                href={`${isYearly ? plan.annualUrl : plan.monthlyUrl}&currency=${currencyId}`}
                 aria-describedby={plan.id}
                 className={classNames(
                   "mx-auto mt-6 block w-full rounded-[5rem] px-3 py-2.5 text-center font-sans text-md font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",

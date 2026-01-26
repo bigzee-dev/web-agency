@@ -26,9 +26,22 @@ import {
   OpenTicketIcon,
   TicketsIcon,
   KnowledgebaseIcon,
-  InboxSolidIcon,
+  PhoneIcon,
 } from "./nav-icons";
 import Link from "next/link";
+import CurrencySelector from "@/components/currency-selector";
+
+const ContactUsLink = () => {
+  return (
+    <Link
+      href="/contact-us"
+      className="contact-us-btn box-border flex items-center justify-center gap-x-1 rounded-md bg-neutral-700/15 px-[10px] py-[8px] text-xs font-medium uppercase text-secondary"
+      title="Contact us"
+    >
+      <PhoneIcon size="size-5" />
+    </Link>
+  );
+};
 
 export default function ResponsiveNav() {
   useResponsiveNav(); // <-- This runs the nav javascript
@@ -55,7 +68,7 @@ export default function ResponsiveNav() {
         <button className="close-menu" aria-label="Close menu">
           ✕
         </button>{" "}
-        {/* Added aria-label */}
+        {/* Main nav Links */}
         <div className="nav-menu">
           <ul className={` ${montserrat.className} nav-menu-stylingcontainer`}>
             <li className="nav-item">
@@ -342,13 +355,15 @@ export default function ResponsiveNav() {
             </li>
             <li className="nav-item block lg:hidden">
               <div className="nav-link nav-buttons">
-                <Link
+                <ContactUsLink />
+                <CurrencySelector />
+                {/* <Link
                   href="/contact-us"
-                  className="contact-us-btn box-border flex items-center justify-center gap-x-1.5 rounded-[10px] border-2 border-gray-800 bg-neutral-100 px-[12px] py-[8px] text-xs font-medium uppercase text-gray-800"
+                  className="contact-us-btn box-border flex hidden items-center justify-center gap-x-1.5 rounded-[10px] border-2 border-gray-800 bg-neutral-100 px-[12px] py-[8px] text-xs font-medium uppercase text-gray-800"
                 >
                   <ChatIcon size="size-5" />
                   Contact us
-                </Link>
+                </Link> */}
                 <div className="smlscreen-client-login box-border border-2 border-transparent bg-primary text-white">
                   <a
                     href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/clientarea.php`}
@@ -362,14 +377,10 @@ export default function ResponsiveNav() {
             </li>
           </ul>
         </div>
-        <div className="hidden items-center justify-between gap-x-[0.5rem] text-gray-800 lg:flex">
-          <Link
-            href="/contact-us"
-            className="box-border flex items-center justify-center gap-x-1 px-[10px] py-[8px] text-xs font-medium uppercase text-secondary"
-          >
-            <InboxSolidIcon size="size-5" />
-            Contact us
-          </Link>
+        {/* Desktop Nav Buttons */}
+        <div className="hidden items-center justify-between gap-x-[1rem] text-gray-800 lg:flex">
+          <ContactUsLink />
+          <CurrencySelector />
           <div className="client-login box-border bg-primary text-white">
             <a
               href={`${process.env.NEXT_PUBLIC_WHMCS_URL}/clientarea.php`}

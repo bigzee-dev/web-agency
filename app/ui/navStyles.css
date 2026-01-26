@@ -4,7 +4,7 @@
   position: sticky !important;
   top: 0;
   background-color: white;
-  z-index: 1000;
+  z-index: 45;
 }
 
 /* Add shadow when scrolled */
@@ -84,7 +84,7 @@
 
 .client-login {
   position: relative;
-  margin-left: 0.5rem;
+  /* margin-left: 0.5rem; */
   padding: 0.6rem 0.8rem;
   border-radius: 10px;
   display: flex;

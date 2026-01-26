@@ -21,7 +21,7 @@ const supportCards: SupportCard[] = [
     icon: <IoIosCall className={iconStyles} />,
     title: "Call Us",
     description: "We are standing by!",
-    buttonText: "+267 77810825",
+    buttonText: "+267 72537524",
     buttonLink: "#",
   },
   {
@@ -29,7 +29,7 @@ const supportCards: SupportCard[] = [
     icon: <MdEmail className={iconStyles} />,
     title: "Email",
     description: "Get a quick response",
-    buttonText: "support@deltaworx.co.bw",
+    buttonText: "admin@deltaworx.co.bw",
     buttonLink: "#",
   },
   {

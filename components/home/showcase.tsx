@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import Showcaselink from "./showcaselink";
 import {
   lightBgButton,
   pageHeadings,
   primaryButton,
 } from "@/app/ui/customTailwindClasses";
-import { IoArrowForwardCircle } from "react-icons/io5";
-import { cairo } from "@/app/ui/fonts";
+
 import { FaCheck } from "react-icons/fa6";
 
 const features = [
@@ -42,27 +41,7 @@ export default function Showcase() {
         <section className="flex w-full flex-col items-center gap-y-6">
           <div className="mb-3 flex w-full justify-center">
             {/* Business Email Link */}
-            <Link
-              href="/emails"
-              className="flex w-max items-center justify-center gap-x-3 rounded-lg border border-gray-400 bg-primary/10 py-1 pl-1 pr-1.5 shadow-md hover:bg-primary/15"
-            >
-              <p
-                className={` ${cairo.className} rounded-lg bg-slate-700 px-2 py-0.5 text-md font-semibold tracking-wide text-neutral-100`}
-              >
-                New
-              </p>
-
-              <span
-                className={` ${cairo.className} text-md font-semibold text-gray-700`}
-              >
-                Business Email
-              </span>
-              <p className="text-base font-semibold text-gray-700">P35</p>
-              <span className="text-gray-400">|</span>
-              <span>
-                <IoArrowForwardCircle className="text-slate-700" size="1.6em" />
-              </span>
-            </Link>
+            <Showcaselink />
           </div>
 
           <div className="mx-auto max-w-4xl space-y-6">

@@ -12,8 +12,8 @@ export interface VpsPlan {
   storage: string;
   bandwidth: string;
   network: string;
-  monthlyPrice: string;
-  annualPrice: string;
+  monthlyPrice: { BWP: string; USD: string };
+  annualPrice: { BWP: string; USD: string };
   popular: boolean;
   monthlyUrl: string;
   annualUrl: string;

@@ -3,6 +3,17 @@ import { Expletus_Sans } from "next/font/google"; /* this font is used for the l
 import { Montserrat } from "next/font/google";
 import { Noto_Sans } from "next/font/google";
 import { Cairo } from "next/font/google";
+import { Lora } from "next/font/google";
+import { Merriweather } from "next/font/google";
+
+export const lora = Lora({ subsets: ["latin"] });
+// Initialize the font
+export const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "700"], // 400 is regular, 700 is bold
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 export const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],

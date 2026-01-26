@@ -1,10 +1,18 @@
-import { montserrat } from "@/app/ui/fonts";
+"use client";
+
+import { montserrat, merriweather } from "@/app/ui/fonts";
 import Image from "next/image";
 import { transparentButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { useCurrency } from "@/contexts/currency-context";
+
+const price = { BWP: "35", USD: "2.50" };
 
 export default function Header() {
+  const { currency } = useCurrency();
+  const currencySymbol = currency === "USD" ? "$" : "P";
+
   return (
     <div className="relative w-full bg-rose-700/60">
       <div className="x-padding inset-0 w-full bg-gradient-to-r from-gray-900 via-primary to-slate-600">
@@ -50,7 +58,12 @@ export default function Header() {
                     Starting from
                   </span>
                   <span className="text-4xl font-semibold text-neutral-300">
-                    P35
+                    <span
+                      className={` ${merriweather.className} mr-[0.1rem] text-[2.15rem]`}
+                    >
+                      {currencySymbol}
+                    </span>
+                    {price[currency]}
                     <span className="text-lg font-medium text-neutral-400">
                       /month
                     </span>

@@ -6,6 +6,7 @@ import { inter } from "@/app/ui/fonts";
 import ResponsiveNav from "@/components/responsive-nav";
 import Footer from "@/components/footer/footer";
 import Script from "next/script";
+import { CurrencyProvider } from "@/contexts/currency-context";
 
 export const metadata: Metadata = {
   title: "Cloud Compute, Web Dev, Domains, Email, Servers in BW | Deltaworx",
@@ -31,9 +32,11 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-background antialiased`}>
-        <ResponsiveNav />
-        {children}
-        <Footer />
+        <CurrencyProvider>
+          <ResponsiveNav />
+          {children}
+          <Footer />
+        </CurrencyProvider>
       </body>
     </html>
   );

@@ -178,7 +178,7 @@ export default function ContactUsForm() {
           <div className="mt-1">
             <Select>
               <SelectTrigger className={`w-full`}>
-                <SelectValue placeholder="Select a service" />
+                <SelectValue placeholder="Select a range" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>

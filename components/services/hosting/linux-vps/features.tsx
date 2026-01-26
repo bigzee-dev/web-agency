@@ -83,10 +83,10 @@ const VpsFeatures = () => {
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 font-sans text-gray-600"
+                    className="flex items-center gap-2 text-gray-700"
                   >
                     <feature.icon className="h-4 w-4" />
-                    <span className="text-sm">{feature.text}</span>
+                    <span className="text-[0.80rem]">{feature.text}</span>
                   </div>
                 ))}
               </div>

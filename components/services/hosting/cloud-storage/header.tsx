@@ -1,4 +1,6 @@
-import { montserrat } from "@/app/ui/fonts";
+"use client";
+
+import { merriweather, montserrat } from "@/app/ui/fonts";
 import { HiCloud } from "react-icons/hi2";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { MdDevices } from "react-icons/md";
@@ -6,10 +8,13 @@ import { FaLock } from "react-icons/fa";
 import Image from "next/image";
 import { greenButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
+import { useCurrency } from "@/contexts/currency-context";
 
 const iconProps = {
   size: "1.2em",
 };
+
+const price = { BWP: "60", USD: "4.50" };
 
 const features = [
   {
@@ -39,6 +44,9 @@ const features = [
 ];
 
 export default function Header() {
+  const { currency } = useCurrency();
+  const currencySymbol = currency === "USD" ? "$" : "P";
+
   return (
     <div className="relative min-h-[34rem] w-full overflow-hidden bg-gradient-to-tr from-gray-900 via-gray-800 to-primary">
       <div className="x-padding w-full">
@@ -89,7 +97,12 @@ export default function Header() {
                   Starting from
                 </span>
                 <span className="text-4xl font-semibold text-neutral-300">
-                  P60
+                  <span
+                    className={` ${merriweather.className} mr-[0.1rem] text-[2.15rem]`}
+                  >
+                    {currencySymbol}
+                  </span>
+                  {price[currency]}
                   <span className="text-lg font-medium text-neutral-400">
                     /month
                   </span>

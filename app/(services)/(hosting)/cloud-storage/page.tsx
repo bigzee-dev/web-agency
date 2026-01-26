@@ -8,7 +8,7 @@ import UseCases from "@/components/services/hosting/cloud-storage/use-cases";
 import Rule321 from "@/components/services/hosting/cloud-storage/321rule";
 import CloudStorageSupport from "@/components/services/hosting/cloud-storage/support";
 import CloudStorageFAQs from "@/components/services/hosting/cloud-storage/faqs";
-import { Metadata } from "next";
+import { Metadata } from "next/types";
 
 export const metadata: Metadata = {
   title: "Cloud Storage - Secure Storage Box | Deltaworx",
