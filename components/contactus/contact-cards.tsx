@@ -1,5 +1,6 @@
 import type React from "react";
-import { IoIosCall, IoLogoWhatsapp } from "react-icons/io";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaTicket } from "react-icons/fa6";
 import { montserrat } from "@/app/ui/fonts";
@@ -18,7 +19,7 @@ const iconStyles = "h-8 w-8 text-primary";
 const supportCards: SupportCard[] = [
   {
     id: "call",
-    icon: <IoIosCall className={iconStyles} />,
+    icon: <FaPhone className={iconStyles} />,
     title: "Call Us",
     description: "We are standing by!",
     buttonText: "+267 72537524",
@@ -45,8 +46,8 @@ const supportCards: SupportCard[] = [
     icon: <IoLogoWhatsapp className={iconStyles} />,
     title: "Whatsapp",
     description: "Chat with support now",
-    buttonText: "+267 77810825",
-    buttonLink: "https://wa.me/26777810825",
+    buttonText: "+267 72537524",
+    buttonLink: "https://wa.me/26772537524",
   },
 ];
 
@@ -65,7 +66,7 @@ export default function ContactCards() {
 
               {/* Title */}
               <h3
-                className={` ${montserrat.className} mb-2 text-xl font-bold text-gray-800`}
+                className={` ${montserrat.className} mb-2 text-xl font-semibold text-gray-800`}
               >
                 {card.title}
               </h3>
@@ -81,18 +82,15 @@ export default function ContactCards() {
                   href={card.buttonLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:pointer inline-flex items-center gap-2 rounded-[0.57rem] border border-primary bg-primary px-4 py-2.5 text-sm font-medium text-white transition-colors"
+                  className="hover:pointer inline-flex items-center gap-2 rounded-[0.60rem] border border-primary bg-primary px-4 py-[0.62rem] text-sm font-medium text-white transition-colors"
                 >
                   {card.buttonText}
-                  <span className="ml-2" aria-hidden="true">
-                    &rarr;
-                  </span>
                 </a>
               ) : (
                 <div
                   role="article"
                   aria-disabled="true"
-                  className="inline-flex cursor-default items-center gap-2 rounded-[0.57rem] border border-primary bg-transparent px-4 py-2.5 text-sm font-medium text-secondary"
+                  className="inline-flex cursor-default items-center gap-2 rounded-[0.60rem] bg-transparent px-4 py-2.5 text-sm font-medium text-secondary"
                 >
                   {card.buttonText}
                 </div>

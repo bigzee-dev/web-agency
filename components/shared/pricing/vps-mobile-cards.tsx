@@ -60,7 +60,7 @@ export default function MobileCardView({
                     className={clsx(
                       "mr-[0.1rem]",
                       currency === "USD" && merriweather.className,
-                      currency === "USD" && "text-[1.3rem]",
+                      currency === "USD" && "text-[1.4rem]",
                     )}
                   >
                     {currencySymbol}

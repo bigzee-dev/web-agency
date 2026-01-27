@@ -3,6 +3,7 @@
 import { cairo, montserrat } from "@/app/ui/fonts";
 import { NavChevron } from "./chevron";
 import useResponsiveNav from "@/app/hooks/useResponsiveNav";
+import { MailPlus } from "lucide-react";
 import {
   WebAppIcon,
   ShoppingBagIcon,
@@ -26,7 +27,6 @@ import {
   OpenTicketIcon,
   TicketsIcon,
   KnowledgebaseIcon,
-  PhoneIcon,
 } from "./nav-icons";
 import Link from "next/link";
 import CurrencySelector from "@/components/currency-selector";
@@ -38,7 +38,7 @@ const ContactUsLink = () => {
       className="contact-us-btn box-border flex items-center justify-center gap-x-1 rounded-md bg-neutral-700/15 px-[10px] py-[8px] text-xs font-medium uppercase text-secondary"
       title="Contact us"
     >
-      <PhoneIcon size="size-5" />
+      <MailPlus size="1.65em" className="text-gray-800" />
     </Link>
   );
 };
