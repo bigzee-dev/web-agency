@@ -38,7 +38,7 @@ export default function HeaderVps() {
                   <span className="text-[0.8rem] font-medium text-gray-600">
                     1vCPU / 2GB RAM -{" "}
                     <span className="text-sm font-semibold text-gray-700">
-                      P140
+                      P125
                     </span>
                   </span>
                   <span className="block h-4 w-px bg-gray-800"></span>

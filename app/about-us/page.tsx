@@ -8,7 +8,8 @@ import Personal from "@/components/aboutus/personal";
 import type { Metadata } from "next/types";
 
 export const metadata: Metadata = {
-  title: "About Us - Your IT Partner in Botswana | Deltaworx",
+  title:
+    "About Us - Your Digital Infrastructure Partner in Botswana | Deltaworx",
   description:
     "Meet Deltaworx, Botswana's trusted IT solutions provider. Learn about our mission, values, and commitment to delivering exceptional cloud computing, web development, and hosting services.",
   keywords: [

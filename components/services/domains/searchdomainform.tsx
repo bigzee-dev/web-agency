@@ -31,7 +31,7 @@ export default function SearchDomainForm() {
     const url = `${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=register&query=${encodeURIComponent(
       fullDomain,
     )}&currency=${currencyId}`;
-    window.open(url); // Open in a new browser tab
+    window.location.href = url; // Open in a new browser tab
   };
 
   return (

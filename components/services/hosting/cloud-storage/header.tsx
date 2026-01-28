@@ -74,14 +74,16 @@ export default function Header() {
                   >
                     <h6 className="flex items-center gap-2 font-medium tracking-wide text-blue-300">
                       <div
-                        className={`mr-0.5 rounded-lg bg-white/10 p-2 text-blue-300 outline outline-1 outline-gray-500/50`}
+                        className={`mr-0.5 rounded-lg bg-white/5 p-2.5 text-slate-400 outline outline-1 outline-gray-500/50`}
                       >
                         {feature.icon}
                       </div>
 
-                      <span className="text-neutral-200">{feature.title}</span>
+                      <span className="text-neutral-300/95">
+                        {feature.title}
+                      </span>
                     </h6>
-                    <p className="ml-0.5 font-sans text-sm leading-relaxed text-neutral-300/80">
+                    <p className="ml-0.5 font-sans text-sm leading-relaxed text-neutral-300/75">
                       {feature.description}
                     </p>
                   </div>

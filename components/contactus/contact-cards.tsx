@@ -4,6 +4,7 @@ import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaTicket } from "react-icons/fa6";
 import { montserrat } from "@/app/ui/fonts";
+import { primaryButton } from "@/app/ui/customTailwindClasses";
 
 interface SupportCard {
   id: string;
@@ -14,7 +15,7 @@ interface SupportCard {
   buttonLink: string;
 }
 
-const iconStyles = "h-8 w-8 text-primary";
+const iconStyles = "h-6 w-6 text-white";
 
 const supportCards: SupportCard[] = [
   {
@@ -39,7 +40,7 @@ const supportCards: SupportCard[] = [
     title: "Submit A Ticket",
     description: "Get dedicated support",
     buttonText: "Submit Ticket",
-    buttonLink: "#",
+    buttonLink: `${process.env.WHMCS_URL}/submitticket.php`,
   },
   {
     id: "whatsapp",
@@ -54,25 +55,27 @@ const supportCards: SupportCard[] = [
 export default function ContactCards() {
   return (
     <main className="bg-background px-4 py-12 md:py-20">
-      <div className="mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
           {supportCards.map((card) => (
             <div
               key={card.id}
-              className="flex flex-col items-center rounded-lg border border-border bg-card p-8 text-center shadow-md transition-shadow hover:shadow-lg"
+              className="flex flex-col items-center rounded-3xl border border-border bg-neutral-200/30 p-6 text-center shadow-md transition-shadow hover:shadow-lg"
             >
               {/* Icon */}
-              <div className="mb-4">{card.icon}</div>
+              <div className="mb-4 rounded-2xl bg-gray-800 p-3">
+                {card.icon}
+              </div>
 
               {/* Title */}
               <h3
-                className={` ${montserrat.className} mb-2 text-xl font-semibold text-gray-800`}
+                className={` ${montserrat.className} mb-2 text-lg font-bold text-gray-800`}
               >
                 {card.title}
               </h3>
 
               {/* Description */}
-              <p className="mb-6 flex-grow text-sm text-muted-foreground">
+              <p className="mb-6 flex-grow font-sans text-md text-gray-600">
                 {card.description}
               </p>
 
@@ -82,7 +85,7 @@ export default function ContactCards() {
                   href={card.buttonLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:pointer inline-flex items-center gap-2 rounded-[0.60rem] border border-primary bg-primary px-4 py-[0.62rem] text-sm font-medium text-white transition-colors"
+                  className={primaryButton}
                 >
                   {card.buttonText}
                 </a>
@@ -90,7 +93,7 @@ export default function ContactCards() {
                 <div
                   role="article"
                   aria-disabled="true"
-                  className="inline-flex cursor-default items-center gap-2 rounded-[0.60rem] bg-transparent px-4 py-2.5 text-sm font-medium text-secondary"
+                  className="inline-flex cursor-default items-center gap-2 rounded-[0.60rem] bg-transparent px-4 py-2.5 font-sans text-md font-medium text-gray-800"
                 >
                   {card.buttonText}
                 </div>
