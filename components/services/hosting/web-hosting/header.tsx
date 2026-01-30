@@ -50,7 +50,7 @@ export default function Header() {
 
   return (
     <div className="relative min-h-[34rem] w-full bg-black">
-      <div className="x-padding w-full">
+      <div className="x-padding w-full xl:px-12">
         <div className="mx-auto grid w-full max-w-7xl gap-y-12 pb-4 pt-16 md:grid-cols-12 md:py-16">
           <div className="col-span-1 h-[26rem] md:col-span-6 md:h-auto"></div>
           {/*  image */}

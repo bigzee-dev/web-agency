@@ -12,7 +12,7 @@ import { Metadata } from "next/types";
 export const metadata: Metadata = {
   title: "Linux VPS - Cloud Virtual Machines | Deltaworx",
   description:
-    "High-performance Linux VPS in Botswana. Get dedicated resources, full root access, and choice of Ubuntu, Debian, CentOS. Scalable cloud virtual private servers with 99.9% uptime.",
+    "High-performance Linux VPS. Get dedicated resources, full root access, and choice of Ubuntu, Debian, CentOS and more. Support team based in Botswana.",
   keywords: [
     "Linux VPS Botswana",
     "cloud VPS",

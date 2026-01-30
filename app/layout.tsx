@@ -27,7 +27,7 @@ export default function RootLayout({
       <head>
         <Script
           src="https://umami.bigzee.app/script.js"
-          data-website-id="811eed82-8238-4191-8f26-858616355a42"
+          data-website-id="65f346f6-91da-491b-952e-976e916755ae"
           strategy="afterInteractive"
         />
       </head>

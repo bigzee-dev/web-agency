@@ -24,6 +24,9 @@ const staticPages = [
   // Blog
   { url: "/blog-posts", changeFrequency: "daily" as const, priority: 0.8 },
 
+  // How to pay
+  { url: "/how-to-pay", changeFrequency: "monthly" as const, priority: 0.5 },
+
   // Legal
   {
     url: "/legal/privacy-policy",

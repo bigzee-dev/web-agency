@@ -14,7 +14,7 @@ import type { Metadata } from "next/types";
 export const metadata: Metadata = {
   title: "Windows VPS - Cloud Windows Virtual Machines | Deltaworx",
   description:
-    "Windows VPS hosting in Botswana. Run Windows Server with full RDP access, dedicated resources, and Microsoft applications. Reliable cloud Windows virtual private servers with expert support.",
+    "Run Windows Server with full RDP access, high performance compute, and Microsoft applications. Support team based in Botswana",
   keywords: [
     "Windows VPS Botswana",
     "Windows Server hosting",
