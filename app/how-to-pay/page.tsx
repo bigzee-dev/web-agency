@@ -32,11 +32,12 @@ export default function HowToPayPage() {
       },
       content: [
         <>
-          After placing your order, select <strong>"Bank Transfer"</strong> as
-          your payment method and complete the order. An invoice will then be
-          generated in your client area, where you’ll find our bank account
-          details in the top-right corner. Use your bank’s online banking
-          platform or mobile app to make the payment.
+          After placing your order, select{" "}
+          <strong>&quot;Bank Transfer&quot;</strong> as your payment method and
+          complete the order. An invoice will then be generated in your client
+          area, where you’ll find our bank account details in the top-right
+          corner. Use your bank’s online banking platform or mobile app to make
+          the payment.
         </>,
       ],
       alert: {
@@ -70,8 +71,8 @@ export default function HowToPayPage() {
       },
       content: [
         <>
-          After making your order, choose <strong>"PayPal"</strong> as your
-          payment option and complete the order. The PayPal page will load
+          After making your order, choose <strong>&quot;PayPal&quot;</strong> as
+          your payment option and complete the order. The PayPal page will load
           automatically, and you will be prompted to log in to your PayPal
           account and complete the payment.
         </>,
@@ -101,11 +102,11 @@ export default function HowToPayPage() {
       },
       content: [
         <>
-          After placing your order, select <strong>"Orange Money"</strong> as
-          your payment method and complete the order. An invoice will then be
-          generated in your client area, where you’ll find our Orange Money
-          account details in the top-right corner. Make the payment using your
-          Orange Money account.
+          After placing your order, select{" "}
+          <strong>&quot;Orange Money&quot;</strong> as your payment method and
+          complete the order. An invoice will then be generated in your client
+          area, where you’ll find our Orange Money account details in the
+          top-right corner. Make the payment using your Orange Money account.
         </>,
       ],
       alert: {
