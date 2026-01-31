@@ -5,7 +5,7 @@ import Benefits from "@/components/aboutus/benefits";
 import WorkWithUs from "@/components/aboutus/workwithus";
 import OurValues from "@/components/aboutus/ourvalues";
 import Personal from "@/components/aboutus/personal";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:

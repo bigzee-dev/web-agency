@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog - Tech Insights & Industry News | Deltaworx",

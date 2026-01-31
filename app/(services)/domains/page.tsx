@@ -7,7 +7,7 @@ import DigitalRealEstate from "@/components/services/domains/digital-realestate"
 import WhyBuy from "@/components/services/domains/whybuy";
 import SupportOne from "@/components/shared/support/support-one";
 import FaqsDomains from "@/components/services/domains/faqs-domains";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Domain Registration - Secure Your Online Identity | Deltaworx",

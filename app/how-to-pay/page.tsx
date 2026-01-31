@@ -4,7 +4,7 @@ import {
 } from "@/app/ui/customTailwindClasses";
 import { inter, montserrat } from "@/app/ui/fonts";
 import { cn } from "@/lib/utils";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "How to Pay - Payment Methods | Deltaworx",

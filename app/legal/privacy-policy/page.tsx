@@ -1,7 +1,7 @@
 import qs from "qs";
 import { type BlocksContent } from "@strapi/blocks-react-renderer";
 import BlockRendererClient from "@/app/blockrenderclient";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Deltaworx",

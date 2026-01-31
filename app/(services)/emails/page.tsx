@@ -7,7 +7,7 @@ import EmailClient from "@/components/services/emails/client";
 import WhyUseEmail from "@/components/services/emails/whyuse-email";
 import EmailSupport from "@/components/services/emails/support";
 import FaqsEmail from "@/components/services/emails/faqs-email";
-import type { Metadata } from "next/types";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Professional Email Hosting - Business Email Solutions | Deltaworx",

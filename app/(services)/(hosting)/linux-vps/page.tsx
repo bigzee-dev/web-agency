@@ -7,7 +7,7 @@ import LinuxDistributions from "@/components/services/hosting/linux-vps/os-list"
 import WhyBuyVps from "@/components/services/hosting/linux-vps/whybuyvps";
 import FaqsVps from "@/components/services/hosting/linux-vps/faqs-vps";
 import Consultation from "@/components/shared/support/consultation";
-import { Metadata } from "next/types";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Linux VPS - Cloud Virtual Machines | Deltaworx",
