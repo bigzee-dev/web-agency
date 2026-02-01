@@ -4,7 +4,6 @@ import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaTicket } from "react-icons/fa6";
 import { montserrat } from "@/app/ui/fonts";
-import { primaryButton } from "@/app/ui/customTailwindClasses";
 
 interface SupportCard {
   id: string;

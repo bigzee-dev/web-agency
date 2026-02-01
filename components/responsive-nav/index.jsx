@@ -3,7 +3,6 @@
 import { cairo, montserrat } from "@/app/ui/fonts";
 import { NavChevron } from "./chevron";
 import useResponsiveNav from "@/app/hooks/useResponsiveNav";
-import { MailPlus } from "lucide-react";
 import {
   WebAppIcon,
   ShoppingBagIcon,
