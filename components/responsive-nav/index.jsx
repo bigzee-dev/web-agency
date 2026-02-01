@@ -20,10 +20,10 @@ import {
   InfoIcon,
   // BookIcon,
   ListIcon,
+  MailPlusIcon,
   LoginIcon,
   RegisterIcon,
   DashboardIcon,
-  // ChatIcon,
   OpenTicketIcon,
   TicketsIcon,
   KnowledgebaseIcon,
@@ -38,7 +38,7 @@ const ContactUsLink = () => {
       className="contact-us-btn box-border flex items-center justify-center gap-x-1 rounded-md bg-neutral-700/15 px-[10px] py-[8px] text-xs font-medium uppercase text-secondary"
       title="Contact us"
     >
-      <MailPlus size="1.65em" className="text-gray-800" />
+      <MailPlusIcon size="size-5" />
     </Link>
   );
 };
@@ -92,7 +92,7 @@ export default function ResponsiveNav() {
                 <Link href="/webapps" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
-                      <WebAppIcon />
+                      <WebAppIcon size="size-5" />
                     </span>
                     Web Applications
                   </div>{" "}
@@ -100,7 +100,7 @@ export default function ResponsiveNav() {
                 <Link href="/ecommerce" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
-                      <ShoppingBagIcon />
+                      <ShoppingBagIcon size="size-5" />
                     </span>
                     Ecommerce Stores
                   </div>{" "}
@@ -255,6 +255,14 @@ export default function ResponsiveNav() {
                       <InfoIcon size="size-5" />
                     </span>
                     About Us
+                  </div>
+                </Link>
+                <Link href="/contact-us" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <MailPlusIcon size="size-5" />
+                    </span>
+                    Contact us
                   </div>
                 </Link>
                 {/* <Link href="/blog-posts" className="dropdown-item">

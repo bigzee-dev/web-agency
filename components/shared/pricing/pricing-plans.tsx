@@ -104,7 +104,7 @@ export default function PricingPlans({
             <div
               key={plan.id}
               className={classNames(
-                "rounded-xl bg-background p-8 px-10 shadow-md md:shadow-2xl lg:px-10",
+                "mx-auto w-[90%] rounded-xl bg-background p-8 px-10 shadow-md md:w-full md:shadow-2xl lg:px-10",
                 plan.featured
                   ? "outline outline-2 outline-offset-1 outline-primary"
                   : "outline outline-1 outline-offset-1 outline-gray-400",

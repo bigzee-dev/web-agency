@@ -55,49 +55,48 @@ const supportCards: SupportCard[] = [
 export default function ContactCards() {
   return (
     <main className="bg-background px-4 py-12 md:py-20">
-      <div className="mx-auto max-w-5xl">
-        <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
+      <div className="mx-auto max-w-4xl">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {supportCards.map((card) => (
             <div
               key={card.id}
-              className="flex flex-col items-center rounded-3xl border border-border bg-neutral-200/30 p-6 text-center shadow-md transition-shadow hover:shadow-lg"
+              className="flex items-start gap-x-4 rounded-xl bg-neutral-200/20 p-6 text-center shadow-md transition-shadow hover:shadow-md"
             >
               {/* Icon */}
-              <div className="mb-4 rounded-2xl bg-gray-800 p-3">
-                {card.icon}
+              <div className="mb-4 rounded-xl bg-gray-800 p-3">{card.icon}</div>
+              <div className="flex flex-col items-start pt-2">
+                {/* Title */}
+                <h3
+                  className={` ${montserrat.className} mb-1 text-lg font-semibold text-gray-800`}
+                >
+                  {card.title}
+                </h3>
+
+                {/* Button: only the 'ticket' and "whatsapp" cards are actual link; others are informational */}
+                {card.id === "ticket" || card.id === "whatsapp" ? (
+                  <a
+                    href={card.buttonLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-sans text-md text-blue-600"
+                  >
+                    {card.buttonText} &#8594;
+                  </a>
+                ) : (
+                  <div
+                    role="article"
+                    aria-disabled="true"
+                    className="inline-flex cursor-default items-center bg-transparent font-sans text-gray-500"
+                  >
+                    {card.buttonText}
+                  </div>
+                )}
+
+                {/* Description */}
+                <p className="flex-grow font-sans text-md text-gray-500">
+                  {card.description}
+                </p>
               </div>
-
-              {/* Title */}
-              <h3
-                className={` ${montserrat.className} mb-2 text-lg font-bold text-gray-800`}
-              >
-                {card.title}
-              </h3>
-
-              {/* Description */}
-              <p className="mb-6 flex-grow font-sans text-md text-gray-600">
-                {card.description}
-              </p>
-
-              {/* Button: only the 'ticket' and "whatsapp" cards are actual link; others are informational */}
-              {card.id === "ticket" || card.id === "whatsapp" ? (
-                <a
-                  href={card.buttonLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={primaryButton}
-                >
-                  {card.buttonText}
-                </a>
-              ) : (
-                <div
-                  role="article"
-                  aria-disabled="true"
-                  className="inline-flex cursor-default items-center gap-2 rounded-[0.60rem] bg-transparent px-4 py-2.5 font-sans text-md font-medium text-gray-800"
-                >
-                  {card.buttonText}
-                </div>
-              )}
             </div>
           ))}
         </div>

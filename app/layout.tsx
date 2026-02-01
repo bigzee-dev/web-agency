@@ -13,7 +13,10 @@ export const metadata: Metadata = {
   description:
     "Deltaworx is a leading IT solutions provider in Botswana, specializing in cloud computing, web development, domain registration, email hosting, virtual servers, and network solutions. We empower businesses with cutting-edge technology and reliable services to enhance their online presence and operational efficiency.",
   icons: {
-    icon: "/icon.svg",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon-google.png", sizes: "192x192", type: "image/png" },
+    ],
   },
 };
 

@@ -15,13 +15,13 @@ const versions: WindowsVersion[] = [
   {
     id: "2019",
     name: "Windows Server 2019",
-    version: "Standard & Datacenter",
+    version: "Standard",
     features: ["Legacy Support", "Reliable Performance", "Mature Platform"],
   },
   {
     id: "2022",
     name: "Windows Server 2022",
-    version: "Standard & Datacenter",
+    version: "Standard",
     features: [
       "Latest Security",
       "Enhanced Performance",
@@ -33,7 +33,7 @@ const versions: WindowsVersion[] = [
   {
     id: "2015",
     name: "Windows Server 2025",
-    version: "Standard & Datacenter",
+    version: "Standard",
     features: ["Long-term Support", "Proven Stability", "Wide Compatibility"],
   },
 ];
@@ -99,8 +99,7 @@ export default function WindowsVersions() {
 
         <div className="mt-10 text-center">
           <p className="font-sans text-sm text-neutral-400">
-            All editions include full Remote Desktop access and Windows
-            licensing
+            *BYOL – Windows license not included; users must provide their own.
           </p>
         </div>
       </section>

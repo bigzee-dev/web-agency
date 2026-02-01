@@ -25,7 +25,7 @@ const processSteps = [
 export default function GetStartedVps() {
   return (
     <div className="w-full bg-gradient-to-tr from-gray-900 via-gray-900 to-primary">
-      <section className="mx-auto flex w-full max-w-7xl items-center gap-x-12 pb-8 pt-6">
+      <section className="x-padding mx-auto flex w-full max-w-7xl items-center gap-x-12 pb-8 pt-6">
         <div className="hidden w-[13rem] md:block">
           <img
             src="/svg/linux-vps/kvm-tower.svg"

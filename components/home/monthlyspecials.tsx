@@ -19,50 +19,50 @@ interface Special {
   linkText: string;
 }
 
-const specials: Special[] = [
-  {
-    id: 1,
-    image: "/img/tech-laptop.jpg",
-    title: "Business Starter Pack",
-    quote:
-      "Launch your new business quickly with our Business Starter Pack. For one low monthly price, you get everything you need to get started:",
-    features: [
-      "1-Page Website",
-      "Annual Domain Registration",
-      "Business Email Account",
-      "4-Page Company Profile",
-      "Monthly Maintenance & Hosting",
-    ],
-    price: { BWP: "295", USD: "19.95" },
-    href: "/contact-us",
-    linkText: "Get Started",
-  },
-  {
-    id: 2,
-    image: "/img/linux-vps/hostiko-hosting-img.png",
-    title: "Linux Virtual Machine",
-    quote:
-      "Get full control and high performance with our Linux VPS, ideal for growing websites and apps that need more resources and flexibility.",
-    features: [
-      "2 vCPU, 4GB RAM, 60GB SSD",
-      "Full Root Access",
-      "Choice of Linux Distributions",
-      "Deploy the tech stack you need",
-      "Web Apps, Databases, Docker and more",
-      "Use as Proxy or VPN",
-    ],
-    price: { BWP: "180", USD: "13.50" },
-    href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-4`,
-    linkText: "Order Now",
-  },
-];
-
 export default function MonthlySpecials() {
   const { currency } = useCurrency();
 
   const currencyId = currency === "USD" ? 2 : 1;
   const currencySymbol = currency === "USD" ? "$" : "P";
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const specials: Special[] = [
+    {
+      id: 1,
+      image: "/img/tech-laptop.jpg",
+      title: "Business Starter Pack",
+      quote:
+        "Launch your new business quickly with our Business Starter Pack. For one low monthly price, you get everything you need to get started:",
+      features: [
+        "1-Page Website",
+        "Annual Domain Registration",
+        "Business Email Account",
+        "4-Page Company Profile",
+        "Monthly Maintenance & Hosting",
+      ],
+      price: { BWP: "295", USD: "19.95" },
+      href: "/contact-us",
+      linkText: "Get Started",
+    },
+    {
+      id: 2,
+      image: "/img/linux-vps/hostiko-hosting-img.png",
+      title: "Linux Virtual Machine",
+      quote:
+        "Get full control and high performance with our Linux VPS, ideal for growing websites and apps that need more resources and flexibility.",
+      features: [
+        "2 vCPU, 4GB RAM, 60GB SSD",
+        "Full Root Access",
+        "Choice of Linux Distributions",
+        "Deploy the tech stack you need",
+        "Web Apps, Databases, Docker and more",
+        "Use as Proxy or VPN",
+      ],
+      price: { BWP: "180", USD: "13.50" },
+      href: `${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-4/&currency=${currencyId}`,
+      linkText: "Order Now",
+    },
+  ];
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -148,10 +148,7 @@ export default function MonthlySpecials() {
                 {currentSpecial.price[currency]}/month
               </h3>
             </div>
-            <Link
-              href={` ${currentSpecial.href}/&currency=${currencyId} `}
-              className={primaryButton}
-            >
+            <Link href={` ${currentSpecial.href} `} className={primaryButton}>
               {currentSpecial.linkText}
             </Link>
           </div>
