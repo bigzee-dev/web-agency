@@ -10,9 +10,9 @@ import FaqsEmail from "@/components/services/emails/faqs-email";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Professional Email Hosting - Business Email Solutions | Deltaworx",
+  title: "Secure and reliable Business Email Solutions in Botswana",
   description:
-    "Professional email hosting in Botswana. Get custom domain email addresses, spam protection, webmail access, and mobile sync. Secure business email with 99.9% uptime guarantee.",
+    "Professional email that keeps your team connected. Communicate clearly and focus on growing your business with our dependable email service in Botswana.",
   keywords: [
     "email hosting Botswana",
     "business email",

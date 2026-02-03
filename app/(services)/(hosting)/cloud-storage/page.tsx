@@ -11,9 +11,9 @@ import CloudStorageFAQs from "@/components/services/hosting/cloud-storage/faqs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cloud Storage - Secure Storage Box | Deltaworx",
+  title: "Cloud Storage - Secure Storage Box | Botswana",
   description:
-    "Professional cloud storage with SSH/FTP/SFTP access, rsync/rclone support, and modern web GUI. Secure, fast, and reliable storage from 100GB to 1TB. No bandwidth limits.",
+    "Secure cloud storage with SSH/FTP/SFTP access, rsync/rclone support, and modern web GUI. Backup your critical data and access it from anywhere in Botswana.",
   keywords: [
     "cloud storage Botswana",
     "storage box",
