@@ -63,12 +63,14 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Script
+          id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
           }}
         />
         <Script
+          id="schema-markup"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([organizationSchema, websiteSchema]),
