@@ -28,6 +28,27 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Deltaworx",
+  url: "https://deltaworx.co.bw",
+  logo: "https://deltaworx.co.bw/favicon-google.png", // Your logo URL
+  sameAs: [
+    // Add your social media profiles
+    "https://web.facebook.com/deltaworxbw",
+    //"https://twitter.com/deltaworx",
+    // etc.
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Deltaworx",
+  url: "https://deltaworx.co.bw",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,36 +58,20 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script
-          src="https://umami.bigzee.app/script.js"
-          data-website-id="65f346f6-91da-491b-952e-976e916755ae"
+          src={process.env.NEXT_PUBLIC_UMAMI_SRC}
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
           strategy="afterInteractive"
         />
         <Script
-          id="site-name-schema"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "Deltaworx",
-              url: "https://deltaworx.co.bw",
-            }),
+            __html: JSON.stringify(organizationSchema),
           }}
         />
-
         <Script
-          id="org-schema"
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Deltaworx",
-              url: "https://deltaworx.co.bw",
-              logo: "https://deltaworx.co.bw/favicon-google.png",
-            }),
+            __html: JSON.stringify([organizationSchema, websiteSchema]),
           }}
         />
       </head>
