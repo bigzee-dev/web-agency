@@ -14,15 +14,6 @@ export const metadata: Metadata = {
   title: "Cloud Storage - Secure Storage Box | Botswana",
   description:
     "Secure cloud storage with SSH/FTP/SFTP access, rsync/rclone support, and modern web GUI. Backup your critical data and access it from anywhere in Botswana.",
-  keywords: [
-    "cloud storage Botswana",
-    "storage box",
-    "FTP storage",
-    "SFTP storage",
-    "rsync backup",
-    "network drive",
-    "secure file storage",
-  ],
 };
 
 export default function CloudStoragePage() {

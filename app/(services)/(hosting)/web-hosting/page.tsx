@@ -9,18 +9,9 @@ import FaqsHosting from "@/components/services/hosting/web-hosting/faqs-hosting"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Web Hosting - Fast & Reliable Hosting | Deltaworx",
+  title: "Web Hosting - Fast & Reliable Hosting | Botswana",
   description:
-    "Premium web hosting in Botswana. Fast SSD storage, cPanel control panel, free SSL certificates, daily backups, and 99.9% uptime. Affordable shared hosting plans for businesses.",
-  keywords: [
-    "web hosting Botswana",
-    "shared hosting",
-    "cPanel hosting",
-    "SSD hosting",
-    "SSL certificate",
-    "website hosting",
-    "affordable hosting",
-  ],
+    "Premium web hosting for developers and businesses in Botswana, designed to keep your website fast, secure, and always online.",
 };
 
 export default function Page() {

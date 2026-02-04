@@ -10,18 +10,10 @@ import FaqsDomains from "@/components/services/domains/faqs-domains";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Domain Registration - Secure Your Online Identity | Deltaworx",
+  title:
+    "Domain Registration - Find and Register the Right Domain Name | Botswana",
   description:
     "Register your domain name with Deltaworx. Get .com, .bw, .co.bw domains at competitive prices. Fast registration, DNS management, and expert support in Botswana.",
-  keywords: [
-    "domain registration Botswana",
-    ".bw domain",
-    ".co.bw domain",
-    "buy domain name",
-    "domain pricing",
-    "DNS management",
-    "domain transfer",
-  ],
 };
 
 export default function Websites() {
