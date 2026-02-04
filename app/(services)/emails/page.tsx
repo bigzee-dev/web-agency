@@ -12,17 +12,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Secure and reliable Business Email Solutions in Botswana",
   description:
-    "Professional email that keeps your team connected. Communicate clearly and focus on growing your business with our dependable email service in Botswana.",
-  keywords: [
-    "email hosting Botswana",
-    "business email",
-    "professional email",
-    "custom domain email",
-    "webmail",
-    "IMAP email",
-    "SMTP hosting",
-    "secure email",
-  ],
+    "Professional email that keeps your team connected. Communicate clearly and focus on growing your business with our dependable email service.",
 };
 
 export default function Page() {

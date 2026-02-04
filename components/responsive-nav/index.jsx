@@ -17,6 +17,7 @@ import {
   ClipboardCopyIcon,
   DocumentTextIcon,
   InfoIcon,
+  CreditCardIcon,
   // BookIcon,
   ListIcon,
   MailPlusIcon,
@@ -248,14 +249,6 @@ export default function ResponsiveNav() {
                 </span>
               </div>
               <div className="dropdown-menu">
-                <Link href="/about-us" className="dropdown-item">
-                  <div className="dropdown-item-link">
-                    <span>
-                      <InfoIcon size="size-5" />
-                    </span>
-                    About Us
-                  </div>
-                </Link>
                 <Link href="/contact-us" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
@@ -264,6 +257,23 @@ export default function ResponsiveNav() {
                     Contact us
                   </div>
                 </Link>
+                <Link href="/about-us" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <InfoIcon size="size-5" />
+                    </span>
+                    About Us
+                  </div>
+                </Link>
+                <Link href="/how-to-pay" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <CreditCardIcon size="size-5" />
+                    </span>
+                    How to Pay
+                  </div>
+                </Link>
+
                 {/* <Link href="/blog-posts" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
