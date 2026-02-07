@@ -1,8 +1,6 @@
 import type React from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { FaPhone } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { FaTicket } from "react-icons/fa6";
+import { Phone, Mail, TicketMinus } from "lucide-react";
 import { montserrat } from "@/app/ui/fonts";
 
 interface SupportCard {
@@ -19,7 +17,7 @@ const iconStyles = "h-6 w-6 text-white";
 const supportCards: SupportCard[] = [
   {
     id: "call",
-    icon: <FaPhone className={iconStyles} />,
+    icon: <Phone className={iconStyles} />,
     title: "Call Us",
     description: "We are standing by!",
     buttonText: "+267 72537524",
@@ -27,7 +25,7 @@ const supportCards: SupportCard[] = [
   },
   {
     id: "Email",
-    icon: <MdEmail className={iconStyles} />,
+    icon: <Mail className={iconStyles} />,
     title: "Email",
     description: "Get a quick response",
     buttonText: "admin@deltaworx.co.bw",
@@ -35,7 +33,7 @@ const supportCards: SupportCard[] = [
   },
   {
     id: "ticket",
-    icon: <FaTicket className={iconStyles} />,
+    icon: <TicketMinus className={iconStyles} />,
     title: "Submit A Ticket",
     description: "Get dedicated support",
     buttonText: "Submit Ticket",

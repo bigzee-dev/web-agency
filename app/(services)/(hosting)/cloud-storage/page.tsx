@@ -1,9 +1,8 @@
 import Header from "@/components/services/hosting/cloud-storage/header";
 import SetupAccount from "@/components/services/hosting/cloud-storage/setup-account";
-import AccessMethods from "@/components/services/hosting/cloud-storage/access-methods";
+import UseCases from "@/components/services/hosting/cloud-storage/use-cases";
 import PricingPlans from "@/components/shared/pricing/pricing-plans";
 import ControlPanel from "@/components/services/hosting/cloud-storage/control-panel";
-import UseCases from "@/components/services/hosting/cloud-storage/use-cases";
 
 import Rule321 from "@/components/services/hosting/cloud-storage/321rule";
 import CloudStorageSupport from "@/components/services/hosting/cloud-storage/support";
@@ -25,9 +24,9 @@ export default function CloudStoragePage() {
         plan="cloudstorage"
         display="lg:max-w-7xl lg:grid-cols-4 lg:gap-x-6"
       />
-      <AccessMethods />
-      <ControlPanel />
       <UseCases />
+      <ControlPanel />
+
       <Rule321 />
 
       <CloudStorageSupport />

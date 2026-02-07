@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { footerLinks } from "./links";
 import CompanyInfo from "./companyInfo";
+import PaymentMethods from "./payment-methods";
 
 const linkHeading =
   "text-md text-neutral-300 font-semibold tracking-wider mb-3";
-const singleLink = "font-sans text-sm text-neutral-300/75";
+const singleLink = "font-sans text-sm text-neutral-300/75 hover:text-blue-600";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -48,23 +49,25 @@ export default function Footer() {
         </div>{" "}
       </div>
 
+      <PaymentMethods />
+
       <div className="w-full border-t border-gray-600 px-8">
-        <div className="mx-auto flex max-w-5xl justify-between pb-16 pt-5 text-center font-sans text-sm font-light text-neutral-400">
+        <div className="mx-auto flex max-w-5xl justify-between pb-16 pt-5 text-center text-sm font-light text-neutral-400">
           <p>
             <span className="text-neutral-300">&copy;</span>&nbsp;Deltaworx{" "}
             {currentYear}
           </p>
-          <div className="flex items-center text-sm">
+          <div className="flex items-center">
             <Link
               href="/legal/privacy-policy"
-              className="text-neutral-400 hover:text-neutral-300"
+              className="text-sm text-neutral-400 hover:text-neutral-300"
             >
               Privacy Policy
             </Link>
             <span className="mx-1 md:mx-2">|</span>
             <Link
               href="/legal/acceptable-use-policy"
-              className="text-neutral-400 hover:text-neutral-300"
+              className="text-sm text-neutral-400 hover:text-neutral-300"
             >
               Acceptable Use
             </Link>

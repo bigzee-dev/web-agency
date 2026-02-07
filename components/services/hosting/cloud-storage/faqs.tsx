@@ -4,13 +4,9 @@ const cloudStorageFaqs = [
   {
     title: "How do I access my Storage Box?",
     answer:
-      "You can access your Storage Box in multiple ways: through our web-based control panel, via FTP/SFTP clients like FileZilla, as a mounted network drive on your computer, or using command-line tools like rsync and rclone. We provide detailed setup guides for each method.",
+      "You can access your Storage Box in multiple ways: through our web-based control panel, via SSH, via FTP/SFTP clients like FileZilla, as a mounted network drive on your computer, or using command-line tools like rsync and rclone. Your welcome email includes connection details such as IP address, ports, and login credentials.",
   },
-  {
-    title: "Is my data encrypted?",
-    answer:
-      "Yes! All data transfers are encrypted using SSL/TLS or SSH protocols. Your files are stored securely on our servers with regular backups. We never scan or analyze your files - your data is yours alone.",
-  },
+
   {
     title: "Can I upgrade my storage plan later?",
     answer:
@@ -26,15 +22,11 @@ const cloudStorageFaqs = [
     answer:
       "We maintain redundant copies of your data for hardware failure protection. However, Storage Box is designed for you to backup YOUR data. We recommend maintaining your own backup strategy and not using this as your only copy.",
   },
-  {
-    title: "Can I share files with others?",
-    answer:
-      "Yes! You can generate secure download links through the web interface with optional expiration dates and password protection. You can also create separate user accounts with specific folder permissions for team collaboration.",
-  },
+
   {
     title: "Is there a bandwidth limit?",
     answer:
-      "No! There are no bandwidth restrictions. You can upload and download as much as you need without worrying about additional charges or throttling.",
+      "Yes, there are bandwidth limits based on your storage plan. However, we offer generous bandwidth allowances, and most users find that they are more than sufficient for typical file storage and access needs. If you have high bandwidth requirements, please contact our support team to discuss options.",
   },
   {
     title: "Can I use this for website hosting?",
@@ -44,7 +36,7 @@ const cloudStorageFaqs = [
   {
     title: "What protocols are supported?",
     answer:
-      "We support a wide range of protocols: FTP, FTPS, SFTP, SCP, SSH, WebDAV, SMB/CIFS, and NFS. You can also use rsync and rclone for synchronization, and we provide a RESTful API for programmatic access.",
+      "We support a wide range of protocols: FTP, FTPS, SFTP, SCP, SSH . You can also use rsync and rclone for automated backups and synchronization.",
   },
   {
     title: "How quickly can I get started?",

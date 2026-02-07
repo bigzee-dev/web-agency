@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Secure and reliable Business Email Solutions in Botswana",
   description:
-    "Professional email that keeps your team connected. Communicate clearly and focus on growing your business with our dependable email service.",
+    "Professional email hosting that keeps your team connected. Communicate clearly and focus on growing your business with our dependable email service.",
 };
 
 export default function Page() {

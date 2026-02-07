@@ -27,6 +27,7 @@ import {
   OpenTicketIcon,
   TicketsIcon,
   KnowledgebaseIcon,
+  NetworkSquareIcon,
 } from "./nav-icons";
 import Link from "next/link";
 import CurrencySelector from "@/components/currency-selector";
@@ -271,6 +272,19 @@ export default function ResponsiveNav() {
                       <CreditCardIcon size="size-5" />
                     </span>
                     How to Pay
+                  </div>
+                </Link>
+                <Link
+                  href="https://brookie.monitor.bigzee.app/status/live"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="dropdown-item"
+                >
+                  <div className="dropdown-item-link">
+                    <span>
+                      <NetworkSquareIcon size="size-5" />
+                    </span>
+                    Network Status
                   </div>
                 </Link>
 
