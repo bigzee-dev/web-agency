@@ -9,18 +9,9 @@ import SupportOne from "@/components/shared/support/support-one";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Development - Professional Web Design | Deltaworx",
+  title: "Website Development - Professional Web Design | Botswana",
   description:
-    "Professional website development services in Botswana. Custom websites, responsive design, SEO optimization, and ongoing support. Transform your online presence with Deltaworx.",
-  keywords: [
-    "website development Botswana",
-    "web design",
-    "custom website",
-    "responsive design",
-    "SEO optimization",
-    "business website",
-    "web development services",
-  ],
+    "Professional website development services in Botswana. Custom websites, responsive design, SEO optimization, and ongoing support. Grow your business with Deltaworx.",
 };
 
 export default function Websites() {

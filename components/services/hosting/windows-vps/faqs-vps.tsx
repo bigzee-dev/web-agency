@@ -5,7 +5,7 @@ const faqs = [
   {
     title: "Is Windows Server licensing included?",
     answer:
-      "Yes! All Windows Server licenses are included in your VPS plan at no additional cost. You don't need to worry about purchasing or managing Windows licenses separately.",
+      "No, Windows Server licensing is not included in the VPS price. You will need to provide your own valid Windows Server license.",
   },
   {
     title: "What can I use a Windows VPS for?",
@@ -35,12 +35,12 @@ const faqs = [
   {
     title: "What Windows Server versions are available?",
     answer:
-      "We offer Windows Server 2022, 2019, and 2016 in both Standard and Datacenter editions. We recommend Windows Server 2022 for the latest features and security updates.",
+      "We offer Windows Server 2025, 2012, and 2019 in both Standard and Datacenter editions. We recommend Windows Server 2022 for the latest features and security updates.",
   },
   {
     title: "Do you provide backups for Windows VPS?",
     answer:
-      "Yes, each Windows VPS includes one free backup slot. You can create daily backups of your server. However, we recommend maintaining your own backup solution for critical data as we cannot guarantee long-term retention.",
+      "Yes, each Windows VPS includes 2 free backup slots. You can create daily backups of your server. However, we recommend maintaining your own backup solution for critical data as we cannot guarantee long-term retention.",
   },
   {
     title: "How fast will my Windows VPS be deployed?",
@@ -55,12 +55,17 @@ const faqs = [
   {
     title: "What support is included with Windows VPS?",
     answer:
-      "All Windows VPS plans include 24/7 technical support for hardware, network, and infrastructure issues. We also provide assistance with Windows Server-specific questions. However, custom application support is not included.",
+      "All Windows VPS plans include technical support for hardware, network, and infrastructure issues. We also provide assistance with Windows Server-specific questions. However, custom application support is not included.",
   },
   {
     title: "What payment methods do you accept?",
     answer:
       "We accept PayPal, Bank Transfer / EFT, Orange Money, MyZaka, Smega and soon Credit / Debit Cards for Windows VPS services.",
+  },
+  {
+    title: "Is there any contractual obligation or can I cancel anytime ?",
+    answer:
+      "By default, our VPS plans are billed monthly. You can also choose to pay every 3, 6, or 12 months. Plans can be easily modified or canceled anytime through the Client Area.",
   },
 ];
 

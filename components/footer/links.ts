@@ -18,6 +18,16 @@ export const footerLinks = [
         type: "internal",
       },
       {
+        title: "How to Pay",
+        href: "/how-to-pay",
+        type: "internal",
+      },
+      {
+        title: "Network Status",
+        href: "https://brookie.monitor.bigzee.app/status/live",
+        type: "external",
+      },
+      {
         title: "Company Profile",
         href: "https://bigzee-mxr1.xyz/companyprofile.pdf",
         type: "external",

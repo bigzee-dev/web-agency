@@ -11,14 +11,7 @@ export const metadata: Metadata = {
   title:
     "About Us - Your Digital Infrastructure Partner in Botswana | Deltaworx",
   description:
-    "Meet Deltaworx, Botswana's trusted IT solutions provider. Learn about our mission, values, and commitment to delivering exceptional cloud computing, web development, and hosting services.",
-  keywords: [
-    "about Deltaworx",
-    "IT company Botswana",
-    "technology partner",
-    "cloud provider Botswana",
-    "web development company",
-  ],
+    "Meet Deltaworx, a trusted digital infrastructure provider in Botswana. Discover our mission, values, and commitment to delivering reliable cloud computing, web development, and hosting solutions.",
 };
 
 export default function AboutUs() {
