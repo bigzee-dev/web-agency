@@ -5,7 +5,7 @@ import PaymentMethods from "./payment-methods";
 
 const linkHeading =
   "text-md text-neutral-300 font-semibold tracking-wider mb-3";
-const singleLink = "font-sans text-sm text-neutral-300/75 hover:text-blue-600";
+const singleLink = "font-sans text-sm text-neutral-300/75 hover:text-blue-300";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -60,14 +60,14 @@ export default function Footer() {
           <div className="flex items-center">
             <Link
               href="/legal/privacy-policy"
-              className="text-sm text-neutral-400 hover:text-neutral-300"
+              className="text-sm text-neutral-400 hover:text-blue-300"
             >
               Privacy Policy
             </Link>
             <span className="mx-1 md:mx-2">|</span>
             <Link
               href="/legal/acceptable-use-policy"
-              className="text-sm text-neutral-400 hover:text-neutral-300"
+              className="text-sm text-neutral-400 hover:text-blue-300"
             >
               Acceptable Use
             </Link>

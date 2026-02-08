@@ -1,4 +1,5 @@
 import type React from "react";
+import { ChartColumnIncreasing, ShieldCheck, Wrench } from "lucide-react";
 import { GoRocket } from "react-icons/go";
 
 import { montserrat } from "@/app/ui/fonts";
@@ -38,18 +39,18 @@ export default function OurValues() {
         <ValueCard
           title="Quality Work"
           description="Our commitment to excellence ensures outstanding service and high standards."
-          svg={GoRocket}
+          svg={ShieldCheck}
         />
 
         <ValueCard
           title="Innovation"
           description="We invest in innovation to ensure clients receive the best solutions."
-          svg={GoRocket}
+          svg={Wrench}
         />
         <ValueCard
           title="Customer Success"
           description="We build long-term partnerships to ensure success and support online growth."
-          svg={GoRocket}
+          svg={ChartColumnIncreasing}
         />
 
         <ValueCard

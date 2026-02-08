@@ -35,13 +35,13 @@ export default function Shopify() {
         <div className="relative hidden md:block">
           <div className="relative overflow-hidden rounded-3xl bg-neutral-900/20 p-6 md:p-8">
             {/* Floating Icons */}
-            <div className="absolute right-40 top-6 z-50 rounded-full bg-slate-700 p-3 shadow-lg">
+            <div className="absolute right-40 top-6 z-40 rounded-full bg-slate-700 p-3 shadow-lg">
               <TicketIcon className="h-6 w-6 text-white" />
             </div>
-            <div className="absolute left-44 top-16 z-50 rounded-full bg-slate-700 p-3 shadow-lg">
+            <div className="absolute left-44 top-16 z-40 rounded-full bg-slate-700 p-3 shadow-lg">
               <RefreshCw className="h-6 w-6 text-white" />
             </div>
-            <div className="absolute right-20 top-56 z-50 rounded-full bg-slate-700 p-3 shadow-lg">
+            <div className="absolute right-20 top-56 z-40 rounded-full bg-slate-700 p-3 shadow-lg">
               <Edit3 className="h-6 w-6 text-white" />
             </div>
 

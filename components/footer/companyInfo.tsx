@@ -36,13 +36,13 @@ export default function CompanyInfo() {
       </div>
 
       <div className="mt-4 flex items-center">
-        <Mail size="1.3em" strokeWidth={1} className="text-neutral-400" />
+        <Mail size="1.2em" strokeWidth={1} className="text-neutral-400" />
         <span className="ml-2 text-sm text-neutral-400">
           admin@deltaworx.co.bw
         </span>
       </div>
       <div className="mt-4 flex items-center">
-        <Phone size="1.3em" strokeWidth={1} className="text-neutral-400" />
+        <Phone size="1.2em" strokeWidth={1} className="text-neutral-400" />
         <span className="ml-2 text-sm text-neutral-400">(+267) 72537524</span>
       </div>
       <div className="mt-4 flex items-center">
@@ -51,7 +51,7 @@ export default function CompanyInfo() {
           href="https://web.facebook.com/DeltaworxBW/"
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-2 text-sm text-neutral-400 hover:text-blue-600"
+          className="ml-2 text-sm text-neutral-400 hover:text-blue-300"
         >
           @DeltaworxBW
         </Link>

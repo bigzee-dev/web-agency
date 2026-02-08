@@ -22,10 +22,7 @@ export default function PaymentMethods() {
   return (
     <div className="w-full border-t border-gray-600 px-8">
       <div className="mx-auto max-w-5xl py-5">
-        <h3 className="mb-4 text-center text-xs font-medium tracking-wider text-neutral-300">
-          We Accept These Payment Methods
-        </h3>
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+        <div className="flex flex-wrap items-center justify-start gap-8 md:gap-8">
           {paymentMethods.map((method) => (
             <div key={method.name} className="flex items-center gap-x-2">
               <Image
