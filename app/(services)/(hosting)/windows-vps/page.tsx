@@ -14,7 +14,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Windows VPS - Production ready Cloud Infrastructure | Botswana",
   description:
-    "Windows Server Hosting with full RDP access, high performance compute and run Microsoft applications. Support team based in Botswana",
+    "Windows Server Hosting with full RDP access, high performance compute and windows environment. Support team based in Botswana",
 };
 
 export default function Page() {

@@ -9,9 +9,9 @@ import Script from "next/script";
 import { CurrencyProvider } from "@/contexts/currency-context";
 
 export const metadata: Metadata = {
-  title: "Cloud Compute, Web Dev, Domains, Email, Servers | Botswana",
+  title: "Cloud Computing, Hosting and Web servives in Botswana | Deltaworx",
   description:
-    "Deltaworx is a Cloud Computing and Web services provider in Botswana We specialise in web development, domain registration, email hosting, virtual servers, cloud compute and network solutions. We help businesses run their digital infrastructure and online systems without the usual complexity.",
+    "Deltaworx is a Cloud Computing and Web services provider in Botswana We specialise in web development, domain registration, email hosting, virtual servers, cloud compute and network solutions. We help businesses run their digital infrastructure without the usual complexity.",
   icons: {
     icon: [
       {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         sizes: "any", // 🔑 this tells browsers: use this for UI
       },
       {
-        url: "/favicon-google.png",
+        url: "/icon-google.png",
         type: "image/png",
         sizes: "144x144", // 🔑 big enough for Google, not attractive to browsers
       },
