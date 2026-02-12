@@ -28,7 +28,7 @@ export default function ContactUs() {
           </Link>
           <Link
             className={` ${lightBgButton} inline-flex cursor-pointer items-center justify-center gap-x-2`}
-            href="https://wa.me/26777810825"
+            href="https://wa.me/26772537524"
             target="_blank"
             rel="noopener noreferrer"
           >

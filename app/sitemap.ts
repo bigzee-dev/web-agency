@@ -4,9 +4,9 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://deltaworx.co.bw";
 
 // Static pages with their priority and change frequency
 const staticPages = [
-  { url: "/", changeFrequency: "monthly" as const, priority: 1.0 },
-  { url: "/about-us", changeFrequency: "monthly" as const, priority: 0.8 },
-  { url: "/contact-us", changeFrequency: "monthly" as const, priority: 0.8 },
+  { url: "/", changeFrequency: "weekly" as const, priority: 1.0 },
+  { url: "/about-us", changeFrequency: "weekly" as const, priority: 0.8 },
+  { url: "/contact-us", changeFrequency: "weekly" as const, priority: 0.8 },
 
   // Services
   { url: "/domains", changeFrequency: "weekly" as const, priority: 0.9 },
@@ -30,17 +30,17 @@ const staticPages = [
   // Legal
   {
     url: "/legal/privacy-policy",
-    changeFrequency: "yearly" as const,
+    changeFrequency: "monthly" as const,
     priority: 0.5,
   },
   {
     url: "/legal/terms-of-service",
-    changeFrequency: "yearly" as const,
+    changeFrequency: "monthly" as const,
     priority: 0.5,
   },
   {
     url: "/legal/acceptable-use-policy",
-    changeFrequency: "yearly" as const,
+    changeFrequency: "monthly" as const,
     priority: 0.5,
   },
 ];

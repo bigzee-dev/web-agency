@@ -23,18 +23,18 @@ const contactOptions = [
     href: "tel:+267 77819825",
   },
   {
-    id: "message",
+    id: "whatsapp",
     icon: FaCommentDots,
     title: "Whatsapp",
     contact: "send message",
-    href: "#",
+    href: "https://wa.me/26772537524",
   },
   {
     id: "facebook",
     icon: FaFacebookF,
     title: "Facebook",
     contact: "@DeltaworxBW",
-    href: "https://twitter.com/Coodiv",
+    href: "https://web.facebook.com/DeltaworxBW",
   },
 ];
 
@@ -107,7 +107,8 @@ export default function WorkWithUs() {
                         <a
                           href={option.href}
                           className="font-sans text-md text-neutral-400 hover:text-blue-700"
-                          {...(option.id === "twitter" && {
+                          {...((option.id === "facebook" ||
+                            option.id === "whatsapp") && {
                             target: "_blank",
                             rel: "noopener noreferrer",
                           })}
