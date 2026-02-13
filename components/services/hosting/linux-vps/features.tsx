@@ -40,7 +40,7 @@ const specs = [
   { icon: Cpu, label: "CPU", value: "Intel Xeon" },
   { icon: HardDrive, label: "STORAGE", value: "Pure NVMe" },
   { icon: Network, label: "NETWORK", value: "1 Gbps" },
-  { icon: Server, label: "IPS", value: "1 IPv4 + /56 IPv6" },
+  { icon: Server, label: "IPS", value: "1 IPv4 + 1 IPv6" },
 ];
 
 const features = [

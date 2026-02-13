@@ -43,6 +43,16 @@ const cloudStorageFaqs = [
     answer:
       "Your Storage Box is provisioned instantly after payment. You'll receive your access credentials via email within minutes, and you can start uploading files right away using any of the supported access methods.",
   },
+  {
+    title: "What payment methods are accepted ?",
+    answer:
+      "We accept PayPal, Bank Transfer / EFT, Orange Money, MyZaka, Smega and soon Credit / Debit Cards",
+  },
+  {
+    title: "Is there any contractual obligation or can I cancel anytime ?",
+    answer:
+      "By default, our VPS plans are billed monthly. You can also choose to pay every 3, 6, or 12 months. Plans can be easily modified or canceled anytime through the Client Area.",
+  },
 ];
 
 export default function CloudStorageFAQs() {

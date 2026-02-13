@@ -29,7 +29,7 @@ export default function HeaderVps() {
             <div className="mx-auto max-w-7xl px-6 md:px-12">
               <div className="flex flex-col items-center sm:mx-auto sm:w-10/12 lg:mt-0 lg:w-4/5">
                 <Link
-                  href="/"
+                  href={` ${process.env.NEXT_PUBLIC_WHMCS_URL}/index.php?rp=/store/linux-vps/lvps-2 `}
                   className="mx-auto flex w-fit items-center gap-3 rounded-md border border-gray-700/30 bg-red-100/20 p-1 pr-3"
                 >
                   <span className="rounded-md bg-slate-700 px-2 py-1 text-xs font-medium text-red-300">

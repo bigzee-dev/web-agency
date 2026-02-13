@@ -9,7 +9,7 @@ import Script from "next/script";
 import { CurrencyProvider } from "@/contexts/currency-context";
 
 export const metadata: Metadata = {
-  title: "Cloud Computing, Hosting and Web servives in Botswana | Deltaworx",
+  title: "Cloud Computing, Hosting and Web Services in Botswana | Deltaworx",
   description:
     "Deltaworx is a Cloud Computing and Web services provider in Botswana We specialise in web development, domain registration, email hosting, virtual servers, cloud compute and network solutions. We help businesses run their digital infrastructure without the usual complexity.",
   icons: {
