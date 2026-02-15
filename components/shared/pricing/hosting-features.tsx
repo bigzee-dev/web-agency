@@ -7,7 +7,7 @@ export const HostingPlans = [
     description: "Ideal for personal use and small businesses",
     features: [
       "2 Websites",
-      "10 GB SSD",
+      "5 GB SSD",
       "1TB Bandwidth",
       "Free SSL Certificates",
       "5 Email Accounts",
