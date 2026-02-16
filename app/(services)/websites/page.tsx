@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Website Development - Professional Web Design | Botswana",
   description:
     "Professional website development services in Botswana. Custom websites, responsive design, SEO optimization, and ongoing support. Grow your business with Deltaworx.",
+  alternates: {
+    canonical: "https://deltaworx.co.bw/websites",
+  },
 };
 
 export default function Websites() {

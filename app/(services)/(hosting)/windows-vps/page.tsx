@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: "Windows VPS - Production ready Cloud Infrastructure | Botswana",
   description:
     "Windows Server Hosting with full RDP access, high performance compute and windows environment. Support team based in Botswana",
+  alternates: {
+    canonical: "https://deltaworx.co.bw/windows-vps",
+  },
 };
 
 export default function Page() {

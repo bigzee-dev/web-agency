@@ -7,10 +7,10 @@ import { sectionHeadings } from "@/app/ui/customTailwindClasses";
 
 interface Article {
   id: number;
-  category: string;
-  categoryColor: string;
+  section: string;
+  sectionColor: string;
   title: string;
-  description: string;
+  subtitle: string;
   author: {
     name: string;
     avatar: string;
@@ -18,7 +18,7 @@ interface Article {
     avatarBg: string;
   };
   publishDate: string;
-  readTime: string;
+  readLength: string;
   hasPartnership: boolean;
   partnershipText?: {
     line1: string;
@@ -52,12 +52,12 @@ export default function Component() {
                 <Badge
                   variant="secondary"
                   className={`mb-3 ${
-                    article.categoryColor === "blue"
+                    article.sectionColor === "blue"
                       ? "bg-blue-50 text-blue-600"
                       : "bg-green-50 text-green-600"
                   }`}
                 >
-                  {article.category}
+                  {article.section}
                 </Badge>
                 <h3
                   className={`mb-3 text-xl font-bold leading-tight text-gray-800`}
@@ -65,7 +65,7 @@ export default function Component() {
                   {article.title}
                 </h3>
                 <p className="mb-4 font-sans text-sm leading-relaxed text-gray-700">
-                  {article.description}
+                  {article.subtitle}
                 </p>
                 <div className="flex items-center gap-3">
                   <Avatar className="h-8 w-8">
@@ -81,7 +81,7 @@ export default function Component() {
                   <div className="flex-1">
                     <p className="text-sm font-medium">{article.author.name}</p>
                     <p className="text-xs text-gray-500">
-                      {article.publishDate} • {article.readTime}
+                      {article.publishDate} • {article.readLength}
                     </p>
                   </div>
                 </div>

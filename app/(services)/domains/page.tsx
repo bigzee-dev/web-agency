@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "Domain Registration - Find and Register the Right Domain Name | Botswana",
   description:
     "Register your domain name with Deltaworx. Get .com, .bw, .co.bw domains at competitive prices. Fast registration, DNS management, and expert support in Botswana.",
+  alternates: {
+    canonical: "https://deltaworx.co.bw/domains",
+  },
 };
 
 export default function Websites() {

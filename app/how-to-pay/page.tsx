@@ -10,14 +10,9 @@ export const metadata: Metadata = {
   title: "How to Pay - Payment Methods | Deltaworx",
   description:
     "Learn about our accepted payment methods including Bank Transfer, PayPal, and Orange Money. We accept payments in BWP and USD.",
-  keywords: [
-    "payment methods Botswana",
-    "bank transfer",
-    "paypal",
-    "orange money",
-    "how to pay",
-    "payment instructions",
-  ],
+  alternates: {
+    canonical: "https://deltaworx.co.bw/how-to-pay",
+  },
 };
 
 export default function HowToPayPage() {

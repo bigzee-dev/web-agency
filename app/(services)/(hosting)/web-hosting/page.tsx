@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Web Hosting - Fast & Reliable Hosting | Botswana",
   description:
     "Premium web hosting for developers and businesses in Botswana, designed to keep your website fast, secure, and always online.",
+  alternates: {
+    canonical: "https://deltaworx.co.bw/web-hosting",
+  },
 };
 
 export default function Page() {

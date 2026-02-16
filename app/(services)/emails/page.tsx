@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Reliable Business Email Solutions in Botswana",
   description:
     "Professional email hosting that keeps your team connected. Communicate clearly and focus on growing your business with our dependable email service.",
+  alternates: {
+    canonical: "https://deltaworx.co.bw/emails",
+  },
 };
 
 export default function Page() {

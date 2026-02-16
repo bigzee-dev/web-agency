@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "About Us - Your Digital Infrastructure Partner in Botswana | Deltaworx",
   description:
     "Meet Deltaworx, a trusted digital infrastructure provider in Botswana. Discover our mission, values, and commitment to delivering reliable cloud computing, web development, and hosting solutions.",
+  alternates: {
+    canonical: "https://deltaworx.co.bw/about-us",
+  },
 };
 
 export default function AboutUs() {

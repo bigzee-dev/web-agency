@@ -9,13 +9,9 @@ export const metadata: Metadata = {
   title: "Contact Us - Get in Touch | Deltaworx",
   description:
     "Contact Deltaworx for IT solutions in Botswana. Reach out for cloud computing, web development, domain registration, email hosting, and VPS services. We're here to help your business grow.",
-  keywords: [
-    "contact Deltaworx",
-    "IT support Botswana",
-    "get quote",
-    "business inquiry",
-    "customer support",
-  ],
+  alternates: {
+    canonical: "https://deltaworx.co.bw/contact-us",
+  },
 };
 
 export default function ContactUs() {

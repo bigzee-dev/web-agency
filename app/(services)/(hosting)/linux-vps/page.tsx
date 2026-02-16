@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Linux VPS - Production ready Cloud Infrastructure | Botswana",
   description:
     "High-performance Linux VPS Hosting. Get dedicated resources, full root access, and choice of Ubuntu, Debian and more. Support team based in Botswana.",
+  alternates: {
+    canonical: "https://deltaworx.co.bw/linux-vps",
+  },
 };
 
 export default function Page() {
