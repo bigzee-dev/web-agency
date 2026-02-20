@@ -51,7 +51,7 @@ export default function Header() {
   return (
     <div className="relative min-h-[34rem] w-full bg-black">
       <div className="x-padding w-full xl:px-12">
-        <div className="mx-auto grid w-full max-w-7xl gap-y-12 pb-4 pt-16 md:grid-cols-12 md:py-16">
+        <div className="mx-auto grid w-[85%] max-w-7xl gap-y-12 pb-4 pt-16 md:grid-cols-12 md:pb-16 md:pt-12">
           <div className="col-span-1 h-[26rem] md:col-span-6 md:h-auto"></div>
           {/*  image */}
           <div className="col-span-1 flex flex-col items-center justify-center md:col-span-6">
@@ -72,8 +72,8 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <div className="x-padding absolute inset-0 bg-gradient-to-b from-blue-400/10 via-blue-400/15 to-blue-400/30 pb-12 pt-16 md:bg-gradient-to-tr md:from-transparent md:via-blue-400/15 md:to-blue-400/30 md:py-16">
-          <div className="mx-auto grid h-full max-w-7xl grid-cols-1 md:grid-cols-12">
+        <div className="x-padding absolute inset-0 bg-gradient-to-b from-blue-400/10 via-blue-400/15 to-blue-400/30 pb-12 pt-16 md:bg-gradient-to-tr md:from-transparent md:via-blue-400/15 md:to-blue-400/30 md:pb-16 md:pt-12">
+          <div className="mx-auto grid h-full w-[85%] max-w-7xl grid-cols-1 md:grid-cols-12">
             <div className="col-span-1 md:col-span-6">
               {/* Shared hosting badge */}
               <div className="inline-block">
