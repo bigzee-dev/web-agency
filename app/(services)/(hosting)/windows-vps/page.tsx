@@ -12,9 +12,9 @@ import Consultation from "@/components/shared/support/consultation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Windows VPS - Production ready Cloud Infrastructure | Botswana",
+  title: "Windows VPS for Business and Enterprise Applications | Botswana",
   description:
-    "Windows Server Hosting with full RDP access, high performance compute and windows environment. Support team based in Botswana",
+    "Windows Server Hosting with full RDP access, run windows applications on our high performance VPS. Perfect for businesses in Botswana.",
   alternates: {
     canonical: "https://deltaworx.co.bw/windows-vps",
   },

@@ -8,7 +8,7 @@ import Consultation from "@/components/shared/support/consultation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "E-Commerce Development - Online Store Solutions | Botswana",
+  title: "Ecommerce Development - Online Store Solutions | Botswana",
   description:
     "Build your online store with Deltaworx. E-commerce development using Shopify, WooCommerce, and custom solutions. Payment gateway integration, secure checkout, and full support in Botswana.",
   alternates: {

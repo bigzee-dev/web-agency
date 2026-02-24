@@ -7,16 +7,16 @@ const features = [
     label: "99.9% uptime",
   },
   { label: "LiteSpeed Web Server" },
-  { label: "1 Free Backup Slot" },
+  { label: "Daily Backups" },
   {
-    label: "Ryzen CPUs",
+    label: "Ryzen CPUs, DDR5 RAM",
   },
   { label: "NVME SSD" },
   { label: "SSH Access" },
-  { label: "NVME SSDs & DDR5 RAM" },
-  { label: "Mysql Databases" },
-  { label: "24/7 Support" },
-  { label: "JetBackup" },
+  { label: "Free SSL Certificates" },
+  { label: "MySql Databases" },
+  { label: "Easy WordPress Management" },
+  { label: "Premium Support" },
 ];
 
 export default function HostingFeatures() {
@@ -54,8 +54,9 @@ export default function HostingFeatures() {
                 Shared Hosting Features
               </h3>
               <p className="mb-6 font-sans text-gray-700">
-                We’ll move your first website to Cloud ways from any web host
-                for without breaking your live site hosted on the old host.
+                Premium Hosting at the fraction of the cost. We have optimised
+                and hardened our Hosting Servers to provide unmatched
+                Performance, Security and Stability.
               </p>
               <div className="">
                 <ul className="mx-auto grid h-48 w-[94%] list-inside grid-cols-2 gap-x-1 gap-y-1 self-center font-sans text-md text-gray-600 md:w-[90%] md:gap-x-0">

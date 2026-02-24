@@ -57,11 +57,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
-          src={process.env.NEXT_PUBLIC_UMAMI_SRC}
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-          strategy="afterInteractive"
-        />
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            src={process.env.NEXT_PUBLIC_UMAMI_SRC}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+            strategy="afterInteractive"
+          />
+        )}
         <Script
           id="organization-schema"
           type="application/ld+json"

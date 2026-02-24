@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Website Development - Professional Web Design | Botswana",
   description:
-    "Professional website development services in Botswana. Custom websites, responsive design, SEO optimisation, and ongoing support. Grow your business with Deltaworx.",
+    "Professional web development services in Botswana. Custom websites, responsive design, SEO optimisation, and ongoing support. Grow your business with Deltaworx.",
   alternates: {
     canonical: "https://deltaworx.co.bw/websites",
   },
