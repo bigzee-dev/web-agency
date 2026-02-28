@@ -3,6 +3,7 @@
 ## Overview
 
 Your Next.js site now has an automatically generated sitemap at `/sitemap.xml` that includes:
+
 - All static pages (home, about, services, legal pages, etc.)
 - Dynamic blog posts from Strapi CMS
 - Proper priority and change frequency settings for SEO
@@ -10,6 +11,7 @@ Your Next.js site now has an automatically generated sitemap at `/sitemap.xml` t
 ## How It Works
 
 The sitemap is **automatically generated** at build time using Next.js 15's built-in sitemap feature. The sitemap:
+
 1. Fetches all blog posts from your Strapi CMS
 2. Combines them with static pages
 3. Generates SEO-optimized XML accessible at `https://deltaworx.co.bw/sitemap.xml`
@@ -65,6 +67,7 @@ pnpm sitemap:validate
 ```
 
 This will:
+
 - Build your site
 - Start a local server
 - Fetch and validate the sitemap
@@ -76,6 +79,7 @@ This will:
 After deploying, submit your sitemap to:
 
 ### Google Search Console
+
 1. Go to [Google Search Console](https://search.google.com/search-console)
 2. Select your property
 3. Go to "Sitemaps" in the left menu
@@ -83,6 +87,7 @@ After deploying, submit your sitemap to:
 5. Click "Submit"
 
 ### Bing Webmaster Tools
+
 1. Go to [Bing Webmaster Tools](https://www.bing.com/webmasters)
 2. Go to "Sitemaps"
 3. Enter: `https://deltaworx.co.bw/sitemap.xml`
@@ -110,6 +115,7 @@ Current priorities in the sitemap:
 ### Sitemap not showing blog posts?
 
 Check that:
+
 1. `STRAPI_API_URL` is set in your `.env.local`
 2. Your Strapi instance is accessible
 3. The blog posts endpoint `/api/blog-posts` is working

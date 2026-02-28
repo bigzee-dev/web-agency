@@ -34,7 +34,7 @@ pnpm cf-typegen           # Generate Cloudflare environment types
   - Event handlers
   - Browser APIs
   - Animation libraries (Framer Motion)
-- **Dynamic Routes**: `/blog-posts/[slug]` for Strapi CMS blog posts
+- **Dynamic Routes**: `/blog/[slug]` for Strapi CMS blog posts
 - **API Routes**: `/app/api/` - single route for contact form submission
 
 ### Cloudflare Deployment
@@ -49,6 +49,7 @@ pnpm cf-typegen           # Generate Cloudflare environment types
 ### Component Organization
 
 Components are organized by page/feature, not by type:
+
 ```
 components/
 ├── home/           # Homepage sections (showcase, stats, etc.)
@@ -61,6 +62,7 @@ components/
 ```
 
 Pages compose sections from their respective folders:
+
 ```tsx
 // app/(services)/domains/page.tsx
 export default function DomainsPage() {
@@ -78,6 +80,7 @@ export default function DomainsPage() {
 ### Styling System
 
 **Shared Style Utilities** (`/app/ui/customTailwindClasses.ts`):
+
 - Export pre-configured Tailwind class strings for consistency
 - All use Montserrat font
 - Import and use these instead of duplicating styles:
@@ -91,20 +94,25 @@ export default function DomainsPage() {
   - Buttons: `primaryButton`, `grayButton`, `whiteButton`, `greenButton`, `transparentButton`, `lightBgButton`
 
 **Tailwind Config**:
+
 - Custom colors: `primary` (#005878), `secondary` (#0f3551), `accent` (#33bff2)
 - Custom breakpoints: `sm: 500px`, `md: 768px`, `lg: 1020px`, `xl: 1280px`
 - Dark mode via `class` strategy
 
 **Font Loading** (`/app/ui/fonts.ts`):
+
 - All fonts loaded via `next/font/google` with `display: "swap"`
 - Primary: `montserrat` (headings/buttons), `inter` (body text)
 - Branding: `cairo` (logo), `expletus_sans` (alternative logo)
 
 **Class Merging**:
+
 - Use `cn()` utility from `/lib/utils.ts` to safely merge Tailwind classes:
   ```tsx
   import { cn } from "@/lib/utils";
-  <div className={cn("base-classes", conditional && "extra-classes", className)} />
+  <div
+    className={cn("base-classes", conditional && "extra-classes", className)}
+  />;
   ```
 
 ### Responsive Navigation
@@ -118,6 +126,7 @@ export default function DomainsPage() {
 ### Data Fetching
 
 **Strapi CMS Blog**:
+
 - Server-side async functions in page components
 - Endpoint: `process.env.STRAPI_API_URL`
 - List: `fetch("/api/blog-posts")`
@@ -142,6 +151,7 @@ export default function DomainsPage() {
 ### Environment Variables
 
 Required in `.env.local`:
+
 ```env
 # Strapi CMS
 STRAPI_API_URL=
@@ -186,6 +196,7 @@ NEXT_PUBLIC_SITE_NAME_FOR_FORM=
 ```bash
 npx shadcn@latest add [component-name]
 ```
+
 - Installs to `/components/ui/`
 - Configuration in `components.json`
 - Uses Radix UI primitives with Tailwind styling
@@ -199,20 +210,24 @@ npx shadcn@latest add [component-name]
 ## Development Notes
 
 ### File Extensions
+
 - Components can be `.tsx` or `.jsx` (legacy nav is .jsx)
 - TypeScript is configured to allow JS files
 
 ### API Route Requirements
+
 - Must export `export const runtime = "nodejs";` for Node.js APIs (nodemailer, etc.)
 - Cloudflare Workers default to edge runtime - specify nodejs for compatibility
 
 ### Deployment Gotchas
+
 - Build generates `.open-next/` directory - don't commit this
 - Preview locally before deploying: `pnpm preview`
 - Cloudflare Workers have size limits - keep bundle optimized
 - Server components reduce client JS bundle size
 
 ### Animation Libraries
+
 - Framer Motion: Heavy animations, requires client component
 - CSS animations: Preferred for simple transitions (defined in Tailwind config)
 - Embla Carousel: For carousels/sliders

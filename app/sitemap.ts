@@ -22,7 +22,7 @@ const staticPages = [
   { url: "/cloud-storage", changeFrequency: "weekly" as const, priority: 0.9 },
 
   // Blog
-  { url: "/blog-posts", changeFrequency: "daily" as const, priority: 0.8 },
+  { url: "/blog", changeFrequency: "daily" as const, priority: 0.8 },
 
   // How to pay
   { url: "/how-to-pay", changeFrequency: "monthly" as const, priority: 0.5 },
@@ -87,7 +87,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Map blog post entries
   const blogEntries: MetadataRoute.Sitemap = blogPosts.map(
     (post: { slug: string; updatedAt?: string }) => ({
-      url: `${baseUrl}/blog-posts/${post.slug}`,
+      url: `${baseUrl}/blog/${post.slug}`,
       lastModified: post.updatedAt ? new Date(post.updatedAt) : new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
