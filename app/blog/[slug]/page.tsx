@@ -26,12 +26,11 @@ interface PostTypes {
   content: BlocksContent;
 }
 
+export const revalidate = false;
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   try {
-    const res = await fetch(
-      `${process.env.STRAPI_API_URL}/api/blog-posts?pagination[pageSize]=100`,
-      { next: { revalidate: 3600 } },
-    );
+    const res = await fetch(`${process.env.STRAPI_API_URL}/api/blog-posts`);
     if (!res.ok) return [];
     const json = await res.json();
     return (json.data || []).map((post: PostTypes) => ({
