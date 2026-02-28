@@ -51,7 +51,7 @@ export default async function Component() {
           {articles.map((article) => (
             <Link
               key={article.id}
-              href={`/blog-posts/${article.slug}`}
+              href={`/blog/${article.slug}`}
               className="block transition-transform hover:scale-105"
             >
               <Card key={article.id} className="overflow-hidden bg-transparent">
