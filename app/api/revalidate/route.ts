@@ -2,16 +2,31 @@ import { NextRequest, NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 
 export async function POST(req: NextRequest) {
-  const body = await req.json();
+  // Read secret from headers
+  const secret = req.headers.get("secret");
 
-  // Security check
-  if (body.secret !== process.env.REVALIDATE_SECRET) {
+  if (secret !== process.env.REVALIDATE_SECRET) {
     return NextResponse.json({ message: "Invalid token" }, { status: 401 });
   }
 
+  // Get JSON payload
+  const body = await req.json();
+
   try {
-    revalidatePath(`/blog/${body.slug}`);
-    revalidatePath(`/blog`); // blog listing page
+    // Strapi puts the slug under body.entry.slug
+    const slug = body.entry.slug;
+
+    if (!slug) {
+      return NextResponse.json(
+        { message: "No slug provided" },
+        { status: 400 },
+      );
+    }
+
+    // Revalidate this blog post page
+    revalidatePath(`/blog/${slug}`);
+    // Revalidate blog listing page
+    revalidatePath(`/blog`);
 
     return NextResponse.json({ revalidated: true });
   } catch (err) {
