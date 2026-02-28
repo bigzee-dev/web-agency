@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { User, CalendarDays, Clock } from "lucide-react";
 
-export const runtime = "nodejs";
+// export const runtime = "nodejs";
 
 interface PostTypes {
   title: string;
@@ -22,7 +22,25 @@ interface PostTypes {
   author: string;
   publishedAt: string;
   readlength: string;
+  slug: string;
   content: BlocksContent;
+}
+
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  try {
+    const res = await fetch(
+      `${process.env.STRAPI_API_URL}/api/blog-posts?pagination[pageSize]=100`,
+      { next: { revalidate: 3600 } },
+    );
+    if (!res.ok) return [];
+    const json = await res.json();
+    return (json.data || []).map((post: PostTypes) => ({
+      slug: post.slug,
+    }));
+  } catch (e) {
+    console.warn("generateStaticParams failed", e);
+    return [];
+  }
 }
 
 async function fetchpost(slug: string): Promise<PostTypes> {
@@ -46,6 +64,7 @@ async function fetchpost(slug: string): Promise<PostTypes> {
     author: data.data[0].author,
     publishedAt: data.data[0].publishedAt,
     readlength: data.data[0].readlength,
+    slug: data.data[0].slug,
   };
 }
 
@@ -59,7 +78,7 @@ export default async function Page({
   const content: BlocksContent = post.content;
   console.log(post);
   return (
-    <div className="mx-auto mb-16 max-w-3xl pb-10">
+    <div className="x-padding mx-auto mb-16 max-w-3xl pb-10">
       <Image
         src={`${process.env.STRAPI_API_URL}/${post.image}`}
         alt={post.title}
