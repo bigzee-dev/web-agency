@@ -27,6 +27,8 @@ export async function POST(req: NextRequest) {
     revalidatePath(`/blog/${slug}`);
     // Revalidate blog listing page
     revalidatePath(`/blog`);
+    // Revalidate homepage which has a listing of the blogs
+    revalidatePath(`/`);
 
     return NextResponse.json({ revalidated: true });
   } catch (err) {

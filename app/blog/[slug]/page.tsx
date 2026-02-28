@@ -13,8 +13,6 @@ import {
 } from "@/components/ui/breadcrumb";
 import { User, CalendarDays, Clock } from "lucide-react";
 
-// export const runtime = "nodejs";
-
 interface PostTypes {
   title: string;
   subtitle: string;
@@ -27,6 +25,7 @@ interface PostTypes {
 }
 
 export const revalidate = false;
+export const dynamicParams = true; // allow new slugs/routes
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   try {
