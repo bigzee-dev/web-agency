@@ -80,7 +80,7 @@ export default async function Page({
   return (
     <div className="x-padding mx-auto mb-16 max-w-3xl pb-10">
       <Image
-        src={`${process.env.STRAPI_API_URL}/${post.image}`}
+        src={`${process.env.STRAPI_API_URL}${post.image}`}
         alt={post.title}
         width={811}
         height={540}
