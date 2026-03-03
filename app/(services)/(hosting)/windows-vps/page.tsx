@@ -14,7 +14,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Windows VPS for Business and Enterprise Applications | Botswana",
   description:
-    "Windows Server Hosting with full RDP access, run windows applications on our high performance VPS. Perfect for businesses in Botswana.",
+    "Windows VPS Hosting in Botswana. Run windows applications on our high performance virtual servers. Perfect for developers and businesses in Botswana.",
   alternates: {
     canonical: "https://deltaworx.co.bw/windows-vps",
   },

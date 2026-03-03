@@ -10,9 +10,9 @@ import Consultation from "@/components/shared/support/consultation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Linux VPS - Production ready Cloud Infrastructure | Botswana",
+  title: "Linux VPS - Production Ready Cloud Infrastructure | Botswana",
   description:
-    "High-performance Linux VPS Hosting. Get dedicated resources, full root access, and choice of Ubuntu, Debian and more. Support team based in Botswana.",
+    "High-performance Linux VPS Hosting in Botswana. Get dedicated resources, full root access, and choice of Ubuntu, Debian and more.",
   alternates: {
     canonical: "https://deltaworx.co.bw/linux-vps",
   },
