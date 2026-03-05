@@ -12,6 +12,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { User, CalendarDays, Clock } from "lucide-react";
+import type { Metadata } from "next";
 
 interface PostTypes {
   title: string;
@@ -22,6 +23,32 @@ interface PostTypes {
   readlength: string;
   slug: string;
   content: BlocksContent;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await fetchpost(slug);
+  const imageUrl = `${process.env.STRAPI_API_URL}${post.image}`;
+
+  return {
+    title: post.title,
+    description: post.subtitle,
+    openGraph: {
+      title: post.title,
+      description: post.subtitle,
+      images: [{ url: imageUrl }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.subtitle,
+      images: [imageUrl],
+    },
+  };
 }
 
 export const revalidate = false;

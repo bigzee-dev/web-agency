@@ -5,13 +5,6 @@ export const metadata: Metadata = {
   title: "Blog - Tech Insights & Industry News | Deltaworx",
   description:
     "Stay updated with Deltaworx's blog. Read about cloud computing, web development, hosting tips, and IT trends in Botswana. Expert insights and technical guides.",
-  keywords: [
-    "IT blog Botswana",
-    "technology insights",
-    "cloud computing news",
-    "web development tips",
-    "tech articles",
-  ],
 };
 
 async function getAllBlogPosts() {
