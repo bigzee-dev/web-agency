@@ -51,7 +51,7 @@ export default function Header() {
   return (
     <div className="relative min-h-[34rem] w-full bg-black">
       <div className="x-padding w-full xl:px-12">
-        <div className="mx-auto grid w-[90%] max-w-7xl gap-y-12 pb-4 pt-16 md:grid-cols-12 md:pb-16 md:pt-12">
+        <div className="mx-auto grid w-full max-w-7xl gap-y-12 pb-4 pt-16 md:w-[90%] md:grid-cols-12 md:pb-16 md:pt-12">
           <div className="col-span-1 h-[26rem] md:col-span-6 md:h-auto"></div>
           {/*  image */}
           <div className="col-span-1 flex flex-col items-center justify-center md:col-span-6">
@@ -73,7 +73,7 @@ export default function Header() {
           </div>
         </div>
         <div className="x-padding absolute inset-0 bg-gradient-to-b from-blue-400/10 via-blue-400/15 to-blue-400/30 pb-12 pt-16 md:bg-gradient-to-tr md:from-transparent md:via-blue-400/15 md:to-blue-400/30 md:pb-16 md:pt-12">
-          <div className="mx-auto grid h-full w-[90%] max-w-7xl grid-cols-1 md:grid-cols-12">
+          <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-1 md:w-[90%] md:grid-cols-12">
             <div className="col-span-1 md:col-span-6">
               {/* Shared hosting badge */}
               <div className="inline-block">
@@ -97,7 +97,7 @@ export default function Header() {
                     >
                       <h6 className="flex items-center gap-2 font-medium tracking-wide text-blue-300">
                         <div
-                          className={`mr-0.5 rounded-lg bg-white/10 p-2 text-slate-400 outline outline-1 outline-gray-500/50`}
+                          className={`mr-0.5 rounded-lg bg-white/10 p-2 text-blue-300/60 outline outline-1 outline-gray-500/50`}
                         >
                           {offer.icon}
                         </div>
@@ -113,7 +113,7 @@ export default function Header() {
                   ))}
                 </div>
               </div>
-              <div className="mt-10 flex items-end gap-x-5 md:gap-x-12">
+              <div className="mt-10 flex items-center gap-x-6 md:items-end md:gap-x-12">
                 <Link href="#pricing-plans" className={` ${greenButton} `}>
                   Compare Plans
                 </Link>
@@ -121,13 +121,16 @@ export default function Header() {
                   <span className="mb-0.5 text-xs text-neutral-400">
                     Starting from
                   </span>
-                  <span className="text-4xl font-semibold text-neutral-300">
-                    <span
-                      className={` ${merriweather.className} mr-[0.1rem] text-[2.15rem]`}
-                    >
-                      {currencySymbol}
-                    </span>
-                    {price[currency]}
+                  <span className="flex flex-col text-4xl font-semibold text-neutral-300 md:flex-row">
+                    <div>
+                      <span
+                        className={` ${merriweather.className} mr-[0.1rem] text-[2.15rem]`}
+                      >
+                        {currencySymbol}
+                      </span>
+                      {price[currency]}
+                    </div>
+
                     <span className="text-lg font-medium text-neutral-400">
                       /month
                     </span>

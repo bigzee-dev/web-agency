@@ -141,7 +141,7 @@ export default async function Component() {
         </div>
         <div className="flex justify-end">
           <Link
-            href="/blog-posts"
+            href="/blog"
             className="group flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-accent"
           >
             View all posts
