@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BlogHeader from "@/components/blog/header";
 
 export const metadata: Metadata = {
   title: "Blog - Tech Insights & Industry News | Deltaworx",
@@ -25,6 +26,8 @@ export default async function BlogPosts() {
   const blogs = await getAllBlogPosts();
   console.log(blogs);
   return (
+    <>
+      <BlogHeader />
     <div className="x-padding mx-auto max-w-7xl py-12">
       <h1 className="mb-4 text-3xl font-bold">Blog Posts</h1>
       <ul className="list-disc pl-5">
@@ -41,5 +44,6 @@ export default async function BlogPosts() {
         ))}
       </ul>
     </div>
+    </>
   );
 }
