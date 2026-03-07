@@ -1,6 +1,6 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import BlogHeader from "@/components/blog/header";
+import AllBlogPosts from "@/components/blog/AllBlogPosts";
 
 export const metadata: Metadata = {
   title: "Blog - Tech Insights & Industry News | Deltaworx",
@@ -8,8 +8,13 @@ export const metadata: Metadata = {
     "Stay updated with Deltaworx's blog. Read about cloud computing, web development, hosting tips, and IT trends in Botswana. Expert insights and technical guides.",
 };
 
+export const revalidate = 3600; // ISR: Revalidate every hour
+
 async function getAllBlogPosts() {
-  const res = await fetch(` ${process.env.STRAPI_API_URL}/api/blog-posts`, {});
+  const res = await fetch(
+    `${process.env.STRAPI_API_URL}/api/blog-posts?populate=image`,
+    { next: { revalidate: 3600 } }, // Cache for 1 hour
+  );
   const blogs = await res.json();
   return blogs.data;
 }
@@ -19,31 +24,49 @@ interface BlogPost {
   title: string;
   subtitle: string;
   slug: string;
-  image: string;
+  image: {
+    url: string;
+    width: number;
+    height: number;
+  };
+  section: string;
+  author: string;
+  publishedAt: string;
+  readlength: string;
 }
 
-export default async function BlogPosts() {
-  const blogs = await getAllBlogPosts();
-  console.log(blogs);
+const POSTS_PER_PAGE = 9;
+
+export default async function BlogPosts({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const params = await searchParams;
+  const currentPage = parseInt(params.page || "1", 10);
+
+  const allBlogs = await getAllBlogPosts();
+  const totalPosts = allBlogs.length;
+  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+
+  // Validate page number
+  const page = Math.max(1, Math.min(currentPage, totalPages || 1));
+
+  const startIdx = (page - 1) * POSTS_PER_PAGE;
+  const endIdx = startIdx + POSTS_PER_PAGE;
+  const paginatedBlogs = allBlogs.slice(startIdx, endIdx);
+
   return (
     <>
       <BlogHeader />
-    <div className="x-padding mx-auto max-w-7xl py-12">
-      <h1 className="mb-4 text-3xl font-bold">Blog Posts</h1>
-      <ul className="list-disc pl-5">
-        {blogs.map((blog: BlogPost) => (
-          <li key={blog.id} className="mb-2">
-            <Link
-              href={`/blog/${blog.slug}`}
-              className="text-blue-500 hover:underline"
-            >
-              {blog.title}
-            </Link>
-            <p>{blog.subtitle}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <AllBlogPosts
+        paginatedBlogs={paginatedBlogs}
+        page={page}
+        totalPages={totalPages}
+        startIdx={startIdx}
+        endIdx={endIdx}
+        totalPosts={totalPosts}
+      />
     </>
   );
 }
