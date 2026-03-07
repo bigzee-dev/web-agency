@@ -19,22 +19,6 @@ async function getAllBlogPosts() {
   return blogs.data;
 }
 
-interface BlogPost {
-  id: number;
-  title: string;
-  subtitle: string;
-  slug: string;
-  image: {
-    url: string;
-    width: number;
-    height: number;
-  };
-  section: string;
-  author: string;
-  publishedAt: string;
-  readlength: string;
-}
-
 const POSTS_PER_PAGE = 9;
 
 export default async function BlogPosts({
