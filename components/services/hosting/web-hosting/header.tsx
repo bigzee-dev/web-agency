@@ -6,7 +6,7 @@ import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { BsLightningChargeFill } from "react-icons/bs";
 import { FaServer } from "react-icons/fa6";
 import Image from "next/image";
-import { greenButton, pageHeadings } from "@/app/ui/customTailwindClasses";
+import { greenButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 import { useCurrency } from "@/contexts/currency-context";
 
