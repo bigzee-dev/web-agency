@@ -48,87 +48,221 @@ export default function Header() {
   const currencySymbol = currency === "USD" ? "$" : "P";
 
   return (
-    <div className="relative min-h-[34rem] w-full overflow-hidden bg-gradient-to-tr from-gray-900 via-gray-800 to-primary">
-      <div className="x-padding w-full">
-        <div className="relative mx-auto grid w-full max-w-7xl gap-x-12 gap-y-12 pb-12 pt-16 md:grid-cols-12 md:py-16">
-          <div className="col-span-1 md:col-span-6">
-            {/* Cloud storage badge */}
-            <div className="inline-block">
-              <span className="font-semibold uppercase tracking-widest text-neutral-300">
-                Cloud Storage
-              </span>
-            </div>
-            {/* Main heading */}
-            <h1
-              className={` ${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
-            >
-              No1 Rule: Always Backup Your Data
-            </h1>
+    <div className="x-padding relative w-full overflow-hidden bg-gradient-to-tr from-gray-800 to-secondary">
+      {/* SVG background */}
+      <svg
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <pattern
+            id="cloud-dots"
+            x="0"
+            y="0"
+            width="32"
+            height="32"
+            patternUnits="userSpaceOnUse"
+          >
+            <circle
+              cx="1.5"
+              cy="1.5"
+              r="1.5"
+              fill="#33bff2"
+              fillOpacity="0.12"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#cloud-dots)" />
 
-            <div className="mt-9 max-w-xl">
-              <div className="mt-4 grid grid-cols-2 gap-x-2 gap-y-6">
-                {features.map((feature) => (
-                  <div
-                    className="flex flex-col gap-2 gap-y-2.5"
-                    key={feature.title}
-                  >
-                    <h6 className="flex items-center gap-2 font-medium tracking-wide text-blue-300">
-                      <div
-                        className={`mr-0.5 rounded-lg bg-white/5 p-2.5 text-slate-400 outline outline-1 outline-gray-500/50`}
-                      >
-                        {feature.icon}
-                      </div>
+        {/* Large background circles — anchored top-right for cloud/sky feel */}
+        <circle cx="82%" cy="20%" r="300" fill="#005878" fillOpacity="0.28" />
+        <circle cx="82%" cy="20%" r="200" fill="#005878" fillOpacity="0.22" />
+        <circle cx="82%" cy="20%" r="100" fill="#33bff2" fillOpacity="0.05" />
 
-                      <span className="text-neutral-300/95">
-                        {feature.title}
-                      </span>
-                    </h6>
-                    <p className="ml-0.5 font-sans text-sm leading-relaxed text-neutral-300/75">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="mt-10 flex items-end gap-x-5 md:gap-x-12">
-              <Link href="#pricing-plans" className={` ${greenButton} `}>
-                Compare Plans
-              </Link>
-              <div className="flex flex-col items-start">
-                <span className="mb-0.5 text-xs text-neutral-400">
-                  Starting from
-                </span>
-                <span className="text-4xl font-semibold text-neutral-300">
-                  <span
-                    className={` ${merriweather.className} mr-[0.1rem] text-[2.15rem]`}
-                  >
-                    {currencySymbol}
-                  </span>
-                  {price[currency]}
-                  <span className="text-lg font-medium text-neutral-400">
-                    /month
-                  </span>
-                </span>
-              </div>
-            </div>
+        {/* Secondary cluster — bottom left */}
+        <circle cx="5%" cy="90%" r="180" fill="#005878" fillOpacity="0.18" />
+        <circle cx="5%" cy="90%" r="100" fill="#005878" fillOpacity="0.12" />
+
+        {/* Accent rings — mid left */}
+        {/* <circle
+          cx="10%"
+          cy="50%"
+          r="100"
+          fill="none"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.16"
+        />
+        <circle
+          cx="10%"
+          cy="50%"
+          r="62"
+          fill="none"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.10"
+        /> */}
+
+        {/* Diagonal accent lines */}
+        <line
+          x1="35%"
+          y1="0"
+          x2="55%"
+          y2="100%"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.07"
+        />
+        <line
+          x1="45%"
+          y1="0"
+          x2="65%"
+          y2="100%"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.05"
+        />
+        <line
+          x1="55%"
+          y1="0"
+          x2="75%"
+          y2="100%"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.04"
+        />
+
+        {/* Decorative polygon — bottom right */}
+        <polygon
+          points="91%,78% 94%,71% 97%,78% 94%,85%"
+          fill="none"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.18"
+        />
+
+        {/* Floating accent dots */}
+        <circle cx="25%" cy="15%" r="3" fill="#33bff2" fillOpacity="0.28" />
+        <circle cx="68%" cy="78%" r="4" fill="#33bff2" fillOpacity="0.20" />
+        <circle cx="50%" cy="92%" r="5" fill="#005878" fillOpacity="0.55" />
+        <circle cx="18%" cy="70%" r="2.5" fill="#33bff2" fillOpacity="0.18" />
+        <circle cx="90%" cy="55%" r="3" fill="#33bff2" fillOpacity="0.14" />
+
+        {/* Horizontal rule lines */}
+        <line
+          x1="0"
+          y1="100%"
+          x2="100%"
+          y2="100%"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.15"
+        />
+        <line
+          x1="0"
+          y1="0"
+          x2="100%"
+          y2="0"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.10"
+        />
+      </svg>
+
+      {/* Left-edge vertical accent bar */}
+      <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-transparent via-[#33bff2]/40 to-transparent" />
+
+      {/* Content */}
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-x-14 gap-y-12 pb-12 pt-16 md:grid-cols-12 md:py-16">
+        <div className="col-span-1 md:col-span-6">
+          {/* badge */}
+          <div className="inline-block">
+            <span className="font-semibold uppercase tracking-widest text-neutral-300">
+              Cloud Storage
+            </span>
           </div>
 
-          {/* Image section */}
-          <div className="col-span-1 flex items-center justify-center md:col-span-6">
-            <div className="relative h-96 w-full md:h-[28rem]">
+          {/* Main heading */}
+          <h1
+            className={`${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
+          >
+            No1 Rule: Always Backup Your Data
+          </h1>
+
+          {/* Feature grid */}
+          <div className="mt-8 grid grid-cols-2 gap-x-3 gap-y-4">
+            {features.map((feature) => (
+              <div
+                key={feature.title}
+                className="flex flex-col gap-1.5 rounded-xl border border-white/[0.08] bg-white/5 p-3.5 backdrop-blur-sm"
+              >
+                <h6 className="flex items-center gap-2.5 text-sm font-semibold text-neutral-200">
+                  <div className="flex-shrink-0 rounded-lg bg-[#33bff2]/15 p-2 text-[#33bff2] ring-1 ring-[#33bff2]/20">
+                    {feature.icon}
+                  </div>
+                  {feature.title}
+                </h6>
+                <p className="pl-0.5 text-xs leading-relaxed text-neutral-400">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA row */}
+          <div className="mt-10 flex items-end gap-x-5 md:gap-x-12">
+            <Link href="#pricing-plans" className={greenButton}>
+              Compare Plans
+            </Link>
+            <div className="flex flex-col items-start">
+              <span className="mb-0.5 text-xs text-neutral-400">
+                Starting from
+              </span>
+              <span className="text-4xl font-semibold text-neutral-300">
+                <span
+                  className={` ${merriweather.className} mr-[0.1rem] text-[2.15rem]`}
+                >
+                  {currencySymbol}
+                </span>
+                {price[currency]}
+                <span className="text-lg font-medium text-neutral-400">
+                  /month
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Image section */}
+        <div className="col-span-1 flex items-center justify-center md:col-span-6">
+          <div className="relative w-full">
+            {/* Outer glow */}
+            <div className="absolute -inset-3 rounded-2xl bg-[#33bff2]/10 blur-xl" />
+
+            {/* Image frame */}
+            <div className="relative h-96 w-full rounded-2xl border border-[#33bff2]/20 shadow-2xl shadow-black/50 md:h-[28rem]">
               <Image
                 src="/img/cloudstorage/150857.jpg"
                 alt="Cloud Storage"
                 fill
-                className="object-cover md:rounded-3xl"
+                className="rounded-2xl object-cover"
               />
-              {/* Floating badge */}
+              {/* Depth overlay */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#0f3551]/30 via-transparent to-transparent" />
+
+              {/* Floating 1TB badge */}
               <div className="absolute -bottom-5 right-8 rounded-xl bg-gradient-to-br from-yellow-500 to-sky-700 px-6 py-4 shadow-xl md:-right-8">
                 <div className="text-sm text-neutral-200">Up to</div>
                 <div className="text-3xl font-bold text-white">1TB</div>
                 <div className="text-sm text-neutral-200">Storage</div>
               </div>
             </div>
+
+            {/* Decorative corner brackets */}
+            <div className="absolute -bottom-2 -right-2 h-16 w-16 rounded-br-2xl border-b-2 border-r-2 border-[#33bff2]/30" />
+            <div className="absolute -left-2 -top-2 h-16 w-16 rounded-tl-2xl border-l-2 border-t-2 border-[#33bff2]/20" />
           </div>
         </div>
       </div>

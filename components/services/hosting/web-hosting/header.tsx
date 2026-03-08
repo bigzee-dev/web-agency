@@ -6,12 +6,12 @@ import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { BsLightningChargeFill } from "react-icons/bs";
 import { FaServer } from "react-icons/fa6";
 import Image from "next/image";
-import { greenButton } from "@/app/ui/customTailwindClasses";
+import { greenButton, pageHeadings } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";
 import { useCurrency } from "@/contexts/currency-context";
 
 const iconProps = {
-  size: "1.2em",
+  size: "1.3em",
 };
 
 const price = { BWP: "60", USD: "4.25" };
@@ -29,7 +29,6 @@ const offers = [
     description: "High Performance NVMe",
     color: "text-yellow-400",
   },
-
   {
     icon: <BsLightningChargeFill {...iconProps} />,
     title: "Cache",
@@ -49,96 +48,190 @@ export default function Header() {
   const currencySymbol = currency === "USD" ? "$" : "P";
 
   return (
-    <div className="relative min-h-[34rem] w-full bg-black">
-      <div className="x-padding w-full xl:px-12">
-        <div className="mx-auto grid w-full max-w-7xl gap-y-12 pb-4 pt-16 md:w-[90%] md:grid-cols-12 md:pb-16 md:pt-12">
-          <div className="col-span-1 h-[26rem] md:col-span-6 md:h-auto"></div>
-          {/*  image */}
-          <div className="col-span-1 flex flex-col items-center justify-center md:col-span-6">
-            {" "}
-            <Image
-              src="/img/hosting/cpu-tech1.jpg"
-              alt="Logo"
-              width={2534}
-              height={1774}
-              className="-mt-4 w-[83%]"
+    <div className="x-padding relative w-full overflow-hidden bg-gradient-to-tr from-gray-800 to-secondary">
+      {/* SVG background — same design language as blog header */}
+      <svg
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <pattern
+            id="hosting-dots"
+            x="0"
+            y="0"
+            width="32"
+            height="32"
+            patternUnits="userSpaceOnUse"
+          >
+            <circle
+              cx="1.5"
+              cy="1.5"
+              r="1.5"
+              fill="#33bff2"
+              fillOpacity="0.12"
             />
-            <div className="-mt-10 flex w-full items-center justify-center">
-              <img
-                src="/svg/hosting/cpanel.svg"
-                alt="Cpanel Logo"
-                className="h-28"
-              />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hosting-dots)" />
+
+        {/* Large background circles — right side, behind image */}
+        <circle cx="78%" cy="50%" r="340" fill="#005878" fillOpacity="0.30" />
+        <circle cx="78%" cy="50%" r="230" fill="#005878" fillOpacity="0.28" />
+        <circle cx="78%" cy="50%" r="130" fill="#33bff2" fillOpacity="0.05" />
+
+        {/* Diagonal accent lines */}
+        <line
+          x1="38%"
+          y1="0"
+          x2="58%"
+          y2="100%"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.07"
+        />
+        <line
+          x1="48%"
+          y1="0"
+          x2="68%"
+          y2="100%"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.05"
+        />
+        <line
+          x1="28%"
+          y1="0"
+          x2="48%"
+          y2="100%"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.05"
+        />
+
+        {/* Decorative polygon — bottom right */}
+        <polygon
+          points="92%,75% 95%,68% 98%,75% 95%,82%"
+          fill="none"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.2"
+        />
+
+        {/* Floating accent dots */}
+        {/* <circle cx="20%" cy="82%" r="4" fill="#33bff2" fillOpacity="0.25" />
+        <circle cx="72%" cy="18%" r="3" fill="#33bff2" fillOpacity="0.3" />
+        <circle cx="58%" cy="88%" r="5" fill="#005878" fillOpacity="0.6" />
+        <circle cx="14%" cy="42%" r="2.5" fill="#33bff2" fillOpacity="0.2" />
+        <circle cx="88%" cy="88%" r="6" fill="#33bff2" fillOpacity="0.08" />
+        <circle cx="3%" cy="65%" r="3" fill="#33bff2" fillOpacity="0.15" /> */}
+
+        {/* Horizontal rule lines */}
+        <line
+          x1="0"
+          y1="100%"
+          x2="100%"
+          y2="100%"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.15"
+        />
+        <line
+          x1="0"
+          y1="0"
+          x2="100%"
+          y2="0"
+          stroke="#33bff2"
+          strokeWidth="1"
+          strokeOpacity="0.1"
+        />
+      </svg>
+
+      {/* Left-edge vertical accent bar */}
+      <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-transparent via-[#33bff2]/40 to-transparent" />
+
+      {/* Content */}
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 py-16 md:grid-cols-2 md:gap-8 md:gap-x-8 md:py-16">
+        {/* LEFT — text content */}
+        <div className="flex flex-col">
+          {/* badge */}
+          <div className="inline-block">
+            <span className="font-semibold uppercase tracking-widest text-neutral-300">
+              Web Hosting
+            </span>
+          </div>
+
+          {/* Main heading */}
+          <h1
+            className={` ${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
+          >
+            Top quality Web Hosting plans
+          </h1>
+
+          {/* Feature grid */}
+          <div className="mt-8 grid grid-cols-2 gap-x-2 gap-y-5">
+            {offers.map((offer) => (
+              <div key={offer.title} className="flex flex-col gap-1.5">
+                <h6 className="flex items-center gap-2.5 text-sm font-semibold text-neutral-200">
+                  <div className="flex-shrink-0 rounded-lg bg-[#33bff2]/15 p-2 text-[#33bff2] ring-1 ring-[#33bff2]/20">
+                    {offer.icon}
+                  </div>
+                  {offer.title}
+                </h6>
+                <p className="pl-0.5 text-xs leading-relaxed text-neutral-400">
+                  {offer.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA row */}
+          <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Link href="#pricing-plans" className={greenButton}>
+              Compare Plans
+            </Link>
+
+            <div className="flex flex-col items-start">
+              <span className="mb-0.5 text-xs text-neutral-400">
+                Starting from
+              </span>
+              <span className="text-4xl font-semibold text-neutral-300">
+                <span
+                  className={` ${merriweather.className} mr-[0.1rem] text-[2.15rem]`}
+                >
+                  {currencySymbol}
+                </span>
+                {price[currency]}
+                <span className="text-lg font-medium text-neutral-400">
+                  /month
+                </span>
+              </span>
             </div>
           </div>
         </div>
-        <div className="x-padding absolute inset-0 bg-gradient-to-b from-blue-400/10 via-blue-400/15 to-blue-400/30 pb-12 pt-16 md:bg-gradient-to-tr md:from-transparent md:via-blue-400/15 md:to-blue-400/30 md:pb-16 md:pt-12">
-          <div className="mx-auto grid h-full w-full max-w-7xl grid-cols-1 md:w-[90%] md:grid-cols-12">
-            <div className="col-span-1 md:col-span-6">
-              {/* Shared hosting badge */}
-              <div className="inline-block">
-                <span className="font-semibold tracking-widest text-neutral-300">
-                  WEB HOSTING
-                </span>
-              </div>
-              {/* Main heading */}
-              <h1
-                className={` ${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
-              >
-                Top quality web hosting plans
-              </h1>
 
-              <div className="mt-9 max-w-xl">
-                <div className="mt-4 grid grid-cols-2 gap-x-2 gap-y-6">
-                  {offers.map((offer) => (
-                    <div
-                      className="flex flex-col gap-2 gap-y-2.5"
-                      key={offer.title}
-                    >
-                      <h6 className="flex items-center gap-2 font-medium tracking-wide text-blue-300">
-                        <div
-                          className={`mr-0.5 rounded-lg bg-white/10 p-2 text-blue-300/60 outline outline-1 outline-gray-500/50`}
-                        >
-                          {offer.icon}
-                        </div>
-
-                        <span className="text-neutral-300/95">
-                          {offer.title}
-                        </span>
-                      </h6>
-                      <p className="ml-0.5 font-sans text-sm leading-relaxed text-neutral-300/75">
-                        {offer.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-10 flex items-center gap-x-6 md:items-end md:gap-x-12">
-                <Link href="#pricing-plans" className={` ${greenButton} `}>
-                  Compare Plans
-                </Link>
-                <div className="flex flex-col items-start">
-                  <span className="mb-0.5 text-xs text-neutral-400">
-                    Starting from
-                  </span>
-                  <span className="flex flex-col text-4xl font-semibold text-neutral-300 md:flex-row">
-                    <div>
-                      <span
-                        className={` ${merriweather.className} mr-[0.1rem] text-[2.15rem]`}
-                      >
-                        {currencySymbol}
-                      </span>
-                      {price[currency]}
-                    </div>
-
-                    <span className="text-lg font-medium text-neutral-400">
-                      /month
-                    </span>
-                  </span>
-                </div>
-              </div>
+        {/* RIGHT — image */}
+        <div className="flex items-center justify-center md:justify-end">
+          <div className="relative w-full max-w-[30rem] md:max-w-none">
+            {/* Outer glow ring */}
+            <div className="absolute -inset-3 rounded-2xl bg-[#33bff2]/10 blur-xl" />
+            {/* Image frame */}
+            <div className="relative overflow-hidden">
+              <Image
+                src="/img/hosting/young-businessmen.png"
+                alt="Young businessmen working on web projects"
+                width={1400}
+                height={1000}
+                className="w-full object-cover"
+                priority
+              />
+              {/* Subtle inner overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#0f3551]/30 via-transparent to-transparent" />
             </div>
-            <div className="col-span-1 md:col-span-6"></div>
+            {/* Decorative corner accent */}
+            <div className="absolute -bottom-2 -right-2 h-16 w-16 rounded-br-2xl border-b-2 border-r-2 border-[#33bff2]/30" />
+            <div className="absolute -left-2 -top-2 h-16 w-16 rounded-tl-2xl border-l-2 border-t-2 border-[#33bff2]/20" />
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ import {
   DocumentTextIcon,
   InfoIcon,
   CreditCardIcon,
-  // BookIcon,
+  BookIcon,
   ListIcon,
   MailPlusIcon,
   LoginIcon,
@@ -274,6 +274,14 @@ export default function ResponsiveNav() {
                     How to Pay
                   </div>
                 </Link>
+                <Link href="/blog" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <BookIcon size="size-5" />
+                    </span>
+                    Blog
+                  </div>
+                </Link>
                 <Link
                   href="https://brookie.monitor.bigzee.app/status/live"
                   target="_blank"
@@ -288,14 +296,6 @@ export default function ResponsiveNav() {
                   </div>
                 </Link>
 
-                {/* <Link href="/blog-posts" className="dropdown-item">
-                  <div className="dropdown-item-link">
-                    <span>
-                      <BookIcon size="size-5" />
-                    </span>
-                    Blog
-                  </div>
-                </Link> */}
                 <Link href="/legal/terms-of-service" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>

@@ -7,16 +7,12 @@ export const footerLinks = [
         href: "/about-us",
         type: "internal",
       },
-      // {
-      //   title: "Blog",
-      //   href: "/blog-posts",
-      //   type: "internal",
-      // },
       {
-        title: "Terms of Service",
-        href: "/legal/terms-of-service",
+        title: "Blog",
+        href: "/blog",
         type: "internal",
       },
+
       {
         title: "How to Pay",
         href: "/how-to-pay",
@@ -31,6 +27,11 @@ export const footerLinks = [
         title: "Company Profile",
         href: "https://bigzee-mxr1.xyz/companyprofile.pdf",
         type: "external",
+      },
+      {
+        title: "Terms of Service",
+        href: "/legal/terms-of-service",
+        type: "internal",
       },
     ],
   },
