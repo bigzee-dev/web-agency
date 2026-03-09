@@ -203,11 +203,7 @@ export default function Header() {
                 Starting from
               </span>
               <span className="text-4xl font-semibold text-neutral-300">
-                <span
-                  className={` ${merriweather.className} mr-[0.1rem] text-[2.15rem]`}
-                >
-                  {currencySymbol}
-                </span>
+                <span className={`mr-[0.1rem]`}>{currencySymbol}</span>
                 {price[currency]}
                 <span className="text-lg font-medium text-neutral-400">
                   /month

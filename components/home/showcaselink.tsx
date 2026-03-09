@@ -29,7 +29,7 @@ export default function Showcaselink() {
           Business Email
         </span>
         <p className={`font-sans text-base font-semibold text-gray-700`}>
-          <span className={lora.className}>{currencySymbol}</span>
+          <span>{currencySymbol}</span>
           {price[currency]}
         </p>
         <span className="text-gray-400">|</span>
