@@ -1,6 +1,6 @@
 "use client";
 
-import { montserrat, merriweather } from "@/app/ui/fonts";
+import { montserrat } from "@/app/ui/fonts";
 import Image from "next/image";
 import { transparentButton } from "@/app/ui/customTailwindClasses";
 import Link from "next/link";

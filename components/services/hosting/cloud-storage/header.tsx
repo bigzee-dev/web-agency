@@ -1,6 +1,6 @@
 "use client";
 
-import { merriweather, montserrat } from "@/app/ui/fonts";
+import { montserrat } from "@/app/ui/fonts";
 import { HiCloud } from "react-icons/hi2";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { MdDevices } from "react-icons/md";

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { IoArrowForwardCircle } from "react-icons/io5";
 import { useCurrency } from "@/contexts/currency-context";
-import { cairo, lora } from "@/app/ui/fonts";
+import { cairo } from "@/app/ui/fonts";
 
 const price = { BWP: "35", USD: "2.50" };
 
