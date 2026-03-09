@@ -82,33 +82,35 @@ export default function Header() {
         <circle cx="78%" cy="50%" r="130" fill="#33bff2" fillOpacity="0.05" />
 
         {/* Diagonal accent lines */}
-        <line
-          x1="38%"
-          y1="0"
-          x2="58%"
-          y2="100%"
-          stroke="#33bff2"
-          strokeWidth="1"
-          strokeOpacity="0.07"
-        />
-        <line
-          x1="48%"
-          y1="0"
-          x2="68%"
-          y2="100%"
-          stroke="#33bff2"
-          strokeWidth="1"
-          strokeOpacity="0.05"
-        />
-        <line
-          x1="28%"
-          y1="0"
-          x2="48%"
-          y2="100%"
-          stroke="#33bff2"
-          strokeWidth="1"
-          strokeOpacity="0.05"
-        />
+        <div className="hidden md:block">
+          <line
+            x1="38%"
+            y1="0"
+            x2="58%"
+            y2="100%"
+            stroke="#33bff2"
+            strokeWidth="1"
+            strokeOpacity="0.07"
+          />
+          <line
+            x1="48%"
+            y1="0"
+            x2="68%"
+            y2="100%"
+            stroke="#33bff2"
+            strokeWidth="1"
+            strokeOpacity="0.05"
+          />
+          <line
+            x1="28%"
+            y1="0"
+            x2="48%"
+            y2="100%"
+            stroke="#33bff2"
+            strokeWidth="1"
+            strokeOpacity="0.05"
+          />
+        </div>
 
         {/* Decorative polygon — bottom right */}
         <polygon
@@ -152,9 +154,9 @@ export default function Header() {
       <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-transparent via-[#33bff2]/40 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 py-16 md:grid-cols-2 md:gap-8 md:gap-x-8 md:py-16">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 py-16 md:w-[90%] md:grid-cols-2 md:gap-8 md:gap-x-8 md:py-16">
         {/* LEFT — text content */}
-        <div className="flex flex-col">
+        <div className="flex flex-col px-2 md:px-0">
           {/* badge */}
           <div className="inline-block">
             <span className="font-semibold uppercase tracking-widest text-neutral-300">
@@ -187,7 +189,7 @@ export default function Header() {
           </div>
 
           {/* CTA row */}
-          <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:mt-8 md:justify-start">
             <Link href="#pricing-plans" className={greenButton}>
               Compare Plans
             </Link>

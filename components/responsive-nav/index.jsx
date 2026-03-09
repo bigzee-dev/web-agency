@@ -266,20 +266,20 @@ export default function ResponsiveNav() {
                     About Us
                   </div>
                 </Link>
-                <Link href="/how-to-pay" className="dropdown-item">
-                  <div className="dropdown-item-link">
-                    <span>
-                      <CreditCardIcon size="size-5" />
-                    </span>
-                    How to Pay
-                  </div>
-                </Link>
                 <Link href="/blog" className="dropdown-item">
                   <div className="dropdown-item-link">
                     <span>
                       <BookIcon size="size-5" />
                     </span>
                     Blog
+                  </div>
+                </Link>
+                <Link href="/how-to-pay" className="dropdown-item">
+                  <div className="dropdown-item-link">
+                    <span>
+                      <CreditCardIcon size="size-5" />
+                    </span>
+                    How to Pay
                   </div>
                 </Link>
                 <Link

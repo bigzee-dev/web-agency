@@ -85,54 +85,36 @@ export default function Header() {
         <circle cx="5%" cy="90%" r="180" fill="#005878" fillOpacity="0.18" />
         <circle cx="5%" cy="90%" r="100" fill="#005878" fillOpacity="0.12" />
 
-        {/* Accent rings — mid left */}
-        {/* <circle
-          cx="10%"
-          cy="50%"
-          r="100"
-          fill="none"
-          stroke="#33bff2"
-          strokeWidth="1"
-          strokeOpacity="0.16"
-        />
-        <circle
-          cx="10%"
-          cy="50%"
-          r="62"
-          fill="none"
-          stroke="#33bff2"
-          strokeWidth="1"
-          strokeOpacity="0.10"
-        /> */}
-
         {/* Diagonal accent lines */}
-        <line
-          x1="35%"
-          y1="0"
-          x2="55%"
-          y2="100%"
-          stroke="#33bff2"
-          strokeWidth="1"
-          strokeOpacity="0.07"
-        />
-        <line
-          x1="45%"
-          y1="0"
-          x2="65%"
-          y2="100%"
-          stroke="#33bff2"
-          strokeWidth="1"
-          strokeOpacity="0.05"
-        />
-        <line
-          x1="55%"
-          y1="0"
-          x2="75%"
-          y2="100%"
-          stroke="#33bff2"
-          strokeWidth="1"
-          strokeOpacity="0.04"
-        />
+        <div className="hidden md:block">
+          <line
+            x1="35%"
+            y1="0"
+            x2="55%"
+            y2="100%"
+            stroke="#33bff2"
+            strokeWidth="1"
+            strokeOpacity="0.07"
+          />
+          <line
+            x1="45%"
+            y1="0"
+            x2="65%"
+            y2="100%"
+            stroke="#33bff2"
+            strokeWidth="1"
+            strokeOpacity="0.05"
+          />
+          <line
+            x1="55%"
+            y1="0"
+            x2="75%"
+            y2="100%"
+            stroke="#33bff2"
+            strokeWidth="1"
+            strokeOpacity="0.04"
+          />
+        </div>
 
         {/* Decorative polygon — bottom right */}
         <polygon
@@ -176,7 +158,7 @@ export default function Header() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-x-14 gap-y-12 pb-12 pt-16 md:grid-cols-12 md:py-16">
-        <div className="col-span-1 md:col-span-6">
+        <div className="col-span-1 px-2 md:col-span-6 md:px-0">
           {/* badge */}
           <div className="inline-block">
             <span className="font-semibold uppercase tracking-widest text-neutral-300">
@@ -202,7 +184,7 @@ export default function Header() {
                   <div className="flex-shrink-0 rounded-lg bg-[#33bff2]/15 p-2 text-[#33bff2] ring-1 ring-[#33bff2]/20">
                     {feature.icon}
                   </div>
-                  {feature.title}
+                  <span className="text-neutral-300">{feature.title}</span>
                 </h6>
                 <p className="pl-0.5 text-xs leading-relaxed text-neutral-400">
                   {feature.description}
@@ -212,7 +194,7 @@ export default function Header() {
           </div>
 
           {/* CTA row */}
-          <div className="mt-10 flex items-end gap-x-5 md:gap-x-12">
+          <div className="mt-10 flex flex-wrap items-end justify-center gap-x-5 gap-y-6 md:justify-start md:gap-x-12">
             <Link href="#pricing-plans" className={greenButton}>
               Compare Plans
             </Link>
