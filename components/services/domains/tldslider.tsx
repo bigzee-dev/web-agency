@@ -16,6 +16,12 @@ interface DomainTLD {
 
 const availableTLDs: DomainTLD[] = [
   {
+    extension: "co.bw",
+    price: { BWP: "149", USD: "12.00" },
+    dotColor: "text-slate-600",
+    badge: "HOT",
+  },
+  {
     extension: "com",
     price: { BWP: "247", USD: "18.00" },
     dotColor: "text-slate-600",

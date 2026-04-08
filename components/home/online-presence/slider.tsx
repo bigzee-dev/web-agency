@@ -7,6 +7,7 @@ interface DomainTLD {
 }
 
 const availableTLDs: DomainTLD[] = [
+  { extension: "co.bw", price: 149 },
   { extension: "com", price: 247 },
   { extension: "org", price: 271 },
   { extension: "app", price: 337 },
@@ -23,7 +24,7 @@ export default function TldSlider() {
       <div className="group relative w-full">
         <div className="">
           <div className="relative pt-0">
-            <InfiniteSlider speedOnHover={10} speed={15} gap={60}>
+            <InfiniteSlider speedOnHover={10} speed={25} gap={60}>
               {availableTLDs.map((tld) => (
                 <div key={tld.extension} className=" ">
                   <div className="text-sm font-semibold text-blue-300">

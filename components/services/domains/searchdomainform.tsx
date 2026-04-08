@@ -15,7 +15,7 @@ import { useCurrency } from "@/contexts/currency-context";
 
 export default function SearchDomainForm() {
   const [domain, setDomain] = React.useState("");
-  const [tld, setTld] = React.useState(".com");
+  const [tld, setTld] = React.useState(".co.bw");
   const { currency } = useCurrency();
   const currencyId = currency === "USD" ? 2 : 1;
 
@@ -60,9 +60,10 @@ export default function SearchDomainForm() {
             <div className="text-grey-700 border-l border-gray-400">
               <Select value={tld} onValueChange={setTld}>
                 <SelectTrigger className="w-[85px] border-0 shadow-none focus:ring-0 md:w-[100px]">
-                  <SelectValue defaultValue=".com" />
+                  <SelectValue defaultValue=".co.bw" />
                 </SelectTrigger>
                 <SelectContent>
+                  <SelectItem value=".co.bw">.co.bw</SelectItem>
                   <SelectItem value=".com">.com</SelectItem>
                   <SelectItem value=".net">.net</SelectItem>
                   <SelectItem value=".org">.org</SelectItem>

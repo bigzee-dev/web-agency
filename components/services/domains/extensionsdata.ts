@@ -1,5 +1,14 @@
 export const domainExtensions = [
   {
+    extension: ".co.bw",
+    registration: {
+      BWP: { original: "149.00", discounted: null },
+      USD: { original: "12.00", discounted: null },
+    },
+    transfer: { BWP: "149.00", USD: "12.00" },
+    renewal: { BWP: "149.00", USD: "12.00" },
+  },
+  {
     extension: ".com",
     registration: {
       BWP: { original: "299.00", discounted: "247.00" },
