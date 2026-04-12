@@ -64,6 +64,8 @@ export default function SearchDomainForm() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value=".co.bw">.co.bw</SelectItem>
+                  <SelectItem value=".ac.bw">.ac.bw</SelectItem>
+                  <SelectItem value=".org.bw">.org.bw</SelectItem>
                   <SelectItem value=".com">.com</SelectItem>
                   <SelectItem value=".net">.net</SelectItem>
                   <SelectItem value=".org">.org</SelectItem>

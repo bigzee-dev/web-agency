@@ -3,19 +3,19 @@ import { sectionSubHeadings } from "@/app/ui/customTailwindClasses";
 
 const whyBuyFeatures = [
   {
-    title: "24/7 live technical support",
-    description:
-      "Our Customer Success team is here for you any time of the day. We&apos;ve made our domain name registration process as easy as possible, but everyone needs a helping hand sometimes. Just contact us, we will be happy to assist.",
-  },
-  {
     title: "Trusted Domain Registrar",
     description:
-      "Deltaworx is a reliable registrar trusted by lots of people and companies. We offer a comprehensive registration service with around 20 domain extensions so that you can have plenty of choices.",
+      "Deltaworx is an accredited domain registrar with the Botswana Communications Regulatory Authority (BOCRA). We offer comprehensive registration services for Botswana’s .bw domain extensions, including <strong>.co.bw</strong>, <strong>.ac.bw</strong>, and <strong>.org.bw</strong>. In addition, we provide a wide range of international extensions such as <strong>.com</strong>, <strong>.net</strong>, <strong>.io</strong>, and <strong>.app<s/strong>",
   },
   {
     title: "Instant setup and easy control",
     description:
       "Once you have registered your domain, you can manage it through our dashboard, including tasks such as <strong>configuring nameservers</strong>, and <strong>renewing your domain</strong>.",
+  },
+  {
+    title: "24/7 live technical support",
+    description:
+      "Our Customer Success team is here for you any time of the day. We&apos;ve made our domain name registration process as easy as possible, but everyone needs a helping hand sometimes. Just contact us, we will be happy to assist.",
   },
 ];
 

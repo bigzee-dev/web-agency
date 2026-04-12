@@ -30,7 +30,10 @@ export default function Header() {
               <SearchDomainForm />
               <p className="mt-3 text-sm text-neutral-200/85">
                 Already bought a domain?{" "}
-                <a href="#" className="text-neutral-200/85 underline">
+                <a
+                  href={` ${process.env.NEXT_PUBLIC_WHMCS_URL}/cart.php?a=add&domain=transfer `}
+                  className="text-neutral-200/85 underline"
+                >
                   Transfer it to Deltaworx
                 </a>
               </p>
