@@ -3,7 +3,7 @@ import Link from "next/link";
 // import { FaXTwitter } from "react-icons/fa6";
 // import { IoLogoWhatsapp } from "react-icons/io";
 import { cairo } from "@/app/ui/fonts";
-import { Mail, MapPinCheck, Phone, Users } from "lucide-react";
+import { Mail, MapPinCheck } from "lucide-react";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 // const iconProps = {
