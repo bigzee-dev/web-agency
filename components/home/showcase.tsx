@@ -46,7 +46,8 @@ export default function Showcase() {
 
           <div className="mx-auto max-w-4xl space-y-6">
             <h1 className={` ${pageHeadings} md:text-center`}>
-              Providing Modern and Reliable Web Solutions
+              Helping Businesses and Developers Get Found, Trusted, and Chosen
+              Online
             </h1>
             <p className="text-center font-sans text-base leading-6 text-gray-700">
               Deltaworx, a Botswana-based tech company, offers web solutions

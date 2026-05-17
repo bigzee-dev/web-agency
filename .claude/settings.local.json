@@ -3,7 +3,10 @@
     "allow": [
       "Bash(powershell -Command \"Get-ChildItem -Recurse -Path ''C:\\\\Users\\\\zimam\\\\Documents\\\\projects\\\\webdev-agency\\\\app\\\\\\(services\\\\\\)'' -Filter ''page.tsx'' | Select-Object -ExpandProperty FullName\")",
       "Bash(type \"C:\\\\Users\\\\zimam\\\\Documents\\\\projects\\\\webdev-agency\\\\app\\\\\\(services\\\\\\)\\\\\\(hosting\\\\\\)\\\\linux-vps\\\\page.tsx\")",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Skill(frontend-design)",
+      "Bash(pnpm lint *)",
+      "Bash(pnpm dev *)"
     ]
   }
 }

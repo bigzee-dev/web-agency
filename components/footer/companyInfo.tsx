@@ -4,6 +4,7 @@ import Link from "next/link";
 // import { IoLogoWhatsapp } from "react-icons/io";
 import { cairo } from "@/app/ui/fonts";
 import { Mail, MapPinCheck, Phone, Users } from "lucide-react";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 // const iconProps = {
 //   size: "1.4em",
@@ -41,22 +42,36 @@ export default function CompanyInfo() {
           admin@deltaworx.co.bw
         </span>
       </div>
-      <div className="mt-4 flex items-center">
-        <Phone size="1.2em" strokeWidth={1} className="text-neutral-400" />
-        <span className="ml-2 text-sm text-neutral-400">(+267) 72537524</span>
-      </div>
-      <div className="mt-4 flex items-center">
-        <Users size="1.4em" strokeWidth={1} className="text-neutral-400" />
-        <Link
-          href="https://web.facebook.com/DeltaworxBW/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-2 text-sm text-neutral-400 hover:text-blue-300"
-        >
-          @DeltaworxBW
-        </Link>
-      </div>
-
+      <ul className="mt-3 flex flex-col gap-2">
+        <li>
+          <a
+            href="https://web.facebook.com/DeltaworxBW"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 text-neutral-400 transition-colors hover:text-[#1877F2]"
+            aria-label="Visit our Facebook page"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800/50 text-neutral-300 transition-all group-hover:border-[#1877F2] group-hover:bg-[#1877F2] group-hover:text-white">
+              <FaFacebook size={17} />
+            </span>
+            <span className="text-sm">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://wa.me/26772537524"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 text-neutral-400 transition-colors hover:text-[#25D366]"
+            aria-label="Chat with us on WhatsApp"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800/50 text-neutral-300 transition-all group-hover:border-[#25D366] group-hover:bg-[#25D366] group-hover:text-white">
+              <FaWhatsapp size={18} />
+            </span>
+            <span className="text-sm">WhatsApp</span>
+          </a>
+        </li>
+      </ul>
       {/*  </div>
         <Link href="#" className="text-neutral-400 hover:text-neutral-400">
           <FaFacebook {...iconProps} />

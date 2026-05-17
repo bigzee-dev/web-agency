@@ -1,6 +1,7 @@
 // components
 import Header from "@/components/contactus/header";
 import ContactCards from "@/components/contactus/contact-cards";
+import FacebookCTA from "@/components/contactus/facebookcta";
 import ContactPageFormContainer from "@/components/contactus/formcontainer";
 import Banner from "@/components/contactus/banner";
 import type { Metadata } from "next";
@@ -19,6 +20,7 @@ export default function ContactUs() {
     <div>
       <Header />
       <ContactCards />
+      <FacebookCTA />
       <ContactPageFormContainer />
       <Banner />
     </div>

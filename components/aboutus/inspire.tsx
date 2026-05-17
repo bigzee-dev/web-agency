@@ -19,7 +19,12 @@ const points = [
   </>,
   <>
     You may also connect with us via our{" "}
-    <Link href="#" className="text-blue-600 hover:underline">
+    <Link
+      href="https://web.facebook.com/DeltaworxBW"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
       official social media channels
     </Link>{" "}
     for updates and inquiries.
