@@ -3,13 +3,18 @@ import Link from "next/link";
 // import { FaXTwitter } from "react-icons/fa6";
 // import { IoLogoWhatsapp } from "react-icons/io";
 import { cairo } from "@/app/ui/fonts";
-import { Mail, MapPinCheck } from "lucide-react";
+import { Mail, MapPinCheck, Phone } from "lucide-react";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 // const iconProps = {
 //   size: "1.4em",
 //   strokeWidth: 1,
 // };
+
+const contactLink =
+  "group flex items-center gap-3 text-neutral-400 transition-colors";
+const contactBadge =
+  "flex h-9 w-9 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800/50 text-neutral-300 transition-all group-hover:text-white";
 
 export default function CompanyInfo() {
   return (
@@ -36,22 +41,46 @@ export default function CompanyInfo() {
         </div>
       </div>
 
-      <div className="mt-4 flex items-center">
-        <Mail size="1.2em" strokeWidth={1} className="text-neutral-400" />
-        <span className="ml-2 text-sm text-neutral-400">
-          admin@deltaworx.co.bw
-        </span>
-      </div>
-      <ul className="mt-3 flex flex-col gap-2">
+      <ul className="mt-4 flex flex-col gap-2">
+        <li>
+          <a
+            href="mailto:admin@deltaworx.co.bw"
+            className={`${contactLink} hover:text-accent`}
+            aria-label="Email us"
+          >
+            <span
+              className={`${contactBadge} group-hover:border-accent group-hover:bg-accent`}
+            >
+              <Mail size={17} strokeWidth={1.75} />
+            </span>
+            <span className="text-sm">admin@deltaworx.co.bw</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="tel:+26772537524"
+            className={`${contactLink} hover:text-accent`}
+            aria-label="Call us"
+          >
+            <span
+              className={`${contactBadge} group-hover:border-accent group-hover:bg-accent`}
+            >
+              <Phone size={16} strokeWidth={1.75} />
+            </span>
+            <span className="text-sm">+267 7253 7524</span>
+          </a>
+        </li>
         <li>
           <a
             href="https://web.facebook.com/DeltaworxBW"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-3 text-neutral-400 transition-colors hover:text-[#1877F2]"
+            className={`${contactLink} hover:text-[#1877F2]`}
             aria-label="Visit our Facebook page"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800/50 text-neutral-300 transition-all group-hover:border-[#1877F2] group-hover:bg-[#1877F2] group-hover:text-white">
+            <span
+              className={`${contactBadge} group-hover:border-[#1877F2] group-hover:bg-[#1877F2]`}
+            >
               <FaFacebook size={17} />
             </span>
             <span className="text-sm">Facebook</span>
@@ -62,10 +91,12 @@ export default function CompanyInfo() {
             href="https://wa.me/26772537524"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-3 text-neutral-400 transition-colors hover:text-[#25D366]"
+            className={`${contactLink} hover:text-[#25D366]`}
             aria-label="Chat with us on WhatsApp"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-700 bg-neutral-800/50 text-neutral-300 transition-all group-hover:border-[#25D366] group-hover:bg-[#25D366] group-hover:text-white">
+            <span
+              className={`${contactBadge} group-hover:border-[#25D366] group-hover:bg-[#25D366]`}
+            >
               <FaWhatsapp size={18} />
             </span>
             <span className="text-sm">WhatsApp</span>
