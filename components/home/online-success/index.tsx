@@ -21,13 +21,13 @@ export default function OnlineSuccess() {
       id="our-services"
     >
       <div className="mb-6 text-center">
-        <h1 className={` ${sectionHeadings} `}>
+        <h2 className={` ${sectionHeadings} `}>
           Your online{" "}
           <span className="bg-gradient-to-r from-primary via-cyan-600 to-blue-700 bg-clip-text text-transparent">
             success
           </span>{" "}
           starts here
-        </h1>
+        </h2>
         <p className="mt-4 text-lg text-gray-600">
           Choose from a wide variety of products and services to grow your idea
           online.

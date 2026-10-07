@@ -4,7 +4,7 @@ import BlockRendererClient from "@/app/blockrenderclient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Deltaworx",
+  title: "Terms of Service",
   description:
     "Review Deltaworx's terms of service. Understand the terms and conditions for using our cloud computing, web development, hosting, and IT services.",
   keywords: [

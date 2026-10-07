@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import { FaWindows } from "react-icons/fa";
 import {
-  pageHeadings,
   pageHeadingsCenter,
   primaryButton,
   sectionSubHeadings,
@@ -17,10 +16,7 @@ export default function HeaderVps() {
       <main className="x-padding w-full overflow-hidden">
         <div className="mx-auto grid w-full max-w-7xl gap-x-16 gap-y-8 px-6 py-16 md:mt-0 md:grid-cols-12 md:px-12 md:py-24 md:pt-20">
           <div className="order-2 flex flex-col items-center justify-center md:order-1 md:col-span-7">
-            <h1 className={` ${pageHeadings} mt-2 hidden md:block`}>
-              Windows VPS for Business and Enterprise Applications
-            </h1>
-            <h1 className={` ${pageHeadingsCenter} mt-8 md:hidden`}>
+            <h1 className={` ${pageHeadingsCenter} mt-8 md:mt-2`}>
               Windows VPS for Business and Enterprise Applications
             </h1>
             <p

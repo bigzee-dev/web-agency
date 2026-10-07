@@ -22,7 +22,7 @@ export default function CompanyInfo() {
       <Link className="logo-container" href="/">
         <img
           src="/logo/whiteLogo-500x500.png"
-          alt="BigZee Digital Logo"
+          alt="Deltaworx logo"
           className="opacity-90"
         />
 

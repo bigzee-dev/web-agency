@@ -9,7 +9,7 @@ import SupportOne from "@/components/shared/support/support-one";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Development - Professional Web Design | Botswana",
+  title: "Website Design & Development in Botswana",
   description:
     "Professional web development services in Botswana. Custom websites, responsive design, SEO optimisation, and ongoing support. Grow your business with Deltaworx.",
   alternates: {

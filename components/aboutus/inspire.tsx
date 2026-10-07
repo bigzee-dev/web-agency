@@ -37,12 +37,12 @@ export default function Inspire() {
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid items-center gap-6 gap-y-12 lg:grid-cols-2 lg:gap-x-14">
           <div className="order-2 flex flex-col gap-y-7 md:order-1">
-            <h1
+            <h2
               className={` ${montserrat.className} text-3xl font-semibold leading-tight text-secondary md:text-4xl`}
             >
               Deltaworx is your technology partner for forward-thinking and
               impactful online solutions.
-            </h1>
+            </h2>
             <ul className="list-disc space-y-2 pl-6 font-sans text-base text-gray-700">
               {points.map((point, idx) => (
                 <li key={idx} className="leading-normal">

@@ -53,7 +53,7 @@ export default function ResponsiveNav() {
         <Link className="logo-container logo text-neutral-800 lg:mr-6" href="/">
           {" "}
           {/* Updated href to be relative */}
-          <img src="/logo/logo-500x500.png" alt="BigZee Digital Logo" />{" "}
+          <img src="/logo/logo-500x500.png" alt="Deltaworx logo" />{" "}
           {/* Added alt text */}
           <h4
             className={` ${cairo.className} nav-logo mb-[0.30rem] ml-2 text-cyan-700`}

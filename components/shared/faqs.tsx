@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/faqs/faqs-accordion";
+import JsonLd from "@/components/shared/json-ld";
 
 interface Faq {
   title: string;
@@ -29,8 +30,19 @@ export default function Faqs(props: FaqsProps) {
     </>
   );
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.title,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <div className="x-padding">
+      <JsonLd data={faqSchema} />
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-20 gap-y-5 py-24 md:grid-cols-12">
         <div className="col-span-1 pt-2 md:col-span-6">
           <h3 className="text-4xl font-bold text-gray-800">{heading}</h3>

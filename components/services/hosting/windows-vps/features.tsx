@@ -56,9 +56,9 @@ const VpsFeatures = () => {
         <div className="mx-auto max-w-7xl">
           {/* Header */}
           <div className="mb-16 text-center">
-            <h1 className={` ${sectionHeadings} mb-4`}>
+            <h2 className={` ${sectionHeadings} mb-4`}>
               Enterprise Windows VPS Features
-            </h1>
+            </h2>
             <p className="mx-auto max-w-3xl font-sans text-lg text-gray-600">
               Powerful Windows Server hosting with dedicated resources, full
               administrative control, and Microsoft-certified infrastructure for

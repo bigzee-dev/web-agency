@@ -29,19 +29,25 @@ interface BlogPost {
   readlength: string;
 }
 
-async function getLatestBlogPosts() {
-  const res = await fetch(
-    `${process.env.STRAPI_API_URL}/api/blog-posts?populate=image`,
-    {},
-  );
-  const blogs = await res.json();
-  console.log(blogs.data);
-  return blogs.data;
+async function getLatestBlogPosts(): Promise<BlogPost[]> {
+  // A CMS outage must not take down the homepage, so fail soft
+  try {
+    const res = await fetch(
+      `${process.env.STRAPI_API_URL}/api/blog-posts?populate=image&sort=publishedAt:desc&pagination[limit]=3`,
+      { next: { revalidate: 3600 } },
+    );
+    if (!res.ok) return [];
+    const blogs = await res.json();
+    return blogs.data || [];
+  } catch (error) {
+    console.error("Error fetching latest blog posts:", error);
+    return [];
+  }
 }
 
 export default async function Component() {
-  const allBlogs = await getLatestBlogPosts();
-  const articles: BlogPost[] = allBlogs.slice(0, 3);
+  const articles = await getLatestBlogPosts();
+  if (articles.length === 0) return null;
 
   return (
     <div className="x-padding">

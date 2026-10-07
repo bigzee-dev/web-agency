@@ -10,7 +10,7 @@ import Consultation from "@/components/shared/support/consultation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Linux VPS - Production Ready Cloud Infrastructure | Botswana",
+  title: "Linux VPS Hosting in Botswana",
   description:
     "High-performance Linux VPS Hosting in Botswana. Get dedicated resources, full root access, and choice of Ubuntu, Debian and more.",
   alternates: {

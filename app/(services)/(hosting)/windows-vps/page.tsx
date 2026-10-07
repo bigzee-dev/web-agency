@@ -12,7 +12,7 @@ import Consultation from "@/components/shared/support/consultation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Windows VPS for Business and Enterprise Applications | Botswana",
+  title: "Windows VPS Hosting in Botswana",
   description:
     "Windows VPS Hosting in Botswana. Run windows applications on our high performance virtual servers. Perfect for developers and businesses in Botswana.",
   alternates: {

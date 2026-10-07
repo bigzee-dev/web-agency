@@ -7,7 +7,7 @@ import Banner from "@/components/contactus/banner";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Get in Touch | Deltaworx",
+  title: "Contact Us - Get in Touch",
   description:
     "Contact Deltaworx for IT solutions in Botswana. Reach out for cloud computing, web development, domain registration, email hosting, and VPS services. We're here to help your business grow.",
   alternates: {

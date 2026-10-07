@@ -9,7 +9,7 @@ import FaqsHosting from "@/components/services/hosting/web-hosting/faqs-hosting"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Web Hosting - Fast & Reliable Hosting | Botswana",
+  title: "Web Hosting in Botswana - Fast & Reliable",
   description:
     "Premium web hosting for developers and businesses in Botswana, designed to keep your website fast, secure, and always online.",
   alternates: {

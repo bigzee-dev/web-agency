@@ -16,11 +16,11 @@ export default function Shopify() {
               className="h-24"
             />
           </div>
-          <h1
+          <h2
             className={` ${montserrat.className} text-4xl font-bold text-slate-900 md:text-5xl`}
           >
             Shopify
-          </h1>
+          </h2>
           <p className="font-sans leading-relaxed text-gray-700">
             Shopify is a prominent player in the realm of e-commerce software.
             We greatly appreciate working with Shopify due to its ability to

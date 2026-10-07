@@ -4,7 +4,7 @@ import BlockRendererClient from "@/app/blockrenderclient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Acceptable Use Policy | Deltaworx",
+  title: "Acceptable Use Policy",
   description:
     "Learn about Deltaworx's acceptable use policy. Understand the guidelines and restrictions for using our IT services, hosting, and cloud computing solutions responsibly.",
   keywords: [

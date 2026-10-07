@@ -57,7 +57,7 @@ const VpsFeatures = () => {
           <div className="flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-center lg:gap-12">
             {/* Left Content */}
             <div className="flex-1 space-y-6">
-              <h1 className={` ${sectionHeadings} `}>VPS Features</h1>
+              <h2 className={` ${sectionHeadings} `}>VPS Features</h2>
               <p className="mb-8 text-lg leading-relaxed text-gray-700">
                 High-performance compute on Intel + NVMe, with premium
                 networking and dependable uptime.

@@ -28,7 +28,7 @@ export default function BlockRendererClient({
             case 1:
               // Combine base class with specific size/margin
               return (
-                <h1 className={`${headingBaseClass} text-4xl`}>{children}</h1>
+                <h2 className={`${headingBaseClass} text-4xl`}>{children}</h2>
               );
             case 2:
               return (
@@ -53,7 +53,7 @@ export default function BlockRendererClient({
             default:
               // Fallback or default heading style
               return (
-                <h1 className={`${headingBaseClass} text-4xl`}>{children}</h1>
+                <h2 className={`${headingBaseClass} text-4xl`}>{children}</h2>
               );
           }
         },

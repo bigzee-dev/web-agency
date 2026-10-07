@@ -12,8 +12,10 @@ interface CurrencyContextType {
 const CurrencyContext = createContext<CurrencyContextType | undefined>(undefined);
 
 export function CurrencyProvider({ children }: { children: ReactNode }) {
+  // Server and first client render both use 'BWP', so hydration matches;
+  // the stored preference is applied after mount. Children must always
+  // render here, or the server sends an empty page to crawlers.
   const [currency, setCurrencyState] = useState<Currency>('BWP');
-  const [isHydrated, setIsHydrated] = useState(false);
 
   // Load currency preference from localStorage on mount
   useEffect(() => {
@@ -21,7 +23,6 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
     if (stored === 'BWP' || stored === 'USD') {
       setCurrencyState(stored);
     }
-    setIsHydrated(true);
   }, []);
 
   // Save currency preference to localStorage when it changes
@@ -29,11 +30,6 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
     setCurrencyState(newCurrency);
     localStorage.setItem('preferred-currency', newCurrency);
   };
-
-  // Prevent hydration mismatch by rendering children only after hydration
-  if (!isHydrated) {
-    return null;
-  }
 
   return (
     <CurrencyContext.Provider value={{ currency, setCurrency }}>

@@ -245,11 +245,11 @@ export default function WooCommerce() {
               className="h-32"
             />
           </div>
-          <h1
+          <h2
             className={` ${montserrat.className} mb-6 text-4xl font-bold text-neutral-100 md:text-5xl`}
           >
             WooCommerce
-          </h1>
+          </h2>
           <div className="space-y-4 font-sans text-neutral-100">
             <p>
               WooCommerce has demonstrated remarkable dominance and resilience,

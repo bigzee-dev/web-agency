@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "How to Pay - Payment Methods | Deltaworx",
+  title: "How to Pay - Payment Methods",
   description:
     "Learn about our accepted payment methods including Bank Transfer, PayPal, and Orange Money. We accept payments in BWP and USD.",
   alternates: {

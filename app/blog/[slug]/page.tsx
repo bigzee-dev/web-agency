@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/breadcrumb";
 import { User, CalendarDays, Clock } from "lucide-react";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import JsonLd from "@/components/shared/json-ld";
 
 interface PostTypes {
   title: string;
@@ -20,9 +22,14 @@ interface PostTypes {
   image?: string;
   author: string;
   publishedAt: string;
+  updatedAt?: string;
   readlength: string;
   slug: string;
   content: BlocksContent;
+}
+
+function postImageUrl(post: PostTypes) {
+  return post.image ? `${process.env.STRAPI_API_URL}${post.image}` : undefined;
 }
 
 export async function generateMetadata({
@@ -32,21 +39,29 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = await fetchpost(slug);
-  const imageUrl = `${process.env.STRAPI_API_URL}${post.image}`;
+  const imageUrl = postImageUrl(post);
 
   return {
     title: post.title,
     description: post.subtitle,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
+      type: "article",
+      url: `/blog/${post.slug}`,
       title: post.title,
       description: post.subtitle,
-      images: [{ url: imageUrl }],
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
+      authors: post.author ? [post.author] : undefined,
+      images: imageUrl ? [{ url: imageUrl }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.subtitle,
-      images: [imageUrl],
+      images: imageUrl ? [imageUrl] : undefined,
     },
   };
 }
@@ -79,17 +94,24 @@ async function fetchpost(slug: string): Promise<PostTypes> {
     `${process.env.STRAPI_API_URL}/api/blog-posts?${ourQuery}`,
     {},
   );
+  // Strapi errors should surface as a 500, not be hidden as a 404
+  if (!res.ok) {
+    throw new Error(`Failed to fetch blog post "${slug}": ${res.status}`);
+  }
   const data = await res.json();
-  console.log(data.data[0].image.url);
+  const post = data.data?.[0];
+  if (!post) notFound();
+
   return {
-    title: data.data[0]?.title || "",
-    subtitle: data.data[0]?.subtitle || "",
-    image: data.data[0].image.url,
-    content: data.data[0].content,
-    author: data.data[0].author,
-    publishedAt: data.data[0].publishedAt,
-    readlength: data.data[0].readlength,
-    slug: data.data[0].slug,
+    title: post.title || "",
+    subtitle: post.subtitle || "",
+    image: post.image?.url,
+    content: post.content,
+    author: post.author,
+    publishedAt: post.publishedAt,
+    updatedAt: post.updatedAt,
+    readlength: post.readlength,
+    slug: post.slug,
   };
 }
 
@@ -101,16 +123,53 @@ export default async function Page({
   const { slug } = await params; // Await params here
   const post = await fetchpost(slug);
   const content: BlocksContent = post.content;
-  console.log(post);
+  const postUrl = `https://deltaworx.co.bw/blog/${post.slug}`;
+  const postSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.subtitle,
+        image: postImageUrl(post),
+        datePublished: post.publishedAt,
+        dateModified: post.updatedAt || post.publishedAt,
+        author: { "@type": "Person", name: post.author },
+        publisher: { "@id": "https://deltaworx.co.bw/#organization" },
+        mainEntityOfPage: postUrl,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://deltaworx.co.bw/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: "https://deltaworx.co.bw/blog",
+          },
+          { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+        ],
+      },
+    ],
+  };
   return (
     <div className="x-padding mx-auto mb-16 max-w-3xl pb-10">
-      <Image
-        src={`${process.env.STRAPI_API_URL}${post.image}`}
-        alt={post.title}
-        width={811}
-        height={540}
-        className="mb-4 w-full object-cover"
-      />
+      <JsonLd data={postSchema} />
+      {post.image && (
+        <Image
+          src={`${process.env.STRAPI_API_URL}${post.image}`}
+          alt={post.title}
+          width={811}
+          height={540}
+          className="mb-4 w-full object-cover"
+        />
+      )}
       <Breadcrumb className="mt-4">
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -122,7 +181,7 @@ export default async function Page({
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>{post.slug}</BreadcrumbPage>
+            <BreadcrumbPage>{post.title}</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

@@ -2,7 +2,7 @@ import WebAppsHeader from "@/components/services/webapps/header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Web Application Development - Custom Software Solutions | Deltaworx",
+  title: "Web Application Development in Botswana",
   description:
     "Custom web application development in Botswana. Build scalable, secure web apps tailored to your business needs. From CRM to inventory management, Deltaworx delivers powerful solutions.",
   alternates: {

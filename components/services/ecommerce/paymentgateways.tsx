@@ -20,11 +20,11 @@ export default function PaymentGateways() {
               className="h-28"
             />
           </div>
-          <h1
+          <h2
             className={` ${montserrat.className} -mt-3 text-4xl font-bold text-gray-900 md:text-5xl`}
           >
             Payment Gateways
-          </h1>
+          </h2>
           <p className="mt-6 font-sans leading-relaxed text-gray-700">
             Shopify is a prominent player in the realm of e-commerce software.
             We greatly appreciate working with Shopify due to its ability to

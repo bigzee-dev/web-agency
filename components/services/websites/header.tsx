@@ -82,11 +82,14 @@ export default function Websites() {
 
           {/* Main heading */}
           <div className="flex max-w-3xl flex-col">
-            <h1
+            {/* Not an <h1>: the desktop header above holds the page's only h1 */}
+            <p
+              role="heading"
+              aria-level={1}
               className={` ${montserrat.className} mt-3 max-w-4xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
             >
               We Develop Websites that Deliver Results
-            </h1>
+            </p>
             <p className="mb-2 mt-6 flex items-center gap-3 font-sans text-md text-neutral-400">
               <span>
                 <FaCheck size="0.7em" className="text-gray-400" />

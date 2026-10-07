@@ -3,7 +3,7 @@ import BlogHeader from "@/components/blog/header";
 import AllBlogPosts from "@/components/blog/AllBlogPosts";
 
 export const metadata: Metadata = {
-  title: "Blog - Tech Insights & Industry News | Deltaworx",
+  title: "Blog - Tech Insights & Industry News",
   description:
     "Stay updated with Deltaworx's blog. Read about cloud computing, web development, hosting tips, and IT trends in Botswana. Expert insights and technical guides.",
 };

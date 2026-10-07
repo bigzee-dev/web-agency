@@ -49,9 +49,9 @@ export default function Component() {
       <div className="mt-4 grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-12">
         {/* Left content */}
         <div className="col-span-1 pt-1 lg:col-span-7">
-          <h1 className="mb-6 text-3xl font-bold text-neutral-300 lg:text-4xl">
+          <h2 className="mb-6 text-3xl font-bold text-neutral-300 lg:text-4xl">
             Ecommerce that looks great and sells even better.
-          </h1>
+          </h2>
 
           <p className="hidden font-sans text-base leading-relaxed text-neutral-300 md:block">
             Launch your online store with a custom design, secure payments, and

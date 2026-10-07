@@ -68,12 +68,15 @@ export default function EcommerceHeader() {
             </div>
 
             {/* Main heading */}
-            <h1
+            {/* Not an <h1>: the desktop header above holds the page's only h1 */}
+            <p
+              role="heading"
+              aria-level={1}
               className={` ${montserrat.className} mt-3 max-w-3xl text-4xl font-bold leading-tight text-neutral-100 md:text-5xl lg:text-6xl`}
             >
               We Build Powerful E-Commerce Websites That Help You Sell More and
               Grow Faster
-            </h1>
+            </p>
 
             {/* Scroll down indicator */}
             <div className="mt-10 flex w-full flex-col items-center">

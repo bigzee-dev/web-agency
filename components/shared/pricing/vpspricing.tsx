@@ -28,11 +28,11 @@ export default function VpsPricingTable({ plans }: VpsPricingTableProps) {
     <div className="x-padding w-full" id="pricing-vps">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-y-8 pt-20 md:pt-32">
         {/* Title */}
-        <h1
+        <h2
           className={`${montserrat.className} text-center text-3xl font-bold text-gray-800 md:text-5xl`}
         >
           The Right Price for a VPS
-        </h1>
+        </h2>
 
         {/* Tabs */}
         <Tabs defaultValue="monthly" className="w-full">

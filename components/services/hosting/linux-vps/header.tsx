@@ -45,11 +45,9 @@ export default function HeaderVps() {
 
                   <IoArrowForwardCircleSharp className="size-6 text-neutral-700" />
                 </Link>
-                <h1 className={` ${pageHeadingsCenter} mt-8 hidden md:block`}>
-                  Linux VPS Optimised for <br /> the Botswana market
-                </h1>
-                <h1 className={` ${pageHeadingsCenter} mt-8 md:hidden`}>
-                  Linux VPS Optimised for the Botswana market
+                <h1 className={` ${pageHeadingsCenter} mt-8`}>
+                  Linux VPS Optimised for <br className="hidden md:inline" />{" "}
+                  the Botswana market
                 </h1>
                 <p
                   className={` ${sectionSubHeadings} mx-auto mt-6 max-w-2xl text-center`}

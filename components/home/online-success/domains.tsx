@@ -48,9 +48,9 @@ export default function Component() {
       <div className="mt-4 grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-12">
         {/* Left content */}
         <div className="pt-1 text-neutral-300 lg:col-span-7">
-          <h1 className="mb-6 text-3xl font-bold leading-tight lg:text-4xl">
+          <h2 className="mb-6 text-3xl font-bold leading-tight lg:text-4xl">
             Domain registration and management — made simple
-          </h1>
+          </h2>
 
           <p className="hidden font-sans text-base leading-relaxed text-gray-300 md:block">
             From securing the perfect domain to managing DNS and nameservers, we

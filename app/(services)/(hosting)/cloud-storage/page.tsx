@@ -10,7 +10,7 @@ import CloudStorageFAQs from "@/components/services/hosting/cloud-storage/faqs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cloud Storage - Backup your Data | Botswana",
+  title: "Cloud Storage & Data Backup in Botswana",
   description:
     "Secure Cloud Storage Box with SSH/FTP/SFTP access, rsync/rclone support, and modern web GUI. Backup your critical data and access it from anywhere in Botswana.",
   alternates: {
